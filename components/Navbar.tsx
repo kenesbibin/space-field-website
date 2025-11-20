@@ -26,7 +26,7 @@ const industriesItems = [
   { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory, description: 'Equipment maintenance logs.' },
   { name: 'Logistics', href: '/industries/logistics', icon: Truck, description: 'Fleet and delivery operations.' },
   { name: 'Oil & Gas', href: '/industries/oil-gas', icon: Droplets, description: 'Safety compliance and checks.' },
-  { name: 'Facility Mgmt', href: '/industries/facility-management', icon: HardHat, description: 'Building upkeep and services.' },
+  { name: 'Facility Management', href: '/industries/facility-management', icon: HardHat, description: 'Building upkeep and services.' },
 ];
 
 export default function Navbar() {
