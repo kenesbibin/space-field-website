@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsappButton";
+import SpaceFieldCopilot from "@/components/SpaceFieldCopilot";
+import CopilotKitWrapper from "@/components/CopilotKitWrapper";
+
+
 
 
 
@@ -19,9 +24,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar/>
-        {children}
-        <Footer/>
+        <CopilotKitWrapper>
+          <Navbar />
+          {children}
+          <Footer />
+          <WhatsAppButton />
+          <SpaceFieldCopilot />
+        </CopilotKitWrapper>
+        
       </body>
     </html>
   );
