@@ -6,8 +6,8 @@ import ShowcaseSection from '@/components/ShowcaseSection'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'SPACE FIELD - Home',
-  description: 'Streamline your field operations with SPACE FIELD. The ultimate mobile solution for field workers.',
+  title: 'SPACE CAPTURE - Home',
+  description: 'Streamline your field operations with SPACE CAPTURE. The ultimate mobile solution for field workers.',
   alternates: {
     canonical: '/',
   },
@@ -24,3 +24,5 @@ export default function Home() {
     </main>
   )
 }
+
+

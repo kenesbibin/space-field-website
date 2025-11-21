@@ -2,14 +2,14 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Instagram, Linkedin, Twitter, Youtube, Github, CheckCircle2 } from 'lucide-react';
+import { Instagram, Linkedin, Twitter, Youtube, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-slate-950 pt-16 pb-8 border-t border-slate-800">
       
-      {/* Background Gradient Glow (Matches your Space Field Purple/Blue theme) */}
+      {/* Background Gradient Glow (Matches your SPACE CAPTURE Purple/Blue theme) */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(99,102,241,0.15),transparent_50%)]"></div>
 
       <div className="container relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6">
@@ -27,9 +27,9 @@ export default function Footer() {
             <Link
               href="/"
               className="flex items-center gap-2 group"
-              aria-label="Space Field Home"
+              aria-label="SPACE CAPTURE Home"
             >
-              <span className="text-2xl font-extrabold text-white tracking-tight">SPACE FIELD</span>
+              <span className="text-2xl font-extrabold text-white tracking-tight">SPACE CAPTURE</span>
             </Link>
           </motion.div>
 
@@ -62,7 +62,7 @@ export default function Footer() {
           className="flex flex-col items-center justify-between gap-4 border-t border-slate-800 pt-8"
         >
           <p className="text-center text-xs text-slate-500">
-            © 2025 SPACE FIELD. All rights reserved.
+            © 2025 SPACE CAPTURE. All rights reserved.
           </p>
           
        
@@ -84,3 +84,5 @@ const SocialLink = ({ href, icon: Icon, label }: { href: string, icon: React.Ele
     <Icon className="h-5 w-5" />
   </a>
 );
+
+

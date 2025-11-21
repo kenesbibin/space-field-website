@@ -5,3 +5,5 @@ export const client = new ApolloClient({
   link: new HttpLink({ uri: process.env.NEXT_PUBLIC_GRAPHQL_URL || '' }), // Replace with your actual GraphQL endpoint
   cache: new InMemoryCache(),
 });
+
+

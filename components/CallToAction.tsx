@@ -34,7 +34,7 @@ const CallToActionSection = () => {
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
               Take Control of <br/>
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Space Field</span> Today.
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">SPACE CAPTURE</span> Today.
             </h2>
             
             <p className="mt-6 text-slate-600 text-lg font-medium leading-relaxed">
@@ -160,3 +160,5 @@ const CallToActionSection = () => {
 };
 
 export default CallToActionSection;
+
+

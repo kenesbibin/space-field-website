@@ -84,7 +84,7 @@ export default function HeroSection() {
             <div className="space-y-6">
               <motion.h1 
                 variants={fadeInUp}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-slate-900 tracking-tight"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-900 tracking-tight"
               >
                 Command Your Field Operations With{' '}
                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
@@ -96,7 +96,7 @@ export default function HeroSection() {
                 variants={fadeInUp}
                 className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium"
               >
-                Eliminate on-site chaos. Space Field provides the ultimate mobile command center for construction, maintenance, and inspection teams to track progress in real-time.
+                Eliminate on-site chaos. SPACE CAPTURE provides the ultimate mobile command center for construction, maintenance, and inspection teams to track progress in real-time.
               </motion.p>
             </div>
 
@@ -135,7 +135,7 @@ export default function HeroSection() {
                <div className="relative rounded-xl overflow-hidden">
                   <Image
                     src="/images/hero.jpg"
-                    alt="Space Field App Dashboard Interface"
+                    alt="SPACE CAPTURE App Dashboard Interface"
                     width={1200}
                     height={900} 
                     quality={100}
@@ -170,3 +170,5 @@ export default function HeroSection() {
     </section>
   );
 }
+
+

@@ -40,7 +40,7 @@ export default function Navbar() {
   const SIGN_IN_URL = 'https://spaceaiapp.com';
   const DEMO_URL = '/request-a-demo';
   const PHONE_NUMBER = '+65 8611 1900';
-
+  const PHONE_NUMBER2 = '+1 916-969-0451';
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -121,11 +121,11 @@ export default function Navbar() {
   <Link
     href="/"
     className="flex items-center rounded-lg px-1 py-1 transition-colors hover:bg-white/5 cursor-pointer"
-    aria-label="Space Field Home"
+    aria-label="SPACE CAPTURE Home"
   >
     <Image
       src="/images/icononly_transparent_nobuffer.png"
-      alt="Space Field"
+      alt="SPACE CAPTURE"
       width={24}
       height={24}
       className="h-6 w-6 object-contain"
@@ -134,7 +134,7 @@ export default function Navbar() {
    <span
   className="ml-0 text-3xl font-extrabold bg-gradient-to-r from-purple-700 via-purple-600 to-blue-600 bg-clip-text text-transparent leading-none"
 >
-      PACE FIELD
+      PACE CAPTURE
     </span>
   </Link>
 </div>
@@ -204,7 +204,13 @@ export default function Navbar() {
               </div>
 
               {/* Desktop: Contact & Actions */}
-              <div className="hidden lg:flex items-center gap-4">
+              <div className="hidden lg:flex items-center gap-5">
+                <Link
+                  href="/about-us"
+                  className="text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer"
+                >
+                  About Us
+                </Link>
                 <a 
                   href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`} 
                   className="flex items-center gap-2 text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer"
@@ -212,6 +218,14 @@ export default function Navbar() {
                   <span className="text-sm">🇸🇬</span>
                   <Phone className="h-4 w-4" />
                   <span className="text-sm">{PHONE_NUMBER}</span>
+                </a>
+                 <a 
+                  href={`tel:${PHONE_NUMBER2.replace(/\s/g, '')}`} 
+                  className="flex items-center gap-2 text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer"
+                >
+                  <span className="text-sm">🇺​​🇸​</span>
+                  <Phone className="h-4 w-4" />
+                  <span className="text-sm">{PHONE_NUMBER2}</span>
                 </a>
 
                 <div className="ml-2 flex items-center gap-3">
@@ -237,13 +251,13 @@ export default function Navbar() {
         <div className="fixed inset-0 z-30 overflow-y-auto bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-100 backdrop-blur-xl pt-24 lg:hidden">
           <div className="container px-4 py-6">
             <nav className="space-y-6">
-              <a
+              <Link
                 href="/"
                 className="block border-b border-gray-200 py-3 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </a>
+              </Link>
 
               {/* Industries Section */}
               <div className="border-b border-gray-200 pb-4">
@@ -268,6 +282,15 @@ export default function Navbar() {
                 </div>
               </div>
 
+              {/* About Us */}
+              <Link
+                href="/about-us"
+                className="block border-b border-gray-200 py-3 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About Us
+              </Link>
+
               {/* Contact Number */}
               <a
                 href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`}
@@ -277,6 +300,16 @@ export default function Navbar() {
                 <span className="text-sm">🇸🇬</span>
                 <Phone className="h-5 w-5" />
                 {PHONE_NUMBER}
+              </a>
+              
+                <a
+                href={`tel:${PHONE_NUMBER2.replace(/\s/g, '')}`}
+                className="flex w-full items-center gap-3 border-b border-gray-200 py-3 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span className="text-sm">🇺​​🇸​</span>
+                <Phone className="h-5 w-5" />
+                {PHONE_NUMBER2}
               </a>
 
               {/* Buttons */}
@@ -293,3 +326,5 @@ export default function Navbar() {
     </>
   );
 }
+
+

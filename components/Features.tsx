@@ -57,7 +57,7 @@ const Features = () => {
                     <div className="flex justify-between items-center mb-4">
                       <div>
                         <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Field Ops</p>
-                        <h3 className="text-2xl font-extrabold text-slate-900">Space Field</h3>
+                        <h3 className="text-2xl font-extrabold text-slate-900">SPACE CAPTURE</h3>
                       </div>
                       <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center ring-4 ring-blue-50">
                         <CheckCircle2 className="w-6 h-6 text-blue-600" />
@@ -211,3 +211,5 @@ const FeatureItem = ({ title, Icon, description, index }: FeatureItemProps) => {
 };
 
 export default Features;
+
+
