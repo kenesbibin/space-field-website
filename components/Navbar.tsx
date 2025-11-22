@@ -6,6 +6,7 @@ import {
   Menu, 
   X, 
   ChevronDown, 
+  ChevronRight,
   Phone, 
   Hammer,
   Wifi,
@@ -14,7 +15,16 @@ import {
   Truck,
   Droplets,
   HardHat,
-  Zap
+  Zap,
+  Layout,
+  Palette,
+  Users,
+  GitBranch,
+  Lock,
+  BarChart3,
+  Plug,
+  Server,
+  BrainIcon
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -29,18 +39,36 @@ const industriesItems = [
   { name: 'Facility Management', href: '/industries/facility-management', icon: HardHat, description: 'Building upkeep and services.' },
 ];
 
+const productsMenuItems: { [key: string]: { name: string; href: string; icon: any; description: string }[] } = {
+  Features: [
+    { name: 'Core Functions', href: '/core-functions', icon: Layout, description: 'Essential tools for field operations management.' },
+    { name: 'Visual Form Builder', href: '/visual-form-builder', icon: Palette, description: 'Create custom forms without coding.' },
+    { name: 'AI Detection Analysis', href: '/ai-detection', icon: BrainIcon, description: 'Manage team members and permissions.' },
+    { name: 'Engagement Flows', href: '/engagement-flows', icon: GitBranch, description: 'Automate workflows and processes.' },
+    { name: 'Access Control', href: '/access-control', icon: Lock, description: 'Secure data with role-based access.' },
+    { name: 'Deep Insights', href: '/reports', icon: BarChart3, description: 'Analytics and reporting dashboard.' },
+  ],
+  'For Developers': [
+    { name: 'Integrations', href: '/integrations', icon: Plug, description: 'Connect with your existing tools and systems.' },
+    { name: 'Flexible Hosting', href: '/hosting', icon: Server, description: 'Deploy on-premise or in the cloud.' },
+  ],
+};
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showIndustries, setShowIndustries] = useState(false);
   const [hoveredIndustries, setHoveredIndustries] = useState(false);
+  const [showProducts, setShowProducts] = useState(false);
+  const [hoveredProducts, setHoveredProducts] = useState(false);
+  const [activeProductCategory, setActiveProductCategory] = useState<string>('Features');
   const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const SIGN_IN_URL = 'https://spaceaiapp.com';
+  const SIGN_IN_URL = 'https://amspace.ai';
   const DEMO_URL = '/request-a-demo';
   const PHONE_NUMBER = '+65 8611 1900';
-  const PHONE_NUMBER2 = '+1 916-969-0451';
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -50,6 +78,8 @@ export default function Navbar() {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setShowIndustries(false);
         setHoveredIndustries(false);
+        setShowProducts(false);
+        setHoveredProducts(false);
       }
     };
 
@@ -71,12 +101,29 @@ export default function Navbar() {
     if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
     setHoveredIndustries(true);
     setShowIndustries(true);
+    setShowProducts(false);
+    setHoveredProducts(false);
   };
 
   const handleIndustriesMouseLeave = () => {
     hoverTimeoutRef.current = setTimeout(() => {
       setHoveredIndustries(false);
       setShowIndustries(false);
+    }, 150);
+  };
+
+  const handleProductsMouseEnter = () => {
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+    setHoveredProducts(true);
+    setShowProducts(true);
+    setShowIndustries(false);
+    setHoveredIndustries(false);
+  };
+
+  const handleProductsMouseLeave = () => {
+    hoverTimeoutRef.current = setTimeout(() => {
+      setHoveredProducts(false);
+      setShowProducts(false);
     }, 150);
   };
 
@@ -117,33 +164,116 @@ export default function Navbar() {
             >
               {/* Logo */}
               <div className="flex items-center gap-12">
-       <div className="flex items-center">
-  <Link
-    href="/"
-    className="flex items-center rounded-lg px-1 py-1 transition-colors hover:bg-white/5 cursor-pointer"
-    aria-label="SPACE CAPTURE Home"
-  >
-    <Image
-      src="/images/icononly_transparent_nobuffer.png"
-      alt="SPACE CAPTURE"
-      width={24}
-      height={24}
-      className="h-6 w-6 object-contain"
-    />
+                <div className="flex items-center">
+                  <Link
+                    href="/"
+                    className="flex items-center rounded-lg px-1 py-1 transition-colors hover:bg-white/5 cursor-pointer"
+                    aria-label="Space Field Home"
+                  >
+                    <Image
+                      src="/images/icononly_transparent_nobuffer.png"
+                      alt="Space Field"
+                      width={24}
+                      height={24}
+                      className="h-6 w-6 object-contain"
+                    />
 
-   <span
-  className="ml-0 text-3xl font-extrabold bg-gradient-to-r from-purple-700 via-purple-600 to-blue-600 bg-clip-text text-transparent leading-none"
->
-      PACE CAPTURE
-    </span>
-  </Link>
-</div>
+                    <span
+                      className="ml-0 text-3xl font-extrabold bg-gradient-to-r from-purple-700 via-purple-600 to-blue-600 bg-clip-text text-transparent leading-none"
+                    >
+                      SPACE CAPTURE
+                    </span>
+                  </Link>
+                </div>
 
-
-                {/* Desktop: Industries Dropdown */}
+                {/* Desktop: Products & Industries Dropdowns */}
                 <div className="hidden lg:block" ref={dropdownRef}>
+                  {/* Products Dropdown */}
                   <div 
-                    className="relative group"
+                    className="relative group inline-block mr-8"
+                    onMouseEnter={handleProductsMouseEnter}
+                    onMouseLeave={handleProductsMouseLeave}
+                  >
+                    <a
+                      href="/products"
+                      className="flex items-center gap-1 text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer relative py-2"
+                      onClick={(e) => {
+                        if (showProducts) {
+                          e.preventDefault();
+                        }
+                        setShowProducts(false);
+                        setHoveredProducts(false);
+                      }}
+                    >
+                      Products
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${showProducts ? 'rotate-180' : ''}`} />
+                      <span
+                        className={`absolute bottom-0 left-0 h-0.5 bg-purple-500 transition-all duration-300 ${
+                          hoveredProducts ? 'w-full' : 'w-0'
+                        }`}
+                      />
+                    </a>
+
+                    {/* Products Dropdown Panel */}
+                    {showProducts && (
+                      <div
+                        className="absolute top-full left-0 mt-2 w-[720px] rounded-2xl bg-white shadow-2xl shadow-blue-500/10 border border-slate-100 z-50 overflow-hidden"
+                        onMouseEnter={() => {
+                          if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+                        }}
+                        onMouseLeave={handleProductsMouseLeave}
+                      >
+                        <div className="flex">
+                          {/* Left: categories */}
+                          <div className="w-[220px] flex-shrink-0 bg-[linear-gradient(135deg,#fafbfc,#f1f4fb_35%,#f6ecf9_70%,#fef3f8_101%)] p-4 border-r border-gray-200">
+                            <div className="space-y-1">
+                              {Object.keys(productsMenuItems).map((category) => (
+                                <button
+                                  key={category}
+                                  onMouseEnter={() => setActiveProductCategory(category)}
+                                  className={`w-full text-left px-3 py-2.5 rounded-md text-sm font-semibold transition-colors flex items-center justify-between ${
+                                    activeProductCategory === category
+                                      ? 'bg-violet-50 text-violet-700'
+                                      : 'text-gray-600 hover:bg-white/50'
+                                  }`}
+                                >
+                                  <span>{category}</span>
+                                  <ChevronRight className={`w-4 h-4 transition-opacity duration-200 ${activeProductCategory === category ? 'opacity-100' : 'opacity-0'}`} />
+                                </button>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Right: items for active category */}
+                          <div className="flex-1 p-6 bg-white">
+                            <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+                              {productsMenuItems[activeProductCategory]?.map((item) => (
+                                <a
+                                  key={item.name}
+                                  href={item.href}
+                                  className="group flex items-start gap-4 p-3 rounded-lg hover:bg-blue-100/75 transition-colors cursor-pointer"
+                                  onClick={() => {
+                                    setShowProducts(false);
+                                    setHoveredProducts(false);
+                                  }}
+                                >
+                                  <item.icon className="w-5 h-5 text-gray-500 group-hover:text-violet-600 flex-shrink-0 mt-0.5" />
+                                  <div>
+                                    <p className="text-sm font-semibold text-gray-900">{item.name}</p>
+                                    <p className="text-xs text-gray-500 mt-1 leading-snug">{item.description}</p>
+                                  </div>
+                                </a>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Industries Dropdown */}
+                  <div 
+                    className="relative group inline-block"
                     onMouseEnter={handleIndustriesMouseEnter}
                     onMouseLeave={handleIndustriesMouseLeave}
                   >
@@ -204,13 +334,7 @@ export default function Navbar() {
               </div>
 
               {/* Desktop: Contact & Actions */}
-              <div className="hidden lg:flex items-center gap-5">
-                <Link
-                  href="/about-us"
-                  className="text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer"
-                >
-                  About Us
-                </Link>
+              <div className="hidden lg:flex items-center gap-4">
                 <a 
                   href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`} 
                   className="flex items-center gap-2 text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer"
@@ -218,14 +342,6 @@ export default function Navbar() {
                   <span className="text-sm">🇸🇬</span>
                   <Phone className="h-4 w-4" />
                   <span className="text-sm">{PHONE_NUMBER}</span>
-                </a>
-                 <a 
-                  href={`tel:${PHONE_NUMBER2.replace(/\s/g, '')}`} 
-                  className="flex items-center gap-2 text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer"
-                >
-                  <span className="text-sm">🇺​​🇸​</span>
-                  <Phone className="h-4 w-4" />
-                  <span className="text-sm">{PHONE_NUMBER2}</span>
                 </a>
 
                 <div className="ml-2 flex items-center gap-3">
@@ -251,13 +367,43 @@ export default function Navbar() {
         <div className="fixed inset-0 z-30 overflow-y-auto bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-100 backdrop-blur-xl pt-24 lg:hidden">
           <div className="container px-4 py-6">
             <nav className="space-y-6">
-              <Link
+              <a
                 href="/"
                 className="block border-b border-gray-200 py-3 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </Link>
+              </a>
+
+              {/* Products Section */}
+              <div className="border-b border-gray-200 pb-4">
+                <div className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-600">
+                  Products
+                </div>
+                <div className="space-y-4">
+                  {Object.entries(productsMenuItems).map(([category, items]) => (
+                    <div key={category} className="pb-2">
+                      <div className="mb-2 text-sm font-semibold text-gray-700">{category}</div>
+                      <div className="space-y-2">
+                        {items.map((item) => (
+                          <a
+                            key={item.name}
+                            href={item.href}
+                            className="flex items-start gap-3 rounded-lg p-2 text-gray-700 transition-colors hover:bg-purple-100 hover:text-purple-700 cursor-pointer"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <item.icon className="h-4 w-4 flex-shrink-0 mt-0.5" />
+                            <div className="flex-1">
+                              <span className="text-sm block font-medium">{item.name}</span>
+                              <span className="text-xs text-gray-500 block mt-1">{item.description}</span>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
               {/* Industries Section */}
               <div className="border-b border-gray-200 pb-4">
@@ -282,15 +428,6 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {/* About Us */}
-              <Link
-                href="/about-us"
-                className="block border-b border-gray-200 py-3 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About Us
-              </Link>
-
               {/* Contact Number */}
               <a
                 href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`}
@@ -300,16 +437,6 @@ export default function Navbar() {
                 <span className="text-sm">🇸🇬</span>
                 <Phone className="h-5 w-5" />
                 {PHONE_NUMBER}
-              </a>
-              
-                <a
-                href={`tel:${PHONE_NUMBER2.replace(/\s/g, '')}`}
-                className="flex w-full items-center gap-3 border-b border-gray-200 py-3 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <span className="text-sm">🇺​​🇸​</span>
-                <Phone className="h-5 w-5" />
-                {PHONE_NUMBER2}
               </a>
 
               {/* Buttons */}
@@ -326,5 +453,3 @@ export default function Navbar() {
     </>
   );
 }
-
-

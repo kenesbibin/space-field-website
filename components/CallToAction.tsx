@@ -43,7 +43,7 @@ const CallToActionSection = () => {
             
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a 
-                href="https://spaceaiapp.com" 
+                href="https://amspace.ai" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-slate-900 text-white text-base font-bold hover:bg-slate-800 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
