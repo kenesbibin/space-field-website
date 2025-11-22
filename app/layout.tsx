@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsappButton";
-import SpaceFieldCopilot from "@/components/SpaceFieldCopilot";
+import SpaceCaptureCopilot from "@/components/SpaceCaptureCopilot";
 import CopilotKitWrapper from "@/components/CopilotKitWrapper";
 
 
@@ -12,8 +12,8 @@ import CopilotKitWrapper from "@/components/CopilotKitWrapper";
 
 
 export const metadata: Metadata = {
-  title: "SPACE FIELD",
-  description: "Streamline your field operations with SPACE FIELD. The ultimate mobile solution for field workers in construction, maintenance, and inspection sectors to manage tasks, report issues, and track progress in real-time.",
+  title: "SPACE CAPTURE",
+  description: "Streamline your field operations with SPACE CAPTURE. The ultimate mobile solution for field workers in construction, maintenance, and inspection sectors to manage tasks, report issues, and track progress in real-time.",
 };
 
 export default function RootLayout({
@@ -29,10 +29,12 @@ export default function RootLayout({
           {children}
           <Footer />
           <WhatsAppButton />
-          <SpaceFieldCopilot />
+          <SpaceCaptureCopilot />
         </CopilotKitWrapper>
         
       </body>
     </html>
   );
 }
+
+

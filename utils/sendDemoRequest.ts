@@ -19,6 +19,16 @@ const CREATE_DEMO_REQUEST = gql`
   }
 `;
 
+interface CreateDemoRequestData {
+  createDemoRequest: {
+    _id: string;
+    firstName: string;
+    lastName: string;
+    email: string;
+    phoneNumber: string;
+  };
+}
+
 // Function for chat-based demo request
 export async function sendDemoRequestFromChat({ name, email, phoneNumber }: { name: string; email: string; phoneNumber: string }) {
   // Split name into first and last name
@@ -39,9 +49,11 @@ export async function sendDemoRequestFromChat({ name, email, phoneNumber }: { na
       mutation: CREATE_DEMO_REQUEST,
       variables: { input },
     });
-    return (data as any).createDemoRequest;
+    return (data as CreateDemoRequestData).createDemoRequest;
   } catch (error) {
     console.error('Error creating demo request:', error);
     throw error;
   }
 }
+
+

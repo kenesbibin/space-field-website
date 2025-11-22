@@ -43,8 +43,7 @@ export default function DemoRequest() {
   });
 
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<any>(null);
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<unknown>(null);
 
   const isSuccess = !!data;
 
@@ -101,7 +100,6 @@ export default function DemoRequest() {
     e.preventDefault();
     if (validateForm()) {
       setLoading(true);
-      setError(null);
       try {
         const result = await client.mutate({
           mutation: CREATE_DEMO_REQUEST,
@@ -109,7 +107,8 @@ export default function DemoRequest() {
         });
         setData(result.data);
       } catch (err) {
-        setError(err);
+        // Error handling can be added here if needed
+        console.error('Error submitting form:', err);
       } finally {
         setLoading(false);
       }
@@ -130,7 +129,7 @@ export default function DemoRequest() {
             <h1 className="mb-6 text-4xl font-bold leading-tight text-gray-900 md:text-5xl lg:text-6xl">
               Transform Your Field Operations with{' '}
               <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                Space Field
+                SPACE CAPTURE
               </span>
             </h1>
 
@@ -197,7 +196,7 @@ export default function DemoRequest() {
                   Schedule Your Personalized Demo
                 </h2>
                 <p className="mb-8 text-gray-600">
-                  See Space Field in action. Let&apos;s discuss your unique field operation needs.
+                  See SPACE CAPTURE in action. Let&apos;s discuss your unique field operation needs.
                 </p>
 
                 <form onSubmit={handleSubmit} noValidate>
@@ -350,3 +349,5 @@ export default function DemoRequest() {
     </section>
   );
 }
+
+

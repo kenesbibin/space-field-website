@@ -71,7 +71,7 @@ const GuideSection = () => {
               variants={itemVariants}
               className="text-lg text-slate-600 leading-relaxed max-w-xl"
             >
-              Space Field isn't just about knowing where you are—it's about knowing <strong>where your project stands.</strong> Replace chaotic paper trails with digital precision. Assign tasks, log inspections, and visualize progress in one unified ecosystem.
+              SPACE CAPTURE isn&apos;t just about knowing where you are—it&apos;s about knowing <strong>where your project stands.</strong> Replace chaotic paper trails with digital precision. Assign tasks, log inspections, and visualize progress in one unified ecosystem.
             </motion.p>
 
             {/* Features List */}
@@ -125,7 +125,7 @@ const GuideSection = () => {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/50 ring-1 ring-black/5">
               <Image
                 src="/images/landscapeconstruction.png"
-                alt="Construction site management with Space Field"
+                alt="Construction site management with SPACE CAPTURE"
                 width={800}
                 height={600}
                 className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700 ease-in-out"
@@ -178,3 +178,5 @@ const GuideSection = () => {
 };
 
 export default GuideSection;
+
+

@@ -79,7 +79,8 @@ const ShowcaseSection = () => {
                   alt={slides[currentIndex].title}
                   fill
                   className="object-cover"
-                  priority
+                  sizes="(min-width: 1280px) 55vw, (min-width: 768px) 70vw, 90vw"
+                  priority={currentIndex === 0}
                 />
                 {/* Gradient Overlay on Image */}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent" />
@@ -186,7 +187,7 @@ const ShowcaseSection = () => {
                  viewport={{ once: true }}
                  className="text-slate-300 text-lg leading-relaxed"
               >
-                Traditional field management relies on guesswork and outdated reports. Space Field bridges the gap between on-site reality and office decision-making with military-grade precision.
+                Traditional field management relies on guesswork and outdated reports. SPACE CAPTURE bridges the gap between on-site reality and office decision-making with military-grade precision.
               </motion.p>
 
               <motion.div
@@ -209,3 +210,5 @@ const ShowcaseSection = () => {
 };
 
 export default ShowcaseSection;
+
+

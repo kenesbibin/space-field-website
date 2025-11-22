@@ -9,3 +9,5 @@ export default function CopilotKitWrapper({
 }) {
   return <CopilotKit publicApiKey={process.env.NEXT_PUBLIC_COPILOTKIT_PUBLIC_API_KEY || ''}>{children}</CopilotKit>;
 }
+
+

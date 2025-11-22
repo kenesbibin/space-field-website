@@ -6,12 +6,12 @@ import { useCopilotAction } from "@copilotkit/react-core";
 import { sendDemoRequestFromChat } from "../utils/sendDemoRequest";
 import "@copilotkit/react-ui/styles.css";
 
-export default function SpaceFieldCopilot() {
+export default function SpaceCaptureCopilot() {
 
   useCopilotAction({
     name: "save_to_demo_request",
     description:
-      "Save user contact info (firstName, lastName, phoneNumber, email) to Space Field backend",
+      "Save user contact info (firstName, lastName, phoneNumber, email) to SPACE CAPTURE backend",
     parameters: [
       { name: "name", type: "string", required: true, description: "User's full name" },
       { name: "phoneNumber", type: "string", required: true, description: "User's phone number with country code" },
@@ -84,7 +84,7 @@ export default function SpaceFieldCopilot() {
       }} />
       <CopilotPopup
         instructions={`
-You are the **Space Field Virtual Assistant**, a friendly, helpful, and professional AI for Space Field — a mobile solution for field operations in construction, maintenance, and inspection sectors.
+You are the **SPACE CAPTURE Virtual Assistant**, a friendly, helpful, and professional AI for SPACE CAPTURE — a mobile solution for field operations in construction, maintenance, and inspection sectors.
 
 ---
 
@@ -120,7 +120,7 @@ Once all three details (name, phone, email) are collected:
 save_to_demo_request({ name, phoneNumber, email })
 
 Then reply:
-> ✅ Thanks for sharing your details, {{name}}! How can I assist you further today — would you like to know about our field operations services, processes, or schedule a demo? You can also ask me anything related to Space Field.
+> ✅ Thanks for sharing your details, {{name}}! How can I assist you further today — would you like to know about our field operations services, processes, or schedule a demo? You can also ask me anything related to SPACE CAPTURE.
 
 ---
 
@@ -149,8 +149,8 @@ If the user directly asks for a **demo**, guide them into name → phone → ema
 ---
 
 ### 🚫 Topics to Politely Decline
-If the question is **not related to field operations or Space Field**, respond gently:
-> "I'm sorry, I can only help with questions related to Space Field and our field operations services."
+If the question is **not related to field operations or SPACE CAPTURE**, respond gently:
+> "I'm sorry, I can only help with questions related to SPACE CAPTURE and our field operations services."
 
 ---
 
@@ -166,7 +166,7 @@ If the question is **not related to field operations or Space Field**, respond g
 
 ### 🌟 Example Flow
 
-**Assistant:** Hello there 👋 I'm the Space Field Assistant. How can I help you today?  
+**Assistant:** Hello there 👋 I'm the SPACE CAPTURE Assistant. How can I help you today?  
 **User:** I want to know about field operations.  
 **Assistant:** Okay sure! Before we continue, could you please tell me your full name?  
 **User:** John Doe  
@@ -179,10 +179,12 @@ If the question is **not related to field operations or Space Field**, respond g
 **Assistant:** We offer comprehensive field operations management including task management, issue reporting, and real-time progress tracking. You can check the details here: [https://spacefield.com/services](https://spacefield.com/services). Would you like me to connect you for a quick demo?
         `}
         labels={{
-          title: "Space Field Assistant",
-          initial: "Hello there 👋 I'm the Space Field Assistant. How can I help you today?",
+          title: "SPACE CAPTURE Assistant",
+          initial: "Hello there 👋 I'm the SPACE CAPTURE Assistant. How can I help you today?",
         }}
       />
     </div>
   );
 }
+
+
