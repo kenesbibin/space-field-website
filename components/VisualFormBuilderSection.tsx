@@ -259,7 +259,7 @@ const VisualFormBuilderSection = () => {
               </h2>
               
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                Don't start from scratch. Benefit from our library of 100+ industry-standard operational templates used by thousands of field teams.
+                Don&rsquo;t start from scratch. Benefit from our library of 100+ industry-standard operational templates used by thousands of field teams.
               </p>
 
               <ul className="space-y-4 mb-8">
@@ -279,7 +279,7 @@ const VisualFormBuilderSection = () => {
               </ul>
 
               <p className="text-sm text-slate-500 italic border-l-4 border-purple-200 pl-4">
-                "Once you've created templates for your team, save them and share for consistent future use across all project sites."
+                &ldquo;Once you&rsquo;ve created templates for your team, save them and share for consistent future use across all project sites.&rdquo;
               </p>
             </motion.div>
 

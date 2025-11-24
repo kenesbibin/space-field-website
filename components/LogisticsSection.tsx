@@ -81,7 +81,7 @@ const LogisticsSection = () => {
               </motion.h1>
               
               <motion.p variants={itemVariants} className="mt-6 text-lg text-slate-600 leading-relaxed max-w-xl">
-                Space Field transforms logistics operations with end-to-end visibility. From the warehouse dock to the customer's doorstep, ensure every mile is optimized and every delivery is verified.
+                Space Field transforms logistics operations with end-to-end visibility. From the warehouse dock to the customer&rsquo;s doorstep, ensure every mile is optimized and every delivery is verified.
               </motion.p>
             </div>
 

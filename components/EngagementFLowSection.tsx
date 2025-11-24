@@ -215,7 +215,7 @@ const EngagementFlowsSection = () => {
                                   </div>
                                   <div className="bg-indigo-50 border border-indigo-100 p-3 rounded-lg flex items-center gap-3 shadow-sm">
                                       <Zap className="w-4 h-4 text-indigo-600" />
-                                      <span className="text-sm font-medium text-indigo-900">Update Priority to 'High'</span>
+                                      <span className="text-sm font-medium text-indigo-900">Update Priority to &lsquo;High&rsquo;</span>
                                   </div>
                               </div>
                           </div>

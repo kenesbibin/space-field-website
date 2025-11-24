@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'SPACE CAPTURE - Home',
   description: 'Streamline your field operations with SPACE CAPTURE. The ultimate mobile solution for field workers.',
   alternates: {
-    canonical: '/',
+    canonical: 'https://spacecapture.ai/',
   },
 }
 

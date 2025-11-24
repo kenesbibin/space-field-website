@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   description: 'Optimize your construction sites with Space Field. Track progress, manage safety inspections, and coordinate labor with our all-in-one mobile app for construction.',
   keywords: ['construction software', 'field management', 'daily logs', 'safety inspections', 'construction app', 'Space Field'],
   alternates: {
-    canonical: '/industries/construction',
+    canonical: 'https://spacecapture.ai/industries/construction',
   },
   openGraph: {
     title: 'Construction Field Management Software | Space Field',
     description: 'Streamline construction operations with real-time tracking and digital reporting.',
-    url: '/industries/construction',
+    url: 'https://spacecapture.ai/industries/construction',
     siteName: 'Space Field',
     images: [
       {

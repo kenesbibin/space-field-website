@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Instagram, Linkedin, Twitter, Youtube, Github, CheckCircle2 } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 export default function Footer() {
   return (

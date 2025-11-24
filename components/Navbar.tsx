@@ -18,7 +18,6 @@ import {
   Zap,
   Layout,
   Palette,
-  Users,
   GitBranch,
   Lock,
   BarChart3,
@@ -26,6 +25,7 @@ import {
   Server,
   BrainIcon
 } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import Link from 'next/link';
 
 const industriesItems = [
@@ -39,7 +39,14 @@ const industriesItems = [
   { name: 'Facility Management', href: '/industries/facility-management', icon: HardHat, description: 'Building upkeep and services.' },
 ];
 
-const productsMenuItems: { [key: string]: { name: string; href: string; icon: any; description: string }[] } = {
+type ProductMenuItem = {
+  name: string;
+  href: string;
+  icon: LucideIcon;
+  description: string;
+};
+
+const productsMenuItems: Record<string, ProductMenuItem[]> = {
   Features: [
     { name: 'Core Functions', href: '/core-functions', icon: Layout, description: 'Essential tools for field operations management.' },
     { name: 'Visual Form Builder', href: '/visual-form-builder', icon: Palette, description: 'Create custom forms without coding.' },
@@ -367,13 +374,13 @@ export default function Navbar() {
         <div className="fixed inset-0 z-30 overflow-y-auto bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-100 backdrop-blur-xl pt-24 lg:hidden">
           <div className="container px-4 py-6">
             <nav className="space-y-6">
-              <a
+              <Link
                 href="/"
                 className="block border-b border-gray-200 py-3 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </a>
+              </Link>
 
               {/* Products Section */}
               <div className="border-b border-gray-200 pb-4">

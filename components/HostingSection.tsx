@@ -10,8 +10,7 @@ import {
   ShieldCheck, 
   Globe, 
   Lock, 
-  Database,
-  Cpu
+  Database
 } from 'lucide-react';
 
 const HostingSection = () => {
@@ -42,7 +41,7 @@ const HostingSection = () => {
               </h1>
               
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                Space Capture offers the most flexible hosting options in the market. Whether you need the speed of our global SaaS cloud, the isolation of a private instance, or total control via on-premise deployment—we've got you covered.
+                Space Capture offers the most flexible hosting options in the market. Whether you need the speed of our global SaaS cloud, the isolation of a private instance, or total control via on-premise deployment&mdash;we&rsquo;ve got you covered.
               </p>
 
               <div className="flex gap-4">

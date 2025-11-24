@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: 'Digitize manufacturing operations with Space Field. Streamline equipment maintenance, quality control inspections, and shop floor management with our mobile app.',
   keywords: ['manufacturing software', 'preventive maintenance', 'quality control', 'shop floor management', 'work order app', 'Space Field'],
   alternates: {
-    canonical: 'https://spaceaiapp.com/industries/manufacturing',
+    canonical: 'https://spacecapture.ai/industries/manufacturing',
   },
   openGraph: {
     title: 'Manufacturing Field Management Software | Space Field',
     description: 'Optimize production workflows with digital inspections and asset tracking.',
-    url: 'https://spaceaiapp.com/industries/manufacturing',
+    url: 'https://spacecapture.ai/industries/manufacturing',
     siteName: 'Space Field',
     images: [
       {

@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   description: 'Streamline building operations with Space Field. Manage work orders, preventive maintenance, and asset tracking with our all-in-one facility management app.',
   keywords: ['facility management software', 'work order system', 'preventive maintenance', 'building operations', 'CMMS', 'Space Field'],
   alternates: {
-    canonical: 'https://spaceaiapp.com/industries/facility-management',
+    canonical: 'https://spacecapture.ai/industries/facility-management',
   },
   openGraph: {
     title: 'Facility Management Software | Space Field',
     description: 'Optimize building performance and tenant satisfaction with digital facility operations.',
-    url: 'https://spaceaiapp.com/industries/facility-management',
+    url: 'https://spacecapture.ai/industries/facility-management',
     siteName: 'Space Field',
     images: [
       {

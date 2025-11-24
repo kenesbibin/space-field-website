@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   description: 'Maximize uptime and safety in Oil & Gas operations. Space Field provides offline-capable mobile solutions for rig inspections, pipeline monitoring, and HSE compliance.',
   keywords: ['oil and gas software', 'HSE compliance', 'pipeline monitoring', 'rig inspection app', 'field operations', 'Space Field'],
   alternates: {
-    canonical: 'https://spaceaiapp.com/industries/oil-gas',
+    canonical: 'https://spacecapture.ai/industries/oil-gas',
   },
   openGraph: {
     title: 'Oil & Gas Field Management Software | Space Field',
     description: 'Ensure asset integrity and workforce safety with digital field operations.',
-    url: 'https://spaceaiapp.com/industries/oil-gas',
+    url: 'https://spacecapture.ai/industries/oil-gas',
     siteName: 'Space Field',
     images: [
       {

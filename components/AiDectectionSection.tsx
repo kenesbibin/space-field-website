@@ -7,10 +7,8 @@ import {
   ArrowRight, 
   Sparkles, 
   CheckCircle2, 
-  CloudUpload, 
   AlertCircle,
   Wifi,
-  AlertTriangle,
   Zap,
   Hammer
 } from 'lucide-react';

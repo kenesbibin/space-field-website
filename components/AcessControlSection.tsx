@@ -4,9 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  ArrowRight, 
-  Shield, 
-  Lock, 
+   ArrowRight, 
+   Lock, 
   Users, 
   Check, 
   MoreHorizontal, 
@@ -46,7 +45,7 @@ const AccessControlSection = () => {
               </h1>
               
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                Define exactly who can see, edit, or delete data. Create custom roles like "Field Inspector," "Project Manager," or " auditor" to ensure data integrity and compliance across your organization.
+                Define exactly who can see, edit, or delete data. Create custom roles like &ldquo;Field Inspector,&rdquo; &ldquo;Project Manager,&rdquo; or &ldquo;Auditor&rdquo; to ensure data integrity and compliance across your organization.
               </p>
 
               <div className="flex gap-4">

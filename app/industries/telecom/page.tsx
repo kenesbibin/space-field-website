@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: 'Manage telecom infrastructure, fiber deployment, and tower maintenance with Space Field. The ultimate offline-capable app for telecom field technicians.',
   keywords: ['telecom software', 'tower inspection', 'fiber deployment', 'field service management', '5G rollout', 'Space Field'],
   alternates: {
-    canonical: 'https://spaceaiapp.com/industries/telecommunication',
+    canonical: 'https://spacecapture.ai/industries/telecommunication',
   },
   openGraph: {
     title: 'Telecommunication Field Management Software | Space Field',
     description: 'Streamline telecom operations with real-time dispatch and asset tracking.',
-    url: 'https://spaceaiapp.com/industries/telecommunication',
+    url: 'https://spacecapture.ai/industries/telecommunication',
     siteName: 'Space Field',
     images: [
       {
