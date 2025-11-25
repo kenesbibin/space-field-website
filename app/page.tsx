@@ -1,3 +1,4 @@
+import AiDetectionApiSection from '@/components/AiDetectionApiSection'
 import CallToActionSection from '@/components/CallToAction'
 import Features from '@/components/Features'
 import GuideSection from '@/components/GuideSection'
@@ -20,6 +21,7 @@ export default function Home() {
        <ShowcaseSection/>
        <GuideSection/>
        <Features/>
+       <AiDetectionApiSection/>
        <CallToActionSection/>
     </main>
   )
