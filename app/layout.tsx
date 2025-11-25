@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsappButton";
 import SpaceCaptureCopilot from "@/components/SpaceCaptureCopilot";
 import CopilotKitWrapper from "@/components/CopilotKitWrapper";
+import EmailButton from "@/components/EmailButton";
 
 
 
@@ -28,6 +29,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <EmailButton/>
           <WhatsAppButton />
           <SpaceCaptureCopilot />
         </CopilotKitWrapper>

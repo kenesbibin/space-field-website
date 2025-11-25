@@ -24,10 +24,16 @@ import {
   BarChart3,
   Plug,
   Server,
-  BrainIcon
+  BrainIcon,
+  Mail,
+  Check,
+  Copy,
+  Globe
 } from 'lucide-react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
+// --- Configuration Data ---
 const industriesItems = [
   { name: 'Construction', href: '/industries/construction', icon: Hammer, description: 'Manage sites and crews efficiently.' },
   { name: 'Utilities & Energy', href: '/industries/utilities', icon: Zap, description: 'Grid maintenance and inspections.' },
@@ -54,7 +60,64 @@ const productsMenuItems: { [key: string]: { name: string; href: string; icon: an
   ],
 };
 
+// --- Email Modal Component ---
+const EmailModal = ({ isOpen, onClose, email }: { isOpen: boolean; onClose: () => void; email: string }) => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
+      <div className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl p-6 transform transition-all scale-100">
+        <button 
+          onClick={onClose} 
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+        >
+          <X className="w-5 h-5" />
+        </button>
+
+        <div className="flex flex-col items-center text-center space-y-4">
+          <div className="p-3 bg-purple-100 rounded-full text-purple-600">
+            <Mail className="w-8 h-8" />
+          </div>
+          
+          <h3 className="text-xl font-bold text-gray-900">Get in Touch</h3>
+          <p className="text-gray-500 text-sm">
+            Copy our email address below to send us a message directly.
+          </p>
+
+          <div className="w-full flex items-center justify-between bg-gray-50 border border-gray-200 rounded-lg p-3 mt-4">
+            <span className="text-gray-700 font-medium font-mono text-sm sm:text-base truncate mr-2">
+              {email}
+            </span>
+            <button
+              onClick={handleCopy}
+              className="flex items-center justify-center p-2 rounded-md transition-colors hover:bg-white hover:shadow-sm text-gray-500 hover:text-purple-600 focus:outline-none"
+              title="Copy to clipboard"
+            >
+              {copied ? <Check className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5" />}
+            </button>
+          </div>
+
+          <div className="pt-2 text-xs text-gray-400">
+            {copied ? 'Copied to clipboard!' : 'Click the icon to copy'}
+          </div>
+        </div>
+      </div>
+      {/* Click outside to close */}
+      <div className="absolute inset-0 -z-10" onClick={onClose}></div>
+    </div>
+  );
+};
+
 export default function Navbar() {
+  // State
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showIndustries, setShowIndustries] = useState(false);
   const [hoveredIndustries, setHoveredIndustries] = useState(false);
@@ -62,12 +125,20 @@ export default function Navbar() {
   const [hoveredProducts, setHoveredProducts] = useState(false);
   const [activeProductCategory, setActiveProductCategory] = useState<string>('Features');
   const [scrolled, setScrolled] = useState(false);
+  
+  // Modal State
+  const [showEmailModal, setShowEmailModal] = useState(false);
+  const [mobileEmailCopied, setMobileEmailCopied] = useState(false);
+
   const dropdownRef = useRef<HTMLDivElement>(null);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+  // Constants
   const SIGN_IN_URL = 'https://amspace.ai';
   const DEMO_URL = '/request-a-demo';
-  const PHONE_NUMBER = '+65 8611 1900';
+  const PHONE_NUMBER_SG = '+65 8611 1900';
+  const PHONE_NUMBER_USA = '+1 516 669 7420';
+  const CONTACT_EMAIL = 'contact@spacecapture.ai';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -97,6 +168,7 @@ export default function Navbar() {
     };
   }, [isMenuOpen]);
 
+  // Dropdown Handlers
   const handleIndustriesMouseEnter = () => {
     if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
     setHoveredIndustries(true);
@@ -127,6 +199,12 @@ export default function Navbar() {
     }, 150);
   };
 
+  const handleMobileEmailCopy = () => {
+    navigator.clipboard.writeText(CONTACT_EMAIL);
+    setMobileEmailCopied(true);
+    setTimeout(() => setMobileEmailCopied(false), 2000);
+  };
+
   const renderButton = (href: string, text: string, isPrimary = true) => (
     <a
       href={href}
@@ -150,6 +228,12 @@ export default function Navbar() {
 
   return (
     <>
+      <EmailModal 
+        isOpen={showEmailModal} 
+        onClose={() => setShowEmailModal(false)} 
+        email={CONTACT_EMAIL} 
+      />
+
       <header
         className={`fixed inset-x-0 top-0 z-50 py-3 transition-all duration-300 ${
           scrolled || isMenuOpen
@@ -335,17 +419,37 @@ export default function Navbar() {
 
               {/* Desktop: Contact & Actions */}
               <div className="hidden lg:flex items-center gap-4">
-                <a 
-                  href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`} 
-                  className="flex items-center gap-2 text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer"
+                
+                {/* Email Icon (Triggers Modal) */}
+                <button 
+                  onClick={() => setShowEmailModal(true)}
+                  className="flex items-center justify-center p-2 rounded-full hover:bg-purple-50 text-gray-600 hover:text-purple-600 transition-colors"
+                  title="Contact via Email"
                 >
-                  <span className="text-sm">🇸🇬</span>
-                  <Phone className="h-4 w-4" />
-                  <span className="text-sm">{PHONE_NUMBER}</span>
-                </a>
+                  <Mail className="h-5 w-5" />
+                </button>
 
-                <div className="ml-2 flex items-center gap-3">
-                  {renderButton(SIGN_IN_URL, 'Sign In')}
+                {/* Phone Numbers (Side by Side) */}
+                <div className="flex items-center gap-4 border-l border-r border-gray-200 px-4 h-8">
+                  <a 
+                    href={`tel:${PHONE_NUMBER_USA.replace(/\s/g, '')}`} 
+                    className="flex items-center gap-1.5 text-gray-700 font-medium hover:text-purple-600 transition-colors text-xs whitespace-nowrap"
+                  >
+                    <span className="text-base">🇺🇸</span>
+                    <span>{PHONE_NUMBER_USA}</span>
+                  </a>
+                  <a 
+                    href={`tel:${PHONE_NUMBER_SG.replace(/\s/g, '')}`} 
+                    className="flex items-center gap-1.5 text-gray-700 font-medium hover:text-purple-600 transition-colors text-xs whitespace-nowrap"
+                  >
+                    <span className="text-base">🇸🇬</span>
+                    <span>{PHONE_NUMBER_SG}</span>
+                  </a>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex items-center gap-3">
+                  {renderButton(SIGN_IN_URL, 'Try for Free')}
                   {renderButton(DEMO_URL, 'Request a Demo', false)}
                 </div>
               </div>
@@ -428,19 +532,49 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {/* Contact Number */}
-              <a
-                href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`}
-                className="flex w-full items-center gap-3 border-b border-gray-200 py-3 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <span className="text-sm">🇸🇬</span>
-                <Phone className="h-5 w-5" />
-                {PHONE_NUMBER}
-              </a>
+              {/* Contact Info Section */}
+              <div className="border-b border-gray-200 pb-4 space-y-3">
+                 {/* Email for Mobile */}
+                 <button
+                  className="flex w-full items-center gap-3 py-2 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer text-left"
+                  onClick={handleMobileEmailCopy}
+                >
+                  {mobileEmailCopied ? <Check className="h-5 w-5 text-green-600" /> : <Mail className="h-5 w-5" />}
+                  <div className="flex flex-col">
+                    <span className="text-sm font-medium">Email</span>
+                    <span className="text-xs text-gray-500">{mobileEmailCopied ? 'Copied to clipboard' : CONTACT_EMAIL}</span>
+                  </div>
+                </button>
+
+                {/* USA Number */}
+                <a
+                  href={`tel:${PHONE_NUMBER_USA.replace(/\s/g, '')}`}
+                  className="flex w-full items-center gap-3 py-2 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <span className="text-lg">🇺🇸</span>
+                  <div className="flex flex-col">
+                     <span className="text-sm font-medium">USA</span>
+                     <span className="text-sm">{PHONE_NUMBER_USA}</span>
+                  </div>
+                </a>
+
+                {/* SG Number */}
+                <a
+                  href={`tel:${PHONE_NUMBER_SG.replace(/\s/g, '')}`}
+                  className="flex w-full items-center gap-3 py-2 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <span className="text-lg">🇸🇬</span>
+                   <div className="flex flex-col">
+                     <span className="text-sm font-medium">Singapore</span>
+                     <span className="text-sm">{PHONE_NUMBER_SG}</span>
+                  </div>
+                </a>
+              </div>
 
               {/* Buttons */}
-              <div className="mt-6 border-t border-gray-200 pt-6">
+              <div className="mt-6 pt-2">
                 <div className="flex flex-col gap-4">
                   {renderButton(SIGN_IN_URL, 'Sign In')}
                   {renderButton(DEMO_URL, 'Request a Demo', false)}
