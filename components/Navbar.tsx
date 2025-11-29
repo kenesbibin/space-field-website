@@ -134,7 +134,7 @@ export default function Navbar() {
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Constants
-  const SIGN_IN_URL = 'https://amspace.ai';
+  const SIGN_IN_URL = 'https://www.amspace.ai/login?type=Legal&moduleId=b20f5bfe-a351-46e7-842a-24a02802fe4f&invite=guest';
   const DEMO_URL = '/request-a-demo';
   const PHONE_NUMBER_SG = '+65 8611 1900';
   const PHONE_NUMBER_USA = '+1 516 669 7420';

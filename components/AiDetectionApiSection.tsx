@@ -51,7 +51,7 @@ const AiDetectionApiSection = () => {
 
               <div className="flex gap-4">
                 <Link 
-                  href="https://www.amspaceai.com" 
+                  href="www.amspace.ai/login?type=Legal&moduleId=b20f5bfe-a351-46e7-842a-24a02802fe4f&invite=guest" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-slate-900 text-white text-base font-bold hover:bg-slate-800 hover:shadow-lg hover:scale-105 transition-all duration-300"
