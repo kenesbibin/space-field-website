@@ -15,6 +15,9 @@ import EmailButton from "@/components/EmailButton";
 export const metadata: Metadata = {
   title: "SPACE CAPTURE",
   description: "Streamline your field operations with SPACE CAPTURE. The ultimate mobile solution for field workers in construction, maintenance, and inspection sectors to manage tasks, report issues, and track progress in real-time.",
+  verification: {
+    google: "RwZwSyRwzk7fxxZPEX76qxLVVGO5np1LWzjFpBd2tV4",
+  },
 };
 
 export default function RootLayout({
