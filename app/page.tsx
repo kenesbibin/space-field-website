@@ -7,8 +7,8 @@ import ShowcaseSection from '@/components/ShowcaseSection'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'SPACE CAPTURE - Home',
-  description: 'Streamline your field operations with SPACE CAPTURE. The ultimate mobile solution for field workers.',
+  title: 'Field Operations & Inspection Software | SpaceCapture',
+  description: 'Manage field operations with precision. A mobile tracking solution for construction, maintenance, and inspections. Stop chaos and see progress in real-time.',
   alternates: {
     canonical: '/',
   },

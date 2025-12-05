@@ -13,10 +13,10 @@ import EmailButton from "@/components/EmailButton";
 
 
 export const metadata: Metadata = {
-  title: "SPACE CAPTURE",
-  description: "Streamline your field operations with SPACE CAPTURE. The ultimate mobile solution for field workers in construction, maintenance, and inspection sectors to manage tasks, report issues, and track progress in real-time.",
+  title: "Field Operations & Inspection Software | SpaceCapture",
+  description: "Manage field operations with precision. A mobile tracking solution for construction, maintenance, and inspections. Stop chaos and see progress in real-time.",
   verification: {
-    google: "RwZwSyRwzk7fxxZPEX76qxLVVGO5np1LWzjFpBd2tV4",
+    google: "g7pWi8PWsp7s3Mq6eGjyKfJ1hrgqgfybkPOp-sXsNKY",
   },
 };
 
