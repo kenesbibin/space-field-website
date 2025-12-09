@@ -7,7 +7,7 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
 
 export default function HeroSection() {
-  // 1. Typed Variants
+
   const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -26,9 +26,7 @@ export default function HeroSection() {
       }
     }
   };
-
-  // 2. FIX: Separate the transition and use 'as const' for the ease property
-  // This fixes the "Type string is not assignable to type Easing" error
+ 
   const blobTransition = {
     duration: 7,
     repeat: Infinity,
