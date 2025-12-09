@@ -39,14 +39,14 @@ const AccessControlSection = () => {
                  <span className="text-sm font-bold text-emerald-700 uppercase tracking-wider">Security First</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
-                Enterprise-Grade <br/>
-                <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Access Control</span>
-              </h1>
+                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                        Enterprise-Grade <br/>
+                        <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Access Control</span>
+                     </h1>
               
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                Define exactly who can see, edit, or delete data. Create custom roles like &ldquo;Field Inspector,&rdquo; &ldquo;Project Manager,&rdquo; or &ldquo;Auditor&rdquo; to ensure data integrity and compliance across your organization.
-              </p>
+                     <p className="text-lg text-slate-600 leading-relaxed mb-8">
+                        Define exactly who can see, edit, or delete data. Create custom roles like &ldquo;Field Inspector,&rdquo; &ldquo;Project Manager,&rdquo; or &ldquo;Auditor&rdquo; to ensure data integrity and compliance across your organization.
+                     </p>
 
               <div className="flex gap-4">
                 <Link 

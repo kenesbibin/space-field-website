@@ -9,17 +9,17 @@ const FACILITY_FEATURES = [
   {
     title: "Work Order Management",
     icon: ClipboardList,
-    description: "Streamline tenant requests and internal repairs. Assign tasks to maintenance staff instantly and track resolution times to ensure service level agreements (SLAs) are met."
+    description: "Streamline tenant requests, plumbing work order templates, electrical work order templates, portable toilet software requests, and HOA app escalations in one console. Assign tasks instantly and track SLAs with digital signatures."
   },
   {
     title: "Preventive Maintenance",
     icon: Wrench,
-    description: "Schedule recurring inspections for HVAC, elevators, and fire safety systems. Auto-generate checklists to ensure compliance and extend asset lifecycles."
+    description: "Schedule HVAC, elevator, fire extinguisher inspection software runs, QR code equipment maintenance, and heavy equipment maintenance app routines. Auto-generate inspection forms and job safety analysis steps to extend asset lifecycles."
   },
   {
     title: "Space & Asset Tracking",
     icon: Building2,
-    description: "Gain visibility into asset location and condition across your portfolio. Monitor occupancy levels and optimize space utilization data for smarter planning."
+    description: "Gain visibility into every equipment tracking app record, equipment inventory app audit, property inspection report template, and building inspection software checklist across your portfolio."
   }
 ];
 
@@ -73,14 +73,14 @@ const FacilityManagementSection = () => {
               </motion.div>
               
               <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
-                Smarter Buildings, <br/>
+                Smarter Buildings & Inspection Software, <br/>
                 <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
                   Superior Operations
                 </span>
               </motion.h1>
               
               <motion.p variants={itemVariants} className="mt-6 text-lg text-slate-600 leading-relaxed max-w-xl">
-                Space Field unifies facility operations into one intuitive platform. Empower your teams to manage maintenance, assets, and tenant satisfaction from anywhere in the building.
+                Space Field unifies facility operations into one intuitive platform. Empower your teams to manage building inspection software, property inspection templates, equipment inspection apps, facility inspection forms, restaurant food inventory apps, and customer data collection software from anywhere.
               </motion.p>
             </div>
 
@@ -110,8 +110,8 @@ const FacilityManagementSection = () => {
             </div>
 
             <motion.div variants={itemVariants} className="pt-4">
-               <a href="/book-a-demo" className="inline-flex items-center gap-2 text-cyan-700 font-bold hover:gap-3 transition-all">
-                  See Facility Demo <ArrowRight className="w-5 h-5" />
+              <a href="/book-a-demo" className="inline-flex items-center gap-2 text-cyan-700 font-bold hover:gap-3 transition-all">
+                See Facility & Inspection Demo <ArrowRight className="w-5 h-5" />
                </a>
             </motion.div>
           </motion.div>

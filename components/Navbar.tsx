@@ -1,13 +1,13 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import type { ElementType } from 'react';
 import Image from 'next/image';
 import { 
   Menu, 
   X, 
   ChevronDown, 
   ChevronRight,
-  Phone, 
   Hammer,
   Wifi,
   Wrench,
@@ -27,11 +27,11 @@ import {
   Mail,
   Check,
   Copy,
-  Globe
+  Globe,
+  ShieldCheck,
+  Clock
 } from 'lucide-react';
-import type { LucideIcon } from 'lucide-react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
 
 // --- Configuration Data ---
 const industriesItems = [
@@ -48,7 +48,7 @@ const industriesItems = [
 type ProductMenuItem = {
   name: string;
   href: string;
-  icon: LucideIcon;
+  icon: ElementType;
   description: string;
 };
 
@@ -64,6 +64,17 @@ const productsMenuItems: Record<string, ProductMenuItem[]> = {
   'For Developers': [
     { name: 'Integrations', href: '/integrations', icon: Plug, description: 'Connect with your existing tools and systems.' },
     { name: 'Flexible Hosting', href: '/hosting', icon: Server, description: 'Deploy on-premise or in the cloud.' },
+  ],
+  Solutions: [
+    { name: 'Azure AD SSO', href: '/solutions/azure-sso', icon: Lock, description: 'Azure single sign on + Okta federation for every workflow.' },
+    { name: 'Inspection Software', href: '/solutions/inspection-software', icon: ShieldCheck, description: 'Building, fire, vehicle, and quality inspection apps.' },
+    { name: 'Fleet Maintenance', href: '/solutions/fleet-maintenance', icon: Truck, description: 'Fleet maintenance app, DVIR, and equipment tracking.' },
+    { name: 'Time Tracking', href: '/solutions/time-tracking', icon: Clock, description: 'Time clock apps, payroll-ready timesheets, and scheduling.' },
+    { name: 'Data Collection', href: '/solutions/data-collection', icon: Plug, description: 'Fulcrum app alternative, offline forms, and feature requests.' },
+  ],
+  Resources: [
+    { name: 'Construction Templates', href: '/resources/templates', icon: Globe, description: 'Scope of work, safety checklists, and inspection templates.' },
+    { name: 'Fulcrum Comparison', href: '/compare/fulcrum', icon: GitBranch, description: 'See how SpaceCapture stacks up against the Fulcrum app.' },
   ],
 };
 

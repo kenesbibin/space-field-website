@@ -6,24 +6,24 @@ import { motion } from 'framer-motion';
 
 const FEATURES = [
   {
-    title: "Unified Web & Mobile Ecosystem",
+    title: "Azure AD SSO + Okta Integration",
     icon: Smartphone, 
-    description: "Seamlessly switch between the powerful Web Dashboard for office management and the robust Mobile App for on-site execution. One platform, total control."
+    description: "Deliver Azure SSO, Azure AD SSO setup, Azure Active Directory SSO, Microsoft single sign on, and Okta Azure AD integration in one click so every inspection app, data capture app, or contractor portal inherits secure access."
   },
   {
-    title: "Instant Digital Signatures",
+    title: "Inspection & Safety Software Suite",
     icon: PenTool,
-    description: "Eliminate paper trails. Securely capture client approvals and technical sign-offs directly on the device to validate work and close jobs faster."
+    description: "Activate construction inspection software, building inspection software, fire extinguisher inspection software, job safety analysis apps, and safety checklist apps without stitching together separate inspection forms."
   },
   {
-    title: "Live Field Synchronization",
+    title: "Fleet Maintenance & Equipment Tracking",
     icon: Zap,
-    description: "Eliminate the communication gap. Updates made on the field are instantly visible in the office, ensuring project managers always have real-time site data."
+    description: "Track fleet maintenance apps, truck inspection apps, heavy equipment maintenance apps, fleet mileage trackers, equipment inspection software, and QR code equipment maintenance records from a single equipment inventory app."
   },
   {
-    title: "Automated Safety & Compliance",
+    title: "Construction Reports & Time Tracking",
     icon: ShieldCheck,
-    description: "Digitize your safety protocols. Enforce mandatory checklists, incident reporting, and digital signatures to ensure your site meets all industry standards."
+    description: "Publish the best construction daily report app outputs, construction daily log app updates, time clock app entries, timesheet apps, toolbox talks, and time tracking software for employees in one workflow."
   }
 ];
 
@@ -134,11 +134,11 @@ const Features = () => {
               </div>
               
               <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 leading-tight">
-                Our Features
+                Our Field Software Stack
               </h2>
               
               <p className="text-lg text-slate-600 leading-relaxed max-w-lg">
-                 We combine powerful technology with simple usability to help you master every aspect of your field operations.
+                 We combine powerful technology with simple usability to help you master Azure SSO, inspection software, fleet maintenance, construction management software, and time tracking with one subscription.
               </p>
             </div>
 

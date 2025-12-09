@@ -10,25 +10,25 @@ const slides = [
   {
     id: 1,
     image: "/images/landing1.jpg", 
-    title: "Field Operations Hub",
-    location: "Construction Site A",
-    description: "Real-time monitoring",
+    title: "Site Inspection Software",
+    location: "Building inspection apps AU | US",
+    description: "Construction inspection software + site inspection app",
     icon: MapPin
   },
   {
     id: 2,
     image: "/images/landing2.jpg", 
-    title: "Asset Tracking",
-    location: "Logistics Center",
-    description: "Precision GPS Lock",
+    title: "Fleet Vehicle Maintenance App",
+    location: "Fleet mileage tracker",
+    description: "Truck inspection app & heavy equipment maintenance",
     icon: Activity
   },
   {
     id: 3,
     image: "/images/hero.jpg", 
-    title: "Safety Compliance",
-    location: "Inspection Zone",
-    description: "100% Protocol Adherence",
+    title: "Fire Extinguisher Inspection Software",
+    location: "Safety checklist templates",
+    description: "Fire alarm inspection app & extinguisher app",
     icon: ShieldCheck
   }
 ];
@@ -175,8 +175,8 @@ const ShowcaseSection = () => {
                  viewport={{ once: true }}
               >
                 <h2 className="text-3xl md:text-4xl font-light leading-tight">
-                  <strong className="font-extrabold block text-blue-400 mb-2">Eliminate Field Blindspots.</strong>
-                  Don&apos;t let distance become a barrier to progress.
+                  <strong className="font-extrabold block text-blue-400 mb-2">Boost Every Inspection & Fleet Workflow.</strong>
+                  From construction inspection software to fleet mileage trackers, nothing slips.
                 </h2>
               </motion.div>
               
@@ -187,7 +187,7 @@ const ShowcaseSection = () => {
                  viewport={{ once: true }}
                  className="text-slate-300 text-lg leading-relaxed"
               >
-                Traditional field management relies on guesswork and outdated reports. SPACE CAPTURE bridges the gap between on-site reality and office decision-making with military-grade precision.
+                Traditional field management relies on guesswork and outdated reports. SPACE CAPTURE bridges the gap for building inspection software, construction site inspection software, roof inspection report software, equipment inspection software, and property inspection templates while syncing offline forms apps, inspection form builders, and data collection programs to your Google Sheets dashboard.
               </motion.p>
 
               <motion.div
@@ -197,7 +197,7 @@ const ShowcaseSection = () => {
                 viewport={{ once: true }}
               >
                 <button className="mt-4 text-sm font-bold uppercase tracking-wider text-blue-400 hover:text-white transition-colors flex items-center gap-2 cursor-pointer">
-                  Explore Solutions <span className="text-lg">→</span>
+                  Explore Inspection & Fleet Solutions <span className="text-lg">→</span>
                 </button>
               </motion.div>
             </div>

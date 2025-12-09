@@ -209,14 +209,14 @@ const EngagementFlowsSection = () => {
                           <div className="flex-1">
                               <span className="text-xs font-bold text-indigo-600 block mb-1">THEN DO THIS</span>
                               <div className="space-y-2">
-                                  <div className="bg-indigo-50 border border-indigo-100 p-3 rounded-lg flex items-center gap-3 shadow-sm">
+                                    <div className="bg-indigo-50 border border-indigo-100 p-3 rounded-lg flex items-center gap-3 shadow-sm">
                                       <MessageSquare className="w-4 h-4 text-indigo-600" />
                                       <span className="text-sm font-medium text-indigo-900">Send SMS to Assignee</span>
-                                  </div>
-                                  <div className="bg-indigo-50 border border-indigo-100 p-3 rounded-lg flex items-center gap-3 shadow-sm">
+                                    </div>
+                                    <div className="bg-indigo-50 border border-indigo-100 p-3 rounded-lg flex items-center gap-3 shadow-sm">
                                       <Zap className="w-4 h-4 text-indigo-600" />
-                                      <span className="text-sm font-medium text-indigo-900">Update Priority to &lsquo;High&rsquo;</span>
-                                  </div>
+                                      <span className="text-sm font-medium text-indigo-900">Update Priority to &ldquo;High&rdquo;</span>
+                                    </div>
                               </div>
                           </div>
                       </div>

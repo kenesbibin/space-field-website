@@ -86,9 +86,9 @@ export default function HeroSection() {
                 variants={fadeInUp}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-900 tracking-tight"
               >
-                Command Your Field Operations With{' '}
+                Command Field, Fleet & Inspection Apps With{' '}
                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                  Absolute Precision
+                  Azure AD SSO Precision
                 </span>
               </motion.h1>
               
@@ -96,7 +96,7 @@ export default function HeroSection() {
                 variants={fadeInUp}
                 className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium"
               >
-                Eliminate on-site chaos. SPACE CAPTURE provides the ultimate mobile command center for construction, maintenance, and inspection teams to track progress in real-time.
+                Eliminate on-site chaos and fragmented tooling. SPACE CAPTURE unifies Fulcrum app replacements, construction inspection software, quality inspection apps, vehicle inspection apps, and fleet maintenance apps inside one Azure Single Sign On (Azure SSO) + Microsoft single sign on compatible workspace. Automate construction daily reports, Google Sheets dashboards, heavy equipment maintenance, and go-paperless safety workflows while keeping Azure AD SSO, Azure AD SSO setup, Azure SSO integration, Okta Azure AD integration, and site inspection software in a single control center.
               </motion.p>
             </div>
 
@@ -155,8 +155,8 @@ export default function HeroSection() {
                     <CheckCircle className="text-blue-600 w-6 h-6" />
                 </div>
                 <div>
-                    <p className="text-sm font-bold text-slate-900">Site Inspection</p>
-                    <p className="text-xs text-green-600 font-medium">Completed • Just now</p>
+                  <p className="text-sm font-bold text-slate-900">Azure AD SSO Linked</p>
+                  <p className="text-xs text-green-600 font-medium">Site inspection + fleet checklist synced</p>
                 </div>
               </motion.div>
             </div>

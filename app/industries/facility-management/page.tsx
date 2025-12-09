@@ -7,7 +7,25 @@ import FacilityManagementSection from '@/components/FacilityManagementSection';
 export const metadata: Metadata = {
   title: 'Facility Management Software | Space Field',
   description: 'Streamline building operations with Space Field. Manage work orders, preventive maintenance, and asset tracking with our all-in-one facility management app.',
-  keywords: ['facility management software', 'work order system', 'preventive maintenance', 'building operations', 'CMMS', 'Space Field'],
+  keywords: [
+    'facility management software',
+    'work order system',
+    'preventive maintenance',
+    'building operations',
+    'CMMS',
+    'Space Field',
+    'building inspection software',
+    'construction inspection software',
+    'site inspection app',
+    'site inspection software',
+    'equipment inspection software',
+    'equipment tracking app',
+    'equipment inventory app',
+    'plumbing work order template',
+    'electrical work order template',
+    'fire extinguisher inspection software',
+    'heavy equipment maintenance app'
+  ],
   alternates: {
     canonical: 'https://spacecapture.ai/industries/facility-management',
   },
