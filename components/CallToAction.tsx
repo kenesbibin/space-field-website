@@ -33,12 +33,12 @@ const CallToActionSection = () => {
             className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0"
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              Take Control of <br/>
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">SPACE CAPTURE</span> Today.
+              Launch Azure-Ready <br/>
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Construction & Inspection Software</span> Today.
             </h2>
             
             <p className="mt-6 text-slate-600 text-lg font-medium leading-relaxed">
-              Stop chasing paper trails. Sync your office and field teams instantly with the all-in-one platform built for construction and operations.
+              Stop chasing paper trails. Space Capture operates as construction management software for small business teams and full construction project management offices alike. Launch job hazard analysis software, restaurant and HOA inspection workflows, portable restroom servicing, process server routing, and employee time tracking from the same secure workspace.
             </p>
             
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -60,7 +60,7 @@ const CallToActionSection = () => {
             </div>
 
             <p className="mt-4 text-sm text-slate-400 font-medium">
-              Available on iOS, Android, and Web
+              Available on iOS, Android, Web, and offline inspection form builders
             </p>
           </motion.div>
 

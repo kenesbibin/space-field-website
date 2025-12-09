@@ -3,24 +3,76 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
-import { Building2, ClipboardList, Wrench, ArrowRight } from 'lucide-react';
+import { Building2, ClipboardList, Wrench, ArrowRight, CalendarRange, ShieldCheck, Users, Link as LinkIcon } from 'lucide-react';
 
 const FACILITY_FEATURES = [
   {
     title: "Work Order Management",
     icon: ClipboardList,
-    description: "Streamline tenant requests and internal repairs. Assign tasks to maintenance staff instantly and track resolution times to ensure service level agreements (SLAs) are met."
+    description: "Streamline tenant requests, plumbing work order templates, electrical work order templates, portable toilet software requests, and HOA app escalations in one console. Assign tasks instantly and track SLAs with digital signatures."
   },
   {
     title: "Preventive Maintenance",
     icon: Wrench,
-    description: "Schedule recurring inspections for HVAC, elevators, and fire safety systems. Auto-generate checklists to ensure compliance and extend asset lifecycles."
+    description: "Schedule HVAC, elevator, fire extinguisher inspection software runs, QR code equipment maintenance, and heavy equipment maintenance app routines. Auto-generate inspection forms and job safety analysis steps to extend asset lifecycles."
   },
   {
     title: "Space & Asset Tracking",
     icon: Building2,
-    description: "Gain visibility into asset location and condition across your portfolio. Monitor occupancy levels and optimize space utilization data for smarter planning."
+    description: "Gain visibility into every equipment tracking app record, equipment inventory app audit, property inspection report template, and building inspection software checklist across your portfolio."
   }
+];
+
+const FACILITY_TIMELINE = [
+  {
+    phase: 'Intake & triage',
+    detail: 'Capture tenant requests, restaurant inventory app free submissions, and HOA app escalations with photos, labels, and SLA timers.',
+    keywords: 'work order software · tenant portal · KPI-ready data',
+  },
+  {
+    phase: 'Dispatch & inspect',
+    detail: 'Trigger building inspection software flows, property inspection template checklists, and equipment inspection software runs per asset tag.',
+    keywords: 'inspection forms · QR codes · preventive maintenance',
+  },
+  {
+    phase: 'Report & handoff',
+    detail: 'Compile branded property inspection report templates and customer data collection software exports for compliance or billing.',
+    keywords: 'PDF packets · BI dashboards · owner portals',
+  },
+];
+
+const FACILITY_PROOFS = [
+  {
+    title: 'Compliance + sustainability',
+    description: 'Fire extinguisher inspection software, job hazard analysis steps, and ESG checklists stay versioned so audits never stall.',
+    bullets: ['Automatic NFPA and OSHA evidence exports', 'Attach permits and test results to each building record', 'Share proof with insurers or AHJs in one click'],
+  },
+  {
+    title: 'Vendor + contractor alignment',
+    description: 'Vendors log work through guest links, while facility managers monitor turnaround, cost, and SLA breach risk in real time.',
+    bullets: ['Invite unlimited subcontractors via Access Control', 'Track plumbing work order template status per trade', 'Push updates to Teams, email, or SMS instantly'],
+  },
+];
+
+const FACILITY_FAQ = [
+  {
+    question: 'Can we customize building inspection software checklists?',
+    answer: 'Yes. Drag-and-drop fields, conditional logic, photo markups, and signatures live inside every inspection template—no code required.',
+  },
+  {
+    question: 'Do offline facilities lose data?',
+    answer: 'No. Equipment tracking app entries, property inspection report templates, and QR scans buffer on device until connectivity returns.',
+  },
+  {
+    question: 'How do we onboard new vendors securely?',
+    answer: 'Leverage Azure AD SSO or time-boxed guest links so contractors authenticate once and inherit the right facility scopes automatically.',
+  },
+];
+
+const FACILITY_CTAS = [
+  { label: 'Download facility templates', href: '/resources/templates' },
+  { label: 'Explore inspection software', href: '/solutions/inspection-software' },
+  { label: 'Secure vendors with Azure SSO', href: '/solutions/azure-sso' },
 ];
 
 const FacilityManagementSection = () => {
@@ -73,14 +125,14 @@ const FacilityManagementSection = () => {
               </motion.div>
               
               <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
-                Smarter Buildings, <br/>
+                Smarter Buildings & Inspection Software, <br/>
                 <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
                   Superior Operations
                 </span>
               </motion.h1>
               
               <motion.p variants={itemVariants} className="mt-6 text-lg text-slate-600 leading-relaxed max-w-xl">
-                Space Field unifies facility operations into one intuitive platform. Empower your teams to manage maintenance, assets, and tenant satisfaction from anywhere in the building.
+                Space Field unifies facility operations into one intuitive platform. Empower your teams to manage building inspection software, property inspection templates, equipment inspection apps, facility inspection forms, restaurant food inventory apps, and customer data collection software from anywhere.
               </motion.p>
             </div>
 
@@ -110,8 +162,8 @@ const FacilityManagementSection = () => {
             </div>
 
             <motion.div variants={itemVariants} className="pt-4">
-               <a href="/book-a-demo" className="inline-flex items-center gap-2 text-cyan-700 font-bold hover:gap-3 transition-all">
-                  See Facility Demo <ArrowRight className="w-5 h-5" />
+              <a href="/book-a-demo" className="inline-flex items-center gap-2 text-cyan-700 font-bold hover:gap-3 transition-all">
+                See Facility & Inspection Demo <ArrowRight className="w-5 h-5" />
                </a>
             </motion.div>
           </motion.div>
@@ -145,6 +197,106 @@ const FacilityManagementSection = () => {
             <div className="absolute -z-10 -bottom-[-20px] -left-[-20px] w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-[60px] opacity-40"></div>
           </motion.div>
 
+        </div>
+      </div>
+
+      <div className="container mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+          {FACILITY_TIMELINE.map((step) => (
+            <motion.div
+              key={step.phase}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-sm"
+            >
+              <div className="flex items-center gap-2 text-cyan-700">
+                <CalendarRange className="h-5 w-5" />
+                <p className="text-xs font-bold uppercase tracking-[0.3em]">{step.phase}</p>
+              </div>
+              <p className="mt-3 text-sm text-slate-600">{step.detail}</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-slate-500">{step.keywords}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          {FACILITY_PROOFS.map((proof) => (
+            <motion.div
+              key={proof.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-[32px] border border-slate-200 bg-white/90 p-8 shadow-sm"
+            >
+              <div className="flex items-center gap-3 text-cyan-700">
+                <ShieldCheck className="h-6 w-6" />
+                <p className="text-sm font-bold uppercase tracking-widest">{proof.title}</p>
+              </div>
+              <p className="mt-3 text-sm text-slate-600">{proof.description}</p>
+              <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                {proof.bullets.map((bullet) => (
+                  <li key={bullet} className="flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-cyan-500" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-[32px] border border-cyan-200 bg-cyan-50/70 p-8"
+          >
+            <div className="flex items-center gap-3 text-cyan-700">
+              <Users className="h-6 w-6" />
+              <p className="text-sm font-bold uppercase tracking-widest">Facility FAQ</p>
+            </div>
+            <div className="mt-4 space-y-4">
+              {FACILITY_FAQ.map((faq) => (
+                <div key={faq.question} className="rounded-2xl border border-cyan-100 bg-white/80 p-4">
+                  <p className="text-base font-semibold text-slate-900">{faq.question}</p>
+                  <p className="mt-2 text-sm text-slate-600">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-[32px] border border-slate-200 bg-white/90 p-8"
+          >
+            <div className="flex items-center gap-3 text-slate-800">
+              <LinkIcon className="h-6 w-6" />
+              <p className="text-sm font-bold uppercase tracking-widest">Connect the stack</p>
+            </div>
+            <p className="mt-3 text-sm text-slate-600">
+              Pair facility operations with inspection workflows, Azure AD SSO security, and data collection programs to keep every location in sync.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {FACILITY_CTAS.map((cta) => (
+                <a
+                  key={cta.label}
+                  href={cta.href}
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-cyan-700 hover:bg-cyan-50"
+                >
+                  {cta.label}
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

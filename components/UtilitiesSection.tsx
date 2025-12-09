@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
-import { Zap, Activity, Map, ArrowRight } from 'lucide-react';
+import { Zap, Activity, Map, ArrowRight, Route, ShieldCheck, Cpu, Link as LinkIcon } from 'lucide-react';
 
 const UTILITIES_FEATURES = [
   {
@@ -21,6 +21,58 @@ const UTILITIES_FEATURES = [
     icon: Map,
     description: "Coordinate storm response teams instantly. Visualize outages on a live map and dispatch the nearest qualified crew to restore power faster."
   }
+];
+
+const UTILITIES_TIMELINE = [
+  {
+    label: 'Grid planning',
+    copy: 'Line engineers capture LiDAR, vegetation, and asset risk scores to prioritize patrols before storm season hits.',
+    keywords: 'risk scoring · GIS layers · vegetation',
+  },
+  {
+    label: 'Field execution',
+    copy: 'Crews run substation, pole, and meter checklists offline with barcode scans, torque specs, and thermal photos.',
+    keywords: 'barcode scans · IR uploads · offline ready',
+  },
+  {
+    label: 'Customer restoration',
+    copy: 'Outage findings sync to OMS/CIS platforms so customer teams push updates and invoices without copying data.',
+    keywords: 'OMS sync · CIS notes · automated comms',
+  },
+];
+
+const UTILITIES_STORIES = [
+  {
+    title: 'Investor-owned utilities',
+    description: 'IOUs roll out wildfire mitigation programs, documenting every patrol, trim, and equipment upgrade for regulators.',
+    bullets: ['Attach CPUC-ready forms to each patrol', 'Alert contractors when hazards surface', 'Track PSPS readiness milestones'],
+  },
+  {
+    title: 'Municipal + co-op utilities',
+    description: 'City and cooperative utilities manage AMI rollouts, water meter swaps, and customer appointments from one view.',
+    bullets: ['Blend electric + water workflows', 'Auto-remind residents of appointments', 'Share status dashboards with city councils'],
+  },
+];
+
+const UTILITIES_FAQ = [
+  {
+    question: 'Does Space Field connect to OMS/SCADA tools?',
+    answer: 'Yes. We integrate with platforms like Oracle, Milsoft, and Survalent so outages, crews, and assets stay in sync.',
+  },
+  {
+    question: 'How do inspectors work during storms?',
+    answer: 'Crews run damage assessments offline, capture GPS + photos, and sync automatically when cell coverage returns.',
+  },
+  {
+    question: 'Can we enforce safety + compliance?',
+    answer: 'Role-based workflows require PPE checks, switching orders, and supervisor approvals before risky steps proceed.',
+  },
+];
+
+const UTILITIES_CTAS = [
+  { label: 'Download utility templates', href: '/resources/templates' },
+  { label: 'Digitize inspections + switching', href: '/solutions/inspection-software' },
+  { label: 'Secure crews with Azure SSO', href: '/solutions/azure-sso' },
 ];
 
 const UtilitiesSection = () => {
@@ -146,6 +198,106 @@ const UtilitiesSection = () => {
             <div className="absolute -z-10 -bottom-[-20px] -left-[-20px] w-64 h-64 bg-cyan-300 rounded-full mix-blend-multiply filter blur-[60px] opacity-40"></div>
           </motion.div>
 
+        </div>
+      </div>
+
+      <div className="container mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+          {UTILITIES_TIMELINE.map((step) => (
+            <motion.div
+              key={step.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-sm"
+            >
+              <div className="flex items-center gap-2 text-purple-700">
+                <Route className="h-5 w-5" />
+                <p className="text-xs font-bold uppercase tracking-[0.3em]">{step.label}</p>
+              </div>
+              <p className="mt-3 text-sm text-slate-600">{step.copy}</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-slate-500">{step.keywords}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          {UTILITIES_STORIES.map((story) => (
+            <motion.div
+              key={story.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-[32px] border border-slate-200 bg-white/90 p-8 shadow-sm"
+            >
+              <div className="flex items-center gap-3 text-purple-700">
+                <ShieldCheck className="h-6 w-6" />
+                <p className="text-sm font-bold uppercase tracking-widest">{story.title}</p>
+              </div>
+              <p className="mt-3 text-sm text-slate-600">{story.description}</p>
+              <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                {story.bullets.map((bullet) => (
+                  <li key={bullet} className="flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-purple-500" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-[32px] border border-purple-200 bg-purple-50/70 p-8"
+          >
+            <div className="flex items-center gap-3 text-purple-700">
+              <Cpu className="h-6 w-6" />
+              <p className="text-sm font-bold uppercase tracking-widest">Utilities FAQ</p>
+            </div>
+            <div className="mt-4 space-y-4">
+              {UTILITIES_FAQ.map((faq) => (
+                <div key={faq.question} className="rounded-2xl border border-purple-100 bg-white/80 p-4">
+                  <p className="text-base font-semibold text-slate-900">{faq.question}</p>
+                  <p className="mt-2 text-sm text-slate-600">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-[32px] border border-slate-200 bg-white/90 p-8"
+          >
+            <div className="flex items-center gap-3 text-slate-800">
+              <LinkIcon className="h-6 w-6" />
+              <p className="text-sm font-bold uppercase tracking-widest">Connect grid + IT</p>
+            </div>
+            <p className="mt-3 text-sm text-slate-600">
+              Link OMS, CIS, and security tooling with Space Field so dispatch, engineering, and customer teams see the same source of truth.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {UTILITIES_CTAS.map((cta) => (
+                <a
+                  key={cta.label}
+                  href={cta.href}
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-purple-700 hover:bg-purple-50"
+                >
+                  {cta.label}
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -4,16 +4,13 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { 
-  ArrowRight, 
-  Sparkles, 
-  CheckCircle2, 
-  Wifi,
+import {
+  Sparkles,
+  CheckCircle2,
   Zap,
   Code,
   MapPin,
   Calendar,
-  AlertTriangle,
   Activity,
   Maximize
 } from 'lucide-react';

@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   description: 'Streamline HVAC and plumbing service calls with Space Field. Manage dispatching, recurring maintenance, and digital invoicing with our mobile-first platform.',
   keywords: ['hvac software', 'plumbing software', 'field service management', 'dispatch app', 'maintenance contracts', 'Space Field'],
   alternates: {
-    canonical: 'https://spaceaiapp.com/industries/hvac',
+    canonical: 'https://spacecapture.ai/industries/hvac',
   },
   openGraph: {
     title: 'HVAC & Plumbing Field Software | Space Field',
     description: 'Boost technician efficiency and customer satisfaction with digital workflows.',
-    url: 'https://spaceaiapp.com/industries/hvac',
+    url: 'https://spacecapture.ai/industries/hvac',
     siteName: 'Space Field',
     images: [
       {

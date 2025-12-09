@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 import { 
   ArrowRight, 
   BarChart3, 
-  PieChart, 
   TrendingUp, 
   Download, 
   Calendar, 
@@ -43,7 +42,7 @@ const ReportsSection = () => {
               </h1>
               
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                Don't let your data collect dust. Visualize project health, track team performance, and spot safety trends instantly with our interactive dashboards.
+                Don&rsquo;t let your data collect dust. Visualize project health, track team performance, and spot safety trends instantly with our interactive dashboards.
               </p>
 
               <div className="flex gap-4">

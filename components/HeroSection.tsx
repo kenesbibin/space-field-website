@@ -7,7 +7,7 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
 
 export default function HeroSection() {
-  // 1. Typed Variants
+
   const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -26,9 +26,7 @@ export default function HeroSection() {
       }
     }
   };
-
-  // 2. FIX: Separate the transition and use 'as const' for the ease property
-  // This fixes the "Type string is not assignable to type Easing" error
+ 
   const blobTransition = {
     duration: 7,
     repeat: Infinity,
@@ -86,9 +84,9 @@ export default function HeroSection() {
                 variants={fadeInUp}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-900 tracking-tight"
               >
-                Command Your Field Operations With{' '}
+                Command Field, Fleet & Inspection Ops With{' '}
                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                  Absolute Precision
+                  Enterprise SSO Precision
                 </span>
               </motion.h1>
               
@@ -96,7 +94,7 @@ export default function HeroSection() {
                 variants={fadeInUp}
                 className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium"
               >
-                Eliminate on-site chaos. SPACE CAPTURE provides the ultimate mobile command center for construction, maintenance, and inspection teams to track progress in real-time.
+                Space Capture replaces clipboards with a single sign-on command center purpose-built for inspection and fleet leaders. Run construction inspection software, quality inspection apps, vehicle inspection apps, and fleet maintenance automation together while publishing construction daily reports, powering Google Sheets insights, orchestrating enterprise SSO setup across Microsoft, Okta, or Ping, and managing site inspection software from one secure workspace.
               </motion.p>
             </div>
 
@@ -155,8 +153,8 @@ export default function HeroSection() {
                     <CheckCircle className="text-blue-600 w-6 h-6" />
                 </div>
                 <div>
-                    <p className="text-sm font-bold text-slate-900">Site Inspection</p>
-                    <p className="text-xs text-green-600 font-medium">Completed • Just now</p>
+                  <p className="text-sm font-bold text-slate-900">Azure AD SSO Linked</p>
+                  <p className="text-xs text-green-600 font-medium">Site inspection + fleet checklist synced</p>
                 </div>
               </motion.div>
             </div>

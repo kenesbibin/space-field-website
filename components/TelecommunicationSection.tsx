@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
-import { RadioTower, Network, Activity, ArrowRight } from 'lucide-react';
+import { RadioTower, Network, Activity, ArrowRight, Route, ShieldCheck, Server, Link as LinkIcon } from 'lucide-react';
 
 const TELECOM_FEATURES = [
   {
@@ -21,6 +21,58 @@ const TELECOM_FEATURES = [
     icon: Activity,
     description: "Optimize route planning for widespread teams. Reduce response times for outages and ensure the right tech arrives with the right parts."
   }
+];
+
+const TELECOM_TIMELINE = [
+  {
+    label: 'Site acquisition',
+    copy: 'Capture RF studies, lease milestones, and zoning approvals with photos and municipal documents in one workspace.',
+    keywords: 'RF surveys · permitting · lease trackers',
+  },
+  {
+    label: 'Build & integrate',
+    copy: 'Coordinate tower climbs, fiber splicing, and power turn-ups with checklists that sync back to NOC + construction managers.',
+    keywords: 'method of procedure · punch lists · crew safety',
+  },
+  {
+    label: 'Optimize & assure',
+    copy: 'Feed drive-test notes, outage inspections, and SLAs into dashboards so ops can respond before customers notice.',
+    keywords: 'drive tests · SLA triggers · customer comms',
+  },
+];
+
+const TELECOM_STORIES = [
+  {
+    title: 'Rural broadband cooperatives',
+    description: 'Co-ops digitize pole surveys, make-ready work, and fiber drops to keep grant milestones green.',
+    bullets: ['Attach GIS layers to every survey', 'Auto-notify residents before crews arrive', 'Generate progress packets for funders'],
+  },
+  {
+    title: 'National tower companies',
+    description: 'Towercos manage inspections, tenant upgrades, and safety audits with centralized evidence for carriers.',
+    bullets: ['Store RF compliance reports', 'Track climb certifications by crew', 'Share punch lists with carriers in real time'],
+  },
+];
+
+const TELECOM_FAQ = [
+  {
+    question: 'Can we integrate alarms from our NOC tools?',
+    answer: 'Yes. Space Field ingests OSS/NOC tickets and spins up field tasks so technicians see full context before rolling trucks.',
+  },
+  {
+    question: 'How do techs work in low-signal regions?',
+    answer: 'Technicians can run checklists, capture media, and close jobs offline; everything syncs automatically when connectivity returns.',
+  },
+  {
+    question: 'Is data secure for carrier requirements?',
+    answer: 'We offer SSO, role-based permissions, and audit logs aligned with carrier security policies and ISO standards.',
+  },
+];
+
+const TELECOM_CTAS = [
+  { label: 'Download telecom templates', href: '/resources/templates' },
+  { label: 'Automate tower inspections', href: '/solutions/inspection-software' },
+  { label: 'Secure crews with Azure SSO', href: '/solutions/azure-sso' },
 ];
 
 const TelecommunicationSection = () => {
@@ -145,6 +197,106 @@ const TelecommunicationSection = () => {
             <div className="absolute -z-10 -bottom-[-20px] -left-[-20px] w-64 h-64 bg-indigo-300 rounded-full mix-blend-multiply filter blur-[60px] opacity-40"></div>
           </motion.div>
 
+        </div>
+      </div>
+
+      <div className="container mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+          {TELECOM_TIMELINE.map((step) => (
+            <motion.div
+              key={step.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-sm"
+            >
+              <div className="flex items-center gap-2 text-cyan-700">
+                <Route className="h-5 w-5" />
+                <p className="text-xs font-bold uppercase tracking-[0.3em]">{step.label}</p>
+              </div>
+              <p className="mt-3 text-sm text-slate-600">{step.copy}</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-slate-500">{step.keywords}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          {TELECOM_STORIES.map((story) => (
+            <motion.div
+              key={story.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-[32px] border border-slate-200 bg-white/90 p-8 shadow-sm"
+            >
+              <div className="flex items-center gap-3 text-cyan-700">
+                <ShieldCheck className="h-6 w-6" />
+                <p className="text-sm font-bold uppercase tracking-widest">{story.title}</p>
+              </div>
+              <p className="mt-3 text-sm text-slate-600">{story.description}</p>
+              <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                {story.bullets.map((bullet) => (
+                  <li key={bullet} className="flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-cyan-500" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-[32px] border border-cyan-200 bg-cyan-50/70 p-8"
+          >
+            <div className="flex items-center gap-3 text-cyan-700">
+              <Server className="h-6 w-6" />
+              <p className="text-sm font-bold uppercase tracking-widest">Telecom FAQ</p>
+            </div>
+            <div className="mt-4 space-y-4">
+              {TELECOM_FAQ.map((faq) => (
+                <div key={faq.question} className="rounded-2xl border border-cyan-100 bg-white/80 p-4">
+                  <p className="text-base font-semibold text-slate-900">{faq.question}</p>
+                  <p className="mt-2 text-sm text-slate-600">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-[32px] border border-slate-200 bg-white/90 p-8"
+          >
+            <div className="flex items-center gap-3 text-slate-800">
+              <LinkIcon className="h-6 w-6" />
+              <p className="text-sm font-bold uppercase tracking-widest">Connect ops + IT</p>
+            </div>
+            <p className="mt-3 text-sm text-slate-600">
+              Tie field data to OSS/BSS stacks, identity, and reporting so NOC, engineering, and vendor crews share one source of truth.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {TELECOM_CTAS.map((cta) => (
+                <a
+                  key={cta.label}
+                  href={cta.href}
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-cyan-700 hover:bg-cyan-50"
+                >
+                  {cta.label}
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

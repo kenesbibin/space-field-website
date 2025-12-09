@@ -7,7 +7,6 @@ import {
   ArrowRight, 
   Webhook, 
   Database, 
-  Code2, 
   Bot, 
   Workflow, 
   CheckCircle2,
@@ -43,7 +42,7 @@ const IntegrationsSection = () => {
               </h1>
               
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                We've worked hard to flatten our data structure and provide the most robust webhooks in the industry. Instantly push field data to your CRM, Slack, or custom internal tools the moment a form is submitted.
+                We&rsquo;ve worked hard to flatten our data structure and provide the most robust webhooks in the industry. Instantly push field data to your CRM, Slack, or custom internal tools the moment a form is submitted.
               </p>
 
               <div className="flex gap-4">

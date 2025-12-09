@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Request a Demo - SPACE CAPTURE',
   description: 'Schedule a personalized demo of SPACE CAPTURE, the ultimate mobile solution for field operations in construction, maintenance, and inspection sectors.',
   alternates: {
-    canonical: '/request-a-demo',
+    canonical: 'https://spacecapture.ai/request-a-demo',
   },
 };
 

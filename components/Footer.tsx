@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Instagram, Linkedin, Twitter, Youtube, Github, CheckCircle2 } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 export default function Footer() {
   return (
@@ -45,6 +44,13 @@ export default function Footer() {
               <FooterLink href="/engagement-flows">Engagement Flows</FooterLink>
               <FooterLink href="/access-control">Access Control</FooterLink>
               <FooterLink href="/reports">Deep Insights</FooterLink>
+              <FooterLink href="/solutions/azure-sso">Azure AD SSO</FooterLink>
+              <FooterLink href="/solutions/inspection-software">Inspection Software</FooterLink>
+              <FooterLink href="/solutions/fleet-maintenance">Fleet Maintenance App</FooterLink>
+              <FooterLink href="/solutions/time-tracking">Time Tracking Suite</FooterLink>
+              <FooterLink href="/solutions/data-collection">Data Collection & Fulcrum Alternative</FooterLink>
+              <FooterLink href="/resources/templates">Construction Templates</FooterLink>
+              <FooterLink href="/compare/fulcrum">Fulcrum Comparison</FooterLink>
             </ul>
           </div>
 

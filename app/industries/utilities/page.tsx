@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   description: 'Modernize utility operations with Space Field. Manage grid inspections, smart meter deployments, and outage response with our offline-capable mobile app.',
   keywords: ['utility software', 'grid maintenance', 'outage management', 'smart meter deployment', 'field service', 'Space Field'],
   alternates: {
-    canonical: 'https://spaceaiapp.com/industries/utilities',
+    canonical: 'https://spacecapture.ai/industries/utilities',
   },
   openGraph: {
     title: 'Utility Field Management Software | Space Field',
     description: 'Ensure grid reliability and workforce safety with digital utility operations.',
-    url: 'https://spaceaiapp.com/industries/utilities',
+    url: 'https://spacecapture.ai/industries/utilities',
     siteName: 'Space Field',
     images: [
       {

@@ -52,7 +52,7 @@ const GuideSection = () => {
               <div className="inline-flex items-center gap-2 bg-white/50 backdrop-blur-sm border border-blue-200 rounded-full px-4 py-1.5 shadow-sm">
                 <Layers className="w-4 h-4 text-blue-600" />
                 <span className="text-xs font-bold text-blue-700 uppercase tracking-wider">
-                  Total Workflow Control
+                  Inspection & Reporting Control
                 </span>
               </div>
             </motion.div>
@@ -62,8 +62,8 @@ const GuideSection = () => {
               variants={itemVariants}
               className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-slate-900"
             >
-              Orchestrate Your Field Projects With{' '}
-              <span className="text-blue-600">Efficiency</span>
+              Orchestrate Construction Reports, Inspection Apps & Templates With{' '}
+              <span className="text-blue-600">Search-Ready Precision</span>
             </motion.h2>
 
             {/* Description */}
@@ -71,7 +71,7 @@ const GuideSection = () => {
               variants={itemVariants}
               className="text-lg text-slate-600 leading-relaxed max-w-xl"
             >
-              SPACE CAPTURE isn&apos;t just about knowing where you are—it&apos;s about knowing <strong>where your project stands.</strong> Replace chaotic paper trails with digital precision. Assign tasks, log inspections, and visualize progress in one unified ecosystem.
+              Space Capture is built to prove the work, not just locate crews. Launch construction daily reports and daily log workflows, push site inspection software updates, run job hazard analysis software, and distribute safety checklist templates from one inspection form builder. Offline forms sync to Google Sheets dashboards so every property inspection template, plumbing work order, and electrical scope of work is recorded in minutes.
             </motion.p>
 
             {/* Features List */}
@@ -85,8 +85,8 @@ const GuideSection = () => {
                   <ClipboardList className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-slate-900">Digital Task Management</h4>
-                  <p className="text-slate-600 mt-1">Assign duties instantly and track completion status without the paperwork.</p>
+                  <h4 className="text-lg font-bold text-slate-900">Construction Daily Report Automation</h4>
+                  <p className="text-slate-600 mt-1">Generate construction daily reports, construction field reports, and daily vehicle inspection summaries automatically, then deliver them straight to your preferred Google Sheets dashboard.</p>
                 </div>
               </div>
 
@@ -96,8 +96,8 @@ const GuideSection = () => {
                   <BarChart3 className="w-6 h-6 text-indigo-600 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-slate-900">Real-Time Site Analytics</h4>
-                  <p className="text-slate-600 mt-1">Get live insights on workforce productivity and project milestones.</p>
+                  <h4 className="text-lg font-bold text-slate-900">Inspection & JHA Workflows</h4>
+                  <p className="text-slate-600 mt-1">Run job safety analysis software, job hazard analysis tools, safety checklist apps, and quality inspection software in a single view so site inspection teams never miss a compliance step.</p>
                 </div>
               </div>
 
@@ -107,8 +107,8 @@ const GuideSection = () => {
                   <CheckCircle2 className="w-6 h-6 text-purple-600 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-slate-900">Automated Compliance</h4>
-                  <p className="text-slate-600 mt-1">Ensure every safety protocol is checked, logged, and synced to the cloud.</p>
+                  <h4 className="text-lg font-bold text-slate-900">Template + Scope Libraries</h4>
+                  <p className="text-slate-600 mt-1">Centralize contractor scope of work templates, plumbing work orders, property inspection report templates, and safety checklist playbooks so every crew references the exact same instructions.</p>
                 </div>
               </div>
             </motion.div>
