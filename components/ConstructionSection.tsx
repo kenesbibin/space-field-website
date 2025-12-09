@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { motion, Variants } from 'framer-motion'; // 1. Import Variants
-import { HardHat, ClipboardCheck, Truck, ArrowRight } from 'lucide-react';
+import { motion, Variants } from 'framer-motion';
+import { HardHat, ClipboardCheck, Truck, ArrowRight, Ruler, Building2, Layers, CheckCircle2, Link as LinkIcon } from 'lucide-react';
 
 const CONSTRUCTION_FEATURES = [
   {
@@ -21,6 +21,58 @@ const CONSTRUCTION_FEATURES = [
     icon: Truck,
     description: "Monitor heavy equipment usage and location. Prevent theft and optimize deployment schedules to reduce downtime."
   }
+];
+
+const DELIVERY_STEPS = [
+  {
+    stage: 'Bid & Preconstruction',
+    focus: 'Import scope of work templates, site inspection software checklists, and subcontractor bids into one command center.',
+    keywords: 'construction inspection software · takeoff evidence · scope approvals',
+  },
+  {
+    stage: 'Build & Monitor',
+    focus: 'Issue daily reports, building inspection software tasks, and safety observations from tablets even when jobsites are offline.',
+    keywords: 'site inspection app · daily log automation · contractor QA proofs',
+  },
+  {
+    stage: 'Closeout & Warranty',
+    focus: 'Hand over punch list photos, equipment tracking app histories, and warranty forms without chasing PDFs across systems.',
+    keywords: 'punch list evidence · asset turnover · owner portals',
+  },
+];
+
+const PROOF_POINTS = [
+  {
+    title: 'Compliance vault',
+    detail: 'Store OSHA observations, NFPA safety checklists, and inspection signatures next to each project so auditors see the full chain of custody.',
+    bullets: ['Fire extinguisher inspection software exports', 'Job hazard analysis attachments', 'E-signature capture for closeouts'],
+  },
+  {
+    title: 'Subcontractor coordination',
+    detail: 'Trade partners log time, equipment, and RFIs directly in SpaceCapture, keeping GC leadership informed without stitching spreadsheets.',
+    bullets: ['Invite unlimited subcontractor viewers', 'Assign tasks via construction field app links', 'Track turnaround per trade package'],
+  },
+];
+
+const CONSTRUCTION_FAQ = [
+  {
+    question: 'Can we run construction inspection software offline?',
+    answer: 'Yes. Daily reports, safety checklists, photo markups, and signatures buffer on device and sync once coverage returns, so remote sites keep moving.',
+  },
+  {
+    question: 'How do you handle owner-ready documentation?',
+    answer: 'Every site inspection app submission feeds a live dashboard and branded PDF kits, eliminating copy/paste between route sheets, Google Drive, or plan rooms.',
+  },
+  {
+    question: 'Can subcontractors use existing credentials?',
+    answer: 'SpaceCapture supports Azure AD SSO, Okta, and guest access links so subcontractors log in with the same identity they already use for other GC systems.',
+  },
+];
+
+const CTA_LINKS = [
+  { label: 'Inspection software playbook', href: '/solutions/inspection-software' },
+  { label: 'Construction template kits', href: '/resources/templates' },
+  { label: 'Azure AD SSO rollout guide', href: '/solutions/azure-sso' },
 ];
 
 const ConstructionSection = () => {
@@ -146,6 +198,105 @@ const ConstructionSection = () => {
             <div className="absolute -z-10 -bottom-10 -left-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-[80px] opacity-40"></div>
           </motion.div>
 
+        </div>
+      </div>
+      <div className="container mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+          {DELIVERY_STEPS.map((step) => (
+            <motion.div
+              key={step.stage}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-sm"
+            >
+              <div className="flex items-center gap-2 text-blue-700">
+                <Ruler className="h-5 w-5" />
+                <p className="text-xs font-bold uppercase tracking-[0.3em]">{step.stage}</p>
+              </div>
+              <p className="mt-3 text-sm text-slate-600">{step.focus}</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-slate-500">{step.keywords}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          {PROOF_POINTS.map((proof) => (
+            <motion.div
+              key={proof.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-[32px] border border-slate-200 bg-white/90 p-8 shadow-sm"
+            >
+              <div className="flex items-center gap-3 text-blue-700">
+                <Building2 className="h-6 w-6" />
+                <p className="text-sm font-bold uppercase tracking-widest">{proof.title}</p>
+              </div>
+              <p className="mt-3 text-sm text-slate-600">{proof.detail}</p>
+              <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                {proof.bullets.map((bullet) => (
+                  <li key={bullet} className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-blue-500" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-[32px] border border-blue-200 bg-blue-50/70 p-8"
+          >
+            <div className="flex items-center gap-3 text-blue-700">
+              <Layers className="h-6 w-6" />
+              <p className="text-sm font-bold uppercase tracking-widest">Construction FAQ</p>
+            </div>
+            <div className="mt-4 space-y-4">
+              {CONSTRUCTION_FAQ.map((faq) => (
+                <div key={faq.question} className="rounded-2xl border border-blue-100 bg-white/80 p-4">
+                  <p className="text-base font-semibold text-slate-900">{faq.question}</p>
+                  <p className="mt-2 text-sm text-slate-600">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-[32px] border border-slate-200 bg-white/90 p-8"
+          >
+            <div className="flex items-center gap-3 text-slate-800">
+              <LinkIcon className="h-6 w-6" />
+              <p className="text-sm font-bold uppercase tracking-widest">Connected playbooks</p>
+            </div>
+            <p className="mt-3 text-sm text-slate-600">
+              Keep estimators, supers, and owners aligned by pairing this industry kit with the rest of the SpaceCapture stack.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {CTA_LINKS.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-blue-700 hover:bg-blue-50"
+                >
+                  {link.label}
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

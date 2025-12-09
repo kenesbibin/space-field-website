@@ -175,8 +175,8 @@ const ShowcaseSection = () => {
                  viewport={{ once: true }}
               >
                 <h2 className="text-3xl md:text-4xl font-light leading-tight">
-                  <strong className="font-extrabold block text-blue-400 mb-2">Boost Every Inspection & Fleet Workflow.</strong>
-                  From construction inspection software to fleet mileage trackers, nothing slips.
+                  <strong className="font-extrabold block text-blue-400 mb-2">See Every Inspection & Fleet Moment.</strong>
+                  Operational intelligence flows from construction inspection software to fleet mileage trackers without blind spots.
                 </h2>
               </motion.div>
               
@@ -187,7 +187,7 @@ const ShowcaseSection = () => {
                  viewport={{ once: true }}
                  className="text-slate-300 text-lg leading-relaxed"
               >
-                Traditional field management relies on guesswork and outdated reports. SPACE CAPTURE bridges the gap for building inspection software, construction site inspection software, roof inspection report software, equipment inspection software, and property inspection templates while syncing offline forms apps, inspection form builders, and data collection programs to your Google Sheets dashboard.
+                Legacy field reporting depends on guesswork and outdated spreadsheets. Space Capture links building inspection software, construction site inspection tools, roof inspection reporting, equipment inspection apps, and property inspection templates to offline form builders that sync directly to Google Sheets dashboards. Supervisors and clients see trustworthy evidence without exporting another CSV.
               </motion.p>
 
               <motion.div

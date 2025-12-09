@@ -86,9 +86,9 @@ export default function HeroSection() {
                 variants={fadeInUp}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-900 tracking-tight"
               >
-                Command Field, Fleet & Inspection Apps With{' '}
+                Command Field, Fleet & Inspection Ops With{' '}
                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                  Azure AD SSO Precision
+                  Enterprise SSO Precision
                 </span>
               </motion.h1>
               
@@ -96,7 +96,7 @@ export default function HeroSection() {
                 variants={fadeInUp}
                 className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium"
               >
-                Eliminate on-site chaos and fragmented tooling. SPACE CAPTURE unifies Fulcrum app replacements, construction inspection software, quality inspection apps, vehicle inspection apps, and fleet maintenance apps inside one Azure Single Sign On (Azure SSO) + Microsoft single sign on compatible workspace. Automate construction daily reports, Google Sheets dashboards, heavy equipment maintenance, and go-paperless safety workflows while keeping Azure AD SSO, Azure AD SSO setup, Azure SSO integration, Okta Azure AD integration, and site inspection software in a single control center.
+                Space Capture replaces clipboards with a single sign-on command center purpose-built for inspection and fleet leaders. Run construction inspection software, quality inspection apps, vehicle inspection apps, and fleet maintenance automation together while publishing construction daily reports, powering Google Sheets insights, orchestrating enterprise SSO setup across Microsoft, Okta, or Ping, and managing site inspection software from one secure workspace.
               </motion.p>
             </div>
 

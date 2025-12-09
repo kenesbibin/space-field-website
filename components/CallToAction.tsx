@@ -38,7 +38,7 @@ const CallToActionSection = () => {
             </h2>
             
             <p className="mt-6 text-slate-600 text-lg font-medium leading-relaxed">
-              Stop chasing paper trails. Sync your office and field teams instantly with the best construction management software for small business, construction project management software, job hazard analysis software, restaurant inventory app workflows, HOA apps, portable toilet software, process server apps, and time tracking software for employees.
+              Stop chasing paper trails. Space Capture operates as construction management software for small business teams and full construction project management offices alike. Launch job hazard analysis software, restaurant and HOA inspection workflows, portable restroom servicing, process server routing, and employee time tracking from the same secure workspace.
             </p>
             
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

@@ -71,7 +71,7 @@ const GuideSection = () => {
               variants={itemVariants}
               className="text-lg text-slate-600 leading-relaxed max-w-xl"
             >
-              SPACE CAPTURE isn&apos;t just about knowing where you are—it&apos;s about proving every activity. Launch the best construction daily report app and construction daily log app, push site inspection software updates, run job hazard analysis software, and deliver safety checklist templates, plumbing work order templates, electrical work order templates, and construction scope of work templates from a single inspection form builder. Offline forms apps sync back to Google Sheets dashboards, so every report, scope, and property inspection template gets stamped in minutes.
+              Space Capture is built to prove the work, not just locate crews. Launch construction daily reports and daily log workflows, push site inspection software updates, run job hazard analysis software, and distribute safety checklist templates from one inspection form builder. Offline forms sync to Google Sheets dashboards so every property inspection template, plumbing work order, and electrical scope of work is recorded in minutes.
             </motion.p>
 
             {/* Features List */}
@@ -86,7 +86,7 @@ const GuideSection = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-slate-900">Construction Daily Report Automation</h4>
-                  <p className="text-slate-600 mt-1">Generate best-in-class construction daily reports, construction field reports, and daily vehicle inspection reports automatically and push them to your preferred Google Sheets dashboard.</p>
+                  <p className="text-slate-600 mt-1">Generate construction daily reports, construction field reports, and daily vehicle inspection summaries automatically, then deliver them straight to your preferred Google Sheets dashboard.</p>
                 </div>
               </div>
 
@@ -97,7 +97,7 @@ const GuideSection = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-slate-900">Inspection & JHA Workflows</h4>
-                  <p className="text-slate-600 mt-1">Run job safety analysis software, job hazard analysis software, safety checklist apps, and quality inspection software in one view so site inspection apps never miss a compliance step.</p>
+                  <p className="text-slate-600 mt-1">Run job safety analysis software, job hazard analysis tools, safety checklist apps, and quality inspection software in a single view so site inspection teams never miss a compliance step.</p>
                 </div>
               </div>
 
@@ -108,7 +108,7 @@ const GuideSection = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-slate-900">Template + Scope Libraries</h4>
-                  <p className="text-slate-600 mt-1">Drop in contractor scope of work templates, project scope of work templates, scope of work template pdf files, scope of work template free downloads, plumbing work orders, property inspection report templates, and safety checklist templates so every crew shares the same playbook.</p>
+                  <p className="text-slate-600 mt-1">Centralize contractor scope of work templates, plumbing work orders, property inspection report templates, and safety checklist playbooks so every crew references the exact same instructions.</p>
                 </div>
               </div>
             </motion.div>

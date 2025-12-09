@@ -8,22 +8,22 @@ const FEATURES = [
   {
     title: "Azure AD SSO + Okta Integration",
     icon: Smartphone, 
-    description: "Deliver Azure SSO, Azure AD SSO setup, Azure Active Directory SSO, Microsoft single sign on, and Okta Azure AD integration in one click so every inspection app, data capture app, or contractor portal inherits secure access."
+    description: "Deliver Azure SSO, Azure AD SSO setup, Microsoft single sign-on, and Okta + Azure AD integration with one click so every inspection app, data capture experience, and contractor portal inherits secure access."
   },
   {
     title: "Inspection & Safety Software Suite",
     icon: PenTool,
-    description: "Activate construction inspection software, building inspection software, fire extinguisher inspection software, job safety analysis apps, and safety checklist apps without stitching together separate inspection forms."
+    description: "Activate construction inspection software, building inspection software, fire extinguisher inspection software, job safety analysis apps, and safety checklist workflows without stitching together separate inspection forms."
   },
   {
     title: "Fleet Maintenance & Equipment Tracking",
     icon: Zap,
-    description: "Track fleet maintenance apps, truck inspection apps, heavy equipment maintenance apps, fleet mileage trackers, equipment inspection software, and QR code equipment maintenance records from a single equipment inventory app."
+    description: "Track fleet maintenance tasks, truck inspections, heavy equipment maintenance plans, fleet mileage, and QR-coded assets from the same equipment inventory system."
   },
   {
     title: "Construction Reports & Time Tracking",
     icon: ShieldCheck,
-    description: "Publish the best construction daily report app outputs, construction daily log app updates, time clock app entries, timesheet apps, toolbox talks, and time tracking software for employees in one workflow."
+    description: "Publish construction daily reports, daily log updates, time clock entries, toolbox talks, and employee time tracking data through one workflow."
   }
 ];
 
