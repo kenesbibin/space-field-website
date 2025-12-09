@@ -4,9 +4,9 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { 
-  Sparkles, 
-  CheckCircle2, 
+import {
+  Sparkles,
+  CheckCircle2,
   Zap,
   Code,
   MapPin,
