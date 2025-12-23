@@ -52,10 +52,10 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Industries</h3>
             <ul className="space-y-4">
-              <FooterLink href="/industries/construction">Construction</FooterLink>
+              <FooterLink href="/industries/construction">Construction Punch Lists</FooterLink>
               <FooterLink href="/industries/telecommunication">Telecommunications</FooterLink>
               <FooterLink href="/industries/manufacturing">Manufacturing</FooterLink>
-              <FooterLink href="/industries/oil-gas">Oil & Gas</FooterLink>
+              <FooterLink href="/industries/oil-and-gas">Oil & Gas Inspection</FooterLink>
               <FooterLink href="/industries/utilities">Utilities</FooterLink>
               <FooterLink href="/industries/hvac">HVAC & Plumbing</FooterLink>
               <FooterLink href="/industries/logistics">Logistics</FooterLink>
@@ -69,6 +69,17 @@ export default function Footer() {
             <ul className="space-y-4">
               <FooterLink href="/about-us">About Us</FooterLink>
               <FooterLink href="/book-a-demo" className="text-blue-400 font-bold">Book a Demo</FooterLink>
+              <li className="pt-4 pb-2 text-xs font-bold text-slate-600 uppercase tracking-widest">Resources</li>
+              <FooterLink href="/blog/end-of-digital-paper">Manifesto: End of Digital Paper</FooterLink>
+              <FooterLink href="/technology/computer-vision">Tech: Inside the Eye</FooterLink>
+              <FooterLink href="/trust/hallucination-free">Trust: AI Assurance</FooterLink>
+              <FooterLink href="/resources/case-study-reactive-to-predictive">Case Study: Predictive Maint.</FooterLink>
+              <FooterLink href="/resources/iso-9001-guide">Guide: ISO 9001 Autopilot</FooterLink>
+              <li className="pt-4 pb-2 text-xs font-bold text-slate-600 uppercase tracking-widest">Compare</li>
+              <FooterLink href="/alternatives/safetyculture">vs SafetyCulture</FooterLink>
+              <FooterLink href="/alternatives/gocanvas">vs GoCanvas</FooterLink>
+              <li className="pt-4 pb-2 text-xs font-bold text-slate-600 uppercase tracking-widest">Tools</li>
+              <FooterLink href="/tools/switching-calculator">Switching Calculator</FooterLink>
             </ul>
           </div>
 
