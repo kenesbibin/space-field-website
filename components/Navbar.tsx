@@ -54,6 +54,12 @@ const productsMenuItems: { [key: string]: { name: string; href: string; icon: an
     { name: 'Access Control', href: '/access-control', icon: Lock, description: 'Secure data with role-based access.' },
     { name: 'Deep Insights', href: '/reports', icon: BarChart3, description: 'Analytics and reporting dashboard.' },
   ],
+  'AI Intelligence': [
+    { name: 'AI Detection Analysis', href: '/ai-detection', icon: BrainIcon, description: 'Manage team members and permissions.' },
+    { name: 'AI Tuning Station', href: '/lab/ai-tuning', icon: BrainIcon, description: 'Fine-tune object detection models.' },
+    { name: 'Privacy Scrubbing', href: '/lab/privacy', icon: Lock, description: 'GDPR-compliant face blurring.' },
+    { name: 'Voice-to-Tag', href: '/lab/voice-tag', icon: Zap, description: 'Hands-free site documentation.' },
+  ],
   'For Developers': [
     { name: 'Integrations', href: '/integrations', icon: Plug, description: 'Connect with your existing tools and systems.' },
     { name: 'Flexible Hosting', href: '/hosting', icon: Server, description: 'Deploy on-premise or in the cloud.' },
@@ -279,14 +285,14 @@ export default function Navbar() {
                     onMouseLeave={handleProductsMouseLeave}
                   >
                     <a
-                      href="/products"
+                      href="#"
                       className="flex items-center gap-1 text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer relative py-2"
                       onClick={(e) => {
+                        e.preventDefault();
                         if (showProducts) {
-                          e.preventDefault();
+                          setShowProducts(false);
+                          setHoveredProducts(false);
                         }
-                        setShowProducts(false);
-                        setHoveredProducts(false);
                       }}
                     >
                       Products
@@ -362,14 +368,14 @@ export default function Navbar() {
                     onMouseLeave={handleIndustriesMouseLeave}
                   >
                     <a
-                      href="/industries"
+                      href="#"
                       className="flex items-center gap-1 text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer relative py-2"
                       onClick={(e) => {
-                        if (showIndustries) {
-                          e.preventDefault();
-                        }
-                        setShowIndustries(false);
-                        setHoveredIndustries(false);
+                         e.preventDefault();
+                         if (showIndustries) {
+                           setShowIndustries(false);
+                           setHoveredIndustries(false);
+                         }
                       }}
                     >
                       Industries
