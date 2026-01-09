@@ -26,6 +26,63 @@
         "siteInspection": "Site Inspection",
         "completedJustNow": "Completed • Just now"
     },
+    "showcase": {
+        "slide1": {
+            "title": "Field Operations Hub",
+            "location": "Construction Site A",
+            "description": "Real-time monitoring"
+        },
+        "slide2": {
+            "title": "Asset Tracking",
+            "location": "Logistics Center",
+            "description": "Precision GPS Lock"
+        },
+        "slide3": {
+            "title": "Safety Compliance",
+            "location": "Inspection Zone",
+            "description": "100% Protocol Adherence"
+        },
+        "static": {
+            "highlight": "Eliminate Field Blindspots.",
+            "title": "Don't let distance become a barrier to progress.",
+            "description": "Traditional field management relies on guesswork and outdated reports. SPACE CAPTURE bridges the gap between on-site reality and office decision-making with military-grade precision.",
+            "button": "Explore Solutions"
+        }
+    },
+    "footer": {
+        "brandDescription": "The ultimate mobile command center for field operations. Streamline tasks, automate reporting, and sync your workforce in real-time with AI-powered tools.",
+        "coreFeatures": "Core Features",
+        "visualFormBuilder": "Visual Form Builder",
+        "aiDetection": "AI Detection Analysis",
+        "engagementFlows": "Engagement Flows",
+        "accessControl": "Access Control",
+        "deepInsights": "Deep Insights",
+        "industries": "Industries",
+        "construction": "Construction Punch Lists",
+        "telecommunication": "Telecommunications",
+        "manufacturing": "Manufacturing",
+        "oilGas": "Oil & Gas Inspection",
+        "utilities": "Utilities",
+        "hvac": "HVAC & Plumbing",
+        "logistics": "Logistics",
+        "facilityManagement": "Facility Management",
+        "company": "Company",
+        "aboutUs": "About Us",
+        "bookDemo": "Book a Demo",
+        "resources": "Resources",
+        "manifesto": "Manifesto: End of Digital Paper",
+        "tech": "Tech: Inside the Eye",
+        "trust": "Trust: AI Assurance",
+        "caseStudy": "Case Study: Predictive Maint.",
+        "guide": "Guide: ISO 9001 Autopilot",
+        "compare": "Compare",
+        "vsSafetyCulture": "vs SafetyCulture",
+        "vsGoCanvas": "vs GoCanvas",
+        "tools": "Tools",
+        "switchingCalculator": "Switching Calculator",
+        "copyright": "© 2025 SPACE CAPTURE. All rights reserved.",
+        "address": "2500 MARCONI AVE, STE 101, SACRAMENTO, CA 95821"
+    },
     "products": {
         "features": "Features",
         "forDevelopers": "For Developers",
