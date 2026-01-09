@@ -22,7 +22,10 @@ const CREATE_DEMO_REQUEST = gql`
   }
 `;
 
+import { useTranslation } from '@/hooks/useTranslation';
+
 export default function DemoRequest() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -68,27 +71,27 @@ export default function DemoRequest() {
     let isValid = true;
 
     if (!formData.firstName.trim()) {
-      newErrors.firstName = 'First name is required.';
+      newErrors.firstName = t('demoRequest.form.errors.firstName');
       isValid = false;
     }
     if (!formData.lastName.trim()) {
-      newErrors.lastName = 'Last name is required.';
+      newErrors.lastName = t('demoRequest.form.errors.lastName');
       isValid = false;
     }
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required.';
+      newErrors.email = t('demoRequest.form.errors.emailRequired');
       isValid = false;
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Email is invalid.';
+      newErrors.email = t('demoRequest.form.errors.emailInvalid');
       isValid = false;
     }
     if (!formData.company.trim()) {
-      newErrors.company = 'Company name is required.';
+      newErrors.company = t('demoRequest.form.errors.company');
       isValid = false;
     }
 
     if (!formData.phoneNumber.trim()) {
-      newErrors.phoneNumber = 'Phone number is required.';
+      newErrors.phoneNumber = t('demoRequest.form.errors.phone');
       isValid = false;
     }
 
@@ -123,37 +126,36 @@ export default function DemoRequest() {
           <div>
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-purple-100 px-4 py-2">
               <FileSignature className="h-4 w-4 text-purple-600" />
-              <span className="text-sm font-semibold text-purple-600">REQUEST A DEMO</span>
+              <span className="text-sm font-semibold text-purple-600">{t('demoRequest.badge')}</span>
             </div>
 
             <h1 className="mb-6 text-4xl font-bold leading-tight text-gray-900 md:text-5xl lg:text-6xl">
-              Transform Your Field Operations with{' '}
+              {t('demoRequest.title.prefix')}
               <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                SPACE CAPTURE
+                {t('demoRequest.title.highlight')}
               </span>
             </h1>
 
             <p className="mb-8 text-lg leading-relaxed text-gray-600">
-              Join thousands of professionals who have successfully managed their field operations. Experience
-              expert guidance, streamlined task management, and comprehensive support for your mobile needs.
+              {t('demoRequest.description')}
             </p>
 
             <div className="space-y-6">
               {[
                 {
                   icon: Shield,
-                  title: 'Expert Field Guidance',
-                  desc: 'Certified field operation consultants with decades of experience in task management and compliance.',
+                  title: t('demoRequest.features.item1.title'),
+                  desc: t('demoRequest.features.item1.desc'),
                 },
                 {
                   icon: Zap,
-                  title: 'Real-Time Tracking',
-                  desc: 'Accelerated operations and priority tracking for urgent field needs.',
+                  title: t('demoRequest.features.item2.title'),
+                  desc: t('demoRequest.features.item2.desc'),
                 },
                 {
                   icon: CheckCircle,
-                  title: 'Comprehensive Solutions',
-                  desc: 'End-to-end support for construction, maintenance, inspections, and progress reporting.',
+                  title: t('demoRequest.features.item3.title'),
+                  desc: t('demoRequest.features.item3.desc'),
                 },
               ].map((item) => (
                 <div key={item.title} className="flex items-start gap-4">
@@ -185,18 +187,18 @@ export default function DemoRequest() {
                 >
                   <CheckCircle className="mx-auto mb-6 h-20 w-20 text-green-500" />
                 </motion.div>
-                <h2 className="mb-2 text-3xl font-bold text-gray-900">Request Received!</h2>
+                <h2 className="mb-2 text-3xl font-bold text-gray-900">{t('demoRequest.success.title')}</h2>
                 <p className="text-lg text-gray-600">
-                  Our team will contact you within 24 hours to schedule your personalized demo.
+                  {t('demoRequest.success.message')}
                 </p>
               </div>
             ) : (
               <>
                 <h2 className="mb-2 text-2xl font-bold text-gray-900">
-                  Schedule Your Personalized Demo
+                  {t('demoRequest.form.title')}
                 </h2>
                 <p className="mb-8 text-gray-600">
-                  See SPACE CAPTURE in action. Let&apos;s discuss your unique field operation needs.
+                  {t('demoRequest.form.description')}
                 </p>
 
                 <form onSubmit={handleSubmit} noValidate>
@@ -211,10 +213,9 @@ export default function DemoRequest() {
                         id="firstName"
                         value={formData.firstName}
                         onChange={handleChange}
-                        className={`block w-full rounded-lg border-2 ${
-                          errors.firstName ? 'border-red-500' : 'border-gray-200'
-                        } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200`}
-                        placeholder="John"
+                        className={`block w-full rounded-lg border-2 ${errors.firstName ? 'border-red-500' : 'border-gray-200'
+                          } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200`}
+                        placeholder={t('demoRequest.form.placeholders.firstName')}
                       />
                       {errors.firstName && <p className="mt-1 text-sm text-red-600">{errors.firstName}</p>}
                     </div>
@@ -229,10 +230,9 @@ export default function DemoRequest() {
                         id="lastName"
                         value={formData.lastName}
                         onChange={handleChange}
-                        className={`block w-full rounded-lg border-2 ${
-                          errors.lastName ? 'border-red-500' : 'border-gray-200'
-                        } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200`}
-                        placeholder="Doe"
+                        className={`block w-full rounded-lg border-2 ${errors.lastName ? 'border-red-500' : 'border-gray-200'
+                          } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200`}
+                        placeholder={t('demoRequest.form.placeholders.lastName')}
                       />
                       {errors.lastName && <p className="mt-1 text-sm text-red-600">{errors.lastName}</p>}
                     </div>
@@ -248,17 +248,16 @@ export default function DemoRequest() {
                       id="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`block w-full rounded-lg border-2 ${
-                        errors.email ? 'border-red-500' : 'border-gray-200'
-                      } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200`}
-                      placeholder="john.doe@company.com"
+                      className={`block w-full rounded-lg border-2 ${errors.email ? 'border-red-500' : 'border-gray-200'
+                        } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200`}
+                      placeholder={t('demoRequest.form.placeholders.email')}
                     />
                     {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
                   </div>
 
                   <div className="mt-6">
                     <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700">
-                      Phone Number *
+                      {t('demoRequest.form.labels.phone')}
                     </label>
                     <input
                       type="tel"
@@ -266,10 +265,9 @@ export default function DemoRequest() {
                       id="phoneNumber"
                       value={formData.phoneNumber}
                       onChange={handleChange}
-                      placeholder="+1 234 567 8900"
-                      className={`block w-full rounded-lg border-2 ${
-                        errors.phoneNumber ? 'border-red-500' : 'border-gray-200'
-                      } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200`}
+                      placeholder={t('demoRequest.form.placeholders.phone')}
+                      className={`block w-full rounded-lg border-2 ${errors.phoneNumber ? 'border-red-500' : 'border-gray-200'
+                        } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200`}
                     />
                     {errors.phoneNumber && <p className="mt-1 text-sm text-red-600">{errors.phoneNumber}</p>}
                   </div>
@@ -284,17 +282,16 @@ export default function DemoRequest() {
                       id="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className={`block w-full rounded-lg border-2 ${
-                        errors.company ? 'border-red-500' : 'border-gray-200'
-                      } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200`}
-                      placeholder="Your Company"
+                      className={`block w-full rounded-lg border-2 ${errors.company ? 'border-red-500' : 'border-gray-200'
+                        } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200`}
+                      placeholder={t('demoRequest.form.placeholders.company')}
                     />
                     {errors.company && <p className="mt-1 text-sm text-red-600">{errors.company}</p>}
                   </div>
 
                   <div className="mt-6">
                     <label htmlFor="companySize" className="block text-sm font-medium text-gray-700">
-                      Company Size
+                      {t('demoRequest.form.labels.companySize')}
                     </label>
                     <select
                       name="companySize"
@@ -303,18 +300,18 @@ export default function DemoRequest() {
                       onChange={handleChange}
                       className="block w-full rounded-lg border-2 border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
                     >
-                      <option value="">Select company size</option>
-                      <option value="1-10">1-10 employees</option>
-                      <option value="11-50">11-50 employees</option>
-                      <option value="51-200">51-200 employees</option>
-                      <option value="201-1000">201-1000 employees</option>
-                      <option value="1000+">1000+ employees</option>
+                      <option value="">{t('demoRequest.form.placeholders.selectSize')}</option>
+                      <option value="1-10">1-10 {t('demoRequest.form.options.employees')}</option>
+                      <option value="11-50">11-50 {t('demoRequest.form.options.employees')}</option>
+                      <option value="51-200">51-200 {t('demoRequest.form.options.employees')}</option>
+                      <option value="201-1000">201-1000 {t('demoRequest.form.options.employees')}</option>
+                      <option value="1000+">1000+ {t('demoRequest.form.options.employees')}</option>
                     </select>
                   </div>
 
                   <div className="mt-6">
                     <label htmlFor="projectDetails" className="block text-sm font-medium text-gray-700">
-                      Project Details
+                      {t('demoRequest.form.labels.projectDetails')}
                     </label>
                     <textarea
                       name="projectDetails"
@@ -323,7 +320,7 @@ export default function DemoRequest() {
                       value={formData.projectDetails}
                       onChange={handleChange}
                       className="block w-full rounded-lg border-2 border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
-                      placeholder="Tell us about your field operation needs..."
+                      placeholder={t('demoRequest.form.placeholders.projectDetails')}
                     />
                   </div>
 
@@ -333,13 +330,13 @@ export default function DemoRequest() {
                       disabled={loading}
                       className="w-full rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3 text-white font-semibold shadow-md hover:from-purple-700 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      {loading ? 'Submitting...' : 'Request Demo'}
+                      {loading ? t('demoRequest.form.button.submitting') : t('demoRequest.form.button.submit')}
                     </button>
                   </div>
                 </form>
 
                 <p className="mt-6 text-center text-xs text-gray-500">
-                  By submitting this form, you agree to our Terms of Service and Privacy Policy.
+                  {t('demoRequest.form.footer')}
                 </p>
               </>
             )}

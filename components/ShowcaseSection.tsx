@@ -178,8 +178,8 @@ const ShowcaseSection = () => {
                 viewport={{ once: true }}
               >
                 <h2 className="text-3xl md:text-4xl font-light leading-tight">
-                  <strong className="font-extrabold block text-blue-400 mb-2">Eliminate Field Blindspots.</strong>
-                  Don&apos;t let distance become a barrier to progress.
+                  <strong className="font-extrabold block text-blue-400 mb-2">{t('showcase.static.highlight')}</strong>
+                  {t('showcase.static.title')}
                 </h2>
               </motion.div>
 
@@ -190,7 +190,7 @@ const ShowcaseSection = () => {
                 viewport={{ once: true }}
                 className="text-slate-300 text-lg leading-relaxed"
               >
-                Traditional field management relies on guesswork and outdated reports. SPACE CAPTURE bridges the gap between on-site reality and office decision-making with military-grade precision.
+                {t('showcase.static.description')}
               </motion.p>
 
               <motion.div
@@ -200,7 +200,7 @@ const ShowcaseSection = () => {
                 viewport={{ once: true }}
               >
                 <button className="mt-4 text-sm font-bold uppercase tracking-wider text-blue-400 hover:text-white transition-colors flex items-center gap-2 cursor-pointer">
-                  Explore Solutions <span className="text-lg">→</span>
+                  {t('showcase.static.button')} <span className="text-lg">→</span>
                 </button>
               </motion.div>
             </div>

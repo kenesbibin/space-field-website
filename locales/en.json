@@ -49,6 +49,184 @@
             "button": "Explore Solutions"
         }
     },
+    "guide": {
+        "badge": "Total Workflow Control",
+        "headline": {
+            "prefix": "Orchestrate Your Field Projects With",
+            "highlight": "Efficiency"
+        },
+        "description": {
+            "part1": "SPACE CAPTURE isn't just about knowing where you are—it's about knowing",
+            "bold": "where your project stands.",
+            "part2": "Replace chaotic paper trails with digital precision. Assign tasks, log inspections, and visualize progress in one unified ecosystem."
+        },
+        "feature1": {
+            "title": "Digital Task Management",
+            "desc": "Assign duties instantly and track completion status without the paperwork."
+        },
+        "feature2": {
+            "title": "Real-Time Site Analytics",
+            "desc": "Get live insights on workforce productivity and project milestones."
+        },
+        "feature3": {
+            "title": "Automated Compliance",
+            "desc": "Ensure every safety protocol is checked, logged, and synced to the cloud."
+        },
+        "image": {
+            "status": "System Online",
+            "synced": "Data Synced Just Now"
+        }
+    },
+    "features": {
+        "mockup": {
+            "fieldOps": "Field Ops",
+            "siteCompletion": "Site Completion",
+            "activeTasks": "Active Tasks",
+            "newCount": "4 New",
+            "syncButton": "Sync Field Data"
+        },
+        "header": {
+            "badge": "Capabilities",
+            "title": "Our Features",
+            "description": "We combine powerful technology with simple usability to help you master every aspect of your field operations."
+        },
+        "items": {
+            "ecosystem": {
+                "title": "Unified Web & Mobile Ecosystem",
+                "desc": "Seamlessly switch between the powerful Web Dashboard for office management and the robust Mobile App for on-site execution. One platform, total control."
+            },
+            "signatures": {
+                "title": "Instant Digital Signatures",
+                "desc": "Eliminate paper trails. Securely capture client approvals and technical sign-offs directly on the device to validate work and close jobs faster."
+            },
+            "sync": {
+                "title": "Live Field Synchronization",
+                "desc": "Eliminate the communication gap. Updates made on the field are instantly visible in the office, ensuring project managers always have real-time site data."
+            },
+            "compliance": {
+                "title": "Automated Safety & Compliance",
+                "desc": "Digitize your safety protocols. Enforce mandatory checklists, incident reporting, and digital signatures to ensure your site meets all industry standards."
+            }
+        }
+    },
+    "aiApi": {
+        "section1": {
+            "badge": "For Developers",
+            "title": {
+                "prefix": "The",
+                "highlight": "AI Detection API"
+            },
+            "description": "Integrate industrial-grade defect detection into your own applications with a simple API call. Upload any image, and our engine instantly returns a structured JSON payload identifying defects, severity, and precise coordinates.",
+            "button": "Try For Free",
+            "gifOverlay": "AI Detection in Action"
+        },
+        "card": {
+            "status": "Analysis Success",
+            "detectedObjects": "Detected Objects",
+            "confidence": "Confidence:",
+            "box": "Box:",
+            "actionLabel": "Action:",
+            "item1": {
+                "name": "Structural Crack",
+                "severity": "HIGH SEVERITY",
+                "action": "Immediate repair required."
+            },
+            "item2": {
+                "name": "Surface Corrosion",
+                "severity": "MEDIUM"
+            }
+        },
+        "section2": {
+            "badge": "Developer Friendly",
+            "title": {
+                "line1": "Parseable Results.",
+                "highlight": "Seamless Integration."
+            },
+            "description": "Receive results in a clean, predictable JSON format. This structured output is ready to be consumed by your internal reporting systems, databases, or workflow automation tools.",
+            "list": {
+                "item1": "Standard REST API Endpoint",
+                "item2": "Customizable Detection Models",
+                "item3": "High Uptime & Low Latency"
+            }
+        }
+    },
+    "cta": {
+        "title": {
+            "prefix": "Take Control of",
+            "highlight": "SPACE CAPTURE",
+            "suffix": "Today."
+        },
+        "description": "Stop chasing paper trails. Sync your office and field teams instantly with the all-in-one platform built for construction and operations.",
+        "buttons": {
+            "tryFree": "Try for Free",
+            "bookDemo": "Book a Demo"
+        },
+        "footerText": "Available on iOS, Android, and Web"
+    },
+    "demoRequest": {
+        "badge": "REQUEST A DEMO",
+        "title": {
+            "prefix": "Transform Your Field Operations with ",
+            "highlight": "SPACE CAPTURE"
+        },
+        "description": "Join thousands of professionals who have successfully managed their field operations. Experience expert guidance, streamlined task management, and comprehensive support for your mobile needs.",
+        "features": {
+            "item1": {
+                "title": "Expert Field Guidance",
+                "desc": "Certified field operation consultants with decades of experience in task management and compliance."
+            },
+            "item2": {
+                "title": "Real-Time Tracking",
+                "desc": "Accelerated operations and priority tracking for urgent field needs."
+            },
+            "item3": {
+                "title": "Comprehensive Solutions",
+                "desc": "End-to-end support for construction, maintenance, inspections, and progress reporting."
+            }
+        },
+        "success": {
+            "title": "Request Received!",
+            "message": "Our team will contact you within 24 hours to schedule your personalized demo."
+        },
+        "form": {
+            "title": "Schedule Your Personalized Demo",
+            "description": "See SPACE CAPTURE in action. Let's discuss your unique field operation needs.",
+            "labels": {
+                "firstName": "First Name *",
+                "lastName": "Last Name *",
+                "email": "Email Address *",
+                "phone": "Phone Number *",
+                "company": "Company Name *",
+                "companySize": "Company Size",
+                "projectDetails": "Project Details"
+            },
+            "placeholders": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "email": "john.doe@company.com",
+                "phone": "+1 234 567 8900",
+                "company": "Your Company",
+                "selectSize": "Select company size",
+                "projectDetails": "Tell us about your field operation needs..."
+            },
+            "errors": {
+                "firstName": "First name is required.",
+                "lastName": "Last name is required.",
+                "emailRequired": "Email is required.",
+                "emailInvalid": "Email is invalid.",
+                "company": "Company name is required.",
+                "phone": "Phone number is required."
+            },
+            "button": {
+                "submit": "Request Demo",
+                "submitting": "Submitting..."
+            },
+            "footer": "By submitting this form, you agree to our Terms of Service and Privacy Policy.",
+            "options": {
+                "employees": "employees"
+            }
+        }
+    },
     "footer": {
         "brandDescription": "The ultimate mobile command center for field operations. Streamline tasks, automate reporting, and sync your workforce in real-time with AI-powered tools.",
         "coreFeatures": "Core Features",
@@ -120,5 +298,29 @@
         "oilGasDesc": "Safety compliance and checks.",
         "facilityManagement": "Facility Management",
         "facilityManagementDesc": "Building upkeep and services."
+    },
+    "constructionSection": {
+        "badge": "Construction Industry",
+        "title": {
+            "line1": "Build Smarter with ",
+            "highlight": "Digital Precision"
+        },
+        "description": "Space Field bridges the gap between the construction site and the boardroom. Eliminate paperwork, reduce rework, and deliver projects on schedule with our specialized construction module.",
+        "features": {
+            "item1": {
+                "title": "Real-Time Site Progress",
+                "desc": "Track daily logs, labor hours, and material usage instantly. Keep stakeholders aligned with live updates from the ground."
+            },
+            "item2": {
+                "title": "Digital QC & Safety Inspections",
+                "desc": "Digitize your snag lists and safety audits. Capture photos, annotate issues, and assign fixes directly to subcontractors."
+            },
+            "item3": {
+                "title": "Fleet & Asset Management",
+                "desc": "Monitor heavy equipment usage and location. Prevent theft and optimize deployment schedules to reduce downtime."
+            }
+        },
+        "link": "See Construction Demo",
+        "imageAlt": "Construction Site Management with Space Field"
     }
 }
