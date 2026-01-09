@@ -5,15 +5,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function HeroSection() {
+  const { t } = useLanguage();
   // 1. Typed Variants
   const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.6, ease: "easeOut" } 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   };
 
@@ -48,60 +50,60 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen w-full bg-slate-50 pt-32 pb-20 lg:pt-40 overflow-hidden flex items-center">
-      
+
       {/* Background decoration using Framer Motion */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
-        <motion.div 
+        <motion.div
           variants={blobAnimation}
           animate="animate"
           transition={blobTransition}
-          className="absolute top-20 left-10 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20" 
+          className="absolute top-20 left-10 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
         />
-        <motion.div 
+        <motion.div
           variants={blobAnimation}
           animate="animate"
           transition={{ ...blobTransition, delay: 2 }}
-          className="absolute top-40 right-10 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20" 
+          className="absolute top-40 right-10 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
         />
-        <motion.div 
+        <motion.div
           variants={blobAnimation}
           animate="animate"
           transition={{ ...blobTransition, delay: 4 }}
-          className="absolute -bottom-8 left-1/2 w-96 h-96 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30" 
+          className="absolute -bottom-8 left-1/2 w-96 h-96 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
         />
       </div>
 
       <div className="container mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
+
           {/* Left Content - Text */}
-          <motion.div 
+          <motion.div
             className="space-y-8 text-center lg:text-left"
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
           >
             <div className="space-y-6">
-              <motion.h1 
+              <motion.h1
                 variants={fadeInUp}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-900 tracking-tight"
               >
-                Command Your Field Operations With{' '}
+                {t('hero.titlePrefix')}{' '}
                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                  Absolute Precision
+                  {t('hero.titleHighlight')}
                 </span>
               </motion.h1>
-              
-              <motion.p 
+
+              <motion.p
                 variants={fadeInUp}
                 className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium"
               >
-                Eliminate on-site chaos. SPACE CAPTURE provides the ultimate mobile command center for construction, maintenance, and inspection teams to track progress in real-time.
+                {t('hero.description')}
               </motion.p>
             </div>
 
             {/* Buttons */}
-            <motion.div 
+            <motion.div
               variants={fadeInUp}
               className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start"
             >
@@ -109,52 +111,52 @@ export default function HeroSection() {
                 href="https://www.amspace.ai/login?type=Legal&moduleId=b20f5bfe-a351-46e7-842a-24a02802fe4f&invite=guest"
                 className="group inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 active:scale-95"
               >
-                Start Free Trial
+                {t('hero.startFreeTrial')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
-              
+
               <Link
                 href="/book-a-demo"
                 className="inline-flex items-center justify-center gap-2 bg-white text-slate-700 px-8 py-4 rounded-full text-lg font-semibold border border-slate-200 transition-all duration-300 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 active:scale-95 shadow-sm"
               >
-                Schedule Demo
+                {t('hero.scheduleDemo')}
               </Link>
             </motion.div>
           </motion.div>
 
           {/* Right Content - Hero Image */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             className="relative w-full"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white p-2">
-               <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/hero.jpg"
-                    alt="SPACE CAPTURE App Dashboard Interface"
-                    width={1200}
-                    height={900} 
-                    quality={100}
-                    className="w-full h-auto object-cover"
-                    priority
-                  />
-               </div>
-              
+              <div className="relative rounded-xl overflow-hidden">
+                <Image
+                  src="/images/hero.jpg"
+                  alt="SPACE CAPTURE App Dashboard Interface"
+                  width={1200}
+                  height={900}
+                  quality={100}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+              </div>
+
               {/* Floating Badge */}
-              <motion.div 
+              <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.2, duration: 0.5 }}
                 className="absolute bottom-8 left-8 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-xl border border-blue-100 hidden sm:flex gap-3 items-center z-20"
               >
                 <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center">
-                    <CheckCircle className="text-blue-600 w-6 h-6" />
+                  <CheckCircle className="text-blue-600 w-6 h-6" />
                 </div>
                 <div>
-                    <p className="text-sm font-bold text-slate-900">Site Inspection</p>
-                    <p className="text-xs text-green-600 font-medium">Completed • Just now</p>
+                  <p className="text-sm font-bold text-slate-900">{t('hero.siteInspection')}</p>
+                  <p className="text-xs text-green-600 font-medium">{t('hero.completedJustNow')}</p>
                 </div>
               </motion.div>
             </div>

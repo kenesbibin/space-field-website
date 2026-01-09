@@ -1,0 +1,67 @@
+{
+    "common": {
+        "appName": "SPACE CAPTURE",
+        "tryForFree": "मुफ़्त में आज़माएं",
+        "requestDemo": "डेमो का अनुरोध करें",
+        "signIn": "साइन इन करें",
+        "email": "ईमेल",
+        "usa": "अमेरिका",
+        "singapore": "सिंगापुर",
+        "getInTouch": "संपर्क करें",
+        "copyEmail": "हमें संदेश भेजने के लिए नीचे दिय गए ईमेल पते को कॉपी करें।",
+        "copied": "कॉपी किया गया!",
+        "clickToCopy": "कॉपी करने के लिए आइकन पर क्लिक करें"
+    },
+    "navbar": {
+        "home": "होम",
+        "products": "उत्पाद",
+        "industries": "उद्योग"
+    },
+    "hero": {
+        "titlePrefix": "अपने फील्ड ऑपरेशंस पर नियंत्रण रखें",
+        "titleHighlight": "पूरी सटीकता के साथ",
+        "description": "ऑन-साइट अराजकता को खत्म करें। SPACE CAPTURE निर्माण, रखरखाव और निरीक्षण टीमों के लिए प्रगति को वास्तविक समय में ट्रैक करने के लिए अंतिम मोबाइल कमांड सेंटर प्रदान करता है।",
+        "startFreeTrial": "निःशुल्क परीक्षण शुरू करें",
+        "scheduleDemo": "डेमो शेड्यूल करें",
+        "siteInspection": "साइट निरीक्षण",
+        "completedJustNow": "पूरा हुआ • अभी"
+    },
+    "products": {
+        "features": "विशेषताएं",
+        "forDevelopers": "डेवलपर्स के लिए",
+        "coreFunctions": "मुख्य कार्य",
+        "coreFunctionsDesc": "फील्ड ऑपरेशन प्रबंधन के लिए आवश्यक उपकरण।",
+        "visualFormBuilder": "विजुअल फॉर्म बिल्डर",
+        "visualFormBuilderDesc": "बिना कोडिंग के कस्टम फॉर्म बनाएं।",
+        "aiDetection": "AI डिटेक्शन विश्लेषण",
+        "aiDetectionDesc": "टीम के सदस्यों और अनुमतियों को प्रबंधित करें।",
+        "engagementFlows": "एंगेजमेंट फ्लो",
+        "engagementFlowsDesc": "वर्कफ़्लो और प्रक्रियाओं को स्वचालित करें।",
+        "accessControl": "एक्सेस कंट्रोल",
+        "accessControlDesc": "भूमिका-आधारित पहुंच के साथ डेटा सुरक्षित करें।",
+        "deepInsights": "गहरी अंतर्दृष्टि",
+        "deepInsightsDesc": "एनालिटिक्स और रिपोर्टिंग डैशबोर्ड।",
+        "integrations": "एकीकरण (Integrations)",
+        "integrationsDesc": "अपने मौजूदा टूल्स और सिस्टम से कनेक्ट करें।",
+        "flexibleHosting": "लचीली होस्टिंग",
+        "flexibleHostingDesc": "ऑन- premise या क्लाउड में तैनात करें।"
+    },
+    "industries": {
+        "construction": "निर्माण",
+        "constructionDesc": "साइटों और कर्मचारियों को कुशलतापूर्वक प्रबंधित करें।",
+        "utilities": "उपयोगिताएँ और ऊर्जा",
+        "utilitiesDesc": "ग्रिड रखरखाव और निरीक्षण।",
+        "telecom": "दूरसंचार",
+        "telecomDesc": "नेटवर्क इंफ्रास्ट्रक्चर के लिए फील्ड सर्विस।",
+        "hvac": "HVAC और प्लंबिंग",
+        "hvacDesc": "डिस्पैच और मरम्मत ट्रैकिंग।",
+        "manufacturing": "विनिर्माण",
+        "manufacturingDesc": "उपकरण रखरखाव लॉग।",
+        "logistics": "रसद (Logistics)",
+        "logisticsDesc": "फ्लीट और डिलीवरी ऑपरेशन।",
+        "oilGas": "तेल और गैस",
+        "oilGasDesc": "सुरक्षा अनुपालन और जांच।",
+        "facilityManagement": "सुविधा प्रबंधन",
+        "facilityManagementDesc": "भवन रखरखाव और सेवाएँ।"
+    }
+}

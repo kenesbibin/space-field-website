@@ -1,0 +1,67 @@
+{
+    "common": {
+        "appName": "SPACE CAPTURE",
+        "tryForFree": "جرب مجاناً",
+        "requestDemo": "اطلب عرض توضيحي",
+        "signIn": "تسجيل الدخول",
+        "email": "البريد الإلكتروني",
+        "usa": "الولايات المتحدة",
+        "singapore": "سنغافورة",
+        "getInTouch": "تواصل معنا",
+        "copyEmail": "انسخ عنوان بريدنا الإلكتروني أدناه لإرسال رسالة إلينا مباشرة.",
+        "copied": "تم النسخ!",
+        "clickToCopy": "انقر على الرمز للنسخ"
+    },
+    "navbar": {
+        "home": "الرئيسية",
+        "products": "المنتجات",
+        "industries": "الصناعات"
+    },
+    "hero": {
+        "titlePrefix": "قد عملياتك الميدانية بـ",
+        "titleHighlight": "دقة مطلقة",
+        "description": "تخلص من الفوضى في الموقع. توفر SPACE CAPTURE مركز القيادة المتنقل النهائي لفرق البناء والصيانة والتفتيش لتتبع التقدم في الوقت الفعلي.",
+        "startFreeTrial": "ابدأ التجربة المجانية",
+        "scheduleDemo": "جدولة عرض توضيحي",
+        "siteInspection": "تفتيش الموقع",
+        "completedJustNow": "مكتمل • الآن"
+    },
+    "products": {
+        "features": "الميزات",
+        "forDevelopers": "للمطورين",
+        "coreFunctions": "الوظائف الأساسية",
+        "coreFunctionsDesc": "أدوات أساسية لإدارة العمليات الميدانية.",
+        "visualFormBuilder": "منشئ النماذج المرئي",
+        "visualFormBuilderDesc": "إنشاء نماذج مخصصة بدون برمجة.",
+        "aiDetection": "تحليل الكشف بالذكاء الاصطناعي",
+        "aiDetectionDesc": "إدارة أعضاء الفريق والأذونات.",
+        "engagementFlows": "تفاعلات العمل",
+        "engagementFlowsDesc": "أتمتة سير العمل والعمليات.",
+        "accessControl": "التحكم في الوصول",
+        "accessControlDesc": "تأمين البيانات من خلال الوصول القائم على الأدوار.",
+        "deepInsights": "رؤى عميقة",
+        "deepInsightsDesc": "لوحة المعلومات للتحليلات والتقارير.",
+        "integrations": "التكاملات",
+        "integrationsDesc": "تواصل مع أدواتك وأنظمتك الحالية.",
+        "flexibleHosting": "استضافة مرنة",
+        "flexibleHostingDesc": "النشر محلياً أو في السحابة."
+    },
+    "industries": {
+        "construction": "البناء",
+        "constructionDesc": "إدارة المواقع والفرق بكفاءة.",
+        "utilities": "المرافق والطاقة",
+        "utilitiesDesc": "صيانة الشبكات وعمليات التفتيش.",
+        "telecom": "الاتصالات",
+        "telecomDesc": "الخدمة الميدانية للبنية التحتية للشبكة.",
+        "hvac": "التكييف والسباكة",
+        "hvacDesc": "تتبع الإرسال والإصلاح.",
+        "manufacturing": "التصنيع",
+        "manufacturingDesc": "سجلات صيانة المعدات.",
+        "logistics": "الخدمات اللوجستية",
+        "logisticsDesc": "عمليات الأسطول والتسليم.",
+        "oilGas": "النفط والغاز",
+        "oilGasDesc": "الامتثال للسلامة والفحوصات.",
+        "facilityManagement": "إدارة المرافق",
+        "facilityManagementDesc": "صيانة المباني والخدمات."
+    }
+}

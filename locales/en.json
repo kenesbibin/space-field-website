@@ -1,0 +1,67 @@
+{
+    "common": {
+        "appName": "SPACE CAPTURE",
+        "tryForFree": "Try for Free",
+        "requestDemo": "Request a Demo",
+        "signIn": "Sign In",
+        "email": "Email",
+        "usa": "USA",
+        "singapore": "Singapore",
+        "getInTouch": "Get in Touch",
+        "copyEmail": "Copy our email address below to send us a message directly.",
+        "copied": "Copied to clipboard!",
+        "clickToCopy": "Click the icon to copy"
+    },
+    "navbar": {
+        "home": "Home",
+        "products": "Products",
+        "industries": "Industries"
+    },
+    "hero": {
+        "titlePrefix": "Command Your Field Operations With",
+        "titleHighlight": "Absolute Precision",
+        "description": "Eliminate on-site chaos. SPACE CAPTURE provides the ultimate mobile command center for construction, maintenance, and inspection teams to track progress in real-time.",
+        "startFreeTrial": "Start Free Trial",
+        "scheduleDemo": "Schedule Demo",
+        "siteInspection": "Site Inspection",
+        "completedJustNow": "Completed • Just now"
+    },
+    "products": {
+        "features": "Features",
+        "forDevelopers": "For Developers",
+        "coreFunctions": "Core Functions",
+        "coreFunctionsDesc": "Essential tools for field operations management.",
+        "visualFormBuilder": "Visual Form Builder",
+        "visualFormBuilderDesc": "Create custom forms without coding.",
+        "aiDetection": "AI Detection Analysis",
+        "aiDetectionDesc": "Manage team members and permissions.",
+        "engagementFlows": "Engagement Flows",
+        "engagementFlowsDesc": "Automate workflows and processes.",
+        "accessControl": "Access Control",
+        "accessControlDesc": "Secure data with role-based access.",
+        "deepInsights": "Deep Insights",
+        "deepInsightsDesc": "Analytics and reporting dashboard.",
+        "integrations": "Integrations",
+        "integrationsDesc": "Connect with your existing tools and systems.",
+        "flexibleHosting": "Flexible Hosting",
+        "flexibleHostingDesc": "Deploy on-premise or in the cloud."
+    },
+    "industries": {
+        "construction": "Construction",
+        "constructionDesc": "Manage sites and crews efficiently.",
+        "utilities": "Utilities & Energy",
+        "utilitiesDesc": "Grid maintenance and inspections.",
+        "telecom": "Telecommunications",
+        "telecomDesc": "Field service for network infra.",
+        "hvac": "HVAC & Plumbing",
+        "hvacDesc": "Dispatch and repair tracking.",
+        "manufacturing": "Manufacturing",
+        "manufacturingDesc": "Equipment maintenance logs.",
+        "logistics": "Logistics",
+        "logisticsDesc": "Fleet and delivery operations.",
+        "oilGas": "Oil & Gas",
+        "oilGasDesc": "Safety compliance and checks.",
+        "facilityManagement": "Facility Management",
+        "facilityManagementDesc": "Building upkeep and services."
+    }
+}
