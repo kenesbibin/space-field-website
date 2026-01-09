@@ -3,15 +3,16 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 // Define the available languages
-export type Language = 'en' | 'ta' | 'hi' | 'te' | 'ml' | 'ar';
+export type Language = 'en' | 'fr' | 'de' | 'es' | 'ar' | 'ms' | 'zh';
 
 export const languages: { code: Language; name: string; nativeName: string }[] = [
   { code: 'en', name: 'English', nativeName: 'English' },
-  { code: 'ta', name: 'Tamil', nativeName: 'தமிழ்' },
-  { code: 'hi', name: 'Hindi', nativeName: 'हिंदी' },
-  { code: 'te', name: 'Telugu', nativeName: 'తెలుగు' },
-  { code: 'ml', name: 'Malayalam', nativeName: 'മലയാളം' },
+  { code: 'fr', name: 'French', nativeName: 'Français' },
+  { code: 'de', name: 'German', nativeName: 'Deutsch' },
+  { code: 'es', name: 'Spanish', nativeName: 'Español' },
   { code: 'ar', name: 'Arabic', nativeName: 'العربية' },
+  { code: 'ms', name: 'Malay', nativeName: 'Bahasa Melayu' },
+  { code: 'zh', name: 'Chinese', nativeName: '中文' },
 ];
 
 interface LanguageContextType {

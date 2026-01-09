@@ -1,0 +1,907 @@
+{
+    "common": {
+        "appName": "SPACE CAPTURE",
+        "tryForFree": "Kostenlos Testen",
+        "requestDemo": "Demo Anfordern",
+        "signIn": "Anmelden",
+        "email": "E-Mail",
+        "usa": "USA",
+        "singapore": "Singapur",
+        "getInTouch": "Kontaktieren Sie uns",
+        "copyEmail": "Kopieren Sie unsere E-Mail-Adresse unten, um uns direkt eine Nachricht zu senden.",
+        "copied": "In die Zwischenablage kopiert!",
+        "clickToCopy": "Klicken Sie auf das Symbol zum Kopieren"
+    },
+    "navbar": {
+        "home": "Startseite",
+        "products": "Produkte",
+        "industries": "Branchen"
+    },
+    "hero": {
+        "titlePrefix": "Beherrschen Sie Ihre Feldoperationen mit",
+        "titleHighlight": "Absoluter Präzision",
+        "description": "Beseitigen Sie Chaos vor Ort. SPACE CAPTURE bietet das ultimative mobile Kommandozentrum für Bau-, Wartungs- und Inspektionsteams, um den Fortschritt in Echtzeit zu verfolgen.",
+        "startFreeTrial": "Kostenlose Testversion Starten",
+        "scheduleDemo": "Demo Planen",
+        "siteInspection": "Standortinspektion",
+        "completedJustNow": "Abgeschlossen • Gerade eben"
+    },
+    "showcase": {
+        "slide1": {
+            "title": "Feldoperations-Hub",
+            "location": "Baustelle A",
+            "description": "Echtzeit-Überwachung"
+        },
+        "slide2": {
+            "title": "Asset-Tracking",
+            "location": "Logistikzentrum",
+            "description": "Präzisions-GPS-Sperre"
+        },
+        "slide3": {
+            "title": "Sicherheitskonformität",
+            "location": "Inspektionszone",
+            "description": "100% Protokolleinhaltung"
+        },
+        "static": {
+            "highlight": "Beseitigen Sie blinde Flecken.",
+            "title": "Lassen Sie Distanz nicht zum Hindernis für Fortschritt werden.",
+            "description": "Traditionelles Feldmanagement verlässt sich auf Vermutungen und veraltete Berichte. SPACE CAPTURE überbrückt die Lücke zwischen der Realität vor Ort und Entscheidungen im Büro mit militärischer Präzision.",
+            "button": "Lösungen Entdecken"
+        }
+    },
+    "guide": {
+        "badge": "Totale Workflow-Kontrolle",
+        "headline": {
+            "prefix": "Orchestrieren Sie Ihre Feldprojekte mit",
+            "highlight": "Effizienz"
+        },
+        "description": {
+            "part1": "Bei SPACE CAPTURE geht es nicht nur darum zu wissen, wo Sie sind – es geht darum zu wissen,",
+            "bold": "wo Ihr Projekt steht.",
+            "part2": "Ersetzen Sie chaotische Papierwege durch digitale Präzision. Weisen Sie Aufgaben zu, protokollieren Sie Inspektionen und visualisieren Sie den Fortschritt in einem einheitlichen Ökosystem."
+        },
+        "feature1": {
+            "title": "Digitales Aufgabenmanagement",
+            "desc": "Weisen Sie Aufgaben sofort zu und verfolgen Sie den Erledigungsstatus ohne Papierkram."
+        },
+        "feature2": {
+            "title": "Echtzeit-Standortanalysen",
+            "desc": "Erhalten Sie Live-Einblicke in die Produktivität der Belegschaft und Projektmeilensteine."
+        },
+        "feature3": {
+            "title": "Automatisierte Compliance",
+            "desc": "Stellen Sie sicher, dass jedes Sicherheitsprotokoll geprüft, protokolliert und mit der Cloud synchronisiert wird."
+        },
+        "image": {
+            "status": "System Online",
+            "synced": "Daten synchronisiert"
+        }
+    },
+    "features": {
+        "mockup": {
+            "fieldOps": "Feld-Ops",
+            "siteCompletion": "Standortfertigstellung",
+            "activeTasks": "Aktive Aufgaben",
+            "newCount": "4 Neu",
+            "syncButton": "Daten Synchronisieren"
+        },
+        "header": {
+            "badge": "Fähigkeiten",
+            "title": "Unsere Funktionen",
+            "description": "Wir kombinieren leistungsstarke Technologie mit einfacher Bedienbarkeit, damit Sie jeden Aspekt Ihrer Feldoperationen meistern können."
+        },
+        "items": {
+            "ecosystem": {
+                "title": "Einheitliches Web- & Mobile-Ökosystem",
+                "desc": "Wechseln Sie nahtlos zwischen dem leistungsstarken Web-Dashboard für das Büromanagement und der robusten mobilen App für die Ausführung vor Ort. Eine Plattform, totale Kontrolle."
+            },
+            "signatures": {
+                "title": "Sofortige digitale Unterschriften",
+                "desc": "Beseitigen Sie Papierwege. Erfassen Sie Kundenfreigaben und technische Abnahmen sicher direkt auf dem Gerät, um Arbeiten zu validieren und Aufträge schneller abzuschließen."
+            },
+            "sync": {
+                "title": "Live-Feldsynchronisation",
+                "desc": "Beseitigen Sie die Kommunikationslücke. Updates vor Ort sind im Büro sofort sichtbar, sodass Projektmanager immer über Echtzeit-Standortdaten verfügen."
+            },
+            "compliance": {
+                "title": "Automatisierte Sicherheit & Compliance",
+                "desc": "Digitalisieren Sie Ihre Sicherheitsprotokolle. Setzen Sie obligatorische Checklisten, Vorfallberichte und digitale Unterschriften durch, um sicherzustellen, dass Ihr Standort alle Industriestandards erfüllt."
+            }
+        }
+    },
+    "aiApi": {
+        "section1": {
+            "badge": "Für Entwickler",
+            "title": {
+                "prefix": "Die",
+                "highlight": "KI-Erkennungs-API"
+            },
+            "description": "Integrieren Sie Fehlererkennung in Industriequalität mit einem einfachen API-Aufruf in Ihre eigenen Anwendungen. Laden Sie ein beliebiges Bild hoch, und unsere Engine liefert sofort eine strukturierte JSON-Payload zurück, die Defekte, Schweregrad und genaue Koordinaten identifiziert.",
+            "button": "Kostenlos Testen",
+            "gifOverlay": "KI-Erkennung in Aktion"
+        },
+        "card": {
+            "status": "Analyse Erfolgreich",
+            "detectedObjects": "Erkannte Objekte",
+            "confidence": "Vertrauen:",
+            "box": "Box:",
+            "actionLabel": "Aktion:",
+            "item1": {
+                "name": "Struktureller Riss",
+                "severity": "HOHER SCHWEREGRAD",
+                "action": "Sofortige Reparatur erforderlich."
+            },
+            "item2": {
+                "name": "Oberflächenkorrosion",
+                "severity": "MITTEL"
+            }
+        },
+        "section2": {
+            "badge": "Entwicklerfreundlich",
+            "title": {
+                "line1": "Parsierbare Ergebnisse.",
+                "highlight": "Nahtlose Integration."
+            },
+            "description": "Erhalten Sie Ergebnisse in einem sauberen, vorhersehbaren JSON-Format. Diese strukturierte Ausgabe ist bereit, von Ihren internen Berichtssystemen, Datenbanken oder Workflow-Automatisierungstools genutzt zu werden.",
+            "list": {
+                "item1": "Standard REST API Endpunkt",
+                "item2": "Anpassbare Erkennungsmodelle",
+                "item3": "Hohe Verfügbarkeit & Geringe Latenz"
+            }
+        }
+    },
+    "cta": {
+        "title": {
+            "prefix": "Übernehmen Sie die Kontrolle über",
+            "highlight": "SPACE CAPTURE",
+            "suffix": "Heute."
+        },
+        "description": "Hören Sie auf, Papierwegen hinterherzujagen. Synchronisieren Sie Ihre Büro- und Feldteams sofort mit der All-in-One-Plattform für Bau und Betrieb.",
+        "buttons": {
+            "tryFree": "Kostenlos Testen",
+            "bookDemo": "Demo Buchen"
+        },
+        "footerText": "Verfügbar auf iOS, Android und Web"
+    },
+    "demoRequest": {
+        "badge": "EINE DEMO ANFORDERN",
+        "title": {
+            "prefix": "Transformieren Sie Ihre Feldoperationen mit ",
+            "highlight": "SPACE CAPTURE"
+        },
+        "description": "Schließen Sie sich Tausenden von Fachleuten an, die ihre Feldoperationen erfolgreich verwaltet haben. Erleben Sie Expertenberatung, gestrafftes Aufgabenmanagement und umfassende Unterstützung für Ihre mobilen Bedürfnisse.",
+        "features": {
+            "item1": {
+                "title": "Experten-Feldberatung",
+                "desc": "Zertifizierte Berater für Feldoperationen mit jahrzehntelanger Erfahrung in Aufgabenmanagement und Compliance."
+            },
+            "item2": {
+                "title": "Echtzeit-Tracking",
+                "desc": "Beschleunigte Operationen und Prioritätsverfolgung für dringende Feldanforderungen."
+            },
+            "item3": {
+                "title": "Umfassende Lösungen",
+                "desc": "End-to-End-Unterstützung für Bau, Wartung, Inspektionen und Fortschrittsberichte."
+            }
+        },
+        "success": {
+            "title": "Anfrage Erhalten!",
+            "message": "Unser Team wird Sie innerhalb von 24 Stunden kontaktieren, um Ihre persönliche Demo zu planen."
+        },
+        "form": {
+            "title": "Planen Sie Ihre Personalisierte Demo",
+            "description": "Sehen Sie SPACE CAPTURE in Aktion. Lassen Sie uns über Ihre einzigartigen Anforderungen an den Feldbetrieb sprechen.",
+            "labels": {
+                "firstName": "Vorname *",
+                "lastName": "Nachname *",
+                "email": "E-Mail-Adresse *",
+                "phone": "Telefonnummer *",
+                "company": "Firmenname *",
+                "companySize": "Firmengröße",
+                "projectDetails": "Projektdetails"
+            },
+            "placeholders": {
+                "firstName": "Max",
+                "lastName": "Mustermann",
+                "email": "max.mustermann@firma.de",
+                "phone": "+49 123 456 7890",
+                "company": "Ihre Firma",
+                "selectSize": "Größe auswählen",
+                "projectDetails": "Erzählen Sie uns von Ihren Bedürfnissen..."
+            },
+            "errors": {
+                "firstName": "Vorname ist erforderlich.",
+                "lastName": "Nachname ist erforderlich.",
+                "emailRequired": "E-Mail ist erforderlich.",
+                "emailInvalid": "E-Mail ist ungültig.",
+                "company": "Firmenname ist erforderlich.",
+                "phone": "Telefonnummer ist erforderlich."
+            },
+            "button": {
+                "submit": "Demo Anfordern",
+                "submitting": "Wird gesendet..."
+            },
+            "footer": "Durch Absenden dieses Formulars stimmen Sie unseren Nutzungsbedingungen und Datenschutzrichtlinien zu.",
+            "options": {
+                "employees": "Mitarbeiter"
+            }
+        }
+    },
+    "footer": {
+        "brandDescription": "Das ultimative mobile Kommandozentrum für Feldoperationen. Rationalisieren Sie Aufgaben, automatisieren Sie Berichte und synchronisieren Sie Ihre Belegschaft in Echtzeit mit KI-gestützten Tools.",
+        "coreFeatures": "Kernfunktionen",
+        "visualFormBuilder": "Visueller Formular-Builder",
+        "aiDetection": "KI-Erkennungsanalyse",
+        "engagementFlows": "Engagement-Flows",
+        "accessControl": "Zugriffskontrolle",
+        "deepInsights": "Tiefe Einblicke",
+        "industries": "Branchen",
+        "construction": "Bau-Mängellisten",
+        "telecommunication": "Telekommunikation",
+        "manufacturing": "Fertigung",
+        "oilGas": "Öl & Gas Inspektion",
+        "utilities": "Versorgungsunternehmen",
+        "hvac": "HLK & Sanitär",
+        "logistics": "Logistik",
+        "facilityManagement": "Gebäudemanagement",
+        "company": "Unternehmen",
+        "aboutUs": "Über Uns",
+        "bookDemo": "Demo Buchen",
+        "resources": "Ressourcen",
+        "manifesto": "Manifest: Ende des digitalen Papiers",
+        "tech": "Tech: Im Auge des Sturms",
+        "trust": "Vertrauen: KI-Sicherung",
+        "caseStudy": "Fallstudie: Prädiktive Wartung",
+        "guide": "Leitfaden: ISO 9001 Autopilot",
+        "compare": "Vergleichen",
+        "vsSafetyCulture": "vs SafetyCulture",
+        "vsGoCanvas": "vs GoCanvas",
+        "tools": "Werkzeuge",
+        "switchingCalculator": "Wechsel-Rechner",
+        "copyright": "© 2025 SPACE CAPTURE. Alle Rechte vorbehalten.",
+        "address": "2500 MARCONI AVE, STE 101, SACRAMENTO, CA 95821"
+    },
+    "products": {
+        "features": "Funktionen",
+        "forDevelopers": "Für Entwickler",
+        "coreFunctions": "Kernfunktionen",
+        "coreFunctionsDesc": "Wesentliche Werkzeuge für das Feldoperationsmanagement.",
+        "visualFormBuilder": "Visueller Formular-Builder",
+        "visualFormBuilderDesc": "Erstellen Sie benutzerdefinierte Formulare ohne Code.",
+        "aiDetection": "KI-Erkennungsanalyse",
+        "aiDetectionDesc": "Verwalten Sie Teammitglieder und Berechtigungen.",
+        "engagementFlows": "Engagement-Flows",
+        "engagementFlowsDesc": "Automatisieren Sie Workflows und Prozesse.",
+        "accessControl": "Zugriffskontrolle",
+        "accessControlDesc": "Sichern Sie Daten mit rollenbasiertem Zugriff.",
+        "deepInsights": "Tiefe Einblicke",
+        "deepInsightsDesc": "Analyse- und Berichts-Dashboard.",
+        "integrations": "Integrationen",
+        "integrationsDesc": "Binden Sie Ihre vorhandenen Tools und Systeme an.",
+        "flexibleHosting": "Flexibles Hosting",
+        "flexibleHostingDesc": "Bereitstellung On-Premise oder in der Cloud."
+    },
+    "industries": {
+        "construction": "Bauwesen",
+        "constructionDesc": "Verwalten Sie Standorte und Crews effizient.",
+        "utilities": "Versorgung & Energie",
+        "utilitiesDesc": "Netzwartung und Inspektionen.",
+        "telecom": "Telekommunikation",
+        "telecomDesc": "Feldservice für Netzwerkinfrastruktur.",
+        "hvac": "HLK & Sanitär",
+        "hvacDesc": "Versand und Reparaturverfolgung.",
+        "manufacturing": "Fertigung",
+        "manufacturingDesc": "Wartungsprotokolle für Ausrüstung.",
+        "logistics": "Logistik",
+        "logisticsDesc": "Flotten- und Lieferbetrieb.",
+        "oilGas": "Öl & Gas",
+        "oilGasDesc": "Sicherheitskonformität und Prüfungen.",
+        "facilityManagement": "Gebäudemanagement",
+        "facilityManagementDesc": "Gebäudeinstandhaltung und Dienstleistungen."
+    },
+    "constructionSection": {
+        "badge": "Bauindustrie",
+        "title": {
+            "line1": "Bauen Sie intelligenter mit ",
+            "highlight": "Digitaler Präzision"
+        },
+        "description": "Space Field überbrückt die Lücke zwischen Baustelle und Sitzungszimmer. Beseitigen Sie Papierkram, reduzieren Sie Nacharbeiten und liefern Sie Projekte pünktlich mit unserem spezialisierten Baumodul.",
+        "features": {
+            "item1": {
+                "title": "Echtzeit-Standortfortschritt",
+                "desc": "Verfolgen Sie tägliche Protokolle, Arbeitsstunden und Materialverbrauch sofort. Halten Sie Stakeholder mit Live-Updates vom Boden aus auf dem Laufenden."
+            },
+            "item2": {
+                "title": "Digitale QK & Sicherheitsinspektionen",
+                "desc": "Digitalisieren Sie Ihre Mängellisten und Sicherheitsaudits. Erfassen Sie Fotos, kommentieren Sie Probleme und weisen Sie Korrekturen direkt an Subunternehmer zu."
+            },
+            "item3": {
+                "title": "Flotten- & Asset-Management",
+                "desc": "Überwachen Sie Nutzung und Standort schwerer Geräte. Verhindern Sie Diebstahl und optimieren Sie Einsatzpläne, um Ausfallzeiten zu reduzieren."
+            }
+        },
+        "link": "Bau-Demo ansehen",
+        "imageAlt": "Baustellenmanagement mit Space Field"
+    },
+    "hvacSection": {
+        "badge": "HLK & Sanitär",
+        "title": {
+            "line1": "Meistern Sie Ihre Service- ",
+            "highlight": "Workflows"
+        },
+        "description": "Space Field hilft HLK- und Sanitärunternehmen, schneller zu disponieren und intelligenter zu reparieren. Verwalten Sie wiederkehrende Wartungsverträge, verfolgen Sie den Teilebestand und stellen Sie Rechnungen direkt vor Ort aus.",
+        "features": {
+            "item1": {
+                "title": "Serviceanruf-Dispatching",
+                "desc": "Weisen Sie Aufträge dem nächstgelegenen Techniker mit den richtigen Fähigkeiten zu. Verfolgen Sie den Auftragsstatus von 'Unterwegs' bis 'Abgeschlossen' in Echtzeit."
+            },
+            "item2": {
+                "title": "Gerätehistorie & Audits",
+                "desc": "Greifen Sie auf detaillierte Servicehistorien für jede HLK-Einheit zu. Scannen Sie QR-Codes, um Handbücher, Garantieinformationen und vergangene Reparaturprotokolle sofort abzurufen."
+            },
+            "item3": {
+                "title": "Sanitär-Inspektionsberichte",
+                "desc": "Erstellen Sie professionelle Inspektionsberichte vor Ort. Erfassen Sie Fotos von Lecks oder Rohrproblemen und lassen Sie den Kunden digital unterschreiben."
+            }
+        },
+        "link": "HLK-Demo ansehen",
+        "imageAlt": "HLK-Techniker und Sanitärdienste"
+    },
+    "coreFunctions": {
+        "badge": "Space Capture",
+        "title": {
+            "line1": "Überblick über ",
+            "highlight": "Kernfunktionen"
+        },
+        "description": "Space Capture enthält alle leistungsstarken Felddaten-Tools, die Sie im Unternehmensmaßstab benötigen. Erstellen Sie professionelle, intelligente Formulare mit unserer umfangreichen Liste von Modulen, intelligenter Logik und tiefen Branding-Optionen.",
+        "cta": "Jetzt starten",
+        "items": {
+            "visualFormBuilder": {
+                "title": "Visueller Formular-Builder",
+                "desc": "Drag-and-Drop-Schnittstelle zum Erstellen komplexer Datenerfassungsformulare in Minuten. Keine Programmierung erforderlich."
+            },
+            "aiDetection": {
+                "title": "KI-Erkennungsanalyse",
+                "desc": "Analysieren Sie Umfragebilder automatisch, um Defekte zu erkennen, Assets zu klassifizieren und Feldberichte automatisch zu generieren."
+            },
+            "engagementFlows": {
+                "title": "Engagement-Flows",
+                "desc": "Entwerfen Sie automatisierte Workflows, die basierend auf Benutzereingaben, Standort oder zeitbasierten Ereignissen ausgelöst werden."
+            },
+            "accessControl": {
+                "title": "Zugriffskontrolle",
+                "desc": "Granulare Berechtigungseinstellungen, um sicherzustellen, dass die richtigen Teammitglieder nur auf das zugreifen, was sie benötigen."
+            },
+            "deepInsights": {
+                "title": "Tiefe Einblicke",
+                "desc": "Verwandeln Sie rohe Felddaten mit Echtzeit-Analysen und exportierbaren Berichten in umsetzbare Informationen."
+            }
+        }
+    },
+    "logistics": {
+        "badge": "Logistik & Flotte",
+        "title": {
+            "line1": "Effizienz auf ",
+            "highlight": "Jeder Strecke"
+        },
+        "description": "Space Field transformiert Logistikoperationen mit End-to-End-Sichtbarkeit. Vom Lagerdock bis zur Haustür des Kunden stellen Sie sicher, dass jede Meile optimiert und jede Lieferung verifiziert ist.",
+        "link": "Logistik-Demo ansehen",
+        "imageAlt": "Logistik-Flottenmanagement und Lieferung",
+        "features": {
+            "fleetTracking": {
+                "title": "Flotten-Tracking & Telematik",
+                "desc": "Überwachen Sie Fahrzeugstandorte, Kraftstoffverbrauch und Fahrerverhalten in Echtzeit. Reduzieren Sie Leerlaufzeiten und optimieren Sie Routen, um Betriebskosten zu sparen."
+            },
+            "pod": {
+                "title": "Liefernachweis (POD)",
+                "desc": "Erfassen Sie digitale Unterschriften, Fotos und Zeitstempel bei jeder Übergabe. Aktualisieren Sie den Bestellstatus automatisch und lösen Sie Kundenbenachrichtigungen aus."
+            },
+            "routeOptimization": {
+                "title": "Dynamische Routenoptimierung",
+                "desc": "Planen Sie die effizientesten Liefersequenzen sofort. Passen Sie Routen spontan basierend auf Verkehr, Wetter oder dringenden Abholanfragen an."
+            }
+        }
+    },
+    "utilities": {
+        "badge": "Versorgung & Energie",
+        "title": {
+            "line1": "Stärken Sie das Netz mit ",
+            "highlight": "Smart Field Ops"
+        },
+        "description": "Space Field modernisiert den Versorgungsbetrieb. Von routinemäßiger Leitungswartung bis zur Notfallreaktion bei Stürmen stellen Sie sicher, dass Ihre Infrastruktur widerstandsfähig bleibt und Ihre Belegschaft sicher ist.",
+        "link": "Versorgungslösungen ansehen",
+        "imageAlt": "Versorgungs-Feldoperationen und Netzwartung",
+        "features": {
+            "gridMaintenance": {
+                "title": "Netzwartung & Inspektionen",
+                "desc": "Digitalisieren Sie Umspannwerksinspektionen und Leitungspatrouillen. Erfassen Sie Wärmebilder und Gerätemesswerte direkt vor Ort, um Ausfälle zu verhindern."
+            },
+            "smartMeter": {
+                "title": "Smart Meter Rollout",
+                "desc": "Optimieren Sie Rollout-Projekte für intelligente Infrastruktur. Verfolgen Sie den Installationsfortschritt, überprüfen Sie die Konnektivität und verwalten Sie den Bestand in Echtzeit."
+            },
+            "outageResponse": {
+                "title": "Ausfallreaktion & Dispatch",
+                "desc": "Koordinieren Sie Sturmreaktionsteams sofort. Visualisieren Sie Ausfälle auf einer Live-Karte und entsenden Sie die nächstgelegene qualifizierte Crew, um den Strom schneller wiederherzustellen."
+            }
+        }
+    },
+    "oilGas": {
+        "badge": "Öl- & Gasindustrie",
+        "title": {
+            "line1": "Energie antreiben mit ",
+            "highlight": "Sicherheit & Effizienz"
+        },
+        "description": "Space Field liefert robuste digitale Lösungen für die anspruchsvollen Umgebungen des Energiesektors. Optimieren Sie Inspektionen, gewährleisten Sie die Sicherheit der Crew und erhalten Sie die Anlagenintegrität vom Feld bis zum Kontrollraum.",
+        "link": "Energielösungen ansehen",
+        "imageAlt": "Öl- und Gas-Feldoperationen mit Space Field",
+        "features": {
+            "hse": {
+                "title": "HSE & Sicherheitskonformität",
+                "desc": "Setzen Sie strenge Sicherheitsprotokolle auf Bohrinseln und in Raffinerien durch. Digitale Arbeitserlaubnissysteme und Gefahrenmeldungen gewährleisten eine 100%ige Einhaltung von Industriestandards."
+            },
+            "assetIntegrity": {
+                "title": "Anlagenintegritätsmanagement",
+                "desc": "Überwachen Sie den Zustand der Pipelines und Geräte. Planen Sie prädiktive Wartung für Pumpen und Ventile, um Lecks und kostspielige Abschaltungen zu verhindern."
+            },
+            "remoteOps": {
+                "title": "Remote-Feldoperationen",
+                "desc": "Halten Sie Upstream- und Downstream-Teams verbunden. Offline-Funktionen ermöglichen es Technikern in abgelegenen Gebieten, Daten ohne Unterbrechung zu protokollieren."
+            }
+        }
+    },
+    "manufacturing": {
+        "badge": "Fertigungsindustrie",
+        "title": {
+            "line1": "Optimieren Sie Abläufe mit ",
+            "highlight": "Intelligenten Workflows"
+        },
+        "description": "Space Field rationalisiert Fertigungslogistik und Wartung. Statten Sie Ihre Belegschaft mit mobiler Werkzeugen aus, um Assets zu verfolgen, Gefahren zu melden und sicherzustellen, dass Produktionsziele sicher erreicht werden.",
+        "link": "Fertigungs-Demo ansehen",
+        "imageAlt": "Fabrikbetrieb mit Space Field",
+        "features": {
+            "maintenance": {
+                "title": "Gerätewartung & Reparaturen",
+                "desc": "Wechseln Sie von reaktiver zu präventiver Wartung. Planen Sie automatisierte Arbeitsaufträge für Maschinenservice, um kostspielige Ausfallzeiten zu minimieren."
+            },
+            "qualityControl": {
+                "title": "Produktionslinien-Qualitätskontrolle",
+                "desc": "Digitalisieren Sie QA-Inspektionen in der Werkhalle. Erfassen Sie Defektdaten sofort und generieren Sie Compliance-Berichte für ISO-Standards."
+            },
+            "shopFloor": {
+                "title": "Echtzeit-Sichtbarkeit der Werkhalle",
+                "desc": "Überwachen Sie den Workflow-Status und die Arbeitsverteilung in Echtzeit. Verbinden Sie Schichtleiter mit dem Management für schnellere Entscheidungen."
+            }
+        }
+    },
+    "telecom": {
+        "badge": "Telekommunikation",
+        "title": {
+            "line1": "Verbinden Sie die Welt mit ",
+            "highlight": "Nahtlosen Abläufen"
+        },
+        "description": "Space Field ermöglicht Telekommunikationsbetreibern, riesige Infrastrukturnetzwerke mit Leichtigkeit zu verwalten. Vom Turmsteigen bis zum Glasfaserspleißen halten Sie Ihre Feldteams synchron und Ihr Netzwerk online.",
+        "link": "Telekom-Demo ansehen",
+        "imageAlt": "Telekommunikationsinfrastruktur-Management",
+        "features": {
+            "rollout": {
+                "title": "Netzwerkausbau & Wartung",
+                "desc": "Beschleunigen Sie den Glasfaser- und 5G-Ausbau. Verwalten Sie Standortumfragen, Installationsverfolgung und vorbeugende Wartungspläne in Echtzeit."
+            },
+            "audits": {
+                "title": "Turm- & Infrastruktur-Audits",
+                "desc": "Führen Sie strenge Strukturprüfungen durch. Erfassen Sie geogetaggte Beweise für den Turmzustand und automatisieren Sie Compliance-Berichte."
+            },
+            "dispatch": {
+                "title": "Feldtechniker-Dispatch",
+                "desc": "Optimieren Sie die Routenplanung für verteilte Teams. Reduzieren Sie Reaktionszeiten bei Ausfällen und stellen Sie sicher, dass der richtige Techniker mit den richtigen Teilen ankommt."
+            }
+        }
+    },
+    "facility": {
+        "badge": "Gebäudemanagement",
+        "title": {
+            "line1": "Intelligentere Gebäude, ",
+            "highlight": "Überlegene Abläufe"
+        },
+        "description": "Space Field vereint den Gebäudebetrieb auf einer intuitiven Plattform. Befähigen Sie Ihre Teams, Wartung, Assets und Mieterzufriedenheit von überall im Gebäude aus zu verwalten.",
+        "link": "Gebäude-Demo ansehen",
+        "imageAlt": "Moderne Gebäudemanagement-Operationen",
+        "features": {
+            "workOrder": {
+                "title": "Arbeitsauftragsmanagement",
+                "desc": "Optimieren Sie Mieteranfragen und interne Reparaturen. Weisen Sie Aufgaben sofort dem Wartungspersonal zu und verfolgen Sie Lösungszeiten, um Service Level Agreements (SLAs) einzuhalten."
+            },
+            "preventive": {
+                "title": "Präventive Wartung",
+                "desc": "Planen Sie wiederkehrende Inspektionen für HLK, Aufzüge und Brandschutzsysteme. Generieren Sie automatisch Checklisten, um Compliance zu gewährleisten und Lebenszyklen von Assets zu verlängern."
+            },
+            "assetTracking": {
+                "title": "Raum- & Asset-Tracking",
+                "desc": "Erhalten Sie Sichtbarkeit über Asset-Standort und -Zustand in Ihrem gesamten Portfolio. Überwachen Sie Belegungsraten und optimieren Sie Raumnutzungsdaten für intelligentere Planung."
+            }
+        }
+    },
+    "constructionPage": {
+        "hero": {
+            "badge": "Bau & Ingenieurwesen",
+            "title": "Automatisierte",
+            "titleHighlight": "Mängellisten.",
+            "description": "Hören Sie auf, auf Ihren Bildschirm zu tippen. Gehen Sie einfach mit Ihrer Kamera über die Baustelle. SpaceCapture identifiziert automatisch Defekte, weist Subunternehmer zu und erstellt die Mängelliste für Sie.",
+            "cta": "In Aktion sehen",
+            "imageAlt": "Video-zu-Liste-Engine",
+            "visualTitle": "Video-zu-Liste-Engine",
+            "visualStatus": "Verarbeite Baustellenbegehung...",
+            "paintDefect": "Lackfehler",
+            "exposedWiring": "Freiliegende Verkabelung"
+        },
+        "features": {
+            "title": "Beseitigen Sie Nacharbeit & Streitigkeiten",
+            "description": "Die größten Kosten im Bauwesen sind nicht Materialien – es ist die Nachbesserung. Verhindern Sie, dass Probleme durchs Raster fallen.",
+            "item1": {
+                "title": "'Walk & Talk' Berichterstattung",
+                "desc": "Halten Sie nicht an, um zu tippen. Erzählen Sie Ihre Beobachtungen, während Sie die Baustelle filmen. Unsere multimodale KI transkribiert Ihre Stimme, erfasst den Frame und erstellt das Ticket sofort."
+            },
+            "item2": {
+                "title": "Verantwortlichkeit der Subunternehmer",
+                "desc": "Jeder Defekt ist geolokalisiert und mit einem Zeitstempel versehen. Senden Sie automatisierte PDF-Berichte an bestimmte Gewerke mit Fotobeweis, um 'Ich war das nicht'-Streitigkeiten zu beseitigen."
+            }
+        },
+        "workflows": {
+            "title": "Unterstützte Workflows",
+            "punchLists": {
+                "title": "Mängellisten",
+                "desc": "Null-Fehler-Übergaben"
+            },
+            "dailyLogs": {
+                "title": "Tagesprotokolle",
+                "desc": "Baustellenfortschrittsverfolgung"
+            },
+            "safetyAudits": {
+                "title": "Sicherheitsaudits",
+                "desc": "OSHA-Konformität"
+            },
+            "rfi": {
+                "title": "RFI-Erstellung",
+                "desc": "Feld-zu-Büro-Abfragen"
+            }
+        }
+    },
+    "visualFormBuilderPage": {
+        "hero": {
+            "badge": "Visual Editor",
+            "title": {
+                "noCode": "No-Code",
+                "highlight": "Form Builder"
+            },
+            "description": "Tired of waiting for developers to update a single field? With Space Capture, you are the engineer. Drag and drop complex logic, customize branding, and deploy smart forms to your field teams instantly—all without writing a line of code.",
+            "cta": "Request Demo"
+        },
+        "editor": {
+            "visualEditor": "Visual Editor",
+            "rateSafety": "Rate site safety compliance:",
+            "uploadPhoto": "Upload Site Photo",
+            "fieldProperties": {
+                "title": "Field Properties",
+                "autoGeotag": "Auto-Geotagging",
+                "requirePhoto": "Require Photo",
+                "validation": "Validation",
+                "mandatory": "Mandatory Field"
+            }
+        },
+        "templates": {
+            "operationalTemplates": "Operational Templates",
+            "badge": "Operational Templates",
+            "title": {
+                "line1": "Launch Faster with",
+                "highlight": "Pre-Built Workflows"
+            },
+            "description": "Don't start from scratch. Benefit from our library of 100+ industry-standard operational templates used by thousands of field teams.",
+            "dailyLog": "Daily Site Safety Log",
+            "dailyLogItem1": "Site condition check?",
+            "dailyLogItem2": "PPE verified for all crew?",
+            "list": {
+                "safety": "Safety Audits & Risk Assessments",
+                "maintenance": "Equipment Maintenance Logs",
+                "quality": "Quality Control Checklists",
+                "daily": "Daily Progress Reports"
+            },
+            "quote": "Once you've created templates for your team, save them and share for consistent future use across all project sites."
+        }
+    },
+    "aiDetectionPage": {
+        "hero": {
+            "badge": "AI Vision",
+            "title": {
+                "line1": "Upload for",
+                "highlight": "AI Detection"
+            },
+            "description": "Empower every field worker with an AI expert in their pocket. Simply capture a photo, and our engine instantly identifies defects, grades severity, and uploads structured data to the cloud.",
+            "cta": "Try AI Capture"
+        },
+        "analysis": {
+            "status": "Analysis Complete",
+            "title": "AI Scan Results",
+            "item1": {
+                "name": "Structural Crack",
+                "desc": "Found in upper sector. Requires immediate attention.",
+                "severity": "High Severity"
+            },
+            "item2": {
+                "name": "Surface Corrosion",
+                "desc": "Oxidation detected on metal fasteners.",
+                "severity": "Medium Severity"
+            },
+            "item3": {
+                "name": "Missing Fastener",
+                "severity": "Low Severity"
+            },
+            "syncing": "SYNCING DATA TO CLOUD..."
+        },
+        "reporting": {
+            "badge": "Instant Reporting",
+            "title": {
+                "line1": "No Manual Entry.",
+                "highlight": "Just Results."
+            },
+            "description": "The AI handles the tedious part. Your images are converted into detailed, searchable reports with timestamps, location data, and technical classifications in seconds.",
+            "assetType": "Asset Type",
+            "confidence": "Confidence",
+            "defectFound": "Defect Found",
+            "synced": "Synced to cloud 2s ago",
+            "list": {
+                "item1": "Metadata Extraction (Time, GPS, Device)",
+                "item2": "Auto-Categorization of Defects",
+                "item3": "Instant Sync to Web Dashboard"
+            }
+        }
+    },
+    "engagementFlowsPage": {
+        "hero": {
+            "badge": "Automation",
+            "title": {
+                "line1": "Visual",
+                "highlight": "Engagement Flows"
+            },
+            "description": "Design complex field logic without writing code. Use our drag-and-drop canvas to route tasks, trigger notifications, and update records based on real-time data inputs.",
+            "cta": "Build a Flow"
+        },
+        "flowchart": {
+            "workflow": "Workflow: Safety Incident",
+            "active": "ACTIVE",
+            "nodes": {
+                "trigger": "Form Submitted",
+                "type": "Type: Inspection Report",
+                "condition": "Check Severity",
+                "conditionDesc": "If Risk Level > High",
+                "action1": "Alert Manager",
+                "action2": "Auto-Approve"
+            }
+        },
+        "triggers": {
+            "badge": "Smart Triggers",
+            "title": {
+                "line1": "If This,",
+                "highlight": "Then That."
+            },
+            "description": "Automate the boring stuff. Set up rules that work while you sleep. Automatically flag high-risk inspections, dispatch follow-up crews, or generate PDF reports instantly upon submission.",
+            "rule1": "Automation Rule #1",
+            "when": "WHEN",
+            "whenDesc": "Inspection is Overdue by 2 Days",
+            "then": "THEN DO THIS",
+            "thenAction1": "Send SMS to Assignee",
+            "thenAction2": "Update Priority to 'High'",
+            "list": {
+                "item1": "Time-Based Triggers (e.g., Monthly)",
+                "item2": "Condition-Based Actions (e.g., If Failed)",
+                "item3": "Cross-Platform Notifications"
+            }
+        }
+    },
+    "accessControlPage": {
+        "hero": {
+            "badge": "Security First",
+            "title": {
+                "line1": "Enterprise-Grade",
+                "highlight": "Access Control"
+            },
+            "description": "Define exactly who can see, edit, or delete data. Create custom roles like \"Field Inspector,\" \"Project Manager,\" or \" auditor\" to ensure data integrity and compliance across your organization.",
+            "cta": "Secure Your Data"
+        },
+        "rbac": {
+            "header": "Team Members",
+            "invite": "+ Invite Member",
+            "roles": {
+                "admin": "Admin",
+                "fieldUser": "Field User",
+                "viewer": "Client Viewer"
+            },
+            "permissions": {
+                "title": "Permissions: Field User",
+                "submit": "Submit Forms",
+                "view": "View Own Data",
+                "delete": "Delete Records"
+            }
+        },
+        "assignment": {
+            "badge": "Task Assignment",
+            "title": {
+                "line1": "Right Person,",
+                "highlight": "Right Place."
+            },
+            "description": "Assign inspections and forms to specific users or teams. Ensure sensitive project data is only accessible to authorized personnel, and revoke access automatically when a job is done.",
+            "card": {
+                "title": "Assign Inspection",
+                "assignTo": "ASSIGN TO",
+                "restrictTo": "RESTRICT ACCESS TO",
+                "expiration": "ACCESS EXPIRATION",
+                "user": "Sarah Smith (Field Team)",
+                "location": "Site Alpha - Sector 4",
+                "options": {
+                    "24h": "24 Hours",
+                    "1w": "1 Week",
+                    "perm": "Permanent"
+                },
+                "button": "Grant Access",
+                "toast": "Task assigned securely to Sarah"
+            },
+            "list": {
+                "item1": "Direct User-to-Task Assignment",
+                "item2": "Location-Based Geofencing Access",
+                "item3": "Temporary / Guest Access Links"
+            }
+        }
+    },
+    "reportPage": {
+        "hero": {
+            "badge": "Deep Insights",
+            "title": {
+                "line1": "Turn Field Data into",
+                "highlight": "Business Intelligence"
+            },
+            "description": "Don't let your data collect dust. Visualize project health, track team performance, and spot safety trends instantly with our interactive dashboards.",
+            "cta": "View Sample Reports"
+        },
+        "dashboard": {
+            "title": "Project Overview",
+            "updated": "Last updated: Just now",
+            "totalInspections": "Total Inspections",
+            "openIssues": "Open Issues",
+            "compliance": "Compliance",
+            "weeklyActivity": "Weekly Activity",
+            "issuesByType": "Issues by Type",
+            "total": "Total",
+            "safety": "Safety",
+            "quality": "Quality"
+        },
+        "export": {
+            "card": {
+                "title": "Export Report",
+                "desc": "Configure your download settings",
+                "format": "File Format",
+                "pdf": "PDF Document",
+                "excel": "Excel / CSV",
+                "includeData": "Include Data",
+                "photos": "Site Photos & Annotations",
+                "gps": "GPS Location Maps",
+                "button": "Generate & Download"
+            },
+            "badge": "Custom Exports",
+            "title": {
+                "line1": "Professional Reports,",
+                "highlight": "Ready in Seconds."
+            },
+            "description": "Forget spending hours formatting spreadsheets. Space Capture automatically compiles your field data into professional, branded PDF reports or raw Excel exports.",
+            "list": {
+                "item1": "Schedule Automated Email Delivery",
+                "item2": "White-Label with Your Company Logo",
+                "item3": "Filter by Date, User, or Project",
+                "item4": "One-Click Audit Logs"
+            }
+        }
+    },
+    "integrationPage": {
+        "webhooks": {
+            "badge": "Developer Tools",
+            "title": {
+                "line1": "Powerful",
+                "highlight": "Webhooks"
+            },
+            "description": "We've worked hard to flatten our data structure and provide the most robust webhooks in the industry. Instantly push field data to your CRM, Slack, or custom internal tools the moment a form is submitted.",
+            "cta": "Read Documentation",
+            "mockup": {
+                "trigger": "Trigger",
+                "newInspection": "New Inspection Submitted",
+                "status": "Active",
+                "json": "JSON",
+                "destination": "Destination: CRM",
+                "statusLabel": "Status",
+                "priority": "High Priority",
+                "customer": "Customer",
+                "action": "Action",
+                "createTicket": "Create Ticket"
+            }
+        },
+        "agents": {
+            "badge": "AI Integration",
+            "title": {
+                "line1": "Connect with",
+                "highlight": "Autonomous Agents"
+            },
+            "description": "Go beyond simple data piping. Integrate Space Capture with AI Agents to analyze field data in real-time and trigger complex, multi-step workflows across your entire software stack automatically.",
+            "mockup": {
+                "listening": "AGENT LISTENING",
+                "message1": "I detected a critical safety failure in the latest inspection report.",
+                "error": "Error: Guard rail missing on Level 4",
+                "message2": "Executing automated response protocols:",
+                "action1": "Notified Site Manager via SMS",
+                "action2": "Created High-Priority Maintenance Ticket",
+                "action3": "Scheduled Re-inspection for tomorrow"
+            },
+            "list": {
+                "item1": "Natural Language Querying of Field Data",
+                "item2": "Automated Risk Assessment & Triage",
+                "item3": "Seamless Handover to Slack/Teams Bots"
+            }
+        }
+    },
+    "hostingPage": {
+        "hero": {
+            "badge": "Deployment",
+            "title": {
+                "line1": "Flexible Hosting",
+                "highlight": "Your Way"
+            },
+            "description": "Space Capture offers the most flexible hosting options in the market. Whether you need the speed of our global SaaS cloud, the isolation of a private instance, or total control via on-premise deployment—we've got you covered.",
+            "cta": "Request Hosting Demo"
+        },
+        "mockup": {
+            "core": "Space Capture Core",
+            "environment": "Deployment Environment",
+            "saas": "SaaS Cloud",
+            "saasDesc": "Instant scaling, zero maintenance.",
+            "private": "Private Cloud",
+            "privateDesc": "Dedicated VPC, isolated resources.",
+            "onPremise": "On-Premise",
+            "onPremiseDesc": "Air-gapped, self-hosted control.",
+            "security": "Enterprise Grade",
+            "securityDesc": "SOC 2 Type II Compliant & ISO 27001 Certified Data Centers.",
+            "residency": "Data Residency",
+            "residencyDesc": "Host data in US, EU, AU, or your own local servers."
+        },
+        "comparison": {
+            "title": "Choose Your Deployment Model",
+            "subtitle": "Match your infrastructure to your security and compliance needs.",
+            "saas": {
+                "title": "Cloud SaaS",
+                "desc": "Best for teams who want to get started instantly.",
+                "list": {
+                    "item1": "Multi-tenant Architecture",
+                    "item2": "Automatic Updates",
+                    "item3": "99.9% Uptime SLA",
+                    "item4": "Global CDN"
+                }
+            },
+            "private": {
+                "title": "Private Cloud",
+                "desc": "For organizations needing isolated resources.",
+                "list": {
+                    "item1": "Single-tenant Environment",
+                    "item2": "Custom Domain & SSO",
+                    "item3": "Dedicated Database",
+                    "item4": "VPC Peering"
+                }
+            },
+            "onPremise": {
+                "title": "On-Premise",
+                "desc": "Complete control for high-compliance sectors.",
+                "list": {
+                    "item1": "Self-Hosted (Docker/K8s)",
+                    "item2": "Full Data Sovereignty",
+                    "item3": "Air-Gapped Capable",
+                    "item4": "Custom Audit Logs"
+                }
+            }
+        }
+    }
+}

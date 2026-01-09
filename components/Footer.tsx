@@ -5,11 +5,12 @@ import Link from 'next/link';
 import { Instagram, Linkedin, Twitter, Youtube, Github, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslation } from '@/hooks/useTranslation';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Footer() {
   const { t } = useTranslation();
   return (
-    <footer className="relative overflow-hidden bg-slate-950 pt-20 pb-10 border-t border-slate-800">
+    <footer className="relative bg-slate-950 pt-20 pb-10 border-t border-slate-800">
 
       {/* Background Glow */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(99,102,241,0.15),transparent_40%)]"></div>
@@ -101,7 +102,13 @@ export default function Footer() {
             </p>
           </div>
 
-
+          <div className="flex items-center gap-6">
+            <div className="scale-90 origin-right">
+              <div className="bg-slate-900 rounded-lg p-1 border border-slate-800">
+                <LanguageSwitcher direction="up" />
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>

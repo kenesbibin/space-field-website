@@ -322,5 +322,50 @@
         },
         "link": "கட்டுமான டெமோவைக் காண்க",
         "imageAlt": "Space Field உடன் கட்டுமான தள மேலாண்மை"
+    },
+    "constructionPage": {
+        "hero": {
+            "badge": "Construction & Engineering",
+            "title": "Automated",
+            "titleHighlight": "Punch Lists.",
+            "description": "Stop tapping at your screen. Just walk the site with your camera. SpaceCapture automatically identifies defects, assigns subcontractors, and creates the punch list for you.",
+            "cta": "See It In Action",
+            "imageAlt": "Video-to-List Engine",
+            "visualTitle": "Video-to-List Engine",
+            "visualStatus": "Processing Site Walk...",
+            "paintDefect": "Paint Defect",
+            "exposedWiring": "Exposed Wiring"
+        },
+        "features": {
+            "title": "Eliminate Rework & Disputes",
+            "description": "The biggest cost in construction isn't materials—it's fix-work. Stop issues from slipping through the cracks.",
+            "item1": {
+                "title": "Walk & Talk Reporting",
+                "desc": "Don't stop to type. Narrate your observations as you video the site. Our multimodal AI transcribes your voice, grabs the frame, and creates the ticket instantly."
+            },
+            "item2": {
+                "title": "Subcontractor Accountability",
+                "desc": "Every defect is geolocated and timestamped. Send automated PDF reports to specific trades with photo proof, eliminating \"it wasn't me\" disputes."
+            }
+        },
+        "workflows": {
+            "title": "Supported Workflows",
+            "punchLists": {
+                "title": "Punch Lists",
+                "desc": "Zero-defect handovers"
+            },
+            "dailyLogs": {
+                "title": "Daily Logs",
+                "desc": "Site progress tracking"
+            },
+            "safetyAudits": {
+                "title": "Safety Audits",
+                "desc": "OSHA compliance"
+            },
+            "rfi": {
+                "title": "RFI Creation",
+                "desc": "Field-to-office queries"
+            }
+        }
     }
 }

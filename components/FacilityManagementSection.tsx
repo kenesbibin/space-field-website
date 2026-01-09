@@ -4,26 +4,29 @@ import React from 'react';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
 import { Building2, ClipboardList, Wrench, ArrowRight } from 'lucide-react';
-
-const FACILITY_FEATURES = [
-  {
-    title: "Work Order Management",
-    icon: ClipboardList,
-    description: "Streamline tenant requests and internal repairs. Assign tasks to maintenance staff instantly and track resolution times to ensure service level agreements (SLAs) are met."
-  },
-  {
-    title: "Preventive Maintenance",
-    icon: Wrench,
-    description: "Schedule recurring inspections for HVAC, elevators, and fire safety systems. Auto-generate checklists to ensure compliance and extend asset lifecycles."
-  },
-  {
-    title: "Space & Asset Tracking",
-    icon: Building2,
-    description: "Gain visibility into asset location and condition across your portfolio. Monitor occupancy levels and optimize space utilization data for smarter planning."
-  }
-];
+import { useLanguage } from '@/context/LanguageContext';
 
 const FacilityManagementSection = () => {
+  const { t } = useLanguage();
+
+  const FACILITY_FEATURES = [
+    {
+      title: t('facility.features.workOrder.title'),
+      icon: ClipboardList,
+      description: t('facility.features.workOrder.desc')
+    },
+    {
+      title: t('facility.features.preventive.title'),
+      icon: Wrench,
+      description: t('facility.features.preventive.desc')
+    },
+    {
+      title: t('facility.features.assetTracking.title'),
+      icon: Building2,
+      description: t('facility.features.assetTracking.desc')
+    }
+  ];
+
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -34,21 +37,21 @@ const FacilityManagementSection = () => {
 
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.6, ease: "easeOut" } 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   };
 
   return (
     <section className="relative py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-cyan-50 to-blue-100 overflow-hidden">
-      
+
       {/* Background: Architectural Pattern */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]">
         <svg width="100%" height="100%">
           <pattern id="building-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 0 40 L 40 40 L 40 0" fill="none" stroke="currentColor" strokeWidth="1" className="text-slate-900"/>
+            <path d="M 0 40 L 40 40 L 40 0" fill="none" stroke="currentColor" strokeWidth="1" className="text-slate-900" />
           </pattern>
           <rect width="100%" height="100%" fill="url(#building-grid)" />
         </svg>
@@ -56,9 +59,9 @@ const FacilityManagementSection = () => {
 
       <div className="container mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          
+
           {/* LEFT SIDE: Content & Cards */}
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -68,26 +71,26 @@ const FacilityManagementSection = () => {
             <div>
               {/* Header / Eyebrow Text */}
               <motion.div variants={itemVariants} className="flex items-center gap-2 mb-4">
-                 <div className="h-1 w-12 bg-cyan-500 rounded-full"></div>
-                 <span className="text-sm font-bold text-cyan-700 uppercase tracking-wider">Facility Management</span>
+                <div className="h-1 w-12 bg-cyan-500 rounded-full"></div>
+                <span className="text-sm font-bold text-cyan-700 uppercase tracking-wider">{t('facility.badge')}</span>
               </motion.div>
-              
+
               <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
-                Smarter Buildings, <br/>
+                {t('facility.title.line1')}<br />
                 <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
-                  Superior Operations
+                  {t('facility.title.highlight')}
                 </span>
               </motion.h1>
-              
+
               <motion.p variants={itemVariants} className="mt-6 text-lg text-slate-600 leading-relaxed max-w-xl">
-                Space Field unifies facility operations into one intuitive platform. Empower your teams to manage maintenance, assets, and tenant satisfaction from anywhere in the building.
+                {t('facility.description')}
               </motion.p>
             </div>
 
             {/* Feature Cards */}
             <div className="space-y-4">
               {FACILITY_FEATURES.map((feature, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   variants={itemVariants}
                   className="group bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-x-[-8px]"
@@ -110,14 +113,14 @@ const FacilityManagementSection = () => {
             </div>
 
             <motion.div variants={itemVariants} className="pt-4">
-               <a href="/book-a-demo" className="inline-flex items-center gap-2 text-cyan-700 font-bold hover:gap-3 transition-all">
-                  See Facility Demo <ArrowRight className="w-5 h-5" />
-               </a>
+              <a href="/book-a-demo" className="inline-flex items-center gap-2 text-cyan-700 font-bold hover:gap-3 transition-all">
+                {t('facility.link')} <ArrowRight className="w-5 h-5" />
+              </a>
             </motion.div>
           </motion.div>
 
           {/* RIGHT SIDE: Landscape Image */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -126,18 +129,18 @@ const FacilityManagementSection = () => {
           >
             {/* Landscape Container (aspect-video) */}
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white bg-slate-100">
-               <div className="aspect-video relative">
-                 <Image
-                   src="/images/facility.jpg" // Ensure this image exists
-                   alt="Modern Facility Management Operations"
-                   fill
-                   className="object-cover hover:scale-105 transition-transform duration-700"
-                   priority
-                 />
-                 
-                 {/* Gradient Overlay */}
-                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
-               </div>
+              <div className="aspect-video relative">
+                <Image
+                  src="/images/facility.jpg" // Ensure this image exists
+                  alt={t('facility.imageAlt')}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-700"
+                  priority
+                />
+
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+              </div>
             </div>
 
             {/* Decorative Background Elements */}

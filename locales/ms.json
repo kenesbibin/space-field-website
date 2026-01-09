@@ -1,0 +1,907 @@
+{
+    "common": {
+        "appName": "SPACE CAPTURE",
+        "tryForFree": "Cuba Secara Percuma",
+        "requestDemo": "Minta Demo",
+        "signIn": "Log Masuk",
+        "email": "E-mel",
+        "usa": "USA",
+        "singapore": "Singapura",
+        "getInTouch": "Hubungi Kami",
+        "copyEmail": "Salin alamat e-mel kami di bawah untuk menghantar mesej terus kepada kami.",
+        "copied": "Disalin ke papan keratan!",
+        "clickToCopy": "Klik ikon untuk menyalin"
+    },
+    "navbar": {
+        "home": "Laman Utama",
+        "products": "Produk",
+        "industries": "Industri"
+    },
+    "hero": {
+        "titlePrefix": "Kuasai Operasi Padang Anda Dengan",
+        "titleHighlight": "Ketepatan Mutlak",
+        "description": "Hapuskan kekacauan di tapak. SPACE CAPTURE menyediakan pusat arahan mudah alih terbaik untuk pasukan pembinaan, penyelenggaraan, dan pemeriksaan untuk menjejaki kemajuan dalam masa nyata.",
+        "startFreeTrial": "Mula Percubaan Percuma",
+        "scheduleDemo": "Jadualkan Demo",
+        "siteInspection": "Pemeriksaan Tapak",
+        "completedJustNow": "Selesai • Baru tadi"
+    },
+    "showcase": {
+        "slide1": {
+            "title": "Hab Operasi Padang",
+            "location": "Tapak Pembinaan A",
+            "description": "Pemantauan Masa Nyata"
+        },
+        "slide2": {
+            "title": "Penjejakan Aset",
+            "location": "Pusat Logistik",
+            "description": "Kunci GPS Ketepatan"
+        },
+        "slide3": {
+            "title": "Pematuhan Keselamatan",
+            "location": "Zon Pemeriksaan",
+            "description": "100% Pematuhan Protokol"
+        },
+        "static": {
+            "highlight": "Hapuskan Titik Buta.",
+            "title": "Jangan biarkan jarak menjadi penghalang kepada kemajuan.",
+            "description": "Pengurusan ladang tradisional bergantung pada tekaan dan laporan lapuk. SPACE CAPTURE merapatkan jurang antara realiti di tapak dan membuat keputusan pejabat dengan ketepatan gred tentera.",
+            "button": "Terokai Penyelesaian"
+        }
+    },
+    "guide": {
+        "badge": "Kawalan Aliran Kerja Total",
+        "headline": {
+            "prefix": "Orkestrakan Projek Padang Anda Dengan",
+            "highlight": "Kecekapan"
+        },
+        "description": {
+            "part1": "SPACE CAPTURE bukan hanya tentang mengetahui di mana anda berada—ia tentang mengetahui",
+            "bold": "di mana projek anda berdiri.",
+            "part2": "Gantikan jejak kertas yang huru-hara dengan ketepatan digital. Tetapkan tugasan, log pemeriksaan, dan visualkan kemajuan dalam satu ekosistem bersatu."
+        },
+        "feature1": {
+            "title": "Pengurusan Tugasan Digital",
+            "desc": "Tetapkan tugas serta-merta dan jejak status penyelesaian tanpa kertas kerja."
+        },
+        "feature2": {
+            "title": "Analitik Tapak Masa Nyata",
+            "desc": "Dapatkan pandangan langsung tentang produktiviti tenaga kerja dan pencapaian projek."
+        },
+        "feature3": {
+            "title": "Pematuhan Automatik",
+            "desc": "Pastikan setiap protokol keselamatan diperiksa, dilog, dan disegerakkan ke awan."
+        },
+        "image": {
+            "status": "Sistem Dalam Talian",
+            "synced": "Data Disegerakkan"
+        }
+    },
+    "features": {
+        "mockup": {
+            "fieldOps": "Ops Padang",
+            "siteCompletion": "Penyiapan Tapak",
+            "activeTasks": "Tugasan Aktif",
+            "newCount": "4 Baru",
+            "syncButton": "Segerakkan Data"
+        },
+        "header": {
+            "badge": "Keupayaan",
+            "title": "Ciri Kami",
+            "description": "Kami menggabungkan teknologi berkuasa dengan kebolehgunaan mudah untuk membantu anda menguasai setiap aspek operasi padang anda."
+        },
+        "items": {
+            "ecosystem": {
+                "title": "Ekosistem Web & Mudah Alih Bersatu",
+                "desc": "Beralih dengan lancar antara Papan Pemuka Web yang berkuasa untuk pengurusan pejabat dan Aplikasi Mudah Alih yang teguh untuk pelaksanaan di tapak. Satu platform, kawalan penuh."
+            },
+            "signatures": {
+                "title": "Tandatangan Digital Segera",
+                "desc": "Hapuskan jejak kertas. Tangkap kelulusan pelanggan dan tandatangan teknikal dengan selamat terus pada peranti untuk mengesahkan kerja dan menutup kerja dengan lebih cepat."
+            },
+            "sync": {
+                "title": "Penyegerakan Padang Langsung",
+                "desc": "Hapuskan jurang komunikasi. Kemas kini yang dibuat di padang dapat dilihat serta-merta di pejabat, memastikan pengurus projek sentiasa mempunyai data tapak masa nyata."
+            },
+            "compliance": {
+                "title": "Keselamatan & Pematuhan Automatik",
+                "desc": "Digitalkan protokol keselamatan anda. Kuatkuasakan senarai semak mandatori, pelaporan insiden, dan tandatangan digital untuk memastikan tapak anda memenuhi semua piawaian industri."
+            }
+        }
+    },
+    "aiApi": {
+        "section1": {
+            "badge": "Untuk Pembangun",
+            "title": {
+                "prefix": "API Pengesanan",
+                "highlight": "AI"
+            },
+            "description": "Gunakan pengesanan kecacatan gred industri ke dalam aplikasi anda sendiri dengan panggilan API yang mudah. Muat naik sebarang imej, dan enjin kami serta-merta mengembalikan muatan JSON berstruktur yang mengenal pasti kecacatan, keterukan, dan koordinat tepat.",
+            "button": "Cuba Secara Percuma",
+            "gifOverlay": "Pengesanan AI dalam Tindakan"
+        },
+        "card": {
+            "status": "Analisis Berjaya",
+            "detectedObjects": "Objek Dikesan",
+            "confidence": "Keyakinan:",
+            "box": "Kotak:",
+            "actionLabel": "Tindakan:",
+            "item1": {
+                "name": "Retak Struktur",
+                "severity": "KETERUKAN TINGGI",
+                "action": "Pembaikan segera diperlukan."
+            },
+            "item2": {
+                "name": "Kakisan Permukaan",
+                "severity": "SEDERHANA"
+            }
+        },
+        "section2": {
+            "badge": "Mesra Pembangun",
+            "title": {
+                "line1": "Keputusan Boleh Dihurai.",
+                "highlight": "Integrasi Lancar."
+            },
+            "description": "Terima keputusan dalam format JSON yang bersih dan boleh diramal. Output berstruktur ini sedia untuk digunakan oleh sistem pelaporan dalaman, pangkalan data, atau alat automasi aliran kerja anda.",
+            "list": {
+                "item1": "Titik Akhir API REST Standard",
+                "item2": "Model Pengesanan Boleh Disesuaikan",
+                "item3": "Masa Operasi Tinggi & Latensi Rendah"
+            }
+        }
+    },
+    "cta": {
+        "title": {
+            "prefix": "Ambil Kawalan Ke Atas",
+            "highlight": "SPACE CAPTURE",
+            "suffix": "Hari Ini."
+        },
+        "description": "Berhenti mengejar jejak kertas. Segerakkan pasukan pejabat dan padang anda serta-merta dengan platform menyeluruh yang dibina untuk pembinaan dan operasi.",
+        "buttons": {
+            "tryFree": "Cuba Secara Percuma",
+            "bookDemo": "Tempah Demo"
+        },
+        "footerText": "Tersedia di iOS, Android, dan Web"
+    },
+    "demoRequest": {
+        "badge": "MINTA DEMO",
+        "title": {
+            "prefix": "Transformasikan Operasi Padang Anda dengan ",
+            "highlight": "SPACE CAPTURE"
+        },
+        "description": "Sertai ribuan profesional yang telah berjaya menguruskan operasi padang mereka. Alami bimbingan pakar, pengurusan tugas yang diperkemas, dan sokongan komprehensif untuk keperluan mudah alih anda.",
+        "features": {
+            "item1": {
+                "title": "Bimbingan Padang Pakar",
+                "desc": "Perunding operasi padang bertauliah dengan pengalaman berdekad dalam pengurusan tugas dan pematuhan."
+            },
+            "item2": {
+                "title": "Penjejakan Masa Nyata",
+                "desc": "Operasi dipercepat dan penjejakan keutamaan untuk keperluan padang yang mendesak."
+            },
+            "item3": {
+                "title": "Penyelesaian Komprehensif",
+                "desc": "Sokongan hujung ke hujung untuk pembinaan, penyelenggaraan, pemeriksaan, dan pelaporan kemajuan."
+            }
+        },
+        "success": {
+            "title": "Permintaan Diterima!",
+            "message": "Pasukan kami akan menghubungi anda dalam masa 24 jam untuk menjadualkan demo peribadi anda."
+        },
+        "form": {
+            "title": "Jadualkan Demo Peribadi Anda",
+            "description": "Lihat SPACE CAPTURE dalam tindakan. Mari bincangkan keperluan operasi padang unik anda.",
+            "labels": {
+                "firstName": "Nama Depan *",
+                "lastName": "Nama Belakang *",
+                "email": "Alamat E-mel *",
+                "phone": "Nombor Telefon *",
+                "company": "Nama Syarikat *",
+                "companySize": "Saiz Syarikat",
+                "projectDetails": "Butiran Projek"
+            },
+            "placeholders": {
+                "firstName": "Ali",
+                "lastName": "Bin Abu",
+                "email": "ali.abu@syarikat.com",
+                "phone": "+60 12 345 6789",
+                "company": "Syarikat Anda",
+                "selectSize": "Pilih saiz",
+                "projectDetails": "Beritahu kami tentang keperluan anda..."
+            },
+            "errors": {
+                "firstName": "Nama depan diperlukan.",
+                "lastName": "Nama belakang diperlukan.",
+                "emailRequired": "E-mel diperlukan.",
+                "emailInvalid": "E-mel tidak sah.",
+                "company": "Nama syarikat diperlukan.",
+                "phone": "Nombor telefon diperlukan."
+            },
+            "button": {
+                "submit": "Minta Demo",
+                "submitting": "Sedang dihantar..."
+            },
+            "footer": "Dengan menyerahkan borang ini, anda bersetuju dengan Syarat Perkhidmatan dan Dasar Privasi kami.",
+            "options": {
+                "employees": "pekerja"
+            }
+        }
+    },
+    "footer": {
+        "brandDescription": "Pusat arahan mudah alih terbaik untuk operasi padang. Perkemas tugas, automasikan pelaporan, dan segerakkan tenaga kerja anda dalam masa nyata dengan alat berkuasa AI.",
+        "coreFeatures": "Ciri Teras",
+        "visualFormBuilder": "Pembina Borang Visual",
+        "aiDetection": "Analisis Pengesanan AI",
+        "engagementFlows": "Aliran Penglibatan",
+        "accessControl": "Kawalan Akses",
+        "deepInsights": "Wawasan Mendalam",
+        "industries": "Industri",
+        "construction": "Senarai Kerja Pembinaan",
+        "telecommunication": "Telekomunikasi",
+        "manufacturing": "Pembuatan",
+        "oilGas": "Pemeriksaan Minyak & Gas",
+        "utilities": "Utiliti",
+        "hvac": "HVAC & Paip",
+        "logistics": "Logistik",
+        "facilityManagement": "Pengurusan Fasiliti",
+        "company": "Syarikat",
+        "aboutUs": "Tentang Kami",
+        "bookDemo": "Tempah Demo",
+        "resources": "Sumber",
+        "manifesto": "Manifesto: Akhir Kertas Digital",
+        "tech": "Teknologi: Di Dalam Mata",
+        "trust": "Kepercayaan: Jaminan AI",
+        "caseStudy": "Kajian Kes: Penyelenggaraan Ramalan",
+        "guide": "Panduan: Autopilot ISO 9001",
+        "compare": "Bandingkan",
+        "vsSafetyCulture": "vs SafetyCulture",
+        "vsGoCanvas": "vs GoCanvas",
+        "tools": "Alat",
+        "switchingCalculator": "Kalkulator Pertukaran",
+        "copyright": "© 2025 SPACE CAPTURE. Hak cipta terpelihara.",
+        "address": "2500 MARCONI AVE, STE 101, SACRAMENTO, CA 95821"
+    },
+    "products": {
+        "features": "Ciri-ciri",
+        "forDevelopers": "Untuk Pembangun",
+        "coreFunctions": "Fungsi Teras",
+        "coreFunctionsDesc": "Alat penting untuk pengurusan operasi padang.",
+        "visualFormBuilder": "Pembina Borang Visual",
+        "visualFormBuilderDesc": "Buat borang tersuai tanpa kod.",
+        "aiDetection": "Analisis Pengesanan AI",
+        "aiDetectionDesc": "Urus ahli pasukan dan kebenaran.",
+        "engagementFlows": "Aliran Penglibatan",
+        "engagementFlowsDesc": "Automasikan aliran kerja dan proses.",
+        "accessControl": "Kawalan Akses",
+        "accessControlDesc": "Lindungi data dengan akses berasaskan peranan.",
+        "deepInsights": "Wawasan Mendalam",
+        "deepInsightsDesc": "Papan pemuka analitik dan pelaporan.",
+        "integrations": "Integrasi",
+        "integrationsDesc": "Sambung dengan alat dan sistem sedia ada anda.",
+        "flexibleHosting": "Pengehosan Fleksibel",
+        "flexibleHostingDesc": "Gunakan di premis atau di awan."
+    },
+    "industries": {
+        "construction": "Pembinaan",
+        "constructionDesc": "Urus tapak dan kru dengan cekap.",
+        "utilities": "Utiliti & Tenaga",
+        "utilitiesDesc": "Penyelenggaraan grid dan pemeriksaan.",
+        "telecom": "Telekomunikasi",
+        "telecomDesc": "Perkhidmatan padang untuk infra rangkaian.",
+        "hvac": "HVAC & Paip",
+        "hvacDesc": "Penghantaran dan penjejakan pembaikan.",
+        "manufacturing": "Pembuatan",
+        "manufacturingDesc": "Log penyelenggaraan peralatan.",
+        "logistics": "Logistik",
+        "logisticsDesc": "Operasi armada dan penghantaran.",
+        "oilGas": "Minyak & Gas",
+        "oilGasDesc": "Pematuhan keselamatan dan pemeriksaan.",
+        "facilityManagement": "Pengurusan Fasiliti",
+        "facilityManagementDesc": "Penyelenggaraan bangunan dan perkhidmatan."
+    },
+    "constructionSection": {
+        "badge": "Industri Pembinaan",
+        "title": {
+            "line1": "Bina Lebih Pintar dengan ",
+            "highlight": "Ketepatan Digital"
+        },
+        "description": "Space Field merapatkan jurang antara tapak pembinaan dan bilik lembaga. Hapuskan kertas kerja, kurangkan kerja semula, dan serahkan projek tepat pada masanya dengan modul pembinaan khusus kami.",
+        "features": {
+            "item1": {
+                "title": "Kemajuan Tapak Masa Nyata",
+                "desc": "Jejak log harian, jam buruh, dan penggunaan bahan serta-merta. Pastikan pihak berkepentingan sejajar dengan kemas kini langsung dari tanah."
+            },
+            "item2": {
+                "title": "Pemeriksaan QC & Keselamatan Digital",
+                "desc": "Digitalkan senarai kerja dan audit keselamatan anda. Tangkap foto, catat isu, dan tetapkan pembaikan terus kepada subkontraktor."
+            },
+            "item3": {
+                "title": "Pengurusan Armada & Aset",
+                "desc": "Pantau penggunaan dan lokasi peralatan berat. Cegah kecurian dan optimumkan jadual penggunaan untuk mengurangkan masa henti."
+            }
+        },
+        "link": "Lihat Demo Pembinaan",
+        "imageAlt": "Pengurusan Tapak Pembinaan dengan Space Field"
+    },
+    "hvacSection": {
+        "badge": "HVAC & Paip",
+        "title": {
+            "line1": "Kuasai Aliran Kerja ",
+            "highlight": "Perkhidmatan Anda"
+        },
+        "description": "Space Field membantu perniagaan HVAC dan paip menghantar lebih cepat dan membaiki dengan lebih bijak. Urus kontrak penyelenggaraan berulang, jejak inventori alat ganti, dan inbois pelanggan terus dari tapak kerja.",
+        "features": {
+            "item1": {
+                "title": "Penghantaran Panggilan Perkhidmatan",
+                "desc": "Tetapkan kerja kepada juruteknik terdekat dengan kemahiran yang betul. Jejak status kerja dari 'Dalam Perjalanan' hingga 'Selesai' dalam masa nyata."
+            },
+            "item2": {
+                "title": "Sejarah Peralatan & Audit",
+                "desc": "Akses sejarah perkhidmatan terperinci untuk setiap unit HVAC. Imbas kod QR untuk mendapatkan semula manual, maklumat jaminan, dan log pembaikan lalu serta-merta."
+            },
+            "item3": {
+                "title": "Laporan Pemeriksaan Paip",
+                "desc": "Jana laporan pemeriksaan profesional di tapak. Tangkap gambar kebocoran atau isu paip dan dapatkan tandatangan pelanggan secara digital."
+            }
+        },
+        "link": "Lihat Demo HVAC",
+        "imageAlt": "Juruteknik HVAC dan Perkhidmatan Paip"
+    },
+    "coreFunctions": {
+        "badge": "Space Capture",
+        "title": {
+            "line1": "Gambaran Keseluruhan ",
+            "highlight": "Fungsi Teras"
+        },
+        "description": "Space Capture merangkumi semua alat data padang berkuasa yang anda perlukan pada skala perusahaan. Buat borang profesional dan pintar menggunakan senarai modul kami yang luas, logik pintar, dan pilihan penjenamaan yang mendalam.",
+        "cta": "Mula Sekarang",
+        "items": {
+            "visualFormBuilder": {
+                "title": "Pembina Borang Visual",
+                "desc": "Antara muka seret dan lepas untuk membuat borang pengumpulan data yang kompleks dalam beberapa minit. Tiada pengekodan diperlukan."
+            },
+            "aiDetection": {
+                "title": "Analisis Pengesanan AI",
+                "desc": "Analisis imej tinjauan secara automatik untuk mengesan kecacatan, mengklasifikasi aset, dan menjana laporan padang secara automatik."
+            },
+            "engagementFlows": {
+                "title": "Aliran Penglibatan",
+                "desc": "Reka aliran kerja automatik yang mencetuskan berdasarkan input pengguna, lokasi, atau peristiwa berasaskan masa."
+            },
+            "accessControl": {
+                "title": "Kawalan Akses",
+                "desc": "Tetapan kebenaran berbutir untuk memastikan ahli pasukan yang betul mengakses hanya apa yang mereka perlukan."
+            },
+            "deepInsights": {
+                "title": "Wawasan Mendalam",
+                "desc": "Tukar data padang mentah menjadi kecerdasan yang boleh diambil tindakan dengan analitik masa nyata dan laporan boleh eksport."
+            }
+        }
+    },
+    "logistics": {
+        "badge": "Logistik & Armada",
+        "title": {
+            "line1": "Pacu Kecekapan di ",
+            "highlight": "Setiap Pusingan"
+        },
+        "description": "Space Field mengubah operasi logistik dengan keterlihatan hujung ke hujung. Dari dok gudang ke pintu pelanggan, pastikan setiap batu dioptimumkan dan setiap penghantaran disahkan.",
+        "link": "Lihat Demo Logistik",
+        "imageAlt": "Pengurusan Armada Logistik dan Penghantaran",
+        "features": {
+            "fleetTracking": {
+                "title": "Penjejakan Armada & Telematik",
+                "desc": "Pantau lokasi kenderaan, penggunaan bahan api, dan tingkah laku pemandu dalam masa nyata. Kurangkan masa melahu dan optimumkan laluan untuk menjimatkan kos operasi."
+            },
+            "pod": {
+                "title": "Bukti Penghantaran (POD)",
+                "desc": "Tangkap tandatangan digital, foto, dan cap masa pada setiap penurunan. Kemas kini status pesanan secara automatik dan cetuskan pemberitahuan pelanggan."
+            },
+            "routeOptimization": {
+                "title": "Pengoptimuman Laluan Dinamik",
+                "desc": "Rancang urutan penghantaran yang paling cekap serta-merta. Laraskan laluan semasa dalam perjalanan berdasarkan trafik, cuaca, atau permintaan pengambilan segera."
+            }
+        }
+    },
+    "utilities": {
+        "badge": "Utiliti & Tenaga",
+        "title": {
+            "line1": "Perkasakan Grid dengan ",
+            "highlight": "Ops Padang Pintar"
+        },
+        "description": "Space Field memodenkan operasi utiliti. Dari penyelenggaraan talian rutin hingga tindak balas ribut kecemasan, pastikan infrastruktur anda kekal berdaya tahan dan tenaga kerja anda kekal selamat.",
+        "link": "Lihat Penyelesaian Utiliti",
+        "imageAlt": "Operasi Padang Utiliti dan Penyelenggaraan Grid",
+        "features": {
+            "gridMaintenance": {
+                "title": "Penyelenggaraan Grid & Pemeriksaan",
+                "desc": "Digitalkan pemeriksaan pencawang dan rondaan talian. Tangkap imejan haba dan bacaan peralatan terus di padang untuk mencegah kegagalan."
+            },
+            "smartMeter": {
+                "title": "Pelancaran Meter Pintar",
+                "desc": "Perkemas projek pelancaran untuk infrastruktur pintar. Jejak kemajuan pemasangan, sahkan ketersambungan, dan urus inventori dalam masa nyata."
+            },
+            "outageResponse": {
+                "title": "Tindak Balas Gangguan & Penghantaran",
+                "desc": "Selaraskan pasukan tindak balas ribut serta-merta. Visualkan gangguan pada peta langsung dan hantar kru yang layak terdekat untuk memulihkan kuasa dengan lebih cepat."
+            }
+        }
+    },
+    "oilGas": {
+        "badge": "Industri Minyak & Gas",
+        "title": {
+            "line1": "Menguasakan Tenaga dengan ",
+            "highlight": "Keselamatan & Kecekapan"
+        },
+        "description": "Space Field menyampaikan penyelesaian digital yang teguh untuk persekitaran yang menuntut dalam sektor tenaga. Perkemas pemeriksaan, pastikan keselamatan kru, dan kekalkan integriti aset dari padang ke bilik kawalan.",
+        "link": "Lihat Penyelesaian Tenaga",
+        "imageAlt": "Operasi Padang Minyak dan Gas dengan Space Field",
+        "features": {
+            "hse": {
+                "title": "HSE & Pematuhan Keselamatan",
+                "desc": "Kuatkuasakan protokol keselamatan yang ketat di pelantar dan kilang penapisan. Sistem permit kerja digital dan pelaporan bahaya memastikan pematuhan 100% dengan piawaian industri."
+            },
+            "assetIntegrity": {
+                "title": "Pengurusan Integriti Aset",
+                "desc": "Pantau kesihatan saluran paip dan status peralatan. Jadualkan penyelenggaraan ramalan untuk pam dan injap untuk mengelakkan kebocoran dan penutupan yang mahal."
+            },
+            "remoteOps": {
+                "title": "Operasi Padang Jauh",
+                "desc": "Kekalkan pasukan hulu dan hilir berhubung. Keupayaan luar talian membolehkan juruteknik di padang terpencil mencatatkan data tanpa gangguan."
+            }
+        }
+    },
+    "manufacturing": {
+        "badge": "Industri Pembuatan",
+        "title": {
+            "line1": "Optimumkan Operasi dengan ",
+            "highlight": "Aliran Kerja Pintar"
+        },
+        "description": "Space Field memperkemas logistik pembuatan dan penyelenggaraan. Perkasakan tenaga kerja anda dengan alat mudah alih untuk menjejaki aset, melaporkan bahaya, dan memastikan sasaran pengeluaran dipenuhi dengan selamat.",
+        "link": "Lihat Demo Pembuatan",
+        "imageAlt": "Operasi Kilang Pembuatan dengan Space Field",
+        "features": {
+            "maintenance": {
+                "title": "Penyelenggaraan Peralatan & Pembaikan",
+                "desc": "Beralih dari penyelenggaraan reaktif kepada pencegahan. Jadualkan pesanan kerja automatik untuk servis jentera bagi meminimumkan masa henti yang mahal."
+            },
+            "qualityControl": {
+                "title": "Kawalan Kualiti Barisan Pengeluaran",
+                "desc": "Digitalkan pemeriksaan KU di lantai kilang. Tangkap data kecacatan serta-merta dan jana laporan pematuhan untuk piawaian ISO."
+            },
+            "shopFloor": {
+                "title": "Keterlihatan Lantai Kedai Masa Nyata",
+                "desc": "Pantau status aliran kerja dan peruntukan buruh dalam masa nyata. Sambungkan penyelia lantai dengan pengurusan untuk membuat keputusan yang lebih cepat."
+            }
+        }
+    },
+    "telecom": {
+        "badge": "Telekomunikasi",
+        "title": {
+            "line1": "Sambungkan Dunia dengan ",
+            "highlight": "Operasi Lancar"
+        },
+        "description": "Space Field memperkasakan pengendali telekomunikasi untuk menguruskan rangkaian infrastruktur yang luas dengan mudah. Dari pendakian menara hingga penyambungan gentian, kekalkan pasukan padang anda disegerakkan dan rangkaian anda dalam talian.",
+        "link": "Lihat Demo Telekom",
+        "imageAlt": "Pengurusan Infrastruktur Telekomunikasi",
+        "features": {
+            "rollout": {
+                "title": "Pelancaran Rangkaian & Penyelenggaraan",
+                "desc": "Percepatkan penggunaan gentian dan 5G. Urus tinjauan tapak, penjejakan pemasangan, dan jadual penyelenggaraan pencegahan dalam masa nyata."
+            },
+            "audits": {
+                "title": "Audit Menara & Infrastruktur",
+                "desc": "Jalankan pemeriksaan struktur yang ketat. Tangkap bukti geotag keadaan menara dan automasikan pelaporan pematuhan."
+            },
+            "dispatch": {
+                "title": "Penghantaran Juruteknik Padang",
+                "desc": "Optimumkan perancangan laluan untuk pasukan yang tersebar. Kurangkan masa tindak balas untuk gangguan dan pastikan juruteknik yang betul tiba dengan bahagian yang betul."
+            }
+        }
+    },
+    "facility": {
+        "badge": "Pengurusan Fasiliti",
+        "title": {
+            "line1": "Bangunan Lebih Pintar, ",
+            "highlight": "Operasi Unggul"
+        },
+        "description": "Space Field menyatukan operasi fasiliti menjadi satu platform intuitif. Perkasakan pasukan anda untuk menguruskan penyelenggaraan, aset, dan kepuasan penyewa dari mana-mana sahaja di dalam bangunan.",
+        "link": "Lihat Demo Fasiliti",
+        "imageAlt": "Operasi Pengurusan Fasiliti Moden",
+        "features": {
+            "workOrder": {
+                "title": "Pengurusan Pesanan Kerja",
+                "desc": "Perkemas permintaan penyewa dan pembaikan dalaman. Tetapkan tugas serta-merta kepada kakitangan penyelenggaraan dan jejak masa penyelesaian untuk memastikan Perjanjian Tahap Perkhidmatan (SLA) dipenuhi."
+            },
+            "preventive": {
+                "title": "Penyelenggaraan Pencegahan",
+                "desc": "Jadualkan pemeriksaan berulang untuk HVAC, lif, dan sistem keselamatan kebakaran. Jana semula senarai semak secara automatik untuk memastikan pematuhan dan memanjangkan kitaran hayat aset."
+            },
+            "assetTracking": {
+                "title": "Penjejakan Ruang & Aset",
+                "desc": "Dapatkan keterlihatan ke dalam lokasi dan keadaan aset di seluruh portfolio anda. Pantau tahap penghunian dan optimumkan data penggunaan ruang untuk perancangan yang lebih bijak."
+            }
+        }
+    },
+    "constructionPage": {
+        "hero": {
+            "badge": "Pembinaan & Kejuruteraan",
+            "title": "Senarai Kerja",
+            "titleHighlight": "Automasi.",
+            "description": "Berhenti mengetuk skrin anda. Hanya berjalan di tapak dengan kamera anda. SpaceCapture secara automatik mengenal pasti kecacatan, menetapkan subkontraktor, dan mencipta senarai kerja untuk anda.",
+            "cta": "Lihat Dalam Tindakan",
+            "imageAlt": "Enjin Video-ke-Senarai",
+            "visualTitle": "Enjin Video-ke-Senarai",
+            "visualStatus": "Memproses Berjalan Tapak...",
+            "paintDefect": "Kecacatan Cat",
+            "exposedWiring": "Pendawaian Terdedah"
+        },
+        "features": {
+            "title": "Hapuskan Kerja Semula & Pertikaian",
+            "description": "Kos terbesar dalam pembinaan bukan bahan—ia adalah kerja pembaikan. Cegah isu daripada terlepas pandang.",
+            "item1": {
+                "title": "Pelaporan 'Berjalan & Bercakap'",
+                "desc": "Jangan berhenti untuk menaip. Ceritakan pemerhatian anda semasa anda merakam tapak. AI pelbagai mod kami menyalin suara anda, menangkap bingkai, dan mencipta tiket serta-merta."
+            },
+            "item2": {
+                "title": "Akauntabiliti Subkontraktor",
+                "desc": "Setiap kecacatan digeotag dan dicap masa. Hantar laporan PDF automatik kepada perdagangan tertentu dengan bukti foto, menghapuskan pertikaian 'bukan saya'."
+            }
+        },
+        "workflows": {
+            "title": "Aliran Kerja Disokong",
+            "punchLists": {
+                "title": "Senarai Kerja",
+                "desc": "Penyerahan sifar kecacatan"
+            },
+            "dailyLogs": {
+                "title": "Log Harian",
+                "desc": "Penjejakan kemajuan tapak"
+            },
+            "safetyAudits": {
+                "title": "Audit Keselamatan",
+                "desc": "Pematuhan OSHA"
+            },
+            "rfi": {
+                "title": "Penciptaan RFI",
+                "desc": "Pertanyaan padang-ke-pejabat"
+            }
+        }
+    },
+    "visualFormBuilderPage": {
+        "hero": {
+            "badge": "Visual Editor",
+            "title": {
+                "noCode": "No-Code",
+                "highlight": "Form Builder"
+            },
+            "description": "Tired of waiting for developers to update a single field? With Space Capture, you are the engineer. Drag and drop complex logic, customize branding, and deploy smart forms to your field teams instantly—all without writing a line of code.",
+            "cta": "Request Demo"
+        },
+        "editor": {
+            "visualEditor": "Visual Editor",
+            "rateSafety": "Rate site safety compliance:",
+            "uploadPhoto": "Upload Site Photo",
+            "fieldProperties": {
+                "title": "Field Properties",
+                "autoGeotag": "Auto-Geotagging",
+                "requirePhoto": "Require Photo",
+                "validation": "Validation",
+                "mandatory": "Mandatory Field"
+            }
+        },
+        "templates": {
+            "operationalTemplates": "Operational Templates",
+            "badge": "Operational Templates",
+            "title": {
+                "line1": "Launch Faster with",
+                "highlight": "Pre-Built Workflows"
+            },
+            "description": "Don't start from scratch. Benefit from our library of 100+ industry-standard operational templates used by thousands of field teams.",
+            "dailyLog": "Daily Site Safety Log",
+            "dailyLogItem1": "Site condition check?",
+            "dailyLogItem2": "PPE verified for all crew?",
+            "list": {
+                "safety": "Safety Audits & Risk Assessments",
+                "maintenance": "Equipment Maintenance Logs",
+                "quality": "Quality Control Checklists",
+                "daily": "Daily Progress Reports"
+            },
+            "quote": "Once you've created templates for your team, save them and share for consistent future use across all project sites."
+        }
+    },
+    "aiDetectionPage": {
+        "hero": {
+            "badge": "AI Vision",
+            "title": {
+                "line1": "Upload for",
+                "highlight": "AI Detection"
+            },
+            "description": "Empower every field worker with an AI expert in their pocket. Simply capture a photo, and our engine instantly identifies defects, grades severity, and uploads structured data to the cloud.",
+            "cta": "Try AI Capture"
+        },
+        "analysis": {
+            "status": "Analysis Complete",
+            "title": "AI Scan Results",
+            "item1": {
+                "name": "Structural Crack",
+                "desc": "Found in upper sector. Requires immediate attention.",
+                "severity": "High Severity"
+            },
+            "item2": {
+                "name": "Surface Corrosion",
+                "desc": "Oxidation detected on metal fasteners.",
+                "severity": "Medium Severity"
+            },
+            "item3": {
+                "name": "Missing Fastener",
+                "severity": "Low Severity"
+            },
+            "syncing": "SYNCING DATA TO CLOUD..."
+        },
+        "reporting": {
+            "badge": "Instant Reporting",
+            "title": {
+                "line1": "No Manual Entry.",
+                "highlight": "Just Results."
+            },
+            "description": "The AI handles the tedious part. Your images are converted into detailed, searchable reports with timestamps, location data, and technical classifications in seconds.",
+            "assetType": "Asset Type",
+            "confidence": "Confidence",
+            "defectFound": "Defect Found",
+            "synced": "Synced to cloud 2s ago",
+            "list": {
+                "item1": "Metadata Extraction (Time, GPS, Device)",
+                "item2": "Auto-Categorization of Defects",
+                "item3": "Instant Sync to Web Dashboard"
+            }
+        }
+    },
+    "engagementFlowsPage": {
+        "hero": {
+            "badge": "Automation",
+            "title": {
+                "line1": "Visual",
+                "highlight": "Engagement Flows"
+            },
+            "description": "Design complex field logic without writing code. Use our drag-and-drop canvas to route tasks, trigger notifications, and update records based on real-time data inputs.",
+            "cta": "Build a Flow"
+        },
+        "flowchart": {
+            "workflow": "Workflow: Safety Incident",
+            "active": "ACTIVE",
+            "nodes": {
+                "trigger": "Form Submitted",
+                "type": "Type: Inspection Report",
+                "condition": "Check Severity",
+                "conditionDesc": "If Risk Level > High",
+                "action1": "Alert Manager",
+                "action2": "Auto-Approve"
+            }
+        },
+        "triggers": {
+            "badge": "Smart Triggers",
+            "title": {
+                "line1": "If This,",
+                "highlight": "Then That."
+            },
+            "description": "Automate the boring stuff. Set up rules that work while you sleep. Automatically flag high-risk inspections, dispatch follow-up crews, or generate PDF reports instantly upon submission.",
+            "rule1": "Automation Rule #1",
+            "when": "WHEN",
+            "whenDesc": "Inspection is Overdue by 2 Days",
+            "then": "THEN DO THIS",
+            "thenAction1": "Send SMS to Assignee",
+            "thenAction2": "Update Priority to 'High'",
+            "list": {
+                "item1": "Time-Based Triggers (e.g., Monthly)",
+                "item2": "Condition-Based Actions (e.g., If Failed)",
+                "item3": "Cross-Platform Notifications"
+            }
+        }
+    },
+    "accessControlPage": {
+        "hero": {
+            "badge": "Security First",
+            "title": {
+                "line1": "Enterprise-Grade",
+                "highlight": "Access Control"
+            },
+            "description": "Define exactly who can see, edit, or delete data. Create custom roles like \"Field Inspector,\" \"Project Manager,\" or \" auditor\" to ensure data integrity and compliance across your organization.",
+            "cta": "Secure Your Data"
+        },
+        "rbac": {
+            "header": "Team Members",
+            "invite": "+ Invite Member",
+            "roles": {
+                "admin": "Admin",
+                "fieldUser": "Field User",
+                "viewer": "Client Viewer"
+            },
+            "permissions": {
+                "title": "Permissions: Field User",
+                "submit": "Submit Forms",
+                "view": "View Own Data",
+                "delete": "Delete Records"
+            }
+        },
+        "assignment": {
+            "badge": "Task Assignment",
+            "title": {
+                "line1": "Right Person,",
+                "highlight": "Right Place."
+            },
+            "description": "Assign inspections and forms to specific users or teams. Ensure sensitive project data is only accessible to authorized personnel, and revoke access automatically when a job is done.",
+            "card": {
+                "title": "Assign Inspection",
+                "assignTo": "ASSIGN TO",
+                "restrictTo": "RESTRICT ACCESS TO",
+                "expiration": "ACCESS EXPIRATION",
+                "user": "Sarah Smith (Field Team)",
+                "location": "Site Alpha - Sector 4",
+                "options": {
+                    "24h": "24 Hours",
+                    "1w": "1 Week",
+                    "perm": "Permanent"
+                },
+                "button": "Grant Access",
+                "toast": "Task assigned securely to Sarah"
+            },
+            "list": {
+                "item1": "Direct User-to-Task Assignment",
+                "item2": "Location-Based Geofencing Access",
+                "item3": "Temporary / Guest Access Links"
+            }
+        }
+    },
+    "reportPage": {
+        "hero": {
+            "badge": "Deep Insights",
+            "title": {
+                "line1": "Turn Field Data into",
+                "highlight": "Business Intelligence"
+            },
+            "description": "Don't let your data collect dust. Visualize project health, track team performance, and spot safety trends instantly with our interactive dashboards.",
+            "cta": "View Sample Reports"
+        },
+        "dashboard": {
+            "title": "Project Overview",
+            "updated": "Last updated: Just now",
+            "totalInspections": "Total Inspections",
+            "openIssues": "Open Issues",
+            "compliance": "Compliance",
+            "weeklyActivity": "Weekly Activity",
+            "issuesByType": "Issues by Type",
+            "total": "Total",
+            "safety": "Safety",
+            "quality": "Quality"
+        },
+        "export": {
+            "card": {
+                "title": "Export Report",
+                "desc": "Configure your download settings",
+                "format": "File Format",
+                "pdf": "PDF Document",
+                "excel": "Excel / CSV",
+                "includeData": "Include Data",
+                "photos": "Site Photos & Annotations",
+                "gps": "GPS Location Maps",
+                "button": "Generate & Download"
+            },
+            "badge": "Custom Exports",
+            "title": {
+                "line1": "Professional Reports,",
+                "highlight": "Ready in Seconds."
+            },
+            "description": "Forget spending hours formatting spreadsheets. Space Capture automatically compiles your field data into professional, branded PDF reports or raw Excel exports.",
+            "list": {
+                "item1": "Schedule Automated Email Delivery",
+                "item2": "White-Label with Your Company Logo",
+                "item3": "Filter by Date, User, or Project",
+                "item4": "One-Click Audit Logs"
+            }
+        }
+    },
+    "integrationPage": {
+        "webhooks": {
+            "badge": "Developer Tools",
+            "title": {
+                "line1": "Powerful",
+                "highlight": "Webhooks"
+            },
+            "description": "We've worked hard to flatten our data structure and provide the most robust webhooks in the industry. Instantly push field data to your CRM, Slack, or custom internal tools the moment a form is submitted.",
+            "cta": "Read Documentation",
+            "mockup": {
+                "trigger": "Trigger",
+                "newInspection": "New Inspection Submitted",
+                "status": "Active",
+                "json": "JSON",
+                "destination": "Destination: CRM",
+                "statusLabel": "Status",
+                "priority": "High Priority",
+                "customer": "Customer",
+                "action": "Action",
+                "createTicket": "Create Ticket"
+            }
+        },
+        "agents": {
+            "badge": "AI Integration",
+            "title": {
+                "line1": "Connect with",
+                "highlight": "Autonomous Agents"
+            },
+            "description": "Go beyond simple data piping. Integrate Space Capture with AI Agents to analyze field data in real-time and trigger complex, multi-step workflows across your entire software stack automatically.",
+            "mockup": {
+                "listening": "AGENT LISTENING",
+                "message1": "I detected a critical safety failure in the latest inspection report.",
+                "error": "Error: Guard rail missing on Level 4",
+                "message2": "Executing automated response protocols:",
+                "action1": "Notified Site Manager via SMS",
+                "action2": "Created High-Priority Maintenance Ticket",
+                "action3": "Scheduled Re-inspection for tomorrow"
+            },
+            "list": {
+                "item1": "Natural Language Querying of Field Data",
+                "item2": "Automated Risk Assessment & Triage",
+                "item3": "Seamless Handover to Slack/Teams Bots"
+            }
+        }
+    },
+    "hostingPage": {
+        "hero": {
+            "badge": "Deployment",
+            "title": {
+                "line1": "Flexible Hosting",
+                "highlight": "Your Way"
+            },
+            "description": "Space Capture offers the most flexible hosting options in the market. Whether you need the speed of our global SaaS cloud, the isolation of a private instance, or total control via on-premise deployment—we've got you covered.",
+            "cta": "Request Hosting Demo"
+        },
+        "mockup": {
+            "core": "Space Capture Core",
+            "environment": "Deployment Environment",
+            "saas": "SaaS Cloud",
+            "saasDesc": "Instant scaling, zero maintenance.",
+            "private": "Private Cloud",
+            "privateDesc": "Dedicated VPC, isolated resources.",
+            "onPremise": "On-Premise",
+            "onPremiseDesc": "Air-gapped, self-hosted control.",
+            "security": "Enterprise Grade",
+            "securityDesc": "SOC 2 Type II Compliant & ISO 27001 Certified Data Centers.",
+            "residency": "Data Residency",
+            "residencyDesc": "Host data in US, EU, AU, or your own local servers."
+        },
+        "comparison": {
+            "title": "Choose Your Deployment Model",
+            "subtitle": "Match your infrastructure to your security and compliance needs.",
+            "saas": {
+                "title": "Cloud SaaS",
+                "desc": "Best for teams who want to get started instantly.",
+                "list": {
+                    "item1": "Multi-tenant Architecture",
+                    "item2": "Automatic Updates",
+                    "item3": "99.9% Uptime SLA",
+                    "item4": "Global CDN"
+                }
+            },
+            "private": {
+                "title": "Private Cloud",
+                "desc": "For organizations needing isolated resources.",
+                "list": {
+                    "item1": "Single-tenant Environment",
+                    "item2": "Custom Domain & SSO",
+                    "item3": "Dedicated Database",
+                    "item4": "VPC Peering"
+                }
+            },
+            "onPremise": {
+                "title": "On-Premise",
+                "desc": "Complete control for high-compliance sectors.",
+                "list": {
+                    "item1": "Self-Hosted (Docker/K8s)",
+                    "item2": "Full Data Sovereignty",
+                    "item3": "Air-Gapped Capable",
+                    "item4": "Custom Audit Logs"
+                }
+            }
+        }
+    }
+}

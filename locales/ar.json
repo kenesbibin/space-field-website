@@ -2,14 +2,14 @@
     "common": {
         "appName": "SPACE CAPTURE",
         "tryForFree": "جرب مجاناً",
-        "requestDemo": "اطلب عرض توضيحي",
+        "requestDemo": "طلب عرض توضيحي",
         "signIn": "تسجيل الدخول",
         "email": "البريد الإلكتروني",
         "usa": "الولايات المتحدة",
         "singapore": "سنغافورة",
         "getInTouch": "تواصل معنا",
         "copyEmail": "انسخ عنوان بريدنا الإلكتروني أدناه لإرسال رسالة إلينا مباشرة.",
-        "copied": "تم النسخ!",
+        "copied": "تم النسخ إلى الحافظة!",
         "clickToCopy": "انقر على الرمز للنسخ"
     },
     "navbar": {
@@ -18,9 +18,9 @@
         "industries": "الصناعات"
     },
     "hero": {
-        "titlePrefix": "قد عملياتك الميدانية بـ",
+        "titlePrefix": "تحكم في عملياتك الميدانية بـ",
         "titleHighlight": "دقة مطلقة",
-        "description": "تخلص من الفوضى في الموقع. توفر SPACE CAPTURE مركز القيادة المتنقل النهائي لفرق البناء والصيانة والتفتيش لتتبع التقدم في الوقت الفعلي.",
+        "description": "اقضِ على الفوضى في الموقع. يوفر SPACE CAPTURE مركز القيادة المتنقل النهائي لفرق البناء والصيانة والتفتيش لتتبع التقدم في الوقت الفعلي.",
         "startFreeTrial": "ابدأ التجربة المجانية",
         "scheduleDemo": "جدولة عرض توضيحي",
         "siteInspection": "تفتيش الموقع",
@@ -30,39 +30,39 @@
         "slide1": {
             "title": "مركز العمليات الميدانية",
             "location": "موقع البناء أ",
-            "description": "المراقبة في الوقت الحقيقي"
+            "description": "مراقبة في الوقت الفعلي"
         },
         "slide2": {
             "title": "تتبع الأصول",
-            "location": "مركز اللوجستيات",
+            "location": "مركز الخدمات اللوجستية",
             "description": "قفل GPS دقيق"
         },
         "slide3": {
             "title": "الامتثال للسلامة",
             "location": "منطقة التفتيش",
-            "description": "الالتزام بالبروتوكول بنسبة 100٪"
+            "description": "التزام بالبروتوكول 100%"
         },
         "static": {
-            "highlight": "القضاء على النقاط العمياء الميدانية.",
-            "title": "لا تدع المسافة تصبح عائقًا أمام التقدم.",
-            "description": "تعتمد إدارة الميدان التقليدية على التخمين والتقارير القديمة. تسد SPACE CAPTURE الفجوة بين الواقع في الموقع واتخاذ القرارات المكتبية بدقة عسكرية.",
-            "button": "استكشاف الحلول"
+            "highlight": "اقضِ على النقاط العمياء.",
+            "title": "لا تدع المسافة تصبح عائقاً أمام التقدم.",
+            "description": "تعتمد الإدارة الميدانية التقليدية على التخمين والتقارير القديمة. يجسّر SPACE CAPTURE الفجوة بين الواقع في الموقع واتخاذ القرار في المكتب بدقة عسكرية.",
+            "button": "استكشف الحلول"
         }
     },
     "guide": {
-        "badge": "التحكم الكامل في سير العمل",
+        "badge": "تحكم كامل في سير العمل",
         "headline": {
-            "prefix": "تنسيق مشاريعك الميدانية باستخدام",
-            "highlight": "الكفاءة"
+            "prefix": "نظم مشاريعك الميدانية بـ",
+            "highlight": "كفاءة"
         },
         "description": {
-            "part1": "لا يقتصر SPACE CAPTURE على معرفة مكانك فحسب - بل يتعلق بمعرفة",
+            "part1": "لا يتعلق SPACE CAPTURE بمعرفة مكانك فقط—بل يتعلق بمعرفة",
             "bold": "أين يقف مشروعك.",
-            "part2": "استبدل المسارات الورقية الفوضوية بالدقة الرقمية. قم بتعيين المهام وتسجيل عمليات التفتيش وتصور التقدم في نظام بيئي موحد."
+            "part2": "استبدل مسارات الورق الفوضوية بالدقة الرقمية. عيّن المهام، وسجّل عمليات التفتيش، وتصور التقدم في نظام بيئي موحد."
         },
         "feature1": {
             "title": "إدارة المهام الرقمية",
-            "desc": "قم بتعيين الواجبات على الفور وتتبع حالة الإكمال دون الأعمال الورقية."
+            "desc": "عيّن الواجبات فوراً وتتبع حالة الإكمال دون أوراق."
         },
         "feature2": {
             "title": "تحليلات الموقع في الوقت الفعلي",
@@ -70,42 +70,42 @@
         },
         "feature3": {
             "title": "الامتثال الآلي",
-            "desc": "تأكد من فحص كل بروتوكول أمان وتسجيله ومزامنته مع السحابة."
+            "desc": "تأكد من فحص كل بروتوكول سلامة وتسجيله ومزامنة البيانات مع السحابة."
         },
         "image": {
             "status": "النظام متصل",
-            "synced": "تمت مزامنة البيانات الآن"
+            "synced": "تمت مزامنة البيانات للتو"
         }
     },
     "features": {
         "mockup": {
-            "fieldOps": "العمليات الميدانية",
-            "siteCompletion": "اكتمال الموقع",
+            "fieldOps": "عمليات ميدانية",
+            "siteCompletion": "إكمال الموقع",
             "activeTasks": "المهام النشطة",
-            "newCount": "4 جديد",
-            "syncButton": "مزامنة البيانات الميدانية"
+            "newCount": "4 جديدة",
+            "syncButton": "مزامنة البيانات"
         },
         "header": {
-            "badge": "إمكانيات",
+            "badge": "القدرات",
             "title": "ميزاتنا",
-            "description": "نحن نجمع بين التكنولوجيا القوية وسهولة الاستخدام لمساعدتك على إتقان كل جانب من جوانب عملياتك الميدانية."
+            "description": "نحن نجمع بين التكنولوجيا القوية وسهولة الاستخدام البسيطة لمساعدتك على إتقان كل جانب من جوانب عملياتك الميدانية."
         },
         "items": {
             "ecosystem": {
                 "title": "نظام بيئي موحد للويب والجوال",
-                "desc": "قم بالتبديل بسلاسة بين لوحة القيادة القوية على الويب لإدارة المكاتب وتطبيق الهاتف المحمول القوي للتنفيذ في الموقع. منصة واحدة، تحكم كامل."
+                "desc": "بدّل بسلاسة بين لوحة تحكم الويب القوية لإدارة المكتب والتطبيق القوي للجوال للتنفيذ في الموقع. منصة واحدة، تحكم كامل."
             },
             "signatures": {
-                "title": "التوقيعات الرقمية الفورية",
-                "desc": "تخلص من المسارات الورقية. التقط موافقات العملاء والتوقيعات الفنية بشكل آمن مباشرة على الجهاز للتحقق من العمل وإغلاق الوظائف بشكل أسرع."
+                "title": "توقيعات رقمية فورية",
+                "desc": "تخلص من مسارات الورق. التقط موافقات العملاء والتوقيعات الفنية بشكل آمن مباشرة على الجهاز للتحقق من العمل وإغلاق الوظائف بشكل أسرع."
             },
             "sync": {
                 "title": "مزامنة ميدانية حية",
-                "desc": "تخلص من فجوة الاتصال. تظهر التحديثات التي يتم إجراؤها في الميدان على الفور في المكتب، مما يضمن حصول مديري المشاريع دائمًا على بيانات الموقع في الوقت الفعلي."
+                "desc": "اقضِ على فجوة الاتصال. التحديثات التي يتم إجراؤها في الميدان مرئية فوراً في المكتب، مما يضمن حصول مديري المشاريع دائماً على بيانات الموقع في الوقت الفعلي."
             },
             "compliance": {
                 "title": "السلامة والامتثال الآلي",
-                "desc": "رقمنة بروتوكولات الأمان الخاصة بك. فرض قوائم المراجعة الإلزامية والإبلاغ عن الحوادث والتوقيعات الرقمية لضمان تلبية موقعك لجميع معايير الصناعة."
+                "desc": "قم برقمنة بروتوكولات السلامة الخاصة بك. فرض قوائم المراجعة الإلزامية وتقارير الحوادث والتوقيعات الرقمية لضمان تلبية موقعك لجميع معايير الصناعة."
             }
         }
     },
@@ -113,26 +113,26 @@
         "section1": {
             "badge": "للمطورين",
             "title": {
-                "prefix": "",
-                "highlight": "واجهة برمجة تطبيقات الكشف بالذكاء الاصطناعي"
+                "prefix": "واجهة برمجة تطبيقات",
+                "highlight": "الكشف بالذكاء الاصطناعي"
             },
-            "description": "دمج الكشف عن العيوب الصناعية في تطبيقاتك الخاصة من خلال مكالمة API بسيطة. قم بتحميل أي صورة، ويعيد محركنا على الفور حمولة JSON منظمة تحدد العيوب والشدة والإحداثيات الدقيقة.",
-            "button": "جرب مجانًا",
-            "gifOverlay": "الكشف بالذكاء الاصطناعي أثناء العمل"
+            "description": "ادمج الكشف عن العيوب الصناعية في تطبيقاتك الخاصة بمكالمة API بسيطة. قم بتحميل أي صورة، وسيقوم محركنا بإرجاع حمولة JSON منظمة فوراً تحدد العيوب والشدة والإحداثيات الدقيقة.",
+            "button": "جرب مجاناً",
+            "gifOverlay": "الكشف بالذكاء الاصطناعي قيد العمل"
         },
         "card": {
             "status": "نجاح التحليل",
-            "detectedObjects": "الأشياء المكتشفة",
+            "detectedObjects": "الكائنات المكتشفة",
             "confidence": "الثقة:",
-            "box": "مربع:",
+            "box": "المربع:",
             "actionLabel": "الإجراء:",
             "item1": {
-                "name": "صدع هيكلي",
+                "name": "شرخ هيكلي",
                 "severity": "شدة عالية",
                 "action": "مطلوب إصلاح فوري."
             },
             "item2": {
-                "name": "تآكل السطح",
+                "name": "تآكل سطحي",
                 "severity": "متوسط"
             }
         },
@@ -142,12 +142,12 @@
                 "line1": "نتائج قابلة للتحليل.",
                 "highlight": "تكامل سلس."
             },
-            "description": "تلقي النتائج بتنسيق JSON نظيف ويمكن التنبؤ به. هذا الإخراج المنظم جاهز للاستهلاك بواسطة أنظمة التقارير الداخلية أو قواعد البيانات أو أدوات أتمتة سير العمل.",
-            "list": {
-                "item1": "نقطة نهاية REST API قياسية",
-                "item2": "نماذج كشف قابلة للتخصيص",
-                "item3": "وقت تشغيل عالي وزمن انتقال منخفض"
-            }
+            "description": "احصل على النتائج بتنسيق JSON نظيف ويمكن التنبؤ به. هذا الإخراج المنظم جاهز للاستهلاك بواسطة أنظمة التقارير الداخلية أو قواعد البيانات أو أدوات أتمتة سير العمل."
+        },
+        "list": {
+            "item1": "نقطة نهاية REST API قياسية",
+            "item2": "نماذج كشف قابلة للتخصيص",
+            "item3": "وقت تشغيل عالٍ وزمن انتقال منخفض"
         }
     },
     "cta": {
@@ -156,24 +156,24 @@
             "highlight": "SPACE CAPTURE",
             "suffix": "اليوم."
         },
-        "description": "توقف عن مطاردة المسارات الورقية. قم بمزامنة فرق المكتب والميدان الخاصة بك على الفور مع المنصة الشاملة المصممة للبناء والعمليات.",
+        "description": "توقف عن مطاردة مسارات الورق. قم بمزامنة فرق مكتبك والميدان فوراً مع المنصة الشاملة المصممة للبناء والعمليات.",
         "buttons": {
-            "tryFree": "جرب مجانًا",
-            "bookDemo": "احجز عرضًا تجريبيًا"
+            "tryFree": "جرب مجاناً",
+            "bookDemo": "حجز عرض توضيحي"
         },
-        "footerText": "متاح على iOS و Android و Web"
+        "footerText": "متاح على iOS و Android و الويب"
     },
     "demoRequest": {
-        "badge": "اطلب عرضًا تجريبيًا",
+        "badge": "طلب عرض توضيحي",
         "title": {
-            "prefix": "حولا عملياتك الميدانية مع ",
+            "prefix": "حول عملياتك الميدانية مع ",
             "highlight": "SPACE CAPTURE"
         },
-        "description": "انضم إلى الآلاف من المحترفين الذين أداروا عملياتهم الميدانية بنجاح.",
+        "description": "انضم إلى الآلاف من المحترفين الذين أداروا عملياتهم الميدانية بنجاح. اختبر توجيهات الخبراء، وإدارة المهام المبسطة، والدعم الشامل لاحتياجاتك المتنقلة.",
         "features": {
             "item1": {
                 "title": "توجيه ميداني خبير",
-                "desc": "مستشارو عمليات ميدانية معتمدون يتمتعون بعقود من الخبرة في إدارة المهام والامتثال."
+                "desc": "مستشارون معتمدون للعمليات الميدانية يتمتعون بعقود من الخبرة في إدارة المهام والامتثال."
             },
             "item2": {
                 "title": "تتبع في الوقت الفعلي",
@@ -181,16 +181,16 @@
             },
             "item3": {
                 "title": "حلول شاملة",
-                "desc": "دعم شامل للبناء والصيانة والتفتيش وإعداد تقارير التقدم."
+                "desc": "دعم شامل للبناء والصيانة والتفتيش وتقارير التقدم."
             }
         },
         "success": {
             "title": "تم استلام الطلب!",
-            "message": "سيتصل بك فريقنا في غضون 24 ساعة لجدولة العرض التجريبي المخصص لك."
+            "message": "سيتصل بك فريقنا في غضون 24 ساعة لجدولة عرضك التوضيحي المخصص."
         },
         "form": {
-            "title": "جدولة العرض التجريبي المخصص لك",
-            "description": "شاهد SPACE CAPTURE أثناء العمل. دعنا نناقش احتياجات العمليات الميدانية الفريدة الخاصة بك.",
+            "title": "جدولة عرضك التوضيحي المخصص",
+            "description": "شاهد SPACE CAPTURE قيد العمل. دعنا نناقش احتياجات العمليات الميدانية الفريدة الخاصة بك.",
             "labels": {
                 "firstName": "الاسم الأول *",
                 "lastName": "اسم العائلة *",
@@ -201,13 +201,13 @@
                 "projectDetails": "تفاصيل المشروع"
             },
             "placeholders": {
-                "firstName": "جون",
-                "lastName": "دو",
-                "email": "john.doe@company.com",
-                "phone": "+1 234 567 8900",
+                "firstName": "محمد",
+                "lastName": "أحمد",
+                "email": "mohamed.ahmed@company.com",
+                "phone": "+966 5 12 34 56 78",
                 "company": "شركتك",
-                "selectSize": "اختر حجم الشركة",
-                "projectDetails": "أخبرنا عن احتياجات العمليات الميدانية الخاصة بك..."
+                "selectSize": "اختر الحجم",
+                "projectDetails": "أخبرنا عن احتياجاتك..."
             },
             "errors": {
                 "firstName": "الاسم الأول مطلوب.",
@@ -218,8 +218,8 @@
                 "phone": "رقم الهاتف مطلوب."
             },
             "button": {
-                "submit": "طلب عرض تجريبي",
-                "submitting": "جارٍ الإرسال..."
+                "submit": "طلب عرض توضيحي",
+                "submitting": "جاري الإرسال..."
             },
             "footer": "بإرسال هذا النموذج، فإنك توافق على شروط الخدمة وسياسة الخصوصية الخاصة بنا.",
             "options": {
@@ -228,27 +228,27 @@
         }
     },
     "footer": {
-        "brandDescription": "مركز القيادة المتنقل النهائي للعمليات الميدانية. قم بتبسيط المهام وأتمتة التقارير ومزامنة القوى العاملة لديك في الوقت الفعلي باستخدام أدوات مدعومة بالذكاء الاصطناعي.",
+        "brandDescription": "مركز القيادة المتنقل النهائي للعمليات الميدانية. قم بتبسيط المهام وأتمتة التقارير ومزامنة القوى العاملة الخاصة بك في الوقت الفعلي باستخدام أدوات مدعومة بالذكاء الاصطناعي.",
         "coreFeatures": "الميزات الأساسية",
         "visualFormBuilder": "منشئ النماذج المرئية",
         "aiDetection": "تحليل الكشف بالذكاء الاصطناعي",
-        "engagementFlows": "تدفقات التفاعل",
+        "engagementFlows": "تدفقات المشاركة",
         "accessControl": "التحكم في الوصول",
         "deepInsights": "رؤى عميقة",
         "industries": "الصناعات",
-        "construction": "قوائم المراجعة للبناء",
-        "telecommunication": "اتصالات",
-        "manufacturing": "تصنيع",
+        "construction": "قوائم عيوب البناء",
+        "telecommunication": "الاتصالات",
+        "manufacturing": "التصنيع",
         "oilGas": "تفتيش النفط والغاز",
-        "utilities": "خدمات",
-        "hvac": "تكييف الهواء والسباكة",
-        "logistics": "اللوجستيات",
+        "utilities": "المرافق العامة",
+        "hvac": "تكييف وتبريد وسباكة",
+        "logistics": "الخدمات اللوجستية",
         "facilityManagement": "إدارة المرافق",
         "company": "الشركة",
         "aboutUs": "معلومات عنا",
         "bookDemo": "حجز عرض توضيحي",
-        "resources": "موارد",
-        "manifesto": "البيان: نهاية الورق الرقمي",
+        "resources": "الموارد",
+        "manifesto": "بيان: نهاية الورق الرقمي",
         "tech": "تكنولوجيا: داخل العين",
         "trust": "الثقة: ضمان الذكاء الاصطناعي",
         "caseStudy": "دراسة حالة: الصيانة التنبؤية",
@@ -257,25 +257,25 @@
         "vsSafetyCulture": "مقابل SafetyCulture",
         "vsGoCanvas": "مقابل GoCanvas",
         "tools": "أدوات",
-        "switchingCalculator": "حاسبة التبديل",
+        "switchingCalculator": "حاسبة التحويل",
         "copyright": "© 2025 SPACE CAPTURE. جميع الحقوق محفوظة.",
-        "address": "2500 ماركوني أفينيو ، جناح 101 ، سكرامنتو ، كاليفورنيا 95821"
+        "address": "2500 MARCONI AVE, STE 101, SACRAMENTO, CA 95821"
     },
     "products": {
         "features": "الميزات",
         "forDevelopers": "للمطورين",
         "coreFunctions": "الوظائف الأساسية",
         "coreFunctionsDesc": "أدوات أساسية لإدارة العمليات الميدانية.",
-        "visualFormBuilder": "منشئ النماذج المرئي",
-        "visualFormBuilderDesc": "إنشاء نماذج مخصصة بدون برمجة.",
+        "visualFormBuilder": "منشئ النماذج المرئية",
+        "visualFormBuilderDesc": "أنشئ نماذج مخصصة بدون برمجة.",
         "aiDetection": "تحليل الكشف بالذكاء الاصطناعي",
         "aiDetectionDesc": "إدارة أعضاء الفريق والأذونات.",
-        "engagementFlows": "تفاعلات العمل",
+        "engagementFlows": "تدفقات المشاركة",
         "engagementFlowsDesc": "أتمتة سير العمل والعمليات.",
         "accessControl": "التحكم في الوصول",
-        "accessControlDesc": "تأمين البيانات من خلال الوصول القائم على الأدوار.",
+        "accessControlDesc": "تأمين البيانات بالوصول المستند إلى الأدوار.",
         "deepInsights": "رؤى عميقة",
-        "deepInsightsDesc": "لوحة المعلومات للتحليلات والتقارير.",
+        "deepInsightsDesc": "لوحة تحكم التحليلات والتقارير.",
         "integrations": "التكاملات",
         "integrationsDesc": "تواصل مع أدواتك وأنظمتك الحالية.",
         "flexibleHosting": "استضافة مرنة",
@@ -283,13 +283,13 @@
     },
     "industries": {
         "construction": "البناء",
-        "constructionDesc": "إدارة المواقع والفرق بكفاءة.",
+        "constructionDesc": "إدارة المواقع والطواقم بكفاءة.",
         "utilities": "المرافق والطاقة",
-        "utilitiesDesc": "صيانة الشبكات وعمليات التفتيش.",
+        "utilitiesDesc": "صيانة الشبكة والتفتيش.",
         "telecom": "الاتصالات",
-        "telecomDesc": "الخدمة الميدانية للبنية التحتية للشبكة.",
-        "hvac": "التكييف والسباكة",
-        "hvacDesc": "تتبع الإرسال والإصلاح.",
+        "telecomDesc": "خدمة ميدانية للبنية التحتية للشبكة.",
+        "hvac": "تكييف وتبريد وسباكة",
+        "hvacDesc": "الإرسال وتتبع الإصلاح.",
         "manufacturing": "التصنيع",
         "manufacturingDesc": "سجلات صيانة المعدات.",
         "logistics": "الخدمات اللوجستية",
@@ -302,25 +302,606 @@
     "constructionSection": {
         "badge": "صناعة البناء",
         "title": {
-            "line1": "ابنِ بذكاء مع ",
-            "highlight": "دقة رقمية"
+            "line1": "ابنِ بذكاء أكبر مع ",
+            "highlight": "الدقة الرقمية"
         },
-        "description": "تسد Space Field الفجوة بين موقع البناء وقاعة مجلس الإدارة. تخلص من الأعمال الورقية، وقلل من إعادة العمل، وسلم المشاريع في موعدها المحدد باستخدام وحدة البناء المتخصصة لدينا.",
+        "description": "يجسر Space Field الفجوة بين موقع البناء وقاعة الاجتماعات. تخلص من الأعمال الورقية، وقلل من إعادة العمل، وسلم المشاريع في الوقت المحدد مع وحدتنا المتخصصة للبناء.",
         "features": {
             "item1": {
                 "title": "تقدم الموقع في الوقت الفعلي",
-                "desc": "تتبع السجلات اليومية وساعات العمل واستخدام المواد على الفور. اجعل أصحاب المصلحة على اطلاع دائم بالتحديثات المباشرة من الموقع."
+                "desc": "تتبع السجلات اليومية، وساعات العمل، واستخدام المواد فوراً. أبقِ أصحاب المصلحة على اطلاع دائم بتحديثات حية من الميدان."
             },
             "item2": {
-                "title": "مراقبة الجودة الرقمية وتفتيش السلامة",
-                "desc": "قم برقمنة قوائم التدقيق وتدقيق السلامة. التقط صورًا، وعلق على المشكلات، وقم بتعيين الإصلاحات مباشرة للمقاولين من الباطن."
+                "title": "تفتيشات الجودة والسلامة الرقمية",
+                "desc": "قم برقمنة قوائم العيوب وتدقيقات السلامة الخاصة بك. التقط الصور، وعلق على المشكلات، وعين الإصلاحات مباشرة إلى المقاولين من الباطن."
             },
             "item3": {
                 "title": "إدارة الأسطول والأصول",
-                "desc": "راقب استخدام المعدات الثقيلة وموقعها. منع السرقة وتحسين جداول النشر لتقليل وقت التوقف."
+                "desc": "راقب استخدام المعدات الثقيلة وموقعها. امنع السرقة وحسن جداول النشر لتقليل وقت التوقف."
             }
         },
         "link": "شاهد عرض البناء",
         "imageAlt": "إدارة موقع البناء مع Space Field"
+    },
+    "hvacSection": {
+        "badge": "تكييف وتبريد وسباكة",
+        "title": {
+            "line1": "أتقن تدفقات الـ ",
+            "highlight": "خدمة"
+        },
+        "description": "يساعد Space Field شركات التكييف والسباكة على الإرسال بشكل أسرع والإصلاح بذكاء أكبر. قم بإدارة عقود الصيانة المتكررة، وتتبع مخزون قطع الغيار، وأصدر الفواتير للعملاء مباشرة من الموقع.",
+        "features": {
+            "item1": {
+                "title": "إرسال مكالمات الخدمة",
+                "desc": "عين الوظائف لأقرب فني يتمتع بالمهارات المناسبة. تتبع حالة الوظيفة من 'في الطريق' إلى 'مكتمل' في الوقت الفعلي."
+            },
+            "item2": {
+                "title": "تاريخ المعدات والتدقيقات",
+                "desc": "الوصول إلى سجل الخدمة المفصل لكل وحدة تكييف. امسح رموز QR لاسترداد الكتيبات ومعلومات الضمان وسجلات الإصلاح السابقة فوراً."
+            },
+            "item3": {
+                "title": "تقارير تفتيش السباكة",
+                "desc": "أنشئ تقارير تفتيش احترافية في الموقع. التقط صوراً للتسريبات أو مشاكل الأنابيب واحصل على توقيع العميل رقمياً."
+            }
+        },
+        "link": "شاهد عرض التكييف",
+        "imageAlt": "فني تكييف وخدمات السباكة"
+    },
+    "coreFunctions": {
+        "badge": "Space Capture",
+        "title": {
+            "line1": "نظرة عامة على ",
+            "highlight": "الميزات الأساسية"
+        },
+        "description": "يتضمن Space Capture جميع أدوات البيانات الميدانية القوية التي تحتاجها على نطاق المؤسسة. أنشئ نماذج احترافية وذكية باستخدام قائمتنا الواسعة من الوحدات، والمنطق الذكي، وخيارات العلامة التجارية العميقة.",
+        "cta": "ابدأ الآن",
+        "items": {
+            "visualFormBuilder": {
+                "title": "منشئ النماذج المرئية",
+                "desc": "واجهة سحب وإفلات لإنشاء نماذج جمع بيانات معقدة في دقائق. لا يتطلب البرمجة."
+            },
+            "aiDetection": {
+                "title": "تحليل الكشف بالذكاء الاصطناعي",
+                "desc": "تحليل صور المسح تلقائياً لاكتشاف العيوب وتصنيف الأصول وإنشاء تقارير ميدانية تلقائياً."
+            },
+            "engagementFlows": {
+                "title": "تدفقات المشاركة",
+                "desc": "تصميم سير عمل آلي ينطلق بناءً على مدخلات المستخدم أو الموقع أو الأحداث المستندة إلى الوقت."
+            },
+            "accessControl": {
+                "title": "التحكم في الوصول",
+                "desc": "إعدادات أذونات دقيقة لضمان وصول أعضاء الفريق المناسبين إلى ما يحتاجون إليه فقط."
+            },
+            "deepInsights": {
+                "title": "رؤى عميقة",
+                "desc": "حول البيانات الميدانية الخام إلى ذكاء قابل للتنفيذ مع تحليلات في الوقت الفعلي وتقارير قابلة للتصدير."
+            }
+        }
+    },
+    "logistics": {
+        "badge": "اللوجستيات والأسطول",
+        "title": {
+            "line1": "زيادة الكفاءة في ",
+            "highlight": "كل منعطف"
+        },
+        "description": "يحول Space Field العمليات اللوجستية برؤية شاملة. من رصيف المستودع إلى عتبة باب العميل، تأكد من تحسين كل ميل والتحقق من كل تسليم.",
+        "link": "شاهد عرض اللوجستيات",
+        "imageAlt": "إدارة الأسطول اللوجستي والتسليم",
+        "features": {
+            "fleetTracking": {
+                "title": "تتبع الأسطول والمعلوماتية عن بعد",
+                "desc": "مراقبة مواقع المركبات واستخدام الوقود وسلوك السائق في الوقت الفعلي. تقليل وقت الخمول وتحسين المسارات لتوفير التكاليف التشغيلية."
+            },
+            "pod": {
+                "title": "إثبات التسليم (POD)",
+                "desc": "التقاط التوقيعات الرقمية والصور والطوابع الزمنية عند كل تسليم. تحديث حالة الطلب تلقائياً وتشغيل إشعارات العملاء."
+            },
+            "routeOptimization": {
+                "title": "تحسين المسار الديناميكي",
+                "desc": "تخطيط تسلسلات التسليم الأكثر كفاءة على الفور. تعديل المسارات أثناء التنقل بناءً على حركة المرور أو الطقس أو طلبات الاستلام العاجلة."
+            }
+        }
+    },
+    "utilities": {
+        "badge": "المرافق والطاقة",
+        "title": {
+            "line1": "تمكين الشبكة بـ ",
+            "highlight": "عمليات ميدانية ذكية"
+        },
+        "description": "يقوم Space Field بتحديث عمليات المرافق. من الصيانة الروتينية للخطوط إلى الاستجابة الطارئة للعواصف، تأكد من أن بنيتك التحتية تظل مرنة وأن القوى العاملة لديك تظل آمنة.",
+        "link": "شاهد حلول المرافق",
+        "imageAlt": "عمليات المرافق الميدانية وصيانة الشبكة",
+        "features": {
+            "gridMaintenance": {
+                "title": "صيانة الشبكة والتفتيش",
+                "desc": "رقمنة عمليات تفتيش المحطات الفرعية ودوريات الخطوط. التقاط الصور الحرارية وقراءات المعدات مباشرة في الميدان لمنع الأعطال."
+            },
+            "smartMeter": {
+                "title": "نشر العدادات الذكية",
+                "desc": "تبسيط مشاريع النشر للبنية التحتية الذكية. تتبع تقدم التركيب والتحقق من الاتصال وإدارة المخزون في الوقت الفعلي."
+            },
+            "outageResponse": {
+                "title": "الاستجابة للانقطاع والإرسال",
+                "desc": "تنسيق فرق الاستجابة للعواصف فوراً. تصور الانقطاعات على خريطة حية وإرسال أقرب طاقم مؤهل لاستعادة الطاقة بشكل أسرع."
+            }
+        }
+    },
+    "oilGas": {
+        "badge": "صناعة النفط والغاز",
+        "title": {
+            "line1": "تزويد الطاقة بـ ",
+            "highlight": "السلامة والكفاءة"
+        },
+        "description": "يقدم Space Field حلولاً رقمية قوية للبيئات الصعبة في قطاع الطاقة. تبسيط عمليات التفتيش وضمان سلامة الطاقم والحفاظ على سلامة الأصول من الحقل إلى غرفة التحكم.",
+        "link": "شاهد حلول الطاقة",
+        "imageAlt": "عمليات حقل النفط والغاز باستخدام Space Field",
+        "features": {
+            "hse": {
+                "title": "الصحة والسلامة والبيئة والامتثال",
+                "desc": "فرض بروتوكولات سلامة صارمة على الحفارات وفي المصافي. تضمن أنظمة تصاريح العمل الرقمية وتقارير المخاطر الامتثال بنسبة 100% لمعايير الصناعة."
+            },
+            "assetIntegrity": {
+                "title": "إدارة سلامة الأصول",
+                "desc": "مراقبة صحة خطوط الأنابيب وحالة المعدات. جدولة الصيانة التنبؤية للمضخات والصمامات لمنع التسربات والإغلاق المكلف."
+            },
+            "remoteOps": {
+                "title": "العمليات الميدانية عن بعد",
+                "desc": "إبقاء فرق التنقيب والإنتاج والتكرير متصلة. تتيح القدرات غير المتصلة بالإنترنت للفنيين في الحقول النائية تسجيل البيانات دون انقطاع."
+            }
+        }
+    },
+    "manufacturing": {
+        "badge": "صناعة التصنيع",
+        "title": {
+            "line1": "تحسين العمليات بـ ",
+            "highlight": "سير عمل ذكي"
+        },
+        "description": "يبسط Space Field الخدمات اللوجستية للمصنع والصيانة. زود القوى العاملة لديك بأدوات محمولة لتتبع الأصول، والإبلاغ عن المخاطر، وضمان تلبية أهداف الإنتاج بأمان.",
+        "link": "شاهد عرض التصنيع",
+        "imageAlt": "عمليات مصنع التصنيع باستخدام Space Field",
+        "features": {
+            "maintenance": {
+                "title": "صيانة المعدات والإصلاحات",
+                "desc": "تحول من الصيانة التفاعلية إلى الصيانة الوقائية. جدولة أوامر العمل الآلية لخدمة الآلات لتقليل وقت التوقف المكلف."
+            },
+            "qualityControl": {
+                "title": "مراقبة الجودة في خط الإنتاج",
+                "desc": "رقمنة فحوصات ضمان الجودة في أرضية المصنع. التقاط بيانات العيوب فوراً وإنشاء تقارير الامتثال لمعايير ISO."
+            },
+            "shopFloor": {
+                "title": "رؤية أرضية المتجر في الوقت الفعلي",
+                "desc": "مراقبة حالة سير العمل وتخصيص العمالة في الوقت الفعلي. ربط مشرفي الطابق بالإدارة لاتخاذ قرارات أسرع."
+            }
+        }
+    },
+    "telecom": {
+        "badge": "الاتصالات",
+        "title": {
+            "line1": "اربط العالم بـ ",
+            "highlight": "عمليات سلسة"
+        },
+        "description": "يمكّن Space Field مشغلي الاتصالات من إدارة شبكات البنية التحتية الواسعة بسهولة. من تسلق الأبراج إلى دمج الألياف، أبقِ فرقك الميدانية متزامنة وشبكتك متصلة بالإنترنت.",
+        "link": "شاهد عرض الاتصالات",
+        "imageAlt": "إدارة البنية التحتية للاتصالات",
+        "features": {
+            "rollout": {
+                "title": "طرح الشبكة والصيانة",
+                "desc": "تسريع نشر الألياف والـ 5G. إدارة مسوحات الموقع وتتبع التثبيت وجداول الصيانة الوقائية في الوقت الفعلي."
+            },
+            "audits": {
+                "title": "تدقيقات الأبراج والبنية التحتية",
+                "desc": "إجراء عمليات تفتيش هيكلية صارمة. التقاط أدلة الموسومة جغرافياً لحالة البرج وأتمتة تقارير الامتثال."
+            },
+            "dispatch": {
+                "title": "إرسال فني ميداني",
+                "desc": "تحسين تخطيط المسار للفرق الموزعة. تقليل أوقات الاستجابة للانقطاعات وضمان وصول الفني المناسب بالأجزاء الصحيحة."
+            }
+        }
+    },
+    "facility": {
+        "badge": "إدارة المرافق",
+        "title": {
+            "line1": "مباني أذكى، ",
+            "highlight": "عمليات متفوقة"
+        },
+        "description": "يوحد Space Field عمليات المرافق في منصة واحدة سهلة الاستخدام. مكّن فرقك من إدارة الصيانة والأصول ورضا المستأجرين من أي مكان في المبنى.",
+        "link": "شاهد عرض المرافق",
+        "imageAlt": "عمليات إدارة المرافق الحديثة",
+        "features": {
+            "workOrder": {
+                "title": "إدارة أوامر العمل",
+                "desc": "تبسيط طلبات المستأجرين والإصلاحات الداخلية. تعيين المهام فوراً لموظفي الصيانة وتتبع أوقات الحل لضمان الوفاء باتفاقيات مستوى الخدمة (SLAs)."
+            },
+            "preventive": {
+                "title": "الصيانة الوقائية",
+                "desc": "جدولة عمليات تفتيش متكررة للتكييف والمصاعد وأنظمة السلامة من الحرائق. إنشاء قوائم مراجعة تلقائياً لضمان الامتثال وإطالة دورات حياة الأصول."
+            },
+            "assetTracking": {
+                "title": "تتبع المساحة والأصول",
+                "desc": "الحصول على رؤية لموقع وحالة الأصول عبر محفظتك. مراقبة مستويات الإشغال وتحسين بيانات استخدام المساحة لتخطيط أذكى."
+            }
+        }
+    },
+    "constructionPage": {
+        "hero": {
+            "badge": "البناء والهندسة",
+            "title": "قوائم عيوب",
+            "titleHighlight": "مؤتمتة.",
+            "description": "توقف عن النقر على شاشتك. فقط امشِ في الموقع بكاميرتك. يحدد SpaceCapture العيوب تلقائياً، ويعين المقاولين من الباطن، وينشئ قائمة العيوب لك.",
+            "cta": "شاهده في العمل",
+            "imageAlt": "محرك الفيديو إلى القائمة",
+            "visualTitle": "محرك الفيديو إلى القائمة",
+            "visualStatus": "معالجة جولة الموقع...",
+            "paintDefect": "عيب طلاء",
+            "exposedWiring": "أسلاك مكشوفة"
+        },
+        "features": {
+            "title": "تخلص من إعادة العمل والنزاعات",
+            "description": "أكبر تكلفة في البناء ليست المواد—بل هي أعمال الإصلاح. امنع المشكلات من التسرب عبر الشقوق.",
+            "item1": {
+                "title": "تقرير 'امشِ وتحدث'",
+                "desc": "لا تتوقف للكتابة. اروِ ملاحظاتك أثناء تصوير الموقع. يقوم ذكاؤنا الاصطناعي متعدد الوسائط بنسخ صوتك، والتقاط الإطار، وإنشاء التذكرة فوراً."
+            },
+            "item2": {
+                "title": "مساءلة المقاول من الباطن",
+                "desc": "يتم تحديد الموقع الجغرافي لكل عيب وطابعه الزمني. أرسل تقارير PDF آلية إلى حرف معينة مع إثبات بالصور، مما يقضي على نزاعات 'لم أكن أنا'."
+            }
+        },
+        "workflows": {
+            "title": "سير العمل المدعوم",
+            "punchLists": {
+                "title": "قوائم العيوب",
+                "desc": "تسليمات صفر عيوب"
+            },
+            "dailyLogs": {
+                "title": "السجلات اليومية",
+                "desc": "تتبع تقدم الموقع"
+            },
+            "safetyAudits": {
+                "title": "تدقيقات السلامة",
+                "desc": "امتثال OSHA"
+            },
+            "rfi": {
+                "title": "إنشاء RFI",
+                "desc": "استفسارات من الميدان إلى المكتب"
+            }
+        }
+    },
+    "visualFormBuilderPage": {
+        "hero": {
+            "badge": "Visual Editor",
+            "title": {
+                "noCode": "No-Code",
+                "highlight": "Form Builder"
+            },
+            "description": "Tired of waiting for developers to update a single field? With Space Capture, you are the engineer. Drag and drop complex logic, customize branding, and deploy smart forms to your field teams instantly—all without writing a line of code.",
+            "cta": "Request Demo"
+        },
+        "editor": {
+            "visualEditor": "Visual Editor",
+            "rateSafety": "Rate site safety compliance:",
+            "uploadPhoto": "Upload Site Photo",
+            "fieldProperties": {
+                "title": "Field Properties",
+                "autoGeotag": "Auto-Geotagging",
+                "requirePhoto": "Require Photo",
+                "validation": "Validation",
+                "mandatory": "Mandatory Field"
+            }
+        },
+        "templates": {
+            "operationalTemplates": "Operational Templates",
+            "badge": "Operational Templates",
+            "title": {
+                "line1": "Launch Faster with",
+                "highlight": "Pre-Built Workflows"
+            },
+            "description": "Don't start from scratch. Benefit from our library of 100+ industry-standard operational templates used by thousands of field teams.",
+            "dailyLog": "Daily Site Safety Log",
+            "dailyLogItem1": "Site condition check?",
+            "dailyLogItem2": "PPE verified for all crew?",
+            "list": {
+                "safety": "Safety Audits & Risk Assessments",
+                "maintenance": "Equipment Maintenance Logs",
+                "quality": "Quality Control Checklists",
+                "daily": "Daily Progress Reports"
+            },
+            "quote": "Once you've created templates for your team, save them and share for consistent future use across all project sites."
+        }
+    },
+    "aiDetectionPage": {
+        "hero": {
+            "badge": "AI Vision",
+            "title": {
+                "line1": "Upload for",
+                "highlight": "AI Detection"
+            },
+            "description": "Empower every field worker with an AI expert in their pocket. Simply capture a photo, and our engine instantly identifies defects, grades severity, and uploads structured data to the cloud.",
+            "cta": "Try AI Capture"
+        },
+        "analysis": {
+            "status": "Analysis Complete",
+            "title": "AI Scan Results",
+            "item1": {
+                "name": "Structural Crack",
+                "desc": "Found in upper sector. Requires immediate attention.",
+                "severity": "High Severity"
+            },
+            "item2": {
+                "name": "Surface Corrosion",
+                "desc": "Oxidation detected on metal fasteners.",
+                "severity": "Medium Severity"
+            },
+            "item3": {
+                "name": "Missing Fastener",
+                "severity": "Low Severity"
+            },
+            "syncing": "SYNCING DATA TO CLOUD..."
+        },
+        "reporting": {
+            "badge": "Instant Reporting",
+            "title": {
+                "line1": "No Manual Entry.",
+                "highlight": "Just Results."
+            },
+            "description": "The AI handles the tedious part. Your images are converted into detailed, searchable reports with timestamps, location data, and technical classifications in seconds.",
+            "assetType": "Asset Type",
+            "confidence": "Confidence",
+            "defectFound": "Defect Found",
+            "synced": "Synced to cloud 2s ago",
+            "list": {
+                "item1": "Metadata Extraction (Time, GPS, Device)",
+                "item2": "Auto-Categorization of Defects",
+                "item3": "Instant Sync to Web Dashboard"
+            }
+        }
+    },
+    "engagementFlowsPage": {
+        "hero": {
+            "badge": "Automation",
+            "title": {
+                "line1": "Visual",
+                "highlight": "Engagement Flows"
+            },
+            "description": "Design complex field logic without writing code. Use our drag-and-drop canvas to route tasks, trigger notifications, and update records based on real-time data inputs.",
+            "cta": "Build a Flow"
+        },
+        "flowchart": {
+            "workflow": "Workflow: Safety Incident",
+            "active": "ACTIVE",
+            "nodes": {
+                "trigger": "Form Submitted",
+                "type": "Type: Inspection Report",
+                "condition": "Check Severity",
+                "conditionDesc": "If Risk Level > High",
+                "action1": "Alert Manager",
+                "action2": "Auto-Approve"
+            }
+        },
+        "triggers": {
+            "badge": "Smart Triggers",
+            "title": {
+                "line1": "If This,",
+                "highlight": "Then That."
+            },
+            "description": "Automate the boring stuff. Set up rules that work while you sleep. Automatically flag high-risk inspections, dispatch follow-up crews, or generate PDF reports instantly upon submission.",
+            "rule1": "Automation Rule #1",
+            "when": "WHEN",
+            "whenDesc": "Inspection is Overdue by 2 Days",
+            "then": "THEN DO THIS",
+            "thenAction1": "Send SMS to Assignee",
+            "thenAction2": "Update Priority to 'High'",
+            "list": {
+                "item1": "Time-Based Triggers (e.g., Monthly)",
+                "item2": "Condition-Based Actions (e.g., If Failed)",
+                "item3": "Cross-Platform Notifications"
+            }
+        }
+    },
+    "accessControlPage": {
+        "hero": {
+            "badge": "Security First",
+            "title": {
+                "line1": "Enterprise-Grade",
+                "highlight": "Access Control"
+            },
+            "description": "Define exactly who can see, edit, or delete data. Create custom roles like \"Field Inspector,\" \"Project Manager,\" or \" auditor\" to ensure data integrity and compliance across your organization.",
+            "cta": "Secure Your Data"
+        },
+        "rbac": {
+            "header": "Team Members",
+            "invite": "+ Invite Member",
+            "roles": {
+                "admin": "Admin",
+                "fieldUser": "Field User",
+                "viewer": "Client Viewer"
+            },
+            "permissions": {
+                "title": "Permissions: Field User",
+                "submit": "Submit Forms",
+                "view": "View Own Data",
+                "delete": "Delete Records"
+            }
+        },
+        "assignment": {
+            "badge": "Task Assignment",
+            "title": {
+                "line1": "Right Person,",
+                "highlight": "Right Place."
+            },
+            "description": "Assign inspections and forms to specific users or teams. Ensure sensitive project data is only accessible to authorized personnel, and revoke access automatically when a job is done.",
+            "card": {
+                "title": "Assign Inspection",
+                "assignTo": "ASSIGN TO",
+                "restrictTo": "RESTRICT ACCESS TO",
+                "expiration": "ACCESS EXPIRATION",
+                "user": "Sarah Smith (Field Team)",
+                "location": "Site Alpha - Sector 4",
+                "options": {
+                    "24h": "24 Hours",
+                    "1w": "1 Week",
+                    "perm": "Permanent"
+                },
+                "button": "Grant Access",
+                "toast": "Task assigned securely to Sarah"
+            },
+            "list": {
+                "item1": "Direct User-to-Task Assignment",
+                "item2": "Location-Based Geofencing Access",
+                "item3": "Temporary / Guest Access Links"
+            }
+        }
+    },
+    "reportPage": {
+        "hero": {
+            "badge": "Deep Insights",
+            "title": {
+                "line1": "Turn Field Data into",
+                "highlight": "Business Intelligence"
+            },
+            "description": "Don't let your data collect dust. Visualize project health, track team performance, and spot safety trends instantly with our interactive dashboards.",
+            "cta": "View Sample Reports"
+        },
+        "dashboard": {
+            "title": "Project Overview",
+            "updated": "Last updated: Just now",
+            "totalInspections": "Total Inspections",
+            "openIssues": "Open Issues",
+            "compliance": "Compliance",
+            "weeklyActivity": "Weekly Activity",
+            "issuesByType": "Issues by Type",
+            "total": "Total",
+            "safety": "Safety",
+            "quality": "Quality"
+        },
+        "export": {
+            "card": {
+                "title": "Export Report",
+                "desc": "Configure your download settings",
+                "format": "File Format",
+                "pdf": "PDF Document",
+                "excel": "Excel / CSV",
+                "includeData": "Include Data",
+                "photos": "Site Photos & Annotations",
+                "gps": "GPS Location Maps",
+                "button": "Generate & Download"
+            },
+            "badge": "Custom Exports",
+            "title": {
+                "line1": "Professional Reports,",
+                "highlight": "Ready in Seconds."
+            },
+            "description": "Forget spending hours formatting spreadsheets. Space Capture automatically compiles your field data into professional, branded PDF reports or raw Excel exports.",
+            "list": {
+                "item1": "Schedule Automated Email Delivery",
+                "item2": "White-Label with Your Company Logo",
+                "item3": "Filter by Date, User, or Project",
+                "item4": "One-Click Audit Logs"
+            }
+        }
+    },
+    "integrationPage": {
+        "webhooks": {
+            "badge": "Developer Tools",
+            "title": {
+                "line1": "Powerful",
+                "highlight": "Webhooks"
+            },
+            "description": "We've worked hard to flatten our data structure and provide the most robust webhooks in the industry. Instantly push field data to your CRM, Slack, or custom internal tools the moment a form is submitted.",
+            "cta": "Read Documentation",
+            "mockup": {
+                "trigger": "Trigger",
+                "newInspection": "New Inspection Submitted",
+                "status": "Active",
+                "json": "JSON",
+                "destination": "Destination: CRM",
+                "statusLabel": "Status",
+                "priority": "High Priority",
+                "customer": "Customer",
+                "action": "Action",
+                "createTicket": "Create Ticket"
+            }
+        },
+        "agents": {
+            "badge": "AI Integration",
+            "title": {
+                "line1": "Connect with",
+                "highlight": "Autonomous Agents"
+            },
+            "description": "Go beyond simple data piping. Integrate Space Capture with AI Agents to analyze field data in real-time and trigger complex, multi-step workflows across your entire software stack automatically.",
+            "mockup": {
+                "listening": "AGENT LISTENING",
+                "message1": "I detected a critical safety failure in the latest inspection report.",
+                "error": "Error: Guard rail missing on Level 4",
+                "message2": "Executing automated response protocols:",
+                "action1": "Notified Site Manager via SMS",
+                "action2": "Created High-Priority Maintenance Ticket",
+                "action3": "Scheduled Re-inspection for tomorrow"
+            },
+            "list": {
+                "item1": "Natural Language Querying of Field Data",
+                "item2": "Automated Risk Assessment & Triage",
+                "item3": "Seamless Handover to Slack/Teams Bots"
+            }
+        }
+    },
+    "hostingPage": {
+        "hero": {
+            "badge": "Deployment",
+            "title": {
+                "line1": "Flexible Hosting",
+                "highlight": "Your Way"
+            },
+            "description": "Space Capture offers the most flexible hosting options in the market. Whether you need the speed of our global SaaS cloud, the isolation of a private instance, or total control via on-premise deployment—we've got you covered.",
+            "cta": "Request Hosting Demo"
+        },
+        "mockup": {
+            "core": "Space Capture Core",
+            "environment": "Deployment Environment",
+            "saas": "SaaS Cloud",
+            "saasDesc": "Instant scaling, zero maintenance.",
+            "private": "Private Cloud",
+            "privateDesc": "Dedicated VPC, isolated resources.",
+            "onPremise": "On-Premise",
+            "onPremiseDesc": "Air-gapped, self-hosted control.",
+            "security": "Enterprise Grade",
+            "securityDesc": "SOC 2 Type II Compliant & ISO 27001 Certified Data Centers.",
+            "residency": "Data Residency",
+            "residencyDesc": "Host data in US, EU, AU, or your own local servers."
+        },
+        "comparison": {
+            "title": "Choose Your Deployment Model",
+            "subtitle": "Match your infrastructure to your security and compliance needs.",
+            "saas": {
+                "title": "Cloud SaaS",
+                "desc": "Best for teams who want to get started instantly.",
+                "list": {
+                    "item1": "Multi-tenant Architecture",
+                    "item2": "Automatic Updates",
+                    "item3": "99.9% Uptime SLA",
+                    "item4": "Global CDN"
+                }
+            },
+            "private": {
+                "title": "Private Cloud",
+                "desc": "For organizations needing isolated resources.",
+                "list": {
+                    "item1": "Single-tenant Environment",
+                    "item2": "Custom Domain & SSO",
+                    "item3": "Dedicated Database",
+                    "item4": "VPC Peering"
+                }
+            },
+            "onPremise": {
+                "title": "On-Premise",
+                "desc": "Complete control for high-compliance sectors.",
+                "list": {
+                    "item1": "Self-Hosted (Docker/K8s)",
+                    "item2": "Full Data Sovereignty",
+                    "item3": "Air-Gapped Capable",
+                    "item4": "Custom Audit Logs"
+                }
+            }
+        }
     }
 }

@@ -4,26 +4,29 @@ import React from 'react';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
 import { RadioTower, Network, Activity, ArrowRight } from 'lucide-react';
-
-const TELECOM_FEATURES = [
-  {
-    title: "Network Rollout & Maintenance",
-    icon: Network,
-    description: "Accelerate fiber and 5G deployment. Manage site surveys, installation tracking, and preventative maintenance schedules in real-time."
-  },
-  {
-    title: "Tower & Infrastructure Audits",
-    icon: RadioTower,
-    description: "Conduct rigorous structural inspections. Capture geotagged evidence of tower conditions and automate compliance reporting."
-  },
-  {
-    title: "Field Technician Dispatch",
-    icon: Activity,
-    description: "Optimize route planning for widespread teams. Reduce response times for outages and ensure the right tech arrives with the right parts."
-  }
-];
+import { useLanguage } from '@/context/LanguageContext';
 
 const TelecommunicationSection = () => {
+  const { t } = useLanguage();
+
+  const TELECOM_FEATURES = [
+    {
+      title: t('telecom.features.rollout.title'),
+      icon: Network,
+      description: t('telecom.features.rollout.desc')
+    },
+    {
+      title: t('telecom.features.audits.title'),
+      icon: RadioTower,
+      description: t('telecom.features.audits.desc')
+    },
+    {
+      title: t('telecom.features.dispatch.title'),
+      icon: Activity,
+      description: t('telecom.features.dispatch.desc')
+    }
+  ];
+
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -34,16 +37,16 @@ const TelecommunicationSection = () => {
 
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.6, ease: "easeOut" } 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   };
 
   return (
     <section className="relative py-20 lg:py-32 bg-gradient-to-br from-indigo-50 via-blue-50 to-purple-100 overflow-hidden">
-      
+
       {/* Background: Digital Network Pattern */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]">
         <svg width="100%" height="100%">
@@ -56,9 +59,9 @@ const TelecommunicationSection = () => {
 
       <div className="container mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          
+
           {/* LEFT SIDE: Content & Cards */}
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -68,26 +71,26 @@ const TelecommunicationSection = () => {
             <div>
               {/* Header / Eyebrow Text */}
               <motion.div variants={itemVariants} className="flex items-center gap-2 mb-4">
-                 <div className="h-1 w-12 bg-cyan-500 rounded-full"></div>
-                 <span className="text-sm font-bold text-cyan-700 uppercase tracking-wider">Telecommunications</span>
+                <div className="h-1 w-12 bg-cyan-500 rounded-full"></div>
+                <span className="text-sm font-bold text-cyan-700 uppercase tracking-wider">{t('telecom.badge')}</span>
               </motion.div>
-              
+
               <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
-                Connect the World with <br/>
+                {t('telecom.title.line1')}<br />
                 <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
-                  Seamless Operations
+                  {t('telecom.title.highlight')}
                 </span>
               </motion.h1>
-              
+
               <motion.p variants={itemVariants} className="mt-6 text-lg text-slate-600 leading-relaxed max-w-xl">
-                Space Field empowers telecom operators to manage vast infrastructure networks with ease. From tower climbs to fiber splicing, keep your field teams synced and your network online.
+                {t('telecom.description')}
               </motion.p>
             </div>
 
             {/* Feature Cards */}
             <div className="space-y-4">
               {TELECOM_FEATURES.map((feature, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   variants={itemVariants}
                   className="group bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-x-[-8px]"
@@ -110,14 +113,14 @@ const TelecommunicationSection = () => {
             </div>
 
             <motion.div variants={itemVariants} className="pt-4">
-               <a href="/book-a-demo" className="inline-flex items-center gap-2 text-cyan-700 font-bold hover:gap-3 transition-all">
-                  See Telecom Demo <ArrowRight className="w-5 h-5" />
-               </a>
+              <a href="/book-a-demo" className="inline-flex items-center gap-2 text-cyan-700 font-bold hover:gap-3 transition-all">
+                {t('telecom.link')} <ArrowRight className="w-5 h-5" />
+              </a>
             </motion.div>
           </motion.div>
 
           {/* RIGHT SIDE: Image with Landscape Styling (Clean, No Popup) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -126,18 +129,18 @@ const TelecommunicationSection = () => {
           >
             {/* Landscape Container (aspect-video) */}
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white bg-slate-100">
-               <div className="aspect-video relative">
-                 <Image
-                   src="/images/tele.jpg" // Ensure this image exists
-                   alt="Telecommunications Infrastructure Management"
-                   fill
-                   className="object-cover hover:scale-105 transition-transform duration-700"
-                   priority
-                 />
-                 
-                 {/* Gradient Overlay */}
-                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent"></div>
-               </div>
+              <div className="aspect-video relative">
+                <Image
+                  src="/images/tele.jpg" // Ensure this image exists
+                  alt={t('telecom.imageAlt')}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-700"
+                  priority
+                />
+
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent"></div>
+              </div>
             </div>
 
             {/* Decorative Background Elements */}

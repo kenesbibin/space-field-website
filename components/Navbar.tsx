@@ -193,8 +193,8 @@ export default function Navbar() {
     >
       <button
         className={`relative w-full cursor-pointer rounded-lg px-4 py-2.5 text-sm font-bold transition-all duration-300 hover:scale-105 active:scale-95 ${isPrimary
-            ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg hover:shadow-purple-500/50 hover:shadow-xl'
-            : 'border-2 border-purple-500 text-purple-600 hover:bg-purple-50 hover:shadow-md hover:shadow-purple-400/30'
+          ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg hover:shadow-purple-500/50 hover:shadow-xl'
+          : 'border-2 border-purple-500 text-purple-600 hover:bg-purple-50 hover:shadow-md hover:shadow-purple-400/30'
           }`}
       >
         <span className={isPrimary ? 'text-white' : 'text-purple-600'}>{text}</span>
@@ -215,21 +215,21 @@ export default function Navbar() {
 
       <header
         className={`fixed inset-x-0 top-0 z-50 py-3 transition-all duration-300 ${scrolled || isMenuOpen
-            ? 'bg-white shadow-md'
-            : 'bg-white/95 backdrop-blur-lg'
+          ? 'bg-white shadow-md'
+          : 'bg-white/95 backdrop-blur-lg'
           }`}
       >
         <div className="container mx-auto max-w-[1400px] px-4">
           <div className="flex items-center gap-6">
             <div
-              className="flex flex-1 items-center justify-between rounded-2xl lg:border-2 lg:border-gray-300 lg:p-2.5 bg-transparent"
+              className="flex flex-1 items-center justify-between rounded-2xl lg:border-2 lg:border-gray-300 lg:p-2.5 bg-transparent min-w-0"
             >
               {/* Logo */}
-              <div className="flex items-center gap-12">
+              <div className="flex items-center gap-4 lg:gap-8 xl:gap-12 flex-shrink-0">
                 <div className="flex items-center">
                   <Link
                     href="/"
-                    className="flex items-center rounded-lg px-1 py-1 transition-colors hover:bg-white/5 cursor-pointer"
+                    className="flex items-center rounded-lg px-1 py-1 transition-colors hover:bg-white/5 cursor-pointer whitespace-nowrap"
                     aria-label="Space Field Home"
                   >
                     <Image
@@ -241,9 +241,12 @@ export default function Navbar() {
                     />
 
                     <span
-                      className="ml-0 text-3xl font-extrabold bg-gradient-to-r from-purple-700 via-purple-600 to-blue-600 bg-clip-text text-transparent leading-none"
+                      className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-purple-700 via-purple-600 to-blue-600 bg-clip-text text-transparent leading-none whitespace-nowrap hidden sm:block"
                     >
                       {t('common.appName')}
+                    </span>
+                    <span className="text-2xl font-extrabold bg-gradient-to-r from-purple-700 via-purple-600 to-blue-600 bg-clip-text text-transparent leading-none whitespace-nowrap sm:hidden">
+                      SPACE
                     </span>
                   </Link>
                 </div>
@@ -293,8 +296,8 @@ export default function Navbar() {
                                   key={category}
                                   onMouseEnter={() => setActiveProductCategory(category)}
                                   className={`w-full text-left px-3 py-2.5 rounded-md text-sm font-semibold transition-colors flex items-center justify-between ${activeProductCategory === category
-                                      ? 'bg-violet-50 text-violet-700'
-                                      : 'text-gray-600 hover:bg-white/50'
+                                    ? 'bg-violet-50 text-violet-700'
+                                    : 'text-gray-600 hover:bg-white/50'
                                     }`}
                                 >
                                   <span>{category === 'Features' ? t('products.features') : t('products.forDevelopers')}</span>
@@ -393,42 +396,66 @@ export default function Navbar() {
               </div>
 
               {/* Desktop: Contact & Actions */}
-              <div className="hidden lg:flex items-center gap-4">
+              <div className="hidden lg:flex items-center gap-2 xl:gap-3 flex-nowrap whitespace-nowrap min-w-0 flex-shrink-0 justify-end">
 
                 {/* Email Icon (Triggers Modal) */}
                 <button
                   onClick={() => setShowEmailModal(true)}
-                  className="flex items-center justify-center p-2 rounded-full hover:bg-purple-50 text-gray-600 hover:text-purple-600 transition-colors"
+                  className="flex items-center justify-center p-2 rounded-full hover:bg-purple-50 text-gray-600 hover:text-purple-600 transition-colors flex-shrink-0"
                   title={t('common.email')}
                 >
                   <Mail className="h-5 w-5" />
                 </button>
 
                 {/* Language Switcher */}
-                <LanguageSwitcher />
+                <div className="flex-shrink-0 relative z-20">
+                  <LanguageSwitcher />
+                </div>
 
                 {/* Phone Numbers (Side by Side) */}
-                <div className="flex items-center gap-4 border-l border-r border-gray-200 px-4 h-8">
+                <div className="flex items-center gap-4 lg:gap-2 xl:gap-4 border-l border-r border-gray-200 px-2 xl:px-4 h-8 whitespace-nowrap flex-shrink-0 hidden xl:flex">
                   <a
                     href={`tel:${PHONE_NUMBER_USA.replace(/\s/g, '')}`}
                     className="flex items-center gap-1.5 text-gray-700 font-medium hover:text-purple-600 transition-colors text-xs whitespace-nowrap"
                   >
                     <span className="text-base">🇺🇸</span>
-                    <span>{PHONE_NUMBER_USA}</span>
+                    <span className="hidden 2xl:inline">{PHONE_NUMBER_USA}</span>
                   </a>
                   <a
                     href={`tel:${PHONE_NUMBER_SG.replace(/\s/g, '')}`}
                     className="flex items-center gap-1.5 text-gray-700 font-medium hover:text-purple-600 transition-colors text-xs whitespace-nowrap"
                   >
                     <span className="text-base">🇸🇬</span>
-                    <span>{PHONE_NUMBER_SG}</span>
+                    <span className="hidden 2xl:inline">{PHONE_NUMBER_SG}</span>
                   </a>
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex items-center gap-3">
-                  {renderButton(SIGN_IN_URL, t('common.signIn'))}
-                  {renderButton(DEMO_URL, t('common.requestDemo'), false)}
+                <div className="flex items-center gap-2 xl:gap-3 whitespace-nowrap pl-2 flex-shrink-0">
+                  {/* Sign In - Always visible on desktop, compact on smaller lg */}
+                  <a
+                    href={SIGN_IN_URL}
+                    className="w-auto"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <button className="relative w-full cursor-pointer rounded-lg px-3 lg:px-4 py-2.5 text-sm font-bold transition-all duration-300 hover:scale-105 active:scale-95 border-2 border-purple-500 text-purple-600 hover:bg-purple-50 hover:shadow-md hover:shadow-purple-400/30">
+                      <span className="text-purple-600 whitespace-nowrap">{t('common.signIn')}</span>
+                    </button>
+                  </a>
+
+                  {/* Request Demo - Adaptive Visibility */}
+                  <div className="hidden lg:block">
+                    <a
+                      href={DEMO_URL}
+                      className="w-auto"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <button className="relative w-full cursor-pointer rounded-lg px-3 lg:px-4 py-2.5 text-sm font-bold transition-all duration-300 hover:scale-105 active:scale-95 bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg hover:shadow-purple-500/50 hover:shadow-xl">
+                        <span className="text-white whitespace-nowrap">{t('common.requestDemo')}</span>
+                        <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-400 to-indigo-400 opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-30 -z-10" />
+                      </button>
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -551,15 +578,16 @@ export default function Navbar() {
                 </a>
               </div>
 
+              {/* Mobile Language Switcher */}
+              <div className="border-b border-gray-200 pb-4">
+                <LanguageSwitcher isMobile={true} />
+              </div>
+
               {/* Buttons */}
-              <div className="mt-6 pt-2">
+              <div className="pt-2 pb-8">
                 <div className="flex flex-col gap-4">
                   {renderButton(SIGN_IN_URL, t('common.signIn'))}
                   {renderButton(DEMO_URL, t('common.requestDemo'), false)}
-                </div>
-                {/* Mobile Language Switcher */}
-                <div className="mt-6">
-                  <LanguageSwitcher />
                 </div>
               </div>
             </nav>
