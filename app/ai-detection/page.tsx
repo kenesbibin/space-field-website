@@ -4,6 +4,9 @@ import AiDetectionSection from '@/components/AiDectectionSection';
 import CallToActionSection from '@/components/CallToAction';
 
 
+import { SolutionDetails } from '@/components/templates/SolutionDetails';
+import { SOLUTIONS_DATA } from '@/lib/seo-data'; // Adjust path if needed
+
 // SEO Metadata
 export const metadata: Metadata = {
   title: 'AI Field Detection & Analysis | Space Capture',
@@ -26,6 +29,7 @@ export default function AiDetectionPage() {
   return (
     <main className="w-full overflow-x-hidden">
       <AiDetectionSection />
+      <SolutionDetails data={SOLUTIONS_DATA['ai-detection']} />
       <CallToActionSection/>
     </main>
   );

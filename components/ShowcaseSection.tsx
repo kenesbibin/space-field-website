@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const slides = [
   {
     id: 1,
-    image: "/images/landing1.jpg", 
+    image: "/images/InspectionSoftware.jpg", 
     title: "Field Operations Hub",
     location: "Construction Site A",
     description: "Real-time monitoring",
@@ -17,7 +17,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "/images/landing2.jpg", 
+    image: "/images/aidetection.jpg", 
     title: "Asset Tracking",
     location: "Logistics Center",
     description: "Precision GPS Lock",

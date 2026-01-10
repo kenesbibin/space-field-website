@@ -47,11 +47,13 @@ export default function CustomersPage() {
 
          <div className="grid md:grid-cols-3 gap-8">
             <CaseStudyCard 
-               category="Commercial High-Rise"
+                category="Commercial High-Rise"
                title="Accelerating the Skyline Tower by 4 Weeks"
                stat="30% Faster"
                statLabel="Inspection Cycles"
-               desc="How MegaBuild Corp used AI-driven punch lists to close out 1,200 units ahead of schedule."
+               challenge="1,200 luxury units needed individual punch lists. Manual entry was causing a 2-week lag between inspection and trade mobilization."
+               solution="MegaBuild deployed SpaceCapture's AI to auto-generate deficiency reports from 360-degree video walks."
+               result="Punch lists were distributed within minutes of the walk, accelerating trade fix-time by 60%."
                color="blue"
             />
             <CaseStudyCard 
@@ -59,7 +61,9 @@ export default function CustomersPage() {
                title="Mapping the City Metro Expansion"
                stat="$2.5M Saved"
                statLabel="in Rework Costs"
-               desc="Urban Infrastructure relied on Photogrammetry Stress-Tests to verify tunnel alignment with 2mm precision."
+               challenge="Tunnel alignment deviations were being missed by manual surveying, leading to costly concrete rework."
+               solution="Daily drone and laser scanning with SpaceCapture's BIM Comparison engine caught deviations as small as 2mm."
+               result="Identified 3 major misalignments early, saving $2.5M in retrofitting and ensuring on-time delivery."
                color="purple"
             />
             <CaseStudyCard 
@@ -67,7 +71,9 @@ export default function CustomersPage() {
                title="Secure Updates for Hyperscale Data Centers"
                stat="100% Secure"
                statLabel="Data Compliance"
-               desc="Why TechSpace chose our Privacy Scrubbing engine to capture server farms without compromising security."
+               challenge="Documentation was critical, but photography was banned due to security risks regarding server configurations."
+               solution="TechSpace used our Privacy Scrubbing AI to automatically blur sensitive server racks while capturing cable tray progress."
+               result="Achieved full stakeholder visibility without a single security violation, winning the client's trust for Phase 2."
                color="emerald"
             />
          </div>
@@ -126,7 +132,7 @@ const MockLogo = ({ name }: { name: string }) => (
    </div>
 );
 
-const CaseStudyCard = ({ category, title, stat, statLabel, desc, color }: any) => {
+const CaseStudyCard = ({ category, title, stat, statLabel, challenge, solution, result, color }: any) => {
    const colorClasses: Record<string, string> = {
       blue: "bg-blue-50 text-blue-600",
       purple: "bg-purple-50 text-purple-600",
@@ -149,12 +155,24 @@ const CaseStudyCard = ({ category, title, stat, statLabel, desc, color }: any) =
             <div className="text-sm text-slate-500 font-bold uppercase tracking-wider">{statLabel}</div>
          </div>
 
-         <h3 className="text-2xl font-bold text-slate-900 mb-4">{title}</h3>
-         <p className="text-slate-600 leading-relaxed mb-8 flex-grow">
-            {desc}
-         </p>
+         <h3 className="text-2xl font-bold text-slate-900 mb-6">{title}</h3>
+         
+         <div className="space-y-4 mb-8 flex-grow">
+             <div>
+                 <strong className="text-slate-900 text-sm uppercase tracking-wide block mb-1">Challenge</strong>
+                 <p className="text-slate-600 text-sm leading-relaxed">{challenge}</p>
+             </div>
+             <div>
+                 <strong className="text-blue-600 text-sm uppercase tracking-wide block mb-1">Solution</strong>
+                 <p className="text-slate-600 text-sm leading-relaxed">{solution}</p>
+             </div>
+             <div>
+                 <strong className="text-emerald-600 text-sm uppercase tracking-wide block mb-1">Result</strong>
+                 <p className="text-slate-600 text-sm leading-relaxed">{result}</p>
+             </div>
+         </div>
 
-         <button className="flex items-center gap-2 font-bold text-slate-900 hover:text-blue-600 transition-colors group">
+         <button className="flex items-center gap-2 font-bold text-slate-900 hover:text-blue-600 transition-colors group mt-auto">
             Read Case Study <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
          </button>
       </motion.div>

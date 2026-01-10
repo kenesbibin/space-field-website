@@ -230,5 +230,57 @@ export const faqData: FaqItem[] = [
     category: 'Field Tasks',
     question: "How do I invite a client to view the model?",
     answer: "Click the 'Share' button to generate a 'View-Only Link'. You can password-protect this link and set an expiration date (e.g., 48 hours)."
+  },
+
+  // --- NEW ADDITIONS (Insurance & Real Estate) ---
+  {
+    category: 'General',
+    question: "Can Insurance Adjusters use this for claims?",
+    answer: "Yes. Our 'Insurance Mode' locks the metadata of every photo, providing an immutable audit trail of the site condition at the exact time of capture, preventing fraud."
+  },
+  {
+    category: 'General',
+    question: "Do you support virtual staging for Real Estate?",
+    answer: "We integrate with common virtual staging platforms. You can export the clean OBJ/FBX mesh from Space Capture and import it into tools like 3ds Max or Blender for staging."
+  },
+  {
+    category: 'Technical',
+    question: "What hardware is recommended for beginners?",
+    answer: "We recommend our 'Starter Kit', which includes a standard iPhone/Android and a DJI Osmo gimbal. This provides excellent stabilization for smooth site walks."
+  },
+  {
+    category: 'Technical',
+    question: "Can I use an Insta360 camera?",
+    answer: "Yes, we fully support the Insta360 ONE X, X2, X3, and RS models. The app connects directly to the camera via WiFi for control and data transfer."
+  },
+  {
+    category: 'Field Tasks',
+    question: "How fast is the processing time?",
+    answer: "A standard 5,000 sq ft site walk is processed and ready for viewing in approximately 45 minutes to 1 hour, depending on server load."
+  },
+  {
+    category: 'Security & Compliance',
+    question: "Is the 'Remote Inspection Playbook' included?",
+    answer: "Yes, all users have access to our resource library, including the Remote Inspection Playbook and Flight School video series."
+  },
+  {
+    category: 'AI Intelligence',
+    question: "Can the AI detect mold?",
+    answer: "Our 'Moisture Mapping' can identify visible discoloration often associated with mold or water damage, but we always recommend professional environmental testing for confirmation."
+  },
+  {
+    category: 'Security & Compliance',
+    question: "How does the 'View-Only' link work for investors?",
+    answer: "Investors receive a simplified dashboard that lets them 'walk' the site and view progress percentages, but hides sensitive buttons like 'Delete' or 'Edit'."
+  },
+  {
+    category: 'Technical',
+    question: "Can I export 4K video fly-throughs?",
+    answer: "Yes. You can define a camera path through your 3D digital twin and render a smooth 4K video file for marketing or investor presentations."
+  },
+  {
+    category: 'Field Tasks',
+    question: "Do you offer consumption-based pricing?",
+    answer: "Yes. You can choose to pay strictly per square foot captured with our 'Pay-As-You-Go' plan, or opt for a monthly subscription for active projects."
   }
 ];

@@ -4,6 +4,9 @@ import VisualFormBuilderSection from '@/components/VisualFormBuilderSection';
 import CallToActionSection from '@/components/CallToAction';
 
 
+import { SolutionDetails } from '@/components/templates/SolutionDetails';
+import { SOLUTIONS_DATA } from '@/lib/seo-data';
+
 // SEO Metadata
 export const metadata: Metadata = {
   title: 'No-Code Visual Form Builder | Space Capture',
@@ -26,6 +29,7 @@ export default function VisualFormBuilderPage() {
   return (
     <main className="w-full overflow-x-hidden">
       <VisualFormBuilderSection/>
+      <SolutionDetails data={SOLUTIONS_DATA['visual-form-builder']} />
       <CallToActionSection/>
     </main>
   );

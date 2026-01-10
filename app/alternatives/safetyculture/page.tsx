@@ -6,8 +6,9 @@ import ComparisonTable from "@/components/ComparisonTable";
 import CallToAction from "@/components/CallToAction";
 
 export const metadata: Metadata = {
-  title: "SafetyCulture Alternative | SpaceCapture AI",
+  title: "Best Alternatives to SafetyCulture | SpaceCapture AI",
   description: "Stop manually filling specialized forms. Switch to SpaceCapture for automated defect detection, real-time risk quantification, and generative checklists.",
+  keywords: "SafetyCulture alternative, iAuditor alternative, best inspection app, automated checklist, spacecapture vs safetyculture",
 };
 
 const SafetyCulturePage = () => {

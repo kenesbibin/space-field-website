@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Instagram, Linkedin, Twitter, Youtube, Github, CheckCircle2 } from 'lucide-react';
+import { Instagram, Linkedin, Twitter, Youtube, Github, CheckCircle2, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Footer() {
@@ -11,6 +11,35 @@ export default function Footer() {
       
       {/* Background Glow */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(99,102,241,0.15),transparent_40%)]"></div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Space Capture",
+            "image": "https://spacecapture.ai/images/logo.jpg",
+            "telephone": "+14198201487",
+            "email": "support@spacecapture.ai",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "2500 Marconi Ave, Ste 101",
+              "addressLocality": "Sacramento",
+              "addressRegion": "CA",
+              "postalCode": "95821",
+              "addressCountry": "US"
+            },
+            "url": "https://spacecapture.ai",
+            "sameAs": [
+              "https://x.com/pmspace0707",
+              "https://www.instagram.com/space_ai77/",
+              "https://www.youtube.com/@spaceai-7",
+              "https://www.linkedin.com/company/spaceaiapp.com"
+            ]
+          })
+        }}
+      />
 
       <div className="container relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6">
         
@@ -40,11 +69,15 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Core Features</h3>
             <ul className="space-y-4">
+              <FooterLink href="/core-functions">Core Platform</FooterLink>
               <FooterLink href="/visual-form-builder">Visual Form Builder</FooterLink>
               <FooterLink href="/ai-detection">AI Detection Analysis</FooterLink>
               <FooterLink href="/engagement-flows">Engagement Flows</FooterLink>
               <FooterLink href="/access-control">Access Control</FooterLink>
               <FooterLink href="/reports">Deep Insights</FooterLink>
+              <FooterLink href="/hosting">Flexible Hosting</FooterLink>
+              <FooterLink href="/integrations">Integrations</FooterLink>
+              <FooterLink href="/tools/switching-calculator">ROI Calculator</FooterLink>
             </ul>
           </div>
 
@@ -53,7 +86,9 @@ export default function Footer() {
             <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Industries</h3>
             <ul className="space-y-4">
               <FooterLink href="/industries/construction">Construction Punch Lists</FooterLink>
-              <FooterLink href="/industries/telecommunication">Telecommunications</FooterLink>
+              <FooterLink href="/industries/insurance">Insurance & Claims</FooterLink>
+              <FooterLink href="/industries/real-estate">Real Estate & Tours</FooterLink>
+              <FooterLink href="/industries/telecom">Telecommunications</FooterLink>
               <FooterLink href="/industries/manufacturing">Manufacturing</FooterLink>
               <FooterLink href="/industries/oil-and-gas">Oil & Gas Inspection</FooterLink>
               <FooterLink href="/industries/utilities">Utilities</FooterLink>
@@ -63,27 +98,32 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Engineering Lab (New) */}
+          {/* Column 4: Construction AI Blog */}
           <div>
-            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Engineering Lab</h3>
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Construction AI Blog</h3>
             <ul className="space-y-4">
-              <FooterLink href="/lab">Lab Overview</FooterLink>
-              <FooterLink href="/lab/photogrammetry">Photogrammetry Test</FooterLink>
-              <FooterLink href="/lab/point-cloud">Point Cloud Engine</FooterLink>
-              <FooterLink href="/lab/auto-align">Auto-Align Tech</FooterLink>
-              <FooterLink href="/lab/offline-sync">Offline Sync Protocol</FooterLink>
-              <FooterLink href="/lab/time-lapse">Time-Lapse Engine</FooterLink>
+              <FooterLink href="/blog" className="text-purple-400 font-bold flex items-center gap-2">
+                 View Field Modules <ArrowRight className="w-3 h-3" />
+              </FooterLink>
+              <FooterLink href="/knowledge-base">Field Glossary</FooterLink>
+              <FooterLink href="/blog/computer-vision-risk">Defect Detection AI</FooterLink>
+              <FooterLink href="/blog/end-of-manual-punch-lists">Inspection Software</FooterLink>
+              <FooterLink href="/blog/predictive-maintenance">Maintenance Module</FooterLink>
+              <FooterLink href="/blog/drone-defect-detection">Drone Field Integration</FooterLink>
+              <FooterLink href="/resources/templates" className="text-blue-400 font-bold">Free Field App</FooterLink>
             </ul>
           </div>
 
           {/* Column 5: Trust & Support (New) */}
           <div>
-            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Trust & Support</h3>
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Resources & Support</h3>
             <ul className="space-y-4">
-              <FooterLink href="/customers" className="text-yellow-400 font-bold">Customer Stories</FooterLink>
-              <FooterLink href="/trust">Trust Center</FooterLink>
-              <FooterLink href="/faq">Help & FAQ</FooterLink>
               <FooterLink href="/about-us">About Us</FooterLink>
+              <FooterLink href="/trust">Trust Center</FooterLink>
+              <FooterLink href="/pricing">Pricing</FooterLink>
+              <FooterLink href="/customers" className="text-yellow-400 font-bold">Customer Stories</FooterLink>
+              <FooterLink href="/compare/raken" className="text-slate-300 font-medium hover:text-white">Compare vs Raken</FooterLink>
+              <FooterLink href="/faq">Help & FAQ</FooterLink>
               <FooterLink href="/request-a-demo" className="text-blue-400 font-bold">Request a Demo</FooterLink>
             </ul>
           </div>
@@ -101,6 +141,9 @@ export default function Footer() {
              </p>
              <p className="text-[10px] text-slate-600 mt-1">
                2500 MARCONI AVE, STE 101, SACRAMENTO, CA 95821
+             </p>
+             <p className="text-[10px] text-slate-600">
+               PHONE: +1 (419) 820-1487
              </p>
           </div>
           

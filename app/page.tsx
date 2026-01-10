@@ -4,11 +4,14 @@ import Features from '@/components/Features'
 import GuideSection from '@/components/GuideSection'
 import HeroSection from '@/components/HeroSection'
 import ShowcaseSection from '@/components/ShowcaseSection'
+import FaqSection from '@/components/FaqSection'
+
 import type { Metadata } from 'next'
 
+
 export const metadata: Metadata = {
-  title: 'Field Operations & Inspection Software | SpaceCapture',
-  description: 'Manage field operations with precision. A mobile tracking solution for construction, maintenance, and inspections. Stop chaos and see progress in real-time.',
+  title: 'AI-Powered Field Inspection Software | SpaceCapture',
+  description: 'The #1 AI Field Inspection Software for construction & maintenance. Automate defect detection, daily reports, and safety compliance with our free mobile app.',
   alternates: {
     canonical: '/',
   },
@@ -22,6 +25,8 @@ export default function Home() {
        <GuideSection/>
        <Features/>
        <AiDetectionApiSection/>
+
+       <FaqSection />
        <CallToActionSection/>
     </main>
   )
