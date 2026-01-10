@@ -85,7 +85,7 @@ const GuideSection = () => {
                   <ClipboardList className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-slate-900">Digital Task Management</h4>
+                  <h3 className="text-lg font-bold text-slate-900">Digital Task Management</h3>
                   <p className="text-slate-600 mt-1">Assign duties instantly and track completion status without the paperwork.</p>
                 </div>
               </div>
@@ -96,7 +96,7 @@ const GuideSection = () => {
                   <BarChart3 className="w-6 h-6 text-indigo-600 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-slate-900">Real-Time Site Analytics</h4>
+                  <h3 className="text-lg font-bold text-slate-900">Real-Time Site Analytics</h3>
                   <p className="text-slate-600 mt-1">Get live insights on workforce productivity and project milestones.</p>
                 </div>
               </div>
@@ -107,7 +107,7 @@ const GuideSection = () => {
                   <CheckCircle2 className="w-6 h-6 text-purple-600 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-slate-900">Automated Compliance</h4>
+                  <h3 className="text-lg font-bold text-slate-900">Automated Compliance</h3>
                   <p className="text-slate-600 mt-1">Ensure every safety protocol is checked, logged, and synced to the cloud.</p>
                 </div>
               </div>

@@ -28,20 +28,26 @@ import {
   Mail,
   Check,
   Copy,
-  Globe
+  Globe,
+  ShieldCheck,
+  Building2,
+  Ruler,
 } from 'lucide-react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { div } from 'framer-motion/client';
 
 // --- Configuration Data ---
 const industriesItems = [
   { name: 'Construction', href: '/industries/construction', icon: Hammer, description: 'Manage sites and crews efficiently.' },
+  { name: 'Insurance & Claims', href: '/industries/insurance', icon: ShieldCheck, description: 'Remote adjusting & fraud prevention.' },
+  { name: 'Real Estate', href: '/industries/real-estate', icon: Building2, description: 'Virtual tours & investor updates.' },
   { name: 'Utilities & Energy', href: '/industries/utilities', icon: Zap, description: 'Grid maintenance and inspections.' },
   { name: 'Telecommunications', href: '/industries/telecom', icon: Wifi, description: 'Field service for network infra.' },
   { name: 'HVAC & Plumbing', href: '/industries/hvac', icon: Wrench, description: 'Dispatch and repair tracking.' },
   { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory, description: 'Equipment maintenance logs.' },
   { name: 'Logistics', href: '/industries/logistics', icon: Truck, description: 'Fleet and delivery operations.' },
-  { name: 'Oil & Gas', href: '/industries/oil-gas', icon: Droplets, description: 'Safety compliance and checks.' },
+  { name: 'Oil & Gas', href: '/industries/oil-and-gas', icon: Droplets, description: 'Safety compliance and checks.' },
   { name: 'Facility Management', href: '/industries/facility-management', icon: HardHat, description: 'Building upkeep and services.' },
 ];
 
@@ -54,9 +60,27 @@ const productsMenuItems: { [key: string]: { name: string; href: string; icon: an
     { name: 'Access Control', href: '/access-control', icon: Lock, description: 'Secure data with role-based access.' },
     { name: 'Deep Insights', href: '/reports', icon: BarChart3, description: 'Analytics and reporting dashboard.' },
   ],
+  'AI Intelligence': [
+    { name: 'AI Detection Analysis', href: '/ai-detection', icon: BrainIcon, description: 'Manage team members and permissions.' },
+    { name: 'AI Tuning Station', href: '/lab/ai-tuning', icon: BrainIcon, description: 'Fine-tune object detection models.' },
+    { name: 'Privacy Scrubbing', href: '/lab/privacy', icon: Lock, description: 'GDPR-compliant face blurring.' },
+    { name: 'Voice-to-Tag', href: '/lab/voice-tag', icon: Zap, description: 'Hands-free site documentation.' },
+  ],
   'For Developers': [
     { name: 'Integrations', href: '/integrations', icon: Plug, description: 'Connect with your existing tools and systems.' },
     { name: 'Flexible Hosting', href: '/hosting', icon: Server, description: 'Deploy on-premise or in the cloud.' },
+  ],
+  'Who We Serve': [
+    { name: 'General Contractors', href: '/who-we-serve/general-contractors', icon: HardHat, description: 'Manage subs and site risk.' },
+    { name: 'Facility Managers', href: '/who-we-serve/facility-managers', icon: Factory, description: 'Maintenance and inspections.' },
+    { name: 'Subcontractors', href: '/who-we-serve/subcontractors', icon: Hammer, description: 'Get paid faster with daily logs.' },
+    { name: 'Property Developers', href: '/who-we-serve/property-developers', icon: BarChart3, description: 'Track ROI and milestones.' },
+    { name: 'Architects & Engineers', href: '/who-we-serve/architects-engineers', icon: Ruler, description: 'Design compliance and RFIs.' },
+  ],
+  'Comparisons': [
+    { name: 'vs SafetyCulture', href: '/alternatives/safetyculture', icon: HardHat, description: 'Compare inspection automation.' },
+    { name: 'vs GoCanvas', href: '/alternatives/gocanvas', icon: Layout, description: 'Compare visual data capture.' },
+    { name: 'vs Procore', href: '/alternatives/procore', icon: Factory, description: 'Field vs Office comparison.' },
   ],
 };
 
@@ -121,6 +145,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showIndustries, setShowIndustries] = useState(false);
   const [hoveredIndustries, setHoveredIndustries] = useState(false);
+
   const [showProducts, setShowProducts] = useState(false);
   const [hoveredProducts, setHoveredProducts] = useState(false);
   const [activeProductCategory, setActiveProductCategory] = useState<string>('Features');
@@ -137,7 +162,7 @@ export default function Navbar() {
   const SIGN_IN_URL = 'https://www.amspace.ai/login?type=Legal&moduleId=b20f5bfe-a351-46e7-842a-24a02802fe4f&invite=guest';
   const DEMO_URL = '/request-a-demo';
   const PHONE_NUMBER_SG = '+65 8611 1900';
-  const PHONE_NUMBER_USA = '+1 516 669 7420';
+  const PHONE_NUMBER_USA = '+1 419 820 1487';
   const CONTACT_EMAIL = 'contact@spacecapture.ai';
 
   useEffect(() => {
@@ -149,6 +174,8 @@ export default function Navbar() {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setShowIndustries(false);
         setHoveredIndustries(false);
+        setShowProducts(false);
+        setHoveredProducts(false);
         setShowProducts(false);
         setHoveredProducts(false);
       }
@@ -198,6 +225,8 @@ export default function Navbar() {
       setShowProducts(false);
     }, 150);
   };
+
+
 
   const handleMobileEmailCopy = () => {
     navigator.clipboard.writeText(CONTACT_EMAIL);
@@ -279,14 +308,14 @@ export default function Navbar() {
                     onMouseLeave={handleProductsMouseLeave}
                   >
                     <a
-                      href="/products"
+                      href="#"
                       className="flex items-center gap-1 text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer relative py-2"
                       onClick={(e) => {
+                        e.preventDefault();
                         if (showProducts) {
-                          e.preventDefault();
+                          setShowProducts(false);
+                          setHoveredProducts(false);
                         }
-                        setShowProducts(false);
-                        setHoveredProducts(false);
                       }}
                     >
                       Products
@@ -353,7 +382,7 @@ export default function Navbar() {
                         </div>
                       </div>
                     )}
-                  </div>
+                   </div>
 
                   {/* Industries Dropdown */}
                   <div 
@@ -362,14 +391,14 @@ export default function Navbar() {
                     onMouseLeave={handleIndustriesMouseLeave}
                   >
                     <a
-                      href="/industries"
+                      href="#"
                       className="flex items-center gap-1 text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer relative py-2"
                       onClick={(e) => {
-                        if (showIndustries) {
-                          e.preventDefault();
-                        }
-                        setShowIndustries(false);
-                        setHoveredIndustries(false);
+                         e.preventDefault();
+                         if (showIndustries) {
+                           setShowIndustries(false);
+                           setHoveredIndustries(false);
+                         }
                       }}
                     >
                       Industries
@@ -414,10 +443,22 @@ export default function Navbar() {
                       </div>
                     )}
                   </div>
-                </div>
-              </div>
+                  </div>
+                  
+                  {/* Resources Dropdown */}
 
-              {/* Desktop: Contact & Actions */}
+
+                </div>
+
+                {/* Pricing Link */}
+                 <a
+                      href="/pricing"
+                      className="flex items-center gap-1 text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer relative py-2 mr-8"
+                    >
+                      Pricing
+                 </a>
+
+                {/* Desktop: Contact & Actions */}
               <div className="hidden lg:flex items-center gap-4">
                 
                 {/* Email Icon (Triggers Modal) */}
@@ -531,6 +572,18 @@ export default function Navbar() {
                   ))}
                 </div>
               </div>
+
+
+
+
+
+              <a
+                href="/pricing"
+                className="block border-b border-gray-200 py-3 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Pricing
+              </a>
 
               {/* Contact Info Section */}
               <div className="border-b border-gray-200 pb-4 space-y-3">
