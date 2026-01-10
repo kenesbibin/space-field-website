@@ -22,6 +22,7 @@ import {
 import { useTranslation } from '@/hooks/useTranslation';
 
 const AiDetectionApiSection = () => {
+  const { t } = useTranslation();
   return (
     <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 overflow-hidden">
       
