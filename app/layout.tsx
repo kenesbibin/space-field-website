@@ -14,8 +14,8 @@ import { LanguageProvider } from "@/context/LanguageContext";
 
 
 export const metadata: Metadata = {
-  title: "Field Operations & Inspection Software | SpaceCapture",
-  description: "Manage field operations with precision. A mobile tracking solution for construction, maintenance, and inspections. Stop chaos and see progress in real-time.",
+  title: "AI-Powered Field Inspection Software | SpaceCapture",
+  description: "The #1 AI Field Inspection Software for construction & maintenance. Automate defect detection, daily reports, and safety compliance with our free mobile app.",
   verification: {
     google: "g7pWi8PWsp7s3Mq6eGjyKfJ1hrgqgfybkPOp-sXsNKY",
   },
