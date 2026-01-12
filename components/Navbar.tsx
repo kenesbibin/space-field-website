@@ -407,8 +407,8 @@ export default function Navbar() {
                   <Mail className="h-5 w-5" />
                 </button>
 
-                {/* Language Switcher */}
-                <div className="flex-shrink-0 relative z-20">
+                {/* Language Switcher - Ensure it has space and high z-index */}
+                <div className="flex-shrink-0 relative z-40">
                   <LanguageSwitcher />
                 </div>
 

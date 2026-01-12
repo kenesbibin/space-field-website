@@ -65,20 +65,20 @@ export default function LanguageSwitcher({ direction = 'down', isMobile = false 
     }
 
     return (
-        <div className="relative" ref={dropdownRef}>
+        <div className="relative z-50" ref={dropdownRef}>
             <button
                 onClick={toggleDropdown}
-                className="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100/50 hover:text-purple-600 transition-colors dark:text-gray-200 max-w-[140px]"
+                className="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100/50 hover:text-purple-600 transition-colors dark:text-gray-200"
                 aria-label="Select Language"
-                style={{ color: 'inherit' }}
             >
                 <Globe className="w-5 h-5 flex-shrink-0" />
-                <span className="hidden xl:inline-block font-medium truncate">{currentLanguage.nativeName}</span>
+                <span className="hidden lg:inline-block font-medium truncate max-w-[150px]">{currentLanguage.nativeName}</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
             </button>
 
             {isOpen && (
-                <div className={`absolute right-0 ${dropdowndirectionClass} w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-1 z-50 overflow-hidden animate-in fade-in zoom-in-95 duration-200 max-h-[80vh] overflow-y-auto`}>
+                <div className={`absolute right-0 ${dropdowndirectionClass} w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-1 overflow-hidden animate-in fade-in zoom-in-95 duration-200 max-h-[80vh] overflow-y-auto`}>
+                    {/* Content */}
                     <div className="py-2 px-3 bg-gray-50 border-b border-gray-100 text-xs font-semibold text-gray-500 uppercase tracking-wider">
                         Select Language
                     </div>
