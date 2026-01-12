@@ -203,7 +203,6 @@ const EngagementFlowsSection = () => {
                       </div>
                     </div>
                   </div>
-
                   {/* THEN Block */}
                   <div className="flex gap-4">
                     <div className="flex flex-col items-center gap-1 pt-1">

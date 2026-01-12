@@ -10,7 +10,6 @@ import {
   CloudUpload,
   AlertCircle,
   Wifi,
-  AlertTriangle,
   Zap,
   Hammer
 } from 'lucide-react';

@@ -3,8 +3,60 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
-import { Flame, ShieldAlert, Gauge, ArrowRight } from 'lucide-react';
+import { Flame, ShieldAlert, Gauge, ArrowRight, Route, ShieldCheck, Radio, Link as LinkIcon } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+
+const OIL_GAS_TIMELINE = [
+  {
+    label: 'Permit issued',
+    copy: 'Supervisors trigger digital permit-to-work templates, gas tests, and isolation plans that crews sign before entering the pad.',
+    keywords: 'PTW workflows · LOTO · gas readings',
+  },
+  {
+    label: 'Field execution',
+    copy: 'Technicians document inspections, corrosion readings, and photo proof offline, automatically routing issues to maintenance planners.',
+    keywords: 'offline sync · anomaly tagging · auto assignments',
+  },
+  {
+    label: 'Control room handoff',
+    copy: 'Completed forms push into SCADA/MMS notes, notify HSE, and archive into regulatory-ready packets within minutes.',
+    keywords: 'SCADA context · audit export · instant alerts',
+  },
+];
+
+const OIL_GAS_STORIES = [
+  {
+    title: 'Offshore production',
+    description: 'Deepwater operators coordinate daily rig walkdowns, safety drills, and BOP inspections even with limited connectivity.',
+    bullets: ['Sync checklists when helideck lands', 'Auto-compile daily production reports', 'Track corrective actions to closure'],
+  },
+  {
+    title: 'Midstream pipelines',
+    description: 'Pipeline integrity teams log CP readings, leak surveys, and excavation monitors with GIS context for regulators.',
+    bullets: ['Embed GPS + milepost in every form', 'Share PHMSA-ready evidence instantly', 'Trigger dig alerts to landowners'],
+  },
+];
+
+const OIL_GAS_FAQ = [
+  {
+    question: 'Does Space Field work in remote basins?',
+    answer: 'Yes. Crews complete inspections, take photos, and capture signatures offline. Data syncs once the device reconnects via satcom or Wi-Fi.',
+  },
+  {
+    question: 'Can we integrate with SCADA or MMS data?',
+    answer: 'We push events, readings, and work orders into systems like Honeywell, Aveva, or SAP PM using secure APIs and webhooks.',
+  },
+  {
+    question: 'How do we prove compliance to regulators?',
+    answer: 'Each activity is timestamped with user, GPS, and permit numbers, then exportable to BSEE, PHMSA, or EPA-friendly packets.',
+  },
+];
+
+const OIL_GAS_CTAS = [
+  { label: 'Download safety templates', href: '/resources/templates' },
+  { label: 'Digitize field inspections', href: '/solutions/inspection-software' },
+  { label: 'Secure crews with Azure SSO', href: '/solutions/azure-sso' },
+];
 
 const OilGasSection = () => {
   const { t } = useLanguage();
@@ -148,6 +200,106 @@ const OilGasSection = () => {
             <div className="absolute -z-10 -bottom-[-20px] -left-[-20px] w-64 h-64 bg-slate-300 rounded-full mix-blend-multiply filter blur-[60px] opacity-40"></div>
           </motion.div>
 
+        </div>
+      </div>
+
+      <div className="container mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+          {OIL_GAS_TIMELINE.map((step) => (
+            <motion.div
+              key={step.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-sm"
+            >
+              <div className="flex items-center gap-2 text-amber-700">
+                <Route className="h-5 w-5" />
+                <p className="text-xs font-bold uppercase tracking-[0.3em]">{step.label}</p>
+              </div>
+              <p className="mt-3 text-sm text-slate-600">{step.copy}</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-slate-500">{step.keywords}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          {OIL_GAS_STORIES.map((story) => (
+            <motion.div
+              key={story.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-[32px] border border-slate-200 bg-white/90 p-8 shadow-sm"
+            >
+              <div className="flex items-center gap-3 text-amber-700">
+                <ShieldCheck className="h-6 w-6" />
+                <p className="text-sm font-bold uppercase tracking-widest">{story.title}</p>
+              </div>
+              <p className="mt-3 text-sm text-slate-600">{story.description}</p>
+              <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                {story.bullets.map((bullet) => (
+                  <li key={bullet} className="flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-amber-500" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-[32px] border border-amber-200 bg-amber-50/70 p-8"
+          >
+            <div className="flex items-center gap-3 text-amber-700">
+              <Radio className="h-6 w-6" />
+              <p className="text-sm font-bold uppercase tracking-widest">Oil & Gas FAQ</p>
+            </div>
+            <div className="mt-4 space-y-4">
+              {OIL_GAS_FAQ.map((faq) => (
+                <div key={faq.question} className="rounded-2xl border border-amber-100 bg-white/80 p-4">
+                  <p className="text-base font-semibold text-slate-900">{faq.question}</p>
+                  <p className="mt-2 text-sm text-slate-600">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-[32px] border border-slate-200 bg-white/90 p-8"
+          >
+            <div className="flex items-center gap-3 text-slate-800">
+              <LinkIcon className="h-6 w-6" />
+              <p className="text-sm font-bold uppercase tracking-widest">Connect HSE + IT</p>
+            </div>
+            <p className="mt-3 text-sm text-slate-600">
+              Unite drilling, production, and security teams with Space Field integrations that link inspection data to SCADA, MMS, and enterprise identity.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {OIL_GAS_CTAS.map((cta) => (
+                <a
+                  key={cta.label}
+                  href={cta.href}
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-amber-700 hover:bg-amber-50"
+                >
+                  {cta.label}
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

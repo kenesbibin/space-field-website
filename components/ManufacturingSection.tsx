@@ -3,8 +3,60 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
-import { Factory, Wrench, PackageCheck, ArrowRight } from 'lucide-react';
+import { Factory, Wrench, PackageCheck, ArrowRight, Workflow, ShieldCheck, CircuitBoard, Link as LinkIcon } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+
+const MANUFACTURING_TIMELINE = [
+  {
+    label: 'Daily start-up',
+    copy: 'Operators complete machine warm-up checklists, log torque settings, and document safety gates before the first unit rolls.',
+    keywords: 'digital work orders · torque specs · safety attestations',
+  },
+  {
+    label: 'In-line quality',
+    copy: 'Inline inspectors capture photos, defects, and SPC readings that instantly notify supervisors and feed quality dashboards.',
+    keywords: 'SPC sampling · defect tagging · escalation rules',
+  },
+  {
+    label: 'Shift handoff',
+    copy: 'Space Field compiles downtime reasons, maintenance tickets, and finished goods counts so the next crew starts with context.',
+    keywords: 'downtime codes · MTTR tracking · shift notes',
+  },
+];
+
+const MANUFACTURING_STORIES = [
+  {
+    title: 'Automotive suppliers',
+    description: 'Tier 1 suppliers sync torque audits, battery pack inspections, and containment actions directly back to plant leadership.',
+    bullets: ['Launch containment plans in minutes', 'Share PPAP-ready evidence packs', 'Sync with PLM + MES change notices'],
+  },
+  {
+    title: 'Consumer packaged goods',
+    description: 'CPG plants digitize sanitation, allergen changeover, and packaging verification to keep audit trails airtight.',
+    bullets: ['Color-coded allergen verification', 'Photo proof for label compliance', 'Instant alerts when CCPs drift'],
+  },
+];
+
+const MANUFACTURING_FAQ = [
+  {
+    question: 'Does Space Field integrate with CMMS or MES tools?',
+    answer: 'Yes. We push and pull data from systems like Fiix, Infor, and SAP so technicians never re-key tasks or downtime codes.',
+  },
+  {
+    question: 'How are operators trained on mobile checklists?',
+    answer: 'Create role-based playlists with video, QR codes at each cell, and multilingual prompts so teams adopt the process in days.',
+  },
+  {
+    question: 'Can we prove compliance to auditors?',
+    answer: 'Every action is timestamped with user, machine, and lot details—exportable to ISO, FDA, or customer-ready packets instantly.',
+  },
+];
+
+const MANUFACTURING_CTAS = [
+  { label: 'Browse inspection templates', href: '/resources/templates' },
+  { label: 'Connect to maintenance stack', href: '/solutions/inspection-software' },
+  { label: 'Secure plants with Azure SSO', href: '/solutions/azure-sso' },
+];
 
 const ManufacturingSection = () => {
   const { t } = useLanguage();
@@ -148,6 +200,106 @@ const ManufacturingSection = () => {
             <div className="absolute -z-10 -bottom-[-20px] -left-[-20px] w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-[60px] opacity-40"></div>
           </motion.div>
 
+        </div>
+      </div>
+
+      <div className="container mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+          {MANUFACTURING_TIMELINE.map((step) => (
+            <motion.div
+              key={step.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-sm"
+            >
+              <div className="flex items-center gap-2 text-indigo-700">
+                <Workflow className="h-5 w-5" />
+                <p className="text-xs font-bold uppercase tracking-[0.3em]">{step.label}</p>
+              </div>
+              <p className="mt-3 text-sm text-slate-600">{step.copy}</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-slate-500">{step.keywords}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          {MANUFACTURING_STORIES.map((story) => (
+            <motion.div
+              key={story.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-[32px] border border-slate-200 bg-white/90 p-8 shadow-sm"
+            >
+              <div className="flex items-center gap-3 text-indigo-700">
+                <ShieldCheck className="h-6 w-6" />
+                <p className="text-sm font-bold uppercase tracking-widest">{story.title}</p>
+              </div>
+              <p className="mt-3 text-sm text-slate-600">{story.description}</p>
+              <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                {story.bullets.map((bullet) => (
+                  <li key={bullet} className="flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-indigo-500" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-[32px] border border-indigo-200 bg-indigo-50/70 p-8"
+          >
+            <div className="flex items-center gap-3 text-indigo-700">
+              <CircuitBoard className="h-6 w-6" />
+              <p className="text-sm font-bold uppercase tracking-widest">Manufacturing FAQ</p>
+            </div>
+            <div className="mt-4 space-y-4">
+              {MANUFACTURING_FAQ.map((faq) => (
+                <div key={faq.question} className="rounded-2xl border border-indigo-100 bg-white/80 p-4">
+                  <p className="text-base font-semibold text-slate-900">{faq.question}</p>
+                  <p className="mt-2 text-sm text-slate-600">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-[32px] border border-slate-200 bg-white/90 p-8"
+          >
+            <div className="flex items-center gap-3 text-slate-800">
+              <LinkIcon className="h-6 w-6" />
+              <p className="text-sm font-bold uppercase tracking-widest">Connect your plants</p>
+            </div>
+            <p className="mt-3 text-sm text-slate-600">
+              Give maintenance, quality, and IT teams a unified workspace that ties inspection data to enterprise systems with zero duplicate entry.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {MANUFACTURING_CTAS.map((cta) => (
+                <a
+                  key={cta.label}
+                  href={cta.href}
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-indigo-700 hover:bg-indigo-50"
+                >
+                  {cta.label}
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

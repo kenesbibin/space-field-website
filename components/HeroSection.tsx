@@ -29,8 +29,6 @@ export default function HeroSection() {
     }
   };
 
-  // 2. FIX: Separate the transition and use 'as const' for the ease property
-  // This fixes the "Type string is not assignable to type Easing" error
   const blobTransition = {
     duration: 7,
     repeat: Infinity,

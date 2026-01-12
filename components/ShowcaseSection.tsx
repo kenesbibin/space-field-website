@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from '@/hooks/useTranslation';
 
 
+
 const ShowcaseSection = () => {
   const { t } = useTranslation();
 

@@ -1,9 +1,10 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import type { ElementType } from 'react';
 import Image from 'next/image';
 import {
-  Menu, X, ChevronDown, ChevronRight, Phone, Hammer, Wifi, Wrench, Factory, Truck, Droplets, HardHat, Zap, Layout, Palette, Users, GitBranch, Lock, BarChart3, Plug, Server, BrainIcon, Mail, Check, Copy, Globe
+  Menu, X, ChevronDown, ChevronRight, Phone, Hammer, Wifi, Wrench, Factory, Truck, Droplets, HardHat, Zap, Layout, Palette, Users, GitBranch, Lock, BarChart3, Plug, Server, BrainIcon, Mail, Check, Copy, Globe, ShieldCheck, Clock
 } from 'lucide-react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -22,7 +23,14 @@ const industriesItems = [
   { name: 'facilityManagement', href: '/industries/facility-management', icon: HardHat },
 ];
 
-const productsMenuItems: { [key: string]: { name: string; href: string; icon: any }[] } = {
+type ProductMenuItem = {
+  name: string;
+  href: string;
+  icon: ElementType;
+  description?: string;
+};
+
+const productsMenuItems: Record<string, ProductMenuItem[]> = {
   Features: [
     { name: 'coreFunctions', href: '/core-functions', icon: Layout },
     { name: 'visualFormBuilder', href: '/visual-form-builder', icon: Palette },
@@ -34,6 +42,17 @@ const productsMenuItems: { [key: string]: { name: string; href: string; icon: an
   'For Developers': [
     { name: 'integrations', href: '/integrations', icon: Plug },
     { name: 'flexibleHosting', href: '/hosting', icon: Server },
+  ],
+  Solutions: [
+    { name: 'Azure AD SSO', href: '/solutions/azure-sso', icon: Lock, description: 'Azure single sign on + Okta federation for every workflow.' },
+    { name: 'Inspection Software', href: '/solutions/inspection-software', icon: ShieldCheck, description: 'Building, fire, vehicle, and quality inspection apps.' },
+    { name: 'Fleet Maintenance', href: '/solutions/fleet-maintenance', icon: Truck, description: 'Fleet maintenance app, DVIR, and equipment tracking.' },
+    { name: 'Time Tracking', href: '/solutions/time-tracking', icon: Clock, description: 'Time clock apps, payroll-ready timesheets, and scheduling.' },
+    { name: 'Data Collection', href: '/solutions/data-collection', icon: Plug, description: 'Fulcrum app alternative, offline forms, and feature requests.' },
+  ],
+  Resources: [
+    { name: 'Construction Templates', href: '/resources/templates', icon: Globe, description: 'Scope of work, safety checklists, and inspection templates.' },
+    { name: 'Fulcrum Comparison', href: '/compare/fulcrum', icon: GitBranch, description: 'See how SpaceCapture stacks up against the Fulcrum app.' },
   ],
 };
 
@@ -79,7 +98,7 @@ const EmailModal = ({ isOpen, onClose, email }: { isOpen: boolean; onClose: () =
               className="flex items-center justify-center p-2 rounded-md transition-colors hover:bg-white hover:shadow-sm text-gray-500 hover:text-purple-600 focus:outline-none"
               title="Copy to clipboard"
             >
-              {copied ? <Check className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5" />}
+              {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
             </button>
           </div>
 
@@ -476,13 +495,13 @@ export default function Navbar() {
         <div className="fixed inset-0 z-30 overflow-y-auto bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-100 backdrop-blur-xl pt-24 lg:hidden">
           <div className="container px-4 py-6">
             <nav className="space-y-6">
-              <a
+              <Link
                 href="/"
                 className="block border-b border-gray-200 py-3 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('navbar.home')}
-              </a>
+              </Link>
 
               {/* Products Section */}
               <div className="border-b border-gray-200 pb-4">
@@ -512,10 +531,10 @@ export default function Navbar() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div >
 
               {/* Industries Section */}
-              <div className="border-b border-gray-200 pb-4">
+              < div className="border-b border-gray-200 pb-4" >
                 <div className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-600">
                   {t('navbar.industries')}
                 </div>
@@ -535,24 +554,25 @@ export default function Navbar() {
                     </a>
                   ))}
                 </div>
-              </div>
+              </div >
 
               {/* Contact Info Section */}
-              <div className="border-b border-gray-200 pb-4 space-y-3">
+              < div className="border-b border-gray-200 pb-4 space-y-3" >
                 {/* Email for Mobile */}
-                <button
+                < button
                   className="flex w-full items-center gap-3 py-2 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer text-left"
                   onClick={handleMobileEmailCopy}
                 >
-                  {mobileEmailCopied ? <Check className="h-5 w-5 text-green-600" /> : <Mail className="h-5 w-5" />}
+                  {mobileEmailCopied ? <Check className="h-5 w-5 text-green-600" /> : <Mail className="h-5 w-5" />
+                  }
                   <div className="flex flex-col">
                     <span className="text-sm font-medium">{t('common.email')}</span>
                     <span className="text-xs text-gray-500">{mobileEmailCopied ? t('common.copied') : CONTACT_EMAIL}</span>
                   </div>
-                </button>
+                </button >
 
                 {/* USA Number */}
-                <a
+                < a
                   href={`tel:${PHONE_NUMBER_USA.replace(/\s/g, '')}`}
                   className="flex w-full items-center gap-3 py-2 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
                   onClick={() => setIsMenuOpen(false)}
@@ -562,10 +582,10 @@ export default function Navbar() {
                     <span className="text-sm font-medium">{t('common.usa')}</span>
                     <span className="text-sm">{PHONE_NUMBER_USA}</span>
                   </div>
-                </a>
+                </a >
 
                 {/* SG Number */}
-                <a
+                < a
                   href={`tel:${PHONE_NUMBER_SG.replace(/\s/g, '')}`}
                   className="flex w-full items-center gap-3 py-2 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
                   onClick={() => setIsMenuOpen(false)}
@@ -575,24 +595,24 @@ export default function Navbar() {
                     <span className="text-sm font-medium">{t('common.singapore')}</span>
                     <span className="text-sm">{PHONE_NUMBER_SG}</span>
                   </div>
-                </a>
-              </div>
+                </a >
+              </div >
 
               {/* Mobile Language Switcher */}
-              <div className="border-b border-gray-200 pb-4">
+              < div className="border-b border-gray-200 pb-4" >
                 <LanguageSwitcher isMobile={true} />
-              </div>
+              </div >
 
               {/* Buttons */}
-              <div className="pt-2 pb-8">
+              < div className="pt-2 pb-8" >
                 <div className="flex flex-col gap-4">
                   {renderButton(SIGN_IN_URL, t('common.signIn'))}
                   {renderButton(DEMO_URL, t('common.requestDemo'), false)}
                 </div>
-              </div>
-            </nav>
-          </div>
-        </div>
+              </div >
+            </nav >
+          </div >
+        </div >
       )}
     </>
   );

@@ -3,8 +3,60 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
-import { ThermometerSnowflake, Droplets, ClipboardList, ArrowRight } from 'lucide-react';
+import { ThermometerSnowflake, Droplets, ClipboardList, ArrowRight, Route, Briefcase, Wrench, Link as LinkIcon } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+
+const HVAC_JOURNEY = [
+  {
+    label: 'Call intake',
+    copy: 'Capture service calls, maintenance contracts, and emergency requests with photos, floor plans, and preferred time windows.',
+    keywords: 'service dispatch · customer portal · SLA timers',
+  },
+  {
+    label: 'Technician workflow',
+    copy: 'Technicians follow HVAC inspection forms, plumbing report templates, and safety checklists with offline support and barcode scans.',
+    keywords: 'QR codes · parts usage · digital signatures',
+  },
+  {
+    label: 'Invoice + handoff',
+    copy: 'Push timesheets, parts, and photos to accounting or customer portals instantly—no clipboards, no double entry.',
+    keywords: 'field invoicing · ERP export · customer updates',
+  },
+];
+
+const HVAC_STORIES = [
+  {
+    title: 'Healthcare facilities',
+    description: 'Hospital maintenance teams rely on offline HVAC inspection forms that document compliance for every AHU and isolation room.',
+    bullets: ['Track filter changes with QR stickers', 'Generate reporting for Joint Commission audits', 'Alert staff when thresholds violate setpoints'],
+  },
+  {
+    title: 'Multifamily plumbing',
+    description: 'Property managers bundle plumbing work order templates, leak reports, and resident notifications within one timeline.',
+    bullets: ['Automated tenant updates via SMS/email', 'Photo-rich reports for insurance claims', 'Batch schedule riser maintenance'],
+  },
+];
+
+const HVAC_FAQ = [
+  {
+    question: 'Do techs need connectivity to log HVAC inspections?',
+    answer: 'No. Every HVAC inspection form and plumbing report template works offline; sync resumes automatically once devices reconnect.',
+  },
+  {
+    question: 'Can we link to inventory and purchasing?',
+    answer: 'SpaceCapture logs labor, equipment, and parts, then exports data to ERPs like CMiC, Vista, or QuickBooks with no CSV cleanup.',
+  },
+  {
+    question: 'How do customers sign off?',
+    answer: 'Technicians capture digital signatures, invoices, and photo proof on-site, emailing branded PDFs immediately after completion.',
+  },
+];
+
+const HVAC_CTAS = [
+  { label: 'View inspection playbook', href: '/solutions/inspection-software' },
+  { label: 'Secure crews with Azure SSO', href: '/solutions/azure-sso' },
+  { label: 'Download service templates', href: '/resources/templates' },
+];
 
 const HvacPlumbingSection = () => {
   const { t } = useLanguage();
@@ -148,6 +200,106 @@ const HvacPlumbingSection = () => {
             <div className="absolute -z-10 -bottom-[-20px] -left-[-20px] w-64 h-64 bg-teal-300 rounded-full mix-blend-multiply filter blur-[60px] opacity-40"></div>
           </motion.div>
 
+        </div>
+      </div>
+
+      <div className="container mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+          {HVAC_JOURNEY.map((step) => (
+            <motion.div
+              key={step.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-sm"
+            >
+              <div className="flex items-center gap-2 text-teal-700">
+                <Route className="h-5 w-5" />
+                <p className="text-xs font-bold uppercase tracking-[0.3em]">{step.label}</p>
+              </div>
+              <p className="mt-3 text-sm text-slate-600">{step.copy}</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-slate-500">{step.keywords}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          {HVAC_STORIES.map((story) => (
+            <motion.div
+              key={story.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-[32px] border border-slate-200 bg-white/90 p-8 shadow-sm"
+            >
+              <div className="flex items-center gap-3 text-teal-700">
+                <Briefcase className="h-6 w-6" />
+                <p className="text-sm font-bold uppercase tracking-widest">{story.title}</p>
+              </div>
+              <p className="mt-3 text-sm text-slate-600">{story.description}</p>
+              <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                {story.bullets.map((bullet) => (
+                  <li key={bullet} className="flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-teal-500" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-[32px] border border-teal-200 bg-teal-50/70 p-8"
+          >
+            <div className="flex items-center gap-3 text-teal-700">
+              <Wrench className="h-6 w-6" />
+              <p className="text-sm font-bold uppercase tracking-widest">HVAC & plumbing FAQ</p>
+            </div>
+            <div className="mt-4 space-y-4">
+              {HVAC_FAQ.map((faq) => (
+                <div key={faq.question} className="rounded-2xl border border-teal-100 bg-white/80 p-4">
+                  <p className="text-base font-semibold text-slate-900">{faq.question}</p>
+                  <p className="mt-2 text-sm text-slate-600">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-[32px] border border-slate-200 bg-white/90 p-8"
+          >
+            <div className="flex items-center gap-3 text-slate-800">
+              <LinkIcon className="h-6 w-6" />
+              <p className="text-sm font-bold uppercase tracking-widest">Connect your stack</p>
+            </div>
+            <p className="mt-3 text-sm text-slate-600">
+              Keep dispatch, inspection, and security teams aligned by pairing HVAC + plumbing workflows with SpaceCapture solutions.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {HVAC_CTAS.map((cta) => (
+                <a
+                  key={cta.label}
+                  href={cta.href}
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-teal-700 hover:bg-teal-50"
+                >
+                  {cta.label}
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

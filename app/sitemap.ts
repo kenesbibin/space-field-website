@@ -7,7 +7,7 @@ const ROUTES: string[] = [
   "/about-us",
   "/request-a-demo",
   "/pricing",
-  
+
   // Products / Features
   "/core-functions",
   "/visual-form-builder",
@@ -18,6 +18,13 @@ const ROUTES: string[] = [
   "/hosting",
   "/integrations",
   "/tools/switching-calculator",
+
+  // Solutions (New from dev)
+  "/solutions/azure-sso",
+  "/solutions/inspection-software",
+  "/solutions/fleet-maintenance",
+  "/solutions/time-tracking",
+  "/solutions/data-collection",
 
   // Resources
   "/resources",
@@ -46,13 +53,14 @@ const ROUTES: string[] = [
 
   // Comparisons
   "/compare/raken",
+  "/compare/fulcrum",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	const lastModified = new Date().toISOString();
+  const lastModified = new Date().toISOString();
 
-	return ROUTES.map((path) => ({
-		url: `${BASE_URL}${path === "/" ? "" : path}`,
-		lastModified,
-	}));
+  return ROUTES.map((path) => ({
+    url: `${BASE_URL}${path === "/" ? "" : path}`,
+    lastModified,
+  }));
 }
