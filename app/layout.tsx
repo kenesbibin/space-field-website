@@ -6,6 +6,7 @@ import WhatsAppButton from "@/components/WhatsappButton";
 import SpaceCaptureCopilot from "@/components/SpaceCaptureCopilot";
 import CopilotKitWrapper from "@/components/CopilotKitWrapper";
 import EmailButton from "@/components/EmailButton";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 
 
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
   verification: {
     google: "g7pWi8PWsp7s3Mq6eGjyKfJ1hrgqgfybkPOp-sXsNKY",
   },
+  metadataBase: new URL("https://spacecapture.ai"),
 };
 
 export default function RootLayout({
@@ -28,15 +30,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <CopilotKitWrapper>
-          <Navbar />
-          {children}
-          <Footer />
-          <EmailButton/>
-          <WhatsAppButton />
-          <SpaceCaptureCopilot />
-        </CopilotKitWrapper>
-        
+        <LanguageProvider>
+          <CopilotKitWrapper>
+            <Navbar />
+            {children}
+            <Footer />
+            <EmailButton />
+            <WhatsAppButton />
+            <SpaceCaptureCopilot />
+          </CopilotKitWrapper>
+        </LanguageProvider>
       </body>
     </html>
   );

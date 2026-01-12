@@ -1,0 +1,907 @@
+{
+    "common": {
+        "appName": "SPACE CAPTURE",
+        "tryForFree": "免费试用",
+        "requestDemo": "申请演示",
+        "signIn": "登录",
+        "email": "邮箱",
+        "usa": "美国",
+        "singapore": "新加坡",
+        "getInTouch": "联系我们",
+        "copyEmail": "复制下方邮箱直接发送消息。",
+        "copied": "已复制到剪贴板！",
+        "clickToCopy": "点击图标复制"
+    },
+    "navbar": {
+        "home": "首页",
+        "products": "产品",
+        "industries": "行业"
+    },
+    "hero": {
+        "titlePrefix": "掌控您的现场运营，凭借",
+        "titleHighlight": "绝对精准",
+        "description": "消除现场混乱。SPACE CAPTURE 为建筑、维护和检查团队提供终极移动指挥中心，实时追踪进度。",
+        "startFreeTrial": "开始免费试用",
+        "scheduleDemo": "预约演示",
+        "siteInspection": "现场检查",
+        "completedJustNow": "已完成 • 刚刚"
+    },
+    "showcase": {
+        "slide1": {
+            "title": "现场运营中心",
+            "location": "建筑工地 A",
+            "description": "实时监控"
+        },
+        "slide2": {
+            "title": "资产追踪",
+            "location": "物流中心",
+            "description": "高精度 GPS 锁定"
+        },
+        "slide3": {
+            "title": "安全合规",
+            "location": "检查区域",
+            "description": "100% 协议遵守"
+        },
+        "static": {
+            "highlight": "消除现场盲点。",
+            "title": "不要让距离成为进步的障碍。",
+            "description": "传统的现场管理依赖于猜测和过时的报告。SPACE CAPTURE 以军用级精度填补了现场实况与办公室决策之间的鸿沟。",
+            "button": "探索解决方案"
+        }
+    },
+    "guide": {
+        "badge": "全面工作流控制",
+        "headline": {
+            "prefix": "协调您的现场项目，凭借",
+            "highlight": "高效"
+        },
+        "description": {
+            "part1": "SPACE CAPTURE 不仅仅是让您知道在哪里——而是让您知道",
+            "bold": "您的项目处于什么阶段。",
+            "part2": "用数字精度取代混乱的纸质记录。在统一的生态系统中分配任务、记录检查并可视化进度。"
+        },
+        "feature1": {
+            "title": "数字任务管理",
+            "desc": "即时分配职责并追踪完成状态，无需纸张。"
+        },
+        "feature2": {
+            "title": "实时现场分析",
+            "desc": "获取关于劳动力生产力和项目里程碑的实时见解。"
+        },
+        "feature3": {
+            "title": "自动化合规",
+            "desc": "确保每一项安全协议都经过检查、记录并同步到云端。"
+        },
+        "image": {
+            "status": "系统在线",
+            "synced": "数据刚刚同步"
+        }
+    },
+    "features": {
+        "mockup": {
+            "fieldOps": "现场运营",
+            "siteCompletion": "现场完工",
+            "activeTasks": "活跃任务",
+            "newCount": "4 新增",
+            "syncButton": "同步数据"
+        },
+        "header": {
+            "badge": "能力",
+            "title": "我们的功能",
+            "description": "我们将强大的技术与简单的易用性相结合，帮助您掌控现场运营的每一个方面。"
+        },
+        "items": {
+            "ecosystem": {
+                "title": "统一的网络和移动生态系统",
+                "desc": "在用于办公室管理的强大网络仪表板和用于现场执行的强大移动应用程序之间无缝切换。一个平台，全面控制。"
+            },
+            "signatures": {
+                "title": "即时数字签名",
+                "desc": "消除纸质记录。直接在设备上安全地捕获客户批准和技术签名，以更快地验证工作并结案。"
+            },
+            "sync": {
+                "title": "现场实时同步",
+                "desc": "消除沟通鸿沟。现场所做的更新即时在办公室可见，确保项目经理始终掌握实时现场数据。"
+            },
+            "compliance": {
+                "title": "自动化安全与合规",
+                "desc": "数字化您的安全协议。强制执行强制性检查表、事故报告和数字签名，以确保您的现场符合所有行业标准。"
+            }
+        }
+    },
+    "aiApi": {
+        "section1": {
+            "badge": "开发者专区",
+            "title": {
+                "prefix": "",
+                "highlight": "AI 检测 API"
+            },
+            "description": "通过简单的 API 调用将工业级缺陷检测集成到您自己的应用程序中。上传任何图像，我们的引擎即时返回结构化的 JSON 载荷，识别缺陷、严重程度和精确坐标。",
+            "button": "免费试用",
+            "gifOverlay": "AI 检测运行中"
+        },
+        "card": {
+            "status": "分析成功",
+            "detectedObjects": "检测到的对象",
+            "confidence": "置信度：",
+            "box": "框：",
+            "actionLabel": "行动：",
+            "item1": {
+                "name": "结构裂缝",
+                "severity": "高严重性",
+                "action": "需立即维修。"
+            },
+            "item2": {
+                "name": "表面腐蚀",
+                "severity": "中等"
+            }
+        },
+        "section2": {
+            "badge": "开发者友好",
+            "title": {
+                "line1": "可解析的结果。",
+                "highlight": "无缝集成。"
+            },
+            "description": "以干净、可预测的 JSON 格式接收结果。这种结构化输出可以直接被您的内部报告系统、数据库或工作流自动化工具使用。",
+            "list": {
+                "item1": "标准 REST API 端点",
+                "item2": "可定制的检测模型",
+                "item3": "高正常运行时间与低延迟"
+            }
+        }
+    },
+    "cta": {
+        "title": {
+            "prefix": "今天就掌控",
+            "highlight": "SPACE CAPTURE",
+            "suffix": "。"
+        },
+        "description": "停止追逐纸质记录。立即通过专为建筑和运营打造的一体化平台同步您的办公室和现场团队。",
+        "buttons": {
+            "tryFree": "免费试用",
+            "bookDemo": "预约演示"
+        },
+        "footerText": "支持 iOS、Android 和 Web"
+    },
+    "demoRequest": {
+        "badge": "申请演示",
+        "title": {
+            "prefix": "变革您的现场运营，使用 ",
+            "highlight": "SPACE CAPTURE"
+        },
+        "description": "加入成千上万成功管理其现场运营的专业人士。体验专家指导、简化的任务管理和对您移动需求的全面支持。",
+        "features": {
+            "item1": {
+                "title": "专家现场指导",
+                "desc": "拥有数十年任务管理和合规经验的认证现场运营顾问。"
+            },
+            "item2": {
+                "title": "实时追踪",
+                "desc": "加速运营并优先追踪紧急的现场需求。"
+            },
+            "item3": {
+                "title": "全面解决方案",
+                "desc": "为建筑、维护、检查和进度报告提供端到端支持。"
+            }
+        },
+        "success": {
+            "title": "申请已收到！",
+            "message": "我们的团队将在 24 小时内联系您安排个性化演示。"
+        },
+        "form": {
+            "title": "安排您的个性化演示",
+            "description": "看 SPACE CAPTURE 实际运行。让我们讨论您独特的现场运营需求。",
+            "labels": {
+                "firstName": "名 *",
+                "lastName": "姓 *",
+                "email": "电子邮箱 *",
+                "phone": "电话号码 *",
+                "company": "公司名称 *",
+                "companySize": "公司规模",
+                "projectDetails": "项目详情"
+            },
+            "placeholders": {
+                "firstName": "张",
+                "lastName": "三",
+                "email": "zhang.san@company.com",
+                "phone": "+86 138 0013 8000",
+                "company": "您的公司",
+                "selectSize": "选择规模",
+                "projectDetails": "告诉我们您的需求..."
+            },
+            "errors": {
+                "firstName": "名字是必填项。",
+                "lastName": "姓氏是必填项。",
+                "emailRequired": "邮箱是必填项。",
+                "emailInvalid": "邮箱无效。",
+                "company": "公司名称是必填项。",
+                "phone": "电话号码是必填项。"
+            },
+            "button": {
+                "submit": "申请演示",
+                "submitting": "提交中..."
+            },
+            "footer": "提交此表单即表示您同意我们的服务条款和隐私政策。",
+            "options": {
+                "employees": "员工"
+            }
+        }
+    },
+    "footer": {
+        "brandDescription": "现场运营的终极移动指挥中心。利用 AI 驱动的工具简化任务、自动化报告并实时同步您的员工。",
+        "coreFeatures": "核心功能",
+        "visualFormBuilder": "可视化表单构建器",
+        "aiDetection": "AI 检测分析",
+        "engagementFlows": "参与流程",
+        "accessControl": "访问控制",
+        "deepInsights": "深度洞察",
+        "industries": "行业",
+        "construction": "施工遗留问题清单",
+        "telecommunication": "电信",
+        "manufacturing": "制造",
+        "oilGas": "石油与天然气检查",
+        "utilities": "公用事业",
+        "hvac": "暖通空调与管道",
+        "logistics": "物流",
+        "facilityManagement": "设施管理",
+        "company": "公司",
+        "aboutUs": "关于我们",
+        "bookDemo": "预约演示",
+        "resources": "资源",
+        "manifesto": "宣言：数字纸张的终结",
+        "tech": "技术：眼内乾坤",
+        "trust": "信任：AI 保证",
+        "caseStudy": "案例研究：预测性维护",
+        "guide": "指南：ISO 9001 自动驾驶",
+        "compare": "比较",
+        "vsSafetyCulture": "对比 SafetyCulture",
+        "vsGoCanvas": "对比 GoCanvas",
+        "tools": "工具",
+        "switchingCalculator": "切换计算器",
+        "copyright": "© 2025 SPACE CAPTURE. 保留所有权利。",
+        "address": "2500 MARCONI AVE, STE 101, SACRAMENTO, CA 95821"
+    },
+    "products": {
+        "features": "功能",
+        "forDevelopers": "开发者专区",
+        "coreFunctions": "核心功能",
+        "coreFunctionsDesc": "现场运营管理的基本工具。",
+        "visualFormBuilder": "可视化表单构建器",
+        "visualFormBuilderDesc": "无需代码即可创建自定义表单。",
+        "aiDetection": "AI 检测分析",
+        "aiDetectionDesc": "管理团队成员和权限。",
+        "engagementFlows": "参与流程",
+        "engagementFlowsDesc": "自动化工作流和流程。",
+        "accessControl": "访问控制",
+        "accessControlDesc": "通过基于角色的访问保护数据。",
+        "deepInsights": "深度洞察",
+        "deepInsightsDesc": "分析和报告仪表板。",
+        "integrations": "集成",
+        "integrationsDesc": "连接您现有的工具和系统。",
+        "flexibleHosting": "灵活托管",
+        "flexibleHostingDesc": "本地部署或云端部署。"
+    },
+    "industries": {
+        "construction": "建筑",
+        "constructionDesc": "高效管理现场和团队。",
+        "utilities": "公用事业与能源",
+        "utilitiesDesc": "电网维护和检查。",
+        "telecom": "电信",
+        "telecomDesc": "网络基础设施的现场服务。",
+        "hvac": "暖通空调与管道",
+        "hvacDesc": "调度和维修跟踪。",
+        "manufacturing": "制造",
+        "manufacturingDesc": "设备维护日志。",
+        "logistics": "物流",
+        "logisticsDesc": "车队和交付运营。",
+        "oilGas": "石油与天然气",
+        "oilGasDesc": "安全合规性检查。",
+        "facilityManagement": "设施管理",
+        "facilityManagementDesc": "建筑维护和服务。"
+    },
+    "constructionSection": {
+        "badge": "建筑行业",
+        "title": {
+            "line1": "更智能地建设，凭借 ",
+            "highlight": "数字精度"
+        },
+        "description": "Space Field 填补了建筑工地与会议室之间的鸿沟。利用我们专业的建筑模块消除纸张、减少返工并按时交付项目。",
+        "features": {
+            "item1": {
+                "title": "实时现场进度",
+                "desc": "即时追踪每日日志、工时和材料使用情况。通过来自地面的实时更新让利益相关者保持一致。"
+            },
+            "item2": {
+                "title": "数字质量控制与安全检查",
+                "desc": "数字化您的遗留问题清单和安全审计。拍照、注释问题并直接分配修复给分包商。"
+            },
+            "item3": {
+                "title": "车队与资产管理",
+                "desc": "监控重型设备的使用和位置。防止盗窃并优化部署计划以减少停机时间。"
+            }
+        },
+        "link": "查看建筑演示",
+        "imageAlt": "使用 Space Field 进行建筑工地管理"
+    },
+    "hvacSection": {
+        "badge": "暖通空调与管道",
+        "title": {
+            "line1": "掌控您的服务 ",
+            "highlight": "工作流"
+        },
+        "description": "Space Field 帮助暖通空调和管道企业更快调度、更智能修复。管理定期维护合同，追踪零件库存，并直接在现场向客户开票。",
+        "features": {
+            "item1": {
+                "title": "服务呼叫调度",
+                "desc": "将工作分配给最近且拥有正确技能的技术人员。实时追踪工作状态，从“在途中”到“已完成”。"
+            },
+            "item2": {
+                "title": "设备历史与审计",
+                "desc": "访问每个暖通空调单元的详细服务历史。扫描二维码即时检索手册、保修信息和过去的维修日志。"
+            },
+            "item3": {
+                "title": "管道检查报告",
+                "desc": "现场生成专业的检查报告。拍摄泄漏或管道问题的照片，并以此获得客户的数字签名。"
+            }
+        },
+        "link": "查看暖通空调演示",
+        "imageAlt": "暖通空调技术员和管道服务"
+    },
+    "coreFunctions": {
+        "badge": "Space Capture",
+        "title": {
+            "line1": "核心功能 ",
+            "highlight": "概览"
+        },
+        "description": "Space Capture 包含您在企业规模所需的所有强大现场数据工具。使用我们广泛的模块列表、智能逻辑和深度品牌选项创建专业、智能的表单。",
+        "cta": "立即开始",
+        "items": {
+            "visualFormBuilder": {
+                "title": "可视化表单构建器",
+                "desc": "拖放界面，几分钟内创建复杂的数据收集表单。无需编码。"
+            },
+            "aiDetection": {
+                "title": "AI 检测分析",
+                "desc": "自动分析调查图像以检测缺陷、分类资产并自动生成现场报告。"
+            },
+            "engagementFlows": {
+                "title": "参与流程",
+                "desc": "设计基于用户输入、位置或时间事件触发的自动化工作流。"
+            },
+            "accessControl": {
+                "title": "访问控制",
+                "desc": "细粒度的权限设置，确保正确的团队成员仅访问他们需要的内容。"
+            },
+            "deepInsights": {
+                "title": "深度洞察",
+                "desc": "通过实时分析和可导出报告将原始现场数据转化为可操作的情报。"
+            }
+        }
+    },
+    "logistics": {
+        "badge": "物流与车队",
+        "title": {
+            "line1": "在每个转弯处 ",
+            "highlight": "驱动效率"
+        },
+        "description": "Space Field 以端到端的可见性变革物流运营。从仓库码头到客户门口，确保每一英里都得到优化，每一次交付都得到验证。",
+        "link": "查看物流演示",
+        "imageAlt": "物流车队管理和交付",
+        "features": {
+            "fleetTracking": {
+                "title": "车队追踪与远程信息处理",
+                "desc": "实时监控车辆位置、燃油使用和驾驶员行为。减少怠速时间并优化路线以节省运营成本。"
+            },
+            "pod": {
+                "title": "交付证明 (POD)",
+                "desc": "在每次交付时捕获数字签名、照片和时间戳。自动更新订单状态并触发客户通知。"
+            },
+            "routeOptimization": {
+                "title": "动态路线优化",
+                "desc": "即时规划最高效的交付顺序。根据交通、天气或紧急取件请求即时调整路线。"
+            }
+        }
+    },
+    "utilities": {
+        "badge": "公用事业与能源",
+        "title": {
+            "line1": "赋能电网，凭借 ",
+            "highlight": "智能现场运营"
+        },
+        "description": "Space Field 使公用事业运营现代化。从日常线路维护到紧急风暴响应，确保您的基础设施保持弹性，您的员工保持安全。",
+        "link": "查看公用事业解决方案",
+        "imageAlt": "公用事业现场运营和电网维护",
+        "features": {
+            "gridMaintenance": {
+                "title": "电网维护与检查",
+                "desc": "数字化变电站检查和线路巡逻。直接在现场捕获热成像和设备读数以防止故障。"
+            },
+            "smartMeter": {
+                "title": "智能电表部署",
+                "desc": "简化智能基础设施的推广项目。追踪安装进度，验证连接并实时管理库存。"
+            },
+            "outageResponse": {
+                "title": "停电响应与调度",
+                "desc": "即时协调风暴响应团队。在实时地图上可视化停电情况，并派遣最近的合格团队更快恢复供电。"
+            }
+        }
+    },
+    "oilGas": {
+        "badge": "石油与天然气行业",
+        "title": {
+            "line1": "为能源提供动力，凭借 ",
+            "highlight": "安全与效率"
+        },
+        "description": "Space Field 为能源部门的苛刻环境提供强大的数字解决方案。简化检查，确保船员安全，并从现场到控制室保持资产完整性。",
+        "link": "查看能源解决方案",
+        "imageAlt": "使用 Space Field 进行石油和天然气现场运营",
+        "features": {
+            "hse": {
+                "title": "HSE 与安全合规",
+                "desc": "在钻井平台和炼油厂执行严格的安全协议。数字工作许可证系统和危险报告确保 100% 符合行业标准。"
+            },
+            "assetIntegrity": {
+                "title": "资产完整性管理",
+                "desc": "监控管道健康状况和设备状态。为泵和阀门安排预测性维护，以防止泄漏和昂贵的停机。"
+            },
+            "remoteOps": {
+                "title": "远程现场运营",
+                "desc": "保持上游和下游团队的连接。离线功能允许偏远现场的技术人员在不中断的情况下记录数据。"
+            }
+        }
+    },
+    "manufacturing": {
+        "badge": "制造业",
+        "title": {
+            "line1": "优化运营，凭借 ",
+            "highlight": "智能工作流"
+        },
+        "description": "Space Field 简化了制造物流和维护。赋予您的员工移动工具来追踪资产、报告危险并确保安全地实现生产目标。",
+        "link": "查看制造演示",
+        "imageAlt": "使用 Space Field 进行制造工厂运营",
+        "features": {
+            "maintenance": {
+                "title": "设备维护与维修",
+                "desc": "从被动维护转变为主动维护。安排机器服务的自动工单，以最大程度地减少昂贵的停机时间。"
+            },
+            "qualityControl": {
+                "title": "生产线质量控制",
+                "desc": "数字化工厂车间的 QA 检查。即时捕获缺陷数据并生成符合 ISO 标准的合规报告。"
+            },
+            "shopFloor": {
+                "title": "实时车间可见性",
+                "desc": "实时监控工作流状态和劳动力分配。将楼层主管与管理层联系起来，以便更快地做出决策。"
+            }
+        }
+    },
+    "telecom": {
+        "badge": "电信",
+        "title": {
+            "line1": "连接世界，凭借 ",
+            "highlight": "无缝运营"
+        },
+        "description": "Space Field 使电信运营商能够轻松管理庞大的基础设施网络。从塔楼攀爬到光纤拼接，保持您的现场团队同步且网络在线。",
+        "link": "查看电信演示",
+        "imageAlt": "电信基础设施管理",
+        "features": {
+            "rollout": {
+                "title": "网络部署与维护",
+                "desc": "加速光纤和 5G 部署。实时管理现场勘测、安装追踪和预防性维护计划。"
+            },
+            "audits": {
+                "title": "塔楼与基础设施审计",
+                "desc": "进行严格的结构检查。捕获塔楼状况的地理标记证据并自动化合规报告。"
+            },
+            "dispatch": {
+                "title": "现场技术员调度",
+                "desc": "为分散的团队优化路线规划。减少停电的响应时间，并确保正确的技术人员携带正确的零件到达。"
+            }
+        }
+    },
+    "facility": {
+        "badge": "设施管理",
+        "title": {
+            "line1": "更智能的建筑，",
+            "highlight": "卓越的运营"
+        },
+        "description": "Space Field 将设施运营统一到一个直观的平台中。赋予您的团队权利，从大楼的任何地方管理维护、资产和租户满意度。",
+        "link": "查看设施演示",
+        "imageAlt": "现代设施管理运营",
+        "features": {
+            "workOrder": {
+                "title": "工单管理",
+                "desc": "简化租户请求和内部维修。即时将任务分配给维护人员并追踪解决时间，以确保满足服务水平协议 (SLA)。"
+            },
+            "preventive": {
+                "title": "预防性维护",
+                "desc": "安排暖通空调、电梯和消防安全系统的定期检查。自动生成检查表以确保合规并延长资产生命周期。"
+            },
+            "assetTracking": {
+                "title": "空间与资产追踪",
+                "desc": "获得整个投资组合中资产位置和状况的可见性。监控占用水平并优化空间利用数据以进行更智能的规划。"
+            }
+        }
+    },
+    "constructionPage": {
+        "hero": {
+            "badge": "建筑与工程",
+            "title": "自动化",
+            "titleHighlight": "遗留问题清单。",
+            "description": "停止敲击屏幕。只需带着相机走遍现场。SpaceCapture 自动识别缺陷、分配分包商并为您创建遗留问题清单。",
+            "cta": "查看实际效果",
+            "imageAlt": "视频转清单引擎",
+            "visualTitle": "视频转清单引擎",
+            "visualStatus": "处理现场行走...",
+            "paintDefect": "油漆缺陷",
+            "exposedWiring": "裸露电线"
+        },
+        "features": {
+            "title": "消除返工与纠纷",
+            "description": "建筑中最大的成本不是材料——而是返工。防止问题被遗漏。",
+            "item1": {
+                "title": "“行走与交谈”报告",
+                "desc": "不要停下来打字。在拍摄现场时叙述您的观察结果。我们的多模态 AI 转录您的声音，抓取帧并立即创建工单。"
+            },
+            "item2": {
+                "title": "分包商责任",
+                "desc": "每个缺陷都经过地理定位和时间戳记。向特定行业发送带有照片证据的自动 PDF 报告，消除“不是我”的纠纷。"
+            }
+        },
+        "workflows": {
+            "title": "支持的工作流",
+            "punchLists": {
+                "title": "遗留问题清单",
+                "desc": "零缺陷移交"
+            },
+            "dailyLogs": {
+                "title": "每日日志",
+                "desc": "现场进度追踪"
+            },
+            "safetyAudits": {
+                "title": "安全审计",
+                "desc": "OSHA 合规"
+            },
+            "rfi": {
+                "title": "RFI 创建",
+                "desc": "现场到办公室查询"
+            }
+        }
+    },
+    "visualFormBuilderPage": {
+        "hero": {
+            "badge": "Visual Editor",
+            "title": {
+                "noCode": "No-Code",
+                "highlight": "Form Builder"
+            },
+            "description": "Tired of waiting for developers to update a single field? With Space Capture, you are the engineer. Drag and drop complex logic, customize branding, and deploy smart forms to your field teams instantly—all without writing a line of code.",
+            "cta": "Request Demo"
+        },
+        "editor": {
+            "visualEditor": "Visual Editor",
+            "rateSafety": "Rate site safety compliance:",
+            "uploadPhoto": "Upload Site Photo",
+            "fieldProperties": {
+                "title": "Field Properties",
+                "autoGeotag": "Auto-Geotagging",
+                "requirePhoto": "Require Photo",
+                "validation": "Validation",
+                "mandatory": "Mandatory Field"
+            }
+        },
+        "templates": {
+            "operationalTemplates": "Operational Templates",
+            "badge": "Operational Templates",
+            "title": {
+                "line1": "Launch Faster with",
+                "highlight": "Pre-Built Workflows"
+            },
+            "description": "Don't start from scratch. Benefit from our library of 100+ industry-standard operational templates used by thousands of field teams.",
+            "dailyLog": "Daily Site Safety Log",
+            "dailyLogItem1": "Site condition check?",
+            "dailyLogItem2": "PPE verified for all crew?",
+            "list": {
+                "safety": "Safety Audits & Risk Assessments",
+                "maintenance": "Equipment Maintenance Logs",
+                "quality": "Quality Control Checklists",
+                "daily": "Daily Progress Reports"
+            },
+            "quote": "Once you've created templates for your team, save them and share for consistent future use across all project sites."
+        }
+    },
+    "aiDetectionPage": {
+        "hero": {
+            "badge": "AI Vision",
+            "title": {
+                "line1": "Upload for",
+                "highlight": "AI Detection"
+            },
+            "description": "Empower every field worker with an AI expert in their pocket. Simply capture a photo, and our engine instantly identifies defects, grades severity, and uploads structured data to the cloud.",
+            "cta": "Try AI Capture"
+        },
+        "analysis": {
+            "status": "Analysis Complete",
+            "title": "AI Scan Results",
+            "item1": {
+                "name": "Structural Crack",
+                "desc": "Found in upper sector. Requires immediate attention.",
+                "severity": "High Severity"
+            },
+            "item2": {
+                "name": "Surface Corrosion",
+                "desc": "Oxidation detected on metal fasteners.",
+                "severity": "Medium Severity"
+            },
+            "item3": {
+                "name": "Missing Fastener",
+                "severity": "Low Severity"
+            },
+            "syncing": "SYNCING DATA TO CLOUD..."
+        },
+        "reporting": {
+            "badge": "Instant Reporting",
+            "title": {
+                "line1": "No Manual Entry.",
+                "highlight": "Just Results."
+            },
+            "description": "The AI handles the tedious part. Your images are converted into detailed, searchable reports with timestamps, location data, and technical classifications in seconds.",
+            "assetType": "Asset Type",
+            "confidence": "Confidence",
+            "defectFound": "Defect Found",
+            "synced": "Synced to cloud 2s ago",
+            "list": {
+                "item1": "Metadata Extraction (Time, GPS, Device)",
+                "item2": "Auto-Categorization of Defects",
+                "item3": "Instant Sync to Web Dashboard"
+            }
+        }
+    },
+    "engagementFlowsPage": {
+        "hero": {
+            "badge": "Automation",
+            "title": {
+                "line1": "Visual",
+                "highlight": "Engagement Flows"
+            },
+            "description": "Design complex field logic without writing code. Use our drag-and-drop canvas to route tasks, trigger notifications, and update records based on real-time data inputs.",
+            "cta": "Build a Flow"
+        },
+        "flowchart": {
+            "workflow": "Workflow: Safety Incident",
+            "active": "ACTIVE",
+            "nodes": {
+                "trigger": "Form Submitted",
+                "type": "Type: Inspection Report",
+                "condition": "Check Severity",
+                "conditionDesc": "If Risk Level > High",
+                "action1": "Alert Manager",
+                "action2": "Auto-Approve"
+            }
+        },
+        "triggers": {
+            "badge": "Smart Triggers",
+            "title": {
+                "line1": "If This,",
+                "highlight": "Then That."
+            },
+            "description": "Automate the boring stuff. Set up rules that work while you sleep. Automatically flag high-risk inspections, dispatch follow-up crews, or generate PDF reports instantly upon submission.",
+            "rule1": "Automation Rule #1",
+            "when": "WHEN",
+            "whenDesc": "Inspection is Overdue by 2 Days",
+            "then": "THEN DO THIS",
+            "thenAction1": "Send SMS to Assignee",
+            "thenAction2": "Update Priority to 'High'",
+            "list": {
+                "item1": "Time-Based Triggers (e.g., Monthly)",
+                "item2": "Condition-Based Actions (e.g., If Failed)",
+                "item3": "Cross-Platform Notifications"
+            }
+        }
+    },
+    "accessControlPage": {
+        "hero": {
+            "badge": "Security First",
+            "title": {
+                "line1": "Enterprise-Grade",
+                "highlight": "Access Control"
+            },
+            "description": "Define exactly who can see, edit, or delete data. Create custom roles like \"Field Inspector,\" \"Project Manager,\" or \" auditor\" to ensure data integrity and compliance across your organization.",
+            "cta": "Secure Your Data"
+        },
+        "rbac": {
+            "header": "Team Members",
+            "invite": "+ Invite Member",
+            "roles": {
+                "admin": "Admin",
+                "fieldUser": "Field User",
+                "viewer": "Client Viewer"
+            },
+            "permissions": {
+                "title": "Permissions: Field User",
+                "submit": "Submit Forms",
+                "view": "View Own Data",
+                "delete": "Delete Records"
+            }
+        },
+        "assignment": {
+            "badge": "Task Assignment",
+            "title": {
+                "line1": "Right Person,",
+                "highlight": "Right Place."
+            },
+            "description": "Assign inspections and forms to specific users or teams. Ensure sensitive project data is only accessible to authorized personnel, and revoke access automatically when a job is done.",
+            "card": {
+                "title": "Assign Inspection",
+                "assignTo": "ASSIGN TO",
+                "restrictTo": "RESTRICT ACCESS TO",
+                "expiration": "ACCESS EXPIRATION",
+                "user": "Sarah Smith (Field Team)",
+                "location": "Site Alpha - Sector 4",
+                "options": {
+                    "24h": "24 Hours",
+                    "1w": "1 Week",
+                    "perm": "Permanent"
+                },
+                "button": "Grant Access",
+                "toast": "Task assigned securely to Sarah"
+            },
+            "list": {
+                "item1": "Direct User-to-Task Assignment",
+                "item2": "Location-Based Geofencing Access",
+                "item3": "Temporary / Guest Access Links"
+            }
+        }
+    },
+    "reportPage": {
+        "hero": {
+            "badge": "Deep Insights",
+            "title": {
+                "line1": "Turn Field Data into",
+                "highlight": "Business Intelligence"
+            },
+            "description": "Don't let your data collect dust. Visualize project health, track team performance, and spot safety trends instantly with our interactive dashboards.",
+            "cta": "View Sample Reports"
+        },
+        "dashboard": {
+            "title": "Project Overview",
+            "updated": "Last updated: Just now",
+            "totalInspections": "Total Inspections",
+            "openIssues": "Open Issues",
+            "compliance": "Compliance",
+            "weeklyActivity": "Weekly Activity",
+            "issuesByType": "Issues by Type",
+            "total": "Total",
+            "safety": "Safety",
+            "quality": "Quality"
+        },
+        "export": {
+            "card": {
+                "title": "Export Report",
+                "desc": "Configure your download settings",
+                "format": "File Format",
+                "pdf": "PDF Document",
+                "excel": "Excel / CSV",
+                "includeData": "Include Data",
+                "photos": "Site Photos & Annotations",
+                "gps": "GPS Location Maps",
+                "button": "Generate & Download"
+            },
+            "badge": "Custom Exports",
+            "title": {
+                "line1": "Professional Reports,",
+                "highlight": "Ready in Seconds."
+            },
+            "description": "Forget spending hours formatting spreadsheets. Space Capture automatically compiles your field data into professional, branded PDF reports or raw Excel exports.",
+            "list": {
+                "item1": "Schedule Automated Email Delivery",
+                "item2": "White-Label with Your Company Logo",
+                "item3": "Filter by Date, User, or Project",
+                "item4": "One-Click Audit Logs"
+            }
+        }
+    },
+    "integrationPage": {
+        "webhooks": {
+            "badge": "Developer Tools",
+            "title": {
+                "line1": "Powerful",
+                "highlight": "Webhooks"
+            },
+            "description": "We've worked hard to flatten our data structure and provide the most robust webhooks in the industry. Instantly push field data to your CRM, Slack, or custom internal tools the moment a form is submitted.",
+            "cta": "Read Documentation",
+            "mockup": {
+                "trigger": "Trigger",
+                "newInspection": "New Inspection Submitted",
+                "status": "Active",
+                "json": "JSON",
+                "destination": "Destination: CRM",
+                "statusLabel": "Status",
+                "priority": "High Priority",
+                "customer": "Customer",
+                "action": "Action",
+                "createTicket": "Create Ticket"
+            }
+        },
+        "agents": {
+            "badge": "AI Integration",
+            "title": {
+                "line1": "Connect with",
+                "highlight": "Autonomous Agents"
+            },
+            "description": "Go beyond simple data piping. Integrate Space Capture with AI Agents to analyze field data in real-time and trigger complex, multi-step workflows across your entire software stack automatically.",
+            "mockup": {
+                "listening": "AGENT LISTENING",
+                "message1": "I detected a critical safety failure in the latest inspection report.",
+                "error": "Error: Guard rail missing on Level 4",
+                "message2": "Executing automated response protocols:",
+                "action1": "Notified Site Manager via SMS",
+                "action2": "Created High-Priority Maintenance Ticket",
+                "action3": "Scheduled Re-inspection for tomorrow"
+            },
+            "list": {
+                "item1": "Natural Language Querying of Field Data",
+                "item2": "Automated Risk Assessment & Triage",
+                "item3": "Seamless Handover to Slack/Teams Bots"
+            }
+        }
+    },
+    "hostingPage": {
+        "hero": {
+            "badge": "Deployment",
+            "title": {
+                "line1": "Flexible Hosting",
+                "highlight": "Your Way"
+            },
+            "description": "Space Capture offers the most flexible hosting options in the market. Whether you need the speed of our global SaaS cloud, the isolation of a private instance, or total control via on-premise deployment—we've got you covered.",
+            "cta": "Request Hosting Demo"
+        },
+        "mockup": {
+            "core": "Space Capture Core",
+            "environment": "Deployment Environment",
+            "saas": "SaaS Cloud",
+            "saasDesc": "Instant scaling, zero maintenance.",
+            "private": "Private Cloud",
+            "privateDesc": "Dedicated VPC, isolated resources.",
+            "onPremise": "On-Premise",
+            "onPremiseDesc": "Air-gapped, self-hosted control.",
+            "security": "Enterprise Grade",
+            "securityDesc": "SOC 2 Type II Compliant & ISO 27001 Certified Data Centers.",
+            "residency": "Data Residency",
+            "residencyDesc": "Host data in US, EU, AU, or your own local servers."
+        },
+        "comparison": {
+            "title": "Choose Your Deployment Model",
+            "subtitle": "Match your infrastructure to your security and compliance needs.",
+            "saas": {
+                "title": "Cloud SaaS",
+                "desc": "Best for teams who want to get started instantly.",
+                "list": {
+                    "item1": "Multi-tenant Architecture",
+                    "item2": "Automatic Updates",
+                    "item3": "99.9% Uptime SLA",
+                    "item4": "Global CDN"
+                }
+            },
+            "private": {
+                "title": "Private Cloud",
+                "desc": "For organizations needing isolated resources.",
+                "list": {
+                    "item1": "Single-tenant Environment",
+                    "item2": "Custom Domain & SSO",
+                    "item3": "Dedicated Database",
+                    "item4": "VPC Peering"
+                }
+            },
+            "onPremise": {
+                "title": "On-Premise",
+                "desc": "Complete control for high-compliance sectors.",
+                "list": {
+                    "item1": "Self-Hosted (Docker/K8s)",
+                    "item2": "Full Data Sovereignty",
+                    "item3": "Air-Gapped Capable",
+                    "item4": "Custom Audit Logs"
+                }
+            }
+        }
+    }
+}

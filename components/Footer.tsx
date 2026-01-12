@@ -2,59 +2,33 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Instagram, Linkedin, Twitter, Youtube, Github, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Instagram, Linkedin, Twitter, Youtube, Github, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from '@/hooks/useTranslation';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
-    <footer className="relative overflow-hidden bg-slate-950 pt-20 pb-10 border-t border-slate-800">
-      
+    <footer className="relative bg-slate-950 pt-20 pb-10 border-t border-slate-800">
+
       {/* Background Glow */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(99,102,241,0.15),transparent_40%)]"></div>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Space Capture",
-            "image": "https://spacecapture.ai/images/logo.jpg",
-            "telephone": "+14198201487",
-            "email": "support@spacecapture.ai",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "2500 Marconi Ave, Ste 101",
-              "addressLocality": "Sacramento",
-              "addressRegion": "CA",
-              "postalCode": "95821",
-              "addressCountry": "US"
-            },
-            "url": "https://spacecapture.ai",
-            "sameAs": [
-              "https://x.com/pmspace0707",
-              "https://www.instagram.com/space_ai77/",
-              "https://www.youtube.com/@spaceai-7",
-              "https://www.linkedin.com/company/spaceaiapp.com"
-            ]
-          })
-        }}
-      />
-
       <div className="container relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6">
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
-          
+
           {/* Column 1: Brand & About (2 cols wide) */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 group mb-6">
               <div className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center ring-4 ring-slate-900 group-hover:ring-slate-800 transition-all duration-300">
                 <CheckCircle2 className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-extrabold text-white tracking-tight">SPACE CAPTURE</span>
+              <span className="text-2xl font-extrabold text-white tracking-tight">{t('common.appName')}</span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
-              The ultimate mobile command center for field operations. Streamline tasks, automate reporting, and sync your workforce in real-time with AI-powered tools.
+              {t('footer.brandDescription')}
             </p>
             <div className="flex gap-4">
               <SocialLink href="https://x.com/pmspace0707" icon={Twitter} label="Twitter" />
@@ -67,87 +41,74 @@ export default function Footer() {
 
           {/* Column 2: Core Features */}
           <div>
-            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Core Features</h3>
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">{t('footer.coreFeatures')}</h3>
             <ul className="space-y-4">
-              <FooterLink href="/core-functions">Core Platform</FooterLink>
-              <FooterLink href="/visual-form-builder">Visual Form Builder</FooterLink>
-              <FooterLink href="/ai-detection">AI Detection Analysis</FooterLink>
-              <FooterLink href="/engagement-flows">Engagement Flows</FooterLink>
-              <FooterLink href="/access-control">Access Control</FooterLink>
-              <FooterLink href="/reports">Deep Insights</FooterLink>
-              <FooterLink href="/hosting">Flexible Hosting</FooterLink>
-              <FooterLink href="/integrations">Integrations</FooterLink>
-              <FooterLink href="/tools/switching-calculator">ROI Calculator</FooterLink>
+              <FooterLink href="/visual-form-builder">{t('footer.visualFormBuilder')}</FooterLink>
+              <FooterLink href="/ai-detection">{t('footer.aiDetection')}</FooterLink>
+              <FooterLink href="/engagement-flows">{t('footer.engagementFlows')}</FooterLink>
+              <FooterLink href="/access-control">{t('footer.accessControl')}</FooterLink>
+              <FooterLink href="/reports">{t('footer.deepInsights')}</FooterLink>
             </ul>
           </div>
 
           {/* Column 3: Industries */}
           <div>
-            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Industries</h3>
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">{t('footer.industries')}</h3>
             <ul className="space-y-4">
-              <FooterLink href="/industries/construction">Construction Punch Lists</FooterLink>
-              <FooterLink href="/industries/insurance">Insurance & Claims</FooterLink>
-              <FooterLink href="/industries/real-estate">Real Estate & Tours</FooterLink>
-              <FooterLink href="/industries/telecom">Telecommunications</FooterLink>
-              <FooterLink href="/industries/manufacturing">Manufacturing</FooterLink>
-              <FooterLink href="/industries/oil-and-gas">Oil & Gas Inspection</FooterLink>
-              <FooterLink href="/industries/utilities">Utilities</FooterLink>
-              <FooterLink href="/industries/hvac">HVAC & Plumbing</FooterLink>
-              <FooterLink href="/industries/logistics">Logistics</FooterLink>
-              <FooterLink href="/industries/facility-management">Facility Management</FooterLink>
+              <FooterLink href="/industries/construction">{t('footer.construction')}</FooterLink>
+              <FooterLink href="/industries/telecommunication">{t('footer.telecommunication')}</FooterLink>
+              <FooterLink href="/industries/manufacturing">{t('footer.manufacturing')}</FooterLink>
+              <FooterLink href="/industries/oil-and-gas">{t('footer.oilGas')}</FooterLink>
+              <FooterLink href="/industries/utilities">{t('footer.utilities')}</FooterLink>
+              <FooterLink href="/industries/hvac">{t('footer.hvac')}</FooterLink>
+              <FooterLink href="/industries/logistics">{t('footer.logistics')}</FooterLink>
+              <FooterLink href="/industries/facility-management">{t('footer.facilityManagement')}</FooterLink>
             </ul>
           </div>
 
-          {/* Column 4: Construction AI Blog */}
+          {/* Column 4: Developers (REMOVED PER REQUEST) - Replaced with Company */}
           <div>
-            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Construction AI Blog</h3>
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">{t('footer.company')}</h3>
             <ul className="space-y-4">
-              <FooterLink href="/blog" className="text-purple-400 font-bold flex items-center gap-2">
-                 View Field Modules <ArrowRight className="w-3 h-3" />
-              </FooterLink>
-              <FooterLink href="/knowledge-base">Field Glossary</FooterLink>
-              <FooterLink href="/blog/computer-vision-risk">Defect Detection AI</FooterLink>
-              <FooterLink href="/blog/end-of-manual-punch-lists">Inspection Software</FooterLink>
-              <FooterLink href="/blog/predictive-maintenance">Maintenance Module</FooterLink>
-              <FooterLink href="/blog/drone-defect-detection">Drone Field Integration</FooterLink>
-              <FooterLink href="/resources/templates" className="text-blue-400 font-bold">Free Field App</FooterLink>
-            </ul>
-          </div>
-
-          {/* Column 5: Trust & Support (New) */}
-          <div>
-            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Resources & Support</h3>
-            <ul className="space-y-4">
-              <FooterLink href="/about-us">About Us</FooterLink>
-              <FooterLink href="/trust">Trust Center</FooterLink>
-              <FooterLink href="/pricing">Pricing</FooterLink>
-              <FooterLink href="/customers" className="text-yellow-400 font-bold">Customer Stories</FooterLink>
-              <FooterLink href="/compare/raken" className="text-slate-300 font-medium hover:text-white">Compare vs Raken</FooterLink>
-              <FooterLink href="/faq">Help & FAQ</FooterLink>
-              <FooterLink href="/request-a-demo" className="text-blue-400 font-bold">Request a Demo</FooterLink>
+              <FooterLink href="/about-us">{t('footer.aboutUs')}</FooterLink>
+              <FooterLink href="/book-a-demo" className="text-blue-400 font-bold">{t('footer.bookDemo')}</FooterLink>
+              <li className="pt-4 pb-2 text-xs font-bold text-slate-600 uppercase tracking-widest">{t('footer.resources')}</li>
+              <FooterLink href="/blog/end-of-digital-paper">{t('footer.manifesto')}</FooterLink>
+              <FooterLink href="/technology/computer-vision">{t('footer.tech')}</FooterLink>
+              <FooterLink href="/trust/hallucination-free">{t('footer.trust')}</FooterLink>
+              <FooterLink href="/resources/case-study-reactive-to-predictive">{t('footer.caseStudy')}</FooterLink>
+              <FooterLink href="/resources/iso-9001-guide">{t('footer.guide')}</FooterLink>
+              <li className="pt-4 pb-2 text-xs font-bold text-slate-600 uppercase tracking-widest">{t('footer.compare')}</li>
+              <FooterLink href="/alternatives/safetyculture">{t('footer.vsSafetyCulture')}</FooterLink>
+              <FooterLink href="/alternatives/gocanvas">{t('footer.vsGoCanvas')}</FooterLink>
+              <li className="pt-4 pb-2 text-xs font-bold text-slate-600 uppercase tracking-widest">{t('footer.tools')}</li>
+              <FooterLink href="/tools/switching-calculator">{t('footer.switchingCalculator')}</FooterLink>
             </ul>
           </div>
 
           {/* Column 5: Legal/Support (New column to balance layout) */}
-        
+
 
         </div>
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-center md:text-left">
-             <p className="text-xs text-slate-500">
-               © 2025 SPACE CAPTURE. All rights reserved.
-             </p>
-             <p className="text-[10px] text-slate-600 mt-1">
-               2500 MARCONI AVE, STE 101, SACRAMENTO, CA 95821
-             </p>
-             <p className="text-[10px] text-slate-600">
-               PHONE: +1 (419) 820-1487
-             </p>
+            <p className="text-xs text-slate-500">
+              {t('footer.copyright')}
+            </p>
+            <p className="text-[10px] text-slate-600 mt-1">
+              {t('footer.address')}
+            </p>
           </div>
-          
-        
+
+          <div className="flex items-center gap-6">
+            <div className="scale-90 origin-right">
+              <div className="bg-slate-900 rounded-lg p-1 border border-slate-800">
+                <LanguageSwitcher direction="up" />
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -170,8 +131,8 @@ const SocialLink = ({ href, icon: Icon, label }: { href: string, icon: React.Ele
 
 const FooterLink = ({ href, children, className = "" }: { href: string, children: React.ReactNode, className?: string }) => (
   <li>
-    <Link 
-      href={href} 
+    <Link
+      href={href}
       className={`text-sm text-slate-400 hover:text-white transition-colors block ${className}`}
     >
       {children}

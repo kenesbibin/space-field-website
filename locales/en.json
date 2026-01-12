@@ -1,0 +1,907 @@
+{
+    "common": {
+        "appName": "SPACE CAPTURE",
+        "tryForFree": "Try for Free",
+        "requestDemo": "Request a Demo",
+        "signIn": "Sign In",
+        "email": "Email",
+        "usa": "USA",
+        "singapore": "Singapore",
+        "getInTouch": "Get in Touch",
+        "copyEmail": "Copy our email address below to send us a message directly.",
+        "copied": "Copied to clipboard!",
+        "clickToCopy": "Click the icon to copy"
+    },
+    "navbar": {
+        "home": "Home",
+        "products": "Products",
+        "industries": "Industries"
+    },
+    "hero": {
+        "titlePrefix": "Command Your Field Operations With",
+        "titleHighlight": "Absolute Precision",
+        "description": "Eliminate on-site chaos. SPACE CAPTURE provides the ultimate mobile command center for construction, maintenance, and inspection teams to track progress in real-time.",
+        "startFreeTrial": "Start Free Trial",
+        "scheduleDemo": "Schedule Demo",
+        "siteInspection": "Site Inspection",
+        "completedJustNow": "Completed • Just now"
+    },
+    "showcase": {
+        "slide1": {
+            "title": "Field Operations Hub",
+            "location": "Construction Site A",
+            "description": "Real-time monitoring"
+        },
+        "slide2": {
+            "title": "Asset Tracking",
+            "location": "Logistics Center",
+            "description": "Precision GPS Lock"
+        },
+        "slide3": {
+            "title": "Safety Compliance",
+            "location": "Inspection Zone",
+            "description": "100% Protocol Adherence"
+        },
+        "static": {
+            "highlight": "Eliminate Field Blindspots.",
+            "title": "Don't let distance become a barrier to progress.",
+            "description": "Traditional field management relies on guesswork and outdated reports. SPACE CAPTURE bridges the gap between on-site reality and office decision-making with military-grade precision.",
+            "button": "Explore Solutions"
+        }
+    },
+    "guide": {
+        "badge": "Total Workflow Control",
+        "headline": {
+            "prefix": "Orchestrate Your Field Projects With",
+            "highlight": "Efficiency"
+        },
+        "description": {
+            "part1": "SPACE CAPTURE isn't just about knowing where you are—it's about knowing",
+            "bold": "where your project stands.",
+            "part2": "Replace chaotic paper trails with digital precision. Assign tasks, log inspections, and visualize progress in one unified ecosystem."
+        },
+        "feature1": {
+            "title": "Digital Task Management",
+            "desc": "Assign duties instantly and track completion status without the paperwork."
+        },
+        "feature2": {
+            "title": "Real-Time Site Analytics",
+            "desc": "Get live insights on workforce productivity and project milestones."
+        },
+        "feature3": {
+            "title": "Automated Compliance",
+            "desc": "Ensure every safety protocol is checked, logged, and synced to the cloud."
+        },
+        "image": {
+            "status": "System Online",
+            "synced": "Data Synced Just Now"
+        }
+    },
+    "features": {
+        "mockup": {
+            "fieldOps": "Field Ops",
+            "siteCompletion": "Site Completion",
+            "activeTasks": "Active Tasks",
+            "newCount": "4 New",
+            "syncButton": "Sync Field Data"
+        },
+        "header": {
+            "badge": "Capabilities",
+            "title": "Our Features",
+            "description": "We combine powerful technology with simple usability to help you master every aspect of your field operations."
+        },
+        "items": {
+            "ecosystem": {
+                "title": "Unified Web & Mobile Ecosystem",
+                "desc": "Seamlessly switch between the powerful Web Dashboard for office management and the robust Mobile App for on-site execution. One platform, total control."
+            },
+            "signatures": {
+                "title": "Instant Digital Signatures",
+                "desc": "Eliminate paper trails. Securely capture client approvals and technical sign-offs directly on the device to validate work and close jobs faster."
+            },
+            "sync": {
+                "title": "Live Field Synchronization",
+                "desc": "Eliminate the communication gap. Updates made on the field are instantly visible in the office, ensuring project managers always have real-time site data."
+            },
+            "compliance": {
+                "title": "Automated Safety & Compliance",
+                "desc": "Digitize your safety protocols. Enforce mandatory checklists, incident reporting, and digital signatures to ensure your site meets all industry standards."
+            }
+        }
+    },
+    "aiApi": {
+        "section1": {
+            "badge": "For Developers",
+            "title": {
+                "prefix": "The",
+                "highlight": "AI Detection API"
+            },
+            "description": "Integrate industrial-grade defect detection into your own applications with a simple API call. Upload any image, and our engine instantly returns a structured JSON payload identifying defects, severity, and precise coordinates.",
+            "button": "Try For Free",
+            "gifOverlay": "AI Detection in Action"
+        },
+        "card": {
+            "status": "Analysis Success",
+            "detectedObjects": "Detected Objects",
+            "confidence": "Confidence:",
+            "box": "Box:",
+            "actionLabel": "Action:",
+            "item1": {
+                "name": "Structural Crack",
+                "severity": "HIGH SEVERITY",
+                "action": "Immediate repair required."
+            },
+            "item2": {
+                "name": "Surface Corrosion",
+                "severity": "MEDIUM"
+            }
+        },
+        "section2": {
+            "badge": "Developer Friendly",
+            "title": {
+                "line1": "Parseable Results.",
+                "highlight": "Seamless Integration."
+            },
+            "description": "Receive results in a clean, predictable JSON format. This structured output is ready to be consumed by your internal reporting systems, databases, or workflow automation tools.",
+            "list": {
+                "item1": "Standard REST API Endpoint",
+                "item2": "Customizable Detection Models",
+                "item3": "High Uptime & Low Latency"
+            }
+        }
+    },
+    "cta": {
+        "title": {
+            "prefix": "Take Control of",
+            "highlight": "SPACE CAPTURE",
+            "suffix": "Today."
+        },
+        "description": "Stop chasing paper trails. Sync your office and field teams instantly with the all-in-one platform built for construction and operations.",
+        "buttons": {
+            "tryFree": "Try for Free",
+            "bookDemo": "Book a Demo"
+        },
+        "footerText": "Available on iOS, Android, and Web"
+    },
+    "demoRequest": {
+        "badge": "REQUEST A DEMO",
+        "title": {
+            "prefix": "Transform Your Field Operations with ",
+            "highlight": "SPACE CAPTURE"
+        },
+        "description": "Join thousands of professionals who have successfully managed their field operations. Experience expert guidance, streamlined task management, and comprehensive support for your mobile needs.",
+        "features": {
+            "item1": {
+                "title": "Expert Field Guidance",
+                "desc": "Certified field operation consultants with decades of experience in task management and compliance."
+            },
+            "item2": {
+                "title": "Real-Time Tracking",
+                "desc": "Accelerated operations and priority tracking for urgent field needs."
+            },
+            "item3": {
+                "title": "Comprehensive Solutions",
+                "desc": "End-to-end support for construction, maintenance, inspections, and progress reporting."
+            }
+        },
+        "success": {
+            "title": "Request Received!",
+            "message": "Our team will contact you within 24 hours to schedule your personalized demo."
+        },
+        "form": {
+            "title": "Schedule Your Personalized Demo",
+            "description": "See SPACE CAPTURE in action. Let's discuss your unique field operation needs.",
+            "labels": {
+                "firstName": "First Name *",
+                "lastName": "Last Name *",
+                "email": "Email Address *",
+                "phone": "Phone Number *",
+                "company": "Company Name *",
+                "companySize": "Company Size",
+                "projectDetails": "Project Details"
+            },
+            "placeholders": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "email": "john.doe@company.com",
+                "phone": "+1 234 567 8900",
+                "company": "Your Company",
+                "selectSize": "Select company size",
+                "projectDetails": "Tell us about your field operation needs..."
+            },
+            "errors": {
+                "firstName": "First name is required.",
+                "lastName": "Last name is required.",
+                "emailRequired": "Email is required.",
+                "emailInvalid": "Email is invalid.",
+                "company": "Company name is required.",
+                "phone": "Phone number is required."
+            },
+            "button": {
+                "submit": "Request Demo",
+                "submitting": "Submitting..."
+            },
+            "footer": "By submitting this form, you agree to our Terms of Service and Privacy Policy.",
+            "options": {
+                "employees": "employees"
+            }
+        }
+    },
+    "footer": {
+        "brandDescription": "The ultimate mobile command center for field operations. Streamline tasks, automate reporting, and sync your workforce in real-time with AI-powered tools.",
+        "coreFeatures": "Core Features",
+        "visualFormBuilder": "Visual Form Builder",
+        "aiDetection": "AI Detection Analysis",
+        "engagementFlows": "Engagement Flows",
+        "accessControl": "Access Control",
+        "deepInsights": "Deep Insights",
+        "industries": "Industries",
+        "construction": "Construction Punch Lists",
+        "telecommunication": "Telecommunications",
+        "manufacturing": "Manufacturing",
+        "oilGas": "Oil & Gas Inspection",
+        "utilities": "Utilities",
+        "hvac": "HVAC & Plumbing",
+        "logistics": "Logistics",
+        "facilityManagement": "Facility Management",
+        "company": "Company",
+        "aboutUs": "About Us",
+        "bookDemo": "Book a Demo",
+        "resources": "Resources",
+        "manifesto": "Manifesto: End of Digital Paper",
+        "tech": "Tech: Inside the Eye",
+        "trust": "Trust: AI Assurance",
+        "caseStudy": "Case Study: Predictive Maint.",
+        "guide": "Guide: ISO 9001 Autopilot",
+        "compare": "Compare",
+        "vsSafetyCulture": "vs SafetyCulture",
+        "vsGoCanvas": "vs GoCanvas",
+        "tools": "Tools",
+        "switchingCalculator": "Switching Calculator",
+        "copyright": "© 2025 SPACE CAPTURE. All rights reserved.",
+        "address": "2500 MARCONI AVE, STE 101, SACRAMENTO, CA 95821"
+    },
+    "products": {
+        "features": "Features",
+        "forDevelopers": "For Developers",
+        "coreFunctions": "Core Functions",
+        "coreFunctionsDesc": "Essential tools for field operations management.",
+        "visualFormBuilder": "Visual Form Builder",
+        "visualFormBuilderDesc": "Create custom forms without coding.",
+        "aiDetection": "AI Detection Analysis",
+        "aiDetectionDesc": "Manage team members and permissions.",
+        "engagementFlows": "Engagement Flows",
+        "engagementFlowsDesc": "Automate workflows and processes.",
+        "accessControl": "Access Control",
+        "accessControlDesc": "Secure data with role-based access.",
+        "deepInsights": "Deep Insights",
+        "deepInsightsDesc": "Analytics and reporting dashboard.",
+        "integrations": "Integrations",
+        "integrationsDesc": "Connect with your existing tools and systems.",
+        "flexibleHosting": "Flexible Hosting",
+        "flexibleHostingDesc": "Deploy on-premise or in the cloud."
+    },
+    "industries": {
+        "construction": "Construction",
+        "constructionDesc": "Manage sites and crews efficiently.",
+        "utilities": "Utilities & Energy",
+        "utilitiesDesc": "Grid maintenance and inspections.",
+        "telecom": "Telecommunications",
+        "telecomDesc": "Field service for network infra.",
+        "hvac": "HVAC & Plumbing",
+        "hvacDesc": "Dispatch and repair tracking.",
+        "manufacturing": "Manufacturing",
+        "manufacturingDesc": "Equipment maintenance logs.",
+        "logistics": "Logistics",
+        "logisticsDesc": "Fleet and delivery operations.",
+        "oilGas": "Oil & Gas",
+        "oilGasDesc": "Safety compliance and checks.",
+        "facilityManagement": "Facility Management",
+        "facilityManagementDesc": "Building upkeep and services."
+    },
+    "constructionSection": {
+        "badge": "Construction Industry",
+        "title": {
+            "line1": "Build Smarter with ",
+            "highlight": "Digital Precision"
+        },
+        "description": "Space Field bridges the gap between the construction site and the boardroom. Eliminate paperwork, reduce rework, and deliver projects on schedule with our specialized construction module.",
+        "features": {
+            "item1": {
+                "title": "Real-Time Site Progress",
+                "desc": "Track daily logs, labor hours, and material usage instantly. Keep stakeholders aligned with live updates from the ground."
+            },
+            "item2": {
+                "title": "Digital QC & Safety Inspections",
+                "desc": "Digitize your snag lists and safety audits. Capture photos, annotate issues, and assign fixes directly to subcontractors."
+            },
+            "item3": {
+                "title": "Fleet & Asset Management",
+                "desc": "Monitor heavy equipment usage and location. Prevent theft and optimize deployment schedules to reduce downtime."
+            }
+        },
+        "link": "See Construction Demo",
+        "imageAlt": "Construction Site Management with Space Field"
+    },
+    "hvacSection": {
+        "badge": "HVAC & Plumbing",
+        "title": {
+            "line1": "Master Your Service ",
+            "highlight": "Workflows"
+        },
+        "description": "Space Field helps HVAC and plumbing businesses dispatch faster and fix smarter. Manage recurring maintenance contracts, track parts inventory, and invoice customers right from the job site.",
+        "features": {
+            "item1": {
+                "title": "Service Call Dispatching",
+                "desc": "Assign jobs to the nearest technician with the right skills. Track job status from 'En Route' to 'Completed' in real-time."
+            },
+            "item2": {
+                "title": "Equipment History & Audits",
+                "desc": "Access detailed service history for every HVAC unit. Scan QR codes to instantly retrieve manuals, warranty info, and past repair logs."
+            },
+            "item3": {
+                "title": "Plumbing Inspection Reports",
+                "desc": "Generate professional inspection reports on-site. Capture photos of leaks or piping issues and get customer sign-off digitally."
+            }
+        },
+        "link": "See HVAC Demo",
+        "imageAlt": "HVAC Technician and Plumbing Services"
+    },
+    "coreFunctions": {
+        "badge": "Space Capture",
+        "title": {
+            "line1": "Core Features ",
+            "highlight": "Overview"
+        },
+        "description": "Space Capture includes all the powerful field data tools you need at an enterprise scale. Create professional, intelligent forms using our extensive list of modules, smart logic, and deep branding options.",
+        "cta": "Get Started Now",
+        "items": {
+            "visualFormBuilder": {
+                "title": "Visual Form Builder",
+                "desc": "Drag-and-drop interface to create complex data collection forms in minutes. No coding required."
+            },
+            "aiDetection": {
+                "title": "AI Detection Analysis",
+                "desc": "Automatically analyze survey images to detect defects, classify assets, and auto-generate field reports."
+            },
+            "engagementFlows": {
+                "title": "Engagement Flows",
+                "desc": "Design automated workflows that trigger based on user inputs, location, or time-based events."
+            },
+            "accessControl": {
+                "title": "Access Control",
+                "desc": "Granular permission settings to ensure the right team members access only what they need."
+            },
+            "deepInsights": {
+                "title": "Deep Insights",
+                "desc": "Turn raw field data into actionable intelligence with real-time analytics and exportable reports."
+            }
+        }
+    },
+    "logistics": {
+        "badge": "Logistics & Fleet",
+        "title": {
+            "line1": "Drive Efficiency at ",
+            "highlight": "Every Turn"
+        },
+        "description": "Space Field transforms logistics operations with end-to-end visibility. From the warehouse dock to the customer's doorstep, ensure every mile is optimized and every delivery is verified.",
+        "link": "See Logistics Demo",
+        "imageAlt": "Logistics Fleet Management and Delivery",
+        "features": {
+            "fleetTracking": {
+                "title": "Fleet Tracking & Telematics",
+                "desc": "Monitor vehicle locations, fuel usage, and driver behavior in real-time. Reduce idle time and optimize routes to save on operational costs."
+            },
+            "pod": {
+                "title": "Proof of Delivery (POD)",
+                "desc": "Capture digital signatures, photos, and timestamps at every drop-off. Automatically update order status and trigger customer notifications."
+            },
+            "routeOptimization": {
+                "title": "Dynamic Route Optimization",
+                "desc": "Plan the most efficient delivery sequences instantly. Adjust routes on the fly based on traffic, weather, or urgent pick-up requests."
+            }
+        }
+    },
+    "utilities": {
+        "badge": "Utilities & Energy",
+        "title": {
+            "line1": "Empower the Grid with ",
+            "highlight": "Smart Field Ops"
+        },
+        "description": "Space Field modernizes utility operations. From routine line maintenance to emergency storm response, ensure your infrastructure stays resilient and your workforce stays safe.",
+        "link": "See Utility Solutions",
+        "imageAlt": "Utility Field Operations and Grid Maintenance",
+        "features": {
+            "gridMaintenance": {
+                "title": "Grid Maintenance & Inspections",
+                "desc": "Digitize substation inspections and line patrols. Capture thermal imagery and equipment readings directly in the field to prevent failures."
+            },
+            "smartMeter": {
+                "title": "Smart Meter Deployment",
+                "desc": "Streamline rollout projects for smart infrastructure. Track installation progress, verify connectivity, and manage inventory in real-time."
+            },
+            "outageResponse": {
+                "title": "Outage Response & Dispatch",
+                "desc": "Coordinate storm response teams instantly. Visualize outages on a live map and dispatch the nearest qualified crew to restore power faster."
+            }
+        }
+    },
+    "oilGas": {
+        "badge": "Oil & Gas Industry",
+        "title": {
+            "line1": "Powering Energy with ",
+            "highlight": "Safety & Efficiency"
+        },
+        "description": "Space Field delivers robust digital solutions for the demanding environments of the energy sector. Streamline inspections, ensure crew safety, and maintain asset integrity from the field to the control room.",
+        "link": "See Energy Solutions",
+        "imageAlt": "Oil and Gas Field Operations with Space Field",
+        "features": {
+            "hse": {
+                "title": "HSE & Safety Compliance",
+                "desc": "Enforce rigorous safety protocols on rigs and refineries. Digital permit-to-work systems and hazard reporting ensure 100% compliance with industry standards."
+            },
+            "assetIntegrity": {
+                "title": "Asset Integrity Management",
+                "desc": "Monitor pipeline health and equipment status. Schedule predictive maintenance for pumps and valves to prevent leaks and costly shutdowns."
+            },
+            "remoteOps": {
+                "title": "Remote Field Operations",
+                "desc": "Keep upstream and downstream teams connected. Offline capabilities allow technicians in remote fields to log data without interruption."
+            }
+        }
+    },
+    "manufacturing": {
+        "badge": "Manufacturing Industry",
+        "title": {
+            "line1": "Optimize Operations with ",
+            "highlight": "Intelligent Workflows"
+        },
+        "description": "Space Field streamlines manufacturing logistics and maintenance. Empower your workforce with mobile tools to track assets, report hazards, and ensure production targets are met safely.",
+        "link": "See Manufacturing Demo",
+        "imageAlt": "Manufacturing Plant Operations with Space Field",
+        "features": {
+            "maintenance": {
+                "title": "Equipment Maintenance & Repairs",
+                "desc": "Shift from reactive to preventive maintenance. Schedule automated work orders for machinery service to minimize costly downtime."
+            },
+            "qualityControl": {
+                "title": "Production Line Quality Control",
+                "desc": "Digitize QA inspections on the factory floor. Capture defect data instantly and generate compliance reports for ISO standards."
+            },
+            "shopFloor": {
+                "title": "Real-Time Shop Floor Visibility",
+                "desc": "Monitor workflow status and labor allocation in real-time. Connect floor supervisors with management for faster decision-making."
+            }
+        }
+    },
+    "telecom": {
+        "badge": "Telecommunications",
+        "title": {
+            "line1": "Connect the World with ",
+            "highlight": "Seamless Operations"
+        },
+        "description": "Space Field empowers telecom operators to manage vast infrastructure networks with ease. From tower climbs to fiber splicing, keep your field teams synced and your network online.",
+        "link": "See Telecom Demo",
+        "imageAlt": "Telecommunications Infrastructure Management",
+        "features": {
+            "rollout": {
+                "title": "Network Rollout & Maintenance",
+                "desc": "Accelerate fiber and 5G deployment. Manage site surveys, installation tracking, and preventative maintenance schedules in real-time."
+            },
+            "audits": {
+                "title": "Tower & Infrastructure Audits",
+                "desc": "Conduct rigorous structural inspections. Capture geotagged evidence of tower conditions and automate compliance reporting."
+            },
+            "dispatch": {
+                "title": "Field Technician Dispatch",
+                "desc": "Optimize route planning for widespread teams. Reduce response times for outages and ensure the right tech arrives with the right parts."
+            }
+        }
+    },
+    "facility": {
+        "badge": "Facility Management",
+        "title": {
+            "line1": "Smarter Buildings, ",
+            "highlight": "Superior Operations"
+        },
+        "description": "Space Field unifies facility operations into one intuitive platform. Empower your teams to manage maintenance, assets, and tenant satisfaction from anywhere in the building.",
+        "link": "See Facility Demo",
+        "imageAlt": "Modern Facility Management Operations",
+        "features": {
+            "workOrder": {
+                "title": "Work Order Management",
+                "desc": "Streamline tenant requests and internal repairs. Assign tasks to maintenance staff instantly and track resolution times to ensure service level agreements (SLAs) are met."
+            },
+            "preventive": {
+                "title": "Preventive Maintenance",
+                "desc": "Schedule recurring inspections for HVAC, elevators, and fire safety systems. Auto-generate checklists to ensure compliance and extend asset lifecycles."
+            },
+            "assetTracking": {
+                "title": "Space & Asset Tracking",
+                "desc": "Gain visibility into asset location and condition across your portfolio. Monitor occupancy levels and optimize space utilization data for smarter planning."
+            }
+        }
+    },
+    "constructionPage": {
+        "hero": {
+            "badge": "Construction & Engineering",
+            "title": "Automated",
+            "titleHighlight": "Punch Lists.",
+            "description": "Stop tapping at your screen. Just walk the site with your camera. SpaceCapture automatically identifies defects, assigns subcontractors, and creates the punch list for you.",
+            "cta": "See It In Action",
+            "imageAlt": "Video-to-List Engine",
+            "visualTitle": "Video-to-List Engine",
+            "visualStatus": "Processing Site Walk...",
+            "paintDefect": "Paint Defect",
+            "exposedWiring": "Exposed Wiring"
+        },
+        "features": {
+            "title": "Eliminate Rework & Disputes",
+            "description": "The biggest cost in construction isn't materials—it's fix-work. Stop issues from slipping through the cracks.",
+            "item1": {
+                "title": "Walk & Talk Reporting",
+                "desc": "Don't stop to type. Narrate your observations as you video the site. Our multimodal AI transcribes your voice, grabs the frame, and creates the ticket instantly."
+            },
+            "item2": {
+                "title": "Subcontractor Accountability",
+                "desc": "Every defect is geolocated and timestamped. Send automated PDF reports to specific trades with photo proof, eliminating \"it wasn't me\" disputes."
+            }
+        },
+        "workflows": {
+            "title": "Supported Workflows",
+            "punchLists": {
+                "title": "Punch Lists",
+                "desc": "Zero-defect handovers"
+            },
+            "dailyLogs": {
+                "title": "Daily Logs",
+                "desc": "Site progress tracking"
+            },
+            "safetyAudits": {
+                "title": "Safety Audits",
+                "desc": "OSHA compliance"
+            },
+            "rfi": {
+                "title": "RFI Creation",
+                "desc": "Field-to-office queries"
+            }
+        }
+    },
+    "visualFormBuilderPage": {
+        "hero": {
+            "badge": "Visual Editor",
+            "title": {
+                "noCode": "No-Code",
+                "highlight": "Form Builder"
+            },
+            "description": "Tired of waiting for developers to update a single field? With Space Capture, you are the engineer. Drag and drop complex logic, customize branding, and deploy smart forms to your field teams instantly—all without writing a line of code.",
+            "cta": "Request Demo"
+        },
+        "editor": {
+            "visualEditor": "Visual Editor",
+            "rateSafety": "Rate site safety compliance:",
+            "uploadPhoto": "Upload Site Photo",
+            "fieldProperties": {
+                "title": "Field Properties",
+                "autoGeotag": "Auto-Geotagging",
+                "requirePhoto": "Require Photo",
+                "validation": "Validation",
+                "mandatory": "Mandatory Field"
+            }
+        },
+        "templates": {
+            "operationalTemplates": "Operational Templates",
+            "badge": "Operational Templates",
+            "title": {
+                "line1": "Launch Faster with",
+                "highlight": "Pre-Built Workflows"
+            },
+            "description": "Don't start from scratch. Benefit from our library of 100+ industry-standard operational templates used by thousands of field teams.",
+            "dailyLog": "Daily Site Safety Log",
+            "dailyLogItem1": "Site condition check?",
+            "dailyLogItem2": "PPE verified for all crew?",
+            "list": {
+                "safety": "Safety Audits & Risk Assessments",
+                "maintenance": "Equipment Maintenance Logs",
+                "quality": "Quality Control Checklists",
+                "daily": "Daily Progress Reports"
+            },
+            "quote": "Once you've created templates for your team, save them and share for consistent future use across all project sites."
+        }
+    },
+    "aiDetectionPage": {
+        "hero": {
+            "badge": "AI Vision",
+            "title": {
+                "line1": "Upload for",
+                "highlight": "AI Detection"
+            },
+            "description": "Empower every field worker with an AI expert in their pocket. Simply capture a photo, and our engine instantly identifies defects, grades severity, and uploads structured data to the cloud.",
+            "cta": "Try AI Capture"
+        },
+        "analysis": {
+            "status": "Analysis Complete",
+            "title": "AI Scan Results",
+            "item1": {
+                "name": "Structural Crack",
+                "desc": "Found in upper sector. Requires immediate attention.",
+                "severity": "High Severity"
+            },
+            "item2": {
+                "name": "Surface Corrosion",
+                "desc": "Oxidation detected on metal fasteners.",
+                "severity": "Medium Severity"
+            },
+            "item3": {
+                "name": "Missing Fastener",
+                "severity": "Low Severity"
+            },
+            "syncing": "SYNCING DATA TO CLOUD..."
+        },
+        "reporting": {
+            "badge": "Instant Reporting",
+            "title": {
+                "line1": "No Manual Entry.",
+                "highlight": "Just Results."
+            },
+            "description": "The AI handles the tedious part. Your images are converted into detailed, searchable reports with timestamps, location data, and technical classifications in seconds.",
+            "assetType": "Asset Type",
+            "confidence": "Confidence",
+            "defectFound": "Defect Found",
+            "synced": "Synced to cloud 2s ago",
+            "list": {
+                "item1": "Metadata Extraction (Time, GPS, Device)",
+                "item2": "Auto-Categorization of Defects",
+                "item3": "Instant Sync to Web Dashboard"
+            }
+        }
+    },
+    "engagementFlowsPage": {
+        "hero": {
+            "badge": "Automation",
+            "title": {
+                "line1": "Visual",
+                "highlight": "Engagement Flows"
+            },
+            "description": "Design complex field logic without writing code. Use our drag-and-drop canvas to route tasks, trigger notifications, and update records based on real-time data inputs.",
+            "cta": "Build a Flow"
+        },
+        "flowchart": {
+            "workflow": "Workflow: Safety Incident",
+            "active": "ACTIVE",
+            "nodes": {
+                "trigger": "Form Submitted",
+                "type": "Type: Inspection Report",
+                "condition": "Check Severity",
+                "conditionDesc": "If Risk Level > High",
+                "action1": "Alert Manager",
+                "action2": "Auto-Approve"
+            }
+        },
+        "triggers": {
+            "badge": "Smart Triggers",
+            "title": {
+                "line1": "If This,",
+                "highlight": "Then That."
+            },
+            "description": "Automate the boring stuff. Set up rules that work while you sleep. Automatically flag high-risk inspections, dispatch follow-up crews, or generate PDF reports instantly upon submission.",
+            "rule1": "Automation Rule #1",
+            "when": "WHEN",
+            "whenDesc": "Inspection is Overdue by 2 Days",
+            "then": "THEN DO THIS",
+            "thenAction1": "Send SMS to Assignee",
+            "thenAction2": "Update Priority to 'High'",
+            "list": {
+                "item1": "Time-Based Triggers (e.g., Monthly)",
+                "item2": "Condition-Based Actions (e.g., If Failed)",
+                "item3": "Cross-Platform Notifications"
+            }
+        }
+    },
+    "accessControlPage": {
+        "hero": {
+            "badge": "Security First",
+            "title": {
+                "line1": "Enterprise-Grade",
+                "highlight": "Access Control"
+            },
+            "description": "Define exactly who can see, edit, or delete data. Create custom roles like \"Field Inspector,\" \"Project Manager,\" or \" auditor\" to ensure data integrity and compliance across your organization.",
+            "cta": "Secure Your Data"
+        },
+        "rbac": {
+            "header": "Team Members",
+            "invite": "+ Invite Member",
+            "roles": {
+                "admin": "Admin",
+                "fieldUser": "Field User",
+                "viewer": "Client Viewer"
+            },
+            "permissions": {
+                "title": "Permissions: Field User",
+                "submit": "Submit Forms",
+                "view": "View Own Data",
+                "delete": "Delete Records"
+            }
+        },
+        "assignment": {
+            "badge": "Task Assignment",
+            "title": {
+                "line1": "Right Person,",
+                "highlight": "Right Place."
+            },
+            "description": "Assign inspections and forms to specific users or teams. Ensure sensitive project data is only accessible to authorized personnel, and revoke access automatically when a job is done.",
+            "card": {
+                "title": "Assign Inspection",
+                "assignTo": "ASSIGN TO",
+                "restrictTo": "RESTRICT ACCESS TO",
+                "expiration": "ACCESS EXPIRATION",
+                "user": "Sarah Smith (Field Team)",
+                "location": "Site Alpha - Sector 4",
+                "options": {
+                    "24h": "24 Hours",
+                    "1w": "1 Week",
+                    "perm": "Permanent"
+                },
+                "button": "Grant Access",
+                "toast": "Task assigned securely to Sarah"
+            },
+            "list": {
+                "item1": "Direct User-to-Task Assignment",
+                "item2": "Location-Based Geofencing Access",
+                "item3": "Temporary / Guest Access Links"
+            }
+        }
+    },
+    "reportPage": {
+        "hero": {
+            "badge": "Deep Insights",
+            "title": {
+                "line1": "Turn Field Data into",
+                "highlight": "Business Intelligence"
+            },
+            "description": "Don't let your data collect dust. Visualize project health, track team performance, and spot safety trends instantly with our interactive dashboards.",
+            "cta": "View Sample Reports"
+        },
+        "dashboard": {
+            "title": "Project Overview",
+            "updated": "Last updated: Just now",
+            "totalInspections": "Total Inspections",
+            "openIssues": "Open Issues",
+            "compliance": "Compliance",
+            "weeklyActivity": "Weekly Activity",
+            "issuesByType": "Issues by Type",
+            "total": "Total",
+            "safety": "Safety",
+            "quality": "Quality"
+        },
+        "export": {
+            "card": {
+                "title": "Export Report",
+                "desc": "Configure your download settings",
+                "format": "File Format",
+                "pdf": "PDF Document",
+                "excel": "Excel / CSV",
+                "includeData": "Include Data",
+                "photos": "Site Photos & Annotations",
+                "gps": "GPS Location Maps",
+                "button": "Generate & Download"
+            },
+            "badge": "Custom Exports",
+            "title": {
+                "line1": "Professional Reports,",
+                "highlight": "Ready in Seconds."
+            },
+            "description": "Forget spending hours formatting spreadsheets. Space Capture automatically compiles your field data into professional, branded PDF reports or raw Excel exports.",
+            "list": {
+                "item1": "Schedule Automated Email Delivery",
+                "item2": "White-Label with Your Company Logo",
+                "item3": "Filter by Date, User, or Project",
+                "item4": "One-Click Audit Logs"
+            }
+        }
+    },
+    "integrationPage": {
+        "webhooks": {
+            "badge": "Developer Tools",
+            "title": {
+                "line1": "Powerful",
+                "highlight": "Webhooks"
+            },
+            "description": "We've worked hard to flatten our data structure and provide the most robust webhooks in the industry. Instantly push field data to your CRM, Slack, or custom internal tools the moment a form is submitted.",
+            "cta": "Read Documentation",
+            "mockup": {
+                "trigger": "Trigger",
+                "newInspection": "New Inspection Submitted",
+                "status": "Active",
+                "json": "JSON",
+                "destination": "Destination: CRM",
+                "statusLabel": "Status",
+                "priority": "High Priority",
+                "customer": "Customer",
+                "action": "Action",
+                "createTicket": "Create Ticket"
+            }
+        },
+        "agents": {
+            "badge": "AI Integration",
+            "title": {
+                "line1": "Connect with",
+                "highlight": "Autonomous Agents"
+            },
+            "description": "Go beyond simple data piping. Integrate Space Capture with AI Agents to analyze field data in real-time and trigger complex, multi-step workflows across your entire software stack automatically.",
+            "mockup": {
+                "listening": "AGENT LISTENING",
+                "message1": "I detected a critical safety failure in the latest inspection report.",
+                "error": "Error: Guard rail missing on Level 4",
+                "message2": "Executing automated response protocols:",
+                "action1": "Notified Site Manager via SMS",
+                "action2": "Created High-Priority Maintenance Ticket",
+                "action3": "Scheduled Re-inspection for tomorrow"
+            },
+            "list": {
+                "item1": "Natural Language Querying of Field Data",
+                "item2": "Automated Risk Assessment & Triage",
+                "item3": "Seamless Handover to Slack/Teams Bots"
+            }
+        }
+    },
+    "hostingPage": {
+        "hero": {
+            "badge": "Deployment",
+            "title": {
+                "line1": "Flexible Hosting",
+                "highlight": "Your Way"
+            },
+            "description": "Space Capture offers the most flexible hosting options in the market. Whether you need the speed of our global SaaS cloud, the isolation of a private instance, or total control via on-premise deployment—we've got you covered.",
+            "cta": "Request Hosting Demo"
+        },
+        "mockup": {
+            "core": "Space Capture Core",
+            "environment": "Deployment Environment",
+            "saas": "SaaS Cloud",
+            "saasDesc": "Instant scaling, zero maintenance.",
+            "private": "Private Cloud",
+            "privateDesc": "Dedicated VPC, isolated resources.",
+            "onPremise": "On-Premise",
+            "onPremiseDesc": "Air-gapped, self-hosted control.",
+            "security": "Enterprise Grade",
+            "securityDesc": "SOC 2 Type II Compliant & ISO 27001 Certified Data Centers.",
+            "residency": "Data Residency",
+            "residencyDesc": "Host data in US, EU, AU, or your own local servers."
+        },
+        "comparison": {
+            "title": "Choose Your Deployment Model",
+            "subtitle": "Match your infrastructure to your security and compliance needs.",
+            "saas": {
+                "title": "Cloud SaaS",
+                "desc": "Best for teams who want to get started instantly.",
+                "list": {
+                    "item1": "Multi-tenant Architecture",
+                    "item2": "Automatic Updates",
+                    "item3": "99.9% Uptime SLA",
+                    "item4": "Global CDN"
+                }
+            },
+            "private": {
+                "title": "Private Cloud",
+                "desc": "For organizations needing isolated resources.",
+                "list": {
+                    "item1": "Single-tenant Environment",
+                    "item2": "Custom Domain & SSO",
+                    "item3": "Dedicated Database",
+                    "item4": "VPC Peering"
+                }
+            },
+            "onPremise": {
+                "title": "On-Premise",
+                "desc": "Complete control for high-compliance sectors.",
+                "list": {
+                    "item1": "Self-Hosted (Docker/K8s)",
+                    "item2": "Full Data Sovereignty",
+                    "item3": "Air-Gapped Capable",
+                    "item4": "Custom Audit Logs"
+                }
+            }
+        }
+    }
+}

@@ -4,8 +4,10 @@ import React from 'react';
 import Image from 'next/image';
 import { CheckCircle2, BarChart3, ClipboardList, Layers } from 'lucide-react';
 import { motion, Variants } from 'framer-motion'; // 1. Added Variants import
+import { useTranslation } from '@/hooks/useTranslation';
 
 const GuideSection = () => {
+  const { t } = useTranslation();
   // 2. Explicitly typed the variants to fix the "ease" string error
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -17,20 +19,20 @@ const GuideSection = () => {
 
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.6, ease: "easeOut" } 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   };
 
   const imageVariants: Variants = {
     hidden: { opacity: 0, scale: 0.95, x: 30 },
-    visible: { 
-      opacity: 1, 
-      scale: 1, 
+    visible: {
+      opacity: 1,
+      scale: 1,
       x: 0,
-      transition: { duration: 0.8, ease: "easeOut" } 
+      transition: { duration: 0.8, ease: "easeOut" }
     }
   };
 
@@ -38,9 +40,9 @@ const GuideSection = () => {
     <section className="relative py-16 lg:py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 overflow-hidden">
       <div className="container mx-auto max-w-[1400px] px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          
+
           {/* Left Content - Text & Features */}
-          <motion.div 
+          <motion.div
             className="space-y-8"
             variants={containerVariants}
             initial="hidden"
@@ -52,30 +54,30 @@ const GuideSection = () => {
               <div className="inline-flex items-center gap-2 bg-white/50 backdrop-blur-sm border border-blue-200 rounded-full px-4 py-1.5 shadow-sm">
                 <Layers className="w-4 h-4 text-blue-600" />
                 <span className="text-xs font-bold text-blue-700 uppercase tracking-wider">
-                  Total Workflow Control
+                  {t('guide.badge')}
                 </span>
               </div>
             </motion.div>
 
             {/* Headline */}
-            <motion.h2 
+            <motion.h2
               variants={itemVariants}
               className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-slate-900"
             >
-              Orchestrate Your Field Projects With{' '}
-              <span className="text-blue-600">Efficiency</span>
+              {t('guide.headline.prefix')}{' '}
+              <span className="text-blue-600">{t('guide.headline.highlight')}</span>
             </motion.h2>
 
             {/* Description */}
-            <motion.p 
+            <motion.p
               variants={itemVariants}
               className="text-lg text-slate-600 leading-relaxed max-w-xl"
             >
-              SPACE CAPTURE isn&apos;t just about knowing where you are—it&apos;s about knowing <strong>where your project stands.</strong> Replace chaotic paper trails with digital precision. Assign tasks, log inspections, and visualize progress in one unified ecosystem.
+              {t('guide.description.part1')} <strong>{t('guide.description.bold')}</strong> {t('guide.description.part2')}
             </motion.p>
 
             {/* Features List */}
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="space-y-6 pt-2"
             >
@@ -85,8 +87,8 @@ const GuideSection = () => {
                   <ClipboardList className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900">Digital Task Management</h3>
-                  <p className="text-slate-600 mt-1">Assign duties instantly and track completion status without the paperwork.</p>
+                  <h4 className="text-lg font-bold text-slate-900">{t('guide.feature1.title')}</h4>
+                  <p className="text-slate-600 mt-1">{t('guide.feature1.desc')}</p>
                 </div>
               </div>
 
@@ -96,8 +98,8 @@ const GuideSection = () => {
                   <BarChart3 className="w-6 h-6 text-indigo-600 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900">Real-Time Site Analytics</h3>
-                  <p className="text-slate-600 mt-1">Get live insights on workforce productivity and project milestones.</p>
+                  <h4 className="text-lg font-bold text-slate-900">{t('guide.feature2.title')}</h4>
+                  <p className="text-slate-600 mt-1">{t('guide.feature2.desc')}</p>
                 </div>
               </div>
 
@@ -107,15 +109,15 @@ const GuideSection = () => {
                   <CheckCircle2 className="w-6 h-6 text-purple-600 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900">Automated Compliance</h3>
-                  <p className="text-slate-600 mt-1">Ensure every safety protocol is checked, logged, and synced to the cloud.</p>
+                  <h4 className="text-lg font-bold text-slate-900">{t('guide.feature3.title')}</h4>
+                  <p className="text-slate-600 mt-1">{t('guide.feature3.desc')}</p>
                 </div>
               </div>
             </motion.div>
           </motion.div>
 
           {/* Right Content - Clean Image */}
-          <motion.div 
+          <motion.div
             className="relative"
             variants={imageVariants}
             initial="hidden"
@@ -130,12 +132,12 @@ const GuideSection = () => {
                 height={600}
                 className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700 ease-in-out"
               />
-              
+
               {/* Subtle Gradient Overlay for Depth */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent pointer-events-none"></div>
 
               {/* Live Status Badge */}
-              <motion.div 
+              <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1, duration: 0.5 }}
@@ -146,25 +148,25 @@ const GuideSection = () => {
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                 </div>
                 <div>
-                  <span className="block text-xs font-bold text-slate-900 uppercase tracking-wide">System Online</span>
-                  <span className="block text-[10px] text-slate-500 font-medium">Data Synced Just Now</span>
+                  <span className="block text-xs font-bold text-slate-900 uppercase tracking-wide">{t('guide.image.status')}</span>
+                  <span className="block text-[10px] text-slate-500 font-medium">{t('guide.image.synced')}</span>
                 </div>
               </motion.div>
             </div>
 
             {/* Decorative Background Blurs */}
-            <motion.div 
-              animate={{ 
+            <motion.div
+              animate={{
                 scale: [1, 1.1, 1],
-                opacity: [0.2, 0.3, 0.2] 
+                opacity: [0.2, 0.3, 0.2]
               }}
               transition={{ duration: 5, repeat: Infinity }}
               className="absolute -z-10 -top-10 -right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-[64px] opacity-20"
             />
-            <motion.div 
-              animate={{ 
+            <motion.div
+              animate={{
                 scale: [1, 1.2, 1],
-                opacity: [0.2, 0.3, 0.2] 
+                opacity: [0.2, 0.3, 0.2]
               }}
               transition={{ duration: 7, repeat: Infinity, delay: 1 }}
               className="absolute -z-10 -bottom-10 -left-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-[64px] opacity-20"
