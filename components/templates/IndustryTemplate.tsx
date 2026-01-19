@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { IndustryData } from '@/lib/seo-data';
-import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
+
 import { ArrowRight, BarChart3, Wifi, Smartphone } from 'lucide-react';
 
 export function IndustryTemplate({ data }: { data: IndustryData }) {
@@ -12,13 +12,6 @@ export function IndustryTemplate({ data }: { data: IndustryData }) {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-600/20 blur-[120px] rounded-full translate-x-1/3 -translate-y-1/3" />
         
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
-          <Breadcrumbs 
-             items={[
-               { label: 'Industries', href: '#' },
-               { label: data.meta.title.split('|')[0].trim(), href: `/industries/${data.slug}` }
-             ]} 
-             className="text-slate-400 mb-8"
-          />
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
              <div>

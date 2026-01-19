@@ -2,12 +2,8 @@
 import React, { useState } from 'react';
 import { Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-
-export type GlossaryTerm = {
-  term: string;
-  definition: string;
-  category: string;
-};
+import Link from 'next/link';
+import { GlossaryTerm } from '@/lib/glossary-data';
 
 interface GlossaryProps {
   terms: GlossaryTerm[];
@@ -83,20 +79,21 @@ export const Glossary = ({ terms }: GlossaryProps) => {
                     </div>
                     <div className="grid md:grid-cols-2 gap-6 pl-4 md:pl-0">
                         {groupedTerms[letter].map((term) => (
-                            <motion.div 
-                                layout
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                key={term.term} 
-                                className="p-5 rounded-xl bg-slate-50 border border-slate-100 hover:border-indigo-200 hover:shadow-md transition-all group"
-                            >
-                                <div className="flex justify-between items-start mb-2">
-                                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-indigo-700 transition-colors">{term.term}</h3>
-                                    <span className="text-xs font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-500">{term.category}</span>
-                                </div>
-                                <p className="text-slate-600 text-sm leading-relaxed">{term.definition}</p>
-                            </motion.div>
+                            <Link href={`/knowledge-base/${term.slug}`} key={term.term}>
+                                <motion.div 
+                                    layout
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    className="p-5 h-full rounded-xl bg-slate-50 border border-slate-100 hover:border-indigo-200 hover:shadow-md transition-all group cursor-pointer"
+                                >
+                                    <div className="flex justify-between items-start mb-2">
+                                        <h3 className="text-lg font-bold text-slate-900 group-hover:text-indigo-700 transition-colors">{term.term}</h3>
+                                        <span className="text-xs font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-500">{term.category}</span>
+                                    </div>
+                                    <p className="text-slate-600 text-sm leading-relaxed line-clamp-2">{term.definition}</p>
+                                </motion.div>
+                            </Link>
                         ))}
                     </div>
                 </div>

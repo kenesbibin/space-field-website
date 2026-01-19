@@ -86,9 +86,9 @@ export default function HeroSection() {
                 variants={fadeInUp}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-900 tracking-tight"
               >
-                Command Your Field Operations With{' '}
+                Field Management App for <br/>
                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                  Absolute Precision
+                  Construction Teams
                 </span>
               </motion.h1>
               
@@ -96,7 +96,7 @@ export default function HeroSection() {
                 variants={fadeInUp}
                 className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium"
               >
-                Eliminate on-site chaos. SPACE CAPTURE provides the ultimate mobile command center for construction, maintenance, and inspection teams to track progress in real-time.
+                Streamline your entire project lifecycle with the ultimate field management app. From automated AI defect detection to instant daily reports, SpaceCapture empowers construction teams to build safer and faster.
               </motion.p>
             </div>
 
@@ -114,7 +114,7 @@ export default function HeroSection() {
               </a>
               
               <Link
-                href="/book-a-demo"
+                href="/request-a-demo"
                 className="inline-flex items-center justify-center gap-2 bg-white text-slate-700 px-8 py-4 rounded-full text-lg font-semibold border border-slate-200 transition-all duration-300 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 active:scale-95 shadow-sm"
               >
                 Schedule Demo

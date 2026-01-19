@@ -7,6 +7,7 @@ const ROUTES: string[] = [
   "/about-us",
   "/request-a-demo",
   "/pricing",
+  "/app-download",
   
   // Products / Features
   "/core-functions",
@@ -30,7 +31,7 @@ const ROUTES: string[] = [
   "/blog/end-of-manual-punch-lists",
   "/blog/predictive-maintenance",
   "/blog/drone-defect-detection",
-  "/blog/ai-in-construction",
+
 
   // Industries
   "/industries/construction",
@@ -44,8 +45,21 @@ const ROUTES: string[] = [
   "/industries/logistics",
   "/industries/facility-management",
 
+  // Solutions (SEO)
+  "/site-inspection-software",
+  "/ai-defect-detection",
+  "/ai-detection-api",
+  "/construction-field-software",
+  "/construction-inspection-software",
+  "/construction-site-management",
+  "/defect-detection-ai",
+  "/field-data-capture-software",
+
   // Comparisons
   "/compare/raken",
+  
+  // Sitemap
+  "/sitemaps",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

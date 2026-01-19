@@ -125,7 +125,7 @@ const IsoGuidePage = () => {
 
                 <div className="mt-16 text-center">
                     <p className="text-xl font-bold text-slate-900 mb-6">Ready to ace your next audit?</p>
-                    <a href="/book-a-demo" className="inline-block px-8 py-4 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20">
+                    <a href="/request-a-demo" className="inline-block px-8 py-4 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20">
                         Get the QMS Template Pack
                     </a>
                 </div>

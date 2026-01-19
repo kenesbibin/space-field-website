@@ -1,17 +1,62 @@
 "use client";
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { color, motion } from 'framer-motion';
 import { 
   Users, 
   MapPin, 
   Globe, 
   Award, 
   ArrowRight,
-  Heart
+  Heart,
+  MessageCircle,
+  Mail,
+  Phone,
+  Cpu
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import CallToAction from '@/components/CallToAction';
+
+const LOCATIONS = [
+  {
+    city: "Singapore",
+    type: "Regional Headquarters",
+    address: ["ISPACE BUILDING #04-39", "7 SOON LEE STREET", "SINGAPORE 627608"],
+    coords: "1.34°, 103.70°",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=1.34,103.70"
+  },
+  {
+    city: "USA",
+    type: "Americas Headquarters",
+    address: ["2500 MARCONI AVE, STE 101", "SACRAMENTO, CA 95821 USA"],
+    coords: "38.62°, -121.38°",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=38.62,-121.38"
+  },
+  {
+    city: "Dubai",
+    type: "Middle East - Regional Office",
+    address: [],
+    coords: "25.28°, 55.31°",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=25.28,55.31"
+  },
+  {
+    city: "India",
+    type: "Technology and R&D",
+    address: [],
+    coords: "8.91°, 76.69°",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=8.91,76.69"
+  },
+  {
+    city: "Kuwait",
+    type: "Strategic Partner for Gulf Region",
+    address: [],
+    coords: "29.08°, 48.13°",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=29.08,48.13"
+  }
+];
+
+
 
 export default function AboutUsPage() {
   return (
@@ -31,9 +76,25 @@ export default function AboutUsPage() {
                  spatial data.
               </span>
            </h1>
-           <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+           <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10">
               Space Capture was founded on a simple belief: the physical world deserves a digital twin that is accurate, accessible, and actionable for everyone.
            </p>
+
+           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link 
+                  href="https://www.amspace.ai/login?type=Legal&moduleId=b20f5bfe-a351-46e7-842a-24a02802fe4f&invite=guest"
+                  className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full bg-indigo-600 px-8 text-base font-bold text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-indigo-500 hover:scale-105"
+              >
+                  Try for Free
+                  <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link 
+                  href="/request-a-demo"
+                  className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full bg-white text-slate-900 px-8 text-base font-bold shadow transition-all hover:bg-slate-100 hover:scale-105"
+              >
+                  Book a Demo
+              </Link>
+           </div>
         </div>
       </section>
 
@@ -72,132 +133,114 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* TEAM GRID */}
-      <section className="py-20 bg-slate-50">
-          <div className="container mx-auto px-6">
-              <div className="text-center mb-16">
-                  <span className="text-blue-600 font-bold tracking-wider text-sm uppercase mb-2 block">Our Leadership</span>
-                  <h2 className="text-3xl font-bold text-slate-900">Meet the Builders</h2>
-              </div>
-
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                  <TeamMember 
-                      name="Sarah Chen" 
-                      role="CEO & Co-Founder" 
-                      bio="Ex-NASA Engineer. Leading the vision to digitize reality."
-                      image="/images/team-1.jpg" // Placeholder path
-                  />
-                  <TeamMember 
-                      name="David Miller" 
-                      role="CTO" 
-                      bio="PhD in Computer Vision. Architect of our Core Engine."
-                      image="/images/team-2.jpg" // Placeholder path
-                  />
-                  <TeamMember 
-                      name="Elena Rodriguez" 
-                      role="Head of Product" 
-                      bio="Previously at Autodesk. Passionate about user workflows."
-                      image="/images/team-3.jpg" // Placeholder path
-                  />
-                  <TeamMember 
-                      name="Kenji Sato" 
-                      role="VP of Engineering" 
-                      bio="Scaling systems from 1 to 100 million users."
-                      image="/images/team-4.jpg" // Placeholder path
-                  />
-              </div>
-
-              <div className="text-center mt-12">
-                   <p className="text-slate-500 mb-6">
-                       Plus 150+ engineers, designers, and problem solvers across the globe.
-                   </p>
-                   <button className="px-6 py-3 bg-white border border-slate-300 rounded-lg font-bold text-slate-700 hover:border-slate-400 transition-colors">
-                       View All Open Positions
-                   </button>
-              </div>
-          </div>
+      {/* CONTACT & LEADERSHIP */}
+      <section className="py-20 bg-slate-50 border-y border-slate-200">
+         <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+               <span className="text-blue-600 font-bold tracking-wider text-sm uppercase mb-2 block">Get in Touch</span>
+               <h2 className="text-3xl font-bold text-slate-900">Connect with Leadership</h2>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+               <ContactCard 
+                  icon={MessageCircle}
+                  title="Chat on WhatsApp"
+                  action="Start Chat"
+                  href="https://wa.me/14198201487" // Defaulting to US number as typical, adjust if needed
+                  color="bg-green-50 text-green-600 hover:bg-green-100"
+               />
+               <ContactCard 
+                  icon={Mail}
+                  title="Email Us"
+                  action="Send Message"
+                  href="mailto:contact@spacecapture.ai"
+                  color="bg-blue-50 text-blue-600 hover:bg-blue-100"
+               />
+               <ContactCard 
+                  icon={Phone}
+                  title="Call Sales"
+                  action="+1 (419) 820-1487"
+                  href="tel:+14198201487"
+                  color="bg-purple-50 text-purple-600 hover:bg-purple-100"
+               />
+               <ContactCard 
+                  icon={Cpu}
+                  title="Tech / CTO"
+                  action="Tech Partnerships"
+                  href="mailto:cto@spacecapture.ai" // Assuming generic alias, safe fallback
+                  color="bg-indigo-50 text-indigo-600 hover:bg-indigo-100"
+               />
+            </div>
+         </div>
       </section>
 
       {/* OFFICES */}
-      <section className="py-20 bg-white border-t border-slate-100">
-          <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                  <h2 className="text-3xl font-bold text-slate-900 mb-6">Where We Work</h2>
-                  <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                      We are a remote-first company with hubs in key innovation centers. Come say hi if you're in the neighborhood!
+      <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+              <div className="text-center mb-16">
+                  <h2 className="text-3xl font-bold text-slate-900 mb-6">Global Presence</h2>
+                  <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                      Strategically positioned to serve our partners worldwide.
                   </p>
-                  
-                  <div className="space-y-6">
-                      <OfficeLocation city="San Francisco" address="548 Market St, CA 94104" type="Headquarters" />
-                      <OfficeLocation city="Singapore" address="71 Ayer Rajah Crescent, #02-01" type="APAC Hub" />
-                      <OfficeLocation city="London" address="123 Buckingham Palace Rd" type="EMEA Hub" />
-                  </div>
               </div>
               
-              <div className="bg-slate-100 rounded-3xl p-8 aspect-square flex items-center justify-center relative overflow-hidden">
-                   {/* Abstract Map Visual */}
-                   <div className="absolute inset-0 opacity-10 bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg')] bg-cover bg-center"></div>
-                   <div className="relative z-10 text-center">
-                       <MapPin className="w-16 h-16 text-blue-500 mx-auto mb-4 animate-bounce" />
-                       <h3 className="text-xl font-bold text-slate-900">Global Presence</h3>
-                   </div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {LOCATIONS.map((loc, idx) => (
+                    <OfficeCard key={idx} {...loc} />
+                  ))}
               </div>
           </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-slate-900 text-white text-center">
-          <div className="container mx-auto px-6">
-              <Heart className="w-12 h-12 text-pink-500 mx-auto mb-6" />
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">Built with passion.<br/>Backed by science.</h2>
-              <p className="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
-                  Ready to transform how you manage your physical assets? Join thousands of forward-thinking companies today.
-              </p>
-              <div className="flex flex-col md:flex-row gap-4 justify-center">
-                  <Link href="/request-a-demo">
-                    <button className="px-8 py-4 bg-blue-600 rounded-xl font-bold text-lg hover:bg-blue-500 transition-all hover:scale-105 shadow-lg shadow-blue-900/50">
-                        Start Your Free Trial
-                    </button>
-                  </Link>
-                  <Link href="/lab/photogrammetry">
-                     <button className="px-8 py-4 bg-slate-800 rounded-xl font-bold text-lg hover:bg-slate-700 transition-all border border-slate-700">
-                        Explore Our Tech
-                     </button>
-                  </Link>
-              </div>
-          </div>
-      </section>
+      {/* CTA SECTION (Replaced) */}
+      <CallToAction />
 
     </main>
   );
 }
 
-const TeamMember = ({ name, role, bio, image }: any) => (
-    <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all group text-center">
-        <div className="w-24 h-24 mx-auto bg-slate-200 rounded-full mb-4 overflow-hidden relative">
-            {/* Placeholder for real image */}
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center text-slate-400 font-bold text-2xl">
-                {name.charAt(0)}
-            </div>
-            {/* <Image src={image} alt={name} fill className="object-cover" /> */}
-        </div>
-        <h3 className="text-lg font-bold text-slate-900 mb-1">{name}</h3>
-        <p className="text-blue-600 text-xs font-bold uppercase tracking-wider mb-3">{role}</p>
-        <p className="text-slate-500 text-sm leading-relaxed">{bio}</p>
-    </div>
+const ContactCard = ({ icon: Icon, title, action, href, color }: any) => (
+  <a href={href} target="_blank" rel="noopener noreferrer" className={`flex flex-col items-center p-6 rounded-2xl transition-all duration-300 ${color} bg-opacity-50 border border-transparent hover:border-current hover:-translate-y-1`}>
+      <Icon className="w-8 h-8 mb-3" />
+      <span className="text-sm font-semibold opacity-70 mb-1">{title}</span>
+      <span className="text-lg font-bold">{action}</span>
+  </a>
 );
 
-const OfficeLocation = ({ city, address, type }: any) => (
-    <div className="flex items-start gap-4 p-4 bg-white border border-slate-200 rounded-xl hover:border-blue-400 transition-colors">
-        <div className="mt-1 w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 flex-shrink-0">
-            <MapPin className="w-4 h-4" />
+const OfficeCard = ({ city, type, address, coords, mapLink }: any) => (
+    <div className="bg-slate-50 border border-slate-100 p-8 rounded-2xl hover:shadow-lg hover:border-blue-200 transition-all group">
+        <div className="flex items-center justify-between mb-4">
+            <h3 className="text-2xl font-bold text-slate-900">{city}</h3>
+            <MapPin className="w-6 h-6 text-blue-500 group-hover:scale-110 transition-transform" />
         </div>
-        <div>
-            <div className="flex items-center gap-2 mb-1">
-                <h4 className="font-bold text-slate-900">{city}</h4>
-                <span className="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] uppercase font-bold rounded">{type}</span>
+        
+        <div className="mb-6">
+            <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider mb-4">
+                {type}
+            </span>
+            {address.length > 0 ? (
+                 <div className="space-y-1 text-slate-600 text-sm font-medium leading-relaxed">
+                    {address.map((line: string, i: number) => (
+                        <p key={i}>{line}</p>
+                    ))}
+                 </div>
+            ) : (
+                <p className="text-slate-400 text-sm italic">Address not listed publicly.</p>
+            )}
+        </div>
+
+        <div className="pt-6 border-t border-slate-200 flex items-center justify-between">
+            <div className="text-xs font-mono text-slate-500 bg-slate-100 px-2 py-1 rounded">
+                {coords}
             </div>
-            <p className="text-slate-500 text-sm">{address}</p>
+            <a 
+                href={mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors"
+            >
+                View Map <ArrowRight className="w-4 h-4" />
+            </a>
         </div>
     </div>
 );

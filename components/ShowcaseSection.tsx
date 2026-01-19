@@ -13,7 +13,8 @@ const slides = [
     title: "Field Operations Hub",
     location: "Construction Site A",
     description: "Real-time monitoring",
-    icon: MapPin
+    icon: MapPin,
+    alt: "Field Operations Hub Dashboard showing real-time construction site monitoring"
   },
   {
     id: 2,
@@ -21,7 +22,8 @@ const slides = [
     title: "Asset Tracking",
     location: "Logistics Center",
     description: "Precision GPS Lock",
-    icon: Activity
+    icon: Activity,
+    alt: "AI Defect Detection interface highlighting asset tracking capabilities"
   },
   {
     id: 3,
@@ -29,7 +31,8 @@ const slides = [
     title: "Safety Compliance",
     location: "Inspection Zone",
     description: "100% Protocol Adherence",
-    icon: ShieldCheck
+    icon: ShieldCheck,
+    alt: "Safety Compliance checklist on mobile field inspection app"
   }
 ];
 
@@ -76,7 +79,7 @@ const ShowcaseSection = () => {
               >
                 <Image
                   src={slides[currentIndex].image}
-                  alt={slides[currentIndex].title}
+                  alt={slides[currentIndex].alt || slides[currentIndex].title}
                   fill
                   className="object-cover"
                   sizes="(min-width: 1280px) 55vw, (min-width: 768px) 70vw, 90vw"
@@ -175,7 +178,7 @@ const ShowcaseSection = () => {
                  viewport={{ once: true }}
               >
                 <h2 className="text-3xl md:text-4xl font-light leading-tight">
-                  <strong className="font-extrabold block text-blue-400 mb-2">Eliminate Field Blindspots.</strong>
+                  <strong className="font-extrabold block text-blue-400 mb-2">Automated Inspection Software.</strong>
                   Don&apos;t let distance become a barrier to progress.
                 </h2>
               </motion.div>

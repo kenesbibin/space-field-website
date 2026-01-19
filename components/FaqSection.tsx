@@ -98,7 +98,7 @@ const FaqSection = ({ isFullPage = false }: FaqSectionProps) => {
         )}
 
         {/* ACCORDION GRID */}
-        <div className={`grid ${isFullPage ? 'gap-4' : 'lg:grid-cols-2 gap-6'}`}>
+        <div className={`grid ${isFullPage ? 'gap-4' : 'lg:grid-cols-2 gap-6 items-start'}`}>
            {filteredData.map((item, idx) => (
              <div 
                 key={item.question}

@@ -18,7 +18,7 @@ const OilGasPage = () => {
     <div className="min-h-screen bg-slate-50">
       <main>
         <OilGasSection />
-        <IndustryDetails data={INDUSTRIES_DATA['oil-and-gas']} />
+        <IndustryDetails data={INDUSTRIES_DATA['oil-gas']} />
         <CallToAction />
       </main>
     </div>

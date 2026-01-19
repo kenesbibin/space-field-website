@@ -71,7 +71,7 @@ const ProcorePage = () => {
                     Give your inspectors the specialized AI tool they need to capture reality fast.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/book-a-demo" className="px-8 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-slate-100 transition-all transform hover:scale-105">
+                    <a href="/request-a-demo" className="px-8 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-slate-100 transition-all transform hover:scale-105">
                         Get Field Specific
                     </a>
                     <a href="#comparison" className="px-8 py-4 bg-transparent border border-orange-400 text-orange-100 rounded-full font-bold hover:bg-orange-900/30 transition-all">

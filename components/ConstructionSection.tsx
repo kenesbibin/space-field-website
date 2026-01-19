@@ -44,7 +44,7 @@ const ConstructionSection = () => {
   };
 
   return (
-    <section className="relative py-20 lg:py-32 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 overflow-hidden">
+    <section className="relative py-12 lg:py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 overflow-hidden">
       
       {/* Background: Subtle Blueprint Grid Pattern */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]">
@@ -75,14 +75,14 @@ const ConstructionSection = () => {
               </motion.div>
               
               <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
-                Build Smarter with <br/>
+                Construction Field <br/>
                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                  Digital Precision
+                  Management Software
                 </span>
               </motion.h1>
               
               <motion.p variants={itemVariants} className="mt-6 text-lg text-slate-600 leading-relaxed max-w-xl">
-                Space Field bridges the gap between the construction site and the boardroom. Eliminate paperwork, reduce rework, and deliver projects on schedule with our specialized construction module.
+                The ultimate construction field management software. Eliminate paperwork, automate punch lists, and deliver projects on schedule with real-time site monitoring.
               </motion.p>
             </div>
 
@@ -112,7 +112,7 @@ const ConstructionSection = () => {
             </div>
 
             <motion.div variants={itemVariants} className="pt-4">
-               <a href="/book-a-demo" className="inline-flex items-center gap-2 text-blue-700 font-bold hover:gap-3 transition-all">
+               <a href="/request-a-demo" className="inline-flex items-center gap-2 text-blue-700 font-bold hover:gap-3 transition-all">
                   See Construction Demo <ArrowRight className="w-5 h-5" />
                </a>
             </motion.div>

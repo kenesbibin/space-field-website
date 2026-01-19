@@ -26,7 +26,7 @@ export function IndustryDetails({ data }: { data: IndustryData }) {
                  ))}
                  <div className="pt-6">
                     <Link 
-                      href="/book-a-demo" 
+                      href="/request-a-demo" 
                       className="block w-full py-3 px-4 bg-slate-900 text-white text-center font-bold rounded-lg hover:bg-slate-800 transition"
                     >
                       Book a Demo

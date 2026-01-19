@@ -70,7 +70,7 @@ const SafetyCulturePage = () => {
                     quantifies risks, and prevents failures before they happen.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/book-a-demo" className="px-8 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-slate-100 transition-all transform hover:scale-105">
+                    <a href="/request-a-demo" className="px-8 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-slate-100 transition-all transform hover:scale-105">
                         Import Your Templates
                     </a>
                     <a href="#comparison" className="px-8 py-4 bg-transparent border border-indigo-400 text-indigo-100 rounded-full font-bold hover:bg-indigo-900/30 transition-all">

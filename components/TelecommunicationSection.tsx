@@ -110,7 +110,7 @@ const TelecommunicationSection = () => {
             </div>
 
             <motion.div variants={itemVariants} className="pt-4">
-               <a href="/book-a-demo" className="inline-flex items-center gap-2 text-cyan-700 font-bold hover:gap-3 transition-all">
+               <a href="/request-a-demo" className="inline-flex items-center gap-2 text-cyan-700 font-bold hover:gap-3 transition-all">
                   See Telecom Demo <ArrowRight className="w-5 h-5" />
                </a>
             </motion.div>

@@ -105,7 +105,7 @@ const SwitchingCalculator = () => {
                 By switching to Active AI, you could reclaim ~60% of administrative time, allowing your team to do {Math.round(hoursPerWeek * 0.6 * 52 * inspectors)} more hours of actual inspection work per year.
             </p>
 
-            <a href="/book-a-demo" className="inline-flex items-center justify-center w-full py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-100 transition-all hover:scale-[1.02]">
+            <a href="/request-a-demo" className="inline-flex items-center justify-center w-full py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-100 transition-all hover:scale-[1.02]">
                 Start Saving Now <ArrowRight className="ml-2 w-5 h-5" />
             </a>
           </div>

@@ -1,4 +1,5 @@
 import { MessageSquare, AlertTriangle, Clock, FileText, ShieldAlert, Users, HardHat, Factory, Wrench, Brain, Sparkles, Scan, Bot } from 'lucide-react';
+import image from 'next/image';
 
 export interface PersonaData {
   slug: string;
@@ -1293,6 +1294,105 @@ export const INDUSTRIES_DATA: Record<string, IndustryData> = {
           'Space Field provides the robust, flexible foundation needed to optimize every aspect of property operations.',
           'By moving from reactive firefighting to proactive management, real estate leaders can drive higher NOI and asset value.',
           'Empower your teams with the tools they need to deliver exceptional tenant experiences and operational excellence.'
+        ]
+      }
+    ]
+  }
+  ,
+  'insurance': {
+    slug: 'insurance',
+    meta: {
+      title: 'Insurance Field Inspection Software | Space Field',
+      description: 'Accelerate claims processing and risk assessment with AI-powered, offline-capable field inspection software.'
+    },
+    hero: {
+      title: 'AI-Powered Insurance Inspections',
+      subtitle: 'Process claims faster with verifiable field data and AI damage assessment.',
+      image: '/images/utilities.jpg'
+    },
+    stats: [
+      { value: '60%', label: 'Faster Claims' },
+      { value: '40%', label: 'Reduced Fraud' },
+      { value: '100%', label: 'Digital Evidence' }
+    ],
+    chapters: [
+      {
+        title: 'Introduction',
+        id: 'intro',
+        paragraphs: [
+          'The insurance industry relies heavily on accurate, timely field data to assess risks, process claims, and underwrite policies.',
+          'Field adjusters and inspectors often work in challenging environments, from disaster zones to remote properties, gathering critical evidence.',
+          'Traditional paper-based inspections and disjointed photo management slow down the entire claims lifecycle.',
+          'Delays in field reporting lead to customer dissatisfaction and increased operational costs.',
+          'Space Field provides a digital solution tailored for insurance professionals, enabling rapid, accurate, and verifiable field data collection.',
+          'By leveraging AI and offline capabilities, insurers can streamline assessments and make data-driven decisions faster.'
+        ]
+      },
+      {
+        title: 'Industry Challenges',
+        id: 'challenges',
+        paragraphs: [
+          'Speed and accuracy are paramount in insurance, yet manual processes often create bottlenecks.',
+          'Inconsistent damage documentation makes it difficult to validate claims and detect fraud.',
+          'Catastrophic events (CAT) surge demand, overwhelming available field resources and exposing inefficiencies.',
+          'Connectivity issues in damaged areas prevent real-time reporting, delaying critical approvals.',
+          'Compliance and audit trails are often fragmented across emails, folders, and paper forms.',
+          'Without structured data, insurers lack the insights needed to identify risk trends and optimize underwriting models.'
+        ]
+      },
+      {
+        title: 'The Space Field Solution',
+        id: 'solution',
+        paragraphs: [
+          'Space Field empowers insurance teams with a robust mobile platform for all field inspection needs.',
+          'Inspectors capture high-resolution photos, videos, and structured data directly in the app, even without internet access.',
+          'Automated sync ensures that once connectivity is restored, claims handlers in the office receive complete digital files instantly.',
+          'Standardized inspection templates ensure every adjuster follows the same protocols, reducing variance in claim outcomes.',
+          'The platform supports rapid deployment to external adjusters during surge events, maintaining data quality and security.'
+        ]
+      },
+      {
+        title: 'AI-Driven Damage Assessment',
+        id: 'ai-assessment',
+        paragraphs: [
+          'Space Field leverages AI to assist adjusters in identifying and quantifying damage.',
+          'Computer vision algorithms can detect specific damage types (e.g., hail, water, fire) from site photos.',
+          'AI-assisted measurements effectively gauge the scale of damage, improving estimate accuracy.',
+          'Fraud detection models analyze metadata and image patterns to flag suspicious claims early.',
+          'This technology augments the adjuster\'s expertise, allowing them to focus on complex decisions rather than manual data entry.'
+        ]
+      },
+      {
+        title: 'Risk Engineering & Underwriting',
+        id: 'risk-underwriting',
+        paragraphs: [
+          'Beyond claims, Space Field supports risk engineering and pre-binding inspections.',
+          'Inspectors can perform detailed risk assessments, capturing data on property condition, hazards, and safety systems.',
+          'Structured data flows directly into underwriting systems, enabling more accurate risk pricing.',
+          'Historical inspection data helps insurers track property changes over time and adjust policies proactively.',
+          'By digitizing risk control, insurers can reduce loss ratios and improve portfolio health.'
+        ]
+      },
+      {
+        title: 'Compliance & Customer Trust',
+        id: 'compliance-trust',
+        paragraphs: [
+          'Transparency is key to building trust with policyholders during the claims process.',
+          'Space Field provides a clear, time-stamped visual record of all findings, reducing disputes over coverage.',
+          'Comprehensive audit trails ensure every inspection and decision is documented for regulatory compliance.',
+          'Faster turnaround times on claims lead to higher policyholder satisfaction and retention.',
+          'Insurers can demonstrate a commitment to efficiency and fairness with verified digital evidence.'
+        ]
+      },
+      {
+        title: 'Future-Ready Insurance Operations',
+        id: 'future',
+        paragraphs: [
+          'The insurance landscape is shifting towards proactive prevention and tech-enabled service.',
+          'Space Field positions insurers to lead this transformation by digitizing the critical "last mile" of data collection.',
+          'As IoT and aerial imagery integrate with field data, insurers will gain a holistic view of risk.',
+          'The platform scales from daily claims to major catastrophe responses, providing resilience and agility.',
+          'With Space Field, insurance carriers can deliver the speed and precision that modern customers demand.'
         ]
       }
     ]

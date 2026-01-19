@@ -70,7 +70,7 @@ const GoCanvasPage = () => {
                     visual first automation that creates records 10x faster.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/book-a-demo" className="px-8 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-slate-100 transition-all transform hover:scale-105">
+                    <a href="/request-a-demo" className="px-8 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-slate-100 transition-all transform hover:scale-105">
                         Start Free Trial
                     </a>
                     <a href="#comparison" className="px-8 py-4 bg-transparent border border-purple-400 text-purple-100 rounded-full font-bold hover:bg-purple-900/30 transition-all">
@@ -121,7 +121,7 @@ const GoCanvasPage = () => {
                         <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                             SpaceCapture uses Multimodal AI. Your team can point a camera, speak a description, or simply let the AI auto-fill the form based on what it sees.
                         </p>
-                         <a href="/book-a-demo" className="text-purple-600 font-bold hover:text-purple-700 inline-flex items-center">
+                         <a href="/request-a-demo" className="text-purple-600 font-bold hover:text-purple-700 inline-flex items-center">
                             See how it works →
                          </a>
                     </div>

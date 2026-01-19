@@ -1,5 +1,5 @@
 import React from 'react';
-import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
+
 import CallToAction from '@/components/CallToAction';
 import { ScanFace, FileText, Smartphone, Tablet, Monitor, Zap, ExternalLink, Bot, BrainCircuit, ShieldAlert, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,7 +11,7 @@ export default function TemplatesPage() {
     <div className="min-h-screen bg-slate-50">
       <main>
         {/* Hero */}
-        <section className="bg-slate-900 text-white pt-32 pb-20 relative overflow-hidden">
+        <section className="bg-slate-900 text-white pt-12 pb-20 relative overflow-hidden">
              <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
              {/* Gradient Orbs */}
              <div className="absolute top-20 right-0 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px]"></div>
@@ -49,12 +49,7 @@ export default function TemplatesPage() {
         </section>
 
         <div className="container mx-auto max-w-[1200px] px-4 -mt-8 relative z-10 mb-20">
-             <Breadcrumbs 
-                items={[
-                    { label: 'Resources', href: '/resources' },
-                    { label: 'Free AI Tools', href: '/resources/templates' }
-                ]} 
-            />
+
             
             {/* Why App is Better Section */}
             <div className="bg-white rounded-2xl shadow-xl border border-blue-100 p-8 md:p-10 mb-16 mt-8 relative overflow-hidden">

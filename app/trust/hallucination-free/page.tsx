@@ -93,7 +93,7 @@ const TrustPage = () => {
                     <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
                         See how our Citation Engine links every AI insight back to a specific page in your PDF manual.
                     </p>
-                     <a href="/book-a-demo" className="inline-block px-6 py-3 bg-white text-slate-900 font-bold rounded-lg hover:bg-slate-100 transition-colors">
+                     <a href="/request-a-demo" className="inline-block px-6 py-3 bg-white text-slate-900 font-bold rounded-lg hover:bg-slate-100 transition-colors">
                         Request Compliance Demo
                      </a>
                 </div>

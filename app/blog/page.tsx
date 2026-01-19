@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
+
 import CallToAction from '@/components/CallToAction';
 import { ArrowRight, BookOpen, Calendar, User, Tag } from 'lucide-react';
 
@@ -12,13 +12,6 @@ export const metadata: Metadata = {
 
 // Re-using articles data (centralized definition would be better in real app, but duplicating for speed as per current structure)
 const ARTICLES = [
-  {
-    slug: 'ai-in-construction',
-    title: 'The Complete Guide to AI Field Modules',
-    excerpt: 'How Space Capture\'s Field Module App unifies Defect Detection, Safety, and Progress tracking into one software.',
-    category: 'Field App Guide',
-    date: 'Oct 24, 2024'
-  },
   {
     slug: 'computer-vision-risk',
     title: 'AI Defect Detection Analysis Software',
@@ -96,7 +89,7 @@ export default function BlogIndexPage() {
     <div className="min-h-screen bg-slate-50">
       <main>
         {/* Simple Text Hero */}
-        <section className="bg-white pt-32 pb-16 border-b border-slate-200">
+        <section className="bg-white pt-12 pb-16 border-b border-slate-200">
             <div className="container mx-auto px-4 text-center max-w-3xl">
                 <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-widest mb-6">
                     <BookOpen className="w-3 h-3" /> Field Software Engineering
@@ -111,11 +104,7 @@ export default function BlogIndexPage() {
         </section>
 
         <div className="container mx-auto max-w-[1200px] px-4 py-12">
-             <Breadcrumbs 
-                items={[
-                    { label: 'Blog', href: '/blog' }
-                ]} 
-            />
+
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
                 {ARTICLES.map((article, idx) => (

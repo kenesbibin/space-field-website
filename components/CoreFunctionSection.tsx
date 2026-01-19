@@ -115,7 +115,7 @@ const CoreFunctionsSection = () => {
 
             <motion.div variants={itemVariants}>
                 <Link 
-                  href="/book-a-demo"
+                  href="/request-a-demo"
                   className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-slate-900 text-white text-base font-bold hover:bg-slate-800 hover:shadow-lg hover:scale-105 transition-all duration-300"
                 >
                   Get Started Now <ArrowRight className="ml-2 w-5 h-5" />

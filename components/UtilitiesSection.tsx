@@ -42,7 +42,7 @@ const UtilitiesSection = () => {
   };
 
   return (
-    <section className="relative py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-purple-50 to-blue-100 overflow-hidden">
+    <section className="relative py-12 lg:py-20 bg-gradient-to-br from-slate-50 via-purple-50 to-blue-100 overflow-hidden">
       
       {/* Background: Circuit/Grid Pattern */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]">
@@ -111,7 +111,7 @@ const UtilitiesSection = () => {
             </div>
 
             <motion.div variants={itemVariants} className="pt-4">
-               <a href="/book-a-demo" className="inline-flex items-center gap-2 text-purple-700 font-bold hover:gap-3 transition-all">
+               <a href="/request-a-demo" className="inline-flex items-center gap-2 text-purple-700 font-bold hover:gap-3 transition-all">
                   See Utility Solutions <ArrowRight className="w-5 h-5" />
                </a>
             </motion.div>

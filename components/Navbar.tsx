@@ -32,6 +32,7 @@ import {
   ShieldCheck,
   Building2,
   Ruler,
+  ScanSearch,
 } from 'lucide-react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -81,6 +82,8 @@ const productsMenuItems: { [key: string]: { name: string; href: string; icon: an
     { name: 'vs SafetyCulture', href: '/alternatives/safetyculture', icon: HardHat, description: 'Compare inspection automation.' },
     { name: 'vs GoCanvas', href: '/alternatives/gocanvas', icon: Layout, description: 'Compare visual data capture.' },
     { name: 'vs Procore', href: '/alternatives/procore', icon: Factory, description: 'Field vs Office comparison.' },
+    { name: 'vs PlanRadar', href: '/compare/planradar', icon: ScanSearch, description: 'Compare inspection efficiency.' },
+    { name: 'vs Fieldwire', href: '/alternatives/fieldwire', icon: Copy, description: 'Better for small teams.' },
   ],
 };
 
@@ -453,7 +456,7 @@ export default function Navbar() {
                 {/* Pricing Link */}
                  <a
                       href="/pricing"
-                      className="flex items-center gap-1 text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer relative py-2 mr-8"
+                      className="hidden lg:flex items-center gap-1 text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer relative py-2 mr-8"
                     >
                       Pricing
                  </a>

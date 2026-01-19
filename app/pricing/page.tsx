@@ -66,7 +66,7 @@ export default function PricingPage() {
 
                 <div className="flex flex-col sm:flex-row gap-4">
                     <a 
-                        href="#contact"
+                        href="/request-a-demo"
                         className="flex-1 text-center py-4 rounded-xl font-bold bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-lg"
                     >
                         Contact Sales

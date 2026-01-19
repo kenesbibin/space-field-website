@@ -1,5 +1,5 @@
 import React from 'react';
-import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
+
 import CallToAction from '@/components/CallToAction';
 import { ArrowLeft, Clock, Calendar, User } from 'lucide-react';
 import Link from 'next/link';
@@ -61,8 +61,8 @@ export const BlogPostLayout = ({
                 
                 {/* Back Link */}
                 <div className="mb-8">
-                     <Link href="/blog/ai-in-construction" className="inline-flex items-center gap-2 text-indigo-600 font-medium hover:underline text-sm">
-                        <ArrowLeft className="w-4 h-4" /> Back to AI Hub
+                     <Link href="/blog" className="inline-flex items-center gap-2 text-indigo-600 font-medium hover:underline text-sm">
+                        <ArrowLeft className="w-4 h-4" /> Back to Blog
                      </Link>
                 </div>
 
@@ -76,7 +76,7 @@ export const BlogPostLayout = ({
                     <p className="text-slate-600 mb-6">
                         SpaceCapture's AI engine is already helping construction teams automate what you just read about.
                     </p>
-                    <a href="/book-a-demo" className="inline-flex h-10 items-center justify-center rounded-md bg-indigo-600 px-6 text-sm font-medium text-white shadow transition-colors hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-indigo-700 disabled:pointer-events-none disabled:opacity-50">
+                    <a href="/request-a-demo" className="inline-flex h-10 items-center justify-center rounded-md bg-indigo-600 px-6 text-sm font-medium text-white shadow transition-colors hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-indigo-700 disabled:pointer-events-none disabled:opacity-50">
                         Get a Free Demo
                     </a>
                 </div>

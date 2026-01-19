@@ -42,7 +42,7 @@ const RealEstateSection = () => {
   };
 
   return (
-    <section className="relative py-20 lg:py-32 bg-gradient-to-br from-indigo-50 via-violet-50 to-fuchsia-50 overflow-hidden">
+    <section className="relative py-12 lg:py-20 bg-gradient-to-br from-indigo-50 via-violet-50 to-fuchsia-50 overflow-hidden">
       
       {/* Background: Geometric Pattern */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]">
@@ -74,14 +74,14 @@ const RealEstateSection = () => {
               </motion.div>
               
               <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
-                Manage Properties with <br/>
+                Property Management <br/>
                 <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
-                  Visual Clarity
+                  Inspection Software
                 </span>
               </motion.h1>
               
               <motion.p variants={itemVariants} className="mt-6 text-lg text-slate-600 leading-relaxed max-w-xl">
-                Space Field transforms how property managers inspect, maintain, and market their portfolios. Bring transparency to every unit turnover and maintenance request.
+                Streamline property management inspections with Space Field. From automated move-in/out reports to maintenance tracking, manage your portfolio with visual clarity.
               </motion.p>
             </div>
 
@@ -111,7 +111,7 @@ const RealEstateSection = () => {
             </div>
 
             <motion.div variants={itemVariants} className="pt-4">
-               <a href="/book-a-demo" className="inline-flex items-center gap-2 text-indigo-700 font-bold hover:gap-3 transition-all">
+               <a href="/request-a-demo" className="inline-flex items-center gap-2 text-indigo-700 font-bold hover:gap-3 transition-all">
                   See Property Demo <ArrowRight className="w-5 h-5" />
                </a>
             </motion.div>
