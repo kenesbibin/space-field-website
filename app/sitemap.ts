@@ -23,6 +23,7 @@ const ROUTES: string[] = [
   // Resources
   "/resources",
   "/resources/templates",
+  "/sample-inspection-reports",
   "/knowledge-base",
 
   // Blog
@@ -57,6 +58,11 @@ const ROUTES: string[] = [
 
   // Comparisons
   "/compare/raken",
+
+  // Locations (SEO)
+  "/locations/construction-management-software-dubai",
+  "/locations/field-inspection-app-singapore",
+  "/locations/site-safety-software-texas",
   
   // Sitemap
   "/sitemaps",

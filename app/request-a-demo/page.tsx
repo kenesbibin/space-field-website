@@ -9,8 +9,14 @@ export const metadata: Metadata = {
   },
 };
 
+import { Suspense } from 'react';
+
 export default function RequestDemoPage() {
-  return <DemoRequest />;
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+      <DemoRequest />
+    </Suspense>
+  );
 }
 
 

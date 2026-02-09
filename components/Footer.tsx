@@ -100,10 +100,18 @@ export default function Footer() {
               <FooterLink href="/trust">Trust Center</FooterLink>
               <FooterLink href="/pricing">Pricing</FooterLink>
               <FooterLink href="/faq">Help & FAQ</FooterLink>
+              <FooterLink href="/sample-inspection-reports">Sample Inspection Reports</FooterLink>
+              <FooterLink href="/blog/reduce-rework-ai-case-study">Case Study: Reduce Rework</FooterLink>
               <FooterLink href="/compare/raken">Compare vs Raken</FooterLink>
               <FooterLink href="/compare/planradar">Compare vs PlanRadar</FooterLink>
               <FooterLink href="/alternatives/fieldwire">Fieldwire Alternative</FooterLink>
               <FooterLink href="/sitemaps">Sitemap</FooterLink>
+              <FooterLink href="/tools/construction-cost-calculator">Construction Cost Calculator</FooterLink>
+              <FooterLink href="/tools/asphalt-calculator">Asphalt Calculator</FooterLink>
+              <FooterLink href="/tools/labor-cost-calculator">Labor Cost Calculator</FooterLink>
+              <FooterLink href="/tools/concrete-calculator">Concrete Calculator</FooterLink>
+              <FooterLink href="/tools/paint-calculator">Paint Calculator</FooterLink>
+              <FooterLink href="/tools/free-online-cad-viewer">Free Online CAD Viewer</FooterLink>
               <FooterLink href="/app-download" className="text-blue-400 font-bold">Free Field App</FooterLink>
               <FooterLink href="/request-a-demo" className="text-blue-400 font-bold">Request a Demo</FooterLink>
               <FooterLink href="/blogs" className="text-purple-400 font-bold flex items-center gap-2">

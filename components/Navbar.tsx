@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
+import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import {
+  Menu,
+  X,
+  ChevronDown,
   ChevronRight,
-  Phone, 
+  Phone,
   Hammer,
   Wifi,
   Wrench,
@@ -33,62 +33,244 @@ import {
   Building2,
   Ruler,
   ScanSearch,
-} from 'lucide-react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { div } from 'framer-motion/client';
+  FileText,
+} from "lucide-react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import { div } from "framer-motion/client";
 
 // --- Configuration Data ---
 const industriesItems = [
-  { name: 'Construction', href: '/industries/construction', icon: Hammer, description: 'Manage sites and crews efficiently.' },
-  { name: 'Insurance & Claims', href: '/industries/insurance', icon: ShieldCheck, description: 'Remote adjusting & fraud prevention.' },
-  { name: 'Real Estate', href: '/industries/real-estate', icon: Building2, description: 'Virtual tours & investor updates.' },
-  { name: 'Utilities & Energy', href: '/industries/utilities', icon: Zap, description: 'Grid maintenance and inspections.' },
-  { name: 'Telecommunications', href: '/industries/telecom', icon: Wifi, description: 'Field service for network infra.' },
-  { name: 'HVAC & Plumbing', href: '/industries/hvac', icon: Wrench, description: 'Dispatch and repair tracking.' },
-  { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory, description: 'Equipment maintenance logs.' },
-  { name: 'Logistics', href: '/industries/logistics', icon: Truck, description: 'Fleet and delivery operations.' },
-  { name: 'Oil & Gas', href: '/industries/oil-and-gas', icon: Droplets, description: 'Safety compliance and checks.' },
-  { name: 'Facility Management', href: '/industries/facility-management', icon: HardHat, description: 'Building upkeep and services.' },
+  {
+    name: "Construction",
+    href: "/industries/construction",
+    icon: Hammer,
+    description: "Manage sites and crews efficiently.",
+  },
+  {
+    name: "Insurance & Claims",
+    href: "/industries/insurance",
+    icon: ShieldCheck,
+    description: "Remote adjusting & fraud prevention.",
+  },
+  {
+    name: "Real Estate",
+    href: "/industries/real-estate",
+    icon: Building2,
+    description: "Virtual tours & investor updates.",
+  },
+  {
+    name: "Utilities & Energy",
+    href: "/industries/utilities",
+    icon: Zap,
+    description: "Grid maintenance and inspections.",
+  },
+  {
+    name: "Telecommunications",
+    href: "/industries/telecom",
+    icon: Wifi,
+    description: "Field service for network infra.",
+  },
+  {
+    name: "HVAC & Plumbing",
+    href: "/industries/hvac",
+    icon: Wrench,
+    description: "Dispatch and repair tracking.",
+  },
+  {
+    name: "Manufacturing",
+    href: "/industries/manufacturing",
+    icon: Factory,
+    description: "Equipment maintenance logs.",
+  },
+  {
+    name: "Logistics",
+    href: "/industries/logistics",
+    icon: Truck,
+    description: "Fleet and delivery operations.",
+  },
+  {
+    name: "Oil & Gas",
+    href: "/industries/oil-and-gas",
+    icon: Droplets,
+    description: "Safety compliance and checks.",
+  },
+  {
+    name: "Facility Management",
+    href: "/industries/facility-management",
+    icon: HardHat,
+    description: "Building upkeep and services.",
+  },
 ];
 
-const productsMenuItems: { [key: string]: { name: string; href: string; icon: any; description: string }[] } = {
+const productsMenuItems: {
+  [key: string]: {
+    name: string;
+    href: string;
+    icon: any;
+    description: string;
+  }[];
+} = {
   Features: [
-    { name: 'Core Functions', href: '/core-functions', icon: Layout, description: 'Essential tools for field operations management.' },
-    { name: 'Visual Form Builder', href: '/visual-form-builder', icon: Palette, description: 'Create custom forms without coding.' },
-    { name: 'AI Detection Analysis', href: '/ai-detection', icon: BrainIcon, description: 'Manage team members and permissions.' },
-    { name: 'Engagement Flows', href: '/engagement-flows', icon: GitBranch, description: 'Automate workflows and processes.' },
-    { name: 'Access Control', href: '/access-control', icon: Lock, description: 'Secure data with role-based access.' },
-    { name: 'Deep Insights', href: '/reports', icon: BarChart3, description: 'Analytics and reporting dashboard.' },
+    {
+      name: "Core Functions",
+      href: "/core-functions",
+      icon: Layout,
+      description: "Essential tools for field operations management.",
+    },
+    {
+      name: "Visual Form Builder",
+      href: "/visual-form-builder",
+      icon: Palette,
+      description: "Create custom forms without coding.",
+    },
+    {
+      name: "AI Detection Analysis",
+      href: "/ai-detection",
+      icon: BrainIcon,
+      description: "Manage team members and permissions.",
+    },
+    {
+      name: "Engagement Flows",
+      href: "/engagement-flows",
+      icon: GitBranch,
+      description: "Automate workflows and processes.",
+    },
+    {
+      name: "Access Control",
+      href: "/access-control",
+      icon: Lock,
+      description: "Secure data with role-based access.",
+    },
+    {
+      name: "Deep Insights",
+      href: "/reports",
+      icon: BarChart3,
+      description: "Analytics and reporting dashboard.",
+    },
+    {
+      name: "Sample Reports",
+      href: "/sample-inspection-reports",
+      icon: FileText,
+      description: "View professional PDF report samples.",
+    },
   ],
-  'AI Intelligence': [
-    { name: 'AI Detection Analysis', href: '/ai-detection', icon: BrainIcon, description: 'Manage team members and permissions.' },
-    { name: 'AI Tuning Station', href: '/lab/ai-tuning', icon: BrainIcon, description: 'Fine-tune object detection models.' },
-    { name: 'Privacy Scrubbing', href: '/lab/privacy', icon: Lock, description: 'GDPR-compliant face blurring.' },
-    { name: 'Voice-to-Tag', href: '/lab/voice-tag', icon: Zap, description: 'Hands-free site documentation.' },
+  "AI Intelligence": [
+    {
+      name: "AI Detection Analysis",
+      href: "/ai-detection",
+      icon: BrainIcon,
+      description: "Manage team members and permissions.",
+    },
+    {
+      name: "AI Tuning Station",
+      href: "/lab/ai-tuning",
+      icon: BrainIcon,
+      description: "Fine-tune object detection models.",
+    },
+    {
+      name: "Privacy Scrubbing",
+      href: "/lab/privacy",
+      icon: Lock,
+      description: "GDPR-compliant face blurring.",
+    },
+    {
+      name: "Voice-to-Tag",
+      href: "/lab/voice-tag",
+      icon: Zap,
+      description: "Hands-free site documentation.",
+    },
   ],
-  'For Developers': [
-    { name: 'Integrations', href: '/integrations', icon: Plug, description: 'Connect with your existing tools and systems.' },
-    { name: 'Flexible Hosting', href: '/hosting', icon: Server, description: 'Deploy on-premise or in the cloud.' },
+  "For Developers": [
+    {
+      name: "Integrations",
+      href: "/integrations",
+      icon: Plug,
+      description: "Connect with your existing tools and systems.",
+    },
+    {
+      name: "Flexible Hosting",
+      href: "/hosting",
+      icon: Server,
+      description: "Deploy on-premise or in the cloud.",
+    },
   ],
-  'Who We Serve': [
-    { name: 'General Contractors', href: '/who-we-serve/general-contractors', icon: HardHat, description: 'Manage subs and site risk.' },
-    { name: 'Facility Managers', href: '/who-we-serve/facility-managers', icon: Factory, description: 'Maintenance and inspections.' },
-    { name: 'Subcontractors', href: '/who-we-serve/subcontractors', icon: Hammer, description: 'Get paid faster with daily logs.' },
-    { name: 'Property Developers', href: '/who-we-serve/property-developers', icon: BarChart3, description: 'Track ROI and milestones.' },
-    { name: 'Architects & Engineers', href: '/who-we-serve/architects-engineers', icon: Ruler, description: 'Design compliance and RFIs.' },
+  "Who We Serve": [
+    {
+      name: "General Contractors",
+      href: "/who-we-serve/general-contractors",
+      icon: HardHat,
+      description: "Manage subs and site risk.",
+    },
+    {
+      name: "Facility Managers",
+      href: "/who-we-serve/facility-managers",
+      icon: Factory,
+      description: "Maintenance and inspections.",
+    },
+    {
+      name: "Subcontractors",
+      href: "/who-we-serve/subcontractors",
+      icon: Hammer,
+      description: "Get paid faster with daily logs.",
+    },
+    {
+      name: "Property Developers",
+      href: "/who-we-serve/property-developers",
+      icon: BarChart3,
+      description: "Track ROI and milestones.",
+    },
+    {
+      name: "Architects & Engineers",
+      href: "/who-we-serve/architects-engineers",
+      icon: Ruler,
+      description: "Design compliance and RFIs.",
+    },
   ],
-  'Comparisons': [
-    { name: 'vs SafetyCulture', href: '/alternatives/safetyculture', icon: HardHat, description: 'Compare inspection automation.' },
-    { name: 'vs GoCanvas', href: '/alternatives/gocanvas', icon: Layout, description: 'Compare visual data capture.' },
-    { name: 'vs Procore', href: '/alternatives/procore', icon: Factory, description: 'Field vs Office comparison.' },
-    { name: 'vs PlanRadar', href: '/compare/planradar', icon: ScanSearch, description: 'Compare inspection efficiency.' },
-    { name: 'vs Fieldwire', href: '/alternatives/fieldwire', icon: Copy, description: 'Better for small teams.' },
+  Comparisons: [
+    {
+      name: "vs SafetyCulture",
+      href: "/alternatives/safetyculture",
+      icon: HardHat,
+      description: "Compare inspection automation.",
+    },
+    {
+      name: "vs GoCanvas",
+      href: "/alternatives/gocanvas",
+      icon: Layout,
+      description: "Compare visual data capture.",
+    },
+    {
+      name: "vs Procore",
+      href: "/alternatives/procore",
+      icon: Factory,
+      description: "Field vs Office comparison.",
+    },
+    {
+      name: "vs PlanRadar",
+      href: "/compare/planradar",
+      icon: ScanSearch,
+      description: "Compare inspection efficiency.",
+    },
+    {
+      name: "vs Fieldwire",
+      href: "/alternatives/fieldwire",
+      icon: Copy,
+      description: "Better for small teams.",
+    },
   ],
 };
 
 // --- Email Modal Component ---
-const EmailModal = ({ isOpen, onClose, email }: { isOpen: boolean; onClose: () => void; email: string }) => {
+const EmailModal = ({
+  isOpen,
+  onClose,
+  email,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+  email: string;
+}) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -102,8 +284,8 @@ const EmailModal = ({ isOpen, onClose, email }: { isOpen: boolean; onClose: () =
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
       <div className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl p-6 transform transition-all scale-100">
-        <button 
-          onClick={onClose} 
+        <button
+          onClick={onClose}
           className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
         >
           <X className="w-5 h-5" />
@@ -113,7 +295,7 @@ const EmailModal = ({ isOpen, onClose, email }: { isOpen: boolean; onClose: () =
           <div className="p-3 bg-purple-100 rounded-full text-purple-600">
             <Mail className="w-8 h-8" />
           </div>
-          
+
           <h3 className="text-xl font-bold text-gray-900">Get in Touch</h3>
           <p className="text-gray-500 text-sm">
             Copy our email address below to send us a message directly.
@@ -128,12 +310,16 @@ const EmailModal = ({ isOpen, onClose, email }: { isOpen: boolean; onClose: () =
               className="flex items-center justify-center p-2 rounded-md transition-colors hover:bg-white hover:shadow-sm text-gray-500 hover:text-purple-600 focus:outline-none"
               title="Copy to clipboard"
             >
-              {copied ? <Check className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5" />}
+              {copied ? (
+                <Check className="w-5 h-5 text-green-500" />
+              ) : (
+                <Copy className="w-5 h-5" />
+              )}
             </button>
           </div>
 
           <div className="pt-2 text-xs text-gray-400">
-            {copied ? 'Copied to clipboard!' : 'Click the icon to copy'}
+            {copied ? "Copied to clipboard!" : "Click the icon to copy"}
           </div>
         </div>
       </div>
@@ -151,9 +337,10 @@ export default function Navbar() {
 
   const [showProducts, setShowProducts] = useState(false);
   const [hoveredProducts, setHoveredProducts] = useState(false);
-  const [activeProductCategory, setActiveProductCategory] = useState<string>('Features');
+  const [activeProductCategory, setActiveProductCategory] =
+    useState<string>("Features");
   const [scrolled, setScrolled] = useState(false);
-  
+
   // Modal State
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [mobileEmailCopied, setMobileEmailCopied] = useState(false);
@@ -162,11 +349,12 @@ export default function Navbar() {
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Constants
-  const SIGN_IN_URL = 'https://www.amspace.ai/login?type=Legal&moduleId=b20f5bfe-a351-46e7-842a-24a02802fe4f&invite=guest';
-  const DEMO_URL = '/request-a-demo';
-  const PHONE_NUMBER_SG = '+65 8611 1900';
-  const PHONE_NUMBER_USA = '+1 419 820 1487';
-  const CONTACT_EMAIL = 'contact@spacecapture.ai';
+  const SIGN_IN_URL =
+    "https://www.amspace.ai/login?type=Legal&moduleId=b20f5bfe-a351-46e7-842a-24a02802fe4f&invite=guest";
+  const DEMO_URL = "/request-a-demo";
+  const PHONE_NUMBER_SG = "+65 8611 1900";
+  const PHONE_NUMBER_USA = "+1 419 820 1487";
+  const CONTACT_EMAIL = "contact@spacecapture.ai";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -174,7 +362,10 @@ export default function Navbar() {
     };
 
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setShowIndustries(false);
         setHoveredIndustries(false);
         setShowProducts(false);
@@ -184,14 +375,14 @@ export default function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    document.addEventListener('mousedown', handleClickOutside);
-    document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
+    window.addEventListener("scroll", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside);
+    document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = 'unset';
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = "unset";
       if (hoverTimeoutRef.current) {
         clearTimeout(hoverTimeoutRef.current);
       }
@@ -229,8 +420,6 @@ export default function Navbar() {
     }, 150);
   };
 
-
-
   const handleMobileEmailCopy = () => {
     navigator.clipboard.writeText(CONTACT_EMAIL);
     setMobileEmailCopied(true);
@@ -246,11 +435,13 @@ export default function Navbar() {
       <button
         className={`relative w-full cursor-pointer rounded-lg px-4 py-2.5 text-sm font-bold transition-all duration-300 hover:scale-105 active:scale-95 ${
           isPrimary
-            ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg hover:shadow-purple-500/50 hover:shadow-xl'
-            : 'border-2 border-purple-500 text-purple-600 hover:bg-purple-50 hover:shadow-md hover:shadow-purple-400/30'
+            ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg hover:shadow-purple-500/50 hover:shadow-xl"
+            : "border-2 border-purple-500 text-purple-600 hover:bg-purple-50 hover:shadow-md hover:shadow-purple-400/30"
         }`}
       >
-        <span className={isPrimary ? 'text-white' : 'text-purple-600'}>{text}</span>
+        <span className={isPrimary ? "text-white" : "text-purple-600"}>
+          {text}
+        </span>
         {isPrimary && (
           <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-400 to-indigo-400 opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-30 -z-10" />
         )}
@@ -260,24 +451,22 @@ export default function Navbar() {
 
   return (
     <>
-      <EmailModal 
-        isOpen={showEmailModal} 
-        onClose={() => setShowEmailModal(false)} 
-        email={CONTACT_EMAIL} 
+      <EmailModal
+        isOpen={showEmailModal}
+        onClose={() => setShowEmailModal(false)}
+        email={CONTACT_EMAIL}
       />
 
       <header
         className={`fixed inset-x-0 top-0 z-50 py-3 transition-all duration-300 ${
           scrolled || isMenuOpen
-            ? 'bg-white shadow-md'
-            : 'bg-white/95 backdrop-blur-lg'
+            ? "bg-white shadow-md"
+            : "bg-white/95 backdrop-blur-lg"
         }`}
       >
         <div className="container mx-auto max-w-[1400px] px-4">
           <div className="flex items-center gap-6">
-            <div
-              className="flex flex-1 items-center justify-between rounded-2xl lg:border-2 lg:border-gray-300 lg:p-2.5 bg-transparent"
-            >
+            <div className="flex flex-1 items-center justify-between rounded-2xl lg:border-2 lg:border-gray-300 lg:p-2.5 bg-transparent">
               {/* Logo */}
               <div className="flex items-center gap-12">
                 <div className="flex items-center">
@@ -294,9 +483,7 @@ export default function Navbar() {
                       className="h-6 w-6 object-contain"
                     />
 
-                    <span
-                      className="ml-0 text-3xl font-extrabold bg-gradient-to-r from-purple-700 via-purple-600 to-blue-600 bg-clip-text text-transparent leading-none"
-                    >
+                    <span className="ml-0 text-3xl font-extrabold bg-gradient-to-r from-purple-700 via-purple-600 to-blue-600 bg-clip-text text-transparent leading-none">
                       SPACE CAPTURE
                     </span>
                   </Link>
@@ -305,7 +492,7 @@ export default function Navbar() {
                 {/* Desktop: Products & Industries Dropdowns */}
                 <div className="hidden lg:block" ref={dropdownRef}>
                   {/* Products Dropdown */}
-                  <div 
+                  <div
                     className="relative group inline-block mr-8"
                     onMouseEnter={handleProductsMouseEnter}
                     onMouseLeave={handleProductsMouseLeave}
@@ -322,10 +509,12 @@ export default function Navbar() {
                       }}
                     >
                       Products
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${showProducts ? 'rotate-180' : ''}`} />
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-200 ${showProducts ? "rotate-180" : ""}`}
+                      />
                       <span
                         className={`absolute bottom-0 left-0 h-0.5 bg-purple-500 transition-all duration-300 ${
-                          hoveredProducts ? 'w-full' : 'w-0'
+                          hoveredProducts ? "w-full" : "w-0"
                         }`}
                       />
                     </a>
@@ -335,7 +524,8 @@ export default function Navbar() {
                       <div
                         className="absolute top-full left-0 mt-2 w-[720px] rounded-2xl bg-white shadow-2xl shadow-blue-500/10 border border-slate-100 z-50 overflow-hidden"
                         onMouseEnter={() => {
-                          if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+                          if (hoverTimeoutRef.current)
+                            clearTimeout(hoverTimeoutRef.current);
                         }}
                         onMouseLeave={handleProductsMouseLeave}
                       >
@@ -343,52 +533,64 @@ export default function Navbar() {
                           {/* Left: categories */}
                           <div className="w-[220px] flex-shrink-0 bg-[linear-gradient(135deg,#fafbfc,#f1f4fb_35%,#f6ecf9_70%,#fef3f8_101%)] p-4 border-r border-gray-200">
                             <div className="space-y-1">
-                              {Object.keys(productsMenuItems).map((category) => (
-                                <button
-                                  key={category}
-                                  onMouseEnter={() => setActiveProductCategory(category)}
-                                  className={`w-full text-left px-3 py-2.5 rounded-md text-sm font-semibold transition-colors flex items-center justify-between ${
-                                    activeProductCategory === category
-                                      ? 'bg-violet-50 text-violet-700'
-                                      : 'text-gray-600 hover:bg-white/50'
-                                  }`}
-                                >
-                                  <span>{category}</span>
-                                  <ChevronRight className={`w-4 h-4 transition-opacity duration-200 ${activeProductCategory === category ? 'opacity-100' : 'opacity-0'}`} />
-                                </button>
-                              ))}
+                              {Object.keys(productsMenuItems).map(
+                                (category) => (
+                                  <button
+                                    key={category}
+                                    onMouseEnter={() =>
+                                      setActiveProductCategory(category)
+                                    }
+                                    className={`w-full text-left px-3 py-2.5 rounded-md text-sm font-semibold transition-colors flex items-center justify-between ${
+                                      activeProductCategory === category
+                                        ? "bg-violet-50 text-violet-700"
+                                        : "text-gray-600 hover:bg-white/50"
+                                    }`}
+                                  >
+                                    <span>{category}</span>
+                                    <ChevronRight
+                                      className={`w-4 h-4 transition-opacity duration-200 ${activeProductCategory === category ? "opacity-100" : "opacity-0"}`}
+                                    />
+                                  </button>
+                                ),
+                              )}
                             </div>
                           </div>
 
                           {/* Right: items for active category */}
                           <div className="flex-1 p-6 bg-white">
                             <div className="grid grid-cols-2 gap-x-6 gap-y-4">
-                              {productsMenuItems[activeProductCategory]?.map((item) => (
-                                <a
-                                  key={item.name}
-                                  href={item.href}
-                                  className="group flex items-start gap-4 p-3 rounded-lg hover:bg-blue-100/75 transition-colors cursor-pointer"
-                                  onClick={() => {
-                                    setShowProducts(false);
-                                    setHoveredProducts(false);
-                                  }}
-                                >
-                                  <item.icon className="w-5 h-5 text-gray-500 group-hover:text-violet-600 flex-shrink-0 mt-0.5" />
-                                  <div>
-                                    <p className="text-sm font-semibold text-gray-900">{item.name}</p>
-                                    <p className="text-xs text-gray-500 mt-1 leading-snug">{item.description}</p>
-                                  </div>
-                                </a>
-                              ))}
+                              {productsMenuItems[activeProductCategory]?.map(
+                                (item) => (
+                                  <a
+                                    key={item.name}
+                                    href={item.href}
+                                    className="group flex items-start gap-4 p-3 rounded-lg hover:bg-blue-100/75 transition-colors cursor-pointer"
+                                    onClick={() => {
+                                      setShowProducts(false);
+                                      setHoveredProducts(false);
+                                    }}
+                                  >
+                                    <item.icon className="w-5 h-5 text-gray-500 group-hover:text-violet-600 flex-shrink-0 mt-0.5" />
+                                    <div>
+                                      <p className="text-sm font-semibold text-gray-900">
+                                        {item.name}
+                                      </p>
+                                      <p className="text-xs text-gray-500 mt-1 leading-snug">
+                                        {item.description}
+                                      </p>
+                                    </div>
+                                  </a>
+                                ),
+                              )}
                             </div>
                           </div>
                         </div>
                       </div>
                     )}
-                   </div>
+                  </div>
 
                   {/* Industries Dropdown */}
-                  <div 
+                  <div
                     className="relative group inline-block"
                     onMouseEnter={handleIndustriesMouseEnter}
                     onMouseLeave={handleIndustriesMouseLeave}
@@ -397,18 +599,20 @@ export default function Navbar() {
                       href="#"
                       className="flex items-center gap-1 text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer relative py-2"
                       onClick={(e) => {
-                         e.preventDefault();
-                         if (showIndustries) {
-                           setShowIndustries(false);
-                           setHoveredIndustries(false);
-                         }
+                        e.preventDefault();
+                        if (showIndustries) {
+                          setShowIndustries(false);
+                          setHoveredIndustries(false);
+                        }
                       }}
                     >
                       Industries
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${showIndustries ? 'rotate-180' : ''}`} />
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-200 ${showIndustries ? "rotate-180" : ""}`}
+                      />
                       <span
                         className={`absolute bottom-0 left-0 h-0.5 bg-purple-500 transition-all duration-300 ${
-                          hoveredIndustries ? 'w-full' : 'w-0'
+                          hoveredIndustries ? "w-full" : "w-0"
                         }`}
                       />
                     </a>
@@ -418,7 +622,8 @@ export default function Navbar() {
                       <div
                         className="absolute top-full left-0 mt-2 w-[600px] rounded-2xl bg-[linear-gradient(135deg,#fafbfc,#f1f4fb_35%,#f6ecf9_70%,#fef3f8_101%)] shadow-2xl shadow-blue-500/10 border border-slate-100 z-50 overflow-hidden"
                         onMouseEnter={() => {
-                          if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+                          if (hoverTimeoutRef.current)
+                            clearTimeout(hoverTimeoutRef.current);
                         }}
                         onMouseLeave={handleIndustriesMouseLeave}
                       >
@@ -436,8 +641,12 @@ export default function Navbar() {
                               >
                                 <item.icon className="w-5 h-5 text-gray-500 group-hover:text-violet-600 flex-shrink-0 mt-0.5" />
                                 <div>
-                                  <p className="text-sm font-semibold text-gray-900">{item.name}</p>
-                                  <p className="text-xs text-gray-500 mt-1 leading-snug">{item.description}</p>
+                                  <p className="text-sm font-semibold text-gray-900">
+                                    {item.name}
+                                  </p>
+                                  <p className="text-xs text-gray-500 mt-1 leading-snug">
+                                    {item.description}
+                                  </p>
                                 </div>
                               </a>
                             ))}
@@ -446,26 +655,15 @@ export default function Navbar() {
                       </div>
                     )}
                   </div>
-                  </div>
-                  
-                  {/* Resources Dropdown */}
-
-
                 </div>
 
-                {/* Pricing Link */}
-                 <a
-                      href="/pricing"
-                      className="hidden lg:flex items-center gap-1 text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer relative py-2 mr-8"
-                    >
-                      Pricing
-                 </a>
+                {/* Resources Dropdown */}
+              </div>
 
-                {/* Desktop: Contact & Actions */}
+              {/* Desktop: Contact & Actions */}
               <div className="hidden lg:flex items-center gap-4">
-                
                 {/* Email Icon (Triggers Modal) */}
-                <button 
+                <button
                   onClick={() => setShowEmailModal(true)}
                   className="flex items-center justify-center p-2 rounded-full hover:bg-purple-50 text-gray-600 hover:text-purple-600 transition-colors"
                   title="Contact via Email"
@@ -475,15 +673,15 @@ export default function Navbar() {
 
                 {/* Phone Numbers (Side by Side) */}
                 <div className="flex items-center gap-4 border-l border-r border-gray-200 px-4 h-8">
-                  <a 
-                    href={`tel:${PHONE_NUMBER_USA.replace(/\s/g, '')}`} 
+                  <a
+                    href={`tel:${PHONE_NUMBER_USA.replace(/\s/g, "")}`}
                     className="flex items-center gap-1.5 text-gray-700 font-medium hover:text-purple-600 transition-colors text-xs whitespace-nowrap"
                   >
                     <span className="text-base">🇺🇸</span>
                     <span>{PHONE_NUMBER_USA}</span>
                   </a>
-                  <a 
-                    href={`tel:${PHONE_NUMBER_SG.replace(/\s/g, '')}`} 
+                  <a
+                    href={`tel:${PHONE_NUMBER_SG.replace(/\s/g, "")}`}
                     className="flex items-center gap-1.5 text-gray-700 font-medium hover:text-purple-600 transition-colors text-xs whitespace-nowrap"
                   >
                     <span className="text-base">🇸🇬</span>
@@ -493,17 +691,21 @@ export default function Navbar() {
 
                 {/* Action Buttons */}
                 <div className="flex items-center gap-3">
-                  {renderButton(SIGN_IN_URL, 'Try for Free')}
-                  {renderButton(DEMO_URL, 'Request a Demo', false)}
+                  {renderButton(SIGN_IN_URL, "Try for Free")}
+                  {renderButton(DEMO_URL, "Request a Demo", false)}
                 </div>
               </div>
 
               {/* Mobile: Toggle Button */}
-              <button 
+              <button
                 className="rounded-lg border-2 border-gray-300 bg-white p-2 text-gray-700 transition-all hover:bg-gray-50 active:scale-95 cursor-pointer lg:hidden"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
-                {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                {isMenuOpen ? (
+                  <X className="h-5 w-5" />
+                ) : (
+                  <Menu className="h-5 w-5" />
+                )}
               </button>
             </div>
           </div>
@@ -529,27 +731,35 @@ export default function Navbar() {
                   Products
                 </div>
                 <div className="space-y-4">
-                  {Object.entries(productsMenuItems).map(([category, items]) => (
-                    <div key={category} className="pb-2">
-                      <div className="mb-2 text-sm font-semibold text-gray-700">{category}</div>
-                      <div className="space-y-2">
-                        {items.map((item) => (
-                          <a
-                            key={item.name}
-                            href={item.href}
-                            className="flex items-start gap-3 rounded-lg p-2 text-gray-700 transition-colors hover:bg-purple-100 hover:text-purple-700 cursor-pointer"
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            <item.icon className="h-4 w-4 flex-shrink-0 mt-0.5" />
-                            <div className="flex-1">
-                              <span className="text-sm block font-medium">{item.name}</span>
-                              <span className="text-xs text-gray-500 block mt-1">{item.description}</span>
-                            </div>
-                          </a>
-                        ))}
+                  {Object.entries(productsMenuItems).map(
+                    ([category, items]) => (
+                      <div key={category} className="pb-2">
+                        <div className="mb-2 text-sm font-semibold text-gray-700">
+                          {category}
+                        </div>
+                        <div className="space-y-2">
+                          {items.map((item) => (
+                            <a
+                              key={item.name}
+                              href={item.href}
+                              className="flex items-start gap-3 rounded-lg p-2 text-gray-700 transition-colors hover:bg-purple-100 hover:text-purple-700 cursor-pointer"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              <item.icon className="h-4 w-4 flex-shrink-0 mt-0.5" />
+                              <div className="flex-1">
+                                <span className="text-sm block font-medium">
+                                  {item.name}
+                                </span>
+                                <span className="text-xs text-gray-500 block mt-1">
+                                  {item.description}
+                                </span>
+                              </div>
+                            </a>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ),
+                  )}
                 </div>
               </div>
 
@@ -568,63 +778,63 @@ export default function Navbar() {
                     >
                       <item.icon className="h-4 w-4 flex-shrink-0 mt-0.5" />
                       <div className="flex-1">
-                        <span className="text-sm block font-medium">{item.name}</span>
-                        <span className="text-xs text-gray-500 block mt-1">{item.description}</span>
+                        <span className="text-sm block font-medium">
+                          {item.name}
+                        </span>
+                        <span className="text-xs text-gray-500 block mt-1">
+                          {item.description}
+                        </span>
                       </div>
                     </a>
                   ))}
                 </div>
               </div>
 
-
-
-
-
-              <a
-                href="/pricing"
-                className="block border-b border-gray-200 py-3 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Pricing
-              </a>
-
               {/* Contact Info Section */}
               <div className="border-b border-gray-200 pb-4 space-y-3">
-                 {/* Email for Mobile */}
-                 <button
+                {/* Email for Mobile */}
+                <button
                   className="flex w-full items-center gap-3 py-2 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer text-left"
                   onClick={handleMobileEmailCopy}
                 >
-                  {mobileEmailCopied ? <Check className="h-5 w-5 text-green-600" /> : <Mail className="h-5 w-5" />}
+                  {mobileEmailCopied ? (
+                    <Check className="h-5 w-5 text-green-600" />
+                  ) : (
+                    <Mail className="h-5 w-5" />
+                  )}
                   <div className="flex flex-col">
                     <span className="text-sm font-medium">Email</span>
-                    <span className="text-xs text-gray-500">{mobileEmailCopied ? 'Copied to clipboard' : CONTACT_EMAIL}</span>
+                    <span className="text-xs text-gray-500">
+                      {mobileEmailCopied
+                        ? "Copied to clipboard"
+                        : CONTACT_EMAIL}
+                    </span>
                   </div>
                 </button>
 
                 {/* USA Number */}
                 <a
-                  href={`tel:${PHONE_NUMBER_USA.replace(/\s/g, '')}`}
+                  href={`tel:${PHONE_NUMBER_USA.replace(/\s/g, "")}`}
                   className="flex w-full items-center gap-3 py-2 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <span className="text-lg">🇺🇸</span>
                   <div className="flex flex-col">
-                     <span className="text-sm font-medium">USA</span>
-                     <span className="text-sm">{PHONE_NUMBER_USA}</span>
+                    <span className="text-sm font-medium">USA</span>
+                    <span className="text-sm">{PHONE_NUMBER_USA}</span>
                   </div>
                 </a>
 
                 {/* SG Number */}
                 <a
-                  href={`tel:${PHONE_NUMBER_SG.replace(/\s/g, '')}`}
+                  href={`tel:${PHONE_NUMBER_SG.replace(/\s/g, "")}`}
                   className="flex w-full items-center gap-3 py-2 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <span className="text-lg">🇸🇬</span>
-                   <div className="flex flex-col">
-                     <span className="text-sm font-medium">Singapore</span>
-                     <span className="text-sm">{PHONE_NUMBER_SG}</span>
+                  <div className="flex flex-col">
+                    <span className="text-sm font-medium">Singapore</span>
+                    <span className="text-sm">{PHONE_NUMBER_SG}</span>
                   </div>
                 </a>
               </div>
@@ -632,8 +842,8 @@ export default function Navbar() {
               {/* Buttons */}
               <div className="mt-6 pt-2">
                 <div className="flex flex-col gap-4">
-                  {renderButton(SIGN_IN_URL, 'Sign In')}
-                  {renderButton(DEMO_URL, 'Request a Demo', false)}
+                  {renderButton(SIGN_IN_URL, "Sign In")}
+                  {renderButton(DEMO_URL, "Request a Demo", false)}
                 </div>
               </div>
             </nav>

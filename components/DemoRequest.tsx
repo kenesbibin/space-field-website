@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { gql } from '@apollo/client';
 import { motion } from 'framer-motion';
 import { FileSignature, Shield, Zap, CheckCircle } from 'lucide-react';
@@ -22,7 +22,11 @@ const CREATE_DEMO_REQUEST = gql`
   }
 `;
 
-export default function DemoRequest() {
+import { useSearchParams } from 'next/navigation';
+
+function DemoRequestContent() {
+  const searchParams = useSearchParams();
+  
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -41,6 +45,21 @@ export default function DemoRequest() {
     company: '',
     phoneNumber: '',
   });
+
+  // Pre-fill from URL params (e.g. from Cost Calculator)
+  useEffect(() => {
+    if (searchParams) {
+        const updates: any = {};
+        if (searchParams.get('firstName')) updates.firstName = searchParams.get('firstName');
+        if (searchParams.get('lastName')) updates.lastName = searchParams.get('lastName');
+        if (searchParams.get('email')) updates.email = searchParams.get('email');
+        if (searchParams.get('projectDetails')) updates.projectDetails = searchParams.get('projectDetails');
+        
+        if (Object.keys(updates).length > 0) {
+            setFormData(prev => ({ ...prev, ...updates }));
+        }
+    }
+  }, [searchParams]);
 
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<unknown>(null);
@@ -347,6 +366,14 @@ export default function DemoRequest() {
         </div>
       </div>
     </section>
+  );
+}
+
+export default function DemoRequest() {
+  return (
+    <Suspense fallback={<div className="py-20 text-center text-gray-500">Loading form...</div>}>
+      <DemoRequestContent />
+    </Suspense>
   );
 }
 

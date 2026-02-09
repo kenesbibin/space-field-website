@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   description: 'Streamline property inspections, tenant moved-ins/outs, and maintenance requests with AI-powered field software.',
   keywords: ['property management software', 'real estate inspections', 'tenant turnover', 'field maintenance app', 'Space Field'],
   alternates: {
-    canonical: 'https://spaceaiapp.com/industries/real-estate',
+    canonical: 'https://spacecapture.ai/industries/real-estate',
   },
   openGraph: {
     title: 'Real Estate Property Management Software | Space Field',
     description: 'Manage portfolios with precision. From acquisition due diligence to daily maintenance.',
-    url: 'https://spaceaiapp.com/industries/real-estate',
+    url: 'https://spacecapture.ai/industries/real-estate',
     siteName: 'Space Field',
     images: [
       {

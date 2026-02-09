@@ -13,6 +13,13 @@ export const metadata: Metadata = {
 // Re-using articles data (centralized definition would be better in real app, but duplicating for speed as per current structure)
 const ARTICLES = [
   {
+    slug: 'reduce-rework-ai-case-study',
+    title: 'How Vertex Builders Reduced Site Rework by 40% using AI Detection',
+    excerpt: 'See the Before & After. Discover how real-time AI monitoring transformed a chaotic worksite into a model of efficiency.',
+    category: 'Case Study',
+    date: 'Oct 20, 2024'
+  },
+  {
     slug: 'computer-vision-risk',
     title: 'AI Defect Detection Analysis Software',
     excerpt: 'Automate risk identification. Our Inspection Field Software uses computer vision to spot hazards and defects instantly.',
