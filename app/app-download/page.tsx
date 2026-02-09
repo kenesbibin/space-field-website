@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function AppDownloadPage() {
-  const whatsappNumber = "14198201487";
+  const whatsappNumber = "17652713686";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi, I need help downloading the app.")}`;
 
   return (

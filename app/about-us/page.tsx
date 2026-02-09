@@ -146,7 +146,7 @@ export default function AboutUsPage() {
                   icon={MessageCircle}
                   title="Chat on WhatsApp"
                   action="Start Chat"
-                  href="https://wa.me/14198201487" // Defaulting to US number as typical, adjust if needed
+                  href="https://wa.me/17652713686" // Defaulting to US number as typical, adjust if needed
                   color="bg-green-50 text-green-600 hover:bg-green-100"
                />
                <ContactCard 

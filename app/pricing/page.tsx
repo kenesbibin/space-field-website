@@ -72,7 +72,7 @@ export default function PricingPage() {
                         Contact Sales
                     </a>
                     <a 
-                        href="https://wa.me/14198201487" 
+                        href="https://wa.me/17652713686" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="flex-1 text-center py-4 rounded-xl font-bold bg-[#25D366] text-white hover:bg-[#128C7E] transition-colors shadow-lg flex items-center justify-center gap-2"

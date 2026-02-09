@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     default: "Space Capture - Construction Field Inspection App & Site Audit Software",
     template: "%s | SpaceCapture"
   },
-  description: "The #1  Field Management App for Construction Teams. Streamline inspections, automate AI defect detection, and generate instant daily reports.",
+  description: "The #1 Field Management App for Construction Teams. Streamline inspections, automate AI defect detection, and generate instant daily reports.",
   keywords: [
     "Field Management App", "Construction Teams", "AI Defect Detection", 
     "Daily Construction Reports", "Safety Inspection Software", "Punch List App",
