@@ -9,8 +9,8 @@ import { INDUSTRIES_DATA } from '@/lib/seo-data';
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: 'Facility Management Software | Space Field',
-  description: 'Streamline building operations with Space Field. Manage work orders, preventive maintenance, and asset tracking with our all-in-one facility management app.',
+  title: 'Facility Management Software | SpaceCapture',
+  description: 'Streamline building operations with Space Field. Manage work orders, preventive maintenance, and asset tracking with our facility management app.',
   keywords: ['facility management software', 'work order system', 'preventive maintenance', 'building operations', 'CMMS', 'Space Field'],
   alternates: {
     canonical: 'https://spacecapture.ai/industries/facility-management',

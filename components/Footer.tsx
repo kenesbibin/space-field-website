@@ -117,6 +117,9 @@ export default function Footer() {
               <FooterLink href="/blogs" className="text-purple-400 font-bold flex items-center gap-2">
                  Blogs <ArrowRight className="w-3 h-3" />
               </FooterLink>
+              <FooterLink href="/playstore-app-download" className="text-purple-400 font-bold flex items-center gap-2">
+                 Play Store App <ArrowRight className="w-3 h-3" />
+              </FooterLink>
             </ul>
           </div>
 

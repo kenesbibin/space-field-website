@@ -109,7 +109,15 @@ const ARTICLES = [
     excerpt: 'Explore how AI-powered defect detection in Space Capture identifies site issues instantly using image recognition and reality capture technology.',
     category: 'AI Defect Detection',
     date: 'Oct 28, 2024'
+  },
+  {
+    slug: 'spacecapture-vs-plangrid',
+    title: 'Space Capture vs PlanGrid: Which Field Inspection Software is Better?',
+    excerpt: 'Comparing Space Capture and PlanGrid for construction inspections, AI defect detection, offline capability, and pricing. See which solution fits your team best.',
+    category: 'Comparison',
+    date: 'Nov 02, 2024'
   }
+
 
 
 ];

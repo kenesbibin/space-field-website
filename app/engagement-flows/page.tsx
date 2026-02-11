@@ -7,7 +7,7 @@ import EngagementFlowsSection from '@/components/EngagementFLowSection';
 
 export const metadata: Metadata = {
   title: 'Automated Engagement Flows | Space Capture',
-  description: 'Automate your field operations with Space Capture’s visual workflow builder. Create custom triggers, route tasks, and send notifications based on real-time data.',
+  description: 'Automate field operations with Space Captures visual workflow builder. Create triggers, route tasks, and send notifications using real-time data.',
   keywords: ['workflow automation', 'field operations logic', 'if this then that', 'process automation', 'automated dispatch', 'Space Capture'],
   alternates: {
     canonical: 'https://spacecapture.ai/engagement-flows',

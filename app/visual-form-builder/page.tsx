@@ -10,7 +10,7 @@ import { SOLUTIONS_DATA } from '@/lib/seo-data';
 // SEO Metadata
 export const metadata: Metadata = {
   title: 'No-Code Visual Form Builder | Space Capture',
-  description: 'Build complex field data forms in minutes without coding. Use Space Capture’s drag-and-drop editor and library of operational templates for safety, quality, and maintenance.',
+  description: 'Build field data forms in minutes without coding. Use Space Capture�s drag-and-drop editor and templates for safety, quality, and maintenance.',
   keywords: ['form builder', 'no code app builder', 'field data collection', 'operational templates', 'digital forms', 'Space Capture'],
   alternates: {
     canonical: 'https://spacecapture.ai/visual-form-builder',
