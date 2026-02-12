@@ -7,7 +7,7 @@ import HostingSection from '@/components/HostingSection';
 // SEO Metadata
 export const metadata: Metadata = {
   title: 'Hosting & Deployment Options | Space Capture',
-  description: 'Choose from SaaS, Private Cloud, or On-Premise self-hosting. Space Capture offers flexible deployment models to meet enterprise security and data residency needs.',
+  description: 'Choose from SaaS, Private Cloud, or On-Premise hosting. Space Capture offers flexible deployment models for enterprise security and data residency.',
   keywords: ['saas hosting', 'on-premise software', 'private cloud', 'data residency', 'self-hosted', 'enterprise security', 'Space Capture'],
   alternates: {
     canonical: 'https://spacecapture.ai/hosting',

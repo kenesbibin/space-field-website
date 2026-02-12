@@ -10,8 +10,8 @@ import type { Metadata } from 'next'
 
 
 export const metadata: Metadata = {
-  title: 'Space Capture - Construction Field Inspection App & Site Audit Software',
-  description: 'The #1 AI Field Inspection Software for construction & maintenance. Automate defect detection, daily reports, and safety compliance with our free mobile app.',
+  title: 'Construction Field Inspection App & Audit Software',
+  description: 'The #1 AI Field Inspection Software for construction & maintenance. Automate defect detection, daily reports, and safety compliance. Try it free.',
   alternates: {
     canonical: '/',
   },

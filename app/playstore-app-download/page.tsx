@@ -2,236 +2,224 @@ import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import {
-    Download,
-    MessageCircle,
-    Smartphone,
-    Wifi,
-    Camera,
-    ShieldCheck,
-    Zap,
-    ArrowRight,
-    ExternalLink,
-    Star,
+  Download,
+  MessageCircle,
+  Wifi,
+  Camera,
+  ShieldCheck,
+  Zap,
+  ExternalLink,
+  Star,
 } from "lucide-react";
 import WhatsAppButton from "@/components/WhatsappButton";
 
 export const metadata: Metadata = {
-    title:
-        "SpaceCapture App – Available on Google Play | Android Field Operations App",
+  title:
+    "SpaceCapture App – Available on Google Play | Android Field Operations App",
+  description:
+    "SpaceCapture is available on Google Play Store. Download the Android field operations app with offline inspections, AI camera, and real-time data sync.",
+ keywords: [
+  "SpaceCapture app",
+  "SpaceCapture Android app",
+  "available on Google Play",
+  "Google Play Store app",
+  "field operations app",
+  "offline inspection app",
+  "android field app",
+  "play store app download",
 
+  // Construction-focused keywords
+  "construction field app",
+  "construction inspection app",
+  "construction site inspection software",
+  "construction defect detection app",
+  "AI construction inspection",
+  "construction punch list app",
+  "construction quality control app",
+  "construction site reporting app",
+  "construction field reporting software",
+  "mobile construction management app",
+
+  // AI & Defect detection keywords
+  "AI defect detection software",
+  "AI construction defect detection",
+  "AI site inspection app",
+  "computer vision construction app",
+
+  // Offline & Field work keywords
+  "offline construction app",
+  "offline field inspection software",
+  "jobsite inspection mobile app",
+  "construction app for contractors",
+  "construction app for engineers",
+  "field data capture app",
+
+  // Commercial intent keywords
+  "best construction inspection app",
+  "PlanGrid alternative",
+  "iAuditor alternative",
+  "construction inspection software Android",
+]
+,
+  openGraph: {
+    title: "SpaceCapture App – Available on Google Play",
     description:
-        "SpaceCapture is available on Google Play Store. Download the Android field operations app with offline inspections, AI camera, and real-time data sync.",
-
-    keywords: [
-        "SpaceCapture app",
-        "SpaceCapture Android app",
-        "available on Google Play",
-        "Google Play Store app",
-        "field operations app",
-        "offline inspection app",
-        "android field app",
-        "play store app download",
+      "Download SpaceCapture from the Google Play Store. Offline-first Android app for inspections and field data capture.",
+    images: [
+      {
+        url: "/images/playstore-mockup.png",
+        width: 1200,
+        height: 630,
+        alt: "SpaceCapture App available on Google Play Store",
+      },
     ],
-
-    openGraph: {
-        title: "SpaceCapture App – Available on Google Play",
-        description:
-            "Download SpaceCapture from the Google Play Store. Offline-first Android app for inspections and field data capture.",
-        images: [
-            {
-                url: "/images/playstore-mockup.png",
-                width: 1200,
-                height: 630,
-                alt: "SpaceCapture App available on Google Play Store",
-            },
-        ],
-        type: "website",
-    },
-
-    twitter: {
-        card: "summary_large_image",
-        title: "SpaceCapture App – Available on Google Play",
-        description:
-            "Download SpaceCapture from the Google Play Store. Built for offline field operations.",
-        images: ["/images/playstore-mockup.png"],
-    },
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SpaceCapture App – Available on Google Play",
+    description:
+      "Download SpaceCapture from the Google Play Store. Built for offline field operations.",
+    images: ["/images/playstore-mockup.png"],
+  },
 };
 
-
 export default function AppDownloadPage() {
-    const whatsappNumber = "17652713686";
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-        "Hi, I need help downloading the SpaceCapture app."
-    )}`;
+  const whatsappNumber = "17652713686";
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    "Hi, I need help downloading the SpaceCapture app."
+  )}`;
 
+  const appId = "com.SpaceAi.FieldModule";
+  const playStoreUrl = `https://play.google.com/store/apps/details?id=${appId}`;
+  const reviewUrl = `https://play.google.com/store/apps/details?id=${appId}&reviewId=0`;
 
-    const appId = "com.SpaceAi.FieldModule";
+  return (
+    <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
+      {/* Background */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute top-0 right-[-10%] w-[50%] h-[50%] bg-blue-600/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-[-10%] w-[50%] h-[50%] bg-purple-600/10 rounded-full blur-[120px]" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03]" />
+      </div>
 
-    const playStoreUrl = `https://play.google.com/store/apps/details?id=${appId}`;
+      <main className="pt-32 pb-20 relative z-10">
+        <div className="container mx-auto max-w-[1200px] px-4">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            {/* LEFT CONTENT */}
+            <div className="space-y-8">
+              <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
+                Your Jobsite,
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                  In Your Pocket
+                </span>
+              </h1>
 
-    // Direct "Write a Review" deep link
-    const reviewUrl = `https://play.google.com/store/apps/details?id=${appId}&reviewId=0`;
+              <p className="text-xl text-slate-400 max-w-lg">
+                Available on Google Play Store. Capture photos, fill forms, and
+                sync field data in real-time — even offline.
+              </p>
 
+              {/* Logo */}
+              <div className="flex gap-4 items-center">
+                <Image
+                  src="/images/space-capture-logo.jpg"
+                  alt="SpaceCapture App Logo"
+                  width={55}
+                  height={48}
+                  className="rounded-xl"
+                  priority
+                />
+                <div>
+                  <h2 className="text-xl font-bold">Space Capture</h2>
+                  <a
+                    href="https://www.space-sign.ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 text-sm"
+                  >
+                    www.space-sign.ai
+                  </a>
+                </div>
+              </div>
 
-    return (
-        <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
-            {/* Background */}
-            <div className="fixed inset-0 pointer-events-none z-0">
-                <div className="absolute top-0 right-[-10%] w-[50%] h-[50%] bg-blue-600/20 rounded-full blur-[120px]" />
-                <div className="absolute bottom-0 left-[-10%] w-[50%] h-[50%] bg-purple-600/10 rounded-full blur-[120px]" />
-                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03]" />
+              {/* CTA Buttons */}
+              <div className="flex flex-wrap items-center gap-4">
+                <a
+                  href={playStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-8 py-3 rounded-2xl font-bold bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition shadow-lg"
+                >
+                  <Download className="w-5 h-5" />
+                  Download App
+                  <ExternalLink className="w-4 h-4 opacity-70" />
+                </a>
+
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-black gap-3 bg-[#a7c0b0] px-8 py-3 rounded-2xl font-bold hover:bg-[#8a938d] transition"
+                >
+                  <MessageCircle className="w-5 h-5 text-black" />
+                  Request a Demo
+                </a>
+              </div>
+
+              <a
+                href={reviewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-slate-900/50 p-3 rounded-2xl border border-slate-800 hover:border-slate-700 transition"
+              >
+                <Star className="w-4 h-4 mr-2" />
+                Rate & Review on Play Store
+              </a>
             </div>
 
-            <main className="pt-32 pb-20 relative z-10">
-                <div className="container mx-auto max-w-[1200px] px-4">
-                    <div className="grid lg:grid-cols-2 gap-20 items-center">
-                        {/* LEFT CONTENT */}
-                        <div className="space-y-8">
+            {/* RIGHT SIDE - MOBILE FRAME WITH VIDEO */}
+            <div className="flex justify-center">
+              <div className="relative w-[320px] h-[650px] bg-black rounded-[40px] p-3 shadow-2xl border-[8px] border-slate-800 animate-float">
 
+                {/* Top Notch */}
+                <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-5 bg-slate-900 rounded-full z-20" />
 
-
-                            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
-                                Your Jobsite,
-                                <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                                    In Your Pocket
-                                </span>
-                            </h1>
-
-                            <p className="text-xl text-slate-400 max-w-lg">
-                                available on Google Play Store. Capture photos, fill forms, and sync
-                            </p>
-
-                            {/* CTAs */}
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <div className="flex gap-4">
-                                    <Image
-                                        src="/images/space-capture-logo.jpg"
-                                        alt="SpaceCapture App Logo"
-                                        width={55}
-                                        height={48}
-                                        className="rounded-xl"
-                                        priority
-                                    />
-                                    <div>
-                                        <h1 className="text-xl font-bold">Space Capture</h1>
-                                        <a
-                                            href={playStoreUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-start justify-center gap-3  text-blue-400  rounded-2xl font-light "
-                                        >
-                                            www.space-sign.ai
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div className="flex items-center gap-4">
-
-                                <a
-                                    href={playStoreUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center gap-3  px-8 py-3 rounded-2xl font-bold bg-slate-900/50 p-6 border border-slate-800 hover:border-slate-700 transition  shadow-lg group"
-                                >
-                                    <Download className="w-5 h-5 group-hover:-translate-y-1 transition" />
-                                    Download App
-                                    <ExternalLink className="w-4 h-4 opacity-70" />
-                                </a>
-
-                                <a
-                                    href={whatsappUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center text-black justify-center gap-3 bg-[#a7c0b0] px-8 py-3 rounded-2xl font-bold hover:bg-[#8a938d] transition"
-                                >
-                                    <MessageCircle className="w-5 h-5 text-black" />
-                                    request-a-demo
-                                </a>
-                            </div>
-
-                            {/* Review */}
-                            <a
-                                href={reviewUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center bg-slate-900/50 p-3 rounded-2xl border border-slate-800 hover:border-slate-700 transition"
-                            >
-                                <Star className="w-4 h-4 mr-2 " />
-                                Rate & Review on Play Store
-                            </a>
-
-                            {/* <div className="flex gap-6 text-xs text-slate-500 font-mono">
-                <span>⭐ 4.8 Rating</span>
-                <span>⬇ 10K+ Downloads</span>
-                <span>🔒 Secure</span>
-              </div> */}
-                        </div>
-
-                        {/* RIGHT MOCKUP */}
-                        <div className="relative flex justify-center">
-                            <div className="relative max-w-sm lg:max-w-md">
-                                <Image
-                                    src="/images/playstore-mockup.png"
-                                    alt="SpaceCapture Play Store App Preview"
-                                    width={600}
-                                    height={1200}
-                                    priority
-                                    className="drop-shadow-2xl rounded-3xl"
-                                />
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* FEATURES */}
-                    <div className="flex  flex-col gap-4 mt-20">
-                        <h1 className="inline-flex items-center gap-2 border w-fit border-blue-500/30 bg-blue-500/10 px-4 py-1.5 rounded-full text-blue-400 font-bold uppercase tracking-wider text-xs">
-                            Features of Application      </h1>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
-                            <FeatureCard
-                                icon={Wifi}
-                                title="Offline First"
-                                desc="Work without internet. Sync when online."
-                                color="text-blue-400"
-                                bg="bg-blue-500/10"
-                            />
-                            <FeatureCard
-                                icon={Camera}
-                                title="AI Camera"
-                                desc="Auto-tag photos with GPS & direction."
-                                color="text-purple-400"
-                                bg="bg-purple-500/10"
-                            />
-                            <FeatureCard
-                                icon={ShieldCheck}
-                                title="Enterprise Security"
-                                desc="AES-256 encryption & compliance."
-                                color="text-green-400"
-                                bg="bg-green-500/10"
-                            />
-                            <FeatureCard
-                                icon={Zap}
-                                title="Fast & Native"
-                                desc="Optimized for field performance."
-                                color="text-yellow-400"
-                                bg="bg-yellow-500/10"
-                            />
-                        </div>
-                    </div>
+                {/* Video */}
+                <div className="w-full h-full overflow-hidden rounded-[30px] bg-black">
+                  <video
+                    src="/videos/app-demo-video.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                {/* Hidden SEO Content */}
-                <section className="sr-only">
-                    <h2>Download SpaceCapture Android App</h2>
-                    <p>
-                        SpaceCapture is an offline-first Android field operations app
-                        available on Google Play Store.
-                    </p>
-                </section>
+              </div>
+            </div>
+          </div>
 
-                <WhatsAppButton />
-                <div className="container space-y-4 mx-auto max-w-[1200px] px-4 mt-12 mb-12">
+          {/* FEATURES */}
+          <div className="mt-24">
+            <h2 className="inline-flex items-center gap-2 border border-blue-500/30 bg-blue-500/10 px-4 py-1.5 rounded-full text-blue-400 font-bold uppercase tracking-wider text-xs">
+              Features of Application
+            </h2>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+              <FeatureCard icon={Wifi} title="Offline First" desc="Work without internet. Sync when online." />
+              <FeatureCard icon={Camera} title="AI Camera" desc="Auto-tag photos with GPS & direction." />
+              <FeatureCard icon={ShieldCheck} title="Enterprise Security" desc="AES-256 encryption & compliance." />
+              <FeatureCard icon={Zap} title="Fast & Native" desc="Optimized for field performance." />
+            </div>
+          </div>
+        </div>
+
+        <WhatsAppButton />
+        <div className="container space-y-4 mx-auto max-w-[1200px] px-4 mt-12 mb-12">
                     <h1 className="inline-flex items-center gap-2 border border-blue-500/30 bg-blue-500/10 px-4 py-1.5 rounded-full text-blue-400 font-bold uppercase tracking-wider text-xs">
                         Frequently asked questions      </h1>
                     <div className="flex flex-col gap-6">
@@ -302,18 +290,17 @@ export default function AppDownloadPage() {
                         }}
                     />
                 </div>
-            </main>
-
-        </div>
-    );
+      </main>
+    </div>
+  );
 }
 
-const FeatureCard = ({ icon: Icon, title, desc, color, bg }: any) => (
-    <div className="bg-slate-900/50 p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition">
-        <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${bg}`}>
-            <Icon className={`w-6 h-6 ${color}`} />
-        </div>
-        <h3 className="font-bold mt-4 mb-1">{title}</h3>
-        <p className="text-slate-400 text-sm">{desc}</p>
+const FeatureCard = ({ icon: Icon, title, desc }: any) => (
+  <div className="bg-slate-900/50 p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition">
+    <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-blue-500/10">
+      <Icon className="w-6 h-6 text-blue-400" />
     </div>
+    <h3 className="font-bold mt-4 mb-1">{title}</h3>
+    <p className="text-slate-400 text-sm">{desc}</p>
+  </div>
 );

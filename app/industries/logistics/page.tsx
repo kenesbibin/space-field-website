@@ -8,14 +8,14 @@ import { INDUSTRIES_DATA } from '@/lib/seo-data';
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: 'Logistics & Fleet Management Software | Space Field',
+  title: 'Logistics & Fleet Management Software | SpaceCapture',
   description: 'Optimize your delivery fleet with Space Field. Real-time tracking, route optimization, and digital proof of delivery (POD) for modern logistics operations.',
   keywords: ['logistics software', 'fleet management', 'proof of delivery', 'route optimization', 'delivery app', 'Space Field'],
   alternates: {
     canonical: 'https://spacecapture.ai/industries/logistics',
   },
   openGraph: {
-    title: 'Logistics & Fleet Management Software | Space Field',
+    title: 'Logistics & Fleet Management Software | SpaceCapture',
     description: 'Drive efficiency with real-time fleet tracking and digital delivery workflows.',
     url: 'https://spacecapture.ai/industries/logistics',
     siteName: 'Space Field',

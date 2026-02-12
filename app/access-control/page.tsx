@@ -6,7 +6,7 @@ import AccessControlSection from '@/components/AcessControlSection';
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: 'Role-Based Access Control (RBAC) | Space Capture',
+  title: 'Role-Based Access Control (RBAC) | SpaceCapture',
   description: 'Secure your field data with Space Capture’s granular permissions. Assign tasks, manage user roles, and control access to specific projects or forms.',
   keywords: ['RBAC', 'user management', 'access control', 'field data security', 'task assignment', 'Space Capture'],
   alternates: {

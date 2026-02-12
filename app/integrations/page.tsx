@@ -6,7 +6,7 @@ import IntegrationsSection from '@/components/IntegrationSection';
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: 'Developer Integrations & AI Agents | Space Capture',
+  title: 'Developer Integrations & AI Agents | SpaceCapture',
   description: 'Extend Space Capture with powerful developer tools. Connect field data to your stack via Webhooks, APIs, and autonomous AI Agent integrations.',
   keywords: ['webhooks', 'api integration', 'ai agents', 'field data automation', 'developer tools', 'Space Capture'],
   alternates: {

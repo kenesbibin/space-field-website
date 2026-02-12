@@ -9,14 +9,14 @@ import { INDUSTRIES_DATA } from '@/lib/seo-data';
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: 'Utility Field Management Software | Space Field',
+  title: 'Utility Field Management Software | SpaceCapture',
   description: 'Modernize utility operations with Space Field. Manage grid inspections, smart meter deployments, and outage response with our offline-capable mobile app.',
   keywords: ['utility software', 'grid maintenance', 'outage management', 'smart meter deployment', 'field service', 'Space Field'],
   alternates: {
     canonical: 'https://spacecapture.ai/industries/utilities',
   },
   openGraph: {
-    title: 'Utility Field Management Software | Space Field',
+    title: 'Utility Field Management Software | SpaceCapture',
     description: 'Ensure grid reliability and workforce safety with digital utility operations.',
     url: 'https://spacecapture.ai/industries/utilities',
     siteName: 'Space Field',

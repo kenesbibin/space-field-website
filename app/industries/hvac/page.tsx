@@ -10,7 +10,7 @@ import { INDUSTRIES_DATA } from '@/lib/seo-data';
 // SEO Metadata
 export const metadata: Metadata = {
   title: 'HVAC & Plumbing Field Software | Space Field',
-  description: 'Streamline HVAC and plumbing service calls with Space Field. Manage dispatching, recurring maintenance, and digital invoicing with our mobile-first platform.',
+  description: 'Streamline HVAC and plumbing service calls with Space Field. Manage dispatching, recurring maintenance, and digital invoicing with our mobile app.',
   keywords: ['hvac software', 'plumbing software', 'field service management', 'dispatch app', 'maintenance contracts', 'Space Field'],
   alternates: {
     canonical: 'https://spacecapture.ai/industries/hvac',

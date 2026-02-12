@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Request a Demo - SPACE CAPTURE',
-  description: 'Schedule a personalized demo of SPACE CAPTURE, the ultimate mobile solution for field operations in construction, maintenance, and inspection sectors.',
+  description: 'Transform field data into actionable intelligence. Real-time dashboards, custom PDF reporting, and automated analytics for smarter decisions.',
   alternates: {
     canonical: '/request-a-demo',
   },
