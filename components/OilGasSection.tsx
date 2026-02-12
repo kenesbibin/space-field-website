@@ -7,7 +7,7 @@ import { Flame, ShieldAlert, Gauge, ArrowRight } from 'lucide-react';
 
 const OIL_GAS_FEATURES = [
   {
-    title: "HSE & Safety Compliance",
+    title: "HSE & Safety Compliance.",
     icon: ShieldAlert,
     description: "Enforce rigorous safety protocols on rigs and refineries. Digital permit-to-work systems and hazard reporting ensure 100% compliance with industry standards."
   },
