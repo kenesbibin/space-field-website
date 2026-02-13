@@ -324,7 +324,7 @@ export const INDUSTRIES_DATA: Record<string, IndustryData> = {
     hero: {
       title: 'Digital Transformation for Oil & Gas',
       subtitle: 'Empower your workforce with offline-first mobile tools.',
-      image: '/images/oilgas.jpg'
+      image: '/images/oilgas.webp'
     },
     stats: [
       { value: '40%', label: 'Efficiency' },
@@ -406,7 +406,7 @@ export const INDUSTRIES_DATA: Record<string, IndustryData> = {
   'construction': {
     slug: 'construction',
     meta: { title: 'Construction Management Software', description: ' streamlining construction projects.' },
-    hero: { title: 'Construction Management', subtitle: 'Build better and faster.', image: '/images/construction.jpg' },
+    hero: { title: 'Construction Management', subtitle: 'Build better and faster.', image: '/images/construction.webp' },
     stats: [{ value: '30%', label: 'Faster' }, { value: '50%', label: 'Less Rework' }],
     chapters: [
       {
@@ -509,7 +509,7 @@ export const INDUSTRIES_DATA: Record<string, IndustryData> = {
   'manufacturing': {
     slug: 'manufacturing',
     meta: { title: 'Manufacturing Plant Software', description: ' optimize plant operations.' },
-    hero: { title: 'Smart Manufacturing', subtitle: 'Industry 4.0 ready.', image: '/images/manu.jpg' },
+    hero: { title: 'Smart Manufacturing', subtitle: 'Industry 4.0 ready.', image: '/images/manu.webp' },
     stats: [{ value: '25%', label: 'Productivity' }],
     chapters: [
     {
@@ -846,7 +846,7 @@ export const INDUSTRIES_DATA: Record<string, IndustryData> = {
   hero: {
     title: 'AI-Powered HVAC & Plumbing Operations',
     subtitle: 'Deliver faster service, fewer callbacks, and complete field visibility.',
-    image: '/images/hvac-plumbing.jpg'
+    image: '/images/hvac-plumbing.webp'
   },
   stats: [
     { value: '45%', label: 'Faster Service Completion' },
@@ -1220,7 +1220,7 @@ export const INDUSTRIES_DATA: Record<string, IndustryData> = {
     hero: {
       title: 'Digital Property Operations',
       subtitle: 'Manage portfolios with precision. From acquisition due diligence to daily maintenance.',
-      image: '/images/real.jpg'
+      image: '/images/real.webp'
     },
     stats: [
       { value: '50%', label: 'Faster Turnovers' },
@@ -1308,7 +1308,7 @@ export const INDUSTRIES_DATA: Record<string, IndustryData> = {
     hero: {
       title: 'AI-Powered Insurance Inspections',
       subtitle: 'Process claims faster with verifiable field data and AI damage assessment.',
-      image: '/images/utilities.jpg'
+      image: '/images/utilities.webp'
     },
     stats: [
       { value: '60%', label: 'Faster Claims' },

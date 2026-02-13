@@ -132,7 +132,7 @@ export default function HeroSection() {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white p-2">
                <div className="relative rounded-xl overflow-hidden">
                   <Image
-                    src="/images/hero.jpg"
+                    src="/images/hero.webp"
                     alt="SPACE CAPTURE App Dashboard Interface"
                     width={1200}
                     height={900} 

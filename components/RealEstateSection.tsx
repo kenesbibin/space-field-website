@@ -129,7 +129,7 @@ const RealEstateSection = () => {
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white bg-slate-100">
                <div className="aspect-video relative">
                  <Image
-                   src="/images/real.jpg"
+                   src="/images/real.webp"
                    alt="Real Estate Portfolio Management"
                    fill
                    className="object-cover hover:scale-105 transition-transform duration-700"

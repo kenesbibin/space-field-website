@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: 'Space Field',
     images: [
       {
-        url: '/images/manufac.jpg', 
+        url: '/images/manufac.webp', 
         width: 1200,
         height: 630,
         alt: 'Space Field Manufacturing Operations',

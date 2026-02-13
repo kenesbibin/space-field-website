@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: 'Space Field',
     images: [
       {
-        url: '/images/utilities.jpg', 
+        url: '/images/utilities.webp', 
         width: 1200,
         height: 630,
         alt: 'Space Field Utility Operations',

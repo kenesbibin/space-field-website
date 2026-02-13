@@ -129,7 +129,7 @@ const ConstructionSection = () => {
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white bg-slate-100">
                <div className="aspect-[4/5] relative">
                  <Image
-                   src="/images/construction.jpg" // Ensure this image exists in your public/images folder
+                   src="/images/construction.webp" // Ensure this image exists in your public/images folder
                    alt="Construction Site Management with Space Field"
                    fill
                    className="object-cover hover:scale-105 transition-transform duration-700"

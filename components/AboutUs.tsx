@@ -96,7 +96,7 @@ export default function AboutUs() {
               <div className="relative rounded-[32px] border border-slate-100 bg-white/80 p-4 shadow-2xl backdrop-blur">
                 <div className="aspect-[4/3] w-full rounded-[28px] bg-gradient-to-br from-blue-100 via-white to-indigo-50 p-8 text-center text-slate-500">
                   <Image
-                    src="/images/about/field-team.jpg"
+                    src="/images/about/field-team.webp"
                     alt="Field engineers collaborating around tablets and drones"
                     width={1200}
                     height={900}
@@ -167,7 +167,7 @@ export default function AboutUs() {
               <div className="rounded-[36px] border border-slate-100 bg-white p-4 shadow-2xl">
                 <div className="aspect-[4/3] w-full rounded-[28px] bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 p-6">
                   <Image
-                    src="/images/about/team-collab.jpg"
+                    src="/images/about/team-collab.webp"
                     alt="SPACE CAPTURE teammates strategizing in a mission control-style space"
                     width={1200}
                     height={900}

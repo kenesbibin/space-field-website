@@ -129,7 +129,7 @@ const UtilitiesSection = () => {
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white bg-slate-100">
                <div className="aspect-video relative">
                  <Image
-                   src="/images/utilities.jpg" // Ensure this image exists
+                   src="/images/utilities.webp" // Ensure this image exists
                    alt="Utility Field Operations and Grid Maintenance"
                    fill
                    className="object-cover hover:scale-105 transition-transform duration-700"

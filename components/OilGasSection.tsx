@@ -128,7 +128,7 @@ const OilGasSection = () => {
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white bg-slate-100">
                <div className="aspect-video relative">
                  <Image
-                   src="/images/oilgas.jpg" // Ensure this image exists
+                   src="/images/oilgas.webp" // Ensure this image exists
                    alt="Oil and Gas Field Operations with Space Field"
                    fill
                    className="object-cover hover:scale-105 transition-transform duration-700"
