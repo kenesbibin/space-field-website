@@ -7,6 +7,9 @@ import ShowcaseSection from '@/components/ShowcaseSection'
 import FaqSection from '@/components/FaqSection'
 
 import type { Metadata } from 'next'
+import { getSoftwareSchema } from '@/components/seo/SoftwareSchema'
+import { getOrganizationSchema } from '@/components/seo/OrganaizationSchema'
+import StructuredData from '@/components/seo/StructuredData'
 
 
 export const metadata: Metadata = {
@@ -16,9 +19,18 @@ export const metadata: Metadata = {
     canonical: '/',
   },
 }
-
+ const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      getSoftwareSchema(),
+      getOrganizationSchema(),
+    ],
+  };
 export default function Home() {
   return (
+    <>
+          <StructuredData data={schema} />
+
     <main className="w-full overflow-x-hidden">
        <HeroSection/>
        <ShowcaseSection/>
@@ -29,6 +41,7 @@ export default function Home() {
        <FaqSection />
        <CallToActionSection/>
     </main>
+    </>
   )
 }
 

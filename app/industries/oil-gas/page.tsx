@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: 'Space Field',
     images: [
       {
-        url: '/images/oilgas.jpg', 
+        url: '/images/oilgas.webp', 
         width: 1200,
         height: 630,
         alt: 'Space Field Oil & Gas Operations',

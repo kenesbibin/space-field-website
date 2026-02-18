@@ -124,7 +124,7 @@ const GuideSection = () => {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/50 ring-1 ring-black/5">
               <Image
-                src="/images/landscapeconstruction.png"
+                src="/images/landscapeconstruction.webp"
                 alt="Construction site management with SPACE CAPTURE"
                 width={800}
                 height={600}

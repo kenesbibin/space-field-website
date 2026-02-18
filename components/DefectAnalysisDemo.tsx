@@ -59,7 +59,7 @@ const DefectAnalysisDemo = () => {
                     {/* Image Area */}
                     <div className="relative w-full h-full bg-slate-800">
                         <Image
-                            src="/images/aidefectimage.jpg"
+                            src="/images/aidefectimage.webp"
                             alt="Construction Defect"
                             fill
                             className="object-cover"

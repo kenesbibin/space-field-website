@@ -30,7 +30,7 @@ const OfflineModeSection = () => {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0 opacity-20">
                  <Image
-                   src="/images/construction.jpg" 
+                   src="/images/construction.webp" 
                    alt="Offline Field Work"
                    fill
                    className="object-cover"

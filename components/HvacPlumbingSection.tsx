@@ -128,7 +128,7 @@ const HvacPlumbingSection = () => {
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white bg-slate-100">
                <div className="aspect-video relative">
                  <Image
-                   src="/images/plumbing.jpg" // Ensure this image exists
+                   src="/images/plumbing.webp" // Ensure this image exists
                    alt="HVAC Technician and Plumbing Services"
                    fill
                    className="object-cover hover:scale-105 transition-transform duration-700"

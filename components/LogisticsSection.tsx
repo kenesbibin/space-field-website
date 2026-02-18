@@ -129,7 +129,7 @@ const LogisticsSection = () => {
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white bg-slate-100">
                <div className="aspect-[4/5] relative">
                  <Image
-                   src="/images/fleet.jpg" // Ensure this image exists
+                   src="/images/fleet.webp" // Ensure this image exists
                    alt="Logistics Fleet Management and Delivery"
                    fill
                    className="object-cover hover:scale-105 transition-transform duration-700"
