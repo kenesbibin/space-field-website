@@ -350,7 +350,7 @@ export default function Navbar() {
 
   // Constants
   const SIGN_IN_URL =
-    "https://www.amspace.ai/login?type=Legal&moduleId=b20f5bfe-a351-46e7-842a-24a02802fe4f&invite=guest";
+    "https://www.amspace.ai/login?type=Field&moduleId=8b3b6af5-07a3-44b2-b69e-342b61d71718&invite=guest";
   const DEMO_URL = "/request-a-demo";
   const PHONE_NUMBER_SG = "+65 8611 1900";
   const PHONE_NUMBER_USA = "+1 419 820 1487";
@@ -429,15 +429,16 @@ export default function Navbar() {
   const renderButton = (href: string, text: string, isPrimary = true) => (
     <a
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className="w-full lg:w-auto"
       onClick={() => setIsMenuOpen(false)}
     >
       <button
-        className={`relative w-full cursor-pointer rounded-lg px-4 py-2.5 text-sm font-bold transition-all duration-300 hover:scale-105 active:scale-95 ${
-          isPrimary
-            ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg hover:shadow-purple-500/50 hover:shadow-xl"
-            : "border-2 border-purple-500 text-purple-600 hover:bg-purple-50 hover:shadow-md hover:shadow-purple-400/30"
-        }`}
+        className={`relative w-full cursor-pointer rounded-lg px-4 py-2.5 text-sm font-bold transition-all duration-300 hover:scale-105 active:scale-95 ${isPrimary
+          ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg hover:shadow-purple-500/50 hover:shadow-xl"
+          : "border-2 border-purple-500 text-purple-600 hover:bg-purple-50 hover:shadow-md hover:shadow-purple-400/30"
+          }`}
       >
         <span className={isPrimary ? "text-white" : "text-purple-600"}>
           {text}
@@ -458,11 +459,10 @@ export default function Navbar() {
       />
 
       <header
-        className={`fixed inset-x-0 top-0 z-50 py-3 transition-all duration-300 ${
-          scrolled || isMenuOpen
-            ? "bg-white shadow-md"
-            : "bg-white/95 backdrop-blur-lg"
-        }`}
+        className={`fixed inset-x-0 top-0 z-50 py-3 transition-all duration-300 ${scrolled || isMenuOpen
+          ? "bg-white shadow-md"
+          : "bg-white/95 backdrop-blur-lg"
+          }`}
       >
         <div className="container mx-auto max-w-[1400px] px-4">
           <div className="flex items-center gap-6">
@@ -513,9 +513,8 @@ export default function Navbar() {
                         className={`w-4 h-4 transition-transform duration-200 ${showProducts ? "rotate-180" : ""}`}
                       />
                       <span
-                        className={`absolute bottom-0 left-0 h-0.5 bg-purple-500 transition-all duration-300 ${
-                          hoveredProducts ? "w-full" : "w-0"
-                        }`}
+                        className={`absolute bottom-0 left-0 h-0.5 bg-purple-500 transition-all duration-300 ${hoveredProducts ? "w-full" : "w-0"
+                          }`}
                       />
                     </a>
 
@@ -540,11 +539,10 @@ export default function Navbar() {
                                     onMouseEnter={() =>
                                       setActiveProductCategory(category)
                                     }
-                                    className={`w-full text-left px-3 py-2.5 rounded-md text-sm font-semibold transition-colors flex items-center justify-between ${
-                                      activeProductCategory === category
-                                        ? "bg-violet-50 text-violet-700"
-                                        : "text-gray-600 hover:bg-white/50"
-                                    }`}
+                                    className={`w-full text-left px-3 py-2.5 rounded-md text-sm font-semibold transition-colors flex items-center justify-between ${activeProductCategory === category
+                                      ? "bg-violet-50 text-violet-700"
+                                      : "text-gray-600 hover:bg-white/50"
+                                      }`}
                                   >
                                     <span>{category}</span>
                                     <ChevronRight
@@ -611,9 +609,8 @@ export default function Navbar() {
                         className={`w-4 h-4 transition-transform duration-200 ${showIndustries ? "rotate-180" : ""}`}
                       />
                       <span
-                        className={`absolute bottom-0 left-0 h-0.5 bg-purple-500 transition-all duration-300 ${
-                          hoveredIndustries ? "w-full" : "w-0"
-                        }`}
+                        className={`absolute bottom-0 left-0 h-0.5 bg-purple-500 transition-all duration-300 ${hoveredIndustries ? "w-full" : "w-0"
+                          }`}
                       />
                     </a>
 
@@ -655,6 +652,22 @@ export default function Navbar() {
                       </div>
                     )}
                   </div>
+
+                  {/* Blog Link */}
+                  <Link
+                    href="/blog"
+                    className="inline-block text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer ml-8 py-2"
+                  >
+                    Blog
+                  </Link>
+
+                  {/* Tools Link */}
+                  <Link
+                    href="/tools"
+                    className="inline-block text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer ml-8 py-2"
+                  >
+                    Tools
+                  </Link>
                 </div>
 
                 {/* Resources Dropdown */}
@@ -724,6 +737,20 @@ export default function Navbar() {
               >
                 Home
               </a>
+              <Link
+                href="/blog"
+                className="block border-b border-gray-200 py-3 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blog
+              </Link>
+              <Link
+                href="/tools"
+                className="block border-b border-gray-200 py-3 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Tools
+              </Link>
 
               {/* Products Section */}
               <div className="border-b border-gray-200 pb-4">

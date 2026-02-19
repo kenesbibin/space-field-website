@@ -13,24 +13,24 @@ export const SeoCallToAction = () => {
         <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
           Ready to Streamline Your Operations?
         </h2>
-        
+
         <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
           Join thousands of construction professionals using SpaceCapture to automate inspections, ensure safety, and deliver higher quality projects.
         </p>
-        
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a 
-            href="https://www.amspace.ai/login?type=Legal&moduleId=b20f5bfe-a351-46e7-842a-24a02802fe4f&invite=guest" 
-            target="_blank" 
+          <a
+            href="https://www.amspace.ai/login?type=Field&moduleId=8b3b6af5-07a3-44b2-b69e-342b61d71718&invite=guest"
+            target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex h-14 items-center justify-center rounded-full bg-indigo-600 px-8 text-lg font-bold text-white shadow-lg shadow-indigo-500/30 transition-all hover:bg-indigo-500 hover:scale-105"
           >
             Try for Free
             <ArrowRight className="ml-2 w-5 h-5" />
           </a>
-          
-          <a 
-            href="/request-a-demo" 
+
+          <a
+            href="/request-a-demo"
             className="w-full sm:w-auto inline-flex h-14 items-center justify-center rounded-full bg-white text-slate-900 border border-slate-200 px-8 text-lg font-bold shadow transition-all hover:bg-slate-100 hover:scale-105"
           >
             Book a Demo
