@@ -5,6 +5,7 @@ import GuideSection from '@/components/GuideSection'
 import HeroSection from '@/components/HeroSection'
 import ShowcaseSection from '@/components/ShowcaseSection'
 import FaqSection from '@/components/FaqSection'
+import AppDownloadSection from '@/components/AppDownloadSection'
 
 import type { Metadata } from 'next'
 import { getSoftwareSchema } from '@/components/seo/SoftwareSchema'
@@ -32,17 +33,16 @@ export default function Home() {
           <StructuredData data={schema} />
 
     <main className="w-full overflow-x-hidden">
-       <HeroSection/>
-       <ShowcaseSection/>
-       <GuideSection/>
-       <Features/>
-       <AiDetectionApiSection/>
+      <HeroSection />
+      <AppDownloadSection />
+      <ShowcaseSection />
+      <GuideSection />
+      <Features />
+      <AiDetectionApiSection />
 
-       <FaqSection />
-       <CallToActionSection/>
+      <FaqSection />
+      <CallToActionSection />
     </main>
     </>
   )
 }
-
-

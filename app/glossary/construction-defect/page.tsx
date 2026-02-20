@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata as MetadataDefect } from "next";
 import Link from "next/link";
 
-export const metadataDefect: MetadataDefect = {
+export const metadata: MetadataDefect = {
   title: "What Is a Construction Defect? | SpaceCapture Glossary",
   description:
     "A construction defect is a flaw in design, materials, or workmanship that reduces a building's quality or safety.",
@@ -14,7 +14,7 @@ export const metadataDefect: MetadataDefect = {
   ],
 };
 
-export function ConstructionDefectPage() {
+export default function ConstructionDefectPage() {
   return (
     <main className="bg-white min-h-screen py-16">
       <div className="max-w-4xl mx-auto px-6 prose prose-lg">
