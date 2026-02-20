@@ -75,7 +75,7 @@ const AppDownloadSection = () => {
                         {/* Download Buttons / QR */}
                         <div className="flex flex-col sm:flex-row items-center gap-8">
                             <a
-                                href="https://play.google.com/store/apps/details?id=com.amspace.spacecapture"
+                                href="https://play.google.com/store/apps/details?id=com.SpaceAi.FieldModule&hl=en_IN"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="transition-transform hover:scale-105 active:scale-95"

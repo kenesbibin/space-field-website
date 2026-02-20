@@ -131,18 +131,6 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             className="relative w-full flex justify-center lg:justify-end"
           >
-<<<<<<< Updated upstream
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white p-2">
-               <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/hero.webp"
-                    alt="SPACE CAPTURE App Dashboard Interface"
-                    width={1200}
-                    height={900} 
-                    quality={100}
-                    className="w-full h-auto object-cover"
-                    priority
-=======
             {/* Realistic Mobile Device Frame */}
             <div className="relative mx-auto w-[280px] sm:w-[300px] md:w-[320px]">
               {/* Outer Frame / Bezel */}
@@ -161,7 +149,6 @@ export default function HeroSection() {
                     loop
                     playsInline
                     className="w-full h-full object-cover"
->>>>>>> Stashed changes
                   />
                 </div>
               </div>

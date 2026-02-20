@@ -91,7 +91,7 @@ export default function AppDownloadPage() {
   )}`;
 
   const appId = "com.SpaceAi.FieldModule";
-  const playStoreUrl = `https://play.google.com/store/apps/details?id=${appId}`;
+  const playStoreUrl = `https://play.google.com/store/apps/details?id=${appId}&hl=en_IN`;
   const reviewUrl = `https://play.google.com/store/apps/details?id=${appId}&reviewId=0`;
 
   return (

@@ -19,43 +19,6 @@ import Image from 'next/image';
 import CallToAction from '@/components/CallToAction';
 
 const LOCATIONS = [
-<<<<<<< Updated upstream
-  {
-    city: "Singapore",
-    type: "Regional Headquarters",
-    address: ["ISPACE BUILDING #04-39", "7 SOON LEE STREET", "SINGAPORE 627608 "],
-    coords: "1.34°, 103.70°",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=1.34,103.70"
-  },
-  {
-    city: "USA",
-    type: "Americas Headquarters",
-    address: ["2500 MARCONI AVE, STE 101", "SACRAMENTO, CA 95821 USA"],
-    coords: "38.62°, -121.38°",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=38.62,-121.38"
-  },
-  {
-    city: "Dubai",
-    type: "Middle East - Regional Office",
-    address: [],
-    coords: "25.28°, 55.31°",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=25.28,55.31"
-  },
-  {
-    city: "India",
-    type: "Technology and R&D",
-    address: [],
-    coords: "8.91°, 76.69°",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=8.91,76.69"
-  },
-  {
-    city: "Kuwait",
-    type: "Strategic Partner for Gulf Region",
-    address: [],
-    coords: "29.08°, 48.13°",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=29.08,48.13"
-  }
-=======
     {
         city: "Singapore",
         type: "Regional Headquarters",
@@ -91,7 +54,6 @@ const LOCATIONS = [
         coords: "29.08°, 48.13°",
         mapLink: "https://www.google.com/maps/search/?api=1&query=29.08,48.13"
     }
->>>>>>> Stashed changes
 ];
 
 

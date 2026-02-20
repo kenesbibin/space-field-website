@@ -110,7 +110,7 @@ export default function SpaceCapturePlayStoreLaunch() {
                             for construction professionals.
                         </p>
                         <Link
-                            href="https://play.google.com/store/apps/details?id=com.SpaceAi.FieldModule"
+                            href="https://play.google.com/store/apps/details?id=com.SpaceAi.FieldModule&hl=en_IN"
                             target="_blank"
                             className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 text-white font-semibold hover:bg-indigo-700 transition"
                         >
