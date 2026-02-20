@@ -21,7 +21,7 @@ import CallToAction from '@/components/CallToAction';
 const LOCATIONS = [
     {
         city: "Singapore",
-        type: "Regional Headquarters",
+        type: "Regional Headquarters ",
         address: ["ISPACE BUILDING #04-39", "7 SOON LEE STREET", "SINGAPORE 627608"],
         coords: "1.34°, 103.70°",
         mapLink: "https://www.google.com/maps/search/?api=1&query=1.34,103.70"
