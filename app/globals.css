@@ -1,17 +1,50 @@
 @import "tailwindcss";
 
 
+/* ── Core Web Vitals Optimizations ────────────────────────────── */
+
+/* Font-display: swap — prevents FOIT if any web fonts are loaded */
+@font-face {
+  font-family: 'system-fallback';
+  font-display: swap;
+  src: local('system-ui'), local('-apple-system'), local('Segoe UI');
+}
+
+/* Force swap for any future Google Font additions */
+* {
+  font-display: swap;
+}
+
+/* CLS Prevention — reserve space for lazy-loaded images */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* INP Optimization — GPU-accelerate common animations */
+.animate-float,
+[class*="transition"] {
+  will-change: transform, opacity;
+}
 
 /* Removed @media (prefers-color-scheme: dark) block to disable dark mode */
 
-
-
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0px); }
+  0% { transform: translate3d(0, 0px, 0); }
+  50% { transform: translate3d(0, -12px, 0); }
+  100% { transform: translate3d(0, 0px, 0); }
 }
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+/* Reduce motion for users who prefer it — CWV accessibility bonus */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

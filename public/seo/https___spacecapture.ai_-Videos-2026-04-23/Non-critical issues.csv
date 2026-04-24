@@ -1,0 +1,3 @@
+Issue,Validation,Items
+"Datetime property ""uploadDate"" is missing a timezone",Not Started,1
+"Invalid datetime value for ""uploadDate""",Not Started,1

@@ -28,27 +28,6 @@ export default function JsonLd() {
         }
       },
       {
-        "@type": "SoftwareApplication",
-        "name": "Space Capture",
-        "applicationCategory": "ConstructionManagement, BusinessApplication",
-        "operatingSystem": "Android, iOS",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "description": "The ultimate mobile command center for field operations. Streamline tasks, automate reporting, and sync your workforce in real-time with AI-powered tools.",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "ratingCount": "120"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "Space Capture"
-        }
-      },
-      {
         "@type": "LocalBusiness",
         "name": "Space Capture",
         "image": "https://spacecapture.ai/images/logo.jpg",

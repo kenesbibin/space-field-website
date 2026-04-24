@@ -5,9 +5,27 @@ import { ComparisonTable } from '@/components/seo/ComparisonTable';
 import { FaqSection } from '@/components/seo/FaqSection';
 
 export const metadata: Metadata = {
-  title: 'AI Defect Detection for Construction | Automated QA/QC',
-  description: 'Leverage computer vision to spot construction defects automatically. Our AI Defect Detection software reduces risk and improves quality control efficiency.',
-  keywords: ['ai defect detection', 'automated defect recognition', 'construction computer vision', 'automated qw/qc', 'visual inspection ai'],
+  title: 'AI Defect Detection for Construction | Automated QA/QC — SpaceCapture',
+  description: 'Catch cracks, corrosion & safety hazards automatically. SpaceCapture\'s AI defect detection scans site photos with 94.5% accuracy — replacing manual punch walks. Free trial.',
+  keywords: [
+    'ai defect detection',
+    'ai defect detection construction',
+    'construction defect detection',
+    'construction defect detection software',
+    'automated defect detection',
+    'defect detection ai',
+    'ai construction defect detection',
+    'automated defect recognition',
+    'construction computer vision',
+    'automated qa/qc',
+    'visual inspection ai',
+    'construction quality control software',
+    'AI crack detection',
+    'construction punch list automation',
+  ],
+  alternates: {
+    canonical: '/ai-defect-detection',
+  },
 };
 
 export default function Page() {
@@ -104,6 +122,22 @@ export default function Page() {
       </div>
 
       <FaqSection items={faqs} />
+
+      {/* Server-rendered FAQ schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(f => ({
+              "@type": "Question",
+              "name": f.question,
+              "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+            }))
+          })
+        }}
+      />
     </SeoLandingPage>
   );
 }

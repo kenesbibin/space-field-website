@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: 'AI Defect Detection in Construction: How It Works | SpaceCapture',
   description: 'Discover how AI Defect Detection revolutionizes construction quality control. Automated analysis reduces rework and ensures safety compliance.',
   keywords: ['AI Defect Detection', 'Construction AI', 'Quality Control Software', 'Automated Inspection'],
+  alternates: {
+    canonical: '/ai-defect-detection',
+  },
 };
 
 export default function AiDefectDetectionPage() {

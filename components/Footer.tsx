@@ -107,34 +107,71 @@ export default function Footer() {
           </div>
 
           {/* Column 4: Resources & Support */}
-          <div>
-            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Resources & Support</h3>
-            <ul className="space-y-4">
-              <FooterLink href="/about-us">About Us</FooterLink>
-              <FooterLink href="/trust">Trust Center</FooterLink>
-              <FooterLink href="/pricing">Pricing</FooterLink>
-              <FooterLink href="/faq">Help & FAQ</FooterLink>
-              <FooterLink href="/sample-inspection-reports">Sample Inspection Reports</FooterLink>
-              <FooterLink href="/blog/reduce-rework-ai-case-study">Case Study: Reduce Rework</FooterLink>
-              <FooterLink href="/compare/raken">Compare vs Raken</FooterLink>
-              <FooterLink href="/compare/planradar">Compare vs PlanRadar</FooterLink>
-              <FooterLink href="/alternatives/fieldwire">Fieldwire Alternative</FooterLink>
-              <FooterLink href="/sitemaps">Sitemap</FooterLink>
-              <FooterLink href="/tools/construction-cost-calculator">Construction Cost Calculator</FooterLink>
-              <FooterLink href="/tools/asphalt-calculator">Asphalt Calculator</FooterLink>
-              <FooterLink href="/tools/labor-cost-calculator">Labor Cost Calculator</FooterLink>
-              <FooterLink href="/tools/concrete-calculator">Concrete Calculator</FooterLink>
-              <FooterLink href="/tools/paint-calculator">Paint Calculator</FooterLink>
-              <FooterLink href="/tools/free-online-cad-viewer">Free Online CAD Viewer</FooterLink>
-              <FooterLink href="/app-download" className="text-blue-400 font-bold">Free Field App</FooterLink>
-              <FooterLink href="/request-a-demo" className="text-blue-400 font-bold">Request a Demo</FooterLink>
-              <FooterLink href="/blogs" className="text-purple-400 font-bold flex items-center gap-2">
-                Blogs <ArrowRight className="w-3 h-3" />
-              </FooterLink>
-              <FooterLink href="/playstore-app-download" className="text-purple-400 font-bold flex items-center gap-2">
-                Play Store App <ArrowRight className="w-3 h-3" />
-              </FooterLink>
-            </ul>
+          <div className="space-y-10">
+            <div>
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Company</h3>
+              <ul className="space-y-4">
+                <FooterLink href="/about-us">About Us</FooterLink>
+                <FooterLink href="/trust">Trust Center</FooterLink>
+                <FooterLink href="/pricing">Pricing</FooterLink>
+                <FooterLink href="/customers">Customers</FooterLink>
+                <FooterLink href="/faq">Help & FAQ</FooterLink>
+                <FooterLink href="/request-a-demo" className="text-blue-400 font-bold">Request a Demo</FooterLink>
+                <FooterLink href="/app-download" className="text-blue-400 font-bold">Free Field App</FooterLink>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Blog</h3>
+              <ul className="space-y-4">
+                <FooterLink href="/blog">All Articles</FooterLink>
+                <FooterLink href="/blog/end-of-manual-punch-lists">AI Punch Lists Guide</FooterLink>
+                <FooterLink href="/blog/predictive-maintenance">Predictive Maintenance</FooterLink>
+                <FooterLink href="/blog/drone-defect-detection">Drone Defect Detection</FooterLink>
+                <FooterLink href="/blog/ai-vs-manual-inspections">AI vs Manual Inspections</FooterLink>
+                <FooterLink href="/blog/geofencing-construction-sites">Geofencing Guide</FooterLink>
+                <FooterLink href="/blog/remote-site-monitoring-guide">Remote Monitoring Guide</FooterLink>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Compare</h3>
+              <ul className="space-y-4">
+                <FooterLink href="/compare/raken">vs Raken</FooterLink>
+                <FooterLink href="/compare/planradar">vs PlanRadar</FooterLink>
+                <FooterLink href="/compare/openspace">vs OpenSpace</FooterLink>
+                <FooterLink href="/compare/safety-culture">vs SafetyCulture</FooterLink>
+                <FooterLink href="/alternatives/procore">Procore Alternative</FooterLink>
+                <FooterLink href="/alternatives/gocanvas">GoCanvas Alternative</FooterLink>
+                <FooterLink href="/alternatives/safetyculture">SafetyCulture Alternative</FooterLink>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Resources</h3>
+              <ul className="space-y-4">
+                <FooterLink href="/resources">Resource Hub</FooterLink>
+                <FooterLink href="/resources/templates">Templates</FooterLink>
+                <FooterLink href="/resources/iso-9001-guide">ISO 9001 Guide</FooterLink>
+                <FooterLink href="/resources/case-study-reactive-to-predictive">Case Study</FooterLink>
+                <FooterLink href="/sample-inspection-reports">Sample Reports</FooterLink>
+                <FooterLink href="/glossary">Glossary</FooterLink>
+                <FooterLink href="/technology/computer-vision">Computer Vision</FooterLink>
+                <FooterLink href="/sitemaps">Sitemap</FooterLink>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Free Tools</h3>
+              <ul className="space-y-4">
+                <FooterLink href="/tools">All Tools</FooterLink>
+                <FooterLink href="/tools/construction-cost-calculator">Cost Calculator</FooterLink>
+                <FooterLink href="/tools/concrete-calculator">Concrete Calculator</FooterLink>
+                <FooterLink href="/tools/asphalt-calculator">Asphalt Calculator</FooterLink>
+                <FooterLink href="/tools/labor-cost-calculator">Labor Cost Calculator</FooterLink>
+                <FooterLink href="/tools/paint-calculator">Paint Calculator</FooterLink>
+                <FooterLink href="/tools/free-online-cad-viewer">Free CAD Viewer</FooterLink>
+                <FooterLink href="/playstore-app-download" className="text-purple-400 font-bold flex items-center gap-2">
+                  Play Store App <ArrowRight className="w-3 h-3" />
+                </FooterLink>
+              </ul>
+            </div>
           </div>
 
         </div>

@@ -1,4 +1,5 @@
 export const getFaqSchema = (items: { question: string; answer: string }[]) => ({
+  "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: items.map((item) => ({
     "@type": "Question",

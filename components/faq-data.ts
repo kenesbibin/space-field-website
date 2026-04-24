@@ -7,49 +7,49 @@ export interface FaqItem {
 }
 
 export const faqData: FaqItem[] = [
-  // --- GENERAL ---
+  // --- TOP 8 (shown on homepage + get FAQ schema) — optimized for search queries ---
   {
     category: 'General',
-    question: "What makes Space Capture different from Matterport or HoloBuilder?",
-    answer: "While Matterport focuses on virtual tours for real estate, Space Capture is built specifically for construction engineering. We prioritize 'Engineering-Grade' accuracy (2mm), offline capabilities, and automated AI analysis for hazards and defects, rather than just visual walkthroughs."
+    question: "What is construction field inspection software?",
+    answer: "Construction field inspection software is a mobile and web platform that digitizes site inspections, automates daily reporting, and tracks defects with AI. SpaceCapture replaces paper forms and spreadsheets with real-time photo documentation, GPS-tagged punch lists, and automated compliance checklists — all synced between field crews and the office."
+  },
+  {
+    category: 'AI Intelligence',
+    question: "How does AI defect detection work in construction?",
+    answer: "SpaceCapture's AI uses computer vision models trained on over 5 million construction images to automatically scan site photos for defects like cracks (as thin as 0.3mm), corrosion, missing fixtures, and safety hazards. It quantifies each issue with measurements, severity ratings, and GPS-pinned locations — then generates punch items instantly."
+  },
+  {
+    category: 'Field Tasks',
+    question: "Does SpaceCapture work offline on construction sites?",
+    answer: "Yes. SpaceCapture uses a proprietary 'Delta-Sync' protocol for full offline functionality. Field crews can capture thousands of photos, create tasks, record voice notes, and complete inspections with zero internet connection. All data syncs automatically when connectivity is restored."
   },
   {
     category: 'General',
-    question: "Is Space Capture a mobile app or a web platform?",
-    answer: "It is both. Our mobile app (iOS/Android) handles high-speed field capture, LiDAR scanning, and offline data collection. The web platform is for project management, detailed 3D analysis, and generating reports."
+    question: "Is SpaceCapture free to use?",
+    answer: "Yes, SpaceCapture offers a free Pilot Program that lets you capture up to 5,000 sq. ft. with full access to AI detection, daily reporting, and task management. No credit card required. Paid plans start for teams needing unlimited projects and advanced analytics."
   },
   {
     category: 'General',
-    question: "Do I need special hardware to use Space Capture?",
-    answer: "No. You can start with just a standard smartphone. However, for Survey-Grade accuracy, we support integration with LiDAR scanners (Leica, Faro), 360° cameras (Insta360, Ricoh), and drones."
+    question: "How is SpaceCapture different from Procore or PlanGrid?",
+    answer: "While Procore and PlanGrid focus on office-side project management, SpaceCapture is purpose-built for field operations. Key differences include: AI-powered defect detection (not available in Procore), full offline mode, engineering-grade 2mm accuracy, automated safety compliance, and native 2-way sync with Procore and Autodesk Build."
   },
   {
-    category: 'General',
-    question: "Can I try Space Capture for free?",
-    answer: "Yes, we offer a 'Pilot Program' tier that allows you to capture up to 5,000 sq. ft. completely free, including access to our AI detection engine."
+    category: 'AI Intelligence',
+    question: "Can AI replace manual punch list inspections?",
+    answer: "AI augments and dramatically accelerates punch list inspections rather than fully replacing human judgment. SpaceCapture's AI auto-generates punch items with annotated photos, severity ratings, and trade assignments — reducing walkthrough time by 60-80% and closeout duration by 50-70%. Human inspectors review AI flags for final sign-off."
   },
   {
-    category: 'General',
-    question: "What industries do you support?",
-    answer: "We specialize in Commercial Construction, Industrial Facilities, Oil & Gas Inspection, and Civil Infrastructure maintenance."
+    category: 'Security & Compliance',
+    question: "Is construction data secure on SpaceCapture?",
+    answer: "Yes. SpaceCapture uses AES-256 encryption for data at rest and TLS 1.3 for data in transit. We are SOC 2 Type II certified, ISO 27001 compliant, and GDPR ready. Data is hosted on AWS GovCloud (US), AWS Frankfurt (EU), or AWS Sydney (APAC) based on your region. On-premise deployment is available for defense and critical infrastructure clients."
+  },
+  {
+    category: 'Field Tasks',
+    question: "What reports can SpaceCapture generate automatically?",
+    answer: "SpaceCapture auto-generates branded daily construction reports, safety inspection reports, punch list summaries, defect severity reports, and progress tracking dashboards. Reports include annotated photos, GPS maps, timestamps, and digital signatures — ready for clients, inspectors, or regulatory submissions in one click."
   },
 
-  // --- AI INTELLIGENCE ---
-  {
-    category: 'AI Intelligence',
-    question: "How accurate is the AI crack detection?",
-    answer: "Our AI model is trained on over 5 million construction images. It can detect hairline fractures as thin as 0.3mm with 94.5% precision, significantly higher than human visual inspection in low-light conditions."
-  },
-  {
-    category: 'AI Intelligence',
-    question: "Can the AI identify safety hazards automatically?",
-    answer: "Yes. The 'Safety Sentry' module automatically flags OSHA violations such as missing PPE (hard hats, vests), unguarded floor openings, and exposed wiring in real-time."
-  },
-  {
-    category: 'AI Intelligence',
-    question: "Does the AI count installed materials?",
-    answer: "Absolutely. Our 'Material Takeoff' bot counts visible outlets, vents, pipes, and drywall sheets, upgrading your progress tracking from 'gut feeling' to quantitative data."
-  },
+  // --- REMAINING QUESTIONS (shown on /faq full page) ---
   {
     category: 'AI Intelligence',
     question: "Can I teach the AI to recognize custom objects?",

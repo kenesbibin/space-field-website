@@ -16,14 +16,16 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   metadataBase: new URL("https://spacecapture.ai"),
   title: {
-    default: "Space Capture - Construction Field Inspection App & Site Audit Software",
+    default: "SpaceCapture — AI Construction Monitoring & Field Inspection Software",
     template: "%s | SpaceCapture"
   },
-  description: "The #1 Field Management App for Construction Teams. Streamline inspections, automate AI defect detection, and generate instant daily reports.",
+  description: "AI-powered construction field management software. Real-time site monitoring, automated defect detection, digital punch lists, and instant daily reports. Try free.",
   keywords: [
     "Field Management App", "Construction Teams", "AI Defect Detection", 
     "Daily Construction Reports", "Safety Inspection Software", "Punch List App",
-    "Site Audit Tool", "Construction Project Management"
+    "Site Audit Tool", "Construction Project Management",
+    "real-time construction monitoring", "construction site management",
+    "AI construction software", "field inspection app",
   ],
   authors: [{ name: "Space Capture Team" }],
   creator: "Space Capture",
@@ -81,6 +83,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Preconnect to critical third-party origins for faster resource loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+
+        {/* Preload hero video (LCP element on homepage) */}
+        <link rel="preload" href="/videos/app-demo-video.mp4" as="video" type="video/mp4" />
+
+        {/* DNS prefetch for non-critical origins */}
+        <link rel="dns-prefetch" href="https://upload.wikimedia.org" />
+        <link rel="dns-prefetch" href="https://play.google.com" />
+      </head>
       <body>
         <noscript>
           <iframe

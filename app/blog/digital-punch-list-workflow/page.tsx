@@ -6,8 +6,25 @@ import Link from 'next/link';
 import CallToAction from '@/components/CallToAction';
 
 export const metadata: Metadata = {
-  title: 'Mastering the Digital Punch List Workflow in Construction | SpaceCapture',
-  description: 'Discover how digital punch list tools and mobile workflows help contractors clear defects faster, reduce closeout delays, improve subcontractor accountability, and achieve zero-defect handover.',
+  title: 'Digital Punch List Workflow: Construction Closeout Guide (2026)',
+  description: 'Cut closeout from 10 weeks to 4 with digital punch lists. Step-by-step workflow for mobile-first defect capture, subcontractor accountability, and zero-defect handover.',
+  keywords: [
+    'digital punch list',
+    'digital punch list workflow',
+    'construction closeout',
+    'construction closeout checklist',
+    'construction closeout automation',
+    'punch list software',
+    'construction project turnover',
+    'zero defect handover',
+    'construction deficiency list',
+    'snag list app',
+    'punch list management',
+    'construction final walkthrough',
+  ],
+  alternates: {
+    canonical: '/blog/digital-punch-list-workflow',
+  },
 };
 
 export default function DigitalPunchListPage() {
@@ -189,12 +206,79 @@ export default function DigitalPunchListPage() {
             Ready to transform your closeout process? Explore our <Link href="/site-inspection-software" className="text-orange-600 hover:underline">Site Inspection Software features</Link> or schedule a demo to see the digital punch list workflow in action.
           </p>
 
+          {/* Internal Links */}
+          <div className="mt-12 pt-8 border-t border-slate-200">
+            <h3 className="text-lg font-bold text-slate-900 mb-4">Related Reading</h3>
+            <ul className="space-y-3">
+              <li><Link href="/blog/end-of-manual-punch-lists" className="text-blue-600 hover:underline font-medium">AI Punch Lists: Cut Closeout Time by 70%</Link></li>
+              <li><Link href="/ai-defect-detection" className="text-blue-600 hover:underline font-medium">AI Defect Detection for Construction</Link></li>
+              <li><Link href="/blog/subcontractor-accountability-tips" className="text-blue-600 hover:underline font-medium">Subcontractor Accountability Tips</Link></li>
+              <li><Link href="/real-time-construction-monitoring" className="text-blue-600 hover:underline font-medium">Real-Time Construction Monitoring</Link></li>
+            </ul>
+          </div>
+
         </div>
 
         <AuthorBio />
       </BlogPostLayout>
 
       <CallToAction />
+
+      {/* Article Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Digital Punch List Workflow: Construction Closeout Guide",
+            "description": "Step-by-step workflow for mobile-first digital punch lists that cut construction closeout from 10 weeks to 4.",
+            "author": { "@type": "Organization", "name": "SpaceCapture" },
+            "publisher": { "@type": "Organization", "name": "SpaceCapture", "logo": { "@type": "ImageObject", "url": "https://spacecapture.ai/images/logo.png" } },
+            "datePublished": "2025-01-15",
+            "dateModified": "2026-04-23",
+            "mainEntityOfPage": "https://spacecapture.ai/blog/digital-punch-list-workflow"
+          })
+        }}
+      />
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a construction closeout checklist?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A construction closeout checklist is a comprehensive list of tasks that must be completed before a project is formally handed over to the owner. It includes: final punch list resolution, as-built documentation, O&M manuals, warranty letters, lien waivers, certificate of occupancy, and final inspection sign-offs." }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does construction closeout typically take?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Traditional closeout takes 4-12 weeks on average. With digital punch list workflows and AI-powered defect detection, contractors report reducing this to 2-4 weeks — a 50-70% improvement." }
+              },
+              {
+                "@type": "Question",
+                "name": "What is a digital punch list?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A digital punch list replaces paper-based deficiency tracking with a mobile app that enables real-time defect capture with photos, GPS location, floor plan pins, automatic assignment to subcontractors, and cloud-based status tracking. It eliminates transcription errors and enables remote verification." }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between a punch list and a snag list?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Punch list (North America) and snag list (UK/Australia) are the same concept — a list of defects or incomplete items that must be resolved before project handover. The digital workflow is identical regardless of terminology." }
+              },
+              {
+                "@type": "Question",
+                "name": "How does AI help with construction closeout?",
+                "acceptedAnswer": { "@type": "Answer", "text": "AI accelerates closeout by automatically scanning site photos to detect defects (cracks, missing items, safety hazards), generating punch items with severity scores, assigning them to responsible trades, and tracking resolution progress — eliminating subjective manual walkthroughs." }
+              }
+            ]
+          })
+        }}
+      />
     </>
   );
 }

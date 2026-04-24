@@ -5,9 +5,12 @@ import { ComparisonTable } from '@/components/seo/ComparisonTable';
 import { FaqSection } from '@/components/seo/FaqSection';
 
 export const metadata: Metadata = {
-  title: 'Defect Detection AI | Automated Construction Quality Analysis',
-  description: 'Automate your defect detection process with AI. Identify construction issues faster and more accurately than manual inspections.',
+  title: 'Defect Detection AI | Automated Construction Quality Analysis — SpaceCapture',
+  description: 'Automate your defect detection process with AI. Identify construction issues faster and more accurately than manual inspections. Reduce rework costs by 30%.',
   keywords: ['defect detection ai', 'automated defect detection', 'ai quality control', 'construction ai', 'visual analysis'],
+  alternates: {
+    canonical: '/ai-defect-detection',
+  },
 };
 
 export default function Page() {

@@ -148,6 +148,9 @@ export default function HeroSection() {
                     muted
                     loop
                     playsInline
+                    preload="auto"
+                    // @ts-ignore — fetchPriority is a valid HTML attribute
+                    fetchPriority="high"
                     className="w-full h-full object-cover"
                   />
                 </div>

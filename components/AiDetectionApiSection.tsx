@@ -29,7 +29,8 @@ const AiDetectionApiSection = () => {
     "name": "AI Defect Detection Demo",
     "description": "Demonstration of SpaceCapture AI API analyzing construction site images for defects in real-time.",
     "thumbnailUrl": "https://spacecapture.ai/images/detection-thumb.jpg",
-    "uploadDate": "2024-01-01",
+    "uploadDate": "2024-01-01T08:00:00+00:00",
+    "duration": "PT1M30S",
     "contentUrl": "https://spacecapture.ai/images/detection.webm",
     "transcript": "This visual demonstration shows the SpaceCapture AI Detection Engine in action. The video displays a continuous stream of construction site imagery being analyzed in real-time. As frames appear, the AI immediately identifies and draws bounding boxes around various defects. First, a 'Structural Crack' is detected with 98.5% confidence and flagged as 'High Severity'. Next, 'Surface Corrosion' is identified on a metal beam. The interface highlights the metadata associated with each detection, including severity level, confidence score, and precise coordinates, demonstrating how the API transforms raw visual data into structured, actionable insights."
   };
