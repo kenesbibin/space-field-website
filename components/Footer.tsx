@@ -199,13 +199,35 @@ export default function Footer() {
 
           </div>
 
-          <div className="pt-8 border-t border-slate-800/50 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div
+            className="pt-8 border-t border-slate-800/50 flex flex-col md:flex-row items-center justify-between gap-4"
+            itemScope
+            itemType="https://schema.org/Organization"
+          >
             <p className="text-xs text-slate-600">
-              © 2026 SPACE CAPTURE. All rights reserved.
+              © 2026 <span itemProp="name">SPACE CAPTURE</span> by{' '}
+              <span itemProp="parentOrganization" itemScope itemType="https://schema.org/Organization">
+                <span itemProp="name">Space AI Inc.</span>
+              </span>
+              . All rights reserved.
             </p>
             <p className="text-[10px] text-slate-600">
-              PHONE: +1 (419) 820-1487
+              <span itemProp="telephone">PHONE: +1 (419) 820-1487</span>
+              {' · '}
+              <a
+                href="https://spacecapture.ai/sitemap.xml"
+                className="hover:text-slate-300 transition"
+              >
+                Sitemap
+              </a>
             </p>
+            <meta itemProp="url" content="https://spacecapture.ai" />
+            <meta itemProp="logo" content="https://spacecapture.ai/logo.png" />
+            <meta itemProp="email" content="contact@spacecapture.ai" />
+            <meta
+              itemProp="description"
+              content="SpaceCapture is the #1 AI-powered construction & field inspection software for inspections, defect detection, daily reports, and safety compliance."
+            />
           </div>
         </div>
 
