@@ -473,19 +473,16 @@ export default function Navbar() {
                   <Link
                     href="/"
                     className="flex items-center rounded-lg px-1 py-1 transition-colors hover:bg-white/5 cursor-pointer"
-                    aria-label="Space Field Home"
+                    aria-label="Space Capture Home"
                   >
                     <Image
-                      src="/images/icononly_transparent_nobuffer.png"
-                      alt="Space Field"
-                      width={24}
-                      height={24}
-                      className="h-6 w-6 object-contain"
+                      src="/images/space-capture-navbar.png"
+                      alt="Space Capture"
+                      width={106}
+                      height={80}
+                      priority
+                      className="h-14 w-auto rounded-sm object-contain sm:h-16"
                     />
-
-                    <span className="ml-0 text-3xl font-extrabold bg-gradient-to-r from-purple-700 via-purple-600 to-blue-600 bg-clip-text text-transparent leading-none">
-                      SPACE CAPTURE
-                    </span>
                   </Link>
                 </div>
 
