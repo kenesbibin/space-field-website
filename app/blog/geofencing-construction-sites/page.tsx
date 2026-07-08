@@ -8,6 +8,9 @@ import CallToAction from '@/components/CallToAction';
 export const metadata: Metadata = {
   title: 'Why Geofencing Is Crucial for Large Construction Job Sites | SpaceCapture',
   description: 'Explore how GPS geofencing eliminates time theft, enables real-time safety roll calls, automates accurate cost coding, and resolves payroll disputes on multi-acre construction projects.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/blog/geofencing-construction-sites',
+  },
 };
 
 export default function GeofencingPage() {

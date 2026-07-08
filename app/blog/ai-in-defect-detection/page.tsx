@@ -17,6 +17,9 @@ export const metadata: Metadata = {
         "offline AI inspection",
         "best field app experience",
     ],
+    alternates: {
+        canonical: 'https://spacecapture.ai/blog/ai-in-defect-detection',
+    },
 };
 
 export default function AiDefectDetectionBestUIPage() {
@@ -101,7 +104,7 @@ export default function AiDefectDetectionBestUIPage() {
                             experience your field teams will actually enjoy using.
                         </p>
                         <Link
-                            href="/contact"
+                            href="/request-a-demo"
                             className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 text-white font-semibold hover:bg-indigo-700 transition"
                         >
                             Request a Demo

@@ -6,6 +6,9 @@ import ComparisonTable from "@/components/ComparisonTable";
 export const metadata: Metadata = {
   title: "Fieldwire Alternative for Small Teams | SpaceCapture",
   description: "The best Fieldwire alternative for small construction teams. Simple pricing, zero learning curve, and powerful AI features without the enterprise bloat.",
+  alternates: {
+    canonical: 'https://spacecapture.ai/alternatives/fieldwire',
+  },
 };
 
 const FieldwirePage = () => {
@@ -51,7 +54,7 @@ const FieldwirePage = () => {
         <section className="relative pt-32 pb-20 overflow-hidden bg-slate-900 text-white">
             <div className="container mx-auto max-w-6xl px-4 relative z-10 text-center">
                 <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-sm font-semibold mb-6">
-                    Better Than Fieldwire for Small Teams
+                    Better Than Fieldwire for  Small Teams
                 </span>
                 <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
                     Big Tech Power<br />

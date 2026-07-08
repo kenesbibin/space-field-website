@@ -7,6 +7,9 @@ import Features from "@/components/Features";
 export const metadata: Metadata = {
   title: "HVAC Inspection Software | Digital Service Forms & Asset History",
   description: "The #1 HVAC Inspection Software. Track asset history, streamline service calls, and eliminate paper forms for heating and cooling systems.",
+  alternates: {
+    canonical: "https://spacecapture.ai/hvac-inspection-software",
+  },
 };
 
 const HvacPage = () => {

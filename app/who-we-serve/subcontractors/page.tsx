@@ -6,6 +6,9 @@ import { PERSONAS_DATA } from '@/lib/seo-data';
 export const metadata: Metadata = {
   title: PERSONAS_DATA['subcontractors'].title,
   description: PERSONAS_DATA['subcontractors'].description,
+  alternates: {
+    canonical: 'https://spacecapture.ai/who-we-serve/subcontractors',
+  },
 };
 
 export default function SubcontractorsPage() {

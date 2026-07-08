@@ -8,6 +8,9 @@ import CallToAction from '@/components/CallToAction';
 export const metadata: Metadata = {
   title: 'AI vs. Manual Inspections in Construction: A Detailed Cost Comparison | SpaceCapture',
   description: 'Compare the true costs of manual quality inspections versus AI-powered automated defect detection. Discover labor savings, reduced rework, higher accuracy, and real ROI numbers for construction teams.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/blog/ai-vs-manual-inspections',
+  },
 };
 
 export default function AiVsManualPage() {

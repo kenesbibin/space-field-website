@@ -8,6 +8,9 @@ import { BrainCircuit, Eye, ShieldCheck, Activity, BarChart3, AlertTriangle, Fil
 export const metadata: Metadata = {
   title: 'AI in Construction: The Complete Guide | SpaceCapture',
   description: 'Explore how Artificial Intelligence, Computer Vision, and Machine Learning are transforming construction field operations, safety, and quality control.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/blog/ai-in-construction',
+  },
 };
 
 const ARTICLES = [

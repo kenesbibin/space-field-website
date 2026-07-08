@@ -7,6 +7,9 @@ import Features from "@/components/Features";
 export const metadata: Metadata = {
   title: "Solar Panel Inspection AI | Thermal Defect Detection & Drone Audits",
   description: "Automate solar farm inspections with AI. Detect thermal anomalies, track panel degradation, and integrate drone data for utility-scale solar audits.",
+  alternates: {
+    canonical: 'https://spacecapture.ai/solar-panel-inspection-ai',
+  },
 };
 
 const SolarPage = () => {

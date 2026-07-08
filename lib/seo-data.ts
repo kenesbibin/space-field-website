@@ -292,6 +292,40 @@ export const SOLUTIONS_DATA: Record<string, SolutionData> = {
       { question: 'Can I import existing PDFs?', answer: 'Yes, you can upload existing PDF forms and overlay digital fields to digitize them quickly.' },
       { question: 'Is there a limit on submissions?', answer: 'We offer unlimited submissions on our Pro and Enterprise plans.' }
     ]
+  },
+  'access-control': {
+    slug: 'access-control',
+    title: 'Role-Based Access Control (RBAC) for Field Teams | SpaceCapture',
+    description: 'Secure your field data with granular permissions. Assign tasks, manage user roles, and control access to specific projects or forms.',
+    hero: {
+      badge: 'SECURITY FIRST',
+      title: 'Enterprise-Grade Access Control',
+      subtitle: 'Define exactly who can see, edit, or delete data. Create custom roles to ensure data integrity and compliance across your organization.',
+      ctaPrimary: 'Secure Your Data',
+      ctaSecondary: 'View Features'
+    },
+    features: {
+      title: 'Built for Security & Control',
+      items: [
+        { title: 'Role Management', desc: 'Create custom roles like Admin, Field Inspector, and Client Viewer with tailored permissions.', icon: 'ShieldAlert' },
+        { title: 'Granular Permissions', desc: 'Control access at the project, form, and field level. Restrict actions to view, edit, or delete.', icon: 'Brain' },
+        { title: 'Time-Bound Access', desc: 'Grant temporary access with automatic expiration. Perfect for contractors and guest users.', icon: 'Zap' }
+      ]
+    },
+    howItWorks: {
+      title: 'Set Up Access Control in Minutes',
+      steps: [
+        { step: 1, title: 'Define Roles', desc: 'Create roles based on your team structure — Admin, Field User, Client Viewer, or custom.' },
+        { step: 2, title: 'Assign Permissions', desc: 'Set granular permissions per project, form type, or data field.' },
+        { step: 3, title: 'Audit & Monitor', desc: 'Track who accessed what and when with detailed audit logs.' }
+      ]
+    },
+    faq: [
+      { question: 'Can I create custom roles?', answer: 'Yes, you can create unlimited custom roles with specific permissions tailored to your team structure and workflows.' },
+      { question: 'Is access control available offline?', answer: 'Yes, all permissions are enforced offline on the mobile app and sync when connectivity is restored.' },
+      { question: 'Can I set time-limited access?', answer: 'Yes, you can grant temporary access that expires automatically — perfect for contractors, auditors, and guest users.' },
+      { question: 'Does it support multi-project access?', answer: 'Yes, users can be assigned to multiple projects with different permission levels for each.' }
+    ]
   }
 };
 

@@ -6,6 +6,9 @@ import CallToAction from '@/components/CallToAction';
 export const metadata: Metadata = {
   title: 'How Apex Construction Reduced Inspection Time by 40% with AI Predictive Maintenance | SpaceCapture Case Study',
   description: 'Learn how Apex Construction cut equipment inspection time by 40%, achieved 98% fleet uptime, and saved $210,000 annually by implementing SpaceCapture’s AI-powered predictive maintenance and IoT telemetry solution for heavy construction equipment.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/blog/predictive-maintenance',
+  },
 };
 
 export default function ArticlePage() {

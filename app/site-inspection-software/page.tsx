@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Site Inspection Software | Automated Construction Inspections',
   description: 'Streamline your construction site inspections with our AI-powered automated software. Detect defects instantly and generate reports in real-time.',
   keywords: ['site inspection software', 'construction inspection', 'digital checklist', 'field inspection app', 'safety audit software'],
+  alternates: {
+    canonical: 'https://spacecapture.ai/site-inspection-software',
+  },
 };
 
 export default function Page() {

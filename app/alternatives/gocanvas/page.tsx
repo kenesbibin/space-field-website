@@ -8,6 +8,9 @@ import CallToAction from "@/components/CallToAction";
 export const metadata: Metadata = {
   title: "GoCanvas Alternative | SpaceCapture AI",
   description: "Eliminate form fatigue. SpaceCapture replaces manual typing with AI visual capture. The best GoCanvas alternative for speed and accuracy.",
+  alternates: {
+    canonical: 'https://spacecapture.ai/alternatives/gocanvas',
+  },
 };
 
 const GoCanvasPage = () => {

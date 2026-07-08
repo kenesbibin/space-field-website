@@ -9,6 +9,9 @@ import { div } from "framer-motion/client";
 export const metadata: Metadata = {
   title: "Hallucination-Free AI | SpaceCapture Trust Center",
   description: "How we prevent Generative AI from making things up. Our RAG (Retrieval Augmented Generation) architecture grounded in your manuals.",
+  alternates: {
+    canonical: 'https://spacecapture.ai/trust/hallucination-free',
+  },
 };
 
 const TrustPage = () => {

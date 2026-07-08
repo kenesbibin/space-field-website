@@ -6,6 +6,9 @@ import CallToAction from '@/components/CallToAction';
 export const metadata: Metadata = {
   title: 'Real-Time Progress Tracking vs. Traditional Daily Logs | SpaceCapture',
   description: 'Discover why manual daily logs are outdated and how AI-powered reality capture delivers objective, quantifiable progress data—improving schedule accuracy, payment verification, and stakeholder trust.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/blog/reduce-rework-computer-vision',
+  },
 };
 
 export default function ArticlePage() {

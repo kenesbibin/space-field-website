@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Free Paint Calculator | Room Painting Estimator',
   description: 'Calculate how many gallons of paint and primer you need for your room. accurate paint estimator for walls and ceilings.',
   keywords: ['paint calculator', 'room painting estimator', 'interior painting calculator', 'how much paint do I need', 'wall paint calculator'],
+  alternates: {
+    canonical: 'https://spacecapture.ai/tools/paint-calculator',
+  },
 };
 
 export default function PaintCalculatorPage() {

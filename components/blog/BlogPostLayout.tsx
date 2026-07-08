@@ -1,6 +1,7 @@
 import React from 'react';
 
 import CallToAction from '@/components/CallToAction';
+import { RelatedPosts } from '@/components/blog/RelatedPosts';
 import { ArrowLeft, Clock, Calendar, User } from 'lucide-react';
 import Link from 'next/link';
 
@@ -80,6 +81,9 @@ export const BlogPostLayout = ({
                         Get a Free Demo
                     </a>
                 </div>
+
+                {/* Related Articles */}
+                <RelatedPosts />
 
              </div>
         </div>

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Request a Demo - SPACE CAPTURE',
   description: 'Transform field data into actionable intelligence. Real-time dashboards, custom PDF reporting, and automated analytics for smarter decisions.',
   alternates: {
-    canonical: '/request-a-demo',
+    canonical: 'https://spacecapture.ai/request-a-demo',
   },
 };
 

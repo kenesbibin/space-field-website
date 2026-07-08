@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Real-Time Construction Monitoring & Site Management | SpaceCapture',
   description: 'Gain instant visibility into your jobsites with Real-Time Construction Monitoring. Track progress live, automate daily reports, and manage sites remotely.',
   keywords: ['Real Time Construction Monitoring', 'Construction Site Management', 'Remote Site Monitoring', 'Construction Progress Tracking'],
+  alternates: {
+    canonical: 'https://spacecapture.ai/real-time-construction-monitoring',
+  },
 };
 
 export default function RealTimeMonitoringPage() {

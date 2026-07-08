@@ -4,11 +4,24 @@ import { HelpCircle, ChevronRight, Search } from 'lucide-react';
 import Link from 'next/link';
 import CallToAction from '@/components/CallToAction';
 import { faqData, FaqCategory } from '@/components/faq-data';
+import StructuredData from '@/components/seo/StructuredData';
+import { getFaqSchema } from '@/components/seo/FaqSchema';
+import { buildBreadcrumbsFromPath, getBreadcrumbListSchema } from '@/components/seo/BreadcrumbListSchema';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions | SpaceCapture',
   description: 'Find answers to common questions about SpaceCapture, from pricing and support to technical integrations and security.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/faq',
+  },
 };
+
+const faqSchema = getFaqSchema(
+  faqData.map((q) => ({ question: q.question, answer: q.answer }))
+);
+const breadcrumbSchema = getBreadcrumbListSchema(
+  buildBreadcrumbsFromPath('/faq')
+);
 
 // Group FAQs by category
 const groupedFaqs = faqData.reduce((acc, item) => {
@@ -96,21 +109,12 @@ export default function FAQPage() {
         </section>
 
         <CallToAction />
-        
-        {/* Schema for Voice Search */}
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqData.map(q => ({
-                        "@type": "Question",
-                        "name": q.question,
-                        "acceptedAnswer": { "@type": "Answer", "text": q.answer }
-                    }))
-                })
-            }}
+
+        <StructuredData
+          data={{
+            "@context": "https://schema.org",
+            "@graph": [faqSchema, breadcrumbSchema],
+          }}
         />
       </main>
     </div>

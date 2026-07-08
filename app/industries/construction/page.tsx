@@ -13,6 +13,9 @@ import { INDUSTRIES_DATA } from "@/lib/seo-data";
 export const metadata: Metadata = {
   title: "Automated Construction Punch Lists | SpaceCapture",
   description: "Close out projects faster. Turn site walks into automated punch lists using video capture. Reduce rework and subcontractor disputes.",
+  alternates: {
+    canonical: 'https://spacecapture.ai/industries/construction',
+  },
 };
 
 const ConstructionPage = () => {

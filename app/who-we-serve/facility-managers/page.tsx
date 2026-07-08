@@ -6,6 +6,9 @@ import { PERSONAS_DATA } from '@/lib/seo-data';
 export const metadata: Metadata = {
   title: PERSONAS_DATA['facility-managers'].title,
   description: PERSONAS_DATA['facility-managers'].description,
+  alternates: {
+    canonical: 'https://spacecapture.ai/who-we-serve/facility-managers',
+  },
 };
 
 export default function FacilityManagersPage() {
