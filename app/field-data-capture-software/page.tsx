@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Field Data Capture Software | Accurate Construction Data',
   description: 'Capture accurate field data with ease. Our mobile software simplifies forms, photos, and daily logs for construction teams.',
   keywords: ['field data capture software', 'mobile forms', 'data collection app', 'construction data', 'field reporting'],
+  alternates: {
+    canonical: 'https://spacecapture.ai/field-data-capture-software',
+  },
 };
 
 export default function Page() {

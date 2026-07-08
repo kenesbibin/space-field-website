@@ -6,6 +6,9 @@ import CallToAction from '@/components/CallToAction';
 export const metadata: Metadata = {
   title: 'How Computer Vision Reduces Jobsite Risk and Improves Safety | SpaceCapture',
   description: 'Discover how AI-powered computer vision transforms construction safety by monitoring PPE compliance, detecting hazards, preventing zone incursions, and turning near-misses into proactive prevention.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/blog/computer-vision-risk',
+  },
 };
 
 export default function ArticlePage() {

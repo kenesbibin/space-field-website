@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const slides = [
   {
     id: 1,
-    image: "/images/InspectionSoftware.webp", 
+    image: "/images/InspectionSoftware-no-logo.webp", 
     title: "Field Operations Hub",
     location: "Construction Site A",
     description: "Real-time monitoring",

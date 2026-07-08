@@ -7,6 +7,9 @@ import Features from "@/components/Features";
 export const metadata: Metadata = {
   title: "Convert Excel Checklists to Mobile App | Paperless Construction Forms",
   description: "Transform paper forms and Excel sheets into a digital daily construction report app. The best paperless safety audit software for field teams.",
+  alternates: {
+    canonical: "https://spacecapture.ai/digitize-paper-forms",
+  },
 };
 
 const DigitizePaperPage = () => {

@@ -2,6 +2,8 @@ import React from 'react';
 import type { Metadata } from 'next';
 import CallToActionSection from '@/components/CallToAction';
 import AccessControlSection from '@/components/AcessControlSection';
+import { SolutionDetails } from '@/components/templates/SolutionDetails';
+import { SOLUTIONS_DATA } from '@/lib/seo-data';
 
 
 // SEO Metadata
@@ -26,6 +28,7 @@ export default function AccessControlPage() {
   return (
     <main className="w-full overflow-x-hidden">
         <AccessControlSection/>
+      <SolutionDetails data={SOLUTIONS_DATA['access-control']} />
       <CallToActionSection/>
     </main>
   );

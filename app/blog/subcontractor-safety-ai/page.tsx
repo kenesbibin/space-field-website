@@ -6,6 +6,9 @@ import CallToAction from '@/components/CallToAction';
 export const metadata: Metadata = {
   title: 'AI-Powered Safety Compliance for Subcontractors in Construction | SpaceCapture',
   description: 'Learn how AI automates PPE verification, certification checks, and daily safety audits to ensure consistent compliance across all trades—protecting workers, reducing liability, and building a true safety culture.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/blog/subcontractor-safety-ai',
+  },
 };
 
 export default function ArticlePage() {

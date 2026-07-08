@@ -90,6 +90,16 @@ const nextConfig: NextConfig = {
         destination: '/property-inspection-software',
         permanent: true,
       },
+      {
+        source: '/knowledge-base',
+        destination: '/glossary',
+        permanent: true,
+      },
+      {
+        source: '/knowledge-base/:slug',
+        destination: '/glossary/:slug',
+        permanent: true,
+      },
     ];
   },
 

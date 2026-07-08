@@ -25,7 +25,7 @@ export default function CaseStudyPage() {
           </p>
            <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
-              href="/demo"
+              href="/request-a-demo"
               className="rounded-md bg-blue-600 px-8 py-4 text-lg font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all border border-blue-500"
             >
               See the Tech in Action <ArrowRight className="inline-block ml-2 h-5 w-5"/>

@@ -224,13 +224,6 @@ export const metadata: Metadata = {
   publisher: "SpaceCapture",
   applicationName: "SpaceCapture",
   category: "Construction & Field Inspection Software",
-  alternates: {
-    canonical: "/",
-    languages: {
-      "x-default": "https://spacecapture.ai/",
-      "en": "https://spacecapture.ai/",
-    },
-  },
   openGraph: {
     type: "website",
     title: "SpaceCapture — #1 AI Construction & Field Inspection Software",

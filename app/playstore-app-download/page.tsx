@@ -82,6 +82,9 @@ export const metadata: Metadata = {
       "Download SpaceCapture from the Google Play Store. Built for offline field operations.",
     images: ["/images/playstore-mockup.png"],
   },
+  alternates: {
+    canonical: 'https://spacecapture.ai/playstore-app-download',
+  },
 };
 
 export default function AppDownloadPage() {

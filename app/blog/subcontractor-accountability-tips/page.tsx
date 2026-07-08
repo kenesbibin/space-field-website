@@ -8,6 +8,9 @@ import CallToAction from '@/components/CallToAction';
 export const metadata: Metadata = {
   title: 'Improving Subcontractor Accountability with Digital Tools | SpaceCapture',
   description: 'Discover how digital daily logs, photo documentation, mandatory reporting, and clear change order workflows create transparency, reduce disputes, and keep construction projects on schedule.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/blog/subcontractor-accountability-tips',
+  },
 };
 
 export default function SubAccountabilityPage() {

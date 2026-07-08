@@ -17,6 +17,9 @@ export const metadata: Metadata = {
         "AI defect detection software",
         "offline field inspection app",
     ],
+    alternates: {
+        canonical: 'https://spacecapture.ai/blog/spacecapture-vs-plangrid',
+    },
 };
 
 export default function SpaceCaptureVsPlanGrid() {

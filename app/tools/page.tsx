@@ -26,6 +26,9 @@ export const metadata: Metadata = {
         'field engineering tools',
         'automated construction workflows'
     ],
+    alternates: {
+        canonical: 'https://spacecapture.ai/tools',
+    },
 };
 
 export default function ToolsPage() {

@@ -1,95 +1,91 @@
 import type { MetadataRoute } from "next";
-import fs from "node:fs";
-import path from "node:path";
+import fs from "fs";
+import path from "path";
+import { ALTERNATIVES_DATA } from "@/lib/alternatives-data";
+import { GLOSSARY_TERMS } from "@/lib/glossary-data";
 import { LOCATION_DATA } from "@/lib/location-data";
 
 const BASE_URL = "https://spacecapture.ai";
+
 const APP_DIR = path.join(process.cwd(), "app");
 
-// Route groups, private folders, and dynamic-only folders that should not
-// appear in the sitemap.
-const EXCLUDED_SEGMENTS = new Set([
-  "_", // Next.js private folders
-  "api", // API routes
-  "lab", // Internal R&D lab (noindex)
-  "sitemaps", // Sitemap index page (link only)
-]);
+// Segments that should never appear in the public sitemap.
+const EXCLUDED_SEGMENTS = ["lab", "_not-found", "_global-error", "api"];
 
-// Pages that should not be indexed.
-const NOINDEX_PATHS = new Set([
-  "/request-a-demo",
-  "/lab",
-  "/sitemaps",
-  "/tools",
-  "/tools/asphalt-calculator",
-  "/tools/concrete-calculator",
-  "/tools/labor-cost-calculator",
-  "/tools/paint-calculator",
-]);
+// True dynamic route folders in the app directory. These are expanded
+// manually from their data sources so the sitemap lists real URLs only.
+const DYNAMIC_SLUG_FOLDER = /\[[^\]]+\]/;
 
 /**
- * Walk the `app/` directory and return every static path that resolves to a
- * `page.tsx`. Dynamic segments (e.g. `[slug]`) are emitted as templates and
- * expanded below for known data sources.
+ * Walk the app directory and collect static routes from page.tsx files.
+ * Dynamic slug folders like [slug] are skipped here and expanded separately.
  */
-function collectStaticPages(dir: string, segments: string[] = []): string[] {
-  const results: string[] = [];
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
+function getStaticRoutes(): string[] {
+	const routes: string[] = [];
 
-  for (const entry of entries) {
-    if (EXCLUDED_SEGMENTS.has(entry.name)) continue;
+	function walk(dir: string, prefix: string = "") {
+		const entries = fs.readdirSync(dir, { withFileTypes: true });
 
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) {
-      results.push(
-        ...collectStaticPages(full, [...segments, entry.name])
-      );
-    } else if (entry.name === "page.tsx" || entry.name === "page.ts") {
-      // Skip route group prefixes like (group)
-      const url = "/" + segments
-        .filter((s) => !s.startsWith("("))
-        .join("/");
-      results.push(url === "" ? "/" : url);
-    }
-  }
+		for (const entry of entries) {
+			const segment = entry.name;
+			const fullPath = path.join(dir, segment);
 
-  return results;
+			// Skip route groups (e.g. (marketing)), private folders, and excluded segments.
+			if (segment.startsWith("(") || segment.startsWith("_") || EXCLUDED_SEGMENTS.includes(segment)) {
+				continue;
+			}
+
+			if (entry.isDirectory()) {
+				// Skip dynamic slug folders; they are expanded from data sources.
+				if (DYNAMIC_SLUG_FOLDER.test(segment)) {
+					continue;
+				}
+				walk(fullPath, path.join(prefix, segment));
+			} else if (entry.isFile() && segment === "page.tsx") {
+				const normalized = prefix.replace(/\\/g, "/");
+				routes.push(normalized === "" ? "/" : `/${normalized}`);
+			}
+		}
+	}
+
+	walk(APP_DIR);
+	return routes;
 }
 
-const staticPaths = collectStaticPages(APP_DIR);
+/**
+ * Expand known dynamic routes using their data sources. This matches the
+ * generateStaticParams() behavior of each [slug] route.
+ */
+function getDynamicRoutes(): string[] {
+	const routes: string[] = [];
 
-const dynamicPaths: string[] = [
-  ...Object.keys(LOCATION_DATA).map((slug) => `/locations/${slug}`),
-];
+	for (const slug of Object.keys(ALTERNATIVES_DATA)) {
+		routes.push(`/alternatives/${slug}`);
+	}
 
-const allPaths = Array.from(new Set([...staticPaths, ...dynamicPaths])).sort();
+	for (const term of GLOSSARY_TERMS) {
+		routes.push(`/glossary/${term.slug}`);
+	}
+
+	for (const slug of Object.keys(LOCATION_DATA)) {
+		routes.push(`/locations/${slug}`);
+	}
+
+	return routes;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+	const staticRoutes = getStaticRoutes();
+	const dynamicRoutes = getDynamicRoutes();
 
-  return allPaths.map((path) => ({
-    url: `${BASE_URL}${path === "/" ? "" : path}`,
-    lastModified: now,
-    changeFrequency: NOINDEX_PATHS.has(path)
-      ? undefined
-      : path === "/"
-        ? "weekly"
-        : path.startsWith("/blog") ||
-            path.startsWith("/glossary") ||
-            path.startsWith("/locations")
-          ? "monthly"
-          : "weekly",
-    priority: NOINDEX_PATHS.has(path)
-      ? undefined
-      : path === "/"
-        ? 1.0
-        : path.startsWith("/blog") || path.startsWith("/locations")
-          ? 0.6
-          : path.startsWith("/industries") ||
-              path.startsWith("/who-we-serve") ||
-              path.startsWith("/compare") ||
-              path.startsWith("/alternatives")
-            ? 0.8
-            : 0.7,
-  }));
+	const allRoutes = Array.from(new Set([...staticRoutes, ...dynamicRoutes]))
+		.filter((route) => !EXCLUDED_SEGMENTS.some((seg) => route === `/${seg}` || route.startsWith(`/${seg}/`)))
+		.sort();
+
+	const lastModified = new Date().toISOString();
+
+	return allRoutes.map((route) => ({
+		url: `${BASE_URL}${route}`,
+		lastModified,
+	}));
 }

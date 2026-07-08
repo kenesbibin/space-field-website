@@ -11,6 +11,9 @@ import { main } from "framer-motion/client";
 export const metadata: Metadata = {
   title: "Explosion-Proof Digital Inspection for Oil & Gas | SpaceCapture",
   description: "Deploy AI inspection software in Zone 1/Zone 2 environments. Automate ISO 4628 corrosion quantification and streamline asset integrity management.",
+  alternates: {
+    canonical: 'https://spacecapture.ai/industries/oil-and-gas',
+  },
 };
 
 const OilGasPage = () => {

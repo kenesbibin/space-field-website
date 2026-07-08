@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "construction defect detection app",
     "construction reporting software",
   ],
+  alternates: {
+    canonical: 'https://spacecapture.ai/compare/openspace',
+  },
 };
 
 export default function Page() {

@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     title: 'Free Concrete Calculator | Slab, Footing & Bag Estimator',
     description: 'Calculate concrete volume in cubic yards and estimate the number of 80lb or 60lb premix bags needed for your project.',
     keywords: ['concrete calculator', 'cubic yards calculator', 'concrete bag estimator', 'cement calculator', 'slab calculator', 'quikrete calculator'],
+    alternates: {
+        canonical: 'https://spacecapture.ai/tools/concrete-calculator',
+    },
 };
 
 export default function ConcreteCalculatorPage() {

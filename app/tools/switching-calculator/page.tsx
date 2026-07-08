@@ -8,6 +8,9 @@ import CallToAction from "@/components/CallToAction";
 export const metadata: Metadata = {
   title: "Switching Cost Calculator | SpaceCapture",
   description: "Calculate how much money you are wasting on manual data entry and static forms. See your potential ROI with SpaceCapture AI.",
+  alternates: {
+    canonical: 'https://spacecapture.ai/tools/switching-calculator',
+  },
 };
 
 const CalculatorPage = () => {

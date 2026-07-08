@@ -8,6 +8,9 @@ import CallToAction from '@/components/CallToAction';
 export const metadata: Metadata = {
   title: '5 Ways Automation Transforms Construction Dispatch and Field Management | SpaceCapture',
   description: 'Learn how AI-driven dispatching software eliminates manual scheduling, optimizes routes, reduces downtime, improves technician productivity, and cuts administrative overhead in construction operations.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/blog/field-service-automation-benefits',
+  },
 };
 
 export default function AutomationBenefitsPage() {

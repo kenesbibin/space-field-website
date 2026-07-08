@@ -3,124 +3,18 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import CallToAction from '@/components/CallToAction';
+import { BLOG_ARTICLES } from '@/lib/blog-data';
 import { ArrowRight, BookOpen, Calendar, User, Tag } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Field Operations Blog | SpaceCapture',
   description: 'Insights, guides, and industry news on construction AI, field inspections, and digital transformation.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/blog',
+  },
 };
 
-// Re-using articles data (centralized definition would be better in real app, but duplicating for speed as per current structure)
-const ARTICLES = [
-  {
-    slug: 'reduce-rework-ai-case-study',
-    title: 'How Vertex Builders Reduced Site Rework by 40% using AI Detection',
-    excerpt: 'See the Before & After. Discover how real-time AI monitoring transformed a chaotic worksite into a model of efficiency.',
-    category: 'Case Study',
-    date: 'Oct 20, 2024'
-  },
-  {
-    slug: 'computer-vision-risk',
-    title: 'AI Defect Detection Analysis Software',
-    excerpt: 'Automate risk identification. Our Inspection Field Software uses computer vision to spot hazards and defects instantly.',
-    category: 'Defect Analysis',
-    date: 'Oct 12, 2024'
-  },
-  {
-    slug: 'end-of-manual-punch-lists',
-    title: 'Automated Inspection Field Software',
-    excerpt: 'Replace clipboards with Mobile Field Software. AI auto-generates punch lists from site photos and assigns tasks.',
-    category: 'Inspection Software',
-    date: 'Oct 08, 2024'
-  },
-  {
-    slug: 'predictive-maintenance',
-    title: 'Predictive Maintenance Field Software',
-    excerpt: 'Prevent downtime with our Maintenance Field Module. AI parses telemetry to schedule field repairs automatically.',
-    category: 'Maintenance Module',
-    date: 'Sep 28, 2024'
-  },
-  {
-    slug: 'subcontractor-safety-ai',
-    title: 'Task Field Software for Safety Compliance',
-    excerpt: 'Manage team compliance. The Task Field Software verifies PPE and certifications for every subcontractor on site.',
-    category: 'Task Software',
-    date: 'Sep 02, 2024'
-  },
-  {
-    slug: 'real-time-progress-tracking',
-    title: 'Mobile Field Software for Progress Tracking',
-    excerpt: 'Track installation status from your phone. Our Mobile Field Software validates schedule progress against the model.',
-    category: 'Mobile App',
-    date: 'Aug 20, 2024'
-  },
-  {
-    slug: 'drone-defect-detection',
-    title: 'Drone Integration for Field Modules',
-    excerpt: 'Ingest aerial data directly into your Field Module. Automate facade and roof inspections with AI analysis.',
-    category: 'Drone Module',
-    date: 'Sep 15, 2024'
-  },
-  {
-    slug: 'bim-reality-comparison',
-    title: 'BIM Field Module: Reality Capture',
-    excerpt: 'Bring BIM to the field. Compare as-built to as-designed using our Reality Capture software features.',
-    category: 'BIM Module',
-    date: 'Aug 10, 2024'
-  },
-  {
-    slug: 'ai-insurance-claims',
-    title: 'Claims Documentation Field Software',
-    excerpt: 'Capture irrefutable evidence. Use the Field App to document incidents and speed up insurance claims.',
-    category: 'Documentation',
-    date: 'Jul 25, 2024'
-  },
-  {
-    slug: 'optimizing-material-usage',
-    title: 'Material Tracking Field Module',
-    excerpt: 'Control inventory on site. AI analyzes material usage patterns to optimize procurement and reduce waste.',
-    category: 'Material Module',
-    date: 'Jul 12, 2024'
-  },
-  {
-    slug: 'remote-inspections-360',
-    title: 'Remote Inspection Field Software',
-    excerpt: 'Inspect without travel. 360° capture capabilities integrated into the Field Inspection Software.',
-    category: 'Remote Inspection',
-    date: 'Jun 30, 2024'
-  },
-  {
-    slug: 'spacecapture-playstore-launch',
-    title: 'Space Capture App Launched on Google Play Store',
-    excerpt: 'Space Capture is now live on the Google Play Store. Discover how the mobile-first Field Module empowers teams with AI-powered site capture and defect detection.',
-    category: 'Product Launch',
-    date: 'Nov 05, 2024'
-  },
-  {
-    slug: 'best-ui-experience-spacecapture',
-    title: 'Designing the Best UI Experience for Field Inspection Apps',
-    excerpt: 'Learn how Space Capture delivers a fast, intuitive, and clutter-free UI that helps field engineers capture defects, assign tasks, and sync data effortlessly.',
-    category: 'UI/UX',
-    date: 'Nov 01, 2024'
-  },
-  {
-    slug: 'ai-in-defect-detection',
-    title: 'AI in Defect Detection: Smarter Inspections with Space Capture',
-    excerpt: 'Explore how AI-powered defect detection in Space Capture identifies site issues instantly using image recognition and reality capture technology.',
-    category: 'AI Defect Detection',
-    date: 'Oct 28, 2024'
-  },
-  {
-    slug: 'spacecapture-vs-plangrid',
-    title: 'Space Capture vs PlanGrid: Which Field Inspection Software is Better?',
-    excerpt: 'Comparing Space Capture and PlanGrid for construction inspections, AI defect detection, offline capability, and pricing. See which solution fits your team best.',
-    category: 'Comparison',
-    date: 'Nov 02, 2024'
-  }
-
-
-
-];
+const ARTICLES = BLOG_ARTICLES;
 
 export default function BlogIndexPage() {
   return (

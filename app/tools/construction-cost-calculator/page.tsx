@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Free Construction Cost Calculator | Building Estimate Tool',
   description: 'Estimate your construction project costs instantly. Calculate materials, labor, and permits with our free building cost estimator tool.',
   keywords: ['construction cost calculator', 'building cost estimator', 'project budgeting', 'residential construction estimate', 'construction quote tool'],
+  alternates: {
+    canonical: 'https://spacecapture.ai/tools/construction-cost-calculator',
+  },
 };
 
 export default function ConstructionCalculatorPage() {

@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Construction Inspection Software | Digital QA/QC Checklists',
   description: 'Digitize your quality control with our construction inspection software. Create custom checklists, capture photos, and automate punch lists.',
   keywords: ['construction inspection software', 'qa/qc software', 'inspection checklists', 'punch list app', 'digital inspections'],
+  alternates: {
+    canonical: 'https://spacecapture.ai/construction-inspection-software',
+  },
 };
 
 export default function Page() {

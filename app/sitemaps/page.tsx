@@ -72,7 +72,7 @@ const SITEMAP_SECTIONS = [
     links: [
       { label: "Site Inspection Software", href: "/site-inspection-software" },
       { label: "AI Defect Detection", href: "/ai-defect-detection" },
-      { label: "AI Detection API", href: "/ai-detection-api" },
+      { label: "AI Detection API", href: "/alternatives/ai-detection-api" },
       { label: "Construction Field Software", href: "/construction-field-software" },
       { label: "Construction Inspection Software", href: "/construction-inspection-software" },
       { label: "Construction Site Management", href: "/construction-site-management" },
@@ -86,7 +86,7 @@ const SITEMAP_SECTIONS = [
     links: [
       { label: "Resources Hub", href: "/resources" },
       { label: "Templates", href: "/resources/templates" },
-      { label: "Knowledge Base", href: "/knowledge-base" },
+      { label: "Knowledge Base", href: "/glossary" },
       { label: "FAQ", href: "/faq" },
       { label: "Blog", href: "/blog" },
       { label: "Free Field App", href: "/app-download" },

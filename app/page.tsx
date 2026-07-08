@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: 'Construction Field Inspection App & Audit Software',
   description: 'The #1 AI Field Inspection Software for construction & maintenance. Automate defect detection, daily reports, and safety compliance. Try it free.',
   alternates: {
-    canonical: '/',
+    canonical: 'https://spacecapture.ai/',
   },
 }
  const schema = {

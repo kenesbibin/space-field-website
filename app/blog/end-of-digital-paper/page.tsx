@@ -7,6 +7,9 @@ import { FileX, BrainCircuit, ScanEye, ArrowRight, CheckCircle2, XCircle, Zap, U
 export const metadata: Metadata = {
   title: "The End of Digital Paper: A Manifesto for Active AI in Field Operations | SpaceCapture",
   description: "Why simply digitizing paper forms failed construction and field service teams—and how Active AI with computer vision, real-time sync, and intelligent workflows is finally delivering the promised revolution.",
+  alternates: {
+    canonical: 'https://spacecapture.ai/blog/end-of-digital-paper',
+  },
 };
 
 export default function ManifestoPage() {
