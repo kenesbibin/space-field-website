@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Oil and Gas Inspection Software | Hazardous Digital Forms',
   description: 'Specialized Oil and Gas Inspection Software for offshore and refinery operations. intrinsically safe compliant workflows, offline mobile app, and corrosion monitoring.',
   keywords: ['Oil and Gas Inspection Software', 'Pipeline Inspection App', 'Refinery Maintenance Software', 'Explosion Proof Digital Forms'],
+  alternates: {
+    canonical: 'https://spacecapture.ai/oil-and-gas-inspection-software',
+  },
 };
 
 export default function OilAndGasSoftwarePage() {

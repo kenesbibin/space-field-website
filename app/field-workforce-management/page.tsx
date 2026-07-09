@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: 'Field Workforce Management for Construction Teams | SpaceCapture',
   description: 'Optimize your construction workforce with advanced management tools. Verify attendance, track productivity, and streamline payroll.',
   keywords: ['Field Workforce Management', 'Construction Teams', 'Labor Tracking', 'Workforce Productivity'],
+  alternates: {
+    canonical: 'https://spacecapture.ai/field-workforce-management',
+  },
 };
 
 export default function FieldWorkforceManagementPage() {

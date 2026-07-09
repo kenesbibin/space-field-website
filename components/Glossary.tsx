@@ -79,7 +79,7 @@ export const Glossary = ({ terms }: GlossaryProps) => {
                     </div>
                     <div className="grid md:grid-cols-2 gap-6 pl-4 md:pl-0">
                         {groupedTerms[letter].map((term) => (
-                            <Link href={`/knowledge-base/${term.slug}`} key={term.term}>
+                            <Link href={`/glossary/${term.slug}`} key={term.term}>
                                 <motion.div 
                                     layout
                                     initial={{ opacity: 0 }}

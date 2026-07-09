@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Construction Site Management Software | Total Project Control',
   description: 'Take control of your job site with our comprehensive management software. Coordinate crews, track assets, and ensure safety compliance from one dashboard.',
   keywords: ['construction site management', 'jobsite control', 'project management software', 'resource tracking', 'site coordination'],
+  alternates: {
+    canonical: 'https://spacecapture.ai/construction-site-management',
+  },
 };
 
 export default function Page() {

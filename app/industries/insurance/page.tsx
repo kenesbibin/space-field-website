@@ -8,6 +8,9 @@ import { INDUSTRIES_DATA } from "@/lib/seo-data";
 export const metadata: Metadata = {
   title: "AI Insurance Inspection Software | SpaceCapture",
   description: "Accelerate claims and risk assessment with AI-powered field inspection software. Offline mobile app for adjusters and inspectors.",
+  alternates: {
+    canonical: 'https://spacecapture.ai/industries/insurance',
+  },
 };
 
 const InsurancePage = () => {

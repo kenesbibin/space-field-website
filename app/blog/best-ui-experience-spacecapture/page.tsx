@@ -17,6 +17,9 @@ export const metadata: Metadata = {
         "offline-first UI",
         "field inspection app design",
     ],
+    alternates: {
+        canonical: 'https://spacecapture.ai/blog/best-ui-experience-spacecapture',
+    },
 };
 
 export default function BestUIExperiencePage() {
@@ -103,7 +106,7 @@ export default function BestUIExperiencePage() {
                             improve inspection speed, accuracy, and team adoption.
                         </p>
                         <Link
-                            href="/contact"
+                            href="/request-a-demo"
                             className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 text-white font-semibold hover:bg-indigo-700 transition"
                         >
                             Request a Demo

@@ -6,6 +6,9 @@ import CallToAction from '@/components/CallToAction';
 export const metadata: Metadata = {
   title: 'The Role of AI in Construction Insurance Claims: Settling Faster with Visual Evidence | SpaceCapture',
   description: 'Discover how AI-powered visual documentation and automated incident reconstruction are transforming construction insurance claims—reducing disputes, accelerating payouts, and lowering premiums for contractors.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/blog/ai-insurance-claims',
+  },
 };
 
 export default function ArticlePage() {

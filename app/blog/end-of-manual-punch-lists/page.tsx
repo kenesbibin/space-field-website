@@ -6,6 +6,9 @@ import CallToAction from '@/components/CallToAction';
 export const metadata: Metadata = {
   title: 'The End of Manual Punch Lists: How AI Automation Is Transforming Construction Closeout | SpaceCapture',
   description: 'Discover how AI-powered defect detection and automated punch list generation eliminate subjective manual walkthroughs, reduce closeout time by weeks, and deliver zero-defect handovers.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/blog/end-of-manual-punch-lists',
+  },
 };
 
 export default function ArticlePage() {

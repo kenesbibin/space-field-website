@@ -7,6 +7,9 @@ import Features from "@/components/Features";
 export const metadata: Metadata = {
   title: "Offline Field Inspection App for Construction & Remote Sites | Space Capture",
   description: "The #1 Offline Field App. Capture inspection data in basements, tunnels, or remote sites without WiFi. Auto-sync when online. No data loss.",
+  alternates: {
+    canonical: 'https://spacecapture.ai/offline-field-inspection-app',
+  },
 };
 
 const OfflineAppPage = () => {

@@ -22,13 +22,13 @@ import {
 } from '@/components/seo/BreadcrumbListSchema';
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = params.slug;
+  const { slug } = await params;
   const location = LOCATION_DATA[slug];
 
   if (!location) {
@@ -69,8 +69,8 @@ export function generateStaticParams() {
   }));
 }
 
-export default function LocationPage({ params }: Props) {
-  const { slug } = params;
+export default async function LocationPage({ params }: Props) {
+  const { slug } = await params;
   const location = LOCATION_DATA[slug];
 
   if (!location) {

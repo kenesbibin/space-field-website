@@ -17,6 +17,9 @@ export const metadata: Metadata = {
         "AI inspection app",
         "offline construction app",
     ],
+    alternates: {
+        canonical: 'https://spacecapture.ai/blog/spacecapture-playstore-launch',
+    },
 };
 
 export default function SpaceCapturePlayStoreLaunch() {

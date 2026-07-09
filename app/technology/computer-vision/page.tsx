@@ -8,6 +8,9 @@ import {  Cpu, WifiOff, Layers, Scan } from "lucide-react";
 export const metadata: Metadata = {
   title: "Inside the Eye: Computer Vision Deep Dive | SpaceCapture",
   description: "How SpaceCapture's Edge AI works offline, distinguishes structural damage from cosmetic scratches, and processes video in real-time.",
+  alternates: {
+    canonical: 'https://spacecapture.ai/technology/computer-vision',
+  },
 };
 
 const TechnologyPage = () => {

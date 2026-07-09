@@ -8,6 +8,9 @@ import { BookOpen, FileText, Calculator, ArrowRight, ShieldCheck, TrendingUp } f
 export const metadata: Metadata = {
   title: "Resources & Field Operations Guides | SpaceCapture",
   description: "Expert insights, case studies, and tools for modernizing field operations. Learn how to move from reactive paper trails to predictive digital intelligence.",
+  alternates: {
+    canonical: 'https://spacecapture.ai/resources',
+  },
 };
 
 const ResourcesPage = () => {

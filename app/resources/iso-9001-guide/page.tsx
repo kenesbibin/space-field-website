@@ -8,6 +8,9 @@ import { CheckSquare, FileCheck, RefreshCw, Eye } from "lucide-react";
 export const metadata: Metadata = {
   title: "ISO 9001 Audit Autopilot | SpaceCapture Guide",
   description: "5 Ways to automate your next ISO Audit using visual proof. Ensure QMS compliance without the paperwork scramble.",
+  alternates: {
+    canonical: 'https://spacecapture.ai/resources/iso-9001-guide',
+  },
 };
 
 const IsoGuidePage = () => {

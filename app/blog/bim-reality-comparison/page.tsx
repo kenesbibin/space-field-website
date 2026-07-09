@@ -6,6 +6,9 @@ import CallToAction from '@/components/CallToAction';
 export const metadata: Metadata = {
   title: 'Reducing Construction Rework with BIM-to-Reality AI Comparison | SpaceCapture',
   description: 'Learn how AI-powered BIM-to-reality overlays and automated deviation detection catch installation errors early, prevent clashes, and slash rework costs by up to 70%.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/blog/bim-reality-comparison',
+  },
 };
 
 export default function ArticlePage() {

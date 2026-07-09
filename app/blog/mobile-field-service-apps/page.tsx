@@ -8,6 +8,9 @@ import CallToAction from '@/components/CallToAction';
 export const metadata: Metadata = {
   title: 'Essential Features to Look for in Mobile Field Service Apps for Construction | SpaceCapture',
   description: 'Discover the must-have features in mobile field service apps—including offline functionality, digital signatures, voice-to-text, asset history access, and more—to boost technician productivity and ensure adoption.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/blog/mobile-field-service-apps',
+  },
 };
 
 export default function MobileFieldAppsPage() {

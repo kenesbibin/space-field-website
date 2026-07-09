@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     title: 'Free Asphalt Calculator | Estimate Hot Mix Asphalt Tonnage',
     description: 'Calculate how much asphalt you need for your driveway or parking lot. Accurate estimates for tons and cubic yards including compaction factors.',
     keywords: ['asphalt calculator', 'blacktop calculator', 'paving estimator', 'asphalt tonnage calculator', 'hot mix asphalt calculator'],
+    alternates: {
+        canonical: 'https://spacecapture.ai/tools/asphalt-calculator',
+    },
 };
 
 export default function AsphaltCalculatorPage() {

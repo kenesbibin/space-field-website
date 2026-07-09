@@ -7,6 +7,9 @@ import WhatsAppButton from '@/components/WhatsappButton'; // Importing the float
 export const metadata: Metadata = {
   title: 'Download SpaceCapture | Field Operations App',
   description: 'Download the SpaceCapture mobile app for iOS and Android. Manage offline forms, capture photos, and sync field data in real-time.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/app-download',
+  },
 };
 
 export default function AppDownloadPage() {

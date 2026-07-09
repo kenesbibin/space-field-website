@@ -13,17 +13,18 @@ import {
 } from "@/components/seo/BreadcrumbListSchema";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export function generateStaticParams() {
   return GLOSSARY_TERMS.map((term) => ({ slug: term.slug }));
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
-  const term = getGlossaryTerm(params.slug);
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const term = getGlossaryTerm(slug);
   if (!term) {
     return { title: "Term Not Found" };
   }
@@ -38,20 +39,21 @@ export function generateMetadata({ params }: PageProps): Metadata {
       "construction glossary",
     ],
     alternates: {
-      canonical: `https://spacecapture.ai/glossary/${term.slug}`,
+      canonical: `https://spacecapture.ai/glossary/${slug}`,
     },
     openGraph: {
       type: "article",
       title: `What Is ${term.term}? | SpaceCapture Glossary`,
       description: term.definition,
-      url: `https://spacecapture.ai/glossary/${term.slug}`,
+      url: `https://spacecapture.ai/glossary/${slug}`,
       siteName: "SpaceCapture",
     },
   };
 }
 
-export default function GlossaryTermPage({ params }: PageProps) {
-  const term = getGlossaryTerm(params.slug);
+export default async function GlossaryTermPage({ params }: PageProps) {
+  const { slug } = await params;
+  const term = getGlossaryTerm(slug);
 
   if (!term) {
     notFound();
@@ -65,7 +67,7 @@ export default function GlossaryTermPage({ params }: PageProps) {
   const articleSchema = getArticleSchema({
     headline: `What Is ${term.term}?`,
     description: term.definition,
-    url: `https://spacecapture.ai/glossary/${term.slug}`,
+    url: `https://spacecapture.ai/glossary/${slug}`,
     datePublished,
     category: term.category,
     keywords: [term.term, term.category, "glossary"],

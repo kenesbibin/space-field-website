@@ -6,6 +6,9 @@ import ComparisonTable from "@/components/ComparisonTable";
 export const metadata: Metadata = {
   title: "Fieldwire Alternative for Small Teams | SpaceCapture",
   description: "The best Fieldwire alternative for small construction teams. Simple pricing, zero learning curve, and powerful AI features without the enterprise bloat.",
+  alternates: {
+    canonical: 'https://spacecapture.ai/alternatives/fieldwire',
+  },
 };
 
 const FieldwirePage = () => {

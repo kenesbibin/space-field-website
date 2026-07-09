@@ -12,15 +12,16 @@ import {
 } from '@/components/seo/BreadcrumbListSchema';
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
   return Object.keys(ALTERNATIVES_DATA).map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const data = ALTERNATIVES_DATA[params.slug];
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const data = ALTERNATIVES_DATA[slug];
   if (!data) return { title: 'Alternative Not Found' };
   return {
     title: data.metaTitle,
@@ -39,8 +40,9 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function AlternativePage({ params }: Props) {
-  const data = ALTERNATIVES_DATA[params.slug];
+export default async function AlternativePage({ params }: Props) {
+  const { slug } = await params;
+  const data = ALTERNATIVES_DATA[slug];
   if (!data) notFound();
 
   const faqSchema = getFaqSchema(data.faqs.map((f: { q: string; a: string }) => ({ question: f.q, answer: f.a })));

@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: 'Field Service Management Software: Complete Guide | SpaceCapture',
   description: 'The complete guide to Field Service Management Software. Learn how to streamline dispatching, automate work orders, and reduce downtime.',
   keywords: ['Field Service Management Software', 'FSM Guide', 'Construction Dispatch', 'Work Order Automation'],
+  alternates: {
+    canonical: 'https://spacecapture.ai/field-service-management-software',
+  },
 };
 
 export default function FieldServiceManagementPage() {

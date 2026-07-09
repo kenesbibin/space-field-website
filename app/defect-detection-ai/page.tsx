@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Defect Detection AI | Automated Construction Quality Analysis',
   description: 'Automate your defect detection process with AI. Identify construction issues faster and more accurately than manual inspections.',
   keywords: ['defect detection ai', 'automated defect detection', 'ai quality control', 'construction ai', 'visual analysis'],
+  alternates: {
+    canonical: 'https://spacecapture.ai/defect-detection-ai',
+  },
 };
 
 export default function Page() {

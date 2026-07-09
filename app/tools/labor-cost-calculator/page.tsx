@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Free Labor Cost Calculator | Construction Labor Burden Estimator',
   description: 'Calculate total construction labor costs including burden, overhead, markup, and expenses. Estimate project labor accurately with our free tool.',
   keywords: ['labor cost calculator', 'construction labor estimator', 'labor burden calculator', 'contractor labor rates', 'project labor cost'],
+  alternates: {
+    canonical: 'https://spacecapture.ai/tools/labor-cost-calculator',
+  },
 };
 
 export default function LaborCalculatorPage() {

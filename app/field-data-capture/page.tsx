@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: 'Field Data Capture Software & Mobile App | SpaceCapture',
   description: 'The ultimate Field Management App for construction. Capture photos, daily logs, and inspection forms offline on iOS and Android.',
   keywords: ['Field Data Capture Software', 'Field Management App', 'Construction Field Software', 'Mobile Construction App'],
+  alternates: {
+    canonical: 'https://spacecapture.ai/field-data-capture',
+  },
 };
 
 export default function FieldDataCapturePage() {

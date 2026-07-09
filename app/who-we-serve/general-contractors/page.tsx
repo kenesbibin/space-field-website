@@ -6,6 +6,9 @@ import { PERSONAS_DATA } from '@/lib/seo-data';
 export const metadata: Metadata = {
   title: 'Construction Software for General Contractors | SpaceCapture',
   description: 'Manage field operations, subcontractors, and safety compliance in one app.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/who-we-serve/general-contractors',
+  },
 };
 
 export default function GeneralContractorsPage() {

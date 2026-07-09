@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     "defect detection software construction",
     "construction reporting software",
   ],
+  alternates: {
+    canonical: 'https://spacecapture.ai/compare/safety-culture',
+  },
 };
 
 export default function Page() {

@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     title: 'Free Online CAD Viewer | View DWG & DXF Files Instantly',
     description: 'View AutoCAD files online for free. No software installation needed. Supports .dwg and .dxf formats. Secure, fast, and easy to use.',
     keywords: ['online cad viewer', 'free dwg viewer', 'view dwg online', 'dxf viewer', 'autocad viewer online', 'free cad viewer'],
+    alternates: {
+        canonical: 'https://spacecapture.ai/tools/free-online-cad-viewer',
+    },
 };
 
 export default function CadViewerPage() {

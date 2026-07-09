@@ -6,6 +6,9 @@ import { PERSONAS_DATA } from '@/lib/seo-data';
 export const metadata: Metadata = {
   title: PERSONAS_DATA['property-developers'].title,
   description: PERSONAS_DATA['property-developers'].description,
+  alternates: {
+    canonical: 'https://spacecapture.ai/who-we-serve/property-developers',
+  },
 };
 
 export default function PropertyDevelopersPage() {
