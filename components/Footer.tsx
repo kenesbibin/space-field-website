@@ -62,6 +62,39 @@ export default function Footer() {
                 <FooterLink href="https://spacecrm.net/">spacecrm</FooterLink>
               </ul>
             </div>
+
+            <div className="mt-6">
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Global Offices</h3>
+              <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+                {[
+                  { code: "us", country: "USA", phone: "+1 646 421 5740", tel: "+16464215740" },
+                  { code: "ca", country: "Canada", phone: "+1 (979) 326-9493", tel: "+19793269493" },
+                  { code: "ae", country: "UAE", phone: "+971 56 256 7509", tel: "+971562567509" },
+                  { code: "sa", country: "Saudi Arabia", phone: "+966 56 208 1999", tel: "+966562081999" },
+                  { code: "kw", country: "Kuwait", phone: "+965 9724 3755", tel: "+96597243755" },
+                  { code: "sg", country: "Singapore", phone: "+65 86 111 900", tel: "+6586111900" },
+                  { code: "my", country: "Malaysia", phone: "+60 10 660 7357", tel: "+60106607357" },
+                ].map((loc) => (
+                  <div key={loc.code} className="flex items-start gap-2">
+                    <img
+                      src={`https://flagcdn.com/w40/${loc.code}.png`}
+                      alt={`${loc.country} flag`}
+                      className="w-4 h-3 object-cover rounded-xs border border-slate-700 mt-0.5 flex-shrink-0"
+                    />
+                    <div>
+                      <p className="text-xs font-semibold text-white">{loc.country}</p>
+                      <a
+                        href={`tel:${loc.tel}`}
+                        className="text-[11px] text-slate-400 hover:text-white transition-colors block"
+                      >
+                        {loc.phone}
+                      </a>
+                      <p className="text-[10px] text-slate-500">contact@spacecapture.ai</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Column 2: Core Features & Solutions */}
@@ -214,7 +247,7 @@ export default function Footer() {
 
           </div>
 
-          <div
+        <div
             className="pt-8 border-t border-slate-800/50 flex flex-col md:flex-row items-center justify-between gap-4"
             itemScope
             itemType="https://schema.org/Organization"

@@ -271,17 +271,17 @@ const contactLocations = [
       { display: "+1 646 421 5740", value: "+16464215740" },
       { display: "+1 979 326 9493", value: "+19793269493" },
     ],
-    email: "usa@pmspace.ai",
+    email: "contact@spacecapture.ai",
     address: "2500 MARCONI AVE, STE 101, SACRAMENTO, CA 95821 USA",
   },
   {
-    code: "my",
-    flag: "🇲🇾",
-    country: "Malaysia",
+    code: "ca",
+    flag: "🇨🇦",
+    country: "Canada",
     phones: [
-      { display: "+60 10 660 7357", value: "+60106607357" },
+      { display: "+1 (979) 326-9493", value: "+19793269493" },
     ],
-    email: "my@pmspace.ai",
+    email: "contact@spacecapture.ai",
     address: "",
   },
   {
@@ -291,8 +291,28 @@ const contactLocations = [
     phones: [
       { display: "+971 56 256 7509", value: "+971562567509" },
     ],
-    email: "uae@pmspace.ai",
+    email: "contact@spacecapture.ai",
     address: "Middle East Regional Office, Dubai, UAE",
+  },
+  {
+    code: "sa",
+    flag: "🇸🇦",
+    country: "Saudi Arabia",
+    phones: [
+      { display: "+966 56 208 1999", value: "+966562081999" },
+    ],
+    email: "contact@spacecapture.ai",
+    address: "",
+  },
+  {
+    code: "kw",
+    flag: "🇰🇼",
+    country: "Kuwait",
+    phones: [
+      { display: "+965 9724 3755", value: "+96597243755" },
+    ],
+    email: "contact@spacecapture.ai",
+    address: "",
   },
   {
     code: "sg",
@@ -301,8 +321,18 @@ const contactLocations = [
     phones: [
       { display: "+65 86 111 900", value: "+6586111900" },
     ],
-    email: "sg@pmspace.ai",
+    email: "contact@spacecapture.ai",
     address: "7 Soon Lee St, #04-39 ISPACE BUILDING, Singapore 627608",
+  },
+  {
+    code: "my",
+    flag: "🇲🇾",
+    country: "Malaysia",
+    phones: [
+      { display: "+60 10 660 7357", value: "+60106607357" },
+    ],
+    email: "contact@spacecapture.ai",
+    address: "",
   },
 ];
 
@@ -776,75 +806,34 @@ export default function Navbar() {
                   </button>
 
                   {phoneDropdownOpen && (
-                    <div className="absolute top-full right-0 mt-2 w-[380px] rounded-2xl bg-white shadow-2xl shadow-purple-500/10 border border-slate-100 z-50 overflow-hidden">
-                      <div className="p-3 divide-y divide-gray-100">
+                    <div className="absolute top-full right-0 mt-2 w-[460px] rounded-2xl bg-white shadow-2xl shadow-blue-500/10 border border-slate-100 z-50 overflow-hidden">
+                      <div className="p-4 grid grid-cols-2 gap-3">
                         {contactLocations.map((loc) => (
-                          <div
+                          <a
                             key={loc.country}
-                            className="flex items-start gap-3 p-3 transition-colors hover:bg-slate-50/50"
+                            href={`tel:${loc.phones[0].value}`}
+                            className="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 transition-colors cursor-pointer"
+                            onClick={() => setPhoneDropdownOpen(false)}
                           >
                             <img
                               src={`https://flagcdn.com/w40/${loc.code}.png`}
                               alt={`${loc.country} flag`}
-                              className="w-5 h-3.5 object-cover rounded-xs border border-gray-100 mt-1 flex-shrink-0"
+                              className="w-5 h-3.5 object-cover rounded-xs border border-gray-100 flex-shrink-0"
                             />
-                            <div className="flex-1 min-w-0">
-                              {/* Country Name Label */}
-                              <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">
-                                {loc.country}
-                              </div>
-                              {/* Phones & Phone Icon */}
-                              <div className="flex items-start justify-between gap-2">
-                                <div className="space-y-1">
-                                  {loc.phones.map((phone, idx) => (
-                                    <a
-                                      key={idx}
-                                      href={`tel:${phone.value}`}
-                                      className="block text-sm font-semibold text-blue-600 hover:text-blue-800 hover:underline transition-colors leading-tight"
-                                      onClick={() => setPhoneDropdownOpen(false)}
-                                    >
-                                      {phone.display}
-                                    </a>
-                                  ))}
-                                </div>
-                                <a
-                                  href={`tel:${loc.phones[0].value}`}
-                                  className="flex items-center justify-center p-1.5 rounded-full bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 transition-colors flex-shrink-0"
-                                  onClick={() => setPhoneDropdownOpen(false)}
-                                  title={`Call ${loc.country} Office`}
-                                >
-                                  <Phone className="w-3.5 h-3.5" />
-                                </a>
-                              </div>
-
-                              {/* Email */}
-                              <div className="mt-1">
-                                <a
-                                  href={`mailto:${loc.email}`}
-                                  className="text-xs text-gray-500 hover:text-purple-600 hover:underline transition-colors block truncate"
-                                  onClick={() => setPhoneDropdownOpen(false)}
-                                >
-                                  {loc.email}
-                                </a>
-                              </div>
-
-                              {/* Address */}
-                              {loc.address && (
-                                <p className="text-[11px] text-gray-400 mt-1 leading-normal font-normal">
-                                  {loc.address}
-                                </p>
-                              )}
+                            <div className="min-w-0">
+                              <p className="text-sm font-semibold text-gray-900 leading-tight truncate">{loc.phones[0].display}</p>
+                              <p className="text-[11px] text-gray-400 leading-tight mt-0.5">{loc.country}</p>
                             </div>
-                          </div>
+                          </a>
                         ))}
                       </div>
-                      <div className="border-t border-gray-100 p-3 bg-slate-50/50">
+                      <div className="border-t border-gray-100 px-4 py-3">
                         <a
                           href={`tel:${PHONE_NUMBER_USA.replace(/\s/g, "")}`}
                           className="flex items-center justify-center gap-2 w-full py-2 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs font-bold hover:from-purple-500 hover:to-indigo-500 transition-all hover:shadow-md hover:shadow-purple-500/20"
                           onClick={() => setPhoneDropdownOpen(false)}
                         >
-                          Call USA Main Office
+                          Call main office
                           <Phone className="w-3.5 h-3.5" />
                         </a>
                       </div>
