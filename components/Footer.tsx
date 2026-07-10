@@ -32,6 +32,7 @@ export default function Footer() {
               <SocialLink href="https://www.instagram.com/spacecapture77/" icon={Instagram} label="Instagram" />
               <SocialLink href="https://www.youtube.com/@SpaceCapture7" icon={Youtube} label="YouTube" />
               <SocialLink href="https://www.linkedin.com/company/spaceai-capture/" icon={Linkedin} label="LinkedIn" />
+              <SocialLink href="/social-media" icon={SocialMediaIcon} label="All Social Media" />
             </div>
 
             {/* Play Store Button */}
@@ -237,17 +238,52 @@ export default function Footer() {
 }
 
 // Helper Components
-const SocialLink = ({ href, icon: Icon, label }: { href: string, icon: React.ElementType, label: string }) => (
-  <a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 transition-all duration-300 hover:bg-slate-800 hover:text-white hover:-translate-y-1 border border-slate-800"
-    aria-label={label}
+const SocialMediaIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
   >
-    <Icon className="h-5 w-5" />
-  </a>
+    <circle cx="5" cy="5" r="2" />
+    <circle cx="19" cy="5" r="2" />
+    <circle cx="12" cy="12" r="2" />
+    <circle cx="5" cy="19" r="2" />
+    <circle cx="19" cy="19" r="2" />
+    <line x1="7" y1="5" x2="10" y2="10" />
+    <line x1="17" y1="5" x2="14" y2="10" />
+    <line x1="12" y1="14" x2="5" y2="17" />
+    <line x1="12" y1="14" x2="19" y2="17" />
+  </svg>
 );
+
+const SocialLink = ({ href, icon: Icon, label }: { href: string, icon: React.ElementType, label: string }) => {
+  const isInternal = href.startsWith('/');
+  const className = "w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 transition-all duration-300 hover:bg-slate-800 hover:text-white hover:-translate-y-1 border border-slate-800";
+
+  if (isInternal) {
+    return (
+      <Link href={href} className={className} aria-label={label}>
+        <Icon className="h-5 w-5" />
+      </Link>
+    );
+  }
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+      aria-label={label}
+    >
+      <Icon className="h-5 w-5" />
+    </a>
+  );
+};
 
 const FooterLink = ({ href, children, className = "" }: { href: string, children: React.ReactNode, className?: string }) => (
   <li>
