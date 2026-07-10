@@ -261,6 +261,51 @@ const productsMenuItems: {
   ],
 };
 
+// --- Contact Dropdown Data ---
+const contactLocations = [
+  {
+    code: "us",
+    flag: "🇺🇸",
+    country: "USA",
+    phones: [
+      { display: "+1 646 421 5740", value: "+16464215740" },
+      { display: "+1 979 326 9493", value: "+19793269493" },
+    ],
+    email: "usa@pmspace.ai",
+    address: "2500 MARCONI AVE, STE 101, SACRAMENTO, CA 95821 USA",
+  },
+  {
+    code: "my",
+    flag: "🇲🇾",
+    country: "Malaysia",
+    phones: [
+      { display: "+60 10 660 7357", value: "+60106607357" },
+    ],
+    email: "my@pmspace.ai",
+    address: "",
+  },
+  {
+    code: "ae",
+    flag: "🇦🇪",
+    country: "UAE",
+    phones: [
+      { display: "+971 56 256 7509", value: "+971562567509" },
+    ],
+    email: "uae@pmspace.ai",
+    address: "Middle East Regional Office, Dubai, UAE",
+  },
+  {
+    code: "sg",
+    flag: "🇸🇬",
+    country: "Singapore",
+    phones: [
+      { display: "+65 86 111 900", value: "+6586111900" },
+    ],
+    email: "sg@pmspace.ai",
+    address: "7 Soon Lee St, #04-39 ISPACE BUILDING, Singapore 627608",
+  },
+];
+
 // --- Email Modal Component ---
 const EmailModal = ({
   isOpen,
@@ -344,16 +389,29 @@ export default function Navbar() {
   // Modal State
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [mobileEmailCopied, setMobileEmailCopied] = useState(false);
+  const [phoneDropdownOpen, setPhoneDropdownOpen] = useState(false);
+  const [currentLocationIndex, setCurrentLocationIndex] = useState(0);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const phoneDropdownRef = useRef<HTMLDivElement>(null);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    if (phoneDropdownOpen) return;
+    const interval = setInterval(() => {
+      setCurrentLocationIndex((prev) => (prev + 1) % contactLocations.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [phoneDropdownOpen]);
+
+  const activeLocation = contactLocations[currentLocationIndex];
 
   // Constants
   const SIGN_IN_URL =
     "https://www.amspace.ai/login?type=Field&moduleId=8b3b6af5-07a3-44b2-b69e-342b61d71718&invite=guest";
   const DEMO_URL = "/request-a-demo";
-  const PHONE_NUMBER_SG = "+65 8611 1900";
-  const PHONE_NUMBER_USA = "+1 419 820 1487";
+  const PHONE_NUMBER_SG = "+65 86 111 900";
+  const PHONE_NUMBER_USA = "+1 646 421 5740";
   const CONTACT_EMAIL = "contact@spacecapture.ai";
 
   useEffect(() => {
@@ -372,6 +430,12 @@ export default function Navbar() {
         setHoveredProducts(false);
         setShowProducts(false);
         setHoveredProducts(false);
+      }
+      if (
+        phoneDropdownRef.current &&
+        !phoneDropdownRef.current.contains(event.target as Node)
+      ) {
+        setPhoneDropdownOpen(false);
       }
     };
 
@@ -681,22 +745,111 @@ export default function Navbar() {
                   <Mail className="h-5 w-5" />
                 </button>
 
-                {/* Phone Numbers (Side by Side) */}
-                <div className="flex items-center gap-4 border-l border-r border-gray-200 px-4 h-8">
-                  <a
-                    href={`tel:${PHONE_NUMBER_USA.replace(/\s/g, "")}`}
-                    className="flex items-center gap-1.5 text-gray-700 font-medium hover:text-purple-600 transition-colors text-xs whitespace-nowrap"
+                {/* Phone Dropdown */}
+                <div className="relative" ref={phoneDropdownRef}>
+                  <button
+                    onClick={() => setPhoneDropdownOpen(!phoneDropdownOpen)}
+                    className="flex items-center gap-1 text-gray-700 font-medium hover:text-purple-600 transition-colors text-xs whitespace-nowrap border-l border-r border-gray-200 px-4 h-8 cursor-pointer w-[210px] justify-between bg-transparent"
                   >
-                    <span className="text-base">🇺🇸</span>
-                    <span>{PHONE_NUMBER_USA}</span>
-                  </a>
-                  <a
-                    href={`tel:${PHONE_NUMBER_SG.replace(/\s/g, "")}`}
-                    className="flex items-center gap-1.5 text-gray-700 font-medium hover:text-purple-600 transition-colors text-xs whitespace-nowrap"
-                  >
-                    <span className="text-base">🇸🇬</span>
-                    <span>{PHONE_NUMBER_SG}</span>
-                  </a>
+                    <div className="relative h-5 w-[165px] flex items-center overflow-hidden">
+                      <AnimatePresence mode="wait">
+                        <motion.div
+                          key={currentLocationIndex}
+                          initial={{ opacity: 0, y: 4 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -4 }}
+                          transition={{ duration: 0.25, ease: "easeInOut" }}
+                          className="flex items-center gap-2 absolute inset-0"
+                        >
+                          <img
+                            src={`https://flagcdn.com/w40/${activeLocation.code}.png`}
+                            alt={`${activeLocation.country} flag`}
+                            className="w-5 h-3.5 object-cover rounded-xs border border-gray-100 flex-shrink-0"
+                          />
+                          <span className="font-mono text-sm font-semibold tabular-nums tracking-tight text-gray-700">
+                            {activeLocation.phones[0].display}
+                          </span>
+                        </motion.div>
+                      </AnimatePresence>
+                    </div>
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 flex-shrink-0 ${phoneDropdownOpen ? "rotate-180" : ""}`} />
+                  </button>
+
+                  {phoneDropdownOpen && (
+                    <div className="absolute top-full right-0 mt-2 w-[380px] rounded-2xl bg-white shadow-2xl shadow-purple-500/10 border border-slate-100 z-50 overflow-hidden">
+                      <div className="p-3 divide-y divide-gray-100">
+                        {contactLocations.map((loc) => (
+                          <div
+                            key={loc.country}
+                            className="flex items-start gap-3 p-3 transition-colors hover:bg-slate-50/50"
+                          >
+                            <img
+                              src={`https://flagcdn.com/w40/${loc.code}.png`}
+                              alt={`${loc.country} flag`}
+                              className="w-5 h-3.5 object-cover rounded-xs border border-gray-100 mt-1 flex-shrink-0"
+                            />
+                            <div className="flex-1 min-w-0">
+                              {/* Country Name Label */}
+                              <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">
+                                {loc.country}
+                              </div>
+                              {/* Phones & Phone Icon */}
+                              <div className="flex items-start justify-between gap-2">
+                                <div className="space-y-1">
+                                  {loc.phones.map((phone, idx) => (
+                                    <a
+                                      key={idx}
+                                      href={`tel:${phone.value}`}
+                                      className="block text-sm font-semibold text-blue-600 hover:text-blue-800 hover:underline transition-colors leading-tight"
+                                      onClick={() => setPhoneDropdownOpen(false)}
+                                    >
+                                      {phone.display}
+                                    </a>
+                                  ))}
+                                </div>
+                                <a
+                                  href={`tel:${loc.phones[0].value}`}
+                                  className="flex items-center justify-center p-1.5 rounded-full bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 transition-colors flex-shrink-0"
+                                  onClick={() => setPhoneDropdownOpen(false)}
+                                  title={`Call ${loc.country} Office`}
+                                >
+                                  <Phone className="w-3.5 h-3.5" />
+                                </a>
+                              </div>
+
+                              {/* Email */}
+                              <div className="mt-1">
+                                <a
+                                  href={`mailto:${loc.email}`}
+                                  className="text-xs text-gray-500 hover:text-purple-600 hover:underline transition-colors block truncate"
+                                  onClick={() => setPhoneDropdownOpen(false)}
+                                >
+                                  {loc.email}
+                                </a>
+                              </div>
+
+                              {/* Address */}
+                              {loc.address && (
+                                <p className="text-[11px] text-gray-400 mt-1 leading-normal font-normal">
+                                  {loc.address}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="border-t border-gray-100 p-3 bg-slate-50/50">
+                        <a
+                          href={`tel:${PHONE_NUMBER_USA.replace(/\s/g, "")}`}
+                          className="flex items-center justify-center gap-2 w-full py-2 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs font-bold hover:from-purple-500 hover:to-indigo-500 transition-all hover:shadow-md hover:shadow-purple-500/20"
+                          onClick={() => setPhoneDropdownOpen(false)}
+                        >
+                          Call USA Main Office
+                          <Phone className="w-3.5 h-3.5" />
+                        </a>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 {/* Action Buttons */}
@@ -836,31 +989,53 @@ export default function Navbar() {
                   </div>
                 </button>
 
-                {/* USA Number */}
-                <a
-                  href={`tel:${PHONE_NUMBER_USA.replace(/\s/g, "")}`}
-                  className="flex w-full items-center gap-3 py-2 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <span className="text-lg">🇺🇸</span>
-                  <div className="flex flex-col">
-                    <span className="text-sm font-medium">USA</span>
-                    <span className="text-sm">{PHONE_NUMBER_USA}</span>
-                  </div>
-                </a>
+                {/* Location Contacts */}
+                {contactLocations.map((loc) => (
+                  <div key={loc.country} className="border-b border-gray-100 last:border-b-0 pb-3 last:pb-0 pt-2 first:pt-0">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <img
+                        src={`https://flagcdn.com/w40/${loc.code}.png`}
+                        alt={`${loc.country} flag`}
+                        className="w-4 h-3 object-cover rounded-2xs border border-gray-100 flex-shrink-0"
+                      />
+                      <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">{loc.country}</span>
+                    </div>
+                    <div className="pl-7 space-y-2">
+                      {/* Phones */}
+                      <div className="space-y-1">
+                        {loc.phones.map((phone, idx) => (
+                          <a
+                            key={idx}
+                            href={`tel:${phone.value}`}
+                            className="flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Phone className="w-3.5 h-3.5 text-blue-400" />
+                            <span>{phone.display}</span>
+                          </a>
+                        ))}
+                      </div>
+                      
+                      {/* Email */}
+                      <div>
+                        <a
+                          href={`mailto:${loc.email}`}
+                          className="text-xs text-gray-500 hover:text-purple-600 transition-colors block"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {loc.email}
+                        </a>
+                      </div>
 
-                {/* SG Number */}
-                <a
-                  href={`tel:${PHONE_NUMBER_SG.replace(/\s/g, "")}`}
-                  className="flex w-full items-center gap-3 py-2 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <span className="text-lg">🇸🇬</span>
-                  <div className="flex flex-col">
-                    <span className="text-sm font-medium">Singapore</span>
-                    <span className="text-sm">{PHONE_NUMBER_SG}</span>
+                      {/* Address */}
+                      {loc.address && (
+                        <p className="text-[10px] text-gray-400 leading-normal">
+                          {loc.address}
+                        </p>
+                      )}
+                    </div>
                   </div>
-                </a>
+                ))}
               </div>
 
               {/* Buttons */}
