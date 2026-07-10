@@ -48,6 +48,20 @@ export default function Footer() {
                 className="h-10 w-auto"
               />
             </a>
+
+            <div className="mt-6">
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Space AI Ecosystem</h3>
+              <ul className="space-y-2">
+                <FooterLink href="https://pmspace.ai/">pmspaceai</FooterLink>
+                <FooterLink href="https://space-sign.ai/">space-sign</FooterLink>
+                <FooterLink href="https://spacecapture.ai/">space-capture</FooterLink>
+                <FooterLink href="https://spacelizit.com/">space-lizit</FooterLink>
+                <FooterLink href="https://spacehr.net/">spacehr</FooterLink>
+                <FooterLink href="https://spacelean.ai/">spacelean</FooterLink>
+                <FooterLink href="https://spacenexus.net/">spacenexus</FooterLink>
+                <FooterLink href="https://spacecrm.net/">spacecrm</FooterLink>
+              </ul>
+            </div>
           </div>
 
           {/* Column 2: Core Features & Solutions */}
