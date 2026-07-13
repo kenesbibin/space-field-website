@@ -16,7 +16,7 @@ export default function JsonLd() {
         "sameAs": [
           "https://x.com/SpaceCapture7",
           "https://www.instagram.com/spacecapture77/",
-          "https://www.youtube.com/@SpaceCapture7",
+          "https://www.youtube.com/@SpaceCapture_AI",
           "https://www.linkedin.com/company/spaceai-capture/"
         ],
         "contactPoint": {

@@ -30,7 +30,7 @@ export default function Footer() {
             <div className="flex gap-4 mb-6">
               <SocialLink href="https://x.com/SpaceCapture7" icon={Twitter} label="Twitter" />
               <SocialLink href="https://www.instagram.com/spacecapture77/" icon={Instagram} label="Instagram" />
-              <SocialLink href="https://www.youtube.com/@SpaceCapture7" icon={Youtube} label="YouTube" />
+              <SocialLink href="https://www.youtube.com/@SpaceCapture_AI" icon={Youtube} label="YouTube" />
               <SocialLink href="https://www.linkedin.com/company/spaceai-capture/" icon={Linkedin} label="LinkedIn" />
               <SocialLink href="/social-media" icon={SocialMediaIcon} label="All Social Media" />
             </div>
