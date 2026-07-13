@@ -559,35 +559,33 @@ export default function Navbar() {
           }`}
       >
         <div className="container mx-auto max-w-[1400px] px-4">
-          <div className="flex items-center gap-6">
-            <div className="flex flex-1 items-center justify-between rounded-2xl lg:border-2 lg:border-gray-300 lg:p-2.5 bg-transparent">
-              {/* Logo */}
-              <div className="flex items-center gap-12">
-                <div className="flex items-center">
-                  <Link
-                    href="/"
-                    className="flex items-center rounded-lg px-1 py-1 transition-colors hover:bg-white/5 cursor-pointer"
-                    aria-label="Space Capture Home"
-                  >
-                    <Image
-                      src="/images/space-capture-navbar.png"
-                      alt="Space Capture"
-                      width={106}
-                      height={80}
-                      priority
-                      className="h-14 w-auto rounded-sm object-contain sm:h-16"
-                    />
-                  </Link>
-                </div>
+          <div className="flex items-center justify-between rounded-2xl lg:border-2 lg:border-gray-300 lg:p-2.5 bg-transparent gap-6">
+            {/* Logo */}
+            <div className="flex items-center">
+              <Link
+                href="/"
+                className="flex items-center rounded-lg px-1 py-1 transition-colors hover:bg-white/5 cursor-pointer"
+                aria-label="Space Capture Home"
+              >
+                <Image
+                  src="/images/space-capture-navbar.png"
+                  alt="Space Capture"
+                  width={106}
+                  height={80}
+                  priority
+                  className="h-14 w-auto rounded-sm object-contain sm:h-16"
+                />
+              </Link>
+            </div>
 
-                {/* Desktop: Products & Industries Dropdowns */}
-                <div className="hidden lg:block" ref={dropdownRef}>
-                  {/* Products Dropdown */}
-                  <div
-                    className="relative group inline-block mr-8"
-                    onMouseEnter={handleProductsMouseEnter}
-                    onMouseLeave={handleProductsMouseLeave}
-                  >
+            {/* Desktop: Products & Industries Dropdowns */}
+            <div className="hidden lg:flex items-center gap-8 flex-1 justify-center" ref={dropdownRef}>
+              {/* Products Dropdown */}
+              <div
+                className="relative group inline-block"
+                onMouseEnter={handleProductsMouseEnter}
+                onMouseLeave={handleProductsMouseLeave}
+              >
                     <a
                       href="#"
                       className="flex items-center gap-1 text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer relative py-2"
@@ -747,7 +745,7 @@ export default function Navbar() {
                   {/* Blog Link */}
                   <Link
                     href="/blog"
-                    className="inline-block text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer ml-8 py-2"
+                    className="inline-block text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer py-2"
                   >
                     Blog
                   </Link>
@@ -755,17 +753,14 @@ export default function Navbar() {
                   {/* Tools Link */}
                   <Link
                     href="/tools"
-                    className="inline-block text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer ml-8 py-2"
+                    className="inline-block text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer py-2"
                   >
                     Tools
                   </Link>
                 </div>
 
-                {/* Resources Dropdown */}
-              </div>
-
-              {/* Desktop: Contact & Actions */}
-              <div className="hidden lg:flex items-center gap-4">
+                {/* Desktop: Contact & Actions */}
+                <div className="hidden lg:flex items-center gap-4">
                 {/* Email Icon (Triggers Modal) */}
                 <button
                   onClick={() => setShowEmailModal(true)}
@@ -861,8 +856,7 @@ export default function Navbar() {
               </button>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
