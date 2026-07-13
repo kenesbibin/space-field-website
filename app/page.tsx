@@ -1,4 +1,5 @@
 import AiDetectionApiSection from '@/components/AiDetectionApiSection'
+import AiPromptSection from '@/components/AiPromptSection'
 import CallToActionSection from '@/components/CallToAction'
 import Features from '@/components/Features'
 import GuideSection from '@/components/GuideSection'
@@ -42,6 +43,7 @@ export default function Home() {
 
       <FaqSection />
       <CallToActionSection />
+      <AiPromptSection />
     </main>
     </>
   )

@@ -9,6 +9,7 @@ import {
 	SiSubstack,
 	SiYcombinator,
 	SiTrustpilot,
+	SiYoutube,
 } from 'react-icons/si';
 import {
 	Link,
@@ -29,14 +30,14 @@ const LinkedInIcon = ({ className }: { className?: string }) => (
 export const metadata: Metadata = {
 	title: 'Follow Us on Social Media',
 	description:
-		'Connect with SpaceCapture on social media. Follow us on Medium, Reddit, Quora, Pinterest, and more for updates, insights, and community discussions.',
+		'Connect with SpaceCapture on social media. Follow us on YouTube, Medium, Reddit, Quora, Pinterest, and more for updates, insights, and community discussions.',
 	alternates: {
 		canonical: 'https://spacecapture.ai/social-media',
 	},
 	openGraph: {
 		title: 'Follow Us on Social Media | SpaceCapture',
 		description:
-			'Connect with SpaceCapture on social media. Follow us on Medium, Reddit, Quora, Pinterest, and more.',
+			'Connect with SpaceCapture on social media. Follow us on YouTube, Medium, Reddit, Quora, Pinterest, and more.',
 		url: 'https://spacecapture.ai/social-media',
 	},
 };
@@ -70,6 +71,13 @@ const PLATFORMS = [
 // 		color: 'bg-blue-50 text-blue-700 hover:bg-blue-100',
 // 		description: 'Connect with us on the professional network.',
 // 	},
+	{
+		name: 'YouTube',
+		url: 'https://www.youtube.com/@SpaceCapture_AI',
+		icon: SiYoutube,
+		color: 'bg-red-50 text-red-600 hover:bg-red-100',
+		description: 'Watch tutorial videos and demos for construction field management.',
+	},
 	{
 		name: 'Pinterest',
 		url: 'https://www.pinterest.com/spacecaptureai/',

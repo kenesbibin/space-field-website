@@ -30,7 +30,7 @@ export default function Footer() {
             <div className="flex gap-4 mb-6">
               <SocialLink href="https://x.com/SpaceCapture7" icon={Twitter} label="Twitter" />
               <SocialLink href="https://www.instagram.com/spacecapture77/" icon={Instagram} label="Instagram" />
-              <SocialLink href="https://www.youtube.com/@SpaceCapture7" icon={Youtube} label="YouTube" />
+              <SocialLink href="https://www.youtube.com/@SpaceCapture_AI" icon={Youtube} label="YouTube" />
               <SocialLink href="https://www.linkedin.com/company/spaceai-capture/" icon={Linkedin} label="LinkedIn" />
               <SocialLink href="/social-media" icon={SocialMediaIcon} label="All Social Media" />
             </div>
@@ -178,6 +178,9 @@ export default function Footer() {
               <FooterLink href="/request-a-demo" className="text-blue-400 font-bold">Request a Demo</FooterLink>
               <FooterLink href="/blogs" className="text-purple-400 font-bold flex items-center gap-2">
                 Blogs <ArrowRight className="w-3 h-3" />
+              </FooterLink>
+              <FooterLink href="/videos" className="text-purple-400 font-bold flex items-center gap-2">
+                Videos <ArrowRight className="w-3 h-3" />
               </FooterLink>
               <FooterLink href="/playstore-app-download" className="text-purple-400 font-bold flex items-center gap-2">
                 Play Store App <ArrowRight className="w-3 h-3" />
