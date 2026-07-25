@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     "field data capture app",
 
     // Commercial intent keywords
-    "best construction inspection app",
+    "construction inspection app",
     "PlanGrid alternative",
     "iAuditor alternative",
     "construction inspection software Android",
@@ -135,7 +135,7 @@ export default function AppDownloadPage() {
                   priority
                 />
                 <div>
-                  <h2 className="text-xl font-bold">Space Capture</h2>
+                  <h2 className="text-xl font-bold">SpaceCapture</h2>
                   <a
                     href="https://www.space-sign.ai"
                     target="_blank"

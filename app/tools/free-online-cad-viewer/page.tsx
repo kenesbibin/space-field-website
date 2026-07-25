@@ -96,10 +96,10 @@ export default function CadViewerPage() {
                             <h3 className="text-2xl font-bold text-slate-900 mb-4 mt-8">Take Your Drawings to the Field</h3>
                             <div className="mt-12 p-8 bg-indigo-50 rounded-2xl border border-indigo-100 italic">
                                 "Bringing high-fidelity drawings into the browser is just the beginning. The real value is created when you pin actionable field data directly to these plans."
-                                <span className="block mt-2 font-bold not-italic">— Space Capture Development Team</span>
+                                <span className="block mt-2 font-bold not-italic">— SpaceCapture Development Team</span>
                             </div>
                             <p>
-                                Viewing is just the start. With **Space Capture**, you can take these drawings into the field, overlay them on reality capture data, easier RFI creation, and pin photos directly to specific coordinates.
+                                Viewing is just the start. With **SpaceCapture**, you can take these drawings into the field, overlay them on reality capture data, easier RFI creation, and pin photos directly to specific coordinates.
                             </p>
                         </article>
                     </div>

@@ -4,6 +4,12 @@ import CallToAction from '@/components/CallToAction';
 import { AuthorBio } from '@/components/blog/AuthorBio';
 import { Flame, ShieldCheck, WifiOff, FileBarChart, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import StructuredData from '@/components/seo/StructuredData';
+import { getServiceSchema } from '@/components/seo/ServiceSchema';
+import {
+  buildBreadcrumbsFromPath,
+  getBreadcrumbListSchema,
+} from '@/components/seo/BreadcrumbListSchema';
 
 export const metadata: Metadata = {
   title: 'Oil and Gas Inspection Software | Hazardous Digital Forms',
@@ -13,6 +19,18 @@ export const metadata: Metadata = {
     canonical: 'https://spacecapture.ai/oil-and-gas-inspection-software',
   },
 };
+
+const serviceSchema = getServiceSchema({
+  name: 'Oil and Gas Inspection Software',
+  description:
+    'Specialized oil and gas inspection software for offshore and refinery operations. Intrinsically safe compliant workflows, offline mobile app, and corrosion monitoring.',
+  url: 'https://spacecapture.ai/oil-and-gas-inspection-software',
+  serviceType: 'Oil and Gas Inspection Software',
+  areaServed: 'Worldwide',
+});
+const breadcrumbSchema = getBreadcrumbListSchema(
+  buildBreadcrumbsFromPath('/oil-and-gas-inspection-software')
+);
 
 export default function OilAndGasSoftwarePage() {
   return (
@@ -99,6 +117,13 @@ export default function OilAndGasSoftwarePage() {
 
         <CallToAction />
       </main>
+
+      <StructuredData
+        data={{
+          '@context': 'https://schema.org',
+          '@graph': [serviceSchema, breadcrumbSchema],
+        }}
+      />
     </div>
   );
 }

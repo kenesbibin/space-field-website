@@ -59,7 +59,7 @@ const FaqSection = ({ isFullPage = false }: FaqSectionProps) => {
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             {isFullPage 
               ? 'Find answers about our AI technology, field workflows, data security, and implementation process.' 
-              : 'Quick answers to common questions about Space Capture\'s AI reliability and field capabilities.'}
+              : 'Quick answers to common questions about SpaceCapture\'s AI reliability and field capabilities.'}
           </p>
         </div>
 

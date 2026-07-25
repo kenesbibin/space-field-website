@@ -86,9 +86,9 @@ export default function HeroSection() {
                 variants={fadeInUp}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-900 tracking-tight"
               >
-                Field Management App for <br />
+                AI Field Inspection Software <br />
                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                  Construction Teams
+                  That Catches Defects Before They Cost You
                 </span>
               </motion.h1>
 
@@ -96,7 +96,7 @@ export default function HeroSection() {
                 variants={fadeInUp}
                 className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium"
               >
-                Streamline your entire project lifecycle with the ultimate field management app. From automated AI defect detection to instant daily reports, SpaceCapture empowers construction teams to build safer and faster.
+                SpaceCapture uses AI to detect construction defects, automate daily reports, and track site safety — so your team catches issues early and delivers projects on time.
               </motion.p>
             </div>
 

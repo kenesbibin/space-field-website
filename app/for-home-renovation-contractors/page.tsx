@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     'home renovation builder',
     'home renovation software',
     'home renovation experts',
-    'best home renovation contractors',
+    'top home renovation contractors',
     'general contractor remodeling',
     'general contractor remodeling near me',
     'house renovation builder',

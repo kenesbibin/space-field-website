@@ -5,15 +5,33 @@ import { AuthorBio } from '@/components/blog/AuthorBio';
 import { TabletSmartphone, WifiOff, RefreshCw, PenTool, CheckCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import StructuredData from '@/components/seo/StructuredData';
+import { getServiceSchema } from '@/components/seo/ServiceSchema';
+import {
+  buildBreadcrumbsFromPath,
+  getBreadcrumbListSchema,
+} from '@/components/seo/BreadcrumbListSchema';
 
 export const metadata: Metadata = {
   title: 'Field Data Capture Software & Mobile App | SpaceCapture',
-  description: 'The ultimate Field Management App for construction. Capture photos, daily logs, and inspection forms offline on iOS and Android.',
+  description: 'AI-powered field management app for construction. Capture photos, daily logs, and inspection forms offline on iOS and Android.',
   keywords: ['Field Data Capture Software', 'Field Management App', 'Construction Field Software', 'Mobile Construction App'],
   alternates: {
     canonical: 'https://spacecapture.ai/field-data-capture',
   },
 };
+
+const serviceSchema = getServiceSchema({
+  name: 'Field Data Capture Software',
+  description:
+    'AI-powered field management app for construction. Capture photos, daily logs, and inspection forms offline on iOS and Android.',
+  url: 'https://spacecapture.ai/field-data-capture',
+  serviceType: 'Field Data Capture Software',
+  areaServed: 'Worldwide',
+});
+const breadcrumbSchema = getBreadcrumbListSchema(
+  buildBreadcrumbsFromPath('/field-data-capture')
+);
 
 export default function FieldDataCapturePage() {
   return (
@@ -122,6 +140,13 @@ export default function FieldDataCapturePage() {
 
         <CallToAction />
       </main>
+
+      <StructuredData
+        data={{
+          '@context': 'https://schema.org',
+          '@graph': [serviceSchema, breadcrumbSchema],
+        }}
+      />
     </div>
   );
 }

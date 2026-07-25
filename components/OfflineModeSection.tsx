@@ -54,12 +54,12 @@ const OfflineModeSection = () => {
                             <span>Offline-First Technology</span>
                         </div>
 
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
                             No WiFi? <br/>
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
                                 No Problem.
                             </span>
-                        </h1>
+                        </h2>
 
                         <p className="text-xl text-slate-400 mb-8 leading-relaxed max-w-xl">
                             The offline field inspection app built for the real world. Capture data in basements, tunnels, and dead zones. Sync when you get signal.

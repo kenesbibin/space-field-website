@@ -24,7 +24,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
   {
     slug: 'ai-in-defect-detection',
     title: 'AI Defect Detection with Best UI Experience',
-    excerpt: 'Explore how AI-powered defect detection in Space Capture identifies site issues instantly using image recognition.',
+    excerpt: 'Explore how AI-powered defect detection in SpaceCapture identifies site issues instantly using image recognition.',
     category: 'AI Defect Detection',
     date: 'Oct 28, 2024'
   },
@@ -157,21 +157,21 @@ export const BLOG_ARTICLES: BlogArticle[] = [
   {
     slug: 'spacecapture-playstore-launch',
     title: 'SpaceCapture App Launched on Google Play Store',
-    excerpt: 'Space Capture is now live on the Google Play Store. Discover how the mobile-first Field Module empowers teams with AI-powered site capture and defect detection.',
+    excerpt: 'SpaceCapture is now live on the Google Play Store. Discover how the mobile-first Field Module empowers teams with AI-powered site capture and defect detection.',
     category: 'Product Launch',
     date: 'Nov 05, 2024'
   },
   {
     slug: 'best-ui-experience-spacecapture',
     title: 'Best UI Experience in SpaceCapture App',
-    excerpt: 'Learn how Space Capture delivers a fast, intuitive, and clutter-free UI that helps field engineers capture defects, assign tasks, and sync data effortlessly.',
+    excerpt: 'Learn how SpaceCapture delivers a fast, intuitive, and clutter-free UI that helps field engineers capture defects, assign tasks, and sync data effortlessly.',
     category: 'UI/UX',
     date: 'Nov 01, 2024'
   },
   {
     slug: 'spacecapture-vs-plangrid',
     title: 'SpaceCapture vs PlanGrid: Best Field Inspection Software Comparison',
-    excerpt: 'Comparing Space Capture and PlanGrid for construction inspections, AI defect detection, offline capability, and pricing. See which solution fits your team best.',
+    excerpt: 'Comparing SpaceCapture and PlanGrid for construction inspections, AI defect detection, offline capability, and pricing. See which solution fits your team best.',
     category: 'Comparison',
     date: 'Nov 02, 2024'
   },

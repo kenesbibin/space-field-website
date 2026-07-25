@@ -21,6 +21,9 @@ export default function SubAccountabilityPage() {
         subtitle="From finger-pointing to factual transparency: How digital platforms eliminate disputes and build a culture of ownership across trades."
         category="Project Management"
         readTime="10 min read"
+        description="Discover how digital daily logs, photo documentation, mandatory reporting, and clear change order workflows create transparency, reduce disputes, and keep construction projects on schedule."
+        url="https://spacecapture.ai/blog/subcontractor-accountability-tips"
+        keywords={["subcontractor accountability", "digital daily logs construction", "photo documentation construction", "change order management", "construction dispute resolution"]}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

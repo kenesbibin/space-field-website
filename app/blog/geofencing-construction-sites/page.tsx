@@ -21,6 +21,9 @@ export default function GeofencingPage() {
         subtitle="Creating a digital perimeter that ensures every labor hour is verified, billable, and safe—no more guesswork in workforce tracking."
         category="Workforce Tech"
         readTime="9 min read"
+        description="Explore how GPS geofencing eliminates time theft, enables real-time safety roll calls, automates accurate cost coding, and resolves payroll disputes on multi-acre construction projects."
+        url="https://spacecapture.ai/blog/geofencing-construction-sites"
+        keywords={["construction geofencing", "GPS job site tracking", "eliminate time theft", "construction workforce management", "safety roll call GPS"]}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

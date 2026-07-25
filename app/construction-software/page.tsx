@@ -10,6 +10,7 @@ import {
   buildBreadcrumbsFromPath,
   getBreadcrumbListSchema,
 } from '@/components/seo/BreadcrumbListSchema';
+import { AlertTriangle, Link2, Eye } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Construction Software for Every Trade & Project Type',
@@ -58,7 +59,7 @@ const faqs = [
   {
     question: 'What is construction software?',
     answer:
-      'Construction software is a broad category of digital tools that help construction professionals plan, manage, and execute building projects. It includes field inspection apps, project management platforms, daily reporting tools, estimating and bidding software, safety compliance tools, and full-suite platforms that combine several of these.',
+      'Construction software is a broad category of digital tools that help construction professionals plan, manage, and execute building projects. It includes field inspection apps, project management platforms, daily reporting tools, estimating and bidding software, and safety compliance tools. Full-suite platforms combine several of these into one system.',
   },
   {
     question: 'What types of projects does SpaceCapture support?',
@@ -106,6 +107,34 @@ export default function Page() {
       title="Construction Software for Every Project Type"
       subtitle="The complete platform for residential, commercial, civil, and industrial construction. Field inspections, project management, daily reports, and AI defect detection — all in one mobile-first app."
     >
+      {/* Pain Section */}
+      <div className="bg-slate-900 rounded-2xl p-8 shadow-xl mb-12">
+        <h2 className="text-2xl font-bold text-white mb-6">Why Construction Teams Struggle with Disconnected Tools</h2>
+        <ul className="space-y-4">
+          <li className="flex items-start gap-4">
+            <Link2 className="h-6 w-6 text-red-500 shrink-0 mt-1" />
+            <div>
+              <span className="font-bold text-white block">Disconnected tools force teams to re-enter data across multiple platforms</span>
+              <span className="text-slate-300 text-sm">Switching between apps for inspections, reporting, and project management wastes hours and introduces errors.</span>
+            </div>
+          </li>
+          <li className="flex items-start gap-4">
+            <Eye className="h-6 w-6 text-amber-500 shrink-0 mt-1" />
+            <div>
+              <span className="font-bold text-white block">Field teams and office staff operate with different information</span>
+              <span className="text-slate-300 text-sm">Delayed data sync means decisions are made on outdated information, leading to costly misalignment.</span>
+            </div>
+          </li>
+          <li className="flex items-start gap-4">
+            <AlertTriangle className="h-6 w-6 text-red-400 shrink-0 mt-1" />
+            <div>
+              <span className="font-bold text-white block">Paper-based processes create blind spots in project visibility</span>
+              <span className="text-slate-300 text-sm">Without real-time data, project managers can't track progress, identify risks, or intervene before issues escalate.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
       <div className="mb-8 rounded-xl bg-indigo-50 p-6 border border-indigo-100">
         <h2 className="text-xl font-bold text-indigo-900 mb-2">
           What is Construction Software?
@@ -116,7 +145,7 @@ export default function Page() {
           projects. It includes field inspection apps, project management
           platforms, daily reporting tools, estimating and bidding software,
           safety compliance tools, and full-suite platforms that combine
-          several of these. The best modern construction software is
+          several of these. Modern construction software is
           mobile-first, AI-powered, and built around the field.
         </p>
       </div>

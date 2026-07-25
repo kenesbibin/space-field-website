@@ -170,7 +170,7 @@ const AutoAlignPage = () => {
                         "@type": "SoftwareFeature",
                         "name": "Auto-Align Technology",
                         "description": "Automated alignment of 360 photos to 2D floor plans using Computer Vision.",
-                        "provider": { "@type": "Organization", "name": "Space Capture" }
+                        "provider": { "@type": "Organization", "name": "SpaceCapture" }
                     })
                 }}
             />

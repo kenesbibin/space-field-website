@@ -2,7 +2,7 @@ import { ApolloClient, InMemoryCache, gql, HttpLink } from '@apollo/client';
 
 // Initialize Apollo Client
 const client = new ApolloClient({
-  link: new HttpLink({ uri: 'https://your-graphql-endpoint.com/graphql' }), // Replace with your actual GraphQL endpoint
+  link: new HttpLink({ uri: process.env.NEXT_PUBLIC_GRAPHQL_URL || 'https://your-graphql-endpoint.com/graphql' }),
   cache: new InMemoryCache(),
 });
 

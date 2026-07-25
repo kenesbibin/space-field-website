@@ -6,7 +6,7 @@ import Features from "@/components/Features";
 
 export const metadata: Metadata = {
   title: "HVAC Inspection Software | Digital Service Forms & Asset History",
-  description: "The #1 HVAC Inspection Software. Track asset history, streamline service calls, and eliminate paper forms for heating and cooling systems.",
+  description: "AI-powered HVAC inspection software. Track asset history, streamline service calls, and eliminate paper forms for heating and cooling systems.",
   alternates: {
     canonical: "https://spacecapture.ai/hvac-inspection-software",
   },
@@ -24,7 +24,7 @@ const HvacPage = () => {
                     Optimized for HVAC Service Workflow
                 </h2>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                    From residential installs to commercial rooftop units, Space Capture helps your technicians log preventative maintenance, capture equipment readings, and close tickets faster.
+                    From residential installs to commercial rooftop units, SpaceCapture helps your technicians log preventative maintenance, capture equipment readings, and close tickets faster.
                 </p>
              </div>
              <Features />

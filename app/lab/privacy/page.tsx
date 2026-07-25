@@ -142,7 +142,7 @@ const PrivacyPage = () => {
                         "@type": "SoftwareFeature",
                         "name": "AI Privacy Scrubbing",
                         "description": "Automated face and license plate blurring for construction imagery.",
-                        "provider": { "@type": "Organization", "name": "Space Capture" }
+                        "provider": { "@type": "Organization", "name": "SpaceCapture" }
                     })
                 }}
             />

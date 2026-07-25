@@ -21,6 +21,9 @@ export default function RemoteMonitoringPage() {
         subtitle="Scale your oversight across multiple projects without being everywhere at once—using virtual presence, live data, and intelligent remote tools."
         category="Remote Management"
         readTime="10 min read"
+        description="Learn how project executives and operations managers oversee multiple job sites effectively using remote monitoring tools, 360-degree capture, live dashboards, video collaboration, and drone integration—without constant travel."
+        url="https://spacecapture.ai/blog/remote-site-monitoring-guide"
+        keywords={["remote site monitoring", "construction project management", "360 degree site capture", "construction drone monitoring", "virtual site inspection"]}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

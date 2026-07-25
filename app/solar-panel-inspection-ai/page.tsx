@@ -24,7 +24,7 @@ const SolarPage = () => {
                     Utility-Scale Solar Intelligence
                 </h2>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                    Managing megawatts involves millions of data points. Space Capture ingests thermal and visual data to pinpoint underperforming strings and ensure maximum energy generation.
+                    Managing megawatts involves millions of data points. SpaceCapture ingests thermal and visual data to pinpoint underperforming strings and ensure maximum energy generation.
                 </p>
              </div>
              <Features />

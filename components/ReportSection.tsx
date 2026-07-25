@@ -37,10 +37,10 @@ const ReportsSection = () => {
                  <span className="text-sm font-bold text-amber-600 uppercase tracking-wider">Deep Insights</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
                 Turn Field Data into <br/>
                 <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">Business Intelligence</span>
-              </h1>
+              </h2>
               
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
                 Don't let your data collect dust. Visualize project health, track team performance, and spot safety trends instantly with our interactive dashboards.
@@ -235,7 +235,7 @@ const ReportsSection = () => {
               </h2>
               
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                Forget spending hours formatting spreadsheets. Space Capture automatically compiles your field data into professional, branded PDF reports or raw Excel exports.
+                Forget spending hours formatting spreadsheets. SpaceCapture automatically compiles your field data into professional, branded PDF reports or raw Excel exports.
               </p>
 
               <ul className="space-y-4">

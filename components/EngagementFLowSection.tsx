@@ -37,10 +37,10 @@ const EngagementFlowsSection = () => {
                  <span className="text-sm font-bold text-purple-700 uppercase tracking-wider">Automation</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
                 Visual <br/>
                 <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Engagement Flows</span>
-              </h1>
+              </h2>
               
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
                 Design complex field logic without writing code. Use our drag-and-drop canvas to route tasks, trigger notifications, and update records based on real-time data inputs.

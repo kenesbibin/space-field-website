@@ -3,6 +3,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Users } from 'lucide-react';
 import CallToAction from '@/components/CallToAction';
+import StructuredData from '@/components/seo/StructuredData';
+import { getServiceSchema } from '@/components/seo/ServiceSchema';
+import {
+  buildBreadcrumbsFromPath,
+  getBreadcrumbListSchema,
+} from '@/components/seo/BreadcrumbListSchema';
 
 export const metadata: Metadata = {
   title: 'Industries & Teams We Serve | SpaceCapture Field Software',
@@ -39,6 +45,18 @@ const PERSONAS = [
     excerpt: 'Verify as-built conditions against design intent with visual documentation.',
   },
 ];
+
+const serviceSchema = getServiceSchema({
+  name: 'Industries & Teams We Serve',
+  description:
+    'SpaceCapture is built for general contractors, subcontractors, facility managers, property developers, and architects who need AI-powered field inspections.',
+  url: 'https://spacecapture.ai/who-we-serve',
+  serviceType: 'Field Inspection Software for Teams',
+  areaServed: 'Worldwide',
+});
+const breadcrumbSchema = getBreadcrumbListSchema(
+  buildBreadcrumbsFromPath('/who-we-serve')
+);
 
 export default function WhoWeServeLandingPage() {
   return (
@@ -86,6 +104,13 @@ export default function WhoWeServeLandingPage() {
 
         <CallToAction />
       </main>
+
+      <StructuredData
+        data={{
+          '@context': 'https://schema.org',
+          '@graph': [serviceSchema, breadcrumbSchema],
+        }}
+      />
     </div>
   );
 }

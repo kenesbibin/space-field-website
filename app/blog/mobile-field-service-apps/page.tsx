@@ -21,6 +21,9 @@ export default function MobileFieldAppsPage() {
         subtitle="Your field teams deserve tools that work as hard as they do. Here are the critical capabilities every construction mobile app must have in 2026."
         category="Mobile Tech"
         readTime="10 min read"
+        description="Discover the must-have features in mobile field service apps—including offline functionality, digital signatures, voice-to-text, asset history access, and more—to boost technician productivity and ensure adoption."
+        url="https://spacecapture.ai/blog/mobile-field-service-apps"
+        keywords={["mobile field service apps", "construction mobile features", "offline field app", "digital signature capture", "field service management"]}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

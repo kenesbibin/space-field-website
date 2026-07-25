@@ -191,7 +191,7 @@ const TimeLapsePage = () => {
                         "@type": "SoftwareFeature",
                         "name": "Construction Time-Lapse Engine",
                         "description": "Automated 4D progress tracking for construction sites.",
-                        "provider": { "@type": "Organization", "name": "Space Capture" }
+                        "provider": { "@type": "Organization", "name": "SpaceCapture" }
                     })
                 }}
             />

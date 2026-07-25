@@ -7,15 +7,15 @@ import { BlogPostLayout } from "@/components/blog/BlogPostLayout";
 import CallToAction from "@/components/CallToAction";
 
 export const metadata: Metadata = {
-    title: "AI Defect Detection with Best UI Experience | SpaceCapture",
+    title: "AI Defect Detection with UI Experience | SpaceCapture",
     description:
-        "Discover how SpaceCapture combines AI defect detection with a best-in-class UI experience designed for real construction job sites.",
+        "Discover how SpaceCapture combines AI defect detection with a refined UI experience designed for real construction job sites.",
     keywords: [
         "AI defect detection UI",
         "SpaceCapture UX",
         "construction app UI",
         "offline AI inspection",
-        "best field app experience",
+        "field app experience",
     ],
     alternates: {
         canonical: 'https://spacecapture.ai/blog/ai-in-defect-detection',
@@ -26,10 +26,13 @@ export default function AiDefectDetectionBestUIPage() {
     return (
         <>
             <BlogPostLayout
-                title="AI Defect Detection with Best UI Experience"
+                title="AI Defect Detection with UI Experience"
                 subtitle="Powerful AI meets a clean, offline-first UI built for real construction sites."
                 category="AI / UI Experience"
                 readTime="6 min read"
+                description="Discover how SpaceCapture combines AI defect detection with a refined UI experience designed for real construction job sites."
+                url="https://spacecapture.ai/blog/ai-in-defect-detection"
+                keywords={["AI defect detection", "construction app UI", "field inspection app design", "offline AI inspection", "construction quality control"]}
             >
 
 
@@ -38,7 +41,7 @@ export default function AiDefectDetectionBestUIPage() {
                     <p className="lead text-xl text-slate-800 font-medium mb-8">
                         AI is only effective when people can actually use it easily.
                         SpaceCapture combines advanced AI defect detection with one of the
-                        best UI experiences in construction field apps — fast, clear, and
+                        refined UI experience in construction field apps — fast, clear, and
                         stress-free.
                     </p>
 

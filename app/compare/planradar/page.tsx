@@ -20,14 +20,14 @@ const PlanRadarPage = () => {
                 transition={{ duration: 0.6 }}
             >
                 <span className="inline-block py-1 px-3 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-6">
-                    Space Capture vs PlanRadar
+                    SpaceCapture vs PlanRadar
                 </span>
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
                     Don't Just Pin Tickets. <br/>
                     <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Solve Them with AI.</span>
                 </h1>
                 <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                    PlanRadar is a great digital ticketing tool. Space Capture is an autonomous inspection engine. Move beyond manual pins and let AI detect defects for you.
+                    PlanRadar is a great digital ticketing tool. SpaceCapture is an autonomous inspection engine. Move beyond manual pins and let AI detect defects for you.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -79,13 +79,13 @@ const PlanRadarPage = () => {
                     </ul>
                 </div>
 
-                {/* Space Capture Card */}
+                {/* SpaceCapture Card */}
                 <div className="bg-white p-8 rounded-2xl border-2 border-emerald-500 shadow-xl relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
                     
                     <div className="flex items-center gap-3 mb-6">
                         <BrainCircuit className="w-6 h-6 text-emerald-600" />
-                        <h3 className="text-xl font-bold text-emerald-600">Space Capture</h3>
+                        <h3 className="text-xl font-bold text-emerald-600">SpaceCapture</h3>
                     </div>
                     <h4 className="text-2xl font-bold text-slate-900 mb-4">AI does the work.</h4>
                     <ul className="space-y-4 text-slate-600">
@@ -118,7 +118,7 @@ const PlanRadarPage = () => {
                         <tr>
                             <th className="text-left py-6 px-6 bg-slate-50 border-b-2 border-slate-200 w-1/3 text-lg font-bold text-slate-700">Feature</th>
                             <th className="text-center py-6 px-6 bg-slate-50 border-b-2 border-slate-200 w-1/3 text-lg font-bold text-slate-500">PlanRadar</th>
-                            <th className="text-center py-6 px-6 bg-emerald-50 border-b-2 border-emerald-200 w-1/3 text-lg font-bold text-emerald-700">Space Capture</th>
+                            <th className="text-center py-6 px-6 bg-emerald-50 border-b-2 border-emerald-200 w-1/3 text-lg font-bold text-emerald-700">SpaceCapture</th>
                         </tr>
                     </thead>
                     <tbody>

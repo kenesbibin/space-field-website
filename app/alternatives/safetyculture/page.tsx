@@ -8,7 +8,7 @@ import CallToAction from "@/components/CallToAction";
 export const metadata: Metadata = {
   title: "Best Alternatives to SafetyCulture | SpaceCapture AI",
   description: "Stop manually filling specialized forms. Switch to SpaceCapture for automated defect detection, real-time risk quantification, and generative checklists.",
-  keywords: "SafetyCulture alternative, iAuditor alternative, best inspection app, automated checklist, spacecapture vs safetyculture",
+  keywords: "SafetyCulture alternative, iAuditor alternative, AI-powered inspection app, automated checklist, spacecapture vs safetyculture",
   alternates: {
     canonical: 'https://spacecapture.ai/alternatives/safetyculture',
   },

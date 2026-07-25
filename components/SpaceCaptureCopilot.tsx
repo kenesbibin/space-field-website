@@ -4,6 +4,7 @@ import React from "react";
 import { CopilotPopup } from "@copilotkit/react-ui";
 import { useCopilotAction } from "@copilotkit/react-core";
 import { sendDemoRequestFromChat } from "../utils/sendDemoRequest";
+import { trackChatbotOpened } from "@/lib/analytics";
 import "@copilotkit/react-ui/styles.css";
 
 export default function SpaceCaptureCopilot() {
@@ -83,6 +84,7 @@ export default function SpaceCaptureCopilot() {
         `
       }} />
       <CopilotPopup
+        onSetOpen={(open) => { if (open) trackChatbotOpened(); }}
         instructions={`
 You are the **SPACE CAPTURE Virtual Assistant**, a friendly, helpful, and professional AI for SPACE CAPTURE — a mobile solution for field operations in construction, maintenance, and inspection sectors.
 

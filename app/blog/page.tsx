@@ -30,7 +30,7 @@ export default function BlogIndexPage() {
               Field Module Software <br /> <span className="text-blue-600">& AI Features</span>
             </h1>
             <p className="text-lg text-slate-600 leading-relaxed">
-              Explore Space Capture's suite of AI Field Modules. Guides on Defect Detection, Maintenance, and Mobile Inspection Software.
+              Explore SpaceCapture's suite of AI Field Modules. Guides on Defect Detection, Maintenance, and Mobile Inspection Software.
             </p>
           </div>
         </section>

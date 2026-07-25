@@ -82,7 +82,7 @@ const ConstructionSection = () => {
               </motion.h1>
               
               <motion.p variants={itemVariants} className="mt-6 text-lg text-slate-600 leading-relaxed max-w-xl">
-                The ultimate construction field management software. Eliminate paperwork, automate punch lists, and deliver projects on schedule with real-time site monitoring.
+                AI-powered construction field management software. Eliminate paperwork, automate punch lists, and deliver projects on schedule with real-time site monitoring.
               </motion.p>
             </div>
 

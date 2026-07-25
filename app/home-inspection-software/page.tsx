@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = {
   title: 'Home Inspection Software & App | House Inspection Tools',
   description:
-    'The #1 home inspection software for residential inspectors. Run faster home and house inspections, generate digital reports, and manage client deliverables from your phone or tablet.',
+    'AI-powered home inspection software for residential inspectors. Run faster home and house inspections, generate digital reports, and manage client deliverables from your phone or tablet.',
   keywords: [
     'home inspection software',
     'home inspection',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Home Inspection Software & App | SpaceCapture',
     description:
-      'The #1 home inspection software. Run faster home and house inspections, generate digital reports, and manage client deliverables from your phone.',
+      'AI-powered home inspection software. Run faster home and house inspections, generate digital reports, and manage client deliverables from your phone.',
     url: 'https://spacecapture.ai/home-inspection-software',
     siteName: 'SpaceCapture',
   },

@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, LayoutGrid, Check, Plus } from 'lucide-react';
+import { trackCtaClicked } from '@/lib/analytics';
 
 const CallToActionSection = () => {
   return (
@@ -33,12 +34,12 @@ const CallToActionSection = () => {
             className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0"
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              Take Control of <br />
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">SPACE CAPTURE</span> Today.
+              Start Inspecting Smarter <br />
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">with SpaceCapture</span>
             </h2>
 
             <p className="mt-6 text-slate-600 text-lg font-medium leading-relaxed">
-              Stop chasing paper trails. Sync your office and field teams instantly with the all-in-one platform built for construction and operations.
+              Replace paper checklists and manual photo logs with AI-powered defect detection, automated reports, and real-time site visibility — from any device.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -46,6 +47,7 @@ const CallToActionSection = () => {
                 href="https://www.amspace.ai/login?type=Field&moduleId=8b3b6af5-07a3-44b2-b69e-342b61d71718&invite=guest"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackCtaClicked('Try for Free', 'https://www.amspace.ai/login')}
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-slate-900 text-white text-base font-bold hover:bg-slate-800 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
                 Try for Free
@@ -53,6 +55,7 @@ const CallToActionSection = () => {
               </a>
               <a
                 href="/request-a-demo"
+                onClick={() => trackCtaClicked('Book a Demo', '/request-a-demo')}
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-slate-700 border border-slate-200 font-bold hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 hover:-translate-y-1 transition-all duration-300 shadow-sm"
               >
                 Book a Demo

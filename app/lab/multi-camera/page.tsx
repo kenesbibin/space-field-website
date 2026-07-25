@@ -68,7 +68,7 @@ const MultiCameraPage = () => {
                     <div>
                         <h3 className="text-2xl font-bold mb-4">Unified Ingestion Pipeline</h3>
                         <p className="text-slate-400 mb-8 leading-relaxed">
-                            Stop juggling 5 different vendor apps. Our **Space Capture SDK** connects directly to hardware APIs, allowing you to control scanning parameters, battery status, and file transfer from one dashboard.
+                            Stop juggling 5 different vendor apps. Our **SpaceCapture SDK** connects directly to hardware APIs, allowing you to control scanning parameters, battery status, and file transfer from one dashboard.
                         </p>
                         <button className="px-6 py-3 bg-white text-slate-900 rounded-lg font-bold hover:bg-slate-100 transition-colors flex items-center gap-2">
                             View Supported Devices List <ArrowRight className="w-4 h-4" />
@@ -101,7 +101,7 @@ const MultiCameraPage = () => {
                         "@type": "SoftwareFeature",
                         "name": "Multi-Camera Support",
                         "description": "Compatibility with major 3D capture hardware brands.",
-                        "provider": { "@type": "Organization", "name": "Space Capture" }
+                        "provider": { "@type": "Organization", "name": "SpaceCapture" }
                     })
                 }}
             />

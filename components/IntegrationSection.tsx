@@ -37,10 +37,10 @@ const IntegrationsSection = () => {
                  <span className="text-sm font-bold text-indigo-700 uppercase tracking-wider">Developer Tools</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
                 Powerful <br/>
                 <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Webhooks</span>
-              </h1>
+              </h2>
               
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
                 We've worked hard to flatten our data structure and provide the most robust webhooks in the industry. Instantly push field data to your CRM, Slack, or custom internal tools the moment a form is submitted.
@@ -213,7 +213,7 @@ const IntegrationsSection = () => {
               </h2>
               
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                Go beyond simple data piping. Integrate Space Capture with AI Agents to analyze field data in real-time and trigger complex, multi-step workflows across your entire software stack automatically.
+                Go beyond simple data piping. Integrate SpaceCapture with AI Agents to analyze field data in real-time and trigger complex, multi-step workflows across your entire software stack automatically.
               </p>
 
               <ul className="space-y-4">

@@ -6,7 +6,7 @@ import Features from "@/components/Features";
 
 export const metadata: Metadata = {
   title: "Telecom Tower Audit App | 5G Site Inspections & Asset Closeouts",
-  description: "Accelerate 5G tower rollouts with the best Telecom Tower Audit App. Capture high-res photos, verify mount installation, and close out sites in record time.",
+  description: "Accelerate 5G tower rollouts with an AI-powered telecom tower audit app. Capture high-res photos, verify mount installation, and close out sites in record time.",
   alternates: {
     canonical: 'https://spacecapture.ai/telecom-tower-audit-app',
   },

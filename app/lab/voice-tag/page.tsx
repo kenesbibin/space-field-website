@@ -145,7 +145,7 @@ const VoiceTagPage = () => {
                         "@type": "SoftwareFeature",
                         "name": "Voice-to-Tag Reality Capture",
                         "description": "AI-powered voice transcription for 3D pinning on construction sites.",
-                        "provider": { "@type": "Organization", "name": "Space Capture" }
+                        "provider": { "@type": "Organization", "name": "SpaceCapture" }
                     })
                 }}
             />

@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     'general contractor remodeling',
     'general contractor remodeling near me',
     'general contracting services',
-    'best general contractors',
+    'top general contractors',
     'residential general construction',
     'commercial general contractors',
   ],

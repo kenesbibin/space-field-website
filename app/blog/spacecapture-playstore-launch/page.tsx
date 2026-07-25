@@ -30,6 +30,9 @@ export default function SpaceCapturePlayStoreLaunch() {
                 subtitle="Offline-first AI-powered field inspections are now accessible to construction teams everywhere."
                 category="App Launch"
                 readTime="7 min read"
+                description="SpaceCapture is now available on Google Play Store. Download the offline-first AI-powered field inspection app for construction teams."
+                url="https://spacecapture.ai/blog/spacecapture-playstore-launch"
+                keywords={["SpaceCapture Play Store", "construction field app android", "AI inspection app download", "offline construction app", "Google Play construction app"]}
             >
                 {/* Hero Image */}
                 <div className="relative w-full h-[420px] rounded-2xl overflow-hidden mb-10 shadow-lg border border-slate-100">

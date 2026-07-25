@@ -4,6 +4,7 @@ import { gql } from '@apollo/client';
 import { motion } from 'framer-motion';
 import { FileSignature, Shield, Zap, CheckCircle } from 'lucide-react';
 import { client } from '@/lib/apollo-client';
+import { trackDemoRequested } from '@/lib/analytics';
 
 // GraphQL Mutation
 const CREATE_DEMO_REQUEST = gql`
@@ -125,6 +126,7 @@ function DemoRequestContent() {
           variables: { input: formData },
         });
         setData(result.data);
+        trackDemoRequested('demo_request_form');
       } catch (err) {
         // Error handling can be added here if needed
         console.error('Error submitting form:', err);

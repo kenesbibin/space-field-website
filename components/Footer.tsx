@@ -22,10 +22,10 @@ export default function Footer() {
               <div className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center ring-4 ring-slate-900 group-hover:ring-slate-800 transition-all duration-300">
                 <CheckCircle2 className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-extrabold text-white tracking-tight">SPACE CAPTURE</span>
+              <span className="text-2xl font-extrabold text-white tracking-tight">SpaceCapture</span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
-              The ultimate mobile command center for field operations. Streamline tasks, automate reporting, and sync your workforce in real-time with AI-powered tools.
+              An AI-powered mobile command center for field operations. Simplify tasks, automate reporting, and sync your workforce in real-time with AI-powered tools.
             </p>
             <div className="flex gap-4 mb-6">
               <SocialLink href="https://x.com/SpaceCapture7" icon={Twitter} label="Twitter" />
@@ -125,6 +125,8 @@ export default function Footer() {
                 <FooterLink href="/construction-site-management">Construction Site Management</FooterLink>
                 <FooterLink href="/defect-detection-ai">Defect Detection AI</FooterLink>
                 <FooterLink href="/field-data-capture-software">Field Data Capture Software</FooterLink>
+                <FooterLink href="/field-data-capture">Field Data Capture</FooterLink>
+                <FooterLink href="/house-inspection-reports">House Inspection Reports</FooterLink>
                 {/* Additional Solutions */}
                 <FooterLink href="/offline-field-inspection-app">Offline Field App</FooterLink>
                 <FooterLink href="/digitize-paper-forms">Digitize Paper Forms</FooterLink>
@@ -133,6 +135,11 @@ export default function Footer() {
                 <FooterLink href="/field-workforce-management">Workforce Management</FooterLink>
                 <FooterLink href="/real-time-construction-monitoring">Real-Time Monitoring</FooterLink>
                 <FooterLink href="/oil-and-gas-inspection-software">Oil & Gas Inspection Software</FooterLink>
+                <FooterLink href="/electrical-inspection-software">Electrical Inspection Software</FooterLink>
+                <FooterLink href="/plumbing-inspection-software">Plumbing Inspection Software</FooterLink>
+                <FooterLink href="/roofing-inspection-software">Roofing Inspection Software</FooterLink>
+                <FooterLink href="/fire-safety-inspection-software">Fire Safety Inspection Software</FooterLink>
+                <FooterLink href="/bridge-inspection-software">Bridge Inspection Software</FooterLink>
               </ul>
             </div>
           </div>
@@ -159,6 +166,7 @@ export default function Footer() {
             <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Resources & Support</h3>
             <ul className="space-y-4">
               <FooterLink href="/about-us">About Us</FooterLink>
+              <FooterLink href="/customers">Customers</FooterLink>
               <FooterLink href="/trust">Trust Center</FooterLink>
               <FooterLink href="/pricing">Pricing</FooterLink>
               <FooterLink href="/faq">Help & FAQ</FooterLink>
@@ -256,7 +264,7 @@ export default function Footer() {
             itemType="https://schema.org/Organization"
           >
             <p className="text-xs text-slate-600">
-              © 2026 <span itemProp="name">SPACE CAPTURE</span> by{' '}
+              © 2026 <span itemProp="name">SpaceCapture</span> by{' '}
               <span itemProp="parentOrganization" itemScope itemType="https://schema.org/Organization">
                 <span itemProp="name">Space AI Inc.</span>
               </span>
@@ -277,7 +285,7 @@ export default function Footer() {
             <meta itemProp="email" content="contact@spacecapture.ai" />
             <meta
               itemProp="description"
-              content="SpaceCapture is the #1 AI-powered construction & field inspection software for inspections, defect detection, daily reports, and safety compliance."
+              content="SpaceCapture is an AI-powered construction & field inspection software for inspections, defect detection, daily reports, and safety compliance."
             />
           </div>
         </div>
