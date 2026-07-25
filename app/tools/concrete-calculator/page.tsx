@@ -95,7 +95,7 @@ export default function ConcreteCalculatorPage() {
 
                             <h3 className="text-2xl font-bold text-slate-900 mb-4 mt-8">Streamline Site Compliance</h3>
                             <p>
-                                Efficient material ordering is the foundation of site management. **Space Capture** goes beyond estimation, providing digital forms for concrete delivery tracking, slump tests, and curing logs to ensure full structural compliance.
+                                Efficient material ordering is the foundation of site management. **SpaceCapture** goes beyond estimation, providing digital forms for concrete delivery tracking, slump tests, and curing logs to ensure full structural compliance.
                             </p>
                         </article>
                     </div>

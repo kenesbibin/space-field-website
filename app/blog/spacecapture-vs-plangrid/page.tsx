@@ -30,6 +30,9 @@ export default function SpaceCaptureVsPlanGrid() {
                 subtitle="A complete comparison of AI-powered inspections, offline capability, mobile experience, and real-time collaboration."
                 category="Comparison"
                 readTime="8 min read"
+                description="Compare SpaceCapture and PlanGrid for AI defect detection, offline inspections, mobile performance, and construction reporting."
+                url="https://spacecapture.ai/blog/spacecapture-vs-plangrid"
+                keywords={["SpaceCapture vs PlanGrid", "PlanGrid alternative", "construction inspection app comparison", "AI defect detection software", "offline field inspection app"]}
             >
                 {/* Hero Image */}
              

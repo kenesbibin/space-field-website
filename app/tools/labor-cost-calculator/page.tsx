@@ -21,7 +21,7 @@ export default function LaborCalculatorPage() {
     "description": "A guide to estimating labor burden, markup, and total project labor costs for contractors.",
     "author": {
       "@type": "Organization",
-      "name": "Space Capture"
+      "name": "SpaceCapture"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -83,7 +83,7 @@ export default function LaborCalculatorPage() {
 
               <h3 className="text-2xl font-bold text-slate-900 mb-4 mt-8">Improving Workforce Productivity</h3>
               <p>
-                Estimating is just the first step. To keep labor costs under control during execution, you need real-time visibility. **Space Capture** helps you track actual hours against your budget, monitor productivity, and adjust schedules on the fly to prevent overruns.
+                Estimating is just the first step. To keep labor costs under control during execution, you need real-time visibility. **SpaceCapture** helps you track actual hours against your budget, monitor productivity, and adjust schedules on the fly to prevent overruns.
               </p>
             </article>
           </div>

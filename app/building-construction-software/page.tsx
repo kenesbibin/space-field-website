@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = {
   title: 'Building Construction Software | Build Smarter, Faster',
   description:
-    'The #1 building construction software for residential, commercial, and industrial builders. AI-powered inspections, project management, daily reports, and safety compliance in one mobile-first platform.',
+    'AI-powered building construction software for residential, commercial, and industrial builders. Inspections, project management, daily reports, and safety compliance in one mobile-first platform.',
   keywords: [
     'building construction',
     'building construction software',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Building Construction Software | SpaceCapture',
     description:
-      'The #1 building construction software for residential, commercial, and industrial builders. AI-powered inspections, project management, daily reports, and safety compliance in one mobile-first platform.',
+    'AI-powered building construction software for residential, commercial, and industrial builders. AI-powered inspections, project management, daily reports, and safety compliance in one mobile-first platform.',
     url: 'https://spacecapture.ai/building-construction-software',
     siteName: 'SpaceCapture',
   },
@@ -94,7 +94,7 @@ const faqSchema = getFaqSchema(faqs);
 const serviceSchema = getServiceSchema({
   name: 'Building Construction Software',
   description:
-    'The #1 building construction software for residential, commercial, and industrial builders. AI-powered inspections, project management, daily reports, and safety compliance in one mobile-first platform.',
+    'AI-powered building construction software for residential, commercial, and industrial builders. Inspections, project management, daily reports, and safety compliance in one mobile-first platform.',
   url: 'https://spacecapture.ai/building-construction-software',
   serviceType: 'Building Construction Software',
   areaServed: 'Worldwide',

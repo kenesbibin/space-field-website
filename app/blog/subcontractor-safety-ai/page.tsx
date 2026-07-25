@@ -19,6 +19,9 @@ export default function ArticlePage() {
         subtitle="From reactive policing to proactive protection: How AI ensures every trade meets safety standards without constant oversight."
         category="Workforce Management"
         readTime="9 min read"
+        description="Learn how AI automates PPE verification, certification checks, and daily safety audits to ensure consistent compliance across all trades—protecting workers, reducing liability, and building a true safety culture."
+        url="https://spacecapture.ai/blog/subcontractor-safety-ai"
+        keywords={["AI safety compliance", "subcontractor safety management", "PPE verification automation", "construction safety audits", "job site safety monitoring"]}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

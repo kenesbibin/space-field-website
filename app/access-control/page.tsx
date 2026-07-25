@@ -9,16 +9,16 @@ import { SOLUTIONS_DATA } from '@/lib/seo-data';
 // SEO Metadata
 export const metadata: Metadata = {
   title: 'Role-Based Access Control (RBAC) | SpaceCapture',
-  description: 'Secure your field data with Space Capture’s granular permissions. Assign tasks, manage user roles, and control access to specific projects or forms.',
-  keywords: ['RBAC', 'user management', 'access control', 'field data security', 'task assignment', 'Space Capture'],
+  description: 'Secure your field data with SpaceCapture’s granular permissions. Assign tasks, manage user roles, and control access to specific projects or forms.',
+  keywords: ['RBAC', 'user management', 'access control', 'field data security', 'task assignment', 'SpaceCapture'],
   alternates: {
     canonical: 'https://spacecapture.ai/access-control',
   },
   openGraph: {
-    title: 'Space Capture Access Control',
+    title: 'SpaceCapture Access Control',
     description: 'Enterprise-grade security and user management.',
     url: 'https://spacecapture.ai/access-control',
-    siteName: 'Space Capture',
+    siteName: 'SpaceCapture',
     locale: 'en_US',
     type: 'website',
   },

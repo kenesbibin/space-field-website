@@ -20,6 +20,9 @@ export default function ArticlePage() {
         subtitle="Scaling inspections safely and efficiently: How drones, photogrammetry, and AI are revolutionizing facade, roof, and infrastructure assessments."
         category="Remote Inspection"
         readTime="9 min read"
+        description="Learn how drones combined with AI and photogrammetry enable safe, fast, and accurate inspections of building facades, roofs, solar farms, bridges, and large infrastructure—reducing costs and risks."
+        url="https://spacecapture.ai/blog/drone-defect-detection"
+        keywords={["drone defect detection", "AI drone inspection", "construction drone surveys", "facade inspection drone", "infrastructure drone assessment"]}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

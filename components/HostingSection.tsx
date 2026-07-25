@@ -36,13 +36,13 @@ const HostingSection = () => {
                  <span className="text-sm font-bold text-indigo-700 uppercase tracking-wider">Deployment</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
                 Flexible Hosting <br/>
                 <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Your Way</span>
-              </h1>
+              </h2>
               
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                Space Capture offers the most flexible hosting options in the market. Whether you need the speed of our global SaaS cloud, the isolation of a private instance, or total control via on-premise deployment—we've got you covered.
+                SpaceCapture offers the most flexible hosting options in the market. Whether you need the speed of our global SaaS cloud, the isolation of a private instance, or total control via on-premise deployment—we've got you covered.
               </p>
 
               <div className="flex gap-4">
@@ -65,14 +65,14 @@ const HostingSection = () => {
             >
                <div className="relative w-full max-w-lg">
                   
-                  {/* Central Hub (Space Capture Core) */}
+                  {/* Central Hub (SpaceCapture Core) */}
                   <div className="relative z-20 bg-white rounded-2xl shadow-2xl border border-slate-200 p-6 mb-8">
                       <div className="flex items-center gap-4 mb-4">
                           <div className="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-200">
                               <Globe className="w-6 h-6 text-white" />
                           </div>
                           <div>
-                              <h3 className="text-lg font-bold text-slate-900">Space Capture Core</h3>
+                              <h3 className="text-lg font-bold text-slate-900">SpaceCapture Core</h3>
                               <p className="text-xs text-slate-500">Deployment Environment</p>
                           </div>
                       </div>

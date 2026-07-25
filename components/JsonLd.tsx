@@ -5,7 +5,7 @@ export default function JsonLd() {
       {
         "@type": "Organization",
         "@id": "https://spacecapture.ai/#organization",
-        "name": "Space Capture",
+        "name": "SpaceCapture",
         "url": "https://spacecapture.ai",
         "logo": {
           "@type": "ImageObject",
@@ -29,7 +29,7 @@ export default function JsonLd() {
       },
       {
         "@type": "SoftwareApplication",
-        "name": "Space Capture",
+        "name": "SpaceCapture",
         "applicationCategory": "ConstructionManagement, BusinessApplication",
         "operatingSystem": "Android, iOS",
         "offers": {
@@ -37,7 +37,7 @@ export default function JsonLd() {
           "price": "0",
           "priceCurrency": "USD"
         },
-        "description": "The ultimate mobile command center for field operations. Streamline tasks, automate reporting, and sync your workforce in real-time with AI-powered tools.",
+        "description": "An AI-powered mobile command center for field operations. Streamline tasks, automate reporting, and sync your workforce in real-time with AI-powered tools.",
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.8",
@@ -45,12 +45,12 @@ export default function JsonLd() {
         },
         "author": {
           "@type": "Organization",
-          "name": "Space Capture"
+          "name": "SpaceCapture"
         }
       },
       {
         "@type": "LocalBusiness",
-        "name": "Space Capture",
+        "name": "SpaceCapture",
         "image": "https://spacecapture.ai/images/logo.jpg",
         "telephone": "+14198201487",
         "email": "support@spacecapture.ai",

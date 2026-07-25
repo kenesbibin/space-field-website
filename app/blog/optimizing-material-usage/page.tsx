@@ -19,6 +19,9 @@ export default function ArticlePage() {
         subtitle="How AI-powered tracking eliminates over-ordering, reduces waste, prevents theft, and enables true just-in-time material management on construction sites."
         category="Sustainability"
         readTime="9 min read"
+        description="Reduce construction waste by up to 30% with AI-powered inventory tracking, delivery verification, real-time consumption monitoring, and just-in-time ordering."
+        url="https://spacecapture.ai/blog/optimizing-material-usage"
+        keywords={["construction material optimization", "AI inventory tracking", "reduce construction waste", "just-in-time material delivery", "construction sustainability"]}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

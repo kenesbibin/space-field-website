@@ -21,6 +21,9 @@ export default function AiVsManualPage() {
         subtitle="Uncovering the hidden expenses of traditional quality control and the proven ROI of automated AI defect detection."
         category="AI Cost Analysis"
         readTime="10 min read"
+        description="Compare the true costs of manual quality inspections versus AI-powered automated defect detection. Discover labor savings, reduced rework, higher accuracy, and real ROI numbers for construction teams."
+        url="https://spacecapture.ai/blog/ai-vs-manual-inspections"
+        keywords={["AI vs manual inspections", "construction inspection costs", "automated defect detection ROI", "construction quality automation", "inspection cost comparison"]}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

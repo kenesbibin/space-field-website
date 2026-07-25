@@ -565,11 +565,11 @@ export default function Navbar() {
               <Link
                 href="/"
                 className="flex items-center rounded-lg px-1 py-1 transition-colors hover:bg-white/5 cursor-pointer"
-                aria-label="Space Capture Home"
+                aria-label="SpaceCapture Home"
               >
                 <Image
                   src="/images/space-capture-navbar.png"
-                  alt="Space Capture"
+                  alt="SpaceCapture"
                   width={106}
                   height={80}
                   priority
@@ -757,6 +757,22 @@ export default function Navbar() {
                   >
                     Tools
                   </Link>
+
+                  {/* Compare Link */}
+                  <Link
+                    href="/compare"
+                    className="inline-block text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer py-2"
+                  >
+                    Compare
+                  </Link>
+
+                  {/* Resources Link */}
+                  <Link
+                    href="/resources"
+                    className="inline-block text-gray-700 font-semibold transition-colors hover:text-purple-600 cursor-pointer py-2"
+                  >
+                    Resources
+                  </Link>
                 </div>
 
                 {/* Desktop: Contact & Actions */}
@@ -883,6 +899,20 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Tools
+              </Link>
+              <Link
+                href="/compare"
+                className="block border-b border-gray-200 py-3 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Compare
+              </Link>
+              <Link
+                href="/resources"
+                className="block border-b border-gray-200 py-3 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Resources
               </Link>
 
               {/* Products Section */}

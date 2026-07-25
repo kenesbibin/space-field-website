@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 
-const PROMPT = "As a Field Officer, I want to know why SpaceCapture is the best platform for capturing, documenting, and monitoring construction site activities while improving communication, quality, safety, and project visibility.";
+const PROMPT = "As a Field Officer, I want to know why SpaceCapture is the right platform for capturing, documenting, and monitoring construction site activities while improving communication, quality, safety, and project visibility.";
 
 const ChatGPTIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className}>

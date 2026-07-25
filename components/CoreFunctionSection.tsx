@@ -99,18 +99,18 @@ const CoreFunctionsSection = () => {
           >
             <motion.div variants={itemVariants} className="flex items-center gap-2 mb-6">
                <div className="h-1 w-12 bg-indigo-600 rounded-full"></div>
-               <span className="text-sm font-bold text-indigo-700 uppercase tracking-wider">Space Capture</span>
+               <span className="text-sm font-bold text-indigo-700 uppercase tracking-wider">SpaceCapture</span>
             </motion.div>
 
-            <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+            <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
               Core Features <br/>
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Overview
               </span>
-            </motion.h1>
+            </motion.h2>
             
             <motion.p variants={itemVariants} className="text-lg text-slate-600 leading-relaxed mb-8">
-              Space Capture includes all the powerful field data tools you need at an enterprise scale. Create professional, intelligent forms using our extensive list of modules, smart logic, and deep branding options.
+              SpaceCapture includes all the powerful field data tools you need at an enterprise scale. Create professional, intelligent forms using our extensive list of modules, smart logic, and deep branding options.
             </motion.p>
 
             <motion.div variants={itemVariants}>

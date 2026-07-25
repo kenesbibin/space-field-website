@@ -10,22 +10,22 @@ export const faqData: FaqItem[] = [
   // --- GENERAL ---
   {
     category: 'General',
-    question: "What makes Space Capture different from Matterport or HoloBuilder?",
-    answer: "While Matterport focuses on virtual tours for real estate, Space Capture is built specifically for construction engineering. We prioritize 'Engineering-Grade' accuracy (2mm), offline capabilities, and automated AI analysis for hazards and defects, rather than just visual walkthroughs."
+    question: "What makes SpaceCapture different from Matterport or HoloBuilder?",
+    answer: "While Matterport focuses on virtual tours for real estate, SpaceCapture is built specifically for construction engineering. We prioritize 'Engineering-Grade' accuracy (2mm), offline capabilities, and automated AI analysis for hazards and defects, rather than just visual walkthroughs."
   },
   {
     category: 'General',
-    question: "Is Space Capture a mobile app or a web platform?",
+    question: "Is SpaceCapture a mobile app or a web platform?",
     answer: "It is both. Our mobile app (iOS/Android) handles high-speed field capture, LiDAR scanning, and offline data collection. The web platform is for project management, detailed 3D analysis, and generating reports."
   },
   {
     category: 'General',
-    question: "Do I need special hardware to use Space Capture?",
+    question: "Do I need special hardware to use SpaceCapture?",
     answer: "No. You can start with just a standard smartphone. However, for Survey-Grade accuracy, we support integration with LiDAR scanners (Leica, Faro), 360° cameras (Insta360, Ricoh), and drones."
   },
   {
     category: 'General',
-    question: "Can I try Space Capture for free?",
+    question: "Can I try SpaceCapture for free?",
     answer: "Yes, we offer a 'Pilot Program' tier that allows you to capture up to 5,000 sq. ft. completely free, including access to our AI detection engine."
   },
   {
@@ -90,7 +90,7 @@ export const faqData: FaqItem[] = [
   {
     category: 'Field Tasks',
     question: "Does it integrate with Procore or Autodesk Build?",
-    answer: "We offer native 2-way sync with Procore, Autodesk Construction Cloud, and Primavera P6. An issue created in Space Capture creates an RFI in Procore instantly."
+    answer: "We offer native 2-way sync with Procore, Autodesk Construction Cloud, and Primavera P6. An issue created in SpaceCapture creates an RFI in Procore instantly."
   },
 
   {
@@ -147,7 +147,7 @@ export const faqData: FaqItem[] = [
   {
     category: 'Security & Compliance',
     question: "Who owns the data?",
-    answer: "You do. Space Capture claims no ownership over your site data, photos, or 3D models."
+    answer: "You do. SpaceCapture claims no ownership over your site data, photos, or 3D models."
   },
   {
     category: 'Security & Compliance',
@@ -204,7 +204,7 @@ export const faqData: FaqItem[] = [
   {
     category: 'Security & Compliance',
     question: "Do you have an on-premise version?",
-    answer: "Yes. For defense and high-security clients, we offer a 'Space Capture Air-Gapped' edition that runs entirely on your local servers with no internet connection required."
+    answer: "Yes. For defense and high-security clients, we offer a 'SpaceCapture Air-Gapped' edition that runs entirely on your local servers with no internet connection required."
   },
   {
     category: 'Security & Compliance',
@@ -219,7 +219,7 @@ export const faqData: FaqItem[] = [
   {
     category: 'Technical',
     question: "Do you provide an SDK for mobile apps?",
-    answer: "Yes. The 'Space Capture Mobile SDK' allows you to embed our capture logic directly into your own white-labeled company app."
+    answer: "Yes. The 'SpaceCapture Mobile SDK' allows you to embed our capture logic directly into your own white-labeled company app."
   },
   {
     category: 'General',
@@ -241,7 +241,7 @@ export const faqData: FaqItem[] = [
   {
     category: 'General',
     question: "Do you support virtual staging for Real Estate?",
-    answer: "We integrate with common virtual staging platforms. You can export the clean OBJ/FBX mesh from Space Capture and import it into tools like 3ds Max or Blender for staging."
+    answer: "We integrate with common virtual staging platforms. You can export the clean OBJ/FBX mesh from SpaceCapture and import it into tools like 3ds Max or Blender for staging."
   },
   {
     category: 'Technical',

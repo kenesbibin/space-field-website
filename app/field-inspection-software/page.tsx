@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { SeoLandingPage } from '@/components/seo/SeoLandingPage';
 import { ComparisonTable } from '@/components/seo/ComparisonTable';
 import { FaqSection } from '@/components/seo/FaqSection';
@@ -10,11 +11,12 @@ import {
   buildBreadcrumbsFromPath,
   getBreadcrumbListSchema,
 } from '@/components/seo/BreadcrumbListSchema';
+import { AlertTriangle, Clock, DollarSign } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Field Inspection Software & App | Mobile Field Inspections',
   description:
-    'The #1 field inspection software for construction, utilities, oil & gas, and telecom teams. Run mobile field inspections offline, capture photo evidence, and generate instant reports from any device.',
+    'AI-powered field inspection software for construction, utilities, oil & gas, and telecom teams. Run mobile field inspections offline, capture photo evidence, and generate instant reports from any device.',
   keywords: [
     'field inspections',
     'field inspection software',
@@ -64,7 +66,7 @@ const faqs = [
   {
     question: 'Can it work without internet?',
     answer:
-      'Yes. SpaceCapture is offline-first. Inspections, photos, and signatures are captured on the device and synchronized to the cloud when connectivity returns — essential for remote job sites, basements, and rural infrastructure.',
+      'Yes. SpaceCapture is offline-first. The device captures inspections, photos, and signatures, then syncs them to the cloud when connectivity returns — essential for remote job sites, basements, and rural infrastructure.',
   },
   {
     question: 'What industries use field inspection software?',
@@ -102,12 +104,40 @@ export default function Page() {
       title="Field Inspection Software for Any Field Team"
       subtitle="Run mobile field inspections offline, attach photo evidence, and generate signed reports from any device. Built for construction, utilities, oil & gas, telecom, and facilities."
     >
+      {/* Pain Section */}
+      <div className="bg-slate-900 rounded-2xl p-8 shadow-xl mb-12">
+        <h2 className="text-2xl font-bold text-white mb-6">Why Teams Struggle with Field Inspections</h2>
+        <ul className="space-y-4">
+          <li className="flex items-start gap-4">
+            <AlertTriangle className="h-6 w-6 text-red-500 shrink-0 mt-1" />
+            <div>
+              <span className="font-bold text-white block">Manual paper checklists get lost, delayed, or filled out incorrectly</span>
+              <span className="text-slate-300 text-sm">Paper forms are prone to illegible handwriting, missing fields, and physical loss — creating compliance gaps and rework.</span>
+            </div>
+          </li>
+          <li className="flex items-start gap-4">
+            <Clock className="h-6 w-6 text-amber-500 shrink-0 mt-1" />
+            <div>
+              <span className="font-bold text-white block">Photos pile up with no way to link them to specific issues or locations</span>
+              <span className="text-slate-300 text-sm">Unorganized photo folders make it nearly impossible to match evidence to findings during review or audits.</span>
+            </div>
+          </li>
+          <li className="flex items-start gap-4">
+            <DollarSign className="h-6 w-6 text-red-400 shrink-0 mt-1" />
+            <div>
+              <span className="font-bold text-white block">Reports take hours to compile and often arrive too late to fix problems</span>
+              <span className="text-slate-300 text-sm">By the time someone types up and distributes findings, the window for corrective action has already closed.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
       <div className="mb-8 rounded-xl bg-indigo-50 p-6 border border-indigo-100">
         <h2 className="text-xl font-bold text-indigo-900 mb-2">
           What is Field Inspection Software?
         </h2>
         <p className="text-indigo-800 font-medium leading-relaxed">
-          Field inspection software digitizes the work of inspectors, auditors,
+          <Link href="/glossary/field-inspection" className="text-indigo-600 underline">Field inspection</Link> software digitizes the work of inspectors, auditors,
           and field engineers who visit job sites, infrastructure, and
           properties to verify safety, quality, and compliance. It replaces
           paper forms with mobile apps, captures photo evidence, supports
@@ -133,7 +163,7 @@ export default function Page() {
           {[
             '100% offline inspection capture — no Wi-Fi required',
             'Photo, video, and voice-note attachments on every finding',
-            'AI-assisted defect detection on site photos',
+            <>AI-assisted <Link href="/glossary/defect-detection" className="text-indigo-600 underline">defect detection</Link> on site photos</>,
             'QR code and barcode scanning for asset tracking',
             'Geofencing and geo-tagged findings',
             'Digital signatures on-device',
@@ -152,7 +182,7 @@ export default function Page() {
         </ul>
       </div>
 
-      <h2>Field Inspection Workflow</h2>
+      <h2><Link href="/glossary/field-inspection" className="text-indigo-600 underline">Field Inspection</Link> Workflow</h2>
       <ol className="list-decimal pl-6 space-y-4 mb-12 marker:text-indigo-600 marker:font-bold">
         <li className="pl-2">
           <strong>Plan the inspection:</strong> Schedule a job, assign an
@@ -161,7 +191,7 @@ export default function Page() {
         </li>
         <li className="pl-2">
           <strong>Capture on-site:</strong> Walk the site with the mobile app.
-          Photos, voice notes, and ratings are captured per finding.
+          The app captures photos, voice notes, and ratings per finding.
         </li>
         <li className="pl-2">
           <strong>Auto-detect issues:</strong> AI flags likely defects on the

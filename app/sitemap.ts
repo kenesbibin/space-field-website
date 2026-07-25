@@ -4,13 +4,14 @@ import path from "path";
 import { ALTERNATIVES_DATA } from "@/lib/alternatives-data";
 import { GLOSSARY_TERMS } from "@/lib/glossary-data";
 import { LOCATION_DATA } from "@/lib/location-data";
+import { INDEXED_LOCATIONS } from "@/lib/indexed-locations";
 
 const BASE_URL = "https://spacecapture.ai";
 
 const APP_DIR = path.join(process.cwd(), "app");
 
 // Segments that should never appear in the public sitemap.
-const EXCLUDED_SEGMENTS = ["lab", "_not-found", "_global-error", "api"];
+const EXCLUDED_SEGMENTS = ["lab", "_not-found", "_global-error", "api", "sitemaps"];
 
 // True dynamic route folders in the app directory. These are expanded
 // manually from their data sources so the sitemap lists real URLs only.
@@ -68,7 +69,11 @@ function getDynamicRoutes(): string[] {
 	}
 
 	for (const slug of Object.keys(LOCATION_DATA)) {
-		routes.push(`/locations/${slug}`);
+		// Only include locations that are allowed to be indexed. The rest are
+		// noindex'd to preserve crawl budget.
+		if (INDEXED_LOCATIONS.has(slug)) {
+			routes.push(`/locations/${slug}`);
+		}
 	}
 
 	return routes;

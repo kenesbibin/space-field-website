@@ -3,6 +3,13 @@ import type { Metadata } from 'next';
 import { SeoLandingPage } from '@/components/seo/SeoLandingPage';
 import { ComparisonTable } from '@/components/seo/ComparisonTable';
 import { FaqSection } from '@/components/seo/FaqSection';
+import StructuredData from '@/components/seo/StructuredData';
+import { getServiceSchema } from '@/components/seo/ServiceSchema';
+import { getFaqSchema } from '@/components/seo/FaqSchema';
+import {
+  buildBreadcrumbsFromPath,
+  getBreadcrumbListSchema,
+} from '@/components/seo/BreadcrumbListSchema';
 
 export const metadata: Metadata = {
   title: 'Site Inspection Software | Automated Construction Inspections',
@@ -13,30 +20,43 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Page() {
-  const faqs = [
-    {
-      question: "What is site inspection software?",
-      answer: "Site inspection software is a digital tool that allows construction teams to conduct audits, track defects, and complete safety checklists using mobile devices. It replaces paper forms, ensuring real-time data capture and automated reporting."
-    },
-    {
-      question: "How does AI defect detection work in inspection software?",
-      answer: "SpaceCapture's AI analyzes photos taken during inspections to automatically identify potential defects, safety hazards (like missing PPE), and installation errors, tagging them with location data instantly."
-    },
-    {
-      question: "Can I use the software offline?",
-      answer: "Yes, SpaceCapture operates fully offline. You can capture photos, complete forms, and log issues without internet. Data automatically syncs to the cloud once you regain connectivity."
-    },
-    {
-      question: "Is it suitable for subcontractors?",
-      answer: "Absolutely. Subcontractors can use the app to view their assigned punch list items, document their work with photos, and mark issues as resolved, streamlining communication with the GC."
-    },
-    {
-      question: "How much time does digital inspection save?",
-      answer: "Field teams typically report saving 50-70% of their administrative time by eliminating manual data entry, photo sorting, and evening report typing."
-    }
-  ];
+const faqs = [
+  {
+    question: "What is site inspection software?",
+    answer: "Site inspection software is a digital tool that allows construction teams to conduct audits, track defects, and complete safety checklists using mobile devices. It replaces paper forms, ensuring real-time data capture and automated reporting."
+  },
+  {
+    question: "How does AI defect detection work in inspection software?",
+    answer: "SpaceCapture's AI analyzes photos taken during inspections to automatically identify potential defects, safety hazards (like missing PPE), and installation errors, tagging them with location data instantly."
+  },
+  {
+    question: "Can I use the software offline?",
+    answer: "Yes, SpaceCapture operates fully offline. You can capture photos, complete forms, and log issues without internet. Data automatically syncs to the cloud once you regain connectivity."
+  },
+  {
+    question: "Is it suitable for subcontractors?",
+    answer: "Absolutely. Subcontractors can use the app to view their assigned punch list items, document their work with photos, and mark issues as resolved, streamlining communication with the GC."
+  },
+  {
+    question: "How much time does digital inspection save?",
+    answer: "Field teams typically report saving 50-70% of their administrative time by eliminating manual data entry, photo sorting, and evening report typing."
+  }
+];
 
+const faqSchema = getFaqSchema(faqs);
+const serviceSchema = getServiceSchema({
+  name: 'Site Inspection Software',
+  description:
+    'Streamline your construction site inspections with AI-powered automated software. Detect defects instantly and generate reports in real-time.',
+  url: 'https://spacecapture.ai/site-inspection-software',
+  serviceType: 'Site Inspection Software',
+  areaServed: 'Worldwide',
+});
+const breadcrumbSchema = getBreadcrumbListSchema(
+  buildBreadcrumbsFromPath('/site-inspection-software')
+);
+
+export default function Page() {
   return (
     <SeoLandingPage
       title="The Ultimate Site Inspection Software for Modern Construction"
@@ -109,6 +129,13 @@ export default function Page() {
       </div>
 
       <FaqSection items={faqs} />
+
+      <StructuredData
+        data={{
+          '@context': 'https://schema.org',
+          '@graph': [serviceSchema, faqSchema, breadcrumbSchema],
+        }}
+      />
     </SeoLandingPage>
   );
 }

@@ -99,11 +99,11 @@ export const PERSONAS_DATA: Record<string, PersonaData> = {
   'subcontractors': {
     slug: 'subcontractors',
     title: 'AI Field App for Subcontractors | SpaceCapture',
-    description: 'Space Capture for subcontractors uses AI to help you get paid faster. The best AI integrated field inspection module for tracking work.',
+    description: 'SpaceCapture for subcontractors uses AI to help you get paid faster. The best AI integrated field inspection module for tracking work.',
     hero: {
-      title: 'AI Integrated Space Capture for Subcontractors',
+      title: 'AI Integrated SpaceCapture for Subcontractors',
       subtitle: 'Prove your work and protect your payments with our AI field app. Document site conditions and daily progress with smart automation.',
-      ctaPrimary: 'Start using Space Capture',
+      ctaPrimary: 'Start using SpaceCapture',
       ctaSecondary: 'Try AI Field App'
     },
     painPoints: {
@@ -133,10 +133,10 @@ export const PERSONAS_DATA: Record<string, PersonaData> = {
   },
   'property-developers': {
     slug: 'property-developers',
-    title: 'Space Capture for Developers | AI Field Inspection',
-    description: 'Monitor portfolio progress with AI integrated Space Capture. The essential field app for real estate development tracking.',
+    title: 'SpaceCapture for Developers | AI Field Inspection',
+    description: 'Monitor portfolio progress with AI integrated SpaceCapture. The essential field app for real estate development tracking.',
     hero: {
-      title: 'AI Space Capture for Property Developers',
+      title: 'AI SpaceCapture for Property Developers',
       subtitle: 'Gain total visibility into your investments with our AI integrated field inspection module. Track milestones and quality remotely.',
       ctaPrimary: 'View AI Portfolio',
       ctaSecondary: 'Try Developer Solutions'
@@ -169,7 +169,7 @@ export const PERSONAS_DATA: Record<string, PersonaData> = {
   'architects-engineers': {
     slug: 'architects-engineers',
     title: 'AI Field Inspection Module for Architects',
-    description: 'Ensure design compliance with AI integrated Space Capture. The preferred field app for design teams and site visits.',
+    description: 'Ensure design compliance with AI integrated SpaceCapture. The preferred field app for design teams and site visits.',
     hero: {
       title: 'AI Field App for Architects & Engineers',
       subtitle: 'Bridge the gap between design and construction. Use our AI space capture module to validate specs and resolve RFIs faster.',

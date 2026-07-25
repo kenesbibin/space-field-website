@@ -88,7 +88,7 @@ export default function PaintCalculatorPage() {
               <div className="mt-12 p-8 bg-slate-50 rounded-2xl border border-slate-100">
                 <h4 className="text-xl font-bold text-slate-900 mb-4">Quality Control & Reporting</h4>
                 <p className="text-slate-600">
-                  For large-scale developments, paint sub-contractors use **Space Capture** to document room readiness, verify color specifications, and log completion for faster progress payments.
+                  For large-scale developments, paint sub-contractors use **SpaceCapture** to document room readiness, verify color specifications, and log completion for faster progress payments.
                 </p>
               </div>
             </article>

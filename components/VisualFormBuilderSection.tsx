@@ -41,13 +41,13 @@ const VisualFormBuilderSection = () => {
                  <span className="text-sm font-bold text-blue-700 uppercase tracking-wider">Visual Editor</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
                 No-Code <br/>
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Form Builder</span>
-              </h1>
+              </h2>
               
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                Tired of waiting for developers to update a single field? With Space Capture, you are the engineer. Drag and drop complex logic, customize branding, and deploy smart forms to your field teams instantly—all without writing a line of code.
+                Tired of waiting for developers to update a single field? With SpaceCapture, you are the engineer. Drag and drop complex logic, customize branding, and deploy smart forms to your field teams instantly—all without writing a line of code.
               </p>
 
               <div className="flex gap-4">

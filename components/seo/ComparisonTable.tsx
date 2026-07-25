@@ -36,7 +36,7 @@ export const ComparisonTable = ({
                 scope="col"
                 className="bg-indigo-50/50 px-6 py-4 font-bold tracking-wider text-indigo-900"
               >
-                Space Capture
+                SpaceCapture
               </th>
               <th scope="col" className="px-6 py-4 font-bold tracking-wider">
                 {competitorName}

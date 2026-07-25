@@ -127,7 +127,7 @@ export default function SitemapPage() {
             Sitemap
           </h1>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-             An overview of all the pages available on Space Capture.
+             An overview of all the pages available on SpaceCapture.
           </p>
        </div>
 

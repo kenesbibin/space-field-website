@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { SeoLandingPage } from '@/components/seo/SeoLandingPage';
 import { ComparisonTable } from '@/components/seo/ComparisonTable';
 import { FaqSection } from '@/components/seo/FaqSection';
@@ -14,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: 'Construction Management Software for GCs, Subs & Owners',
   description:
-    'The #1 construction management software for general contractors, owners, and specialty trades. Project planning, field inspections, daily reports, and safety compliance in one AI-powered platform.',
+    'AI-powered construction management software for general contractors, owners, and specialty trades. Project planning, field inspections, daily reports, and safety compliance in one AI-powered platform.',
   keywords: [
     'construction management software',
     'construction management',
@@ -135,7 +136,7 @@ export default function Page() {
         </h3>
         <ul className="grid md:grid-cols-2 gap-4">
           {[
-            'Project planning with milestones, dependencies, and Gantt views',
+            <>Project planning with milestones, dependencies, and <Link href="/glossary/gantt-chart" className="text-indigo-600 underline">Gantt</Link> views</>,
             'Mobile daily reports with weather, manpower, and progress',
             'Inspection checklists for QA/QC, safety, and compliance',
             'AI-powered defect detection on every photo',
@@ -143,7 +144,7 @@ export default function Page() {
             'Subcontractor management with role-based access',
             'Drawing version control and markup',
             'Safety observations, toolbox talks, and incident reporting',
-            'RFI and submittal workflows',
+            <><Link href="/glossary/rfi" className="text-indigo-600 underline">RFI</Link> and submittal workflows</>,
             'Real-time dashboards for owners and project executives',
             'Offline-first mobile app (iOS, Android, web)',
             'Integrations with Procore, QuickBooks, Xero, and Sage',

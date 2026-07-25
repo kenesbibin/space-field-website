@@ -11,9 +11,9 @@ interface AuthorBioProps {
 }
 
 export const AuthorBio: React.FC<AuthorBioProps> = ({
-  name = "Space Capture Team",
-  role = "Construction Tech Experts",
-  bio = "The Space Capture team consists of civil engineers, software architects, and construction veterans dedicated to digitizing the field. We write about construction technology, efficiency, and the future of work.",
+  name = "SpaceCapture Engineering Team",
+  role = "Construction Technology Engineers",
+  bio = "The SpaceCapture team consists of civil engineers, software architects, and construction veterans dedicated to digitizing the field. We write about construction technology, efficiency, and the future of work.",
   linkedinUrl = "https://www.linkedin.com/company/spaceai-capture/",
   imageUrl = "/images/avatar-placeholder.jpg" // Ensure you have a placeholder or use a generic icon if this missing
 }) => {

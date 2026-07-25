@@ -31,14 +31,14 @@ const RakenComparisonPage = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <span className="inline-block py-1 px-3 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-bold uppercase tracking-wider mb-6">
-                            Space Capture vs Raken
+                            SpaceCapture vs Raken
                         </span>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
                             Stop Typing Daily Reports. <br />
                             <span className="bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">Let AI Write Them.</span>
                         </h1>
                         <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                            Raken digitised the clipboard. Space Capture eliminates it. Switch to the only field app that uses Computer Vision to automate inspections, safety logs, and progress tracking.
+                            Raken digitised the clipboard. SpaceCapture eliminates it. Switch to the only field app that uses Computer Vision to automate inspections, safety logs, and progress tracking.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -96,7 +96,7 @@ const RakenComparisonPage = () => {
                             </ul>
                         </div>
 
-                        {/* Space Capture Card */}
+                        {/* SpaceCapture Card */}
                         <div className="bg-white p-8 rounded-2xl border-2 border-indigo-600 shadow-xl relative overflow-hidden">
                             <div className="absolute top-0 title-0 w-full h-1 bg-gradient-to-r from-blue-600 to-purple-600"></div>
                             <div className="absolute -right-10 -top-10 w-32 h-32 bg-indigo-50 rounded-full blur-3xl"></div>
@@ -105,7 +105,7 @@ const RakenComparisonPage = () => {
                                 <BrainCircuit className="w-6 h-6 text-indigo-600" />
                                 <h3 className="text-xl font-bold text-indigo-600">The Cognitive Engine</h3>
                             </div>
-                            <h4 className="text-2xl font-bold text-slate-900 mb-4">Autonomous AI (Space Capture)</h4>
+                            <h4 className="text-2xl font-bold text-slate-900 mb-4">Autonomous AI (SpaceCapture)</h4>
                             <ul className="space-y-4 text-slate-600">
                                 <li className="flex items-start gap-3">
                                     <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
@@ -136,7 +136,7 @@ const RakenComparisonPage = () => {
                                 <tr>
                                     <th className="text-left py-6 px-6 bg-slate-50 border-b-2 border-slate-200 w-1/3 text-lg font-bold text-slate-700">Feature</th>
                                     <th className="text-center py-6 px-6 bg-slate-50 border-b-2 border-slate-200 w-1/3 text-lg font-bold text-slate-500">Raken</th>
-                                    <th className="text-center py-6 px-6 bg-indigo-50 border-b-2 border-indigo-200 w-1/3 text-lg font-bold text-indigo-700">Space Capture</th>
+                                    <th className="text-center py-6 px-6 bg-indigo-50 border-b-2 border-indigo-200 w-1/3 text-lg font-bold text-indigo-700">SpaceCapture</th>
                                 </tr>
                             </thead>
                             <tbody>

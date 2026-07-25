@@ -19,6 +19,9 @@ export default function ArticlePage() {
         subtitle="A comprehensive case study on shifting from reactive breakdowns and calendar-based servicing to real-time, data-driven fleet management in the construction industry."
         category="Case Study"
         readTime="10 min read"
+        description="Learn how Apex Construction cut equipment inspection time by 40%, achieved 98% fleet uptime, and saved $210,000 annually by implementing SpaceCapture's AI-powered predictive maintenance and IoT telemetry solution for heavy construction equipment."
+        url="https://spacecapture.ai/blog/predictive-maintenance"
+        keywords={['predictive maintenance', 'construction equipment', 'AI maintenance', 'fleet management', 'IoT telemetry']}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

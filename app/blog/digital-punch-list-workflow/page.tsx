@@ -21,6 +21,9 @@ export default function DigitalPunchListPage() {
         subtitle="From chaotic final walkthroughs to streamlined closeout: How mobile-first digital tools cut punch list resolution time in half and eliminate frustrating delays."
         category="Field Operations"
         readTime="10 min read"
+        description="Discover how digital punch list tools and mobile workflows help contractors clear defects faster, reduce closeout delays, improve subcontractor accountability, and achieve zero-defect handover."
+        url="https://spacecapture.ai/blog/digital-punch-list-workflow"
+        keywords={["digital punch list", "construction closeout workflow", "mobile punch list app", "defect tracking construction", "construction quality management"]}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

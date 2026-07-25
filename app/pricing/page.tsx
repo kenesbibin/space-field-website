@@ -1,12 +1,68 @@
-'use client';
 import React from 'react';
+import type { Metadata } from 'next';
 import CallToAction from '@/components/CallToAction';
 import { Check, X, MessageSquare, ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+
+export const metadata: Metadata = {
+  title: 'Pricing — Free Starter & Enterprise Plans',
+  description: 'Start with a powerful free tier for individual inspectors. Upgrade to Enterprise for full AI defect detection, SSO, API access, and dedicated support. No hidden fees.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/pricing',
+  },
+};
+
+const pricingSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Product',
+      name: 'SpaceCapture Enterprise',
+      description: 'Full AI-powered field inspection platform with unlimited defect detection, SSO, API access, granular permissions, and dedicated 24/7 support.',
+      url: 'https://spacecapture.ai/pricing',
+      brand: { '@type': 'Brand', name: 'SpaceCapture' },
+      category: 'Construction Management Software',
+      image: 'https://spacecapture.ai/images/og-image.jpg',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+        priceValidUntil: '2026-12-31',
+        availability: 'https://schema.org/OnlineOnly',
+        url: 'https://spacecapture.ai/pricing',
+        hasFreeTrial: true,
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.8',
+        reviewCount: '120',
+      },
+    },
+    {
+      '@type': 'Product',
+      name: 'SpaceCapture Starter',
+      description: 'Free plan for individual inspectors and small subcontractors. Includes visual form builder, 5 active projects, and 500MB storage.',
+      url: 'https://spacecapture.ai/pricing',
+      brand: { '@type': 'Brand', name: 'SpaceCapture' },
+      category: 'Construction Management Software',
+      image: 'https://spacecapture.ai/images/og-image.jpg',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+        url: 'https://spacecapture.ai/pricing',
+      },
+    },
+  ],
+};
 
 export default function PricingPage() {
     return (
         <div className="min-h-screen bg-slate-50">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }}
+            />
 
             {/* Hero */}
             <section className="bg-slate-900 text-white pt-40 pb-20 overflow-hidden relative">

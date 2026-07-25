@@ -474,6 +474,260 @@ An **inspection company** is a business that provides professional inspection se
 - Operations dashboards`,
     relatedSlugs: ["field-inspection", "home-inspection"],
   },
+  {
+    term: "Quality Control (QC)",
+    slug: "quality-control",
+    definition:
+      "The operational techniques and activities used to verify that construction work meets specified quality requirements.",
+    category: "Inspection",
+    details: `## What is Quality Control (QC)?
+
+**Quality control (QC)** is the systematic process of verifying that construction work, materials, and deliverables meet the project's specified quality standards. QC is performed by the contractor's own team to ensure workmanship and compliance before external inspections.
+
+### QC vs QA
+- **QC** is reactive — it checks the output
+- **QA** is proactive — it ensures the process prevents defects
+
+### Common QC Activities
+- Material testing and verification
+- Workmanship inspections
+- Dimensional checks
+- Weld inspections
+- Concrete slump and cylinder tests
+- MEP rough-in verification
+
+### Why QC Matters
+Effective QC reduces rework, prevents costly delays, and minimizes the risk of defects reaching the punch list phase.`,
+    relatedSlugs: ["quality-assurance", "non-conformance", "construction-defect"],
+  },
+  {
+    term: "Quality Assurance (QA)",
+    slug: "quality-assurance",
+    definition:
+      "A systematic process of ensuring that construction activities and deliverables meet quality standards through planned and systematic activities.",
+    category: "Inspection",
+    details: `## What is Quality Assurance (QA)?
+
+**Quality assurance (QA)** is the proactive, process-oriented approach to ensuring that construction work meets quality standards. Rather than inspecting the final product, QA focuses on the processes and systems that produce the work.
+
+### QA vs QC
+- **QA** prevents defects by ensuring processes are correct
+- **QC** catches defects by inspecting the output
+
+### QA Elements
+- Quality management plans
+- Inspection and test plans (ITPs)
+- Procedure reviews
+- Training and competency verification
+- Document control
+- Non-conformance reporting
+
+### How SpaceCapture Helps
+SpaceCapture provides structured inspection checklists and automated reporting that support both QA and QC workflows, ensuring every inspection follows a consistent, auditable process.`,
+    relatedSlugs: ["quality-control", "non-conformance", "corrective-action"],
+  },
+  {
+    term: "Non-Conformance Report (NCR)",
+    slug: "non-conformance",
+    definition:
+      "A formal document issued when work, materials, or processes fail to meet specified requirements, triggering a corrective action process.",
+    category: "Inspection",
+    details: `## What is a Non-Conformance Report (NCR)?
+
+A **non-conformance report (NCR)** is a formal document that records any instance where work, materials, or processes do not conform to the specified requirements. It is the starting point for the corrective action process.
+
+### NCR Process
+1. **Identification** — non-conformance is discovered
+2. **Documentation** — NCR issued with photos and details
+3. **Disposition** — engineering review determines fate (rework, accept-as-is, reject)
+4. **Corrective Action** — root cause identified and addressed
+5. **Verification** — corrective action confirmed effective
+6. **Closure** — NCR closed
+
+### What to Include
+- Reference to the specification or standard violated
+- Description of the non-conformance
+- Photo evidence
+- Affected area or quantity
+- Disposition decision
+- Responsible party`,
+    relatedSlugs: ["corrective-action", "preventive-action", "quality-control"],
+  },
+  {
+    term: "Corrective Action",
+    slug: "corrective-action",
+    definition:
+      "An action taken to eliminate the root cause of a non-conformance or undesirable situation to prevent recurrence.",
+    category: "Inspection",
+    details: `## What is Corrective Action?
+
+**Corrective action** is the process of identifying and addressing the root cause of a non-conformance, defect, or safety incident. It goes beyond fixing the symptom — it ensures the underlying issue is resolved so the problem does not recur.
+
+### Corrective vs Preventive Action
+- **Corrective** — reacts to an existing non-conformance
+- **Preventive** — proactively eliminates potential causes before an issue occurs
+
+### The Process
+1. Identify the non-conformance or incident
+2. Investigate root cause (5 Whys, fishbone diagram)
+3. Develop and implement corrective action plan
+4. Verify the action was effective
+5. Update procedures as needed
+6. Close the NCR`,
+    relatedSlugs: ["non-conformance", "preventive-action", "quality-control"],
+  },
+  {
+    term: "Preventive Action",
+    slug: "preventive-action",
+    definition:
+      "An action taken to eliminate the potential cause of a non-conformance or undesirable situation before it occurs.",
+    category: "Inspection",
+    details: `## What is Preventive Action?
+
+**Preventive action** is the proactive process of identifying and eliminating potential causes of non-conformances, defects, or safety incidents before they occur. It is a core element of any quality management system.
+
+### Preventive vs Corrective Action
+- **Preventive** — before the problem occurs
+- **Corrective** — after the problem occurs
+
+### Examples
+- Updating procedures based on lessons learned from other projects
+- Additional training for a new trade or process
+- Modifying inspection checklists based on industry trends
+- Introducing new material testing requirements
+- Adding hold points in the inspection and test plan
+
+### How SpaceCapture Helps
+SpaceCapture's inspection templates and checklist library can be updated based on lessons learned, helping teams institutionalize preventive actions across all projects.`,
+    relatedSlugs: ["corrective-action", "non-conformance", "quality-assurance"],
+  },
+  {
+    term: "Construction Audit",
+    slug: "audit",
+    definition:
+      "A systematic, independent examination of a construction project's processes, documents, and deliverables to determine compliance and effectiveness.",
+    category: "Inspection",
+    details: `## What is a Construction Audit?
+
+A **construction audit** is a systematic, independent examination of a construction project to evaluate whether processes, documents, and deliverables comply with the contract, specifications, and applicable regulations.
+
+### Types of Construction Audits
+- **Quality audit** — verifies compliance with quality standards
+- **Safety audit** — verifies OSHA and site safety compliance
+- **Financial audit** — reviews costs, invoices, and payment applications
+- **Procurement audit** — verifies material sourcing and sub qualification
+- **Environmental audit** — verifies EPA and environmental compliance
+
+### Benefits
+- Identifies gaps before they become issues
+- Ensures regulatory compliance
+- Validates the effectiveness of management systems
+- Provides documentation for legal and insurance purposes`,
+    relatedSlugs: ["compliance", "quality-assurance", "osha"],
+  },
+  {
+    term: "Regulatory Compliance",
+    slug: "compliance",
+    definition:
+      "The act of adhering to laws, regulations, standards, and specifications applicable to a construction project.",
+    category: "Inspection",
+    details: `## What is Regulatory Compliance?
+
+**Regulatory compliance** in construction means ensuring that all project activities, processes, and deliverables adhere to applicable laws, regulations, codes, and standards. Non-compliance can result in fines, stop-work orders, litigation, and project delays.
+
+### Key Regulatory Areas
+- **Building codes** (IBC, local amendments)
+- **OSHA** (safety and health)
+- **EPA** (environmental)
+- **ADA** (accessibility)
+- **Fire codes** (NFPA)
+- **Energy codes** (ASHRAE 90.1, IECC)
+- **Electrical codes** (NEC)
+- **Plumbing codes** (IPC, UPC)
+
+### How SpaceCapture Helps
+SpaceCapture provides pre-built inspection checklists aligned with major regulatory frameworks, ensuring every inspection covers compliance requirements and generates audit-ready documentation.`,
+    relatedSlugs: ["audit", "osha", "quality-assurance"],
+  },
+  {
+    term: "Construction Warranty",
+    slug: "warranty",
+    definition:
+      "A contractor's obligation to repair or replace defective work within a specified period after project completion.",
+    category: "Inspection",
+    details: `## What is a Construction Warranty?
+
+A **construction warranty** is a contractual obligation by the contractor to repair or replace defective work within a specified period after substantial completion. Warranties protect the owner against defects in materials, workmanship, and design.
+
+### Common Warranty Periods
+- **General contractor warranty** — 1–2 years
+- **Structural warranty** — 10 years
+- **Roofing warranty** — 5–20 years
+- **HVAC warranty** — 1–5 years
+- **Appliance warranties** — manufacturer-specific
+
+### Warranty Inspections
+- **30-day warranty inspection** — initial defect identification
+- **11-month warranty inspection** — before the 1-year general warranty expires
+
+### Digital Warranty Management
+Modern construction software tracks warranty periods, automates inspection scheduling, and manages claims digitally.`,
+    relatedSlugs: ["construction-defect", "punch-list", "deficiency"],
+  },
+  {
+    term: "Construction Deficiency",
+    slug: "deficiency",
+    definition:
+      "A shortcoming or inadequacy in the work that fails to meet the contract requirements, specifications, or applicable standards.",
+    category: "Inspection",
+    details: `## What is a Construction Deficiency?
+
+A **deficiency** is any shortcoming, inadequacy, or deviation in the completed work from what was specified in the contract documents, applicable standards, or accepted industry practice.
+
+### Deficiency vs Defect
+- **Deficiency** — work does not meet the specification
+- **Defect** — a flaw that affects performance, safety, or appearance
+
+### Common Deficiencies
+- Work not installed per the approved shop drawings
+- Materials not matching the specification
+- Dimensional errors
+- Missing components
+- Inadequate finish quality
+
+### Tracking Deficiencies
+Digital tools allow deficiencies to be logged with photos, assigned to responsible parties, and tracked through resolution — providing a clear audit trail for closeout.`,
+    relatedSlugs: ["construction-defect", "punch-list", "non-conformance"],
+  },
+  {
+    term: "Final Inspection",
+    slug: "final-inspection",
+    definition:
+      "The last inspection performed before a certificate of occupancy is issued, verifying that the completed work meets all code and specification requirements.",
+    category: "Inspection",
+    details: `## What is a Final Inspection?
+
+A **final inspection** is the last formal inspection performed before a certificate of occupancy (or completion) is issued. It verifies that the completed work meets all applicable building codes, fire codes, and contract specifications.
+
+### What is Checked
+- All permit-required inspections are complete
+- Building code compliance
+- Fire code compliance (alarms, sprinklers, extinguishers)
+- Electrical and plumbing final
+- Mechanical final
+- Accessibility compliance
+- Site and landscaping
+- Signage and addresses
+- Final grading and drainage
+
+### Final Inspection vs Punch List
+- **Final inspection** — regulatory (code compliance)
+- **Punch list** — contractual (specification compliance)
+
+### How SpaceCapture Helps
+SpaceCapture's final inspection templates ensure every required item is checked, photographed, and signed off, creating a complete record for the building department and the owner.`,
+    relatedSlugs: ["building-inspection", "punch-list", "inspection-report"],
+  },
 ];
 
 // --- Construction Methodology ---
@@ -979,6 +1233,233 @@ A **snag list** is the UK and Australian term for what Americans call a **punch 
 By using historical data from past projects, the models can flag early warning signs and recommend interventions.`,
     relatedSlugs: ["computer-vision", "ai-defect-analysis"],
   },
+  {
+    term: "Construction Blueprint",
+    slug: "blueprint",
+    definition:
+      "A detailed technical drawing that shows the design, dimensions, and specifications of a building or structure before construction begins.",
+    category: "Construction",
+    details: `## What is a Construction Blueprint?
+
+A **construction blueprint** is a detailed technical drawing that serves as the primary communication tool between the design team and the construction team. Despite the name, modern blueprints are no longer blue — they are printed in black and white or viewed digitally.
+
+### What Blueprints Show
+- Floor plans, elevations, and sections
+- Dimensions and tolerances
+- Material specifications
+- Structural details
+- MEP layouts
+- Detail drawings and schedules
+
+### Blueprint Revisions
+Blueprints go through multiple revisions during design. The contractor must always verify they are working from the latest revision. Digital plan rooms and BIM models have largely replaced paper blueprints.
+
+### How SpaceCapture Helps
+SpaceCapture's inspection checklists can be linked directly to blueprint references, ensuring inspectors verify work against the correct specification and revision.`,
+    relatedSlugs: ["specification", "shop-drawing", "as-built"],
+  },
+  {
+    term: "Construction Specification",
+    slug: "specification",
+    definition:
+      "A written document that describes the materials, workmanship, and standards required for a construction project.",
+    category: "Construction",
+    details: `## What is a Construction Specification?
+
+A **specification** (or spec) is the written component of the contract documents that describes the materials, products, workmanship standards, and installation requirements for the project.
+
+### Specification Formats
+- **MasterFormat** (CSI) — most common in the US, organized by division
+- **UniFormat** — system-based, used for early-stage estimating
+- **NRM** — UK quantity surveying standard
+
+### Key Divisions
+- Division 01 — General Requirements
+- Division 02 — Existing Conditions
+- Division 03 — Concrete
+- Division 04 — Masonry
+- Division 05 — Metals
+- Division 06 — Wood, Plastics, Composites
+- Division 21 — Fire Suppression
+- Division 22 — Plumbing
+- Division 23 — HVAC
+- Division 26 — Electrical
+
+### Specifications vs Drawings
+Drawings show what to build; specifications describe how to build it. Both are contract documents and equally binding.`,
+    relatedSlugs: ["blueprint", "shop-drawing", "submittal"],
+  },
+  {
+    term: "Shop Drawing",
+    slug: "shop-drawing",
+    definition:
+      "Detailed drawings prepared by a subcontractor, fabricator, or supplier showing how a specific component will be manufactured and installed.",
+    category: "Construction",
+    details: `## What is a Shop Drawing?
+
+A **shop drawing** is a detailed drawing, diagram, schedule, or other data specially prepared for the work by the contractor or any subcontractor, manufacturer, supplier, or distributor to illustrate some portion of the work.
+
+### Shop Drawings vs Design Drawings
+- **Design drawings** — show what is to be built (by the architect/engineer)
+- **Shop drawings** — show how it will be fabricated and installed (by the contractor)
+
+### Common Shop Drawings
+- Structural steel detailing
+- Precast concrete panels
+- Curtain wall and glazing systems
+- MEP coordination drawings
+- Cabinetry and millwork
+- Fire protection layouts
+
+### Approval Process
+Shop drawings go through a review cycle: contractor prepares, architect/engineer reviews, and either approves, returns for revision, or rejects.`,
+    relatedSlugs: ["blueprint", "specification", "submittal", "as-built"],
+  },
+  {
+    term: "Pay Application",
+    slug: "pay-application",
+    definition:
+      "A formal request for payment submitted by the contractor to the owner, documenting work completed during a billing period.",
+    category: "Construction",
+    details: `## What is a Pay Application?
+
+A **pay application** (or application for payment) is the formal document a contractor submits to the owner requesting payment for work completed during a specific billing period. It is typically prepared monthly and follows a standardized format.
+
+### AIA G702/G703 Format
+The most common format in the US:
+- **G702** — Application and Certificate for Payment (summary)
+- **G703** — Continuation Sheet (detailed breakdown by line item)
+
+### What's Included
+- Original contract sum
+- Change orders (approved and pending)
+- Total contract sum
+- Work completed to date
+- Materials stored (stored materials)
+- Retainage
+- Current payment due
+
+### Digital Pay Applications
+Modern construction software automates pay application calculations, tracks retainage, and integrates with accounting systems.`,
+    relatedSlugs: ["retainage", "change-order", "construction-contract"],
+  },
+  {
+    term: "Retainage",
+    slug: "retainage",
+    definition:
+      "A portion of the contract price withheld by the owner until the work is substantially complete, ensuring the contractor fulfills all obligations.",
+    category: "Construction",
+    details: `## What is Retainage?
+
+**Retainage** is a portion (typically 5–10%) of the contract price withheld by the owner from each pay application. It serves as leverage to ensure the contractor completes all work, corrects deficiencies, and fulfills closeout obligations.
+
+### How Retainage Works
+1. Contractor submits pay application
+2. Owner pays 90–95% of the certified amount
+3. The retainage is held in escrow
+4. Upon substantial completion, a portion is released
+5. Final retainage is released after all closeout items are complete
+
+### Retainage Release
+- **Partial release** — upon substantial completion
+- **Final release** — after punch list completion, final inspections, and submittal of closeout documents
+
+### State Laws
+Many states have retainage laws that limit the amount and timing of retainage, especially on public projects.`,
+    relatedSlugs: ["pay-application", "punch-list", "construction-contract"],
+  },
+  {
+    term: "Unit Price Contract",
+    slug: "unit-price",
+    definition:
+      "A contract where the contractor is paid a fixed price per unit of work, with the final cost determined by the actual quantity of work performed.",
+    category: "Construction",
+    details: `## What is a Unit Price Contract?
+
+A **unit price contract** is a contract structure where the contractor bids a fixed price per unit of work (per cubic yard of concrete, per linear foot of pipe, per square yard of paving), and the total cost is determined by the actual quantities installed.
+
+### When to Use
+- Work quantities are uncertain at the time of bidding
+- Civil and infrastructure projects (roads, utilities, earthwork)
+- Projects where significant quantities changes are expected
+
+### Advantages
+- Fair pricing when quantities are uncertain
+- Reduced risk for both parties
+- Easy to adjust for actual conditions
+
+### Disadvantages
+- Requires accurate quantity measurement
+- Can incentivize over-measurement
+- More administrative overhead
+
+### Key Considerations
+- Unit prices must include all labor, materials, equipment, overhead, and profit
+- The engineer's estimate of quantities is typically used as the baseline`,
+    relatedSlugs: ["lump-sum", "cost-plus", "construction-contract"],
+  },
+  {
+    term: "Lump Sum Contract",
+    slug: "lump-sum",
+    definition:
+      "A contract where the contractor agrees to perform the entire scope of work for a fixed price, regardless of actual costs incurred.",
+    category: "Construction",
+    details: `## What is a Lump Sum Contract?
+
+A **lump sum contract** (or fixed-price contract) is the most common contract type in construction. The contractor agrees to complete the entire scope of work for a single, fixed price.
+
+### Advantages
+- Price certainty for the owner
+- Simpler administration
+- Contractor has incentive to control costs
+
+### Disadvantages
+- Higher risk for the contractor
+- May include higher contingency in the bid
+- Less flexibility for changes
+
+### When to Use
+- Well-defined scope and drawings
+- Minimal design changes expected
+- Competitive bidding environment
+
+### Common Forms
+- AIA A101 — Standard Form of Agreement Between Owner and Contractor (Stipulated Sum)
+- ConsensusDocs 200`,
+    relatedSlugs: ["unit-price", "cost-plus", "construction-contract"],
+  },
+  {
+    term: "Cost Plus Contract",
+    slug: "cost-plus",
+    definition:
+      "A contract where the owner pays the contractor for actual costs plus an agreed-upon fee for overhead and profit.",
+    category: "Construction",
+    details: `## What is a Cost Plus Contract?
+
+A **cost plus contract** is a contract structure where the owner reimburses the contractor for all allowable costs incurred during the work, plus an additional fee for overhead and profit.
+
+### Fee Structures
+- **Cost + Fixed Fee** — predetermined fee regardless of actual cost
+- **Cost + Percentage** — fee is a percentage of actual cost
+- **Cost + Incentive** — fee adjusted based on performance targets (schedule, cost savings)
+
+### When to Use
+- Scope is not well defined
+- Urgent or fast-track projects
+- Design-build delivery
+- Complex or unique projects
+
+### Advantages
+- Flexibility for changes
+- Lower risk for the contractor
+- Faster mobilization
+
+### Disadvantages
+- Less cost certainty for the owner
+- Requires detailed cost tracking
+- Potential for cost overruns without incentives`,
+    relatedSlugs: ["unit-price", "lump-sum", "construction-contract"],
+  },
 ];
 
 // --- Documentation & Reporting ---
@@ -1316,6 +1797,310 @@ A **site safety inspection** is a documented walk-through of a job site. It is r
 6. Track to closure`,
     relatedSlugs: ["osha", "ppe", "toolbox-talk", "site-inspection"],
   },
+  {
+    term: "Job Safety Analysis (JSA)",
+    slug: "jsa",
+    definition:
+      "A systematic process of identifying potential hazards associated with each step of a job task and developing safe work procedures.",
+    category: "Safety",
+    details: `## What is a Job Safety Analysis (JSA)?
+
+A **job safety analysis (JSA)** is a procedure that breaks down a job into individual steps, identifies potential hazards in each step, and determines safe work procedures to control those hazards.
+
+### JSA Process
+1. Select the job to be analyzed
+2. Break the job into individual steps
+3. Identify hazards associated with each step
+4. Determine preventive measures for each hazard
+5. Communicate the JSA to all workers
+6. Monitor compliance
+
+### When to Perform a JSA
+- Before starting a new or unfamiliar task
+- When conditions change
+- After an incident or near miss
+- When reviewing procedures
+
+### How SpaceCapture Helps
+SpaceCapture provides JSA templates that can be completed on-site with photos, signatures, and real-time review by the safety team.`,
+    relatedSlugs: ["sds", "fall-protection", "confined-space", "toolbox-talk"],
+  },
+  {
+    term: "Safety Data Sheet (SDS)",
+    slug: "sds",
+    definition:
+      "A document that provides information on the properties of hazardous chemicals, including safe handling, storage, and emergency procedures.",
+    category: "Safety",
+    details: `## What is a Safety Data Sheet (SDS)?
+
+A **safety data sheet (SDS)** is a standardized document that provides comprehensive information about a hazardous chemical, including its properties, hazards, protective measures, and safety precautions for handling, storing, and transporting the chemical.
+
+### The 16 Sections
+1. Identification
+2. Hazard(s) identification
+3. Composition / information on ingredients
+4. First-aid measures
+5. Fire-fighting measures
+6. Accidental release measures
+7. Handling and storage
+8. Exposure controls / PPE
+9. Physical and chemical properties
+10. Stability and reactivity
+11. Toxicological information
+12. Ecological information
+13. Disposal considerations
+14. Transport information
+15. Regulatory information
+16. Other information
+
+### GHS Compliance
+The Globally Harmonized System (GHS) standardized SDS formatting internationally, making them consistent across countries.`,
+    relatedSlugs: ["jsa", "ppe", "osha", "lockout-tagout"],
+  },
+  {
+    term: "Incident Report",
+    slug: "incident-report",
+    definition:
+      "A formal document that records the details of an accident, injury, near miss, or other safety-related event on a construction site.",
+    category: "Safety",
+    details: `## What is an Incident Report?
+
+An **incident report** is a formal document that records all details of an accident, injury, near miss, property damage, or other safety-related event on a construction site. It is the foundation of incident investigation and corrective action.
+
+### What to Include
+- Date, time, and location
+- Names and roles of involved parties
+- Description of what happened
+- Injuries sustained (if any)
+- Property damage
+- Witnesses
+- Photos and evidence
+- Root cause analysis
+- Corrective actions
+
+### Reporting Timeline
+- **Immediate** — first aid incidents
+- **Within 24 hours** — recordable incidents
+- **Within 8 hours** — fatalities (OSHA requirement)
+- **Within 30 days** — hospitalizations, amputations, eye loss (OSHA)
+
+### Digital Incident Reporting
+Mobile apps enable immediate capture of incident details, photos, and signatures at the scene, eliminating the delay and lost information of paper-based reporting.`,
+    relatedSlugs: ["near-miss", "jsa", "osha", "site-safety-inspection"],
+  },
+  {
+    term: "Near Miss Report",
+    slug: "near-miss",
+    definition:
+      "A documentation of an event that could have resulted in injury or damage but did not, used to prevent future incidents.",
+    category: "Safety",
+    details: `## What is a Near Miss?
+
+A **near miss** is an event that could have resulted in injury, death, or property damage but did not, usually due to chance or timely intervention. Near-miss reporting is a critical component of a proactive safety culture.
+
+### Why Near-Miss Reporting Matters
+- For every serious incident, there are typically 300 near misses (Heinrich's pyramid)
+- Near misses are free lessons — learning from them prevents future injuries
+- Reporting near misses builds a culture of safety awareness
+
+### What to Report
+- Close calls with equipment
+- Objects falling from height without hitting anyone
+- Workers narrowly avoiding struck-by incidents
+- Electrical near contacts
+- Trips and stumbles in hazardous areas
+
+### How SpaceCapture Helps
+SpaceCapture makes near-miss reporting fast and easy from the field, with structured templates that capture the essentials needed for analysis and corrective action.`,
+    relatedSlugs: ["incident-report", "jsa", "site-safety-inspection"],
+  },
+  {
+    term: "Fall Protection",
+    slug: "fall-protection",
+    definition:
+      "Systems and practices designed to prevent workers from falling from heights, including guardrails, personal fall arrest systems, and safety nets.",
+    category: "Safety",
+    details: `## Fall Protection in Construction
+
+**Fall protection** is the use of systems, practices, and equipment to prevent workers from falling from heights. Falls are the leading cause of death in the construction industry.
+
+### OSHA Requirements
+- **1926.501** — fall protection required at 6 feet (construction)
+- **1926.502** — fall protection systems criteria
+- **1926.503** — training requirements
+
+### Types of Fall Protection
+- **Guardrails** — passive fall protection
+- **Personal Fall Arrest System (PFAS)** — harness, lanyard, anchor
+- **Safety nets** — catch falls below
+- **Positioning devices** — hold worker in place
+- **Warning line systems** — alert workers to roof edge
+- **Controlled access zones** — limited access areas
+
+### The Hierarchy
+1. Eliminate the fall hazard (prefabrication, guardrails)
+2. Guard against the hazard (passive protection)
+3. Fall restraint (prevent the worker from reaching the edge)
+4. Fall arrest (stop the fall in progress)
+5. Administrative controls (safety monitors, warning lines)`,
+    relatedSlugs: ["scaffolding-safety", "confined-space", "ppe", "osha"],
+  },
+  {
+    term: "Lockout/Tagout (LOTO)",
+    slug: "lockout-tagout",
+    definition:
+      "A safety procedure ensuring that dangerous machines are properly shut off and not restarted before maintenance is completed.",
+    category: "Safety",
+    details: `## What is Lockout/Tagout (LOTO)?
+
+**Lockout/tagout (LOTO)** is a safety procedure used in industry and construction to ensure that dangerous machines and energy sources are properly shut off, isolated, and not re-energized before maintenance or service work is completed.
+
+### The Six Steps
+1. **Preparation** — identify all energy sources
+2. **Shutdown** — turn off the machine
+3. **Isolation** — isolate the machine from energy sources
+4. **Lockout/Tagout** — apply locks and tags
+5. **Stored energy verification** — verify zero energy state
+6. **Verification** — test that the machine cannot be started
+
+### OSHA Standard
+29 CFR 1910.147 — The Control of Hazardous Energy (Lockout/Tagout)
+
+### Common Energy Sources
+- Electrical
+- Hydraulic
+- Pneumatic
+- Thermal
+- Chemical
+- Gravitational
+- Stored mechanical energy`,
+    relatedSlugs: ["jsa", "sds", "electrical-safety", "osha"],
+  },
+  {
+    term: "Confined Space Entry",
+    slug: "confined-space",
+    definition:
+      "Entry into a space that is not designed for continuous occupancy, has limited access and egress, and may contain hazardous atmospheres.",
+    category: "Safety",
+    details: `## What is Confined Space Entry?
+
+A **confined space** is a space that is large enough for a worker to enter, has limited or restricted means of entry/exit, and is not designed for continuous occupancy. Entry into these spaces is regulated by OSHA due to the serious hazards they present.
+
+### Common Confined Spaces in Construction
+- Tanks and vessels
+- Vaults and manholes
+- Trenches and excavations
+- Silos and hoppers
+- Ductwork and piping
+- Attic and crawl spaces
+
+### Permit-Required Confined Space
+A confined space that contains or has the potential to contain a hazardous atmosphere, material with engulfment potential, converging walls, or any other serious safety hazard.
+
+### Entry Requirements
+1. Entry permit signed by authorized person
+2. Atmospheric testing before and during entry
+3. Ventilation
+4. Attendant stationed outside
+5. Rescue plan in place
+6. Communication procedures established
+7. PPE and rescue equipment available`,
+    relatedSlugs: ["jsa", "lockout-tagout", "excavation-safety", "osha"],
+  },
+  {
+    term: "Excavation Safety",
+    slug: "excavation-safety",
+    definition:
+      "Safety measures and practices designed to protect workers from hazards associated with excavations, trenches, and earthwork operations.",
+    category: "Safety",
+    details: `## Excavation Safety
+
+**Excavation safety** encompasses the practices, procedures, and equipment used to protect workers from the hazards of working in or near excavations and trenches. Cave-ins are one of the most dangerous construction hazards.
+
+### OSHA Requirements
+29 CFR 1926 Subpart P — Excavations
+
+### Key Requirements
+- **Soil classification** — Type A, B, or C
+- **Protective systems** — sloping, shoring, or shielding
+- **Daily inspections** — before each shift and after rain
+- **Competent person** — designated to inspect and authorize entry
+- **Access/egress** — ladders, ramps, or stairs within 25 feet
+- **Utilities** — locate and mark before digging
+- **Spoil piles** — kept at least 2 feet from the edge
+
+### Protective Systems
+- **Sloping/benching** — cut the trench walls at a safe angle
+- **Shoring** — hydraulic or timber supports
+- **Shielding** — trench box or trench shield`,
+    relatedSlugs: ["confined-space", "jsa", "scaffolding-safety", "osha"],
+  },
+  {
+    term: "Scaffolding Safety",
+    slug: "scaffolding-safety",
+    definition:
+      "Safety standards and practices for the erection, use, and dismantling of scaffolds to protect workers at heights.",
+    category: "Safety",
+    details: `## Scaffolding Safety
+
+**Scaffolding safety** covers the standards, practices, and equipment requirements for working on scaffolds. Scaffolds are used extensively in construction and are regulated by OSHA.
+
+### OSHA Requirements
+29 CFR 1926.451–454 — Scaffolds
+
+### Key Requirements
+- Designed by a qualified person for loads and configuration
+- Erected and dismantled under supervision of a competent person
+- Inspected before each shift by a competent person
+- Guardrails, midrails, and toeboards on open sides
+- Full planking or decking on working levels
+- Access provided (ladders, stairs, or ramps)
+- Base plates and mud sills on stable surfaces
+- Ties and braces to prevent tipping
+
+### Scaffold Types
+- **Supported scaffolds** — platforms supported by legs (frame, system)
+- **Suspended scaffolds** — platforms hung from overhead supports
+- **Mobile scaffolds** — supported on wheels or casters
+- **Aerial lifts** — cherry pickers, boom lifts`,
+    relatedSlugs: ["fall-protection", "excavation-safety", "ppe", "osha"],
+  },
+  {
+    term: "Electrical Safety",
+    slug: "electrical-safety",
+    definition:
+      "Safety practices and standards designed to protect workers from electrical hazards including shock, electrocution, burns, and fires.",
+    category: "Safety",
+    details: `## Electrical Safety in Construction
+
+**Electrical safety** encompasses the practices, procedures, and equipment designed to protect workers from electrical hazards on construction sites. Electrocution is one of OSHA's "Fatal Four" — the leading causes of construction deaths.
+
+### OSHA Requirements
+29 CFR 1926 Subpart K — Electrical
+
+### Key Hazards
+- **Electrocution** — death from electrical contact
+- **Electrical burns** — from arc flash or direct contact
+- **Electrical fires** — from faulty wiring or overloaded circuits
+- **Arc flash** — explosion from short circuit
+
+### Key Requirements
+- Ground-fault circuit interrupters (GFCI) on all 120V outlets
+- Assured equipment grounding conductor program
+- Assured grounding program
+- Only qualified persons work on energized equipment
+- Lockout/tagout before servicing
+- Proper cable and cord management
+- Temporary wiring standards
+
+### The "Fatal Four"
+According to OSHA, the four leading causes of construction worker deaths are:
+1. Falls
+2. Struck-by objects
+3. Electrocutions
+4. Caught-in/between`,
+    relatedSlugs: ["lockout-tagout", "jsa", "ppe", "osha"],
+  },
 ];
 
 // --- Project Management & Methodology ---
@@ -1443,6 +2228,272 @@ A **digital twin** is a virtual model designed to accurately reflect a physical 
 - **Operations** — monitor and manage the building
 - **Renovation** — accurate as-built reference`,
     relatedSlugs: ["bim", "as-built"],
+  },
+  {
+    term: "Earned Value Management (EVM)",
+    slug: "earned-value",
+    definition:
+      "A project management methodology that integrates scope, schedule, and cost to measure project performance and progress.",
+    category: "Project Management",
+    details: `## What is Earned Value Management (EVM)?
+
+**Earned value management (EVM)** is a project management technique that measures project performance by comparing the planned work, the work actually performed, and the actual cost. It provides an objective, quantifiable view of project health.
+
+### Key Metrics
+- **PV (Planned Value)** — the authorized budget for scheduled work
+- **EV (Earned Value)** — the budget value of work actually performed
+- **AC (Actual Cost)** — the actual cost incurred for the work
+- **CV (Cost Variance)** = EV - AC
+- **SV (Schedule Variance)** = EV - PV
+- **CPI (Cost Performance Index)** = EV / AC
+- **SPI (Schedule Performance Index)** = EV / PV
+
+### Interpretation
+- CPI or SPI > 1.0 — project is under budget or ahead of schedule
+- CPI or SPI < 1.0 — project is over budget or behind schedule
+
+### Why EVM Matters
+EVM provides early warning signs of schedule delays and budget overruns, allowing project managers to take corrective action before problems become critical.`,
+    relatedSlugs: ["critical-path", "look-ahead", "gantt-chart", "construction-management"],
+  },
+  {
+    term: "Critical Path Method (CPM)",
+    slug: "critical-path",
+    definition:
+      "A scheduling technique that identifies the sequence of dependent activities determining the shortest possible project duration.",
+    category: "Scheduling",
+    details: `## What is the Critical Path Method (CPM)?
+
+The **critical path method (CPM)** is a scheduling technique that identifies the longest sequence of dependent activities in a project plan. This sequence, the critical path, determines the shortest possible project duration.
+
+### How CPM Works
+1. List all activities
+2. Identify dependencies (finish-to-start, start-to-start, etc.)
+3. Determine activity durations
+4. Calculate early start, early finish, late start, late finish
+5. Identify the critical path (zero total float)
+
+### Key Concepts
+- **Total Float** — the amount of time an activity can be delayed without delaying the project
+- **Free Float** — the amount of time an activity can be delayed without delaying the next activity
+- **Critical Path** — activities with zero float
+- **Crashing** — adding resources to shorten critical activities
+- **Fast-tracking** — overlapping critical activities
+
+### Why CPM Matters
+Without CPM, project managers cannot determine which activities are truly critical to the project completion date.`,
+    relatedSlugs: ["gantt-chart", "look-ahead", "earned-value", "construction-management"],
+  },
+  {
+    term: "Look-Ahead Schedule",
+    slug: "look-ahead",
+    definition:
+      "A short-term schedule (typically 2–6 weeks) that provides detailed activity planning beyond the master schedule.",
+    category: "Scheduling",
+    details: `## What is a Look-Ahead Schedule?
+
+A **look-ahead schedule** is a short-term schedule, typically covering 2–6 weeks, that provides detailed activity-level planning beyond the master schedule. It is the bridge between the master schedule and daily planning.
+
+### Purpose
+- Identify upcoming activities and their prerequisites
+- Flag material and equipment needs
+- Coordinate subcontractor activities
+- Verify that the master schedule is achievable
+- Identify potential bottlenecks before they become problems
+
+### Typical Content
+- Activities planned for the next 2–6 weeks
+- Predecessor and successor relationships
+- Required materials and equipment
+- Subcontractor responsibilities
+- Inspection and test requirements
+- Constraint and assumption list
+
+### How SpaceCapture Helps
+SpaceCapture's scheduling integration links look-ahead activities to inspection checklists, ensuring the field team knows exactly what inspections are coming and what needs to be ready.`,
+    relatedSlugs: ["three-week-look", "critical-path", "gantt-chart"],
+  },
+  {
+    term: "Three-Week Look-Ahead",
+    slug: "three-week-look",
+    definition:
+      "A specific type of look-ahead schedule covering the next three weeks, used for detailed coordination and constraint resolution.",
+    category: "Scheduling",
+    details: `## What is a Three-Week Look-Ahead?
+
+A **three-week look-ahead** is the most common look-ahead schedule format in construction. It provides a rolling three-week window of planned activities, updated weekly.
+
+### Weekly Cycle
+1. **Monday/Tuesday** — update the three-week look-ahead
+2. **Wednesday/Thursday** — identify and resolve constraints
+3. **Friday** — distribute to all trades and subcontractors
+4. **Ongoing** — track completion and adjust
+
+### What It Shows
+- Week 1 — detailed daily activities
+- Week 2 — detailed daily activities
+- Week 3 — daily activities with more flexibility
+
+### Constraint Resolution
+The three-week look-ahead is the primary tool for identifying and resolving constraints before they become problems. If a material delivery is needed in Week 2 but hasn't been ordered, the constraint is flagged and resolved in Week 1.
+
+### Best Practices
+- Update weekly without exception
+- Include all trades
+- Track constraints to closure
+- Link to daily reports for as-built tracking`,
+    relatedSlugs: ["look-ahead", "critical-path", "gantt-chart"],
+  },
+  {
+    term: "Daily Construction Log",
+    slug: "daily-construction-log",
+    definition:
+      "A comprehensive daily record of all activities, conditions, and events on a construction site, serving as the official project record.",
+    category: "Documentation",
+    details: `## What is a Daily Construction Log?
+
+A **daily construction log** is the official contemporaneous record of all activities, conditions, and events on a construction site for a given day. It is often the first document referenced in legal disputes, claims, and delay analyses.
+
+### What to Record
+- Date, time, and project name
+- Weather conditions (temperature, precipitation, wind)
+- Workforce counts by trade
+- Equipment on site
+- Materials delivered
+- Work completed (by area and trade)
+- Inspections conducted
+- Visitors and meetings
+- Incidents, delays, and issues
+- Photos and observations
+
+### Legal Importance
+The daily log establishes the contemporaneous record of what happened on the project. Courts and arbitrators rely heavily on daily logs to resolve disputes.
+
+### Digital Daily Logs
+Modern construction apps like SpaceCapture enable daily logs to be completed in minutes from a mobile device, with auto-filled weather, photo attachments, and digital signatures.`,
+    relatedSlugs: ["daily-log", "daily-report", "daily-safety-report"],
+  },
+  {
+    term: "Meeting Minutes",
+    slug: "meeting-minutes",
+    definition:
+      "A written record of the discussions, decisions, action items, and attendees from a construction project meeting.",
+    category: "Documentation",
+    details: `## What are Meeting Minutes?
+
+**Meeting minutes** are the official written record of a construction project meeting. They document who attended, what was discussed, what decisions were made, and what action items were assigned.
+
+### Types of Construction Meetings
+- **Owner/architect/contractor (OAC)** — monthly progress meetings
+- **Submittal review meetings** — design team reviews submittals
+- **Safety meetings** — weekly safety coordination
+- **Coordination meetings** — MEP and trade coordination
+- **Punch list meetings** — closeout and deficiency review
+
+### What Minutes Should Include
+- Date, time, and location
+- Attendees (and their roles)
+- Agenda items discussed
+- Decisions made
+- Action items with responsible party and due date
+- Next meeting date
+
+### Digital Meeting Minutes
+Templates, action item tracking, and automatic distribution ensure nothing falls through the cracks between meetings.`,
+    relatedSlugs: ["daily-log", "rfi-log", "submittal-log", "construction-management"],
+  },
+  {
+    term: "Submittal Log",
+    slug: "submittal-log",
+    definition:
+      "A master list tracking all required submittals, their status, review dates, and approvals throughout a construction project.",
+    category: "Documentation",
+    details: `## What is a Submittal Log?
+
+A **submittal log** is a master tracking document that lists every submittal required on a project, its current status, review dates, and approvals. It is essential for ensuring that no submittal is missed and that the project stays on schedule.
+
+### What it Tracks
+- Submittal number and description
+- Required date (based on the schedule)
+- Submitted date
+- Review status (pending, approved, revised, rejected)
+- Resubmission date
+- Final approval date
+- Responsible subcontractor
+
+### Why it Matters
+- Prevents delays from late submittals
+- Provides a clear picture of submittal status
+- Helps identify bottlenecks in the review process
+- Required by most owners and architects
+
+### How SpaceCapture Helps
+SpaceCapture's submittal tracking module links submittals to schedule activities and provides real-time status dashboards for the project team.`,
+    relatedSlugs: ["submittal", "rfi-log", "specification", "shop-drawing"],
+  },
+  {
+    term: "RFI Log",
+    slug: "rfi-log",
+    definition:
+      "A master tracking document that records all Requests for Information, their status, responses, and impacts on schedule and cost.",
+    category: "Documentation",
+    details: `## What is an RFI Log?
+
+An **RFI log** is a master tracking document that records every Request for Information (RFI) issued on a project, its current status, response, and any impacts on schedule or cost.
+
+### What it Tracks
+- RFI number and date
+- Subject and description
+- Originator (sub, GC, architect)
+- Recipient (architect, engineer, owner)
+- Status (open, answered, closed)
+- Response date
+- Impact (time, cost, or none)
+- Decision documentation
+
+### Why it Matters
+- Provides a complete audit trail of design clarifications
+- Tracks response times and identifies bottlenecks
+- Documents decisions that affect scope, cost, or schedule
+- Critical for dispute resolution
+
+### Best Practices
+- Issue RFIs promptly — don't let questions fester
+- Include all relevant context and photos
+- Track response deadlines
+- Document the impact of each RFI
+- Distribute responses to all affected parties`,
+    relatedSlugs: ["rfi", "submittal-log", "change-order", "construction-management"],
+  },
+  {
+    term: "Punch List Tracking",
+    slug: "punch-list-tracking",
+    definition:
+      "The systematic process of creating, assigning, monitoring, and closing out punch list items through to project completion.",
+    category: "Documentation",
+    details: `## What is Punch List Tracking?
+
+**Punch list tracking** is the systematic process of managing punch list items from creation through resolution. It ensures every deficiency is documented, assigned, corrected, verified, and closed before final payment.
+
+### The Process
+1. **Create** — identify and document each item with photos
+2. **Assign** — assign to the responsible subcontractor
+3. **Prioritize** — severity-rate each item
+4. **Schedule** — plan the correction timeline
+5. **Execute** — subcontractor corrects the item
+6. **Verify** — inspector confirms the correction
+7. **Close** — item marked as closed
+
+### Tracking Metrics
+- Items created vs closed (trend chart)
+- Items by severity (critical, major, minor)
+- Items by trade/subcontractor
+- Average time to close
+- Outstanding items by area
+
+### How SpaceCapture Helps
+SpaceCapture provides real-time punch list tracking dashboards, automated assignment and notification, and photo-verified closure — eliminating the spreadsheets and paper-based tracking that slow down closeout.`,
+    relatedSlugs: ["punch-list", "snag-list", "construction-defect", "daily-log"],
   },
 ];
 

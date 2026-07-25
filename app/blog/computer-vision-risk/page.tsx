@@ -19,6 +19,9 @@ export default function ArticlePage() {
         subtitle="From reactive incident reports to real-time proactive safety: AI analyzes site footage to detect hazards, enforce PPE, and prevent accidents before they occur."
         category="AI Safety"
         readTime="10 min read"
+        description="Discover how AI-powered computer vision transforms construction safety by monitoring PPE compliance, detecting hazards, preventing zone incursions, and turning near-misses into proactive prevention."
+        url="https://spacecapture.ai/blog/computer-vision-risk"
+        keywords={["computer vision safety", "AI construction safety", "PPE compliance monitoring", "construction hazard detection", "job site risk prevention"]}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

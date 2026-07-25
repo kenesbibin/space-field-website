@@ -6,7 +6,7 @@ import Features from "@/components/Features";
 
 export const metadata: Metadata = {
   title: "Convert Excel Checklists to Mobile App | Paperless Construction Forms",
-  description: "Transform paper forms and Excel sheets into a digital daily construction report app. The best paperless safety audit software for field teams.",
+  description: "Transform paper forms and Excel sheets into a digital daily construction report app. AI-powered paperless safety audit software for field teams.",
   alternates: {
     canonical: "https://spacecapture.ai/digitize-paper-forms",
   },
@@ -24,7 +24,7 @@ const DigitizePaperPage = () => {
                     From Clipboard to Cloud in Minutes
                 </h2>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                    Space Capture replaces clunky spreadsheets and lost paperwork with slick mobile apps. No coding required. Just instant, verifiable field data.
+                    SpaceCapture replaces clunky spreadsheets and lost paperwork with slick mobile apps. No coding required. Just instant, verifiable field data.
                 </p>
              </div>
              <Features />

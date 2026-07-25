@@ -46,12 +46,12 @@ const DigitizePaperSection = () => {
                             <span>Go Paperless Today</span>
                         </div>
 
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
                             Stop Using <br/>
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-teal-600">
                                 Paper & Excel.
                             </span>
-                        </h1>
+                        </h2>
 
                         <p className="text-xl text-slate-600 mb-8 leading-relaxed max-w-xl">
                             Transform your messy clipboards and spreadsheets into a powerful digital daily construction report app. 

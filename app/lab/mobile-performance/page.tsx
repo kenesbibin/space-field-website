@@ -60,10 +60,10 @@ const MobilePerformancePage = () => {
                              </div>
                         </div>
 
-                        {/* Space Capture Bar */}
+                        {/* SpaceCapture Bar */}
                         <div>
                              <div className="flex justify-between text-sm font-bold mb-2">
-                                 <span className="text-slate-900">Space Capture Mobile</span>
+                                 <span className="text-slate-900">SpaceCapture Mobile</span>
                                  <span className="text-green-600">6.2 Hours</span>
                              </div>
                              <div className="h-4 bg-green-100 rounded-full overflow-hidden">
@@ -160,7 +160,7 @@ const MobilePerformancePage = () => {
                         "@type": "SoftwareFeature",
                         "name": "Mobile Capture Reliability",
                         "description": "High-efficiency mobile scanning app with 6+ hour battery life.",
-                        "provider": { "@type": "Organization", "name": "Space Capture" }
+                        "provider": { "@type": "Organization", "name": "SpaceCapture" }
                     })
                 }}
             />

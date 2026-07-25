@@ -21,7 +21,7 @@ export default function AsphaltCalculatorPage() {
         "description": "A comprehensive guide and calculator for estimating asphalt tonnage for paving projects.",
         "author": {
             "@type": "Organization",
-            "name": "Space Capture"
+            "name": "SpaceCapture"
         },
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -93,7 +93,7 @@ export default function AsphaltCalculatorPage() {
 
                             <div className="mt-12 p-8 bg-purple-50 rounded-2xl border border-purple-100 italic">
                                 "Using digital tools for material estimation reduces administrative overhead by up to 15% and minimizes site waste."
-                                <span className="block mt-2 font-bold not-italic">— Space Capture Engineering Team</span>
+                                <span className="block mt-2 font-bold not-italic">— SpaceCapture Engineering Team</span>
                             </div>
                         </article>
                     </div>

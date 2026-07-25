@@ -19,6 +19,9 @@ export default function ArticlePage() {
         subtitle="From tedious clipboard walkthroughs to instant, objective defect detection—how AI is revolutionizing quality control and accelerating project closeout."
         category="Quality Control"
         readTime="9 min read"
+        description="Discover how AI-powered defect detection and automated punch list generation eliminate subjective manual walkthroughs, reduce closeout time by weeks, and deliver zero-defect handovers."
+        url="https://spacecapture.ai/blog/end-of-manual-punch-lists"
+        keywords={["automated punch list", "AI defect detection", "construction closeout automation", "eliminate manual inspections", "zero-defect construction handover"]}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

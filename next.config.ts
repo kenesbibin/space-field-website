@@ -94,6 +94,11 @@ const nextConfig: NextConfig = {
         destination: '/glossary/:slug',
         permanent: true,
       },
+      {
+        source: '/industries/oil-gas',
+        destination: '/industries/oil-and-gas',
+        permanent: true,
+      },
     ];
   },
 

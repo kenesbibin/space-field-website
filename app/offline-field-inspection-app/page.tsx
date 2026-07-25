@@ -3,14 +3,32 @@ import type { Metadata } from "next";
 import CallToAction from "@/components/CallToAction";
 import OfflineModeSection from "@/components/OfflineModeSection";
 import Features from "@/components/Features";
+import StructuredData from "@/components/seo/StructuredData";
+import { getServiceSchema } from "@/components/seo/ServiceSchema";
+import {
+  buildBreadcrumbsFromPath,
+  getBreadcrumbListSchema,
+} from "@/components/seo/BreadcrumbListSchema";
 
 export const metadata: Metadata = {
-  title: "Offline Field Inspection App for Construction & Remote Sites | Space Capture",
-  description: "The #1 Offline Field App. Capture inspection data in basements, tunnels, or remote sites without WiFi. Auto-sync when online. No data loss.",
+  title: "Offline Field Inspection App for Construction & Remote Sites | SpaceCapture",
+  description: "Offline field inspection app. Capture inspection data in basements, tunnels, or remote sites without WiFi. Auto-sync when online. No data loss.",
   alternates: {
     canonical: 'https://spacecapture.ai/offline-field-inspection-app',
   },
 };
+
+const serviceSchema = getServiceSchema({
+  name: 'Offline Field Inspection App',
+  description:
+    'Offline field inspection app. Capture inspection data in basements, tunnels, or remote sites without WiFi. Auto-sync when online. No data loss.',
+  url: 'https://spacecapture.ai/offline-field-inspection-app',
+  serviceType: 'Offline Field Inspection App',
+  areaServed: 'Worldwide',
+});
+const breadcrumbSchema = getBreadcrumbListSchema(
+  buildBreadcrumbsFromPath('/offline-field-inspection-app')
+);
 
 const OfflineAppPage = () => {
   return (
@@ -25,7 +43,7 @@ const OfflineAppPage = () => {
                     Why Construction Teams Choose Offline-First
                 </h2>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                    Field work doesn't stop when the connection drops. Space Capture is engineered to perform 100% of its core functions without an internet connection, ensuring your team stays productive anywhere on the map.
+                    Field work doesn't stop when the connection drops. SpaceCapture is engineered to perform 100% of its core functions without an internet connection, ensuring your team stays productive anywhere on the map.
                 </p>
              </div>
              <Features />
@@ -33,6 +51,13 @@ const OfflineAppPage = () => {
 
         <CallToAction />
       </main>
+
+      <StructuredData
+        data={{
+          '@context': 'https://schema.org',
+          '@graph': [serviceSchema, breadcrumbSchema],
+        }}
+      />
     </div>
   );
 };

@@ -9,23 +9,8 @@ interface BreadcrumbProps {
 }
 
 export function Breadcrumbs({ items, className = '' }: BreadcrumbProps) {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.label,
-      item: `https://spacecapture.ai${item.href}`,
-    })),
-  };
-
   return (
     <nav aria-label="Breadcrumb" className={`py-4 text-sm text-gray-500 ${className}`}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <ol className="flex items-center space-x-2">
         <li>
           <Link href="/" className="hover:text-purple-600 transition">Home</Link>

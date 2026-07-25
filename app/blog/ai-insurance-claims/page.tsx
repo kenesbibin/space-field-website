@@ -19,6 +19,9 @@ export default function ArticlePage() {
         subtitle="How automated visual documentation, 360-degree reality capture, and AI-driven incident reconstruction are eliminating disputes, speeding up settlements, and reducing premiums."
         category="Risk Management"
         readTime="9 min read"
+        description="Discover how AI-powered visual documentation and automated incident reconstruction are transforming construction insurance claims—reducing disputes, accelerating payouts, and lowering premiums for contractors."
+        url="https://spacecapture.ai/blog/ai-insurance-claims"
+        keywords={['AI insurance claims', 'construction insurance', 'visual documentation', 'incident reconstruction', 'claims settlement']}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

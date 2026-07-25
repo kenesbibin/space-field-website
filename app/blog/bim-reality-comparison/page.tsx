@@ -19,6 +19,9 @@ export default function ArticlePage() {
         subtitle="How automated as-built vs. as-designed validation using augmented reality and AI deviation detection is helping contractors build it right the first time."
         category="BIM & VDC"
         readTime="9 min read"
+        description="Learn how AI-powered BIM-to-reality overlays and automated deviation detection catch installation errors early, prevent clashes, and slash rework costs by up to 70%."
+        url="https://spacecapture.ai/blog/bim-reality-comparison"
+        keywords={["BIM to reality comparison", "construction rework reduction", "AI deviation detection", "augmented reality construction", "as-built vs as-designed"]}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

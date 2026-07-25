@@ -167,7 +167,7 @@ const OfflineSyncPage = () => {
                         "@type": "SoftwareFeature",
                         "name": "Offline Delta-Sync",
                         "description": "Robust offline data collection and synchronization for construction sites.",
-                        "provider": { "@type": "Organization", "name": "Space Capture" }
+                        "provider": { "@type": "Organization", "name": "SpaceCapture" }
                     })
                 }}
             />

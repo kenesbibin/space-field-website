@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "SpaceCapture vs OpenSpace — Best Construction Inspection Software Comparison 2026",
+    "SpaceCapture vs OpenSpace — Construction Inspection Software Comparison 2026",
   description:
-    "Compare SpaceCapture vs OpenSpace for construction inspections, AI defect detection, snagging, and site documentation. Discover which platform is best for contractors and engineers.",
+    "Compare SpaceCapture vs OpenSpace for construction inspections, AI defect detection, snagging, and site documentation. Discover which platform is right for contractors and engineers.",
   keywords: [
     "SpaceCapture vs OpenSpace",
     "OpenSpace alternative",

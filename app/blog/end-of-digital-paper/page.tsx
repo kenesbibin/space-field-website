@@ -20,6 +20,9 @@ export default function ManifestoPage() {
         subtitle="A manifesto on why digitizing forms was never the answer—and why Active AI is the only path forward for modern field operations."
         category="Thought Leadership"
         readTime="12 min read"
+        description="Why simply digitizing paper forms failed construction and field service teams—and how Active AI with computer vision, real-time sync, and intelligent workflows is finally delivering the promised revolution."
+        url="https://spacecapture.ai/blog/end-of-digital-paper"
+        keywords={["Active AI field operations", "digital paper problem", "construction AI automation", "computer vision field service", "intelligent construction workflows"]}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

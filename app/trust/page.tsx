@@ -1,7 +1,4 @@
-"use client";
-
 import React from 'react';
-import { motion } from 'framer-motion';
 import { 
   ShieldCheck, 
   Lock, 
@@ -13,6 +10,15 @@ import {
   Activity
 } from 'lucide-react';
 import { LabCard } from '@/components/lab/TestControls';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Trust Center - SpaceCapture',
+  description: 'Enterprise-grade security, compliance, and data protection. SOC 2, ISO 27001, GDPR compliant with 99.99% uptime.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/trust',
+  },
+};
 
 export default function TrustCenterPage() {
   return (
@@ -159,7 +165,7 @@ export default function TrustCenterPage() {
       <section className="py-20 container mx-auto px-6 max-w-4xl">
          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Security FAQ</h2>
          <div className="space-y-6">
-            <SecurityFaq question="Who owns the data I upload?" answer="You typically retain full ownership of all data, photos, and models uploaded to the platform. Space Capture claims no IP rights over your project data." />
+            <SecurityFaq question="Who owns the data I upload?" answer="You typically retain full ownership of all data, photos, and models uploaded to the platform. SpaceCapture claims no IP rights over your project data." />
             <SecurityFaq question="Do you perform penetration testing?" answer="Yes, we engage third-party security firms to perform penetration testing twice annually on both our web platform and mobile API." />
             <SecurityFaq question="How are backups handled?" answer="Full system backups are performed daily with point-in-time recovery enabled. Backups are encrypted and stored in a separate geographic region for disaster recovery." />
          </div>
@@ -173,8 +179,8 @@ export default function TrustCenterPage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Enterprise Trust Center",
-            "description": "Security, compliance, and uptime information for Space Capture.",
-            "provider": { "@type": "Organization", "name": "Space Capture" }
+            "description": "Security, compliance, and uptime information for SpaceCapture.",
+            "provider": { "@type": "Organization", "name": "SpaceCapture" }
           })
         }}
       />
@@ -191,9 +197,8 @@ const StatusItem = ({ label, value, color = "text-slate-900" }: { label: string,
 );
 
 const ComplianceCard = ({ title, desc, icon: Icon }: any) => (
-    <motion.div 
-        whileHover={{ y: -5 }}
-        className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all"
+    <div 
+        className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all"
     >
         <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-slate-900 mb-6">
             <Icon className="w-6 h-6" />
@@ -203,7 +208,7 @@ const ComplianceCard = ({ title, desc, icon: Icon }: any) => (
         <div className="mt-6 text-green-600 text-xs font-bold flex items-center gap-1">
             <CheckCircle className="w-3 h-3" /> Certified Active
         </div>
-    </motion.div>
+    </div>
 );
 
 const RegionRow = ({ region, location, status }: any) => (

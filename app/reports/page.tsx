@@ -5,17 +5,17 @@ import ReportsSection from '@/components/ReportSection';
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: 'Deep Insights & Analytics | Space Capture',
-  description: 'Transform field data into actionable intelligence with Space Capture. Real-time dashboards, custom PDF reporting, and automated analytics for smarter decisions.',
-  keywords: ['field analytics', 'reporting dashboard', 'construction data', 'custom reports', 'business intelligence', 'Space Capture'],
+  title: 'Deep Insights & Analytics | SpaceCapture',
+  description: 'Transform field data into actionable intelligence with SpaceCapture. Real-time dashboards, custom PDF reporting, and automated analytics for smarter decisions.',
+  keywords: ['field analytics', 'reporting dashboard', 'construction data', 'custom reports', 'business intelligence', 'SpaceCapture'],
   alternates: {
     canonical: 'https://spacecapture.ai/reports',
   },
   openGraph: {
-    title: 'Deep Insights & Analytics | Space Capture',
+    title: 'Deep Insights & Analytics | SpaceCapture',
     description: 'Visual dashboards and automated reporting for field operations.',
     url: 'https://spacecapture.ai/reports',
-    siteName: 'Space Capture',
+    siteName: 'SpaceCapture',
     locale: 'en_US',
     type: 'website',
   },

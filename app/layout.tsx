@@ -10,18 +10,17 @@ import EmailButton from "@/components/EmailButton";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import CopilotKitWrapper from "@/components/CopilotKitWrapper";
-
-
+import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 
 
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://spacecapture.ai"),
   title: {
-    default: "SpaceCapture — #1 AI Construction & Field Inspection Software",
+    default: "SpaceCapture — AI Construction & Field Inspection Software",
     template: "%s | SpaceCapture"
   },
-  description: "The #1 AI-powered construction & field inspection software. Automate inspections, defect detection, daily reports, and safety compliance for construction, real estate, oil & gas, and facility teams.",
+  description: "AI-powered construction & field inspection software. Automate inspections, defect detection, daily reports, and safety compliance for construction, real estate, oil & gas, and facility teams.",
   keywords: [
     "inspections",
     "construction",
@@ -226,7 +225,7 @@ export const metadata: Metadata = {
   category: "Construction & Field Inspection Software",
   openGraph: {
     type: "website",
-    title: "SpaceCapture — #1 AI Construction & Field Inspection Software",
+    title: "SpaceCapture — AI Construction & Field Inspection Software",
     description: "Automate defect detection, daily reports, and safety compliance with our AI-powered mobile platform built for construction, real estate, and facility teams.",
     url: "https://spacecapture.ai",
     siteName: "SpaceCapture",
@@ -243,7 +242,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "SpaceCapture | AI Construction & Field Inspection",
-    description: "The #1 AI Field Inspection Software for construction. Automate defect detection, daily reports, and safety compliance.",
+    description: "AI-powered Field Inspection Software for construction. Automate defect detection, daily reports, and safety compliance.",
     creator: "@SpaceCapture7",
     site: "@SpaceCapture7",
     images: ["/images/og-image.jpg"],
@@ -299,29 +298,19 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-PQTNF8MF');
           `}
         </Script>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-9CY0C607SQ"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
 
-            gtag('config', 'G-9CY0C607SQ');
-          `}
-        </Script>
-        <CopilotKitWrapper>
-          <JsonLd />
-          <Navbar />
-          <Breadcrumbs />
-          {children}
-          <Footer />
-          <EmailButton/>
-          <WhatsAppButton />
-          <SpaceCaptureCopilot />
-        </CopilotKitWrapper>
+        <AnalyticsProvider>
+          <CopilotKitWrapper>
+            <JsonLd />
+            <Navbar />
+            <Breadcrumbs />
+            {children}
+            <Footer />
+            <EmailButton/>
+            <WhatsAppButton />
+            <SpaceCaptureCopilot />
+          </CopilotKitWrapper>
+        </AnalyticsProvider>
       </body>
     </html>
   );

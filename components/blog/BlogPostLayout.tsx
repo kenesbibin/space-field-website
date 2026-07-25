@@ -12,20 +12,58 @@ interface BlogPostLayoutProps {
   readTime?: string;
   author?: string;
   category?: string;
+  description?: string;
+  url?: string;
+  dateModified?: string;
+  keywords?: string[];
   children: React.ReactNode;
 }
 
 export const BlogPostLayout = ({
   title,
   subtitle,
-  publishDate = 'Jan 24, 2026', // Future date for "fresh" content
+  publishDate = 'Jan 24, 2026',
   readTime = '5 min read',
-  author = 'SpaceCapture Editorial',
+  author = 'SpaceCapture Engineering Team',
   category = 'AI in Construction',
+  description,
+  url,
+  dateModified,
+  keywords = [],
   children
 }: BlogPostLayoutProps) => {
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description: description || subtitle || title,
+    ...(url ? { mainEntityOfPage: { '@type': 'WebPage', '@id': url } } : {}),
+    image: ['https://spacecapture.ai/images/og-image.jpg'],
+    datePublished: publishDate,
+    dateModified: dateModified || publishDate,
+    author: {
+      '@type': 'Organization',
+      name: author,
+      url: 'https://spacecapture.ai/about-us',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'SpaceCapture',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://spacecapture.ai/logo.png',
+      },
+    },
+    ...(category ? { articleSection: category } : {}),
+    ...(keywords.length > 0 ? { keywords: keywords.join(', ') } : {}),
+  };
+
   return (
     <div className="min-h-screen bg-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <main>
         {/* Post Header */}
         <section className="bg-slate-900 text-white pt-32 pb-20 relative overflow-hidden">
@@ -52,6 +90,11 @@ export const BlogPostLayout = ({
                     <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" /> {publishDate}
                     </div>
+                    {dateModified && dateModified !== publishDate && (
+                        <div className="flex items-center gap-2">
+                            <Clock className="w-4 h-4" /> Last updated: {dateModified}
+                        </div>
+                    )}
                 </div>
              </div>
         </section>

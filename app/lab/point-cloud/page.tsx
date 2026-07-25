@@ -77,7 +77,7 @@ const PointCloudPage = () => {
                              </div>
 
                              <div className="flex justify-between text-sm">
-                                 <span className="text-slate-500">Space Capture LOD Stream</span>
+                                 <span className="text-slate-500">SpaceCapture LOD Stream</span>
                                  <span className="font-mono font-bold text-green-600">240 MB</span>
                              </div>
                              <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
@@ -200,7 +200,7 @@ const PointCloudPage = () => {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "SoftwareApplication",
-                        "name": "Space Capture Point Cloud Engine",
+                        "name": "SpaceCapture Point Cloud Engine",
                         "applicationCategory": "Visualization",
                         "operatingSystem": "Web Browser",
                         "offers": {

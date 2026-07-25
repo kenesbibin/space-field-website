@@ -84,7 +84,7 @@ const CaseStudyPage = () => {
              </div>
              <div className="flex-1">
                  <strong className="text-slate-900 block mb-2 text-base">After: The "Clean Site" Solution</strong>
-                 With Space Capture's AI cameras, every zone was monitored. The system auto-flagged "Blocked Access" and "Material Sprawl" instantly. Subcontractors received alerts to clean up within 30 minutes, keeping the site pristine and safe.
+                 With SpaceCapture's AI cameras, every zone was monitored. The system auto-flagged "Blocked Access" and "Material Sprawl" instantly. Subcontractors received alerts to clean up within 30 minutes, keeping the site pristine and safe.
              </div>
          </div>
       </section>
@@ -107,7 +107,7 @@ const CaseStudyPage = () => {
           <div>
             <h3 className="text-2xl font-bold text-slate-900 mb-4">The AI Intervention</h3>
             <p>
-                Vertex deployed Space Capture's <strong>AI Detection Module</strong>. Instead of relying solely on human eyes, they installed solar-powered fixed cameras and used the mobile app for spot checks.
+                Vertex deployed SpaceCapture's <strong>AI Detection Module</strong>. Instead of relying solely on human eyes, they installed solar-powered fixed cameras and used the mobile app for spot checks.
             </p>
             <p className="mt-4">
                 The AI was trained to recognize specific "Anti-Patterns":

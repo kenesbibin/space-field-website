@@ -19,6 +19,9 @@ export default function ArticlePage() {
         subtitle="Bringing the job site to your desk: How immersive virtual walks and intelligent AI context are revolutionizing remote stakeholder engagement and decision-making."
         category="Virtual Presence"
         readTime="9 min read"
+        description="Discover how 360-degree reality capture combined with AI enables virtual job walks, remote stakeholder reviews, faster decisions, and reduced travel—bringing the entire team to the site without leaving their desks."
+        url="https://spacecapture.ai/blog/remote-inspections-360"
+        keywords={["360 degree reality capture", "remote construction inspections", "virtual job walks", "AI inspection technology", "construction stakeholder reviews"]}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

@@ -40,10 +40,10 @@ const AccessControlSection = () => {
                  <span className="text-sm font-bold text-emerald-700 uppercase tracking-wider">Security First</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
                 Enterprise-Grade <br/>
                 <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Access Control</span>
-              </h1>
+              </h2>
               
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
                 Define exactly who can see, edit, or delete data. Create custom roles like "Field Inspector," "Project Manager," or " auditor" to ensure data integrity and compliance across your organization.

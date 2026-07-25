@@ -1,6 +1,6 @@
 export const getSoftwareSchema = () => ({
   "@type": "SoftwareApplication",
-  "name": "Space Capture",
+  "name": "SpaceCapture",
   "headline":
     "AI-Powered Field Inspection Software & Construction Management",
   "image": "https://spacecapture.ai/logo.png",
@@ -12,7 +12,7 @@ export const getSoftwareSchema = () => ({
     "ManagementApplication"
   ],
   "description":
-    "Space Capture is the ultimate mobile command center for field operations, construction management, and site inspections. Features include AI-powered defect detection (cracks, corrosion), real-time field-to-office sync, digital signature capture, and automated safety compliance workflows.",
+    "SpaceCapture is an AI-powered mobile command center for field operations, construction management, and site inspections. Features include AI-powered defect detection (cracks, corrosion), real-time field-to-office sync, digital signature capture, and automated safety compliance workflows.",
   "featureList": [
     "AI Defect Detection API (Cracks & Corrosion)",
     "Real-Time Field Operations Dashboard",

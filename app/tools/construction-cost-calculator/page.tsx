@@ -115,7 +115,7 @@ export default function ConstructionCalculatorPage() {
               </p>
               <div className="mt-12 p-8 bg-blue-50 rounded-2xl border border-blue-100 italic">
                 "Accurate estimating is the first step toward project success. Integrating these estimates with real-time field data ensures your budget stays on track from groundbreaking to completion."
-                <span className="block mt-2 font-bold not-italic">— Space Capture Product Team</span>
+                <span className="block mt-2 font-bold not-italic">— SpaceCapture Product Team</span>
               </div>
             </article>
           </div>

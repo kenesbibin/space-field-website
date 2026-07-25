@@ -13,7 +13,7 @@ const TOOLS = [
 ];
 
 export const metadata: Metadata = {
-    title: 'Free Construction Tools & Project Automation Calculators | Space Capture',
+    title: 'Free Construction Tools & Project Automation Calculators | SpaceCapture',
     description: 'Access our suite of free construction tools and project automation calculators: asphalt and concrete estimators, labor burden tools, CAD viewers, and more. Built for field engineers to automate workflows.',
     keywords: [
         'construction tools',
@@ -39,7 +39,7 @@ export default function ToolsPage() {
         "description": "A comprehensive collection of free web-based tools and project automation calculators designed for construction professionals and field engineers to streamline site operations.",
         "publisher": {
             "@type": "Organization",
-            "name": "Space Capture",
+            "name": "SpaceCapture",
             "url": "https://spacecapture.ai"
         },
         "mainEntity": TOOLS.map(tool => ({

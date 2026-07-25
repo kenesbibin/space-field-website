@@ -8,7 +8,7 @@ import CallToAction from "@/components/CallToAction";
 export const metadata: Metadata = {
   title: "Procore Alternative | SpaceCapture AI",
   description: "Procore handles the office. SpaceCapture handles the field. Switch to the specialized tool for field data capture, visual automation, and defects.",
-  keywords: "Procore alternative, field management software, construction punch list app, best alternative to Procore, spacecapture vs procore",
+  keywords: "Procore alternative, field management software, construction punch list app, leading alternative to Procore, spacecapture vs procore",
   alternates: {
     canonical: 'https://spacecapture.ai/alternatives/procore',
   },

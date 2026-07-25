@@ -7,11 +7,11 @@ import { BlogPostLayout } from "@/components/blog/BlogPostLayout";
 import CallToAction from "@/components/CallToAction";
 
 export const metadata: Metadata = {
-    title: "Best UI Experience in SpaceCapture App",
+    title: "UI Experience in SpaceCapture App",
     description:
-        "Explore how SpaceCapture delivers one of the best UI experiences for construction field teams with an offline-first, intuitive design.",
+        "Explore how SpaceCapture delivers an intuitive UI experience for construction field teams with an offline-first, intuitive design.",
     keywords: [
-        "best UI experience",
+        "UI experience",
         "SpaceCapture UI",
         "construction app UX",
         "offline-first UI",
@@ -26,10 +26,13 @@ export default function BestUIExperiencePage() {
     return (
         <>
             <BlogPostLayout
-                title="Best UI Experience in SpaceCapture App"
+                title="UI Experience in SpaceCapture App"
                 subtitle="Designed for speed, clarity, and real-world job sites — even without internet."
                 category="UI / UX"
                 readTime="6 min read"
+                description="Explore how SpaceCapture delivers an intuitive UI experience for construction field teams with an offline-first, intuitive design."
+                url="https://spacecapture.ai/blog/best-ui-experience-spacecapture"
+                keywords={["UI experience", "construction app design", "offline-first field app", "SpaceCapture user experience", "mobile field app interface"]}
             >
                 {/* Hero Image */}
                 <div className="relative w-full h-[420px] rounded-2xl overflow-hidden mb-10 shadow-lg border border-slate-100">
@@ -47,7 +50,7 @@ export default function BestUIExperiencePage() {
                     <p className="lead text-xl text-slate-800 font-medium mb-8">
                         A great construction app isn’t just about features — it’s about how
                         fast, clear, and stress-free it feels on a busy job site.
-                        SpaceCapture is built to deliver one of the best UI experiences for
+                        SpaceCapture is built to deliver an intuitive UI experience for
                         field teams working in tough, offline environments.
                     </p>
 

@@ -6,7 +6,7 @@ import { FaqSection } from '@/components/seo/FaqSection';
 
 export const metadata: Metadata = {
   title: 'Construction Field Software | Mobile Jobsite Management',
-  description: 'Empower your field teams with the best construction field software. Manage daily logs, safety, and progress tracking from a single mobile app.',
+  description: 'Empower your field teams with AI-powered construction field software. Manage daily logs, safety, and progress tracking from a single mobile app.',
   keywords: ['construction field software', 'field management app', 'mobile construction app', 'daily log software', 'jobsite management'],
   alternates: {
     canonical: 'https://spacecapture.ai/construction-field-software',

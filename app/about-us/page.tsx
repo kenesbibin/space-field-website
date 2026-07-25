@@ -1,7 +1,4 @@
-"use client";
-
 import React from 'react';
-import { color, motion } from 'framer-motion';
 import {
     Users,
     MapPin,
@@ -17,6 +14,15 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 import CallToAction from '@/components/CallToAction';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us - SpaceCapture',
+  description: 'Learn about SpaceCapture\'s mission to organize the world\'s spatial data and our global team powering field operations in 40+ countries.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/about-us',
+  },
+};
 
 const LOCATIONS = [
     {
@@ -77,7 +83,7 @@ export default function AboutUsPage() {
                         </span>
                     </h1>
                     <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10">
-                        Space Capture was founded on a simple belief: the physical world deserves a digital twin that is accurate, accessible, and actionable for everyone.
+                        SpaceCapture was founded on a simple belief: the physical world deserves a digital twin that is accurate, accessible, and actionable for everyone.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

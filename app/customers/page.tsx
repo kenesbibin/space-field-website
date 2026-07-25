@@ -1,10 +1,16 @@
-"use client";
-
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Star, ArrowRight, Building2, TrendingUp, Clock, ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Customers - SpaceCapture',
+  description: 'See how leading construction teams use SpaceCapture to deliver projects faster, reduce rework costs, and improve site safety.',
+  alternates: {
+    canonical: 'https://spacecapture.ai/customers',
+  },
+};
 
 export default function CustomersPage() {
   return (
@@ -24,7 +30,7 @@ export default function CustomersPage() {
               </span>
            </h1>
            <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10">
-              From 100-story skyscrapers to sprawling data centers, Space Capture provides the ground truth for over $50B in active construction.
+              From 100-story skyscrapers to sprawling data centers, SpaceCapture provides the ground truth for over $50B in active construction.
            </p>
            
            {/* LOGO CLOUD (Mock) */}
@@ -89,7 +95,7 @@ export default function CustomersPage() {
                    {[1,2,3,4,5].map(i => <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />)}
                 </div>
                 <blockquote className="text-2xl md:text-3xl font-medium text-slate-900 leading-normal mb-8">
-                   "Before Space Capture, we were drowning in thousands of unorganized site photos. Now, every pixel has a coordinate, and every issue has an owner. It&apos;s not just software; it&apos;s our daily source of truth."
+                   "Before SpaceCapture, we were drowning in thousands of unorganized site photos. Now, every pixel has a coordinate, and every issue has an owner. It&apos;s not just software; it&apos;s our daily source of truth."
                 </blockquote>
                 <cite className="not-italic">
                    <div className="font-bold text-slate-900 text-lg">Sarah Jenkins</div>
@@ -140,9 +146,8 @@ const CaseStudyCard = ({ category, title, stat, statLabel, challenge, solution, 
    };
 
    return (
-      <motion.div 
-         whileHover={{ y: -5 }}
-         className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all flex flex-col"
+      <div 
+         className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col"
       >
          <div className={`self-start px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide mb-6 ${colorClasses[color]}`}>
             {category}
@@ -172,9 +177,9 @@ const CaseStudyCard = ({ category, title, stat, statLabel, challenge, solution, 
              </div>
          </div>
 
-         <button className="flex items-center gap-2 font-bold text-slate-900 hover:text-blue-600 transition-colors group mt-auto">
-            Read Case Study <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-         </button>
-      </motion.div>
+          <button className="flex items-center gap-2 font-bold text-slate-900 hover:text-blue-600 transition-colors group mt-auto">
+             Read Case Study <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </button>
+      </div>
    );
 }

@@ -8,17 +8,17 @@ import { INDUSTRIES_DATA } from '@/lib/seo-data';
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: 'Telecommunication Field Management Software | Space Field',
-  description: 'Manage telecom infrastructure, fiber deployment, and tower maintenance with Space Field. The ultimate offline-capable app for telecom field technicians.',
+  title: 'Telecommunication Field Management Software | SpaceCapture',
+  description: 'Manage telecom infrastructure, fiber deployment, and tower maintenance with Space Field. An offline-capable app for telecom field technicians.',
   keywords: ['telecom software', 'tower inspection', 'fiber deployment', 'field service management', '5G rollout', 'Space Field'],
   alternates: {
-    canonical: 'https://spacecapture.ai/industries/telecommunication',
+    canonical: 'https://spacecapture.ai/industries/telecom',
   },
   openGraph: {
-    title: 'Telecommunication Field Management Software | Space Field',
+    title: 'Telecommunication Field Management Software | SpaceCapture',
     description: 'Streamline telecom operations with real-time dispatch and asset tracking.',
-    url: 'https://spacecapture.ai/industries/telecommunication',
-    siteName: 'Space Field',
+    url: 'https://spacecapture.ai/industries/telecom',
+    siteName: 'SpaceCapture',
     images: [
       {
         url: '/images/tele.webp', 

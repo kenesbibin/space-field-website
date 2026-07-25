@@ -25,7 +25,7 @@ const AiDefectPage = () => {
                     Detect, Track, and Resolve. Automatically.
                 </h2>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                    Space Capture doesn't just find defects—it tracks them. Our AI assigns a unique ID to every issue, monitors severity over time, and verifies the fix with a follow-up photo, ensuring complete lifecycle management.
+                    SpaceCapture doesn't just find defects—it tracks them. Our AI assigns a unique ID to every issue, monitors severity over time, and verifies the fix with a follow-up photo, ensuring complete lifecycle management.
                 </p>
              </div>
              <Features />

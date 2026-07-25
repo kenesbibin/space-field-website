@@ -2,6 +2,7 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { LOCATION_DATA } from '@/lib/location-data';
+import { INDEXED_LOCATIONS } from '@/lib/indexed-locations';
 import CallToActionSection from '@/components/CallToAction';
 import {
   CheckCircle2,
@@ -21,6 +22,8 @@ import {
   getBreadcrumbListSchema,
 } from '@/components/seo/BreadcrumbListSchema';
 
+
+
 interface Props {
   params: Promise<{
     slug: string;
@@ -37,12 +40,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  const isIndexed = INDEXED_LOCATIONS.has(location.slug);
+
   return {
     title: location.metaTitle,
     description: location.metaDescription,
     keywords: location.metaKeywords,
     alternates: {
       canonical: `https://spacecapture.ai/locations/${location.slug}`,
+    },
+    robots: {
+      index: isIndexed,
+      follow: true,
     },
     openGraph: {
       title: location.metaTitle,

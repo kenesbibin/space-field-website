@@ -27,15 +27,15 @@ const SolarPanelSection = () => {
                             <span>Solar AI Inspection</span>
                         </div>
 
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
                             Maximize Yield with <br/>
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">
                                 Thermal AI.
                             </span>
-                        </h1>
+                        </h2>
 
                         <p className="text-xl text-slate-400 mb-8 leading-relaxed">
-                            Detect hotspots, micro-cracks, and string failures instantly. Integrate drone thermal imagery with Space Capture to audit megawatts of solar assets in minutes, not days.
+                            Detect hotspots, micro-cracks, and string failures instantly. Integrate drone thermal imagery with SpaceCapture to audit megawatts of solar assets in minutes, not days.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mb-12">

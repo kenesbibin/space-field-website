@@ -21,6 +21,9 @@ export default function AutomationBenefitsPage() {
         subtitle="Beyond the whiteboard: How intelligent scheduling and real-time dispatching are saving hours of admin time, boosting billable work, and reducing stress for field teams."
         category="Field Management"
         readTime="10 min read"
+        description="Learn how AI-driven dispatching software eliminates manual scheduling, optimizes routes, reduces downtime, improves technician productivity, and cuts administrative overhead in construction operations."
+        url="https://spacecapture.ai/blog/field-service-automation-benefits"
+        keywords={["field service automation", "AI dispatching software", "construction scheduling automation", "route optimization field service", "technician productivity"]}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

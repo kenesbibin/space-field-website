@@ -6,7 +6,7 @@ import CallToAction from '@/components/CallToAction';
 
 export const metadata: Metadata = {
   title: 'SpaceCapture Alternatives & Competitors | Compare Field Inspection Software',
-  description: 'Compare SpaceCapture to the best field inspection, safety, and construction management alternatives. Find the right fit for your team.',
+  description: 'Compare SpaceCapture to leading field inspection, safety, and construction management alternatives. Find the right fit for your team.',
   alternates: {
     canonical: 'https://spacecapture.ai/alternatives',
   },

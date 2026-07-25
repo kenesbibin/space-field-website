@@ -19,6 +19,9 @@ export default function ArticlePage() {
         subtitle="Why subjective foreman reports are obsolete—and how AI-driven reality capture provides objective, quantifiable schedule validation in construction."
         category="Project Controls"
         readTime="9 min read"
+        description="Discover why manual daily logs are outdated and how AI-powered reality capture delivers objective, quantifiable progress data—improving schedule accuracy, payment verification, and stakeholder trust."
+        url="https://spacecapture.ai/blog/reduce-rework-computer-vision"
+        keywords={["real-time progress tracking", "construction daily logs", "AI progress monitoring", "schedule validation construction", "reality capture progress"]}
       >
         <div className="prose-lg text-slate-600 max-w-none">
 

@@ -33,6 +33,16 @@ const COMPARISONS = [
     title: 'SpaceCapture vs SafetyCulture',
     excerpt: 'Move from static safety checklists to visual AI verification.',
   },
+  {
+    slug: 'procore',
+    title: 'SpaceCapture vs Procore',
+    excerpt: 'Compare AI-powered field inspections to Procore\'s project management platform.',
+  },
+  {
+    slug: 'fieldwire',
+    title: 'SpaceCapture vs Fieldwire',
+    excerpt: 'See how AI defect detection and 360° capture stack up against task management.',
+  },
 ];
 
 export default function CompareLandingPage() {
@@ -49,7 +59,7 @@ export default function CompareLandingPage() {
               SpaceCapture <span className="text-indigo-600">vs Competitors</span>
             </h1>
             <p className="text-lg text-slate-600 leading-relaxed">
-              Side-by-side comparisons of SpaceCapture and the most popular field operations platforms. Find the best solution for inspections, safety, and project reporting.
+              Side-by-side comparisons of SpaceCapture and the most popular field operations platforms. Find the right solution for inspections, safety, and project reporting.
             </p>
           </div>
         </section>
