@@ -683,4 +683,456 @@ export const ALTERNATIVES_DATA: Record<string, AlternativesData> = {
       { label: 'CoConstruct alternative', href: '/alternatives/coconstruct' },
     ],
   },
+
+  revizto: {
+    slug: 'revizto',
+    competitor: 'Revizto',
+    metaTitle: 'Revizto Alternative | SpaceCapture',
+    metaDescription:
+      'Looking for a Revizto alternative? SpaceCapture offers mobile-first field inspections, AI defect detection, and offline capability for construction teams.',
+    metaKeywords: [
+      'revizto alternative',
+      'alternative to revizto',
+      'revizto vs spacecapture',
+      'switch from revizto',
+    ],
+    heroBadge: 'Revizto Alternative',
+    tagline:
+      'Revizto excels at BIM coordination and issue tracking. But if your field team needs fast inspections, AI defect detection, and offline capability — SpaceCapture is the specialized tool they actually want to use.',
+    intro:
+      'We hear from construction teams every week: "We use Revizto for BIM coordination, but our field team struggles with the mobile experience." SpaceCapture solves this by being the dedicated field execution layer that works the way your team actually works — fast, mobile-first, and offline-capable.',
+    pains: [
+      {
+        title: 'Mobile experience is limited',
+        desc: "Revizto's mobile app is designed for BIM coordination, not field inspections. Field teams struggle with slow performance and limited offline capability.",
+      },
+      {
+        title: 'No AI defect detection',
+        desc: 'Your inspectors take photos but have to manually identify and document every issue. No automation, no intelligence — just more work for your field team.',
+      },
+      {
+        title: 'Complex setup for field teams',
+        desc: 'Revizto requires BIM integration and technical setup that\'s overkill for simple field inspections. Your field team needs something that works out of the box.',
+      },
+    ],
+    benefits: [
+      {
+        title: '5-minute inspections, not 50',
+        desc: 'Purpose-built forms designed for speed. Your field team completes inspections in minutes, not hours.',
+      },
+      {
+        title: 'AI catches what humans miss',
+        desc: 'Our AI detects cracks, corrosion, and defects automatically from photos — saving time and reducing costly rework.',
+      },
+      {
+        title: 'Works offline, syncs later',
+        desc: 'Full offline capability means your field team never stops working, even in basements, tunnels, or remote sites.',
+      },
+      {
+        title: 'Real-time dashboards',
+        desc: 'See project status instantly — no waiting for weekly reports. Office and field teams stay in sync.',
+      },
+      {
+        title: '5-minute setup, no training',
+        desc: 'Download the app, create a project, start inspecting. No weeks of onboarding or expensive consultants.',
+      },
+      {
+        title: 'Free tier, forever',
+        desc: 'Start with our free plan. No credit card, no time limit. Upgrade when you need more.',
+      },
+    ],
+    comparisons: [
+      { feature: 'Field inspections', competitor: 'Basic mobile app', spacecapture: '5-minute inspections with AI' },
+      { feature: 'BIM integration', competitor: 'Deep BIM coordination', spacecapture: 'Field data capture (complements BIM)' },
+      { feature: 'AI defect detection', competitor: 'Not available', spacecapture: 'Built-in, auto-detects cracks & corrosion' },
+      { feature: 'Offline capability', competitor: 'Limited offline', spacecapture: 'Full offline with sync' },
+      { feature: 'Setup time', competitor: 'Days/weeks with BIM setup', spacecapture: '5 minutes, no training' },
+      { feature: 'Daily reports', competitor: 'Manual compilation', spacecapture: 'Auto-generated from field data' },
+      { feature: 'Pricing', competitor: 'Per user, often expensive', spacecapture: 'Per user, free tier available' },
+    ],
+    faqs: [
+      {
+        q: 'Why switch from Revizto to SpaceCapture?',
+        a: 'Teams switch because their field crews need fast inspections and AI defect detection — not BIM coordination. SpaceCapture is purpose-built for field execution, while Revizto excels at BIM clash detection and issue tracking.',
+      },
+      {
+        q: 'Can I use SpaceCapture alongside Revizto?',
+        a: 'Absolutely. Many teams use Revizto for BIM coordination and design issues, while using SpaceCapture for field inspections, daily reports, and defect documentation. They complement each other well.',
+      },
+      {
+        q: 'What does SpaceCapture do better than Revizto?',
+        a: 'Field execution. SpaceCapture excels at fast inspections, AI-powered defect detection, offline capability, and real-time field-to-office sync. Revizto is stronger for BIM coordination and design issue tracking.',
+      },
+      {
+        q: 'Is SpaceCapture really free?',
+        a: 'Yes. Our free tier includes core inspection and reporting features — no credit card required, no time limit. Upgrade to paid plans for advanced features like multi-project dashboards and AI detection.',
+      },
+      {
+        q: 'How long does migration take?',
+        a: 'Most teams are up and running in 5 minutes. Download the app, create your first project, and start inspecting. No data migration needed — SpaceCapture is a field execution tool, not a BIM platform.',
+      },
+    ],
+    related: [
+      { label: 'Procore alternative', href: '/alternatives/procore' },
+      { label: 'SafetyCulture alternative', href: '/alternatives/safetyculture' },
+      { label: 'FieldWire alternative', href: '/alternatives/fieldwire' },
+      { label: 'GoCanvas alternative', href: '/alternatives/gocanvas' },
+    ],
+  },
+
+  fieldwire: {
+    slug: 'fieldwire',
+    competitor: 'Fieldwire',
+    metaTitle: 'Fieldwire Alternative for Small Teams | SpaceCapture',
+    metaDescription:
+      'The right Fieldwire alternative for small construction teams. Simple pricing, zero learning curve, and powerful AI features without the enterprise bloat.',
+    metaKeywords: [
+      'fieldwire alternative',
+      'alternative to fieldwire',
+      'fieldwire vs spacecapture',
+      'switch from fieldwire',
+    ],
+    heroBadge: 'Fieldwire Alternative',
+    tagline:
+      'Fieldwire is great for skyscrapers. But if you are a specialty sub or a small general contractor, you need speed, not complex plan management.',
+    intro:
+      'Fieldwire is built for enterprise GCs with complex plan management needs. SpaceCapture is built for small teams that need fast inspections, AI defect detection, and simple pricing without the enterprise bloat.',
+    pains: [
+      {
+        title: 'Enterprise-focused pricing',
+        desc: 'Fieldwire charges per user with tiered features. Small teams pay for capabilities they never use.',
+      },
+      {
+        title: 'Complex setup',
+        desc: 'Fieldwire requires plan uploads and configuration before you can start. Small teams need to inspect on day one.',
+      },
+      {
+        title: 'No AI defect detection',
+        desc: 'Fieldwire manages plans and tasks but does not analyze photos for defects or safety issues.',
+      },
+    ],
+    benefits: [
+      {
+        title: 'Simple flat-rate pricing',
+        desc: 'One price, all features. No per-user fees, no tiered feature gates.',
+      },
+      {
+        title: 'Instant setup',
+        desc: 'Download the app, create a project, start inspecting. No plan uploads required.',
+      },
+      {
+        title: 'AI defect detection',
+        desc: 'Every photo is auto-analyzed for cracks, corrosion, PPE compliance, and 50+ defect types.',
+      },
+      {
+        title: 'Mobile-first design',
+        desc: 'Built for phones, not adapted from desktop. Fast, intuitive, works offline.',
+      },
+      {
+        title: 'Direct WhatsApp support',
+        desc: 'Talk to a real person, not a ticket system. Get answers in minutes, not days.',
+      },
+    ],
+    comparisons: [
+      { feature: 'Target audience', competitor: 'Enterprise / Large GCs', spacecapture: 'Small teams & subs' },
+      { feature: 'Setup time', competitor: 'Complex (plans required)', spacecapture: 'Instant (start scanning)' },
+      { feature: 'Pricing model', competitor: 'Per user / tiered features', spacecapture: 'Simple flat rate' },
+      { feature: 'Plan views', competitor: 'Heavy PDF rendering', spacecapture: 'Fast mobile-first view' },
+      { feature: 'Task management', competitor: 'Ticket-based', spacecapture: 'Visual & AI-driven' },
+      { feature: 'Support', competitor: 'Ticket system', spacecapture: 'Direct WhatsApp support' },
+    ],
+    faqs: [
+      {
+        q: 'Why switch from Fieldwire to SpaceCapture?',
+        a: 'Small teams switch because Fieldwire is built for enterprise GCs with complex plan management. SpaceCapture is built for small teams that need fast inspections, simple pricing, and AI defect detection.',
+      },
+      {
+        q: 'Can I use SpaceCapture alongside Fieldwire?',
+        a: 'Absolutely. Many teams use Fieldwire for plan management and complex projects, while using SpaceCapture for fast field inspections and AI defect detection.',
+      },
+      {
+        q: 'What does SpaceCapture do better than Fieldwire?',
+        a: 'Field execution. SpaceCapture excels at fast inspections, AI-powered defect detection, offline capability, and simple pricing. Fieldwire is stronger for plan management and enterprise project coordination.',
+      },
+      {
+        q: 'Is SpaceCapture really free?',
+        a: 'Yes. Our free tier includes core inspection and reporting features — no credit card required, no time limit. Upgrade to paid plans for advanced features.',
+      },
+    ],
+    related: [
+      { label: 'Procore alternative', href: '/alternatives/procore' },
+      { label: 'SafetyCulture alternative', href: '/alternatives/safetyculture' },
+      { label: 'GoCanvas alternative', href: '/alternatives/gocanvas' },
+    ],
+  },
+
+  gocanvas: {
+    slug: 'gocanvas',
+    competitor: 'GoCanvas',
+    metaTitle: 'GoCanvas Alternative | SpaceCapture AI',
+    metaDescription:
+      'Eliminate form fatigue. SpaceCapture replaces manual typing with AI visual capture. The right GoCanvas alternative for speed and accuracy.',
+    metaKeywords: [
+      'gocanvas alternative',
+      'alternative to gocanvas',
+      'gocanvas vs spacecapture',
+      'switch from gocanvas',
+    ],
+    heroBadge: 'GoCanvas Alternative',
+    tagline:
+      'GoCanvas improved on paper, but it did not solve the core problem: Manual data entry is slow, error-prone, and hated by field workers.',
+    intro:
+      'Form fatigue leads to bad data. When inspectors are tired of typing, they start copy-pasting or entering minimum viable data. SpaceCapture removes the keyboard from the equation with visual-first automation that creates records 10x faster.',
+    pains: [
+      {
+        title: 'Form fatigue and burnout',
+        desc: 'Inspectors spend more time typing than inspecting. The more forms they fill out, the worse the data gets.',
+      },
+      {
+        title: 'Manual data entry',
+        desc: 'GoCanvas requires typing detailed descriptions, selecting dropdowns, and filling fields manually. It is slow and error-prone.',
+      },
+      {
+        title: 'No AI assistance',
+        desc: 'GoCanvas does not analyze photos or auto-detect defects. Every observation must be manually documented.',
+      },
+    ],
+    benefits: [
+      {
+        title: 'Visual AI capture',
+        desc: 'Point your camera and let AI auto-fill the form based on what it sees. No typing required.',
+      },
+      {
+        title: 'Voice-to-text',
+        desc: 'Speak your observations and watch them transcribed instantly into the form.',
+      },
+      {
+        title: 'AI defect detection',
+        desc: 'Every photo is auto-analyzed for cracks, corrosion, PPE compliance, and 50+ defect types.',
+      },
+      {
+        title: 'PDF template import',
+        desc: 'Upload your existing GoCanvas PDFs and our AI rebuilds the logic, fields, and tables automatically.',
+      },
+      {
+        title: 'Context-aware forms',
+        desc: 'Forms adapt based on what the AI sees — not just linear if/then rules.',
+      },
+    ],
+    comparisons: [
+      { feature: 'Data entry method', competitor: 'Heavy typing required', spacecapture: 'Visual & voice-to-text' },
+      { feature: 'Inspector experience', competitor: 'Form fatigue & burnout', spacecapture: 'Streamlined & fast' },
+      { feature: 'Defect classification', competitor: 'Manual dropdowns', spacecapture: 'Auto-detected by AI' },
+      { feature: 'Rich media support', competitor: 'Photo attachments only', spacecapture: 'AR overlays & measurements' },
+      { feature: 'Workflow logic', competitor: 'Linear if/then rules', spacecapture: 'Context-aware adaptation' },
+      { feature: 'Cost model', competitor: 'Per user / per form fees', spacecapture: 'Value-based pricing' },
+    ],
+    faqs: [
+      {
+        q: 'Why switch from GoCanvas to SpaceCapture?',
+        a: 'Teams switch because form fatigue leads to bad data. SpaceCapture removes the keyboard with visual AI capture, voice-to-text, and auto-defect detection — creating records 10x faster than manual typing.',
+      },
+      {
+        q: 'Can I import my GoCanvas templates?',
+        a: 'Yes. Upload your existing GoCanvas PDFs and our Vision Engine reads the PDF and rebuilds the logic, fields, and tables automatically. Most teams migrate in days.',
+      },
+      {
+        q: 'What does SpaceCapture do better than GoCanvas?',
+        a: 'Speed and accuracy. SpaceCapture uses multimodal AI to capture data visually, while GoCanvas relies on manual typing. SpaceCapture also adds AI defect detection that GoCanvas does not have.',
+      },
+      {
+        q: 'Is SpaceCapture really free?',
+        a: 'Yes. Our free tier includes core inspection and reporting features — no credit card required, no time limit.',
+      },
+    ],
+    related: [
+      { label: 'SafetyCulture alternative', href: '/alternatives/safetyculture' },
+      { label: 'FieldWire alternative', href: '/alternatives/fieldwire' },
+      { label: 'Procore alternative', href: '/alternatives/procore' },
+    ],
+  },
+
+  procore: {
+    slug: 'procore',
+    competitor: 'Procore',
+    metaTitle: 'Procore Alternative | SpaceCapture AI',
+    metaDescription:
+      'Procore handles the office. SpaceCapture handles the field. Switch to the specialized tool for field data capture, visual automation, and defects.',
+    metaKeywords: [
+      'procore alternative',
+      'alternative to procore',
+      'procore vs spacecapture',
+      'switch from procore',
+    ],
+    heroBadge: 'Procore Alternative',
+    tagline:
+      'Do not force a Project Management tool to do Field Management work. Give your inspectors the specialized AI tool they need to capture reality fast.',
+    intro:
+      'We hear from construction teams every week: "We use Procore for office management, but our field team hates using it on-site." SpaceCapture solves this by being the dedicated field execution layer that works the way your team actually works — fast, mobile-first, and offline-capable.',
+    pains: [
+      {
+        title: 'The ERP trap',
+        desc: 'Procore is great for executives — dashboards, budgets, and schedules look great from the office. But field teams struggle with complex menus, endless tapping, and slow syncing.',
+      },
+      {
+        title: 'No AI defect detection',
+        desc: 'Procore manages photos but does not analyze them. Your inspectors still have to manually identify and document every issue.',
+      },
+      {
+        title: 'Expensive per-user pricing',
+        desc: 'Procore charges based on construction volume or per-user fees. Small teams and subcontractors get priced out quickly.',
+      },
+    ],
+    benefits: [
+      {
+        title: 'Field-first design',
+        desc: 'Built for inspectors wearing gloves in sunlight. Large buttons, minimal typing, works 100% offline.',
+      },
+      {
+        title: 'AI defect detection',
+        desc: 'Every photo is auto-analyzed for cracks, corrosion, PPE compliance, and 50+ defect types.',
+      },
+      {
+        title: 'Complements Procore',
+        desc: 'Use both: Procore for office management, SpaceCapture for field execution. They integrate via API.',
+      },
+      {
+        title: 'Simple pricing',
+        desc: 'Per-user pricing that does not scale with construction volume. Free tier available.',
+      },
+      {
+        title: 'Instant setup',
+        desc: 'Download the app, create a project, start inspecting. No months of configuration.',
+      },
+    ],
+    comparisons: [
+      { feature: 'Core focus', competitor: 'Office & project mgmt', spacecapture: 'Field execution & capture' },
+      { feature: 'Data entry speed', competitor: 'Slow (forms & menus)', spacecapture: 'Instant (visual AI)' },
+      { feature: 'Defect detection', competitor: 'Manual photos only', spacecapture: 'AI auto-detection' },
+      { feature: 'Implementation time', competitor: 'Months (heavy config)', spacecapture: 'Days (plug & play)' },
+      { feature: 'Cost model', competitor: '% of construction vol.', spacecapture: 'Simple user/site lic.' },
+      { feature: 'Offline capabilities', competitor: 'Limited sync', spacecapture: 'Full edge processing' },
+    ],
+    faqs: [
+      {
+        q: 'Why switch from Procore to SpaceCapture?',
+        a: 'Teams switch because Procore is an office tool forced into field use. SpaceCapture is purpose-built for field execution — fast inspections, AI defect detection, offline capability, and simple pricing.',
+      },
+      {
+        q: 'Can I use SpaceCapture alongside Procore?',
+        a: 'Absolutely. Most customers use both: Procore for office management and project tracking, SpaceCapture for field inspections and defect documentation. They complement each other well.',
+      },
+      {
+        q: 'What does SpaceCapture do better than Procore?',
+        a: 'Field execution. SpaceCapture excels at fast inspections, AI-powered defect detection, offline capability, and real-time field-to-office sync. Procore is stronger for project management, budgeting, and contract administration.',
+      },
+      {
+        q: 'Is SpaceCapture really free?',
+        a: 'Yes. Our free tier includes core inspection and reporting features — no credit card required, no time limit.',
+      },
+      {
+        q: 'How long does migration take?',
+        a: 'Most teams are up and running in 5 minutes. Download the app, create your first project, and start inspecting. No data migration needed — SpaceCapture is a field execution tool, not a project management system.',
+      },
+    ],
+    related: [
+      { label: 'SafetyCulture alternative', href: '/alternatives/safetyculture' },
+      { label: 'FieldWire alternative', href: '/alternatives/fieldwire' },
+      { label: 'GoCanvas alternative', href: '/alternatives/gocanvas' },
+    ],
+  },
+
+  safetyculture: {
+    slug: 'safetyculture',
+    competitor: 'SafetyCulture',
+    metaTitle: 'SafetyCulture Alternative | SpaceCapture AI',
+    metaDescription:
+      'Stop manually filling specialized forms. Switch to SpaceCapture for automated defect detection, real-time risk quantification, and generative checklists.',
+    metaKeywords: [
+      'safetyculture alternative',
+      'iauditor alternative',
+      'safetyculture vs spacecapture',
+      'switch from safetyculture',
+    ],
+    heroBadge: 'SafetyCulture Alternative',
+    tagline:
+      'SafetyCulture digitized your forms. SpaceCapture automates your decisions. Stop paying for static digital paper — upgrade to AI that sees defects and quantifies risks.',
+    intro:
+      'Digital forms are just paper on a screen. They rely entirely on the workers diligence. If a worker is tired, rushing, or inexperienced, a checklist on a screen will not stop a mistake. SpaceCapture uses Computer Vision to validate reality.',
+    pains: [
+      {
+        title: 'Static templates',
+        desc: 'SafetyCulture forms are digital paper. They do not adapt to what the AI sees or learn from past inspections.',
+      },
+      {
+        title: 'Subjective severity grading',
+        desc: 'Severity ratings depend on the inspector experience. Two inspectors can rate the same defect differently.',
+      },
+      {
+        title: 'Pencil-whipping is easy',
+        desc: 'Tired inspectors can check boxes without actually inspecting. There is no visual verification required.',
+      },
+    ],
+    benefits: [
+      {
+        title: 'AI defect detection',
+        desc: 'Computer Vision validates reality. It measures corrosion, checks PPE, and verifies protocols — not just asks "Is this safe?"',
+      },
+      {
+        title: 'ISO standard grading',
+        desc: 'Severity is quantified using ISO 4628 standards, not subjective opinion. Consistent across all inspectors.',
+      },
+      {
+        title: 'Generative checklists',
+        desc: 'Forms adapt based on what the AI sees. Context-aware, not static templates.',
+      },
+      {
+        title: 'Visual proof required',
+        desc: 'Completion requires photo evidence. No more pencil-whipping.',
+      },
+      {
+        title: 'Full offline AI',
+        desc: 'AI processing happens on-device. Works in basements, tunnels, and remote sites with no signal.',
+      },
+      {
+        title: 'PDF template import',
+        desc: 'Upload your existing SafetyCulture templates and our AI rebuilds them automatically.',
+      },
+    ],
+    comparisons: [
+      { feature: 'Data capture method', competitor: 'Manual typing & tapping', spacecapture: 'Visual AI automation' },
+      { feature: 'Checklist type', competitor: 'Static templates', spacecapture: 'Generative & context-aware' },
+      { feature: 'Defect detection', competitor: 'Human eye dependent', spacecapture: 'Computer Vision verification' },
+      { feature: 'Severity grading', competitor: 'Subjective opinion', spacecapture: 'ISO standard quantification' },
+      { feature: 'Offline capability', competitor: 'Basic form caching', spacecapture: 'Full edge AI processing' },
+      { feature: 'Setup time', competitor: 'Weeks of template building', spacecapture: 'Instant via PDF import' },
+    ],
+    faqs: [
+      {
+        q: 'Why switch from SafetyCulture to SpaceCapture?',
+        a: 'Teams switch because digital forms are just paper on a screen. SpaceCapture adds AI that validates reality — measuring corrosion, checking PPE, and quantifying risks using ISO standards.',
+      },
+      {
+        q: 'Can I import my SafetyCulture templates?',
+        a: 'Yes. Upload your existing SafetyCulture spreadsheets or PDFs and our visual form builder will digitize them. Or start from our pre-built construction templates.',
+      },
+      {
+        q: 'What does SpaceCapture do better than SafetyCulture?',
+        a: 'Active AI vs static forms. SpaceCapture uses Computer Vision to validate reality, quantify risks, and prevent failures. SafetyCulture digitizes forms but relies on human diligence.',
+      },
+      {
+        q: 'Is SpaceCapture really free?',
+        a: 'Yes. Our free tier includes core inspection and reporting features — no credit card required, no time limit.',
+      },
+      {
+        q: 'Do you support the same compliance frameworks?',
+        a: 'Yes. Our templates are aligned with ISO 45001, OSHA 1926, and most major frameworks. We also support custom compliance for ISO 9001, ISO 14001, and more.',
+      },
+    ],
+    related: [
+      { label: 'Procore alternative', href: '/alternatives/procore' },
+      { label: 'FieldWire alternative', href: '/alternatives/fieldwire' },
+      { label: 'GoCanvas alternative', href: '/alternatives/gocanvas' },
+    ],
+  },
 };

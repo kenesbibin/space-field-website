@@ -1,42 +1,31 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { SeoLandingPage } from '@/components/seo/SeoLandingPage';
 import { ComparisonTable } from '@/components/seo/ComparisonTable';
 import { FaqSection } from '@/components/seo/FaqSection';
 import StructuredData from '@/components/seo/StructuredData';
 import { getServiceSchema } from '@/components/seo/ServiceSchema';
+import { getSoftwareSchema } from '@/components/seo/SoftwareSchema';
 import { getFaqSchema } from '@/components/seo/FaqSchema';
 import {
   buildBreadcrumbsFromPath,
   getBreadcrumbListSchema,
 } from '@/components/seo/BreadcrumbListSchema';
+import { AlertTriangle, Link2, Eye } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Construction Management Software for GCs, Subs & Owners',
+  title: 'Construction Management Software | SpaceCapture',
   description:
-    'AI-powered construction management software for general contractors, owners, and specialty trades. Project planning, field inspections, daily reports, and safety compliance in one AI-powered platform.',
+    'The complete construction management software for residential, commercial, and civil projects. Manage field inspections, project tracking, daily reports, and team collaboration in one mobile-first platform.',
   keywords: [
     'construction management software',
     'construction management',
     'construction project management',
-    'construction project management software',
-    'construction management software for small business',
-    'construction management company',
-    'construction management services',
-    'construction project manager',
-    'construction field management',
-    'construction field management software',
-    'construction field software',
-    'construction field service',
-    'construction field service software',
-    'construction management consulting',
-    'construction management consulting firms',
-    'construction project planning',
-    'construction project planning and scheduling',
-    'construction project scheduling',
-    'construction project planning steps',
-    'construction project estimating',
+    'construction management app',
+    'construction management system',
+    'construction management platform',
+    'construction management tools',
+    'construction management solution',
   ],
   alternates: {
     canonical: 'https://spacecapture.ai/construction-management-software',
@@ -45,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Construction Management Software | SpaceCapture',
     description:
-      'AI-powered construction management software for GCs, owners, and specialty trades. Planning, field inspections, daily reports, and safety compliance in one platform.',
+      'The complete construction management software for residential, commercial, and civil projects. Manage field inspections, project tracking, daily reports, and team collaboration in one mobile-first platform.',
     url: 'https://spacecapture.ai/construction-management-software',
     siteName: 'SpaceCapture',
   },
@@ -55,37 +44,32 @@ const faqs = [
   {
     question: 'What is construction management software?',
     answer:
-      'Construction management software is a digital platform that helps general contractors, project managers, owners, and specialty trades plan, execute, and report on construction projects. It typically includes scheduling, document management, daily reports, safety inspections, and subcontractor coordination.',
+      'Construction management software is a digital platform that helps construction teams plan, coordinate, and control projects from pre-construction to closeout. It typically includes features for project scheduling, document management, field inspections, daily reporting, budget tracking, and team communication.',
   },
   {
-    question: 'How is SpaceCapture different from Procore, Buildertrend, or CoConstruct?',
+    question: 'How is SpaceCapture different from other construction management tools?',
     answer:
-      'SpaceCapture is mobile-first and field-centric. While Procore and similar tools are document-management heavy and require a desktop for most workflows, SpaceCapture was built for the field — every workflow runs from a phone, including offline, with AI-powered defect detection and inspection built in.',
+      'Unlike traditional construction management software that focuses on office-based project management, SpaceCapture is mobile-first and field-first. It combines project management with AI-powered defect detection, offline-capable field inspections, and real-time collaboration between field and office teams.',
   },
   {
-    question: 'Can I manage multiple projects at once?',
+    question: 'What construction project types does SpaceCapture support?',
     answer:
-      'Yes. The dashboard shows all active projects with status, upcoming milestones, open punch items, and safety metrics. Switch between projects in one tap.',
+      'SpaceCapture supports residential, commercial, civil, industrial, modular/prefab, oil & gas, and telecom projects. The platform scales from solo contractors to multi-trade general contractors and large construction firms.',
   },
   {
-    question: 'Does it work for small contractors?',
+    question: 'Does SpaceCapture integrate with other construction tools?',
     answer:
-      'Absolutely. We have a free tier for solo contractors and affordable plans for growing teams. The mobile app is the same on every plan — only the dashboard features scale with you.',
+      'Yes. SpaceCapture integrates with QuickBooks, Xero, Sage, Procore, and Zapier. It also has a public API for custom integrations with your existing construction management workflow.',
   },
   {
-    question: 'Does it support subcontractor coordination?',
+    question: 'Is there a free trial available?',
     answer:
-      'Yes. Invite subcontractors to specific projects, assign them tasks, share drawings, and track their work. Subcontractors only see what you share with them — keeping your project structure clean.',
+      'Yes. SpaceCapture offers a free tier with core inspection and reporting features. Paid plans unlock multi-project dashboards, AI features, team management, and advanced analytics.',
   },
   {
-    question: 'How does the AI defect detection work?',
+    question: 'How long does it take to set up SpaceCapture?',
     answer:
-      'When an inspector uploads a photo of a wall, slab, or facade, the AI engine flags likely defects (cracks, corrosion, moisture, missing PPE) and rates severity. This accelerates review and reduces missed issues.',
-  },
-  {
-    question: 'Is there a free trial?',
-    answer:
-      'Yes. You can run your first inspection in under 5 minutes with no credit card. See our pricing page for details.',
+      'Most teams are up and running within 5 minutes. Download the mobile app, create a project, and run your first inspection. No training or onboarding required.',
   },
 ];
 
@@ -93,10 +77,31 @@ const faqSchema = getFaqSchema(faqs);
 const serviceSchema = getServiceSchema({
   name: 'Construction Management Software',
   description:
-    'AI-powered construction management software for GCs, owners, and specialty trades. Project planning, field inspections, daily reports, and safety compliance in one platform.',
+    'Complete construction management software for residential, commercial, and civil projects. Field inspections, project tracking, daily reports, and team collaboration in one mobile-first platform.',
   url: 'https://spacecapture.ai/construction-management-software',
   serviceType: 'Construction Management Software',
   areaServed: 'Worldwide',
+});
+const softwareSchema = getSoftwareSchema({
+  name: 'SpaceCapture - Construction Management Software',
+  description:
+    'AI-powered construction management software for field inspections, project tracking, daily reports, and team collaboration. Mobile-first with offline support.',
+  url: 'https://spacecapture.ai/construction-management-software',
+  applicationCategory: 'BusinessApplication',
+  featureList: [
+    'Field Inspections (QA/QC, safety, snagging)',
+    'AI Defect Detection on photos',
+    'Daily Reports (weather, manpower, progress)',
+    'Punch Lists with photo evidence',
+    'Real-time dashboards',
+    'Offline mobile app',
+    'Subcontractor management',
+    'Safety incident reporting',
+  ],
+  aggregateRating: {
+    ratingValue: '4.8',
+    reviewCount: '120',
+  },
 });
 const breadcrumbSchema = getBreadcrumbListSchema(
   buildBreadcrumbsFromPath('/construction-management-software')
@@ -105,49 +110,78 @@ const breadcrumbSchema = getBreadcrumbListSchema(
 export default function Page() {
   return (
     <SeoLandingPage
-      title="Construction Management Software Built Around the Field"
-      subtitle="Run your projects from a phone, tablet, or desktop. AI-powered inspections, daily reports, scheduling, and safety compliance in one platform — purpose-built for general contractors, owners, and specialty trades."
+      title="Stop Juggling 5 Tools to Manage One Construction Project"
+      subtitle="SpaceCapture puts field inspections, project tracking, daily reports, and AI defect detection in one mobile app. Set up in 5 minutes. No training required."
     >
+      {/* Pain Section */}
+      <div className="bg-slate-900 rounded-2xl p-8 shadow-xl mb-12">
+        <h2 className="text-2xl font-bold text-white mb-6">Sound Familiar?</h2>
+        <ul className="space-y-4">
+          <li className="flex items-start gap-4">
+            <Link2 className="h-6 w-6 text-red-500 shrink-0 mt-1" />
+            <div>
+              <span className="font-bold text-white block">You're switching between Procore, Excel, and WhatsApp to manage one project</span>
+              <span className="text-slate-300 text-sm">Every tool has different logins, different data, and different formats. Your team wastes 2+ hours daily just re-entering information.</span>
+            </div>
+          </li>
+          <li className="flex items-start gap-4">
+            <Eye className="h-6 w-6 text-amber-500 shrink-0 mt-1" />
+            <div>
+              <span className="font-bold text-white block">Your field team finds problems that office staff never see until it's too late</span>
+              <span className="text-slate-300 text-sm">A cracked foundation gets logged on paper. By the time it reaches the PM, it's a $50,000 change order.</span>
+            </div>
+          </li>
+          <li className="flex items-start gap-4">
+            <AlertTriangle className="h-6 w-6 text-red-400 shrink-0 mt-1" />
+            <div>
+              <span className="font-bold text-white block">You're flying blind without real-time project data</span>
+              <span className="text-slate-300 text-sm">You find out about delays in the weekly meeting — after they've already cascaded into schedule overruns.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
       <div className="mb-8 rounded-xl bg-indigo-50 p-6 border border-indigo-100">
         <h2 className="text-xl font-bold text-indigo-900 mb-2">
           What is Construction Management Software?
         </h2>
         <p className="text-indigo-800 font-medium leading-relaxed">
-          Construction management software is a digital platform that helps
-          general contractors, project managers, owners, and specialty trades
-          plan, execute, and report on construction projects. It typically
-          combines scheduling, document management, daily reports, safety
-          inspections, subcontractor coordination, and progress tracking in one
-          system — replacing spreadsheets, email, and disconnected point tools.
+          Construction management software helps you plan, track, and deliver
+          projects without the chaos of disconnected tools. Instead of juggling
+          spreadsheets, paper forms, and multiple apps, you get one platform
+          that your field and office teams actually use. The best construction
+          management software is mobile-first — because that's where your team
+          actually works.
         </p>
       </div>
 
-      <h2>Why Construction Teams Choose SpaceCapture</h2>
+      <h2>One Platform. Every Phase. Zero Chaos.</h2>
       <p>
-        Modern construction projects involve dozens of subcontractors, hundreds
-        of inspections, and thousands of photos. SpaceCapture centralizes all of
-        it in one mobile-first platform so your team can spend less time
-        chasing paperwork and more time building.
+        SpaceCapture replaces your patchwork of tools with one platform that
+        works the way construction actually works — in the field, on your
+        phone, even when you're offline. Whether you're a solo contractor or a
+        multi-trade GC, you get the visibility you need without the complexity
+        you don't.
       </p>
 
       <div className="mb-12 mt-8">
         <h3 className="text-2xl font-bold text-slate-900 mb-4">
-          What's Included
+          Everything You Need, Nothing You Don't
         </h3>
         <ul className="grid md:grid-cols-2 gap-4">
           {[
-            <>Project planning with milestones, dependencies, and <Link href="/glossary/gantt-chart" className="text-indigo-600 underline">Gantt</Link> views</>,
-            'Mobile daily reports with weather, manpower, and progress',
-            'Inspection checklists for QA/QC, safety, and compliance',
-            'AI-powered defect detection on every photo',
-            'Punch lists with photo evidence and assignment',
-            'Subcontractor management with role-based access',
-            'Drawing version control and markup',
-            'Safety observations, toolbox talks, and incident reporting',
-            <><Link href="/glossary/rfi" className="text-indigo-600 underline">RFI</Link> and submittal workflows</>,
-            'Real-time dashboards for owners and project executives',
-            'Offline-first mobile app (iOS, Android, web)',
-            'Integrations with Procore, QuickBooks, Xero, and Sage',
+            'Field inspections that take 5 minutes, not 50',
+            'AI defect detection that catches what humans miss',
+            'Daily reports generated automatically from field data',
+            'Punch lists with photo evidence — no more "he said, she said"',
+            'Real-time dashboards so you always know project status',
+            'Offline mode that syncs when you get signal',
+            'Subcontractor management without the phone tag',
+            'Safety incident reporting that actually gets done',
+            'Document management your field team will actually use',
+            'Budget tracking that updates in real-time',
+            'Multi-language support for diverse crews',
+            'Integrations with QuickBooks, Xero, Sage, and Procore',
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-3">
               <div className="mt-1 h-2 w-2 rounded-full bg-indigo-500" />
@@ -157,117 +191,95 @@ export default function Page() {
         </ul>
       </div>
 
-      <h2>Who Uses Construction Management Software?</h2>
+      <h2>Built for How You Actually Work</h2>
       <ul className="list-disc pl-6 space-y-2 mb-12 marker:text-indigo-600">
         <li>
           <a
-            href="/who-we-serve/general-contractors"
+            href="/residential-construction-software"
             className="text-indigo-600 underline"
           >
-            General contractors
+            Residential
           </a>{' '}
-          managing multiple projects and subcontractors
+          — single-family, multi-family, renovations, custom homes
         </li>
         <li>
           <a
-            href="/who-we-serve/subcontractors"
+            href="/building-construction-software"
             className="text-indigo-600 underline"
           >
-            Specialty subcontractors
+            Commercial
           </a>{' '}
-          (electrical, mechanical, plumbing, framing)
+          — offices, retail, hospitality, healthcare
         </li>
         <li>
           <a
-            href="/who-we-serve/property-developers"
+            href="/civil-construction-software"
             className="text-indigo-600 underline"
           >
-            Property developers and owners
+            Civil
           </a>{' '}
-          overseeing portfolio projects
+          — roads, bridges, utilities, infrastructure
         </li>
         <li>
           <a
-            href="/who-we-serve/architects-engineers"
+            href="/industries/oil-and-gas"
             className="text-indigo-600 underline"
           >
-            Architects and engineers
-          </a>{' '}
-          coordinating RFIs and site visits
-        </li>
-        <li>
-          <a
-            href="/who-we-serve/facility-managers"
-            className="text-indigo-600 underline"
-          >
-            Facility management teams
-          </a>{' '}
-          doing capital improvements
-        </li>
-      </ul>
-
-      <ComparisonTable
-        title="SpaceCapture vs Traditional Construction Management"
-        features={[
-          {
-            feature: 'Mobile experience',
-            spaceCapture: 'Native, offline-first',
-            competitors: 'Web-first, mobile-limited',
-          },
-          {
-            feature: 'AI defect detection',
-            spaceCapture: 'Built in',
-            competitors: 'Requires add-on',
-          },
-          {
-            feature: 'Time to first inspection',
-            spaceCapture: 'Same day',
-            competitors: '2–4 weeks of setup',
-          },
-          {
-            feature: 'Pricing',
-            spaceCapture: 'Per user, transparent',
-            competitors: 'Per module, often opaque',
-          },
-          {
-            feature: 'Subcontractor onboarding',
-            spaceCapture: 'Free, self-serve',
-            competitors: 'Paid seats per sub',
-          },
-        ]}
-      />
-
-      <div className="mb-12 mt-12">
-        <h2>Related Software</h2>
-        <p>
-          For inspection-specific workflows, see our{' '}
-          <a
-            href="/construction-inspection-software"
-            className="text-indigo-600 underline"
-          >
-            construction inspection software
+            Industrial / Oil & Gas
           </a>
-          . For a full platform overview, see{' '}
-          <a href="/construction-software" className="text-indigo-600 underline">
-            construction software
-          </a>
-          . For modular and prefab workflows, see{' '}
+        </li>
+        <li>
           <a
             href="/modular-construction-software"
             className="text-indigo-600 underline"
           >
-            modular construction software
+            Modular and Prefab
           </a>
-          .
-        </p>
-      </div>
+        </li>
+      </ul>
+
+      <ComparisonTable
+        title="Why Construction Teams Choose SpaceCapture"
+        features={[
+          {
+            feature: 'Setup time',
+            spaceCapture: '5 minutes, no training',
+            competitors: 'Weeks or months of onboarding',
+          },
+          {
+            feature: 'Mobile experience',
+            spaceCapture: 'Native app, works offline',
+            competitors: 'Desktop-first, poor mobile',
+          },
+          {
+            feature: 'AI defect detection',
+            spaceCapture: 'Built in, catches what humans miss',
+            competitors: 'Not available or expensive add-on',
+          },
+          {
+            feature: 'Field inspections',
+            spaceCapture: '5-minute inspections, not 50',
+            competitors: 'Complex forms, low adoption',
+          },
+          {
+            feature: 'Pricing',
+            spaceCapture: 'Per user, no surprises',
+            competitors: 'Per module, hidden costs',
+          },
+          {
+            feature: 'Free tier',
+            spaceCapture: 'Yes, forever',
+            competitors: '14-day trial, then pay',
+          },
+        ]}
+      />
 
       <FaqSection items={faqs} />
 
       <StructuredData
         data={{
           '@context': 'https://schema.org',
-          '@graph': [serviceSchema, faqSchema, breadcrumbSchema],
+          '@graph': [serviceSchema, softwareSchema, faqSchema, breadcrumbSchema],
         }}
       />
     </SeoLandingPage>
