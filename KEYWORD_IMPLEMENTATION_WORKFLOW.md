@@ -10,13 +10,13 @@
 
 ## Overview
 
-| Metric | Value |
-|--------|-------|
-| Total Keywords | 907 (from 9 CSV files) |
-| Skills Used | 6 (sequential) |
-| Timeline | 8-10 weeks |
-| Approach | One skill at a time, review after each |
-| Resources | Solo developer (text-focused, no design) |
+| Metric         | Value                                    |
+| -------------- | ---------------------------------------- |
+| Total Keywords | 907 (from 9 CSV files)                   |
+| Skills Used    | 6 (sequential)                           |
+| Timeline       | 8-10 weeks                               |
+| Approach       | One skill at a time, review after each   |
+| Resources      | Solo developer (text-focused, no design) |
 
 ---
 
@@ -96,13 +96,13 @@
 
 ### Pages to Create
 
-| Page URL | Target Keyword | Volume | Competition |
-|----------|----------------|--------|-------------|
-| `/construction-management-software` | construction management software | 5,000 | Low |
-| `/bim-construction-software` | bim software | 5,000 | Low |
-| `/project-management-software` | project management software | 50,000 | Low |
-| `/construction-scheduling-software` | construction scheduling software | 5,000 | Low |
-| `/contractor-management-software` | contractor management software | 5,000 | Low |
+| Page URL                            | Target Keyword                   | Volume | Competition |
+| ----------------------------------- | -------------------------------- | ------ | ----------- |
+| `/construction-management-software` | construction management software | 5,000  | Low         |
+| `/bim-construction-software`        | bim software                     | 5,000  | Low         |
+| `/project-management-software`      | project management software      | 50,000 | Low         |
+| `/construction-scheduling-software` | construction scheduling software | 5,000  | Low         |
+| `/contractor-management-software`   | contractor management software   | 5,000  | Low         |
 
 ### Output
 
@@ -135,16 +135,19 @@
 
 ```markdown
 ## Hero Section
+
 - Headline: [Clear, benefit-focused]
 - Subheadline: [Specific outcome]
 - CTA: [Action-oriented button text]
 
 ## Features
+
 - Feature 1: [Benefit-focused description]
 - Feature 2: [Benefit-focused description]
 - Feature 3: [Benefit-focused description]
 
 ## FAQ
+
 - Question 1: [Answer]
 - Question 2: [Answer]
 ```
@@ -178,12 +181,12 @@
 
 ### Schema Map
 
-| Page Type | Schema |
-|-----------|--------|
+| Page Type     | Schema                           |
+| ------------- | -------------------------------- |
 | Landing Pages | `SoftwareApplication`, `Service` |
-| Blog Posts | `Article`, `BlogPosting` |
-| FAQ Sections | `FAQPage` |
-| All Pages | `BreadcrumbList` |
+| Blog Posts    | `Article`, `BlogPosting`         |
+| FAQ Sections  | `FAQPage`                        |
+| All Pages     | `BreadcrumbList`                 |
 
 ### Output
 
@@ -213,13 +216,13 @@
 
 ### Optimization Checklist
 
-| Element | Check |
-|---------|-------|
-| Value Proposition | Clear within 5 seconds? |
-| Headline | Communicates core benefit? |
-| CTA | Visible, action-oriented? |
-| Trust Signals | Social proof near CTAs? |
-| Friction | Minimal form fields? |
+| Element           | Check                      |
+| ----------------- | -------------------------- |
+| Value Proposition | Clear within 5 seconds?    |
+| Headline          | Communicates core benefit? |
+| CTA               | Visible, action-oriented?  |
+| Trust Signals     | Social proof near CTAs?    |
+| Friction          | Minimal form fields?       |
 
 ### Output
 
@@ -249,10 +252,10 @@
 
 ### Pages to Create
 
-| Page URL | Target Keyword |
-|----------|----------------|
+| Page URL                     | Target Keyword           |
+| ---------------------------- | ------------------------ |
 | `/alternatives/buildertrend` | buildertrend alternative |
-| `/alternatives/revizto` | revizto alternative |
+| `/alternatives/revizto`      | revizto alternative      |
 
 ### Output
 
@@ -272,15 +275,15 @@
 
 ### Implementation Tracker
 
-| Phase | Skill | Status | Start Date | End Date | Notes |
-|-------|-------|--------|------------|----------|-------|
-| 1 | content-strategy | ✅ Completed | July 29, 2026 | July 29, 2026 | KEYWORD_STRATEGY.md created |
-| 2 | site-architecture | ✅ Completed | July 29, 2026 | July 29, 2026 | SITE_ARCHITECTURE.md created |
-| 3 | programmatic-seo | ✅ Completed | July 29, 2026 | July 29, 2026 | 5 landing pages created |
-| 4 | copywriting | ✅ Completed | July 30, 2026 | July 30, 2026 | All 5 pages optimized |
-| 5 | schema | ✅ Completed | July 30, 2026 | July 30, 2026 | SoftwareApplication schema added to all pages |
-| 6 | cro | ✅ Completed | July 30, 2026 | July 30, 2026 | CRO optimizations applied |
-| 7 | competitors | ✅ Completed | July 30, 2026 | July 30, 2026 | Buildertrend & Revizto pages created |
+| Phase | Skill             | Status       | Start Date    | End Date      | Notes                                         |
+| ----- | ----------------- | ------------ | ------------- | ------------- | --------------------------------------------- |
+| 1     | content-strategy  | ✅ Completed | July 29, 2026 | July 29, 2026 | KEYWORD_STRATEGY.md created                   |
+| 2     | site-architecture | ✅ Completed | July 29, 2026 | July 29, 2026 | SITE_ARCHITECTURE.md created                  |
+| 3     | programmatic-seo  | ✅ Completed | July 29, 2026 | July 29, 2026 | 5 landing pages created                       |
+| 4     | copywriting       | ✅ Completed | July 30, 2026 | July 30, 2026 | All 5 pages optimized                         |
+| 5     | schema            | ✅ Completed | July 30, 2026 | July 30, 2026 | SoftwareApplication schema added to all pages |
+| 6     | cro               | ✅ Completed | July 30, 2026 | July 30, 2026 | CRO optimizations applied                     |
+| 7     | competitors       | ✅ Completed | July 30, 2026 | July 30, 2026 | Buildertrend & Revizto pages created          |
 
 ### Status Legend
 
@@ -293,25 +296,25 @@
 
 ## Files to Create
 
-| File | Phase | Purpose |
-|------|-------|---------|
-| `KEYWORD_STRATEGY.md` | 1 | Filtered keywords, clusters, priorities |
-| `SITE_ARCHITECTURE.md` | 2 | Page hierarchy, URLs, linking |
-| `AB_TEST_RECOMMENDATIONS.md` | 6 | A/B test plan for landing pages |
+| File                         | Phase | Purpose                                 |
+| ---------------------------- | ----- | --------------------------------------- |
+| `KEYWORD_STRATEGY.md`        | 1     | Filtered keywords, clusters, priorities |
+| `SITE_ARCHITECTURE.md`       | 2     | Page hierarchy, URLs, linking           |
+| `AB_TEST_RECOMMENDATIONS.md` | 6     | A/B test plan for landing pages         |
 
 ---
 
 ## Skills Reference
 
-| Skill | Location | Purpose |
-|-------|----------|---------|
-| content-strategy | `marketingskills/skills/content-strategy/SKILL.md` | Keyword filtering, content planning |
-| site-architecture | `marketingskills/skills/site-architecture/SKILL.md` | Page structure, URLs, linking |
-| programmatic-seo | `marketingskills/skills/programmatic-seo/SKILL.md` | Scale page creation |
-| copywriting | `marketingskills/skills/copywriting/SKILL.md` | Write compelling copy |
-| schema | `marketingskills/skills/schema/SKILL.md` | Structured data |
-| cro | `marketingskills/skills/cro/SKILL.md` | Conversion optimization |
-| competitors | `marketingskills/skills/competitors/SKILL.md` | Comparison pages |
+| Skill             | Location                                            | Purpose                             |
+| ----------------- | --------------------------------------------------- | ----------------------------------- |
+| content-strategy  | `marketingskills/skills/content-strategy/SKILL.md`  | Keyword filtering, content planning |
+| site-architecture | `marketingskills/skills/site-architecture/SKILL.md` | Page structure, URLs, linking       |
+| programmatic-seo  | `marketingskills/skills/programmatic-seo/SKILL.md`  | Scale page creation                 |
+| copywriting       | `marketingskills/skills/copywriting/SKILL.md`       | Write compelling copy               |
+| schema            | `marketingskills/skills/schema/SKILL.md`            | Structured data                     |
+| cro               | `marketingskills/skills/cro/SKILL.md`               | Conversion optimization             |
+| competitors       | `marketingskills/skills/competitors/SKILL.md`       | Comparison pages                    |
 
 ---
 
@@ -324,4 +327,4 @@
 
 ---
 
-*Document version: 1.0 - Created July 29, 2026*
+_Document version: 1.0 - Created July 29, 2026_
