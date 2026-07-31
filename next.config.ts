@@ -99,6 +99,11 @@ const nextConfig: NextConfig = {
         destination: '/industries/oil-and-gas',
         permanent: true,
       },
+      {
+        source: '/alternatives/iauditor',
+        destination: '/alternatives/safetyculture',
+        permanent: true,
+      },
     ];
   },
 

@@ -19,83 +19,6 @@ export type AlternativesData = {
 };
 
 export const ALTERNATIVES_DATA: Record<string, AlternativesData> = {
-  iauditor: {
-    slug: 'iauditor',
-    competitor: 'iAuditor',
-    metaTitle: 'iAuditor Alternative | SpaceCapture AI',
-    metaDescription:
-      'iAuditor is great for safety checklists. SpaceCapture adds AI defect detection, field inspections, and offline mobile capture. Compare features side-by-side.',
-    metaKeywords: [
-      'iauditor alternative',
-      'safetyculture iauditor alternative',
-      'iauditor vs spacecapture',
-      'safety inspection app',
-      'safety checklist software',
-    ],
-    heroBadge: 'iAuditor Alternative',
-    tagline:
-      'iAuditor revolutionized safety checklists. SpaceCapture is the next generation — adding AI defect detection, photo-driven workflows, and offline-first field inspections.',
-    intro:
-      'iAuditor (now SafetyCulture) is a beloved safety inspection tool. But for construction and field-intensive operations, you need more than digital checklists — you need AI-assisted inspections, advanced reporting, and integrations with the rest of your project stack.',
-    pains: [
-      {
-        title: 'Manual photo review',
-        desc: 'Inspectors take photos but iAuditor does not analyze them — review is still manual and slow.',
-      },
-      {
-        title: 'Limited workflow logic',
-        desc: 'iAuditor forms are basic. Complex workflows (punch lists, change orders) need more.',
-      },
-      {
-        title: 'Cost scales fast',
-        desc: 'Per-user pricing gets expensive as you add crews, especially with subcontractors.',
-      },
-    ],
-    benefits: [
-      {
-        title: 'AI defect detection',
-        desc: 'Every photo is auto-analyzed for cracks, corrosion, PPE, and 50+ other defect types.',
-      },
-      {
-        title: 'Punch lists, RFIs, and change orders',
-        desc: 'Full construction workflow — not just safety checklists.',
-      },
-      {
-        title: 'Free subcontractor seats',
-        desc: 'Subcontractors can use SpaceCapture for free. You only pay for core team seats.',
-      },
-    ],
-    comparisons: [
-      { feature: 'Core focus', competitor: 'Safety checklists', spacecapture: 'AI field inspections' },
-      { feature: 'AI on photos', competitor: 'No', spacecapture: 'Yes (built-in)' },
-      { feature: 'Punch lists', competitor: 'Limited', spacecapture: 'Full workflow' },
-      { feature: 'Offline support', competitor: 'Yes', spacecapture: 'Yes' },
-      { feature: 'Subcontractor seats', competitor: 'Paid', spacecapture: 'Free' },
-      { feature: 'Mobile experience', competitor: 'Good', spacecapture: 'Native, AI-first' },
-    ],
-    faqs: [
-      {
-        q: 'Is SpaceCapture a SafetyCulture iAuditor replacement?',
-        a: 'Yes for many teams — SpaceCapture covers all iAuditor safety use cases and adds AI defect detection, more advanced reporting, and construction-specific workflows. Teams that rely only on simple safety checklists can migrate in days.',
-      },
-      {
-        q: 'Can I import my iAuditor templates?',
-        a: 'Yes. Upload your existing iAuditor spreadsheets or PDFs and the visual form builder will digitize them. Or start from our pre-built safety and construction templates.',
-      },
-      {
-        q: 'Do you support the same compliance frameworks (ISO 45001, OSHA)?',
-        a: 'Yes. Our templates are aligned with ISO 45001, OSHA 1926, and most major frameworks. We also support custom compliance for ISO 9001, ISO 14001, and more.',
-      },
-    ],
-    related: [
-      { label: 'Procore alternative', href: '/alternatives/procore' },
-      { label: 'Fieldwire alternative', href: '/alternatives/fieldwire' },
-      { label: 'GoCanvas alternative', href: '/alternatives/gocanvas' },
-      { label: 'SafetyCulture alternative', href: '/alternatives/safetyculture' },
-      { label: 'PlanRadar alternative', href: '/alternatives/planradar' },
-    ],
-  },
-
   buildertrend: {
     slug: 'buildertrend',
     competitor: 'Buildertrend',
@@ -1045,20 +968,22 @@ export const ALTERNATIVES_DATA: Record<string, AlternativesData> = {
   safetyculture: {
     slug: 'safetyculture',
     competitor: 'SafetyCulture',
-    metaTitle: 'SafetyCulture Alternative | SpaceCapture AI',
+    metaTitle: 'SafetyCulture / iAuditor Alternative | SpaceCapture AI',
     metaDescription:
-      'Stop manually filling specialized forms. Switch to SpaceCapture for automated defect detection, real-time risk quantification, and generative checklists.',
+      'Looking for a SafetyCulture (iAuditor) alternative? SpaceCapture adds AI defect detection, real-time risk quantification, and generative checklists to replace manual forms.',
     metaKeywords: [
       'safetyculture alternative',
       'iauditor alternative',
       'safetyculture vs spacecapture',
+      'iauditor vs spacecapture',
       'switch from safetyculture',
+      'switch from iauditor',
     ],
-    heroBadge: 'SafetyCulture Alternative',
+    heroBadge: 'SafetyCulture / iAuditor Alternative',
     tagline:
       'SafetyCulture digitized your forms. SpaceCapture automates your decisions. Stop paying for static digital paper — upgrade to AI that sees defects and quantifies risks.',
     intro:
-      'Digital forms are just paper on a screen. They rely entirely on the workers diligence. If a worker is tired, rushing, or inexperienced, a checklist on a screen will not stop a mistake. SpaceCapture uses Computer Vision to validate reality.',
+      'SafetyCulture (formerly iAuditor) revolutionized digital checklists. But for construction and field-intensive operations, you need more than digital paper. SpaceCapture uses Computer Vision to validate reality — measuring corrosion, checking PPE, and quantifying risks using ISO standards.',
     pains: [
       {
         title: 'Static templates',
@@ -1096,7 +1021,7 @@ export const ALTERNATIVES_DATA: Record<string, AlternativesData> = {
       },
       {
         title: 'PDF template import',
-        desc: 'Upload your existing SafetyCulture templates and our AI rebuilds them automatically.',
+        desc: 'Upload your existing SafetyCulture/iAuditor templates and our AI rebuilds them automatically.',
       },
     ],
     comparisons: [
@@ -1109,12 +1034,12 @@ export const ALTERNATIVES_DATA: Record<string, AlternativesData> = {
     ],
     faqs: [
       {
-        q: 'Why switch from SafetyCulture to SpaceCapture?',
-        a: 'Teams switch because digital forms are just paper on a screen. SpaceCapture adds AI that validates reality — measuring corrosion, checking PPE, and quantifying risks using ISO standards.',
+        q: 'Is SpaceCapture a SafetyCulture / iAuditor replacement?',
+        a: 'Yes for many teams — SpaceCapture covers all SafetyCulture/iAuditor safety use cases and adds AI defect detection, more advanced reporting, and construction-specific workflows. Teams that rely only on simple safety checklists can migrate in days.',
       },
       {
-        q: 'Can I import my SafetyCulture templates?',
-        a: 'Yes. Upload your existing SafetyCulture spreadsheets or PDFs and our visual form builder will digitize them. Or start from our pre-built construction templates.',
+        q: 'Can I import my SafetyCulture / iAuditor templates?',
+        a: 'Yes. Upload your existing SafetyCulture or iAuditor spreadsheets/PDFs and our visual form builder will digitize them. Or start from our pre-built safety and construction templates.',
       },
       {
         q: 'What does SpaceCapture do better than SafetyCulture?',
@@ -1125,7 +1050,7 @@ export const ALTERNATIVES_DATA: Record<string, AlternativesData> = {
         a: 'Yes. Our free tier includes core inspection and reporting features — no credit card required, no time limit.',
       },
       {
-        q: 'Do you support the same compliance frameworks?',
+        q: 'Do you support the same compliance frameworks (ISO 45001, OSHA)?',
         a: 'Yes. Our templates are aligned with ISO 45001, OSHA 1926, and most major frameworks. We also support custom compliance for ISO 9001, ISO 14001, and more.',
       },
     ],
@@ -1133,6 +1058,7 @@ export const ALTERNATIVES_DATA: Record<string, AlternativesData> = {
       { label: 'Procore alternative', href: '/alternatives/procore' },
       { label: 'FieldWire alternative', href: '/alternatives/fieldwire' },
       { label: 'GoCanvas alternative', href: '/alternatives/gocanvas' },
+      { label: 'PlanRadar alternative', href: '/alternatives/planradar' },
     ],
   },
 };
