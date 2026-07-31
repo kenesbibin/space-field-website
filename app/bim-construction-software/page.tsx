@@ -5,40 +5,27 @@ import { ComparisonTable } from '@/components/seo/ComparisonTable';
 import { FaqSection } from '@/components/seo/FaqSection';
 import StructuredData from '@/components/seo/StructuredData';
 import { getServiceSchema } from '@/components/seo/ServiceSchema';
+import { getSoftwareSchema } from '@/components/seo/SoftwareSchema';
 import { getFaqSchema } from '@/components/seo/FaqSchema';
 import {
   buildBreadcrumbsFromPath,
   getBreadcrumbListSchema,
 } from '@/components/seo/BreadcrumbListSchema';
+import { AlertTriangle, Link2, Eye } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'BIM Construction Software | AI-Powered BIM for the Field',
+  title: 'BIM Construction Software | SpaceCapture',
   description:
-    'BIM construction software for the field. Compare BIM models to as-built reality with AI-powered mobile capture. Detect deviations, validate installations, and sync back to the model.',
+    'The complete BIM construction software for architecture, engineering, and construction teams. Manage BIM models, coordinate clashes, track issues, and collaborate in real-time.',
   keywords: [
-    'bim',
-    'bim construction',
-    'bim construction software',
-    'bim building',
-    'building bim',
-    'bim in construction industry',
-    'bim and construction',
-    'bim 4d',
-    '4d bim',
-    'use of bim',
-    'use of bim in construction',
-    'bim cost',
-    'bim planning',
-    'bim for contractors',
-    'construction project management',
-    'bim companies',
-    'bim consultancy',
-    'bim services',
-    'bim coordination',
-    'bim modeling',
     'bim software',
-    'building information modeling',
-    'autodesk bim 360 alternative',
+    'bim construction software',
+    'bim building information modeling',
+    'bim software for construction',
+    'bim coordination software',
+    'bim management software',
+    'bim modeling software',
+    'building information modeling software',
   ],
   alternates: {
     canonical: 'https://spacecapture.ai/bim-construction-software',
@@ -47,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'BIM Construction Software | SpaceCapture',
     description:
-      'BIM construction software for the field. Compare BIM models to as-built reality with AI-powered mobile capture. Detect deviations, validate installations, and sync back to the model.',
+      'The complete BIM construction software for architecture, engineering, and construction teams. Manage BIM models, coordinate clashes, track issues, and collaborate in real-time.',
     url: 'https://spacecapture.ai/bim-construction-software',
     siteName: 'SpaceCapture',
   },
@@ -57,32 +44,27 @@ const faqs = [
   {
     question: 'What is BIM construction software?',
     answer:
-      'BIM (Building Information Modeling) construction software helps teams design, coordinate, and construct buildings using a 3D digital model. The best modern BIM tools extend that model into the field — letting inspectors compare as-built reality to the design and capture deviations in real time.',
+      'BIM (Building Information Modeling) construction software is a digital platform that helps architecture, engineering, and construction (AEC) teams create, manage, and collaborate on 3D building models. It includes features for model viewing, clash detection, issue tracking, and coordination across disciplines.',
   },
   {
-    question: 'How does SpaceCapture integrate with BIM?',
+    question: 'How does SpaceCapture support BIM workflows?',
     answer:
-      'SpaceCapture imports your BIM model (IFC, Revit, etc.), lets you pin field photos and notes to specific elements, and uses AI to detect deviations between the as-built and the design. Findings flow back to the model as RFIs or change requests.',
+      'SpaceCapture integrates BIM model viewing with field inspections and issue tracking. Teams can view BIM models on-site, log issues directly from the field, and sync updates back to the office. This bridges the gap between the BIM model and actual construction progress.',
   },
   {
-    question: 'Does it work with Revit and IFC files?',
+    question: 'What BIM file formats does SpaceCapture support?',
     answer:
-      'Yes. We support both Revit (.rvt) and IFC formats. Export back to Revit or IFC after field capture.',
+      'SpaceCapture supports IFC, Revit, and other common BIM file formats. You can upload models directly from your BIM software and view them on any device without special software.',
   },
   {
-    question: 'Can I run clash detection on site?',
+    question: 'Is SpaceCapture suitable for small construction firms?',
     answer:
-      'Yes. Pin the clash to a specific element in the model, attach a photo, and create an RFI for the design team — all from the field app.',
+      'Yes. SpaceCapture scales from solo contractors to large AEC firms. The mobile-first design means you don\'t need expensive hardware or IT infrastructure to use BIM on-site.',
   },
   {
-    question: 'Is this an alternative to Autodesk BIM 360?',
+    question: 'How does BIM help reduce construction costs?',
     answer:
-      'Yes. SpaceCapture is built for the field, while BIM 360 is built for the office. Many customers use both: BIM 360 for design coordination and SpaceCapture for field capture, photo documentation, and AI defect detection.',
-  },
-  {
-    question: 'Does it support 4D BIM (schedule-linked)?',
-    answer:
-      'Yes. Link model elements to schedule activities, and SpaceCapture can validate progress by comparing site photos to expected state at a given date.',
+      'BIM helps identify design conflicts before construction begins, reducing costly change orders. It improves coordination between disciplines, reduces rework, and provides accurate quantity takeoffs for better budgeting.',
   },
 ];
 
@@ -90,10 +72,31 @@ const faqSchema = getFaqSchema(faqs);
 const serviceSchema = getServiceSchema({
   name: 'BIM Construction Software',
   description:
-    'BIM construction software for the field. Compare BIM models to as-built reality with AI-powered mobile capture.',
+    'Complete BIM construction software for architecture, engineering, and construction teams. Model viewing, clash detection, issue tracking, and real-time collaboration.',
   url: 'https://spacecapture.ai/bim-construction-software',
-  serviceType: 'BIM Construction Software',
+  serviceType: 'BIM Software',
   areaServed: 'Worldwide',
+});
+const softwareSchema = getSoftwareSchema({
+  name: 'SpaceCapture - BIM Construction Software',
+  description:
+    'BIM construction software for viewing models on-site, tracking issues, and coordinating across disciplines. Mobile-first with offline support.',
+  url: 'https://spacecapture.ai/bim-construction-software',
+  applicationCategory: 'BusinessApplication',
+  featureList: [
+    'IFC and Revit model viewing',
+    'Cloud-based model hosting',
+    'Issue tracking from field to office',
+    'Photo-linked issue reporting',
+    'Discipline coordination',
+    'Clash detection and resolution',
+    'Version control for models',
+    'Offline model viewing',
+  ],
+  aggregateRating: {
+    ratingValue: '4.8',
+    reviewCount: '120',
+  },
 });
 const breadcrumbSchema = getBreadcrumbListSchema(
   buildBreadcrumbsFromPath('/bim-construction-software')
@@ -102,50 +105,77 @@ const breadcrumbSchema = getBreadcrumbListSchema(
 export default function Page() {
   return (
     <SeoLandingPage
-      title="BIM Construction Software That Goes to the Field"
-      subtitle="Connect your BIM model to the field. AI-powered mobile capture compares as-built reality to the design, flags deviations, and syncs findings back to the model."
+      title="Your BIM Model is Beautiful. Too Bad Nobody On-Site Can See It."
+      subtitle="SpaceCapture puts BIM models in your field team's pocket. View models on-site, log issues with photos, and sync back to the office — all from one app."
     >
+      {/* Pain Section */}
+      <div className="bg-slate-900 rounded-2xl p-8 shadow-xl mb-12">
+        <h2 className="text-2xl font-bold text-white mb-6">The BIM Field Problem</h2>
+        <ul className="space-y-4">
+          <li className="flex items-start gap-4">
+            <Link2 className="h-6 w-6 text-red-500 shrink-0 mt-1" />
+            <div>
+              <span className="font-bold text-white block">Your field team is building from 2D prints while you spent weeks on a 3D model</span>
+              <span className="text-slate-300 text-sm">The model sits on a desktop in the office. On-site, your team is guessing based on outdated PDFs.</span>
+            </div>
+          </li>
+          <li className="flex items-start gap-4">
+            <Eye className="h-6 w-6 text-amber-500 shrink-0 mt-1" />
+            <div>
+              <span className="font-bold text-white block">Clashes get discovered during construction, not during design</span>
+              <span className="text-slate-300 text-sm">That HVAC duct running through a beam? You find out when the contractor calls — after it's built.</span>
+            </div>
+          </li>
+          <li className="flex items-start gap-4">
+            <AlertTriangle className="h-6 w-6 text-red-400 shrink-0 mt-1" />
+            <div>
+              <span className="font-bold text-white block">Issues get lost in email chains between disciplines</span>
+              <span className="text-slate-300 text-sm">Architect emails structural. Structural emails MEP. Nobody tracks resolution. Problems compound.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
       <div className="mb-8 rounded-xl bg-indigo-50 p-6 border border-indigo-100">
         <h2 className="text-xl font-bold text-indigo-900 mb-2">
-          What is BIM?
+          What is BIM Construction Software?
         </h2>
         <p className="text-indigo-800 font-medium leading-relaxed">
-          BIM (Building Information Modeling) is a 3D digital representation
-          of a building's physical and functional characteristics. It is used
-          by architects, engineers, contractors, and owners to design,
-          coordinate, construct, and operate buildings. The best modern BIM
-          tools extend the model into the field — letting inspectors
-          compare as-built reality to the design and capture deviations in
-          real time.
+          BIM (Building Information Modeling) software lets you design, visualize,
+          and coordinate buildings in 3D before a single brick is laid. The
+          problem? Most BIM software stays on desktops in the office. The best
+          BIM construction software brings those models to the field — so your
+          team can actually use them on-site, on their phone, without special
+          hardware.
         </p>
       </div>
 
-      <h2>From Office Model to Field Reality</h2>
+      <h2>Your BIM Model, Finally in the Field</h2>
       <p>
-        Most BIM workflows stop at the office. SpaceCapture takes the model
-        into the field: every photo, every finding, every deviation is
-        captured against a specific BIM element, with AI flagging issues
-        before they become RFIs.
+        SpaceCapture lets your field team view BIM models on any device — no
+        expensive hardware, no training. When they spot a clash or issue, they
+        snap a photo, log it, and it syncs back to the office. No more
+        "I'll email you about it later."
       </p>
 
       <div className="mb-12 mt-8">
         <h3 className="text-2xl font-bold text-slate-900 mb-4">
-          Capabilities
+          BIM That Works On-Site, Not Just In the Office
         </h3>
         <ul className="grid md:grid-cols-2 gap-4">
           {[
-            'Import IFC and Revit models',
-            'Pin photos and notes to specific BIM elements',
-            'AI deviation detection between model and as-built',
-            'Auto-generate RFIs from field findings',
-            '4D BIM progress validation',
-            'Clash detection capture in the field',
-            'As-built model export with annotations',
-            'Multi-trade coordination around the model',
-            'Offline model viewing on site',
-            'Integration with BIM 360, Revit, Navisworks',
-            'Integration with Procore, Autodesk Construction Cloud',
-            'Public API for custom integrations',
+            'View IFC and Revit models on your phone — no special software',
+            'Log issues with photos tied directly to model locations',
+            'Track clashes from discovery to resolution',
+            'Offline model viewing for sites with no signal',
+            'Real-time sync between field and office teams',
+            'Version control so you never build from the wrong model',
+            'Discipline coordination without the email chains',
+            'Cloud hosting so everyone sees the latest version',
+            'Integration with Autodesk and BIM 360',
+            'Progress documentation tied to the 3D model',
+            'Mobile access on any device',
+            'Real-time collaboration across disciplines',
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-3">
               <div className="mt-1 h-2 w-2 rounded-full bg-indigo-500" />
@@ -155,33 +185,52 @@ export default function Page() {
         </ul>
       </div>
 
+      <h2>Where BIM Actually Pays Off</h2>
+      <ul className="list-disc pl-6 space-y-2 mb-12 marker:text-indigo-600">
+        <li>
+          <strong>Architecture</strong> — Client presentations, design review, material coordination
+        </li>
+        <li>
+          <strong>Structural Engineering</strong> — Clash detection before rebar is placed, connection details in the field
+        </li>
+        <li>
+          <strong>MEP Engineering</strong> — Systems coordination, routing optimization, installation verification
+        </li>
+        <li>
+          <strong>Construction</strong> — Field coordination, issue tracking, progress documentation
+        </li>
+        <li>
+          <strong>Facility Management</strong> — As-built documentation, maintenance planning, asset tracking
+        </li>
+      </ul>
+
       <ComparisonTable
-        title="SpaceCapture vs Autodesk BIM 360"
+        title="SpaceCapture vs Traditional BIM Software"
         features={[
           {
-            feature: 'Field-first design',
-            spaceCapture: 'Yes',
-            competitors: 'Office-first',
+            feature: 'Mobile access',
+            spaceCapture: 'Native app, works offline',
+            competitors: 'Desktop or web-only',
           },
           {
-            feature: 'AI defect detection',
-            spaceCapture: 'Built in',
-            competitors: 'Add-on or none',
+            feature: 'Field integration',
+            spaceCapture: 'Built-in inspections, 5-minute setup',
+            competitors: 'Separate tools required',
           },
           {
-            feature: 'Offline model viewing',
-            spaceCapture: 'Yes',
-            competitors: 'Limited',
-          },
-          {
-            feature: 'Mobile-first',
-            spaceCapture: 'Native iOS/Android',
-            competitors: 'Web-first',
+            feature: 'Issue tracking',
+            spaceCapture: 'Photo-linked, real-time sync',
+            competitors: 'Manual, spreadsheet-based',
           },
           {
             feature: 'Pricing',
-            spaceCapture: 'Per user, transparent',
-            competitors: 'Per seat, complex tiers',
+            spaceCapture: 'Per user, no surprises',
+            competitors: 'Per seat, often expensive',
+          },
+          {
+            feature: 'Learning curve',
+            spaceCapture: 'Minimal — your field team will actually use it',
+            competitors: 'Steep — requires training',
           },
         ]}
       />
@@ -191,7 +240,7 @@ export default function Page() {
       <StructuredData
         data={{
           '@context': 'https://schema.org',
-          '@graph': [serviceSchema, faqSchema, breadcrumbSchema],
+          '@graph': [serviceSchema, softwareSchema, faqSchema, breadcrumbSchema],
         }}
       />
     </SeoLandingPage>

@@ -30,7 +30,7 @@ export default function JsonLd() {
       {
         "@type": "SoftwareApplication",
         "name": "SpaceCapture",
-        "applicationCategory": "ConstructionManagement, BusinessApplication",
+        "applicationCategory": "BusinessApplication",
         "operatingSystem": "Android, iOS",
         "offers": {
           "@type": "Offer",
@@ -41,7 +41,7 @@ export default function JsonLd() {
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.8",
-          "ratingCount": "120"
+          "reviewCount": "120"
         },
         "author": {
           "@type": "Organization",

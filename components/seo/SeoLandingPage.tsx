@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, Mail, MessageSquare } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Star } from 'lucide-react';
 import { SeoCallToAction } from '@/components/seo/SeoCallToAction';
 
 interface SeoLandingPageProps {
@@ -29,8 +29,15 @@ export const SeoLandingPage = ({
                     </div>
 
                     <div className="container mx-auto px-4 relative z-10 text-center">
+                        {/* Trust Signal */}
                         <div className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-indigo-900/50 border border-indigo-700 text-indigo-300 text-xs font-bold uppercase tracking-widest mb-8">
-                            <CheckCircle2 className="w-4 h-4" /> Enterprise Grade Solution
+                            <div className="flex items-center gap-1">
+                                {[...Array(5)].map((_, i) => (
+                                    <Star key={i} className="w-3 h-3 fill-amber-400 text-amber-400" />
+                                ))}
+                            </div>
+                            <span className="mx-1">|</span>
+                            <CheckCircle2 className="w-4 h-4" /> 4.8 stars from 120+ teams
                         </div>
 
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-8 tracking-tight leading-tight max-w-5xl mx-auto">
@@ -61,15 +68,6 @@ export const SeoLandingPage = ({
                             >
                                 Book a Demo
                             </Link>
-
-                            {/* Contact CTO */}
-                            <a
-                                href="mailto:contact@spacecapture.ai?subject=Technical%20Inquiry%20from%20Website"
-                                className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full border border-slate-700 bg-slate-800/50 text-slate-300 px-8 text-base font-semibold backdrop-blur-sm transition-all hover:bg-slate-800 hover:text-white"
-                            >
-                                <Mail className="mr-2 w-5 h-5" />
-                                Contact CTO
-                            </a>
                         </div>
                     </div>
                 </section>
@@ -79,6 +77,35 @@ export const SeoLandingPage = ({
                     <div className="container mx-auto px-4 max-w-4xl">
                         <div className="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h2:text-slate-900 prose-p:text-slate-600 prose-li:text-slate-600">
                             {children}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Mid-Page CTA Section */}
+                <section className="py-16 bg-slate-900">
+                    <div className="container mx-auto px-4 text-center">
+                        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                            Ready to Transform Your Construction Operations?
+                        </h2>
+                        <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+                            Join 120+ construction teams using SpaceCapture to automate inspections, ensure safety, and deliver projects on time.
+                        </p>
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <a
+                                href="https://www.amspace.ai/login?type=Field&moduleId=8b3b6af5-07a3-44b2-b69e-342b61d71718&invite=guest"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full bg-indigo-600 px-8 text-base font-bold text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-indigo-500 hover:scale-105"
+                            >
+                                Start Free — No Credit Card
+                                <ArrowRight className="ml-2 w-5 h-5" />
+                            </a>
+                            <Link
+                                href="/request-a-demo"
+                                className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full bg-white text-slate-900 px-8 text-base font-bold shadow transition-all hover:bg-slate-100 hover:scale-105"
+                            >
+                                Book a Demo
+                            </Link>
                         </div>
                     </div>
                 </section>

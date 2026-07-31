@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
 
 export const SeoCallToAction = () => {
   return (
@@ -10,6 +10,17 @@ export const SeoCallToAction = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[500px] bg-indigo-500/20 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative z-10 text-center">
+        {/* Social Proof Near CTA */}
+        <div className="flex items-center justify-center gap-2 mb-6">
+          <div className="flex items-center gap-1">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
+            ))}
+          </div>
+          <span className="text-white font-bold">4.8</span>
+          <span className="text-slate-400">from 120+ construction teams</span>
+        </div>
+
         <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
           Ready to Streamline Your Operations?
         </h2>
@@ -25,7 +36,7 @@ export const SeoCallToAction = () => {
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex h-14 items-center justify-center rounded-full bg-indigo-600 px-8 text-lg font-bold text-white shadow-lg shadow-indigo-500/30 transition-all hover:bg-indigo-500 hover:scale-105"
           >
-            Try for Free
+            Start Free — No Credit Card
             <ArrowRight className="ml-2 w-5 h-5" />
           </a>
 
