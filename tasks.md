@@ -4,9 +4,9 @@
 > All tasks are aligned with the official Google Search Central documentation.
 
 ---
-
-## 0. Context & Diagnosis
-
+ 
+## 0. Context & Diagnosis 
+ 
 ### GSC Issues Found
 
 | Drilldown Folder | Issue | Example URLs |
