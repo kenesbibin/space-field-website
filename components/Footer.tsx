@@ -3,8 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Instagram, Linkedin, Twitter, Youtube, Github, CheckCircle2, ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
-
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-slate-950 pt-20 pb-10 border-t border-slate-800">

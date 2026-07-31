@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import { Smartphone, Zap, CloudOff, ShieldCheck, Download, QrCode } from 'lucide-react';
 
 const AppDownloadSection = () => {
@@ -36,13 +35,7 @@ const AppDownloadSection = () => {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
 
                     {/* Left: Content */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="text-left"
-                    >
+                    <div className="text-left animate-[heroFadeInUp_0.8s_ease-out_both]">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-bold mb-8">
                             <Smartphone className="w-4 h-4" />
                             <span>Mobile App Available</span>
@@ -99,16 +92,10 @@ const AppDownloadSection = () => {
                                 </div>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
 
                     {/* Right: Phone Mockup */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 0.2 }}
-                        className="relative flex justify-center lg:justify-end"
-                    >
+                    <div className="relative flex justify-center lg:justify-end animate-[heroSlideIn_1s_ease-out_0.2s_both]">
                         <div className="relative w-full max-w-[500px]">
                             {/* Decorative Background for Mockup */}
                             <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-indigo-600/20 rounded-full blur-[80px] -z-10 animate-pulse"></div>
@@ -122,11 +109,7 @@ const AppDownloadSection = () => {
                             />
 
                             {/* Floating UI Element for extra "Wow" */}
-                            <motion.div
-                                animate={{ y: [0, -15, 0] }}
-                                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                className="absolute -left-4 top-1/2 p-4 bg-blue-600 rounded-2xl shadow-2xl border border-blue-400/30 flex items-center gap-4 z-20"
-                            >
+                            <div className="absolute -left-4 top-1/2 p-4 bg-blue-600 rounded-2xl shadow-2xl border border-blue-400/30 flex items-center gap-4 z-20 animate-[heroFloat_4s_ease-in-out_infinite]">
                                 <div className="p-2 bg-white/20 rounded-lg">
                                     <Download className="w-6 h-6 text-white" />
                                 </div>
@@ -134,9 +117,9 @@ const AppDownloadSection = () => {
                                     <p className="text-white text-sm font-bold">10k+ Downloads</p>
                                     <p className="text-blue-100 text-[10px]">Trusted by field teams</p>
                                 </div>
-                            </motion.div>
+                            </div>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>

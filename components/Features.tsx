@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Smartphone, PenTool, Zap, ShieldCheck, CheckCircle2 } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 const FEATURES = [
   {
@@ -35,13 +34,7 @@ const Features = () => {
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           
           {/* Left Side - CSS Phone Mockup */}
-          <motion.div 
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="flex-1 flex justify-center items-center relative w-full"
-          >
+          <div className="flex-1 flex justify-center items-center relative w-full animate-[heroSlideIn_0.8s_ease-out_both]">
             <div className="relative z-10">
               {/* The Phone Frame */}
               <div className="relative border-slate-900 bg-slate-900 border-[14px] rounded-[3.5rem] h-[750px] w-[370px] shadow-2xl flex flex-col overflow-hidden ring-1 ring-white/20">
@@ -117,16 +110,10 @@ const Features = () => {
               <div className="absolute -top-12 -left-12 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-[80px] opacity-20 animate-blob"></div>
               <div className="absolute -bottom-12 -right-12 w-80 h-80 bg-purple-400 rounded-full mix-blend-multiply filter blur-[80px] opacity-20 animate-blob animation-delay-2000"></div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Side - Features List */}
-          <motion.div 
-            className="flex-1 w-full lg:pl-10"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <div className="flex-1 w-full lg:pl-10 animate-[heroFadeInUp_0.8s_ease-out_both]">
             <div className="mb-12">
               <div className="flex items-center gap-2 mb-4">
                  <div className="h-1 w-12 bg-blue-600 rounded-full"></div>
@@ -153,7 +140,7 @@ const Features = () => {
                 />
               ))}
             </ul>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
@@ -183,11 +170,7 @@ const FeatureItem = ({ title, Icon, description, index }: FeatureItemProps) => {
   ];
 
   return (
-    <motion.li 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: index * 0.1, duration: 0.5 }}
-        viewport={{ once: true }}
+    <li 
         className="flex flex-col items-start group bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
     >
       <div className={`rounded-2xl p-4 ${bgColors[index % 4]} transition-colors duration-300 group-hover:bg-transparent`}>
@@ -206,7 +189,7 @@ const FeatureItem = ({ title, Icon, description, index }: FeatureItemProps) => {
       <p className="text-sm text-slate-500 mt-3 leading-relaxed">
         {description}
       </p>
-    </motion.li>
+    </li>
   );
 };
 
