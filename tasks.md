@@ -5,7 +5,7 @@
 
 ---
  
-## 0. Context & Diagnosis 
+## 0. Context & Diagnosis  
  
 ### GSC Issues Found 
 
