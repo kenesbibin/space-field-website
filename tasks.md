@@ -7,7 +7,7 @@
  
 ## 0. Context & Diagnosis 
  
-### GSC Issues Found
+### GSC Issues Found 
 
 | Drilldown Folder | Issue | Example URLs |
 |------------------|-------|--------------|
