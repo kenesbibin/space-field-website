@@ -1,10 +1,8 @@
 
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
 import {
   ArrowRight,
   Sparkles,
@@ -16,12 +14,22 @@ import {
   Calendar,
   AlertTriangle,
   Activity,
-  Maximize
+  Maximize,
+  Play
 } from 'lucide-react';
 
 const AiDetectionApiSection = () => {
   const [showTranscript, setShowTranscript] = useState(false);
   const [showJson, setShowJson] = useState(false);
+  const [isDetectionPlaying, setIsDetectionPlaying] = useState(false);
+  const detectionVideoRef = useRef<HTMLVideoElement>(null);
+
+  const handleDetectionPlay = () => {
+    setIsDetectionPlaying(true);
+    setTimeout(() => {
+      detectionVideoRef.current?.play();
+    }, 100);
+  };
 
   const videoSchema = {
     "@context": "https://schema.org",
@@ -87,13 +95,7 @@ const AiDetectionApiSection = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
 
             {/* Left: Text Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="max-w-xl"
-            >
+            <div className="max-w-xl animate-[heroSlideIn_0.6s_ease-out_both]">
               <div className="flex items-center gap-2 mb-6">
                 <div className="h-1 w-12 bg-purple-600 rounded-full"></div>
                 <span className="text-sm font-bold text-purple-700 uppercase tracking-wider">For Developers</span>
@@ -118,28 +120,41 @@ const AiDetectionApiSection = () => {
                   Try For Free <Code className="ml-2 w-5 h-5" />
                 </Link>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right: GIF Showcase */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative flex flex-col justify-center items-center"
-            >
+            <div className="relative flex flex-col justify-center items-center animate-[heroFadeInUp_0.8s_ease-out_0.2s_both]">
               <div className="absolute inset-0 bg-gradient-to-tr from-purple-200 to-indigo-200 rounded-full blur-[100px] opacity-50"></div>
 
               <div className="relative w-full max-w-lg shadow-2xl rounded-2xl overflow-hidden z-10 border-8 border-slate-900 mb-6 bg-slate-900">
-                <video
-                  src="/images/detection.webm"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-auto object-cover"
-                />
-                <div className="absolute top-0 w-full bg-slate-900/70 backdrop-blur-sm p-3 flex items-center justify-center">
+                {!isDetectionPlaying ? (
+                  <button
+                    onClick={handleDetectionPlay}
+                    className="relative w-full cursor-pointer group"
+                    aria-label="Play AI detection demo"
+                  >
+                    <img
+                      src="/images/detection.gif"
+                      alt="AI defect detection demo"
+                      className="w-full h-auto object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center transition-colors group-hover:bg-black/40">
+                      <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                        <Play className="w-7 h-7 text-purple-600 ml-1" />
+                      </div>
+                    </div>
+                  </button>
+                ) : (
+                  <video
+                    ref={detectionVideoRef}
+                    src="/images/detection.webm"
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-auto object-cover"
+                  />
+                )}
+                <div className="absolute top-0 w-full bg-slate-900/70 backdrop-blur-sm p-3 flex items-center justify-center z-10">
                   <span className="text-white text-sm font-medium flex items-center gap-2">
                     <Sparkles className="w-4 h-4 text-purple-400" />
                     AI Detection in Action
@@ -157,17 +172,13 @@ const AiDetectionApiSection = () => {
                   <ArrowRight className={`w-3 h-3 transition-transform ${showTranscript ? 'rotate-90' : ''}`} />
                 </button>
                 {showTranscript && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    className="bg-white/80 backdrop-blur rounded-lg p-4 text-xs text-slate-600 leading-relaxed border border-slate-200 shadow-lg"
-                  >
+                  <div className="bg-white/80 backdrop-blur rounded-lg p-4 text-xs text-slate-600 leading-relaxed border border-slate-200 shadow-lg">
                     <p>{videoSchema.transcript}</p>
-                  </motion.div>
+                  </div>
                 )}
               </div>
 
-            </motion.div>
+            </div>
 
           </div>
         </div>
@@ -179,13 +190,7 @@ const AiDetectionApiSection = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
             {/* Left: Data Card UI (Replaced raw JSON with UI) */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="order-2 lg:order-1 relative"
-            >
+            <div className="order-2 lg:order-1 relative animate-[heroSlideIn_0.8s_ease-out_both]">
               <div className="absolute -top-6 -left-6 w-full h-full bg-indigo-200 rounded-2xl -z-10"></div>
 
               {/* Main Card Container */}
@@ -304,16 +309,10 @@ const AiDetectionApiSection = () => {
 
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right: Text Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="order-1 lg:order-2 max-w-xl"
-            >
+            <div className="order-1 lg:order-2 max-w-xl animate-[heroFadeInUp_0.6s_ease-out_0.2s_both]">
               <div className="flex items-center gap-2 mb-6">
                 <div className="h-1 w-12 bg-indigo-600 rounded-full"></div>
                 <span className="text-sm font-bold text-indigo-700 uppercase tracking-wider">Developer Friendly</span>
@@ -342,7 +341,7 @@ const AiDetectionApiSection = () => {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
           </div>
         </div>

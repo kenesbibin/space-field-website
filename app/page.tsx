@@ -1,18 +1,20 @@
-import AiDetectionApiSection from '@/components/AiDetectionApiSection'
-import AiPromptSection from '@/components/AiPromptSection'
-import CallToActionSection from '@/components/CallToAction'
-import Features from '@/components/Features'
-import GuideSection from '@/components/GuideSection'
+import dynamic from 'next/dynamic'
 import HeroSection from '@/components/HeroSection'
-import ShowcaseSection from '@/components/ShowcaseSection'
-import FaqSection from '@/components/FaqSection'
-import AppDownloadSection from '@/components/AppDownloadSection'
 import Link from 'next/link'
 
 import type { Metadata } from 'next'
 import { getSoftwareSchema } from '@/components/seo/SoftwareSchema'
 import { getOrganizationSchema } from '@/components/seo/OrganaizationSchema'
 import StructuredData from '@/components/seo/StructuredData'
+
+const AiDetectionApiSection = dynamic(() => import('@/components/AiDetectionApiSection'))
+const AiPromptSection = dynamic(() => import('@/components/AiPromptSection'))
+const CallToActionSection = dynamic(() => import('@/components/CallToAction'))
+const GuideSection = dynamic(() => import('@/components/GuideSection'))
+const ShowcaseSection = dynamic(() => import('@/components/ShowcaseSection'))
+const FaqSection = dynamic(() => import('@/components/FaqSection'))
+const Features = dynamic(() => import('@/components/Features'))
+const AppDownloadSection = dynamic(() => import('@/components/AppDownloadSection'))
 
 
 export const metadata: Metadata = {

@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
 const WhatsAppButton = () => {
@@ -12,25 +11,18 @@ const WhatsAppButton = () => {
   )}`;
 
   return (
-    <motion.div
-      className="fixed bottom-20 right-4 z-40"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ type: "spring", stiffness: 300, damping: 15 }}
-    >
+    <div className="fixed bottom-20 right-4 z-40 whatsapp-btn-wrapper">
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-md flex items-center justify-center"
+        className="whatsapp-btn"
         title="Chat on WhatsApp"
       >
         <MessageCircle className="w-6 h-6" />
       </a>
-    </motion.div>
+    </div>
   );
 };
 
 export default WhatsAppButton;
-
-

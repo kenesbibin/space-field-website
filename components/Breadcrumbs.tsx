@@ -4,7 +4,6 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronRight, Home } from "lucide-react";
-import { motion } from "framer-motion";
 
 export default function Breadcrumbs() {
   const pathname = usePathname();
@@ -76,15 +75,12 @@ export default function Breadcrumbs() {
               <li key={item.href} className="flex items-center whitespace-nowrap">
                 <ChevronRight className="w-5 h-5 text-slate-300 mx-1 flex-shrink-0" />
                 {item.isLast ? (
-                  <motion.span 
-                    initial={{ opacity: 0, x: -5 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="text-base font-bold text-slate-800 tracking-wide px-2 py-1 bg-white/50 rounded-md border border-slate-100 shadow-sm"
+                  <span
+                    className="text-base font-bold text-slate-800 tracking-wide px-2 py-1 bg-white/50 rounded-md border border-slate-100 shadow-sm breadcrumb-animate"
                     aria-current="page"
                   >
                     {item.label}
-                  </motion.span>
+                  </span>
                 ) : (
                   <Link
                     href={item.href}

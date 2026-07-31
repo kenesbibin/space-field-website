@@ -4,13 +4,12 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsappButton";
-import SpaceCaptureCopilot from "@/components/SpaceCaptureCopilot";
 
 import EmailButton from "@/components/EmailButton";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
-import CopilotKitWrapper from "@/components/CopilotKitWrapper";
 import { AnalyticsProvider } from "@/components/AnalyticsProvider";
+import ClientProviders from "@/components/ClientProviders";
 
 
 
@@ -300,7 +299,7 @@ export default function RootLayout({
         </Script>
 
         <AnalyticsProvider>
-          <CopilotKitWrapper>
+          <ClientProviders>
             <JsonLd />
             <Navbar />
             <Breadcrumbs />
@@ -308,8 +307,7 @@ export default function RootLayout({
             <Footer />
             <EmailButton/>
             <WhatsAppButton />
-            <SpaceCaptureCopilot />
-          </CopilotKitWrapper>
+          </ClientProviders>
         </AnalyticsProvider>
       </body>
     </html>
