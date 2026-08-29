@@ -1,5 +1,3 @@
-"use client"
-
 import React from 'react';
 import Image from 'next/image';
 import { Smartphone, Zap, CloudOff, ShieldCheck, Download, QrCode } from 'lucide-react';
@@ -59,7 +57,7 @@ const AppDownloadSection = () => {
                                     <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-blue-400">
                                         <feature.icon className="w-5 h-5" />
                                     </div>
-                                    <h4 className="text-white font-bold text-sm">{feature.title}</h4>
+                                     <h3 className="text-white font-bold text-sm">{feature.title}</h3>
                                     <p className="text-slate-500 text-xs leading-relaxed">{feature.description}</p>
                                 </div>
                             ))}

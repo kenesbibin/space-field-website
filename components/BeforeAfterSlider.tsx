@@ -80,19 +80,14 @@ const BeforeAfterSlider = ({
     >
       {/* After Image (Background) */}
       <div className="absolute inset-0">
-        <div className="relative w-full h-full">
-             {/* Using a gray placeholder div if image fails to load or for structure, but Image component is primary */}
-             <div className="w-full h-full bg-slate-100 flex items-center justify-center text-slate-400">
-                Image Not Found
-             </div>
-             <Image
-                src={afterImage}
-                alt={`After: ${altText}`}
-                fill
-                className="object-cover"
-                draggable={false}
-            />
-        </div>
+        <Image
+          src={afterImage}
+          alt={`After: ${altText}`}
+          fill
+          className="object-cover"
+          draggable={false}
+          sizes="100vw"
+        />
         <span className="absolute top-4 right-4 bg-emerald-500/90 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm z-10 shadow-sm">
           {afterLabel}
         </span>
@@ -100,57 +95,18 @@ const BeforeAfterSlider = ({
 
       {/* Before Image (Clipped Foreground) */}
       <div
-        className="absolute inset-0 overflow-hidden"
-        style={{ width: `${sliderPosition}%` }}
-      >
-        <div className="relative w-full h-full">
-            {/* We need to ensure the inner image container is full width of the parent, not the clipped width */}
-             <div className="absolute inset-0 w-[100vw] h-full sm:w-[calc(100%*(100/50))] md:w-full">
-                  <Image
-                    src={beforeImage}
-                    alt={`Before: ${altText}`}
-                    fill
-                    className="object-cover"
-                    draggable={false}
-                    // Crucial: This image needs to maintain its aspect ratio and position relative to the container frame
-                    // We might need a slightly different approach for responsive 'clip', but standard object-cover with fixed parent aspect-ratio works well usually.
-                  />
-             </div>
-             {/* Fix: simple absolute fill works if parent aspect ratio is fixed. 
-                 The trick with clip-path or width masking on the container is that the image inside must NOT shrink. 
-                 It needs to be the full width of the main container.
-             */}
-             <div className="relative w-full h-full" style={{ width: containerRef.current ? containerRef.current.clientWidth : '100%' }}>
-                  <Image
-                    src={beforeImage}
-                    alt={`Before: ${altText}`}
-                    fill
-                    className="object-cover"
-                    draggable={false}
-                  />
-             </div>
-        </div>
-        
-        <span className="absolute top-4 left-4 bg-slate-900/80 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm z-10 shadow-sm">
-          {beforeLabel}
-        </span>
-      </div>
-      
-      {/* Correct Approach for the "Before" layer to prevent squishing */}
-      <div 
         className="absolute inset-0 border-r-2 border-white/50"
-        style={{ 
-            clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100%, 0 100%)` 
-        }}
+        style={{ clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100%, 0 100%)` }}
       >
-         <Image
-            src={beforeImage}
-            alt={`Before: ${altText}`}
-            fill
-            className="object-cover"
-            draggable={false}
-         />
-         <span className="absolute top-4 left-4 bg-slate-900/80 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm z-10 shadow-sm">
+        <Image
+          src={beforeImage}
+          alt={`Before: ${altText}`}
+          fill
+          className="object-cover"
+          draggable={false}
+          sizes="100vw"
+        />
+        <span className="absolute top-4 left-4 bg-slate-900/80 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm z-10 shadow-sm">
           {beforeLabel}
         </span>
       </div>

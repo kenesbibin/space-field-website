@@ -1,5 +1,3 @@
-"use client"
-
 import React from 'react';
 import { Smartphone, PenTool, Zap, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
@@ -37,7 +35,7 @@ const Features = () => {
           <div className="flex-1 flex justify-center items-center relative w-full animate-[heroSlideIn_0.8s_ease-out_both]">
             <div className="relative z-10">
               {/* The Phone Frame */}
-              <div className="relative border-slate-900 bg-slate-900 border-[14px] rounded-[3.5rem] h-[750px] w-[370px] shadow-2xl flex flex-col overflow-hidden ring-1 ring-white/20">
+              <div className="relative border-slate-900 bg-slate-900 border-[14px] rounded-[3.5rem] h-[750px] max-h-[80vh] w-full max-w-[370px] shadow-2xl flex flex-col overflow-hidden ring-1 ring-white/20">
                 
                 {/* Phone Notch */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-[32px] w-[120px] bg-slate-900 rounded-b-3xl z-20"></div>

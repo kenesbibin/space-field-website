@@ -18,7 +18,7 @@ export function PersonaTemplate({ data }: { data: PersonaData }) {
           <span className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold text-purple-300 bg-purple-900/50 border border-purple-700/50 rounded-full">
             Solutions for {data.slug.replace('-', ' ').toUpperCase()}
           </span>
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight break-words">
             {data.hero.title}
           </h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
@@ -38,7 +38,7 @@ export function PersonaTemplate({ data }: { data: PersonaData }) {
       {/* PAIN POINTS */}
       <section className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">{data.painPoints.title}</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 break-words">{data.painPoints.title}</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {data.painPoints.items.map((item, idx) => (
@@ -58,7 +58,7 @@ export function PersonaTemplate({ data }: { data: PersonaData }) {
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[100px] rounded-full"></div>
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">{data.benefits.title}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight break-words">{data.benefits.title}</h2>
             <ul className="space-y-8">
               {data.benefits.items.map((item, idx) => (
                 <li key={idx} className="flex items-start">

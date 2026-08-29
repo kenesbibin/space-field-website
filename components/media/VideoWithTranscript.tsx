@@ -51,7 +51,7 @@ export const VideoWithTranscript: React.FC<VideoWithTranscriptProps> = ({
             <FileText className="w-4 h-4 text-blue-400" />
             <span>Video Transcript</span>
         </div>
-        <button className="text-slate-400">
+        <button className="text-slate-400" aria-label={isOpen ? "Collapse transcript" : "Expand transcript"} aria-expanded={isOpen}>
             {isOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
         </button>
       </div>

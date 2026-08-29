@@ -62,7 +62,7 @@ const CallToActionSection = () => {
               </a>
             </div>
 
-            <p className="mt-4 text-sm text-slate-400 font-medium">
+            <p className="mt-4 text-sm text-slate-500 font-medium">
               Available on iOS, Android, and Web
             </p>
           </motion.div>
@@ -114,7 +114,7 @@ const CallToActionSection = () => {
               </div>
 
               {/* 2. FRONT LAYER: Mobile Phone (Enhanced Version) */}
-              <div className="absolute bottom-[5%] right-[5%] w-[180px] sm:w-[200px] h-[360px] sm:h-[400px] bg-white border-[8px] border-slate-900 rounded-[2rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.3)] z-20 overflow-hidden">
+              <div className="absolute bottom-[5%] right-[5%] w-[45%] max-w-[200px] aspect-[9/19.5] bg-white border-[8px] border-slate-900 rounded-[2rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.3)] z-20 overflow-hidden">
                 {/* Dynamic Island / Notch */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-5 bg-slate-900 rounded-b-xl z-30"></div>
 

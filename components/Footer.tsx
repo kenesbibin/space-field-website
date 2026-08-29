@@ -1,7 +1,6 @@
-"use client"
-
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Instagram, Linkedin, Twitter, Youtube, Github, CheckCircle2, ArrowRight } from 'lucide-react';
 export default function Footer() {
   return (
@@ -40,9 +39,11 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="inline-block transition-transform hover:scale-105 active:scale-95"
             >
-              <img
+              <Image
                 src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                 alt="Get it on Google Play"
+                width={200}
+                height={60}
                 className="h-10 w-auto"
               />
             </a>
@@ -74,9 +75,11 @@ export default function Footer() {
                   { code: "my", country: "Malaysia", phone: "+60 10 660 7357", tel: "+60106607357" },
                 ].map((loc) => (
                   <div key={loc.code} className="flex items-start gap-2">
-                    <img
+                    <Image
                       src={`https://flagcdn.com/w40/${loc.code}.png`}
                       alt={`${loc.country} flag`}
+                      width={40}
+                      height={27}
                       className="w-4 h-3 object-cover rounded-xs border border-slate-700 mt-0.5 flex-shrink-0"
                     />
                     <div>
@@ -214,7 +217,7 @@ export default function Footer() {
               </p>
               <div className="flex items-center gap-4 text-[10px] text-slate-600 font-mono">
                 <span>1.34°, 103.70°</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=7+Soon+Lee+Street+Singapore+627608" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-400">
+                <a href="https://www.google.com/maps/search/?api=1&query=7+Soon+Lee+Street+Singapore+627608" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-400 px-2 py-1 min-h-[44px] inline-flex items-center">
                   View Map →
                 </a>
               </div>
@@ -231,7 +234,7 @@ export default function Footer() {
               </p>
               <div className="flex items-center gap-4 text-[10px] text-slate-600 font-mono">
                 <span>38.62°, -121.38°</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=2500+Marconi+Ave+Ste+101+Sacramento+CA+95821" target="_blank" rel="noopener noreferrer" className="text-indigo-500 hover:text-indigo-400">
+                <a href="https://www.google.com/maps/search/?api=1&query=2500+Marconi+Ave+Ste+101+Sacramento+CA+95821" target="_blank" rel="noopener noreferrer" className="text-indigo-500 hover:text-indigo-400 px-2 py-1 min-h-[44px] inline-flex items-center">
                   View Map →
                 </a>
               </div>
@@ -248,7 +251,7 @@ export default function Footer() {
               </p>
               <div className="flex items-center gap-4 text-[10px] text-slate-600 font-mono">
                 <span>25.28°, 55.31°</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Business+Bay+Dubai" target="_blank" rel="noopener noreferrer" className="text-purple-500 hover:text-purple-400">
+                <a href="https://www.google.com/maps/search/?api=1&query=Business+Bay+Dubai" target="_blank" rel="noopener noreferrer" className="text-purple-500 hover:text-purple-400 px-2 py-1 min-h-[44px] inline-flex items-center">
                   View Map →
                 </a>
               </div>
@@ -318,7 +321,7 @@ const SocialMediaIcon = ({ className }: { className?: string }) => (
 
 const SocialLink = ({ href, icon: Icon, label }: { href: string, icon: React.ElementType, label: string }) => {
   const isInternal = href.startsWith('/');
-  const className = "w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 transition-all duration-300 hover:bg-slate-800 hover:text-white hover:-translate-y-1 border border-slate-800";
+  const className = "w-11 h-11 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 transition-all duration-300 hover:bg-slate-800 hover:text-white hover:-translate-y-1 border border-slate-800 min-w-[44px] min-h-[44px]";
 
   if (isInternal) {
     return (

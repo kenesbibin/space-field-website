@@ -118,7 +118,7 @@ Email: ${leadForm.email}
                 </div>
                 <div>
                     <h2 className="text-xl font-bold">Project Estimator</h2>
-                    <p className="text-sm text-slate-400 print:text-slate-600">Professional Grade Calculation</p>
+                    <p className="text-sm text-slate-500 print:text-slate-600">Professional Grade Calculation</p>
                 </div>
             </div>
             {/* Removed Currency Toggle */}
@@ -126,7 +126,7 @@ Email: ${leadForm.email}
 
         {/* Table Area */}
         <div className="p-6 overflow-x-auto">
-            <table className="w-full min-w-[600px] text-left border-collapse">
+            <table className="mobile-cards-table w-full md:min-w-[600px] text-left border-collapse">
                 <thead>
                     <tr className="border-b border-slate-200 text-xs font-bold text-slate-500 uppercase tracking-wider">
                         <th className="py-3 px-2">Item Name</th>
@@ -148,17 +148,19 @@ Email: ${leadForm.email}
                                 exit={{ opacity: 0, height: 0 }}
                                 className="group hover:bg-slate-50 border-b border-slate-100 last:border-0 print:border-slate-300"
                             >
-                                <td className="p-2">
-                                    <input 
-                                        type="text" 
+                                <td className="p-2" data-label="Item Name">
+                                    <input
+                                        type="text"
                                         placeholder="e.g. Drywall Sheets"
+                                        aria-label="Item name"
                                         className="w-full bg-transparent border border-transparent hover:border-slate-300 focus:border-blue-500 rounded px-2 py-1 outline-none transition-all print:border-none"
                                         value={item.name}
                                         onChange={(e) => updateItem(item.id, 'name', e.target.value)}
                                     />
                                 </td>
-                                <td className="p-2">
-                                    <select 
+                                <td className="p-2" data-label="Category">
+                                    <select
+                                        aria-label="Category"
                                         className="w-full bg-transparent border border-transparent hover:border-slate-300 focus:border-blue-500 rounded px-2 py-1 outline-none transition-all cursor-pointer print:appearance-none print:border-none"
                                         value={item.category}
                                         onChange={(e) => updateItem(item.id, 'category', e.target.value as Category)}
@@ -166,44 +168,50 @@ Email: ${leadForm.email}
                                         {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
                                     </select>
                                 </td>
-                                <td className="p-2">
-                                    <input 
-                                        type="text" 
+                                <td className="p-2" data-label="Notes">
+                                    <input
+                                        type="text"
                                         placeholder="Optional details..."
+                                        aria-label="Notes"
                                         className="w-full bg-transparent border border-transparent hover:border-slate-300 focus:border-blue-500 rounded px-2 py-1 outline-none transition-all text-slate-500 print:border-none"
                                         value={item.notes || ''}
                                         onChange={(e) => updateItem(item.id, 'notes', e.target.value)}
                                     />
                                 </td>
-                                <td className="p-2">
+                                <td className="p-2" data-label="Unit Cost">
                                     <div className="relative">
-                                        <span className="absolute left-2 top-1.5 text-slate-400 text-xs">{currency}</span>
-                                        <input 
-                                            type="number" 
+                                        <span className="absolute left-2 top-1.5 text-slate-500 text-xs">{currency}</span>
+                                        <input
+                                            type="number"
                                             min="0"
+                                            inputMode="decimal"
+                                            aria-label="Unit cost"
                                             className="w-full pl-6 bg-transparent border border-transparent hover:border-slate-300 focus:border-blue-500 rounded pr-2 py-1 outline-none transition-all print:border-none"
                                             value={item.unitCost}
                                             onChange={(e) => updateItem(item.id, 'unitCost', parseFloat(e.target.value) || 0)}
                                         />
                                     </div>
                                 </td>
-                                <td className="p-2">
-                                    <input 
-                                        type="number" 
+                                <td className="p-2" data-label="Qty">
+                                    <input
+                                        type="number"
                                         min="0"
+                                        inputMode="decimal"
+                                        aria-label="Quantity"
                                         className="w-full bg-transparent border border-transparent hover:border-slate-300 focus:border-blue-500 rounded px-2 py-1 outline-none transition-all print:border-none"
                                         value={item.quantity}
                                         onChange={(e) => updateItem(item.id, 'quantity', parseFloat(e.target.value) || 0)}
                                     />
                                 </td>
-                                <td className="p-2 text-right font-medium text-slate-700">
+                                <td className="p-2 text-right font-medium text-slate-700" data-label="Total">
                                     {currency}{calculateRowTotal(item).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                                 </td>
-                                <td className="p-2 text-center print:hidden">
-                                    <button 
+                                <td className="p-2 text-center print:hidden" data-label="">
+                                    <button
                                         onClick={() => removeItem(item.id)}
-                                        className="text-slate-400 hover:text-red-500 transition-colors p-1"
+                                        className="text-slate-500 hover:text-red-500 transition-colors p-1"
                                         title="Remove Item"
+                                        aria-label="Remove Item"
                                     >
                                         <Trash2 className="w-4 h-4" />
                                     </button>
@@ -215,7 +223,7 @@ Email: ${leadForm.email}
             </table>
             
             {items.length === 0 && (
-                <div className="text-center py-12 text-slate-400 border-2 border-dashed border-slate-200 rounded-lg mt-4 print:hidden">
+                <div className="text-center py-12 text-slate-500 border-2 border-dashed border-slate-200 rounded-lg mt-4 print:hidden">
                     <p>No items added yet.</p>
                     <button onClick={addItem} className="text-blue-600 font-medium hover:underline mt-2">Start by adding a row</button>
                 </div>
@@ -291,9 +299,10 @@ Email: ${leadForm.email}
                         {/* Decorative Gradient */}
                         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 to-purple-500" />
                         
-                        <button 
+                        <button
                             onClick={() => setShowModal(false)}
-                            className="absolute top-4 right-4 text-slate-400 hover:text-slate-600"
+                            className="absolute top-4 right-4 text-slate-500 hover:text-slate-700"
+                            aria-label="Close dialog"
                         >
                             <X className="w-6 h-6" />
                         </button>
@@ -341,7 +350,7 @@ Email: ${leadForm.email}
                                     <>Get Estimate & Request Demo <ArrowRightIcon className="w-4 h-4" /></>
                                 )}
                             </button>
-                            <p className="text-xs text-center text-slate-400 mt-4">
+                            <p className="text-xs text-center text-slate-500 mt-4">
                                 By continuing, you agree to our Terms of Service.
                             </p>
                         </form>

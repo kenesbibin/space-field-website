@@ -132,7 +132,7 @@ export default function AppDownloadPage() {
                   width={55}
                   height={48}
                   className="rounded-xl"
-                  priority
+                  loading="lazy"
                 />
                 <div>
                   <h2 className="text-xl font-bold">SpaceCapture</h2>

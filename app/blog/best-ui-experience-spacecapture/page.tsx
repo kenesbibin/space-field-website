@@ -41,7 +41,9 @@ export default function BestUIExperiencePage() {
                         alt="Best UI experience in SpaceCapture app"
                         fill
                         className="object-cover"
-                        priority
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+
+                        loading="lazy"
                     />
                 </div>
 

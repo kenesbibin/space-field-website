@@ -61,7 +61,7 @@ const PrivacyPage = () => {
                         className="absolute inset-0 bg-slate-200 overflow-hidden transition-all duration-75 ease-linear"
                         style={{ width: `${sliderPos}%` }}
                     >
-                        <div className="absolute inset-0 w-[100vw] max-w-4xl h-full flex items-center justify-center bg-white">
+                        <div className="absolute inset-0 w-full max-w-4xl h-full flex items-center justify-center bg-white">
                              {/* Recreating the scene unblurred */}
                              <div className="w-full h-full relative p-10 flex items-center justify-around bg-[url('/images/construction-site-1.jpg')] bg-cover">
                                   {/* Just mock elements if image fails */}
@@ -94,12 +94,13 @@ const PrivacyPage = () => {
                     </div>
 
                     {/* Hidden Range Input for Logic */}
-                    <input 
-                        type="range" 
-                        min="0" 
-                        max="100" 
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
                         value={sliderPos}
                         onChange={handleSliderChange}
+                        aria-label="Compare raw vs redacted footage"
                         className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20"
                     />
 
@@ -155,7 +156,7 @@ const BadgeCard = ({ icon: Icon, title, desc }: any) => (
         <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 mb-4">
             <Icon className="w-6 h-6" />
         </div>
-        <h3 className="font-bold text-slate-900 text-lg mb-2">{title}</h3>
+        <h2 className="font-bold text-slate-900 text-lg mb-2">{title}</h2>
         <p className="text-sm text-slate-600 leading-relaxed">{desc}</p>
     </div>
 );

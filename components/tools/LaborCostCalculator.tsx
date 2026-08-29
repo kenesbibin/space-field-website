@@ -126,7 +126,7 @@ Email: ${leadForm.email}
 
         {/* Table Area */}
         <div className="p-6 overflow-x-auto">
-            <table className="w-full min-w-[700px] text-left border-collapse">
+            <table className="mobile-cards-table w-full md:min-w-[700px] text-left border-collapse">
                 <thead>
                     <tr className="border-b border-slate-200 text-xs font-bold text-slate-500 uppercase tracking-wider">
                         <th className="py-3 px-2">Job Title / Role</th>
@@ -148,61 +148,70 @@ Email: ${leadForm.email}
                                 exit={{ opacity: 0, height: 0 }}
                                 className="group hover:bg-slate-50 border-b border-slate-100 last:border-0 print:border-slate-300"
                             >
-                                <td className="p-2">
-                                    <input 
-                                        type="text" 
+                                <td className="p-2" data-label="Job Title / Role">
+                                    <input
+                                        type="text"
                                         placeholder="e.g. Electrician"
+                                        aria-label="Job title"
                                         className="w-full bg-transparent border border-transparent hover:border-slate-300 focus:border-blue-500 rounded px-2 py-1 outline-none transition-all print:border-none"
                                         value={item.jobTitle}
                                         onChange={(e) => updateItem(item.id, 'jobTitle', e.target.value)}
                                     />
                                 </td>
-                                <td className="p-2">
-                                    <input 
-                                        type="text" 
+                                <td className="p-2" data-label="Notes">
+                                    <input
+                                        type="text"
                                         placeholder="Optional..."
+                                        aria-label="Notes"
                                         className="w-full bg-transparent border border-transparent hover:border-slate-300 focus:border-blue-500 rounded px-2 py-1 outline-none transition-all text-slate-500 print:border-none"
                                         value={item.notes || ''}
                                         onChange={(e) => updateItem(item.id, 'notes', e.target.value)}
                                     />
                                 </td>
-                                <td className="p-2">
-                                    <input 
-                                        type="number" 
+                                <td className="p-2" data-label="Count">
+                                    <input
+                                        type="number"
                                         min="0"
+                                        inputMode="decimal"
+                                        aria-label="Count"
                                         className="w-full bg-transparent border border-transparent hover:border-slate-300 focus:border-blue-500 rounded px-2 py-1 outline-none transition-all print:border-none"
                                         value={item.count}
                                         onChange={(e) => updateItem(item.id, 'count', parseFloat(e.target.value) || 0)}
                                     />
                                 </td>
-                                <td className="p-2">
+                                <td className="p-2" data-label="Rate">
                                     <div className="relative">
-                                        <input 
-                                            type="number" 
+                                        <input
+                                            type="number"
                                             min="0"
+                                            inputMode="decimal"
+                                            aria-label="Hourly rate"
                                             className="w-full bg-transparent border border-transparent hover:border-slate-300 focus:border-blue-500 rounded px-2 py-1 outline-none transition-all print:border-none"
                                             value={item.rate}
                                             onChange={(e) => updateItem(item.id, 'rate', parseFloat(e.target.value) || 0)}
                                         />
                                     </div>
                                 </td>
-                                <td className="p-2">
-                                    <input 
-                                        type="number" 
+                                <td className="p-2" data-label="Hours">
+                                    <input
+                                        type="number"
                                         min="0"
+                                        inputMode="decimal"
+                                        aria-label="Hours"
                                         className="w-full bg-transparent border border-transparent hover:border-slate-300 focus:border-blue-500 rounded px-2 py-1 outline-none transition-all print:border-none"
                                         value={item.hours}
                                         onChange={(e) => updateItem(item.id, 'hours', parseFloat(e.target.value) || 0)}
                                     />
                                 </td>
-                                <td className="p-2 text-right font-medium text-slate-700">
+                                <td className="p-2 text-right font-medium text-slate-700" data-label="Total">
                                     {currency}{calculateRowTotal(item).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                                 </td>
-                                <td className="p-2 text-center print:hidden">
-                                    <button 
+                                <td className="p-2 text-center print:hidden" data-label="">
+                                    <button
                                         onClick={() => removeItem(item.id)}
                                         className="text-slate-400 hover:text-red-500 transition-colors p-1"
                                         title="Remove Item"
+                                        aria-label="Remove Item"
                                     >
                                         <Trash2 className="w-4 h-4" />
                                     </button>
@@ -334,9 +343,10 @@ Email: ${leadForm.email}
                         {/* Decorative Gradient */}
                         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 to-purple-500" />
                         
-                        <button 
+                        <button
                             onClick={() => setShowModal(false)}
                             className="absolute top-4 right-4 text-slate-400 hover:text-slate-600"
+                            aria-label="Close dialog"
                         >
                             <X className="w-6 h-6" />
                         </button>

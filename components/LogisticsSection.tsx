@@ -133,7 +133,9 @@ const LogisticsSection = () => {
                    alt="Logistics Fleet Management and Delivery"
                    fill
                    className="object-cover hover:scale-105 transition-transform duration-700"
-                   priority
+                   sizes="(max-width: 1024px) 100vw, 50vw"
+
+                   loading="lazy"
                  />
                  
                  {/* Gradient Overlay */}

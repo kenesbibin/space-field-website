@@ -1,0 +1,211 @@
+[2026-08-03T06:52:06.911Z] Launching Chrome for Lighthouse...
+[2026-08-03T06:52:08.022Z] Chrome launched on port 55861
+[2026-08-03T06:52:08.025Z] [1/36] Auditing http://localhost:3000/
+[2026-08-03T06:52:08.027Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T06:53:38.829Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T06:53:38.833Z] [2/36] Auditing http://localhost:3000/pricing
+[2026-08-03T06:53:38.835Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T06:54:16.016Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T06:54:16.017Z] [3/36] Auditing http://localhost:3000/request-a-demo
+[2026-08-03T06:54:16.018Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T06:54:48.694Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T06:54:48.695Z] [4/36] Auditing http://localhost:3000/app-download
+[2026-08-03T06:54:48.696Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T06:55:22.336Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T06:55:22.337Z] [5/36] Auditing http://localhost:3000/playstore-app-download
+[2026-08-03T06:55:22.338Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T06:56:03.030Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T06:56:03.030Z] [6/36] Auditing http://localhost:3000/core-functions
+[2026-08-03T06:56:03.032Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T06:56:37.226Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T06:56:37.227Z] [7/36] Auditing http://localhost:3000/visual-form-builder
+[2026-08-03T06:56:37.228Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T06:57:13.569Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T06:57:13.570Z] [8/36] Auditing http://localhost:3000/ai-detection
+[2026-08-03T06:57:13.571Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T06:57:54.678Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T06:57:54.679Z] [9/36] Auditing http://localhost:3000/ai-detection-api
+[2026-08-03T06:57:54.680Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T06:58:31.025Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T06:58:31.028Z] [10/36] Auditing http://localhost:3000/field-inspection-software
+[2026-08-03T06:58:31.029Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T06:59:13.238Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T06:59:13.239Z] [11/36] Auditing http://localhost:3000/construction-inspection-software
+[2026-08-03T06:59:13.240Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T06:59:50.203Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T06:59:50.204Z] [12/36] Auditing http://localhost:3000/site-inspection-software
+[2026-08-03T06:59:50.205Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:00:27.748Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:00:27.749Z] [13/36] Auditing http://localhost:3000/digitize-paper-forms
+[2026-08-03T07:00:27.749Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:01:07.743Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:01:07.744Z] [14/36] Auditing http://localhost:3000/reports
+[2026-08-03T07:01:07.745Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:01:42.149Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:01:42.149Z] [15/36] Auditing http://localhost:3000/access-control
+[2026-08-03T07:01:42.150Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:02:19.773Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:02:19.774Z] [16/36] Auditing http://localhost:3000/integrations
+[2026-08-03T07:02:19.775Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:02:56.001Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:02:56.002Z] [17/36] Auditing http://localhost:3000/hosting
+[2026-08-03T07:02:56.003Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:03:37.898Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:03:37.899Z] [18/36] Auditing http://localhost:3000/offline-field-inspection-app
+[2026-08-03T07:03:37.900Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:04:19.558Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:04:19.559Z] [19/36] Auditing http://localhost:3000/construction-software
+[2026-08-03T07:04:19.562Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:04:58.555Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:04:58.556Z] [20/36] Auditing http://localhost:3000/field-data-capture-software
+[2026-08-03T07:04:58.557Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:05:35.807Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:05:35.808Z] [21/36] Auditing http://localhost:3000/compare/procore
+[2026-08-03T07:05:35.809Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:06:09.531Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:06:09.532Z] [22/36] Auditing http://localhost:3000/compare/fieldwire
+[2026-08-03T07:06:09.533Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:06:44.978Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:06:44.978Z] [23/36] Auditing http://localhost:3000/alternatives/revizto
+[2026-08-03T07:06:44.979Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:07:21.203Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:07:21.203Z] [24/36] Auditing http://localhost:3000/industries/construction
+[2026-08-03T07:07:21.204Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:11:22.294Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:11:22.294Z] [25/36] Auditing http://localhost:3000/who-we-serve/general-contractors
+[2026-08-03T07:11:22.295Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:11:56.565Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:11:56.566Z] [26/36] Auditing http://localhost:3000/tools/construction-cost-calculator
+[2026-08-03T07:11:56.567Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:15:13.830Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:15:13.832Z] [27/36] Auditing http://localhost:3000/tools/labor-cost-calculator
+[2026-08-03T07:15:13.834Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:15:46.919Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:15:46.920Z] [28/36] Auditing http://localhost:3000/blog/ai-in-construction
+[2026-08-03T07:15:46.920Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:16:22.479Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:16:22.480Z] [29/36] Auditing http://localhost:3000/glossary/field-inspection
+[2026-08-03T07:16:22.481Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:16:55.885Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:16:55.886Z] [30/36] Auditing http://localhost:3000/locations/field-inspection-software-california
+[2026-08-03T07:16:55.887Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:17:31.502Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:17:31.503Z] [31/36] Auditing http://localhost:3000/lab/mobile-performance
+[2026-08-03T07:17:31.504Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:18:05.912Z]   Screenshots done. Horizontal overflow: iPhoneSE, iPhone14, iPhoneMax, iPad
+[2026-08-03T07:18:05.913Z] [32/36] Auditing http://localhost:3000/lab/privacy
+[2026-08-03T07:18:05.916Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:18:41.560Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:18:41.561Z] [33/36] Auditing http://localhost:3000/technology/computer-vision
+[2026-08-03T07:18:41.562Z]   Lighthouse ERROR: lighthouse is not a function
+[2026-08-03T07:23:44.788Z] Launching Chrome for Lighthouse...
+[2026-08-03T07:23:45.379Z] Chrome launched on port 58843
+[2026-08-03T07:23:45.391Z] [1/36] Auditing http://localhost:3000/
+[2026-08-03T07:24:19.894Z]   Lighthouse done: perf=41 a11y=85 bp=0 seo=100
+[2026-08-03T07:25:19.195Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:25:19.196Z] [2/36] Auditing http://localhost:3000/pricing
+[2026-08-03T07:25:50.380Z]   Lighthouse done: perf=42 a11y=85 bp=75 seo=100
+[2026-08-03T07:26:09.307Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:26:09.308Z] [3/36] Auditing http://localhost:3000/request-a-demo
+[2026-08-03T07:26:41.440Z]   Lighthouse done: perf=41 a11y=93 bp=75 seo=100
+[2026-08-03T07:26:58.782Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:26:58.783Z] [4/36] Auditing http://localhost:3000/app-download
+[2026-08-03T07:27:27.572Z]   Lighthouse done: perf=41 a11y=89 bp=75 seo=100
+[2026-08-03T07:27:48.850Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:27:48.851Z] [5/36] Auditing http://localhost:3000/playstore-app-download
+[2026-08-03T07:28:21.021Z]   Lighthouse done: perf=41 a11y=93 bp=75 seo=100
+[2026-08-03T07:28:53.883Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:28:53.883Z] [6/36] Auditing http://localhost:3000/core-functions
+[2026-08-03T07:29:25.791Z]   Lighthouse done: perf=41 a11y=95 bp=75 seo=100
+[2026-08-03T07:29:46.241Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:29:46.242Z] [7/36] Auditing http://localhost:3000/visual-form-builder
+[2026-08-03T07:30:19.817Z]   Lighthouse done: perf=41 a11y=89 bp=75 seo=100
+[2026-08-03T07:30:40.428Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:30:40.429Z] [8/36] Auditing http://localhost:3000/ai-detection
+[2026-08-03T07:31:16.469Z]   Lighthouse done: perf=40 a11y=91 bp=75 seo=100
+[2026-08-03T07:31:47.744Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:31:47.745Z] [9/36] Auditing http://localhost:3000/ai-detection-api
+[2026-08-03T07:32:19.109Z]   Lighthouse done: perf=40 a11y=91 bp=75 seo=100
+[2026-08-03T07:32:43.917Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:32:43.918Z] [10/36] Auditing http://localhost:3000/field-inspection-software
+[2026-08-03T07:33:16.342Z]   Lighthouse done: perf=40 a11y=91 bp=75 seo=100
+[2026-08-03T07:33:45.799Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:33:45.800Z] [11/36] Auditing http://localhost:3000/construction-inspection-software
+[2026-08-03T07:34:16.387Z]   Lighthouse done: perf=40 a11y=91 bp=75 seo=100
+[2026-08-03T07:34:44.284Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:34:44.285Z] [12/36] Auditing http://localhost:3000/site-inspection-software
+[2026-08-03T07:35:14.128Z]   Lighthouse done: perf=40 a11y=91 bp=75 seo=100
+[2026-08-03T07:35:44.923Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:35:44.924Z] [13/36] Auditing http://localhost:3000/digitize-paper-forms
+[2026-08-03T07:36:14.731Z]   Lighthouse done: perf=39 a11y=91 bp=75 seo=100
+[2026-08-03T07:36:35.255Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:36:35.256Z] [14/36] Auditing http://localhost:3000/reports
+[2026-08-03T07:37:04.987Z]   Lighthouse done: perf=42 a11y=91 bp=75 seo=100
+[2026-08-03T07:37:20.935Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:37:20.936Z] [15/36] Auditing http://localhost:3000/access-control
+[2026-08-03T07:37:47.391Z]   Lighthouse done: perf=28 a11y=91 bp=75 seo=100
+[2026-08-03T07:38:04.335Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:38:04.335Z] [16/36] Auditing http://localhost:3000/integrations
+[2026-08-03T07:38:29.612Z]   Lighthouse done: perf=43 a11y=95 bp=75 seo=100
+[2026-08-03T07:38:46.074Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:38:46.075Z] [17/36] Auditing http://localhost:3000/hosting
+[2026-08-03T07:39:14.271Z]   Lighthouse done: perf=43 a11y=91 bp=75 seo=100
+[2026-08-03T07:39:43.708Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:39:43.710Z] [18/36] Auditing http://localhost:3000/offline-field-inspection-app
+[2026-08-03T07:40:37.139Z]   Lighthouse done: perf=38 a11y=91 bp=75 seo=100
+[2026-08-03T07:40:54.062Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:40:54.063Z] [19/36] Auditing http://localhost:3000/construction-software
+[2026-08-03T07:41:49.314Z]   Lighthouse done: perf=35 a11y=91 bp=75 seo=100
+[2026-08-03T07:42:16.494Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:42:16.494Z] [20/36] Auditing http://localhost:3000/field-data-capture-software
+[2026-08-03T07:43:10.396Z]   Lighthouse done: perf=36 a11y=91 bp=75 seo=100
+[2026-08-03T07:43:28.768Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:43:28.769Z] [21/36] Auditing http://localhost:3000/compare/procore
+[2026-08-03T07:44:23.780Z]   Lighthouse done: perf=37 a11y=91 bp=75 seo=100
+[2026-08-03T07:44:40.013Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:44:40.014Z] [22/36] Auditing http://localhost:3000/compare/fieldwire
+[2026-08-03T07:45:35.405Z]   Lighthouse done: perf=36 a11y=91 bp=75 seo=100
+[2026-08-03T07:45:51.205Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:45:51.205Z] [23/36] Auditing http://localhost:3000/alternatives/revizto
+[2026-08-03T07:46:46.552Z]   Lighthouse done: perf=38 a11y=95 bp=75 seo=100
+[2026-08-03T07:47:04.126Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:47:04.127Z] [24/36] Auditing http://localhost:3000/industries/construction
+[2026-08-03T07:48:01.130Z]   Lighthouse done: perf=36 a11y=93 bp=75 seo=100
+[2026-08-03T07:48:17.128Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:48:17.128Z] [25/36] Auditing http://localhost:3000/who-we-serve/general-contractors
+[2026-08-03T07:49:11.028Z]   Lighthouse done: perf=36 a11y=93 bp=75 seo=100
+[2026-08-03T07:49:30.388Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:49:30.389Z] [26/36] Auditing http://localhost:3000/tools/construction-cost-calculator
+[2026-08-03T07:50:36.813Z]   Lighthouse done: perf=34 a11y=83 bp=75 seo=100
+[2026-08-03T07:51:06.918Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:51:06.919Z] [27/36] Auditing http://localhost:3000/tools/labor-cost-calculator
+[2026-08-03T07:51:51.852Z]   Lighthouse done: perf=39 a11y=86 bp=75 seo=100
+[2026-08-03T07:52:08.480Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:52:08.481Z] [28/36] Auditing http://localhost:3000/blog/ai-in-construction
+[2026-08-03T07:53:02.269Z]   Lighthouse done: perf=37 a11y=95 bp=75 seo=100
+[2026-08-03T07:53:22.669Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:53:22.669Z] [29/36] Auditing http://localhost:3000/glossary/field-inspection
+[2026-08-03T07:54:11.817Z]   Lighthouse done: perf=36 a11y=95 bp=75 seo=100
+[2026-08-03T07:54:30.900Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:54:30.901Z] [30/36] Auditing http://localhost:3000/locations/field-inspection-software-california
+[2026-08-03T07:55:27.207Z]   Lighthouse done: perf=37 a11y=95 bp=75 seo=100
+[2026-08-03T07:55:50.309Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:55:50.309Z] [31/36] Auditing http://localhost:3000/lab/mobile-performance
+[2026-08-03T07:56:46.316Z]   Lighthouse done: perf=36 a11y=89 bp=75 seo=66
+[2026-08-03T07:57:07.626Z]   Screenshots done. Horizontal overflow: iPhoneSE, iPhone14, iPhoneMax, iPad
+[2026-08-03T07:57:07.627Z] [32/36] Auditing http://localhost:3000/lab/privacy
+[2026-08-03T07:57:59.996Z]   Lighthouse done: perf=37 a11y=89 bp=75 seo=66
+[2026-08-03T07:58:16.315Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:58:16.316Z] [33/36] Auditing http://localhost:3000/technology/computer-vision
+[2026-08-03T07:59:11.702Z]   Lighthouse done: perf=37 a11y=95 bp=75 seo=100
+[2026-08-03T07:59:28.232Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T07:59:28.233Z] [34/36] Auditing http://localhost:3000/about-us
+[2026-08-03T08:00:22.989Z]   Lighthouse done: perf=36 a11y=89 bp=75 seo=100
+[2026-08-03T08:00:43.127Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T08:00:43.128Z] [35/36] Auditing http://localhost:3000/customers
+[2026-08-03T08:01:35.834Z]   Lighthouse done: perf=37 a11y=91 bp=75 seo=100
+[2026-08-03T08:02:05.852Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T08:02:05.853Z] [36/36] Auditing http://localhost:3000/social-media
+[2026-08-03T08:03:01.294Z]   Lighthouse done: perf=36 a11y=89 bp=75 seo=100
+[2026-08-03T08:03:16.674Z]   Screenshots done. Horizontal overflow: none
+[2026-08-03T08:03:17.607Z] Audit complete. Summary written to C:\Users\USER\space-field-website\audit-reports\mobile-audit\summary.json
