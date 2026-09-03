@@ -52,7 +52,7 @@ export const SeoLandingPage = ({
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
                             {/* Try for Free */}
                             <a
-                                href="https://www.amspace.ai/login?type=Field&moduleId=8b3b6af5-07a3-44b2-b69e-342b61d71718&invite=guest"
+                                href="https://www.spaceaiapp.com/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full bg-indigo-600 px-8 text-base font-bold text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-indigo-500 hover:scale-105"
@@ -92,7 +92,7 @@ export const SeoLandingPage = ({
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <a
-                                href="https://www.amspace.ai/login?type=Field&moduleId=8b3b6af5-07a3-44b2-b69e-342b61d71718&invite=guest"
+                                href="https://www.spaceaiapp.com/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full bg-indigo-600 px-8 text-base font-bold text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-indigo-500 hover:scale-105"

@@ -438,7 +438,7 @@ export default function Navbar() {
 
   // Constants
   const SIGN_IN_URL =
-    "https://www.amspace.ai/login?type=Field&moduleId=8b3b6af5-07a3-44b2-b69e-342b61d71718&invite=guest";
+    "https://www.spaceaiapp.com/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login";
   const DEMO_URL = "/request-a-demo";
   const PHONE_NUMBER_SG = "+65 86 111 900";
   const PHONE_NUMBER_USA = "+1 646 421 5740";
