@@ -95,7 +95,7 @@ const MobilePerformancePage = () => {
 
                 {/* VISUAL: Thermal Phone */}
                 <div className="relative flex justify-center py-10">
-                     <div className="relative w-64 h-[500px] border-8 border-slate-900 rounded-[3rem] bg-slate-800 shadow-2xl overflow-hidden">
+                     <div className="relative w-full max-w-64 aspect-[9/19.5] border-8 border-slate-900 rounded-[3rem] bg-slate-800 shadow-2xl overflow-hidden">
                          {/* Screen showing Heatmap */}
                          <div className="absolute inset-0 bg-gradient-to-b from-blue-500 via-blue-400 to-green-400 opacity-60"></div>
                          
@@ -120,10 +120,10 @@ const MobilePerformancePage = () => {
                      </div>
                      
                      {/* Floating Badge */}
-                     <motion.div 
+                     <motion.div
                         animate={{ y: [0, -10, 0] }}
                         transition={{ repeat: Infinity, duration: 4 }}
-                        className="absolute top-1/2 -right-10 bg-white p-4 rounded-xl shadow-lg border border-slate-100 max-w-[150px]"
+                        className="absolute top-1/2 -right-4 md:-right-10 hidden sm:block bg-white p-3 md:p-4 rounded-xl shadow-lg border border-slate-100 max-w-[120px] md:max-w-[150px]"
                      >
                          <h5 className="text-sm font-bold text-slate-900 mb-1">LiDAR Optimized</h5>
                          <p className="text-xs text-slate-500">Efficient point cloud meshing prevents device overheating.</p>

@@ -24,14 +24,17 @@ const EmailButton = () => {
   };
 
   return (
-    <div className="fixed bottom-36 right-4 z-40 flex items-center justify-end">
-      {/* Tooltip / Success message */}
+    <div
+      className="fixed bottom-24 right-4 z-40 flex items-center justify-end"
+      style={{ bottom: 'calc(max(1.5rem, env(safe-area-inset-bottom)) + 4rem)' }}
+    >
+      {/* Tooltip / Success message — hidden on small screens to avoid overflow */}
       {isCopied ? (
-        <div className="email-tooltip email-tooltip--success">
+        <div className="email-tooltip email-tooltip--success hidden sm:block">
           Email Copied!
         </div>
       ) : isHovered ? (
-        <div className="email-tooltip">
+        <div className="email-tooltip hidden sm:block">
           Copy Email
         </div>
       ) : null}
@@ -42,6 +45,7 @@ const EmailButton = () => {
         onMouseLeave={() => setIsHovered(false)}
         className={`email-btn ${isCopied ? "email-btn--success" : ""}`}
         title="Copy Email & Contact"
+        aria-label="Copy email address"
       >
         {isCopied ? <Check className="w-6 h-6" /> : <Mail className="w-6 h-6" />}
       </button>

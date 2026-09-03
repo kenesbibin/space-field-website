@@ -2,6 +2,7 @@
 "use client";
 
 import React, { useState, useRef } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   ArrowRight,
@@ -112,7 +113,7 @@ const AiDetectionApiSection = () => {
 
               <div className="flex gap-4">
                 <Link
-                  href="https://www.amspace.ai/login?type=Field&moduleId=8b3b6af5-07a3-44b2-b69e-342b61d71718&invite=guest"
+                  href="https://www.spaceaiapp.com/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-slate-900 text-white text-base font-bold hover:bg-slate-800 hover:shadow-lg hover:scale-105 transition-all duration-300"
@@ -130,13 +131,17 @@ const AiDetectionApiSection = () => {
                 {!isDetectionPlaying ? (
                   <button
                     onClick={handleDetectionPlay}
-                    className="relative w-full cursor-pointer group"
+                    className="relative w-full cursor-pointer group overflow-hidden rounded-xl"
                     aria-label="Play AI detection demo"
                   >
-                    <img
-                      src="/images/detection.gif"
+                    <Image
+                      src="/images/detection-poster.webp"
                       alt="AI defect detection demo"
+                      width={800}
+                      height={434}
                       className="w-full h-auto object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-black/30 flex items-center justify-center transition-colors group-hover:bg-black/40">
                       <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
@@ -166,7 +171,7 @@ const AiDetectionApiSection = () => {
               <div className="max-w-lg w-full z-10">
                 <button
                   onClick={() => setShowTranscript(!showTranscript)}
-                  className="text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-indigo-600 transition-colors flex items-center gap-2 mb-2"
+                  className="px-3 py-2 text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-indigo-600 transition-colors flex items-center gap-2 mb-2 min-h-[44px]"
                 >
                   {showTranscript ? 'Hide Transcript' : 'Show Video Transcript'}
                   <ArrowRight className={`w-3 h-3 transition-transform ${showTranscript ? 'rotate-90' : ''}`} />
@@ -211,13 +216,13 @@ const AiDetectionApiSection = () => {
                   <div className="flex bg-slate-200 rounded-lg p-1">
                     <button
                       onClick={() => setShowJson(false)}
-                      className={`px-3 py-1 text-xs font-bold rounded transition-all ${!showJson ? 'bg-white shadow text-slate-900' : 'text-slate-500 hover:text-slate-700'}`}
+                      className={`px-4 py-2 text-xs font-bold rounded transition-all min-h-[44px] ${!showJson ? 'bg-white shadow text-slate-900' : 'text-slate-500 hover:text-slate-700'}`}
                     >
                       Visual
                     </button>
                     <button
                       onClick={() => setShowJson(true)}
-                      className={`px-3 py-1 text-xs font-bold rounded transition-all ${showJson ? 'bg-white shadow text-indigo-600' : 'text-slate-500 hover:text-slate-700'}`}
+                      className={`px-4 py-2 text-xs font-bold rounded transition-all min-h-[44px] ${showJson ? 'bg-white shadow text-indigo-600' : 'text-slate-500 hover:text-slate-700'}`}
                     >
                       JSON
                     </button>
@@ -302,7 +307,7 @@ const AiDetectionApiSection = () => {
                       <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">JSON Response Payload</p>
                       <span className="text-[10px] text-slate-500">application/json</span>
                     </div>
-                    <pre className="font-mono text-xs text-green-400 overflow-x-auto">
+                    <pre className="font-mono text-xs text-green-400 overflow-x-auto max-w-full">
                       <code>{jsonPayload}</code>
                     </pre>
                   </div>

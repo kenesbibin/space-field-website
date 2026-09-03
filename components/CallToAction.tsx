@@ -44,10 +44,10 @@ const CallToActionSection = () => {
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
-                href="https://www.amspace.ai/login?type=Field&moduleId=8b3b6af5-07a3-44b2-b69e-342b61d71718&invite=guest"
+                href="https://www.spaceaiapp.com/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => trackCtaClicked('Try for Free', 'https://www.amspace.ai/login')}
+                onClick={() => trackCtaClicked('Try for Free', 'https://www.spaceaiapp.com/login')}
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-slate-900 text-white text-base font-bold hover:bg-slate-800 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
                 Try for Free
@@ -62,7 +62,7 @@ const CallToActionSection = () => {
               </a>
             </div>
 
-            <p className="mt-4 text-sm text-slate-400 font-medium">
+            <p className="mt-4 text-sm text-slate-500 font-medium">
               Available on iOS, Android, and Web
             </p>
           </motion.div>
@@ -114,7 +114,7 @@ const CallToActionSection = () => {
               </div>
 
               {/* 2. FRONT LAYER: Mobile Phone (Enhanced Version) */}
-              <div className="absolute bottom-[5%] right-[5%] w-[180px] sm:w-[200px] h-[360px] sm:h-[400px] bg-white border-[8px] border-slate-900 rounded-[2rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.3)] z-20 overflow-hidden">
+              <div className="absolute bottom-[5%] right-[5%] w-[45%] max-w-[200px] aspect-[9/19.5] bg-white border-[8px] border-slate-900 rounded-[2rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.3)] z-20 overflow-hidden">
                 {/* Dynamic Island / Notch */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-5 bg-slate-900 rounded-b-xl z-30"></div>
 

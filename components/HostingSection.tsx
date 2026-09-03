@@ -105,7 +105,7 @@ const HostingSection = () => {
                   <motion.div 
                      animate={{ y: [-10, 10, -10] }}
                      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                     className="absolute top-0 -right-4 md:-right-12 bg-white p-4 rounded-xl shadow-xl border border-emerald-100 z-30 max-w-[180px]"
+                     className="absolute top-0 -right-4 md:-right-12 bg-white p-4 rounded-xl shadow-xl border border-emerald-100 z-30 max-w-[180px] hidden md:block"
                   >
                       <div className="flex items-center gap-2 mb-2 text-emerald-600">
                           <ShieldCheck className="w-5 h-5" />
@@ -117,7 +117,7 @@ const HostingSection = () => {
                   <motion.div 
                      animate={{ y: [10, -10, 10] }}
                      transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                     className="absolute -bottom-4 -left-4 md:-left-12 bg-white p-4 rounded-xl shadow-xl border border-amber-100 z-30 max-w-[180px]"
+                     className="absolute -bottom-4 -left-4 md:-left-12 bg-white p-4 rounded-xl shadow-xl border border-amber-100 z-30 max-w-[180px] hidden md:block"
                   >
                       <div className="flex items-center gap-2 mb-2 text-amber-600">
                           <Database className="w-5 h-5" />

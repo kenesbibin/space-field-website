@@ -15,9 +15,9 @@ export function IndustryTemplate({ data }: { data: IndustryData }) {
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
              <div>
-               <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-                 {data.hero.title}
-               </h1>
+                <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight break-words">
+                  {data.hero.title}
+                </h1>
                <p className="text-xl text-slate-300 mb-8 leading-relaxed">
                  {data.hero.subtitle}
                </p>
@@ -69,7 +69,7 @@ export function IndustryTemplate({ data }: { data: IndustryData }) {
            </aside>
 
            {/* MAIN ARTICLE CONTENT */}
-           <article className="lg:col-span-9 prose prose-lg prose-slate max-w-none">
+            <article className="lg:col-span-9 prose prose-base md:prose-lg prose-slate max-w-none break-words">
               {data.chapters.map((chapter) => (
                 <div key={chapter.id} id={chapter.id} className="scroll-mt-28 mb-16">
                    <h2 className="text-3xl font-bold text-slate-900 mb-6">{chapter.title}</h2>

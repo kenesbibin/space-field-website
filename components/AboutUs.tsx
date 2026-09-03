@@ -101,7 +101,9 @@ export default function AboutUs() {
                     width={1200}
                     height={900}
                     className="h-full w-full rounded-2xl object-cover"
-                    priority
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+
+                    loading="lazy"
                   />
                 </div>
 

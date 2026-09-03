@@ -1,0 +1,51 @@
+[
+    {
+        "page":  "/",
+        "performance":  61,
+        "accessibility":  85,
+        "bestPractices":  79,
+        "seo":  100
+    },
+    {
+        "page":  "/pricing",
+        "performance":  79,
+        "accessibility":  85,
+        "bestPractices":  79,
+        "seo":  100
+    },
+    {
+        "page":  "/request-a-demo",
+        "performance":  54,
+        "accessibility":  93,
+        "bestPractices":  79,
+        "seo":  100
+    },
+    {
+        "page":  "/tools/construction-cost-calculator",
+        "performance":  71,
+        "accessibility":  83,
+        "bestPractices":  100,
+        "seo":  100
+    },
+    {
+        "page":  "/lab/privacy",
+        "performance":  73,
+        "accessibility":  85,
+        "bestPractices":  75,
+        "seo":  66
+    },
+    {
+        "page":  "/lab/mobile-performance",
+        "performance":  78,
+        "accessibility":  89,
+        "bestPractices":  79,
+        "seo":  66
+    },
+    {
+        "page":  "AVERAGE",
+        "performance":  69,
+        "accessibility":  87,
+        "bestPractices":  82,
+        "seo":  89
+    }
+]

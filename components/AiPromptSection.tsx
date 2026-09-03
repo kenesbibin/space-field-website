@@ -68,7 +68,7 @@ export default function AiPromptSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto"
         >
           {AI_PLATFORMS.map((platform) => (
             <a
@@ -76,7 +76,7 @@ export default function AiPromptSection() {
               href={platform.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-6 py-3 bg-white rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              className="group flex items-center justify-center gap-3 px-6 py-3 bg-white rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 w-full"
             >
               <div className={`w-8 h-8 rounded-lg ${platform.color} flex items-center justify-center`}>
                 <platform.icon className="w-5 h-5 text-white" />

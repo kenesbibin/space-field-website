@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -12,6 +12,13 @@ import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 import ClientProviders from "@/components/ClientProviders";
 
 
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#0f172a",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://spacecapture.ai"),
@@ -266,7 +273,6 @@ export const metadata: Metadata = {
     },
   },
   other: {
-    "theme-color": "#0f172a",
     "color-scheme": "light",
     "format-detection": "telephone=no",
   },

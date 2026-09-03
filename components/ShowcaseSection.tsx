@@ -90,20 +90,22 @@ const ShowcaseSection = () => {
               </motion.div>
             </AnimatePresence>
 
-            {/* Manual Controls (Arrows) */}
-            <div className="absolute top-1/2 -translate-y-1/2 left-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <button 
+            {/* Manual Controls (Arrows) — always visible on touch, hover-only on desktop */}
+            <div className="absolute top-1/2 -translate-y-1/2 left-4 z-20 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
+              <button
                 onClick={prevSlide}
-                className="p-3 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white hover:text-slate-900 transition-all active:scale-95"
+                className="p-3 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white hover:text-slate-900 transition-all active:scale-95 min-w-[44px] min-h-[44px] flex items-center justify-center"
+                aria-label="Previous slide"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
             </div>
-            
-            <div className="absolute top-1/2 -translate-y-1/2 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <button 
+
+            <div className="absolute top-1/2 -translate-y-1/2 right-4 z-20 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
+              <button
                 onClick={nextSlide}
-                className="p-3 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white hover:text-slate-900 transition-all active:scale-95"
+                className="p-3 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white hover:text-slate-900 transition-all active:scale-95 min-w-[44px] min-h-[44px] flex items-center justify-center"
+                aria-label="Next slide"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
@@ -138,13 +140,17 @@ const ShowcaseSection = () => {
               </div>
 
               {/* Progress Indicators */}
-              <div className="flex gap-2 mt-6 pointer-events-auto">
+              <div className="flex gap-1 mt-6 pointer-events-auto">
                 {slides.map((_, idx) => (
                   <button
-                    key={idx} 
+                    key={idx}
                     onClick={() => setCurrentIndex(idx)}
-                    className={`h-1.5 rounded-full transition-all duration-500 ${idx === currentIndex ? 'w-8 bg-blue-500' : 'w-2 bg-white/40 hover:bg-white'}`}
-                  />
+                    aria-label={`Go to slide ${idx + 1}`}
+                    aria-current={idx === currentIndex ? 'true' : undefined}
+                    className={`min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full transition-all duration-500 ${idx === currentIndex ? 'bg-blue-500' : 'bg-white/40 hover:bg-white'}`}
+                  >
+                    <span className={`block rounded-full transition-all duration-500 ${idx === currentIndex ? 'w-6 h-1.5' : 'w-1.5 h-1.5'}`} />
+                  </button>
                 ))}
               </div>
             </div>
@@ -199,7 +205,7 @@ const ShowcaseSection = () => {
                 transition={{ delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <button className="mt-4 text-sm font-bold uppercase tracking-wider text-blue-400 hover:text-white transition-colors flex items-center gap-2 cursor-pointer">
+                <button className="mt-4 px-4 py-2 text-sm font-bold uppercase tracking-wider text-blue-400 hover:text-white transition-colors flex items-center gap-2 cursor-pointer min-h-[44px]">
                   Explore Solutions <span className="text-lg">→</span>
                 </button>
               </motion.div>

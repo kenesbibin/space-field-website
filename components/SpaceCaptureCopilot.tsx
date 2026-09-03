@@ -7,7 +7,11 @@ import { sendDemoRequestFromChat } from "../utils/sendDemoRequest";
 import { trackChatbotOpened } from "@/lib/analytics";
 import "@copilotkit/react-ui/styles.css";
 
-export default function SpaceCaptureCopilot() {
+interface SpaceCaptureCopilotProps {
+  defaultOpen?: boolean;
+}
+
+export default function SpaceCaptureCopilot({ defaultOpen = false }: SpaceCaptureCopilotProps) {
 
   useCopilotAction({
     name: "save_to_demo_request",
@@ -51,11 +55,22 @@ export default function SpaceCaptureCopilot() {
   }
 
   /* Improve Copilot popup styling */
-  .copilotkit-popup {
+  .copilotkit-popup,
+  .copilotkit-popup-container {
     border-radius: 1rem !important;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
     border: 1px solid #e5e7eb !important;
     font-family: 'Manrope', sans-serif !important;
+  }
+
+  @media (max-width: 640px) {
+    .copilotkit-popup,
+    .copilotkit-popup-container {
+      width: calc(100vw - 2rem) !important;
+      max-width: calc(100vw - 2rem) !important;
+      right: 1rem !important;
+      bottom: max(1rem, env(safe-area-inset-bottom)) !important;
+    }
   }
 
   .copilotkit-popup header {
@@ -84,6 +99,7 @@ export default function SpaceCaptureCopilot() {
         `
       }} />
       <CopilotPopup
+        defaultOpen={defaultOpen}
         onSetOpen={(open) => { if (open) trackChatbotOpened(); }}
         instructions={`
 You are the **SPACE CAPTURE Virtual Assistant**, a friendly, helpful, and professional AI for SPACE CAPTURE — a mobile solution for field operations in construction, maintenance, and inspection sectors.

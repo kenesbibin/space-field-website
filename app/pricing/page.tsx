@@ -82,12 +82,12 @@ export default function PricingPage() {
                 <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
 
                     {/* Enterprise Tier (Main Focus) */}
-                    <div className="rounded-3xl p-10 border bg-white border-blue-500 shadow-2xl relative order-2 lg:order-1">
+                    <div className="rounded-3xl p-6 md:p-10 border bg-white border-blue-500 shadow-2xl relative order-1 lg:order-1">
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">
                             Most Popular for Teams
                         </div>
                         <div className="mb-8 text-center lg:text-left">
-                            <h3 className="text-2xl font-bold uppercase tracking-wider mb-2 text-blue-600">Enterprise</h3>
+                            <h2 className="text-2xl font-bold uppercase tracking-wider mb-2 text-blue-600">Enterprise</h2>
                             <div className="flex items-baseline gap-1 justify-center lg:justify-start">
                                 <span className="text-5xl font-extrabold text-slate-900">Custom</span>
                             </div>
@@ -96,7 +96,7 @@ export default function PricingPage() {
                             </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-10">
+                        <ul className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-10 list-none p-0 m-0">
                             {[
                                 "Mobile App Access (iOS/Android)",
                                 "Offline Mode Sync",
@@ -113,12 +113,12 @@ export default function PricingPage() {
                                 "Dedicated 24/7 Support",
                                 "Onboarding Training"
                             ].map((feat, i) => (
-                                <li key={i} className="flex items-start gap-3 text-sm text-slate-700 list-none">
+                                <li key={i} className="flex items-start gap-3 text-sm text-slate-700">
                                     <Check className="w-5 h-5 flex-shrink-0 text-blue-500" />
                                     <span>{feat}</span>
                                 </li>
                             ))}
-                        </div>
+                        </ul>
 
                         <div className="flex flex-col sm:flex-row gap-4">
                             <a
@@ -139,9 +139,9 @@ export default function PricingPage() {
                     </div>
 
                     {/* Try For Free Card (Secondary) */}
-                    <div className="rounded-3xl p-8 border bg-slate-50 border-slate-200 lg:sticky lg:top-24 order-1 lg:order-2">
+                    <div className="rounded-3xl p-6 md:p-8 border bg-slate-50 border-slate-200 lg:sticky lg:top-24 order-2 lg:order-2">
                         <div className="mb-6">
-                            <h3 className="text-lg font-bold uppercase tracking-wider mb-2 text-slate-500">Starter</h3>
+                            <h2 className="text-lg font-bold uppercase tracking-wider mb-2 text-slate-500">Starter</h2>
                             <div className="flex items-baseline gap-1">
                                 <span className="text-4xl font-extrabold text-slate-900">$0</span>
                             </div>
@@ -159,14 +159,14 @@ export default function PricingPage() {
                                 "Web & Mobile Access"
                             ].map((feat, i) => (
                                 <li key={i} className="flex items-start gap-3 text-sm text-slate-700">
-                                    <Check className="w-5 h-5 flex-shrink-0 text-slate-400" />
+                                     <Check className="w-5 h-5 flex-shrink-0 text-slate-500" />
                                     <span>{feat}</span>
                                 </li>
                             ))}
                         </ul>
 
                         <a
-                            href="https://www.amspace.ai/login?type=Field&moduleId=8b3b6af5-07a3-44b2-b69e-342b61d71718&invite=guest"
+                            href="https://www.spaceaiapp.com/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="block w-full text-center py-3 rounded-xl font-bold bg-white border border-slate-300 text-slate-900 hover:bg-slate-50 transition-colors"

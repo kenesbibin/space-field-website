@@ -36,7 +36,7 @@ export function IndustryDetails({ data }: { data: IndustryData }) {
            </aside>
 
            {/* MAIN ARTICLE CONTENT */}
-            <article className="lg:col-span-9 prose prose-lg prose-slate max-w-none">
+            <article className="lg:col-span-9 prose prose-base md:prose-lg prose-slate max-w-none break-words">
               {data.chapters.map((chapter) => (
                 <div key={chapter.id} id={chapter.id} className="scroll-mt-28 mb-16">
                    <h2 className="text-3xl font-bold text-slate-900 mb-6">{chapter.title}</h2>
@@ -52,7 +52,7 @@ export function IndustryDetails({ data }: { data: IndustryData }) {
                             if (matchIndex !== -1) {
                                 hasLinkedInspection = true;
                                 return (
-                                    <p key={idx} className="text-slate-600 leading-relaxed">
+                                     <p key={idx} className="text-slate-600 leading-relaxed break-words">
                                         {parts.map((part, i) => {
                                             if (i === matchIndex) {
                                                 return (
@@ -69,9 +69,9 @@ export function IndustryDetails({ data }: { data: IndustryData }) {
                         }
 
                         return (
-                           <p key={idx} className="text-slate-600 leading-relaxed">
-                             {paragraph}
-                           </p>
+                            <p key={idx} className="text-slate-600 leading-relaxed break-words">
+                              {paragraph}
+                            </p>
                         );
                      })}
                    </div>

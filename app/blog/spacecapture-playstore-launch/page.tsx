@@ -41,7 +41,9 @@ export default function SpaceCapturePlayStoreLaunch() {
                         alt="SpaceCapture App launched on Google Play Store"
                         fill
                         className="object-cover"
-                        priority
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+
+                        loading="lazy"
                     />
                 </div>
 

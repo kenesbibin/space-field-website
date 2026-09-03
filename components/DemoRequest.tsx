@@ -1,33 +1,14 @@
 'use client';
 import { useState, useEffect, Suspense } from 'react';
-import { gql } from '@apollo/client';
-import { motion } from 'framer-motion';
 import { FileSignature, Shield, Zap, CheckCircle } from 'lucide-react';
-import { client } from '@/lib/apollo-client';
 import { trackDemoRequested } from '@/lib/analytics';
-
-// GraphQL Mutation
-const CREATE_DEMO_REQUEST = gql`
-  mutation CreateDemoRequest($input: CreateDemoRequestInput!) {
-    createDemoRequest(input: $input) {
-      _id
-      firstName
-      lastName
-      email
-      company
-      phoneNumber
-      companySize
-      projectDetails
-      formType
-    }
-  }
-`;
+import { submitDemoRequest } from '@/app/actions/demoRequest';
 
 import { useSearchParams } from 'next/navigation';
 
 function DemoRequestContent() {
   const searchParams = useSearchParams();
-  
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -50,15 +31,15 @@ function DemoRequestContent() {
   // Pre-fill from URL params (e.g. from Cost Calculator)
   useEffect(() => {
     if (searchParams) {
-        const updates: any = {};
-        if (searchParams.get('firstName')) updates.firstName = searchParams.get('firstName');
-        if (searchParams.get('lastName')) updates.lastName = searchParams.get('lastName');
-        if (searchParams.get('email')) updates.email = searchParams.get('email');
-        if (searchParams.get('projectDetails')) updates.projectDetails = searchParams.get('projectDetails');
-        
-        if (Object.keys(updates).length > 0) {
-            setFormData(prev => ({ ...prev, ...updates }));
-        }
+      const updates: Partial<typeof formData> = {};
+      if (searchParams.get('firstName')) updates.firstName = searchParams.get('firstName') || '';
+      if (searchParams.get('lastName')) updates.lastName = searchParams.get('lastName') || '';
+      if (searchParams.get('email')) updates.email = searchParams.get('email') || '';
+      if (searchParams.get('projectDetails')) updates.projectDetails = searchParams.get('projectDetails') || '';
+
+      if (Object.keys(updates).length > 0) {
+        setFormData((prev) => ({ ...prev, ...updates }));
+      }
     }
   }, [searchParams]);
 
@@ -118,21 +99,21 @@ function DemoRequestContent() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validateForm()) {
-      setLoading(true);
-      try {
-        const result = await client.mutate({
-          mutation: CREATE_DEMO_REQUEST,
-          variables: { input: formData },
-        });
+    if (!validateForm()) return;
+
+    setLoading(true);
+    try {
+      const result = await submitDemoRequest(formData);
+      if (result.success) {
         setData(result.data);
         trackDemoRequested('demo_request_form');
-      } catch (err) {
-        // Error handling can be added here if needed
-        console.error('Error submitting form:', err);
-      } finally {
-        setLoading(false);
+      } else {
+        console.error('Error submitting form:', result.error);
       }
+    } catch (err) {
+      console.error('Error submitting form:', err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -190,22 +171,16 @@ function DemoRequestContent() {
             </div>
           </div>
 
-          {/* Right Form - Minimal animations */}
-          <motion.div
-            className="rounded-3xl border-2 border-purple-200 bg-white p-8 shadow-xl lg:p-10"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+          {/* Right Form */}
+          <div
+            className="rounded-3xl border-2 border-purple-200 bg-white p-8 shadow-xl lg:p-10 animate-[heroFadeIn_0.5s_ease-out_both]"
+            style={{ animationDelay: '0.2s' }}
           >
             {isSuccess ? (
               <div className="py-12 text-center">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                >
-                  <CheckCircle className="mx-auto mb-6 h-20 w-20 text-green-500" />
-                </motion.div>
+                <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-green-100 animate-[popIn_0.4s_ease-out_both]">
+                  <CheckCircle className="h-12 w-12 text-green-500" />
+                </div>
                 <h2 className="mb-2 text-3xl font-bold text-gray-900">Request Received!</h2>
                 <p className="text-lg text-gray-600">
                   Our team will contact you within 24 hours to schedule your personalized demo.
@@ -236,6 +211,8 @@ function DemoRequestContent() {
                           errors.firstName ? 'border-red-500' : 'border-gray-200'
                         } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200`}
                         placeholder="John"
+                        autoComplete="given-name"
+                        inputMode="text"
                       />
                       {errors.firstName && <p className="mt-1 text-sm text-red-600">{errors.firstName}</p>}
                     </div>
@@ -254,6 +231,8 @@ function DemoRequestContent() {
                           errors.lastName ? 'border-red-500' : 'border-gray-200'
                         } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200`}
                         placeholder="Doe"
+                        autoComplete="family-name"
+                        inputMode="text"
                       />
                       {errors.lastName && <p className="mt-1 text-sm text-red-600">{errors.lastName}</p>}
                     </div>
@@ -273,6 +252,8 @@ function DemoRequestContent() {
                         errors.email ? 'border-red-500' : 'border-gray-200'
                       } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200`}
                       placeholder="john.doe@company.com"
+                      autoComplete="email"
+                      inputMode="email"
                     />
                     {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
                   </div>
@@ -291,6 +272,8 @@ function DemoRequestContent() {
                       className={`block w-full rounded-lg border-2 ${
                         errors.phoneNumber ? 'border-red-500' : 'border-gray-200'
                       } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200`}
+                      autoComplete="tel"
+                      inputMode="tel"
                     />
                     {errors.phoneNumber && <p className="mt-1 text-sm text-red-600">{errors.phoneNumber}</p>}
                   </div>
@@ -309,6 +292,8 @@ function DemoRequestContent() {
                         errors.company ? 'border-red-500' : 'border-gray-200'
                       } bg-gray-50 px-4 py-3 text-gray-900 transition-colors focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200`}
                       placeholder="Your Company"
+                      autoComplete="organization"
+                      inputMode="text"
                     />
                     {errors.company && <p className="mt-1 text-sm text-red-600">{errors.company}</p>}
                   </div>
@@ -364,7 +349,7 @@ function DemoRequestContent() {
                 </p>
               </>
             )}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
@@ -378,5 +363,3 @@ export default function DemoRequest() {
     </Suspense>
   );
 }
-
-

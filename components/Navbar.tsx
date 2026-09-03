@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
 import {
   Menu,
   X,
@@ -36,8 +35,8 @@ import {
   FileText,
 } from "lucide-react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import { div } from "framer-motion/client";
+import NextImage from "next/image";
+
 
 // --- Configuration Data ---
 const industriesItems = [
@@ -361,7 +360,8 @@ const EmailModal = ({
       <div className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl p-6 transform transition-all scale-100">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+          aria-label="Close dialog"
         >
           <X className="w-5 h-5" />
         </button>
@@ -382,7 +382,7 @@ const EmailModal = ({
             </span>
             <button
               onClick={handleCopy}
-              className="flex items-center justify-center p-2 rounded-md transition-colors hover:bg-white hover:shadow-sm text-gray-500 hover:text-purple-600 focus:outline-none"
+              className="flex items-center justify-center p-3 rounded-md transition-colors hover:bg-white hover:shadow-sm text-gray-500 hover:text-purple-600 focus:outline-none min-w-[44px] min-h-[44px]"
               title="Copy to clipboard"
             >
               {copied ? (
@@ -393,7 +393,7 @@ const EmailModal = ({
             </button>
           </div>
 
-          <div className="pt-2 text-xs text-gray-400">
+          <div className="pt-2 text-xs text-gray-500">
             {copied ? "Copied to clipboard!" : "Click the icon to copy"}
           </div>
         </div>
@@ -438,7 +438,7 @@ export default function Navbar() {
 
   // Constants
   const SIGN_IN_URL =
-    "https://www.amspace.ai/login?type=Field&moduleId=8b3b6af5-07a3-44b2-b69e-342b61d71718&invite=guest";
+    "https://www.spaceaiapp.com/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login";
   const DEMO_URL = "/request-a-demo";
   const PHONE_NUMBER_SG = "+65 86 111 900";
   const PHONE_NUMBER_USA = "+1 646 421 5740";
@@ -567,7 +567,7 @@ export default function Navbar() {
                 className="flex items-center rounded-lg px-1 py-1 transition-colors hover:bg-white/5 cursor-pointer"
                 aria-label="SpaceCapture Home"
               >
-                <Image
+                <NextImage
                   src="/images/space-capture-navbar.png"
                   alt="SpaceCapture"
                   width={106}
@@ -780,8 +780,8 @@ export default function Navbar() {
                 {/* Email Icon (Triggers Modal) */}
                 <button
                   onClick={() => setShowEmailModal(true)}
-                  className="flex items-center justify-center p-2 rounded-full hover:bg-purple-50 text-gray-600 hover:text-purple-600 transition-colors"
-                  title="Contact via Email"
+                  className="flex items-center justify-center p-3 rounded-full hover:bg-purple-50 text-gray-600 hover:text-purple-600 transition-colors min-w-[44px] min-h-[44px]"
+                  aria-label="Contact via Email"
                 >
                   <Mail className="h-5 w-5" />
                 </button>
@@ -790,28 +790,23 @@ export default function Navbar() {
                 <div className="relative" ref={phoneDropdownRef}>
                   <button
                     onClick={() => setPhoneDropdownOpen(!phoneDropdownOpen)}
-                    className="flex items-center gap-1 text-gray-700 font-medium hover:text-purple-600 transition-colors text-xs whitespace-nowrap border-l border-r border-gray-200 px-4 h-8 cursor-pointer w-[210px] justify-between bg-transparent"
+                    className="flex items-center gap-1 text-gray-700 font-medium hover:text-purple-600 transition-colors text-xs whitespace-nowrap border-l border-r border-gray-200 px-4 h-11 cursor-pointer w-[210px] justify-between bg-transparent min-h-[44px]"
+                    aria-label="Select country"
+                    aria-expanded={phoneDropdownOpen}
                   >
                     <div className="relative h-5 w-[165px] flex items-center overflow-hidden">
-                      <AnimatePresence mode="wait">
-                        <motion.div
-                          key={currentLocationIndex}
-                          initial={{ opacity: 0, y: 4 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -4 }}
-                          transition={{ duration: 0.25, ease: "easeInOut" }}
-                          className="flex items-center gap-2 absolute inset-0"
-                        >
-                          <img
-                            src={`https://flagcdn.com/w40/${activeLocation.code}.png`}
-                            alt={`${activeLocation.country} flag`}
-                            className="w-5 h-3.5 object-cover rounded-xs border border-gray-100 flex-shrink-0"
-                          />
-                          <span className="font-mono text-sm font-semibold tabular-nums tracking-tight text-gray-700">
-                            {activeLocation.phones[0].display}
-                          </span>
-                        </motion.div>
-                      </AnimatePresence>
+                      <div className="flex items-center gap-2 absolute inset-0">
+                        <NextImage
+                          src={`https://flagcdn.com/w40/${activeLocation.code}.png`}
+                          alt={`${activeLocation.country} flag`}
+                          width={40}
+                          height={27}
+                          className="w-5 h-3.5 object-cover rounded-xs border border-gray-100 flex-shrink-0"
+                        />
+                        <span className="font-mono text-sm font-semibold tabular-nums tracking-tight text-gray-700">
+                          {activeLocation.phones[0].display}
+                        </span>
+                      </div>
                     </div>
                     <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 flex-shrink-0 ${phoneDropdownOpen ? "rotate-180" : ""}`} />
                   </button>
@@ -826,14 +821,16 @@ export default function Navbar() {
                             className="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 transition-colors cursor-pointer"
                             onClick={() => setPhoneDropdownOpen(false)}
                           >
-                            <img
+                            <NextImage
                               src={`https://flagcdn.com/w40/${loc.code}.png`}
                               alt={`${loc.country} flag`}
+                              width={40}
+                              height={27}
                               className="w-5 h-3.5 object-cover rounded-xs border border-gray-100 flex-shrink-0"
                             />
                             <div className="min-w-0">
                               <p className="text-sm font-semibold text-gray-900 leading-tight truncate">{loc.phones[0].display}</p>
-                              <p className="text-[11px] text-gray-400 leading-tight mt-0.5">{loc.country}</p>
+                              <p className="text-[11px] text-gray-500 leading-tight mt-0.5">{loc.country}</p>
                             </div>
                           </a>
                         ))}
@@ -861,8 +858,10 @@ export default function Navbar() {
 
               {/* Mobile: Toggle Button */}
               <button
-                className="rounded-lg border-2 border-gray-300 bg-white p-2 text-gray-700 transition-all hover:bg-gray-50 active:scale-95 cursor-pointer lg:hidden"
+                className="rounded-lg border-2 border-gray-300 bg-white p-3 text-gray-700 transition-all hover:bg-gray-50 active:scale-95 cursor-pointer lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isMenuOpen}
               >
                 {isMenuOpen ? (
                   <X className="h-5 w-5" />
@@ -876,16 +875,40 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-30 overflow-y-auto bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-100 backdrop-blur-xl pt-24 lg:hidden">
-          <div className="container px-4 py-6">
-            <nav className="space-y-6">
-              <a
+        <>
+          {/* Backdrop / scrim */}
+          <div
+            className="fixed inset-0 z-[55] bg-black/40 backdrop-blur-sm lg:hidden"
+            onClick={() => setIsMenuOpen(false)}
+            aria-hidden="true"
+          />
+
+          {/* Drawer */}
+          <div
+            className="fixed inset-y-0 right-0 z-[60] w-full max-w-sm overflow-y-auto shadow-2xl lg:hidden"
+            style={{
+              background: 'linear-gradient(to bottom right, #eff6ff, #f5f3ff, #eef2ff)',
+            }}
+          >
+            <div className="flex items-center justify-between p-4 border-b border-gray-200">
+              <span className="text-lg font-bold text-slate-900">Menu</span>
+              <button
+                className="rounded-lg border-2 border-gray-300 bg-white p-3 text-gray-700 transition-all hover:bg-gray-50 active:scale-95 cursor-pointer min-w-[44px] min-h-[44px] flex items-center justify-center"
+                onClick={() => setIsMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            <nav className="p-4 space-y-1">
+              <Link
                 href="/"
                 className="block border-b border-gray-200 py-3 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </a>
+              </Link>
               <Link
                 href="/blog"
                 className="block border-b border-gray-200 py-3 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer"
@@ -915,50 +938,50 @@ export default function Navbar() {
                 Resources
               </Link>
 
-              {/* Products Section */}
-              <div className="border-b border-gray-200 pb-4">
-                <div className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-600">
+              {/* Products Accordion */}
+              <details className="group border-b border-gray-200">
+                <summary className="flex cursor-pointer list-none items-center justify-between py-3 text-lg font-medium text-gray-700 transition-colors hover:text-purple-600">
                   Products
-                </div>
-                <div className="space-y-4">
-                  {Object.entries(productsMenuItems).map(
-                    ([category, items]) => (
-                      <div key={category} className="pb-2">
-                        <div className="mb-2 text-sm font-semibold text-gray-700">
-                          {category}
-                        </div>
-                        <div className="space-y-2">
-                          {items.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="flex items-start gap-3 rounded-lg p-2 text-gray-700 transition-colors hover:bg-purple-100 hover:text-purple-700 cursor-pointer"
-                              onClick={() => setIsMenuOpen(false)}
-                            >
-                              <item.icon className="h-4 w-4 flex-shrink-0 mt-0.5" />
-                              <div className="flex-1">
-                                <span className="text-sm block font-medium">
-                                  {item.name}
-                                </span>
-                                <span className="text-xs text-gray-500 block mt-1">
-                                  {item.description}
-                                </span>
-                              </div>
-                            </a>
-                          ))}
-                        </div>
+                  <ChevronDown className="h-4 w-4 text-gray-500 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="pb-4 pl-2">
+                  {Object.entries(productsMenuItems).map(([category, items]) => (
+                    <div key={category} className="mb-4 last:mb-0">
+                      <div className="mb-2 text-xs font-bold uppercase tracking-wider text-gray-500">
+                        {category}
                       </div>
-                    ),
-                  )}
+                      <div className="space-y-1">
+                        {items.map((item) => (
+                          <a
+                            key={item.name}
+                            href={item.href}
+                            className="flex items-start gap-3 rounded-lg p-2 text-gray-700 transition-colors hover:bg-purple-100 hover:text-purple-700 cursor-pointer"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <item.icon className="h-4 w-4 flex-shrink-0 mt-0.5" />
+                            <div className="flex-1">
+                              <span className="text-sm block font-medium">
+                                {item.name}
+                              </span>
+                              <span className="text-xs text-gray-500 block mt-1">
+                                {item.description}
+                              </span>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              </div>
+              </details>
 
-              {/* Industries Section */}
-              <div className="border-b border-gray-200 pb-4">
-                <div className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-600">
+              {/* Industries Accordion */}
+              <details className="group border-b border-gray-200">
+                <summary className="flex cursor-pointer list-none items-center justify-between py-3 text-lg font-medium text-gray-700 transition-colors hover:text-purple-600">
                   Industries
-                </div>
-                <div className="space-y-2">
+                  <ChevronDown className="h-4 w-4 text-gray-500 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="pb-4 pl-2 space-y-1">
                   {industriesItems.map((item) => (
                     <a
                       key={item.name}
@@ -978,59 +1001,58 @@ export default function Navbar() {
                     </a>
                   ))}
                 </div>
-              </div>
+              </details>
 
-              {/* Contact Info Section */}
-              <div className="border-b border-gray-200 pb-4 space-y-3">
-                {/* Email for Mobile */}
-                <button
-                  className="flex w-full items-center gap-3 py-2 text-lg text-gray-700 transition-colors hover:text-purple-600 cursor-pointer text-left"
-                  onClick={handleMobileEmailCopy}
-                >
-                  {mobileEmailCopied ? (
-                    <Check className="h-5 w-5 text-green-600" />
-                  ) : (
-                    <Mail className="h-5 w-5" />
-                  )}
-                  <div className="flex flex-col">
-                    <span className="text-sm font-medium">Email</span>
-                    <span className="text-xs text-gray-500">
-                      {mobileEmailCopied
-                        ? "Copied to clipboard"
-                        : CONTACT_EMAIL}
-                    </span>
-                  </div>
-                </button>
-
-                {/* Location Contacts */}
-                {contactLocations.map((loc) => (
-                  <div key={loc.country} className="border-b border-gray-100 last:border-b-0 pb-3 last:pb-0 pt-2 first:pt-0">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <img
-                        src={`https://flagcdn.com/w40/${loc.code}.png`}
-                        alt={`${loc.country} flag`}
-                        className="w-4 h-3 object-cover rounded-2xs border border-gray-100 flex-shrink-0"
-                      />
-                      <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">{loc.country}</span>
+              {/* Contact Accordion */}
+              <details className="group border-b border-gray-200">
+                <summary className="flex cursor-pointer list-none items-center justify-between py-3 text-lg font-medium text-gray-700 transition-colors hover:text-purple-600">
+                  Contact
+                  <ChevronDown className="h-4 w-4 text-gray-500 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="pb-4 pl-2 space-y-3">
+                  <button
+                    className="flex w-full items-center gap-3 rounded-lg p-2 text-left text-gray-700 transition-colors hover:bg-purple-100 hover:text-purple-700 cursor-pointer"
+                    onClick={handleMobileEmailCopy}
+                  >
+                    {mobileEmailCopied ? (
+                      <Check className="h-5 w-5 text-green-600" />
+                    ) : (
+                      <Mail className="h-5 w-5" />
+                    )}
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium">Email</span>
+                      <span className="text-xs text-gray-500">
+                        {mobileEmailCopied ? "Copied to clipboard" : CONTACT_EMAIL}
+                      </span>
                     </div>
-                    <div className="pl-7 space-y-2">
-                      {/* Phones */}
-                      <div className="space-y-1">
-                        {loc.phones.map((phone, idx) => (
-                          <a
-                            key={idx}
-                            href={`tel:${phone.value}`}
-                            className="flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors"
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            <Phone className="w-3.5 h-3.5 text-blue-400" />
-                            <span>{phone.display}</span>
-                          </a>
-                        ))}
+                  </button>
+
+                  {contactLocations.map((loc) => (
+                    <div key={loc.country} className="border-b border-gray-100 last:border-b-0 pb-3 last:pb-0">
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <NextImage
+                          src={`https://flagcdn.com/w40/${loc.code}.png`}
+                          alt={`${loc.country} flag`}
+                          width={40}
+                          height={27}
+                          className="w-4 h-3 object-cover rounded-2xs border border-gray-100 flex-shrink-0"
+                        />
+                        <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">{loc.country}</span>
                       </div>
-                      
-                      {/* Email */}
-                      <div>
+                      <div className="pl-7 space-y-2">
+                        <div className="space-y-1">
+                          {loc.phones.map((phone, idx) => (
+                            <a
+                              key={idx}
+                              href={`tel:${phone.value}`}
+                              className="flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              <Phone className="w-3.5 h-3.5 text-blue-400" />
+                              <span>{phone.display}</span>
+                            </a>
+                          ))}
+                        </div>
                         <a
                           href={`mailto:${loc.email}`}
                           className="text-xs text-gray-500 hover:text-purple-600 transition-colors block"
@@ -1038,29 +1060,25 @@ export default function Navbar() {
                         >
                           {loc.email}
                         </a>
+                        {loc.address && (
+                          <p className="text-[10px] text-gray-500 leading-normal">
+                            {loc.address}
+                          </p>
+                        )}
                       </div>
-
-                      {/* Address */}
-                      {loc.address && (
-                        <p className="text-[10px] text-gray-400 leading-normal">
-                          {loc.address}
-                        </p>
-                      )}
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              </details>
 
               {/* Buttons */}
-              <div className="mt-6 pt-2">
-                <div className="flex flex-col gap-4">
-                  {renderButton(SIGN_IN_URL, "Sign In")}
-                  {renderButton(DEMO_URL, "Request a Demo", false)}
-                </div>
+              <div className="pt-4 flex flex-col gap-4">
+                {renderButton(SIGN_IN_URL, "Try for Free")}
+                {renderButton(DEMO_URL, "Request a Demo", false)}
               </div>
             </nav>
           </div>
-        </div>
+        </>
       )}
     </>
   );

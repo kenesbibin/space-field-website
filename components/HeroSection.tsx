@@ -1,16 +1,10 @@
-"use client"
-
-import React, { useState, useRef } from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Play } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import HeroVideo from './HeroVideo';
 
 export default function HeroSection() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
   return (
     <section className="relative min-h-screen w-full bg-slate-50 pt-32 pb-20 lg:pt-40 overflow-hidden flex items-center">
-
       {/* Background decoration — CSS animations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
         <div className="hero-blob hero-blob--blue absolute top-20 left-10 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20" />
@@ -20,7 +14,6 @@ export default function HeroSection() {
 
       <div className="container mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
           {/* Left Content - Text */}
           <div className="space-y-8 text-center lg:text-left hero-text-animate">
             <div className="space-y-6">
@@ -39,7 +32,7 @@ export default function HeroSection() {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start hero-fade-in-up hero-fade-in-up--delay-2">
               <a
-                href="https://www.amspace.ai/login?type=Field&moduleId=8b3b6af5-07a3-44b2-b69e-342b61d71718&invite=guest"
+                href="https://www.spaceaiapp.com/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 active:scale-95"
@@ -60,7 +53,7 @@ export default function HeroSection() {
           {/* Right Content - Hero Mobile Video Demo */}
           <div className="relative w-full flex justify-center lg:justify-end hero-slide-in">
             {/* Realistic Mobile Device Frame */}
-            <div className="relative mx-auto w-[280px] sm:w-[300px] md:w-[320px]">
+            <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[300px] md:max-w-[320px]">
               {/* Outer Frame / Bezel */}
               <div className="relative rounded-[3rem] border-[8px] border-slate-900 bg-slate-900 shadow-2xl overflow-hidden aspect-[9/19.5]">
                 {/* Speaker Notch */}
@@ -69,40 +62,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Video Content — poster + hover-to-play */}
-                <div
-                  className="absolute inset-0 bg-black"
-                  onMouseEnter={() => {
-                    setIsPlaying(true);
-                    setTimeout(() => videoRef.current?.play(), 50);
-                  }}
-                  onMouseLeave={() => {
-                    videoRef.current?.pause();
-                    setIsPlaying(false);
-                  }}
-                >
-                  {!isPlaying && (
-                    <div className="absolute inset-0 z-10 pointer-events-none">
-                      <img
-                        src="/images/hero-poster.jpg"
-                        alt="SpaceCapture app demo"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-xl">
-                          <Play className="w-7 h-7 text-blue-600 ml-1" />
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                  <video
-                    ref={videoRef}
-                    src="/videos/app-demo-video.mp4"
-                    muted
-                    loop
-                    playsInline
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                <HeroVideo />
               </div>
 
               {/* Side Buttons (Visual Details) */}
@@ -120,7 +80,7 @@ export default function HeroSection() {
               </div>
 
               {/* Floating Badge */}
-              <div className="absolute -right-12 sm:-right-20 top-1/2 -translate-y-1/2 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-xl border border-blue-100 hidden sm:flex gap-3 items-center z-20 max-w-[180px] hero-badge-animate">
+              <div className="absolute -right-4 sm:-right-8 md:-right-20 top-1/2 -translate-y-1/2 bg-white/95 backdrop-blur-md p-3 md:p-4 rounded-xl shadow-xl border border-blue-100 hidden sm:flex gap-3 items-center z-20 max-w-[150px] md:max-w-[180px] hero-badge-animate">
                 <div className="h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <CheckCircle className="text-blue-600 w-5 h-5" />
                 </div>
@@ -139,5 +99,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
-

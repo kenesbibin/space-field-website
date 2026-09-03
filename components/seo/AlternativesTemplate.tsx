@@ -1,8 +1,8 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Check, X, Sparkles } from 'lucide-react';
+import { ArrowRight, Check, X, Sparkles, ChevronsRight } from 'lucide-react';
 
 interface AlternativesTemplateProps {
   competitor: string;
@@ -31,6 +31,29 @@ export const AlternativesTemplate: React.FC<AlternativesTemplateProps> = ({
   faqs,
   related,
 }) => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [showHint, setShowHint] = useState(false);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const check = () => {
+      const hasOverflow = el.scrollWidth > el.clientWidth + 1;
+      const nearEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1;
+      setShowHint(hasOverflow && !nearEnd);
+    };
+
+    check();
+    el.addEventListener("scroll", check, { passive: true });
+    window.addEventListener("resize", check);
+
+    return () => {
+      el.removeEventListener("scroll", check);
+      window.removeEventListener("resize", check);
+    };
+  }, [comparisons]);
+
   return (
     <div className="min-h-screen bg-slate-50">
       <main>
@@ -45,7 +68,7 @@ export const AlternativesTemplate: React.FC<AlternativesTemplateProps> = ({
             <div className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-indigo-900/50 border border-indigo-700 text-indigo-300 text-xs font-bold uppercase tracking-widest mb-8">
               <Sparkles className="w-3 h-3" /> {heroBadge}
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-tight max-w-5xl mx-auto">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-tight max-w-5xl mx-auto break-words">
               The Best {competitor} Alternative for{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-blue-400">
                 AI-Powered Field Inspections
@@ -133,15 +156,16 @@ export const AlternativesTemplate: React.FC<AlternativesTemplateProps> = ({
 
         <section className="py-20 bg-white">
           <div className="container mx-auto max-w-6xl px-4">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 text-center break-words">
               {competitor} vs SpaceCapture
             </h2>
             <p className="text-slate-600 text-center mb-12 max-w-2xl mx-auto">
               Side-by-side comparison on the features that matter most to
               field teams.
             </p>
-            <div className="overflow-x-auto">
-              <table className="w-full bg-white border border-slate-200 rounded-2xl overflow-hidden">
+            <div className="relative">
+              <div ref={scrollRef} className="overflow-x-auto">
+                <table className="w-full bg-white border border-slate-200 rounded-2xl overflow-hidden">
                 <thead className="bg-slate-900 text-white">
                   <tr>
                     <th className="text-left p-4 font-semibold">Feature</th>
@@ -164,17 +188,33 @@ export const AlternativesTemplate: React.FC<AlternativesTemplateProps> = ({
                       <td className="p-4 text-slate-900 font-semibold bg-indigo-50/50">
                         {c.spacecapture}
                       </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-        </section>
 
-        <section className="py-20 bg-slate-50 border-t border-slate-200">
+          {showHint && (
+            <>
+              <div
+                className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-white/90 to-transparent"
+                aria-hidden="true"
+              />
+              <div
+                className="pointer-events-none absolute inset-y-0 right-2 flex items-center"
+                aria-hidden="true"
+              >
+                <ChevronsRight className="w-5 h-5 text-slate-400 animate-pulse" />
+              </div>
+            </>
+          )}
+        </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-slate-50 border-t border-slate-200">
           <div className="container mx-auto max-w-4xl px-4">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-12 text-center break-words">
               Frequently Asked Questions
             </h2>
             <div className="space-y-4">
@@ -183,9 +223,9 @@ export const AlternativesTemplate: React.FC<AlternativesTemplateProps> = ({
                   key={i}
                   className="group bg-white border border-slate-200 rounded-xl overflow-hidden"
                 >
-                  <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-slate-900 hover:text-indigo-600 list-none">
-                    {f.q}
-                    <ArrowRight className="w-5 h-5 text-slate-400 group-open:rotate-90 transition-transform" />
+                  <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-slate-900 hover:text-indigo-600 list-none gap-3">
+                    <span className="break-words">{f.q}</span>
+                    <ArrowRight className="w-5 h-5 text-slate-400 group-open:rotate-90 transition-transform flex-shrink-0" />
                   </summary>
                   <div className="px-5 pb-5 text-slate-600 leading-relaxed">
                     {f.a}

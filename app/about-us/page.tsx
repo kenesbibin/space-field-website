@@ -88,7 +88,7 @@ export default function AboutUsPage() {
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a
-                            href="https://www.amspace.ai/login?type=Field&moduleId=8b3b6af5-07a3-44b2-b69e-342b61d71718&invite=guest"
+                            href="https://www.spaceaiapp.com/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full bg-indigo-600 px-8 text-base font-bold text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-indigo-500 hover:scale-105"
@@ -182,6 +182,48 @@ export default function AboutUsPage() {
                 </div>
             </section>
 
+            {/* OUR TEAM */}
+            <section className="py-20 bg-white border-b border-slate-100">
+                <div className="container mx-auto px-6">
+                    <div className="text-center mb-12">
+                        <span className="text-xs font-mono font-semibold tracking-[0.2em] uppercase text-slate-500 mb-4 block">Our Team</span>
+                        <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4">The People Behind SpaceCapture</h2>
+                        <p className="text-base text-slate-500 max-w-2xl mx-auto">
+                            We are a close-knit group of engineers, field operators, and creators. We value open dialogue, hands-on craft, and technology built to last.
+                        </p>
+                    </div>
+
+                    <div className="grid sm:grid-cols-2 gap-5 max-w-6xl mx-auto mb-5">
+                        <TeamCard
+                            image="/images/about/founding-leadership.webp"
+                            badge="Founders & Direction"
+                            kicker="Vision & Execution"
+                            title="Founding Leadership"
+                            description="Guiding SpaceCapture with a focus on client trust, engineering rigor, and building field technology that delivers tangible impact."
+                            sizes="(max-width: 640px) 100vw, 50vw"
+                        />
+                        <TeamCard
+                            image="/images/about/team-1.webp"
+                            badge="Builders & Strategists"
+                            title="Engineering & Product Team"
+                            description="A collective of developers, designers, and problem solvers working shoulder-to-shoulder on complex field software."
+                            sizes="(max-width: 640px) 100vw, 50vw"
+                        />
+                    </div>
+
+                    <div className="max-w-6xl mx-auto">
+                        <TeamCard
+                            image="/images/about/team-2.webp"
+                            badge="The Wider Team"
+                            title="Global Operations"
+                            description="Field engineers, AI researchers, and support specialists across Singapore, the US, India, and the Gulf."
+                            sizes="(max-width: 1024px) 100vw, 1152px"
+                            banner
+                        />
+                    </div>
+                </div>
+            </section>
+
             {/* OFFICES */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-6">
@@ -213,6 +255,31 @@ const ContactCard = ({ icon: Icon, title, action, href, color }: any) => (
         <span className="text-sm font-semibold opacity-70 mb-1">{title}</span>
         <span className="text-lg font-bold">{action}</span>
     </a>
+);
+
+const TeamCard = ({ image, badge, kicker, title, description, sizes, banner = false, objectPosition = "center center" }: any) => (
+    <div className={`relative rounded-xl overflow-hidden group ${banner ? 'aspect-[1080/317] min-h-[220px]' : 'aspect-video'}`}>
+        <Image
+            src={image}
+            alt={title}
+            fill
+            sizes={sizes}
+            loading="lazy"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            style={{ objectPosition }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        <div className="absolute top-4 left-4">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/40 backdrop-blur-sm text-[10px] font-mono uppercase tracking-widest text-white border border-white/20">
+                {badge}
+            </span>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 p-6">
+            {kicker && <span className="text-[10px] font-mono uppercase tracking-widest text-white/70 mb-1 block">{kicker}</span>}
+            <h3 className="text-xl font-black text-white mb-2">{title}</h3>
+            <p className="text-sm text-white/70 leading-relaxed">{description}</p>
+        </div>
+    </div>
 );
 
 const OfficeCard = ({ city, type, address, coords, mapLink }: any) => (

@@ -1,6 +1,9 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-
+:root {
+  --navbar-height: 72px;
+}
 
 /* Removed @media (prefers-color-scheme: dark) block to disable dark mode */
 
@@ -77,6 +80,29 @@
 .hero-slide-in {
   animation: heroSlideIn 0.8s ease-out 0.3s forwards;
   opacity: 0;
+}
+
+/* Form entrance animations */
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* Hero floating badge */
@@ -182,4 +208,82 @@
 @keyframes heroFloat {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
+}
+
+.animate-heroFloat {
+  animation: heroFloat 4s ease-in-out infinite;
+}
+
+/* Blob animation used by decorative elements */
+.animate-blob {
+  animation: heroBlobDrift 7s ease-in-out infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+/* Extra small radius used by flag images */
+.rounded-2xs {
+  border-radius: 0.0625rem;
+}
+
+/* Hide scrollbars cleanly */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hero text wrapper animation placeholder */
+.hero-text-animate {
+  will-change: transform, opacity;
+}
+
+/* Mobile-friendly calculator tables */
+@media (max-width: 767px) {
+  .mobile-cards-table {
+    display: block !important;
+    min-width: 0 !important;
+  }
+  .mobile-cards-table thead {
+    display: none;
+  }
+  .mobile-cards-table tbody,
+  .mobile-cards-table tr,
+  .mobile-cards-table td {
+    display: block;
+    width: 100%;
+  }
+  .mobile-cards-table tbody {
+    border: none;
+  }
+  .mobile-cards-table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    background: white;
+  }
+  .mobile-cards-table td {
+    position: relative;
+    padding: 0.5rem 0;
+    text-align: right;
+    border: none;
+  }
+  .mobile-cards-table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: #64748b;
+    padding-right: 1rem;
+  }
+  .mobile-cards-table td:last-child::before {
+    display: none;
+  }
 }

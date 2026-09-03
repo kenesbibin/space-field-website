@@ -75,7 +75,7 @@ const FaqSection = ({ isFullPage = false }: FaqSectionProps) => {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 rounded-xl border border-slate-200 shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-lg"
               />
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 w-5 h-5" />
             </div>
 
             {/* Categories */}
@@ -113,7 +113,7 @@ const FaqSection = ({ isFullPage = false }: FaqSectionProps) => {
                   <span className={`font-bold text-lg ${activeQuestion === item.question ? 'text-blue-700' : 'text-slate-900'}`}>
                     {item.question}
                   </span>
-                  <ChevronDown className={`w-5 h-5 flex-shrink-0 text-slate-400 transition-transform duration-300 ${activeQuestion === item.question ? 'rotate-180 text-blue-500' : ''}`} />
+                   <ChevronDown className={`w-5 h-5 flex-shrink-0 text-slate-500 transition-transform duration-300 ${activeQuestion === item.question ? 'rotate-180 text-blue-500' : ''}`} />
                 </button>
                 
                 <AnimatePresence>
