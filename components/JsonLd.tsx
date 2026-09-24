@@ -30,8 +30,24 @@ export default function JsonLd() {
       {
         "@type": "SoftwareApplication",
         "name": "SpaceCapture",
+        "url": "https://spacecapture.ai",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Android, iOS",
+        "featureList": [
+          "AI-powered field inspection",
+          "AI search with source attribution",
+          "Knowledge graph reasoning over captured site data"
+        ],
+        "isBasedOn": {
+          "@type": "SoftwareSourceCode",
+          "name": "VeritasGraph",
+          "codeRepository": "https://github.com/bibinprathap/VeritasGraph",
+          "url": "https://bibinprathap.github.io/VeritasGraph/index.html",
+          "author": {
+            "@type": "Person",
+            "name": "Bibin Prathap"
+          }
+        },
         "offers": {
           "@type": "Offer",
           "price": "0",
