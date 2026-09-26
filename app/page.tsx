@@ -6,6 +6,7 @@ import HeroSection from '@/components/HeroSection'
 import AppDownloadSection from '@/components/AppDownloadSection'
 import Features from '@/components/Features'
 import HomePageClient from '@/components/HomePageClient'
+import IntroVoice from '@/components/IntroVoice'
 
 export const metadata: Metadata = {
   title: 'Construction Field Inspection App & Audit Software',
@@ -27,6 +28,7 @@ export default function Home() {
   return (
     <>
       <StructuredData data={schema} />
+      <IntroVoice />
       <HomePageClient
         topChildren={
           <>
