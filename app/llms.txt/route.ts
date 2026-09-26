@@ -1,6 +1,11 @@
 import { NextResponse } from 'next/server';
+import { CAREERS_ROLES } from '@/lib/careers-data';
 
 export async function GET() {
+  const careerLinks = CAREERS_ROLES.map(
+    (role) =>
+      `- ${role.title} (${role.experienceNote}, ${role.type}, ${role.location}): https://spacecapture.ai/careers/${role.slug}`
+  ).join('\n');
   const content = `# SpaceCapture
 
 > SpaceCapture is AI-powered field inspection software for construction, facilities, and infrastructure teams. Field captures (photos, video, 360° scans, LiDAR) are resolved into a structured knowledge graph, and AI answers are grounded with source attribution.
@@ -50,6 +55,7 @@ SpaceCapture is an AI-powered field inspection platform for construction, facili
 - How It Works (capture → knowledge graph → attributed answer): https://spacecapture.ai/how-it-works
 - Hallucination-Free AI (citations, grounding, Silence Protocol): https://spacecapture.ai/trust/hallucination-free
 - Careers (open roles, benefits, how to apply): https://spacecapture.ai/careers
+${careerLinks}
 - Trust Center: https://spacecapture.ai/trust
 
 ## Keywords

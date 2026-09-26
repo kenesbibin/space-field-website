@@ -4,11 +4,23 @@ import CallToAction from "@/components/CallToAction";
 import { BookOpen, ShieldCheck, Lock, AlertTriangle, Quote, Search, GitBranch } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Hallucination-Free AI | SpaceCapture Trust Center",
+  // `absolute` keeps the layout template from appending a second
+  // "| SpaceCapture" to this fully-written title.
+  title: { absolute: 'Hallucination-Free AI | SpaceCapture Trust Center' },
   description:
     "How SpaceCapture stops AI from making things up: answers grounded in your own manuals and inspection records, with a page-level citation on every claim — and an honest 'I don't know' when the answer isn't there.",
   alternates: {
     canonical: 'https://spacecapture.ai/trust/hallucination-free',
+  },
+  openGraph: {
+    type: 'article',
+    title: 'Hallucination-Free AI | SpaceCapture Trust Center',
+    description:
+      "How SpaceCapture stops AI from making things up: answers grounded in your own manuals and inspection records, with a page-level citation on every claim — and an honest 'I don't know' when the answer isn't there.",
+    url: 'https://spacecapture.ai/trust/hallucination-free',
+    siteName: 'SpaceCapture',
+    images: ['https://spacecapture.ai/images/og-image.jpg'],
+    modifiedTime: '2026-09-26',
   },
 };
 
@@ -41,15 +53,35 @@ const HALLUCINATION_FAQS = [
 
 const HALLUCINATION_FAQ_SCHEMA = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: HALLUCINATION_FAQS.map((f) => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: f.a,
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://spacecapture.ai/trust/hallucination-free#webpage",
+      url: "https://spacecapture.ai/trust/hallucination-free",
+      name: "Hallucination-Free AI | SpaceCapture Trust Center",
+      description:
+        "How SpaceCapture stops AI from making things up: answers grounded in your own manuals and inspection records, with a page-level citation on every claim — and an honest 'I don't know' when the answer isn't there.",
+      datePublished: "2025-12-24",
+      dateModified: "2026-09-26",
+      inLanguage: "en",
+      isPartOf: {
+        "@type": "WebSite",
+        name: "SpaceCapture",
+        url: "https://spacecapture.ai/",
+      },
     },
-  })),
+    {
+      "@type": "FAQPage",
+      mainEntity: HALLUCINATION_FAQS.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: f.a,
+        },
+      })),
+    },
+  ],
 };
 
 const TrustPage = () => {
@@ -69,6 +101,9 @@ const TrustPage = () => {
                  </h1>
                  <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                     The fear of AI hallucinations is real — and on a job site, a confidently wrong answer costs more than a wrong search result. That&apos;s why every SpaceCapture answer is built from your own documents: if it&apos;s not in your manual, our AI won&apos;t say it.
+                 </p>
+                 <p className="text-sm text-slate-400 mt-6">
+                    Last updated: September 2026
                  </p>
              </div>
         </section>

@@ -1,8 +1,13 @@
 import { NextResponse } from 'next/server';
 import { VERITASGRAPH_FAQS } from '@/lib/veritasgraph-faqs';
+import { CAREERS_ROLES } from '@/lib/careers-data';
 
 export async function GET() {
   const veritasgraphFaq = VERITASGRAPH_FAQS.map((f) => `Q: ${f.q}\nA: ${f.a}`).join('\n\n');
+  const careerLinks = CAREERS_ROLES.map(
+    (role) =>
+      `- ${role.title} — ${role.experienceNote}, ${role.type}, ${role.location}. Apply: https://spacecapture.ai/careers/${role.slug}`
+  ).join('\n');
 
   const content = `# SpaceCapture — LLM Index (llms-full)
 
@@ -40,6 +45,7 @@ ${veritasgraphFaq}
 - How It Works (capture → knowledge graph → attributed answer): https://spacecapture.ai/how-it-works
 - Hallucination-Free AI (citations, grounding, Silence Protocol): https://spacecapture.ai/trust/hallucination-free
 - Careers (open roles, benefits, how to apply): https://spacecapture.ai/careers
+${careerLinks}
 - Trust Center: https://spacecapture.ai/trust
 - AI Defect Detection: https://spacecapture.ai/ai-defect-detection
 - Pricing: https://spacecapture.ai/pricing

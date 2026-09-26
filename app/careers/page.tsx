@@ -17,14 +17,32 @@ import {
   FileText,
   Lightbulb,
 } from 'lucide-react';
-import { CAREERS_ROLES, CAREERS_EMAIL, CareerIcon } from '@/lib/careers-data';
+import {
+  CAREERS_ROLES,
+  CAREERS_EMAIL,
+  CAREERS_LISTING_FAQS,
+  CAREERS_POSTED,
+  CareerIcon,
+  faqPageSchema,
+} from '@/lib/careers-data';
 
 export const metadata: Metadata = {
-  title: 'Careers | Work at SpaceCapture',
+  // `absolute` prevents the layout's "%s | SpaceCapture" template from
+  // appending a second brand to this fully-written title.
+  title: { absolute: 'Careers | Work at SpaceCapture' },
   description:
     'Join SpaceCapture and build AI-powered field inspection software for construction. Remote-first roles for full-stack and AI engineers — see open positions and apply.',
   alternates: {
     canonical: 'https://spacecapture.ai/careers',
+  },
+  openGraph: {
+    type: 'website',
+    title: 'Careers | Work at SpaceCapture',
+    description:
+      'Join SpaceCapture and build AI-powered field inspection software for construction. Remote-first roles for full-stack and AI engineers — see open positions and apply.',
+    url: 'https://spacecapture.ai/careers',
+    siteName: 'SpaceCapture',
+    images: ['https://spacecapture.ai/images/og-image.jpg'],
   },
 };
 
@@ -53,24 +71,28 @@ const BENEFITS = [
 
 const JOB_POSTINGS_SCHEMA = {
   '@context': 'https://schema.org',
-  '@graph': CAREERS_ROLES.map((role) => ({
-    '@type': 'JobPosting',
-    title: role.title,
-    description: role.summary,
-    datePosted: '2026-09-25',
-    employmentType: 'FULL_TIME',
-    jobLocationType: 'TELECOMMUTE',
-    hiringOrganization: {
-      '@type': 'Organization',
-      name: 'SpaceCapture',
-      sameAs: 'https://spacecapture.ai/',
-    },
-    applicationContact: {
-      '@type': 'ContactPoint',
-      email: CAREERS_EMAIL,
-    },
-    url: `https://spacecapture.ai/careers/${role.slug}`,
-  })),
+  '@graph': [
+    ...CAREERS_ROLES.map((role) => ({
+      '@type': 'JobPosting',
+      title: role.title,
+      description: role.summary,
+      datePosted: CAREERS_POSTED.iso,
+      employmentType: 'FULL_TIME',
+      jobLocationType: 'TELECOMMUTE',
+      directApply: true,
+      hiringOrganization: {
+        '@type': 'Organization',
+        name: 'SpaceCapture',
+        sameAs: 'https://spacecapture.ai/',
+      },
+      applicationContact: {
+        '@type': 'ContactPoint',
+        email: CAREERS_EMAIL,
+      },
+      url: `https://spacecapture.ai/careers/${role.slug}`,
+    })),
+    faqPageSchema(CAREERS_LISTING_FAQS),
+  ],
 };
 
 /** Colored icon tiles for each role card, matching the reference layout. */
@@ -205,8 +227,29 @@ export default function CareersPage() {
           </div>
         </section>
 
+        {/* Hiring FAQs — visible content mirrored by FAQPage JSON-LD below */}
+        <section className="py-20 bg-slate-50">
+          <div className="container mx-auto max-w-3xl px-4">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+              Hiring FAQs
+            </h2>
+            <p className="text-slate-600 text-center mb-12 max-w-2xl mx-auto">
+              How to apply, where you&apos;ll work, and what experience we look for —
+              the questions candidates ask us most.
+            </p>
+            <div className="space-y-8">
+              {CAREERS_LISTING_FAQS.map((f) => (
+                <div key={f.q}>
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">{f.q}</h3>
+                  <p className="text-slate-600 leading-relaxed">{f.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* General application */}
-        <section className="py-16 bg-slate-50">
+        <section className="py-16 bg-slate-50 border-t border-slate-100">
           <div className="container mx-auto max-w-3xl px-4 text-center">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">
               Don&apos;t see a role that fits?

@@ -137,6 +137,92 @@ export function getCareerRole(slug: string): CareerRole | undefined {
   return CAREERS_ROLES.find((role) => role.slug === slug);
 }
 
+export interface CareerFaq {
+  q: string;
+  a: string;
+}
+
+/**
+ * Posted date shared by the visible UI, sitemap, and JobPosting JSON-LD so
+ * they can never drift apart.
+ */
+export const CAREERS_POSTED = {
+  iso: '2026-09-25',
+  label: 'September 25, 2026',
+};
+
+/**
+ * Hiring FAQ for the /careers listing. Answers are grounded strictly in what
+ * the site already states (mailto apply, Full-time, Remote, benefits, badges) —
+ * do not add process claims we can't back up.
+ */
+export const CAREERS_LISTING_FAQS: CareerFaq[] = [
+  {
+    q: 'What jobs are open at SpaceCapture right now?',
+    a: 'Three full-time, remote roles: Full-Stack Developer (Next.js / React), Senior Full-Stack Engineer, and Python Developer (AI / Computer Vision). Each job page below lists the full description, requirements, benefits, and application questions.',
+  },
+  {
+    q: 'How do I apply for a job at SpaceCapture?',
+    a: `Open the role you want and click Apply — it opens an email to ${CAREERS_EMAIL} with the position already in the subject line. Attach your resume and a short note about your work, and that is your application. There are no forms to fill out.`,
+  },
+  {
+    q: 'Is SpaceCapture hiring remotely?',
+    a: 'Yes — every open role is full-time and remote. The team works from anywhere in the world with flexible hours, so where you work is your call.',
+  },
+  {
+    q: 'What experience level does SpaceCapture hire?',
+    a: 'It depends on the role: Full-Stack Developer welcomes freshers (1+ years preferred), Python Developer asks for 3–5 years, and Senior Full-Stack Engineer expects 5–10 years. Exact requirements are listed on each job page.',
+  },
+  {
+    q: 'What benefits do SpaceCapture employees get?',
+    a: 'Remote-first culture with flexible hours, clear growth opportunities, hands-on work with real AI technology, and competitive compensation with equity options — the four benefits listed above.',
+  },
+];
+
+/** Role-specific hiring FAQ for /careers/[slug], built from the role record. */
+export function careerRoleFaqs(role: CareerRole): CareerFaq[] {
+  return [
+    {
+      q: `How do I apply for the ${role.title} role?`,
+      a: `Click "Apply for this role" on this page and it opens a pre-filled email to ${CAREERS_EMAIL} with the position in the subject line. Attach your resume and a few lines about relevant work — no forms, no account to create.`,
+    },
+    {
+      q: 'Is this role remote?',
+      a: `Yes — this is a ${role.type.toLowerCase()}, ${role.location.toLowerCase()} position at SpaceCapture. The whole team works from anywhere in the world with flexible hours.`,
+    },
+    {
+      q: 'What experience do I need for this role?',
+      a: `Experience expected for this role: ${role.experienceNote}. If you are close on paper but your work is strong, apply anyway — we would rather meet a good fit than miss one.`,
+    },
+    {
+      q: 'What comes with the role?',
+      a: `${role.offer[0]} Every full-time position also includes competitive compensation and benefits.`,
+    },
+    {
+      q: 'What if no open role fits me?',
+      a: `Send your resume to ${CAREERS_EMAIL} as a general application anyway — we are always open to connecting with people who share our vision, even when nothing posted fits today.`,
+    },
+  ];
+}
+
+/**
+ * FAQPage graph item (no @context — the page wraps it in an @graph alongside
+ * JobPosting / BreadcrumbList). Must mirror the visible FAQ section exactly.
+ */
+export function faqPageSchema(faqs: CareerFaq[]) {
+  return {
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: f.a,
+      },
+    })),
+  };
+}
+
 /** Pre-filled application subject for each role's mailto link. */
 export function careersApplyUrl(roleTitle: string): string {
   return `mailto:${CAREERS_EMAIL}?subject=${encodeURIComponent(

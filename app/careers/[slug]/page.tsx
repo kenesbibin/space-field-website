@@ -6,18 +6,22 @@ import {
   ArrowLeft,
   ArrowRight,
   Briefcase,
-  MapPin,
+  CalendarDays,
   Clock,
   CheckCircle2,
   HelpCircle,
   Mail,
+  MapPin,
 } from 'lucide-react';
 import CallToAction from '@/components/CallToAction';
 import CareersAiSummaryCard from '@/components/CareersAiSummaryCard';
 import {
   CAREERS_ROLES,
   CAREERS_EMAIL,
+  CAREERS_POSTED,
   careersApplyUrl,
+  careerRoleFaqs,
+  faqPageSchema,
   getCareerRole,
   APPLICATION_QUESTIONS,
 } from '@/lib/careers-data';
@@ -44,7 +48,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: 'Role Not Found | SpaceCapture Careers' };
   }
   return {
-    title: `${role.title} | SpaceCapture Careers`,
+    // `absolute` keeps the layout template from appending a second
+    // "| SpaceCapture" to this fully-written title.
+    title: { absolute: `${role.title} | SpaceCapture Careers` },
     description: role.summary,
     alternates: {
       canonical: `https://spacecapture.ai/careers/${role.slug}`,
@@ -55,6 +61,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: role.summary,
       url: `https://spacecapture.ai/careers/${role.slug}`,
       siteName: 'SpaceCapture',
+      images: ['https://spacecapture.ai/images/og-image.jpg'],
     },
   };
 }
@@ -67,24 +74,56 @@ export default async function CareerRolePage({ params }: PageProps) {
     notFound();
   }
 
+  const roleFaqs = careerRoleFaqs(role);
+
   const jobPostingSchema = {
     '@context': 'https://schema.org',
-    '@type': 'JobPosting',
-    title: role.title,
-    description: role.summary,
-    datePosted: '2026-09-25',
-    employmentType: 'FULL_TIME',
-    jobLocationType: 'TELECOMMUTE',
-    hiringOrganization: {
-      '@type': 'Organization',
-      name: 'SpaceCapture',
-      sameAs: 'https://spacecapture.ai/',
-    },
-    applicationContact: {
-      '@type': 'ContactPoint',
-      email: CAREERS_EMAIL,
-    },
-    url: `https://spacecapture.ai/careers/${role.slug}`,
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://spacecapture.ai/',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Careers',
+            item: 'https://spacecapture.ai/careers',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: role.title,
+            item: `https://spacecapture.ai/careers/${role.slug}`,
+          },
+        ],
+      },
+      {
+        '@type': 'JobPosting',
+        title: role.title,
+        // Mirror the visible Overview (richer than the 1-line card summary).
+        description: role.overview,
+        datePosted: CAREERS_POSTED.iso,
+        employmentType: 'FULL_TIME',
+        jobLocationType: 'TELECOMMUTE',
+        directApply: true,
+        hiringOrganization: {
+          '@type': 'Organization',
+          name: 'SpaceCapture',
+          sameAs: 'https://spacecapture.ai/',
+        },
+        applicationContact: {
+          '@type': 'ContactPoint',
+          email: CAREERS_EMAIL,
+        },
+        url: `https://spacecapture.ai/careers/${role.slug}`,
+      },
+      faqPageSchema(roleFaqs),
+    ],
   };
 
   return (
@@ -121,6 +160,10 @@ export default async function CareerRolePage({ params }: PageProps) {
                 <Clock className="w-4 h-4 text-slate-400" />
                 {role.experienceNote}
               </span>
+              <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-sm font-medium text-slate-600">
+                <CalendarDays className="w-4 h-4 text-slate-400" />
+                Posted {CAREERS_POSTED.label}
+              </span>
             </div>
             <a
               href={careersApplyUrl(role.title)}
@@ -138,7 +181,80 @@ export default async function CareerRolePage({ params }: PageProps) {
             {/* Overview */}
             <div>
               <h2 className="text-2xl font-bold text-slate-900 mb-4">Overview</h2>
+              {/* Self-contained answer block (~40 words) for AI extraction */}
+              <p className="text-slate-700 font-medium leading-relaxed mb-4">
+                {role.title} is a {role.type.toLowerCase()}, {role.location.toLowerCase()}{' '}
+                position at SpaceCapture ({role.experienceNote}). Applications go straight to{' '}
+                {CAREERS_EMAIL} — click Apply on this page and your email opens pre-filled.
+              </p>
               <p className="text-slate-600 leading-relaxed">{role.overview}</p>
+
+              {/* At-a-glance facts table — extractable structured block */}
+              <div className="mt-8">
+                <h3 className="text-lg font-bold text-slate-900 mb-3">This Role at a Glance</h3>
+                <div className="overflow-x-auto rounded-xl border border-slate-200">
+                  <table className="w-full text-sm text-left border-collapse">
+                    <tbody className="divide-y divide-slate-100">
+                      <tr className="bg-slate-50">
+                        <th
+                          scope="row"
+                          className="px-4 py-3 font-semibold text-slate-600 whitespace-nowrap w-44"
+                        >
+                          Employment type
+                        </th>
+                        <td className="px-4 py-3 text-slate-900 font-medium">{role.type}</td>
+                      </tr>
+                      <tr>
+                        <th
+                          scope="row"
+                          className="px-4 py-3 font-semibold text-slate-600 whitespace-nowrap w-44"
+                        >
+                          Location
+                        </th>
+                        <td className="px-4 py-3 text-slate-900 font-medium">{role.location}</td>
+                      </tr>
+                      <tr className="bg-slate-50">
+                        <th
+                          scope="row"
+                          className="px-4 py-3 font-semibold text-slate-600 whitespace-nowrap w-44"
+                        >
+                          Experience
+                        </th>
+                        <td className="px-4 py-3 text-slate-900 font-medium">
+                          {role.experienceNote}
+                        </td>
+                      </tr>
+                      <tr>
+                        <th
+                          scope="row"
+                          className="px-4 py-3 font-semibold text-slate-600 whitespace-nowrap w-44"
+                        >
+                          Posted
+                        </th>
+                        <td className="px-4 py-3 text-slate-900 font-medium">
+                          {CAREERS_POSTED.label}
+                        </td>
+                      </tr>
+                      <tr className="bg-slate-50">
+                        <th
+                          scope="row"
+                          className="px-4 py-3 font-semibold text-slate-600 whitespace-nowrap w-44"
+                        >
+                          Apply via
+                        </th>
+                        <td className="px-4 py-3">
+                          <a
+                            href={careersApplyUrl(role.title)}
+                            className="text-indigo-600 font-semibold hover:underline"
+                          >
+                            {CAREERS_EMAIL}
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
 
             {/* Key Responsibilities */}
@@ -193,6 +309,26 @@ export default async function CareerRolePage({ params }: PageProps) {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Hiring FAQs — visible content mirrored by FAQPage JSON-LD below */}
+        <section className="py-20 bg-white border-t border-slate-100">
+          <div className="container mx-auto max-w-3xl px-4">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+              Hiring FAQs — {role.title}
+            </h2>
+            <p className="text-slate-600 text-center mb-12">
+              How to apply, what experience we expect, and what comes with the role.
+            </p>
+            <div className="space-y-8">
+              {roleFaqs.map((f) => (
+                <div key={f.q}>
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">{f.q}</h3>
+                  <p className="text-slate-600 leading-relaxed">{f.a}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

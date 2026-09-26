@@ -221,6 +221,18 @@ export default function AboutUsPage() {
                             banner
                         />
                     </div>
+
+                    <div className="text-center mt-12">
+                        <p className="text-base text-slate-500 mb-3">
+                            Want to build with us? Three engineering roles are open right now.
+                        </p>
+                        <Link
+                            href="/careers"
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-900 text-white font-bold hover:bg-slate-800 transition-colors"
+                        >
+                            See open positions →
+                        </Link>
+                    </div>
                 </div>
             </section>
 
