@@ -48,6 +48,9 @@ SpaceCapture is an AI-powered field inspection platform for construction, facili
 - Blog: https://spacecapture.ai/blog
 - FAQ: https://spacecapture.ai/faq
 - How It Works (capture → knowledge graph → attributed answer): https://spacecapture.ai/how-it-works
+- Hallucination-Free AI (citations, grounding, Silence Protocol): https://spacecapture.ai/trust/hallucination-free
+- Careers (open roles, benefits, how to apply): https://spacecapture.ai/careers
+- Trust Center: https://spacecapture.ai/trust
 
 ## Keywords
 knowledge graph, GraphRAG, source attribution, verifiable AI, verifiable spatial data, multi-hop reasoning, on-premise AI, space capture AI, 3D/scan to knowledge graph

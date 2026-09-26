@@ -180,8 +180,10 @@ export default function Footer() {
             <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Resources & Support</h3>
             <ul className="space-y-4">
               <FooterLink href="/about-us">About Us</FooterLink>
+              <FooterLink href="/careers">Careers</FooterLink>
               <FooterLink href="/customers">Customers</FooterLink>
               <FooterLink href="/trust">Trust Center</FooterLink>
+              <FooterLink href="/trust/hallucination-free">Hallucination-Free AI</FooterLink>
               <FooterLink href="/pricing">Pricing</FooterLink>
               <FooterLink href="/faq">Help & FAQ</FooterLink>
               <FooterLink href="/sample-inspection-reports">Sample Inspection Reports</FooterLink>
