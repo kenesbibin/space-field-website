@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import CallToAction from '@/components/CallToAction';
 import { Camera, Network, FileCheck, GitBranch, AlertCircle } from 'lucide-react';
+import { VERITASGRAPH_FAQS } from '@/lib/veritasgraph-faqs';
 
 export const metadata: Metadata = {
   title: 'How It Works — Capture to Knowledge Graph to Attributed Answer',
@@ -30,33 +31,10 @@ const STEPS = [
   },
 ];
 
-const FAQS = [
-  {
-    q: 'How does SpaceCapture verify AI answers?',
-    a: 'Search and AI answers on SpaceCapture are grounded by VeritasGraph, a source-attribution and knowledge-graph framework. Every answer includes citations back to the original capture — photo, inspection record, or report — plus the reasoning path the graph traversed, so you can audit any claim.',
-  },
-  {
-    q: 'What is source attribution in SpaceCapture?',
-    a: 'Source attribution links each AI-generated statement to its origin: the exact photo, form submission, or report it was derived from. VeritasGraph tracks these links through multi-hop traversal of the knowledge graph, so no answer is unattributed.',
-  },
-  {
-    q: 'How does a photo capture become a knowledge graph?',
-    a: 'At capture time, images and scans are tagged with project, asset, and location metadata. SpaceCapture extracts entities (defects, assets, severity) and resolves them into graph nodes connected by typed relationships — for example, defect → located on → asset → within → project.',
-  },
-  {
-    q: 'Can SpaceCapture run on-premise?',
-    a: 'Yes. SpaceCapture and its VeritasGraph knowledge-graph layer support on-premise and air-gapped deployment for defense and critical-infrastructure clients, alongside standard cloud hosting in US, EU, and APAC regions.',
-  },
-  {
-    q: 'What is VeritasGraph?',
-    a: 'VeritasGraph is the open-source GraphRAG and source-attribution framework SpaceCapture uses to ground AI answers in verifiable, structured data. It provides knowledge-graph reasoning, multi-hop traversal, and citation tracking for AI responses.',
-  },
-];
-
 const FAQ_PAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: FAQS.map((f) => ({
+  mainEntity: VERITASGRAPH_FAQS.map((f) => ({
     '@type': 'Question',
     name: f.q,
     acceptedAnswer: {
@@ -214,7 +192,7 @@ export default function HowItWorksPage() {
             graph.
           </p>
           <div className="space-y-6">
-            {FAQS.map((f) => (
+            {VERITASGRAPH_FAQS.map((f) => (
               <div key={f.q} className="p-6 bg-white rounded-xl border border-slate-100">
                 <h3 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
                   <AlertCircle className="w-4 h-4 text-blue-500 shrink-0" />

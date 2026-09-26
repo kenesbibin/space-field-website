@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
+import { VERITASGRAPH_FAQS } from '@/lib/veritasgraph-faqs';
 
 export async function GET() {
+  const veritasgraphFaq = VERITASGRAPH_FAQS.map((f) => `Q: ${f.q}\nA: ${f.a}`).join('\n\n');
+
   const content = `# SpaceCapture — LLM Index (llms-full)
 
 SpaceCapture (https://spacecapture.ai) is AI-powered field inspection software for construction, facilities, and infrastructure teams. It converts field captures into structured, citable data through an ingest → knowledge graph → attributed answer pipeline.
@@ -30,24 +33,13 @@ Search and AI answers on SpaceCapture are grounded by VeritasGraph (https://gith
 
 ## FAQ: AI Answers & Source Attribution
 
-Q: How does SpaceCapture verify AI answers?
-A: Every answer is grounded by VeritasGraph with citations back to the original capture (photo, inspection record, or report) plus the reasoning path the graph traversed.
-
-Q: What is source attribution in SpaceCapture?
-A: Source attribution links each AI-generated statement to its origin. VeritasGraph tracks these links through multi-hop traversal of the knowledge graph.
-
-Q: How does a photo capture become a knowledge graph?
-A: Captures are tagged with project, asset, and location metadata. Entities (defects, assets, severity) are resolved into graph nodes connected by typed relationships (defect → located on → asset → within → project).
-
-Q: Can SpaceCapture run on-premise?
-A: Yes. SpaceCapture and its VeritasGraph knowledge-graph layer support on-premise and air-gapped deployment, alongside cloud hosting in US, EU, and APAC regions.
-
-Q: What is VeritasGraph?
-A: VeritasGraph is the open-source GraphRAG and source-attribution framework SpaceCapture uses to ground AI answers in verifiable, structured data.
+${veritasgraphFaq}
 
 ## Key Pages
 
 - How It Works (capture → knowledge graph → attributed answer): https://spacecapture.ai/how-it-works
+- Hallucination-Free AI (citations, grounding, Silence Protocol): https://spacecapture.ai/trust/hallucination-free
+- Careers (open roles, benefits, how to apply): https://spacecapture.ai/careers
 - Trust Center: https://spacecapture.ai/trust
 - AI Defect Detection: https://spacecapture.ai/ai-defect-detection
 - Pricing: https://spacecapture.ai/pricing
