@@ -10,6 +10,7 @@ import {
   Activity
 } from 'lucide-react';
 import { LabCard } from '@/components/lab/TestControls';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -163,11 +164,68 @@ export default function TrustCenterPage() {
 
       {/* SECURITY FAQ */}
       <section className="py-20 container mx-auto px-6 max-w-4xl">
-         <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Security FAQ</h2>
+         <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">Security FAQ</h2>
+         <p className="text-slate-600 text-center mb-12">
+            Security questions, plus how VeritasGraph grounds AI answers in this platform with source attribution.
+         </p>
          <div className="space-y-6">
             <SecurityFaq question="Who owns the data I upload?" answer="You typically retain full ownership of all data, photos, and models uploaded to the platform. SpaceCapture claims no IP rights over your project data." />
             <SecurityFaq question="Do you perform penetration testing?" answer="Yes, we engage third-party security firms to perform penetration testing twice annually on both our web platform and mobile API." />
             <SecurityFaq question="How are backups handled?" answer="Full system backups are performed daily with point-in-time recovery enabled. Backups are encrypted and stored in a separate geographic region for disaster recovery." />
+            <SecurityFaq question="How does VeritasGraph verify AI answers?" answer="Every search result and AI answer is grounded by VeritasGraph, an open-source GraphRAG framework. Each response includes a citation back to the exact capture it came from plus the reasoning path used, so you can audit the claim instead of taking it on trust." />
+            <SecurityFaq question="What happens to my data in the knowledge graph?" answer="Your data stays yours. Captures resolve into graph entities you own; VeritasGraph reads those links only to attribute answers and never trains public models on your project data. On-premise deployment keeps the whole graph inside your infrastructure." />
+         </div>
+      </section>
+
+      {/* VERITASGRAPH ATTRIBUTION */}
+      <section className="py-16 container mx-auto px-6 max-w-4xl">
+         <div className="grid sm:grid-cols-2 gap-4">
+            <div className="p-6 bg-white rounded-xl border border-slate-100">
+               <h3 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-blue-500" />
+                  Powered by VeritasGraph
+               </h3>
+               <p className="text-slate-600 text-sm leading-relaxed">
+                  AI answers and search on SpaceCapture are grounded by{' '}
+                  <a
+                     href="https://github.com/bibinprathap/VeritasGraph"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="text-blue-600 font-semibold hover:underline"
+                  >
+                     the VeritasGraph open-source GraphRAG framework
+                  </a>
+                  , providing source attribution and a verifiable reasoning path for every claim. See the full{' '}
+                  <Link href="/how-it-works" className="text-blue-600 font-semibold hover:underline">
+                     capture-to-attributed-answer pipeline
+                  </Link>{' '}
+                  or read the{' '}
+                  <a
+                     href="https://bibinprathap.github.io/VeritasGraph/index.html"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="text-blue-600 font-semibold hover:underline"
+                  >
+                     VeritasGraph documentation
+                  </a>
+                  .
+               </p>
+            </div>
+            <Link
+               href="/trust/hallucination-free"
+               className="p-6 bg-white rounded-xl border border-slate-100 hover:border-blue-300 hover:shadow-md transition-all group"
+            >
+               <h3 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                  <AlertCircle className="w-4 h-4 text-green-600" />
+                  Hallucination-Free AI
+               </h3>
+               <p className="text-slate-600 text-sm leading-relaxed">
+                  We don&apos;t guess — we cite. See how the Citation Engine links every AI answer back to a specific page in your own manuals, and stays silent when the answer isn&apos;t there.
+               </p>
+               <span className="mt-3 inline-block text-sm font-semibold text-blue-600 group-hover:underline">
+                  How SpaceCapture prevents AI hallucinations →
+               </span>
+            </Link>
          </div>
       </section>
 

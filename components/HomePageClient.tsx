@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 const AiDetectionApiSection = dynamic(() => import('@/components/AiDetectionApiSection'));
 const AiPromptSection = dynamic(() => import('@/components/AiPromptSection'));
 const CallToActionSection = dynamic(() => import('@/components/CallToAction'));
+const VeritasGraphSection = dynamic(() => import('@/components/VeritasGraphSection'));
 const GuideSection = dynamic(() => import('@/components/GuideSection'));
 const ShowcaseSection = dynamic(() => import('@/components/ShowcaseSection'));
 const FaqSection = dynamic(() => import('@/components/FaqSection'));
@@ -24,6 +25,7 @@ export default function HomePageClient({ topChildren, bottomChildren }: HomePage
       <AiDetectionApiSection />
       <FaqSection />
       <CallToActionSection />
+      <VeritasGraphSection />
       <AiPromptSection />
     </main>
   );

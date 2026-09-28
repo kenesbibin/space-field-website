@@ -48,6 +48,9 @@ const FaqSection = ({ isFullPage = false }: FaqSectionProps) => {
         
         {/* HEADER */}
         <div className="text-center mb-12 space-y-4">
+          <p className="text-sm font-semibold text-slate-500 uppercase tracking-wider">
+            Powered by VeritasGraph — grounded, source-attributed answers
+          </p>
           {!isFullPage && (
              <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold tracking-wide uppercase">
                Support Center

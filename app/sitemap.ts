@@ -5,6 +5,7 @@ import { ALTERNATIVES_DATA } from "@/lib/alternatives-data";
 import { GLOSSARY_TERMS } from "@/lib/glossary-data";
 import { LOCATION_DATA } from "@/lib/location-data";
 import { INDEXED_LOCATIONS } from "@/lib/indexed-locations";
+import { CAREERS_ROLES } from "@/lib/careers-data";
 
 const BASE_URL = "https://spacecapture.ai";
 
@@ -62,6 +63,10 @@ function getDynamicRoutes(): string[] {
 
 	for (const slug of Object.keys(ALTERNATIVES_DATA)) {
 		routes.push(`/alternatives/${slug}`);
+	}
+
+	for (const role of CAREERS_ROLES) {
+		routes.push(`/careers/${role.slug}`);
 	}
 
 	for (const term of GLOSSARY_TERMS) {

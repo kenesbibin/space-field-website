@@ -62,6 +62,19 @@ export default function Footer() {
               </ul>
             </div>
 
+            {/* VeritasGraph attribution */}
+            <div className="mt-6">
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Powered by VeritasGraph</h3>
+              <p className="text-slate-400 text-xs leading-relaxed mb-3">
+                AI answers on SpaceCapture are grounded by VeritasGraph — open-source GraphRAG with source attribution — so every response links back to its capture.
+              </p>
+              <ul className="space-y-2">
+                <FooterLink href="https://github.com/bibinprathap/VeritasGraph">VeritasGraph GitHub repository</FooterLink>
+                <FooterLink href="https://bibinprathap.github.io/VeritasGraph/index.html">VeritasGraph documentation — verifiable AI with source attribution</FooterLink>
+                <FooterLink href="/how-it-works">How SpaceCapture verifies AI answers</FooterLink>
+              </ul>
+            </div>
+
             <div className="mt-6">
               <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Global Offices</h3>
               <div className="grid grid-cols-2 gap-x-6 gap-y-4">
@@ -167,8 +180,10 @@ export default function Footer() {
             <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Resources & Support</h3>
             <ul className="space-y-4">
               <FooterLink href="/about-us">About Us</FooterLink>
+              <FooterLink href="/careers">Careers</FooterLink>
               <FooterLink href="/customers">Customers</FooterLink>
               <FooterLink href="/trust">Trust Center</FooterLink>
+              <FooterLink href="/trust/hallucination-free">Hallucination-Free AI</FooterLink>
               <FooterLink href="/pricing">Pricing</FooterLink>
               <FooterLink href="/faq">Help & FAQ</FooterLink>
               <FooterLink href="/sample-inspection-reports">Sample Inspection Reports</FooterLink>
