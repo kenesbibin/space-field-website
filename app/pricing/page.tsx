@@ -166,7 +166,7 @@ export default function PricingPage() {
                         </ul>
 
                         <a
-                            href="https://www.spaceaiapp.com/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
+                            href="https://app.pmspace.ai/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="block w-full text-center py-3 rounded-xl font-bold bg-white border border-slate-300 text-slate-900 hover:bg-slate-50 transition-colors"

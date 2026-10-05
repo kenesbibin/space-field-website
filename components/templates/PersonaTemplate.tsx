@@ -4,7 +4,7 @@ import { CheckCircle2, ArrowRight, AlertCircle, Video, Sparkles } from 'lucide-r
 import CallToAction from '../CallToAction';
 
 export function PersonaTemplate({ data }: { data: PersonaData }) {
-  const SIGN_IN_URL = 'https://www.spaceaiapp.com/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login';
+  const SIGN_IN_URL = 'https://app.pmspace.ai/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login';
 
   return (
     <div className="flex flex-col gap-20 pb-0">
