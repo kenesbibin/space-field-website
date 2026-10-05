@@ -44,10 +44,10 @@ const CallToActionSection = () => {
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
-                href="https://www.spaceaiapp.com/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
+                href="https://app.pmspace.ai/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => trackCtaClicked('Try for Free', 'https://www.spaceaiapp.com/login')}
+                onClick={() => trackCtaClicked('Try for Free', 'https://app.pmspace.ai/login')}
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-slate-900 text-white text-base font-bold hover:bg-slate-800 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
                 Try for Free

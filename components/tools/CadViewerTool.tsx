@@ -86,7 +86,7 @@ export default function CadViewerTool() {
                 clearInterval(interval);
                 // Redirect
                 setTimeout(() => {
-                    window.location.href = "https://www.spaceaiapp.com/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login";
+                    window.location.href = "https://app.pmspace.ai/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login";
                 }, 500);
             }
         }, 100);

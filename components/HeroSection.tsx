@@ -1,6 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-import HeroVideo from './HeroVideo';
 
 export default function HeroSection() {
   return (
@@ -32,7 +32,7 @@ export default function HeroSection() {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start hero-fade-in-up hero-fade-in-up--delay-2">
               <a
-                href="https://www.spaceaiapp.com/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
+                href="https://app.pmspace.ai/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 active:scale-95"
@@ -61,8 +61,18 @@ export default function HeroSection() {
                   <div className="w-10 h-1 bg-slate-800 rounded-full"></div>
                 </div>
 
-                {/* Video Content — poster + hover-to-play */}
-                <HeroVideo />
+                {/* Static poster image (hover-to-play video removed) */}
+                <div className="absolute inset-0 bg-black">
+                  <Image
+                    src="/images/hero-poster.jpg"
+                    alt="SpaceCapture app demo on mobile"
+                    fill
+                    priority
+                    sizes="(max-width: 768px) 100vw, 320px"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/30" />
+                </div>
               </div>
 
               {/* Side Buttons (Visual Details) */}

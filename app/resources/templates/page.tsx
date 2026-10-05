@@ -4,7 +4,7 @@ import CallToAction from '@/components/CallToAction';
 import { ScanFace, FileText, Smartphone, Tablet, Monitor, Zap, ExternalLink, Bot, BrainCircuit, ShieldAlert, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const SIGNUP_URL = "https://www.spaceaiapp.com/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login";
+const SIGNUP_URL = "https://app.pmspace.ai/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login";
 
 export default function TemplatesPage() {
     return (
