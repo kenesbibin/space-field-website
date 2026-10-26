@@ -4,7 +4,7 @@ npm run dev
 yarn dev  
 # or
 pnpm dev 
-# or 
+# or  
 bun dev
 ``` 
 
