@@ -16,7 +16,7 @@ const SwitchingCalculator = () => {
   const annualSavings = annualCost * savingsPercent;
 
   return (
-    <div className="w-full max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
+    <div className="tool-panel tool-roi w-full max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
       <div className="grid md:grid-cols-2">
         {/* Input Section */}
         <div className="p-8 md:p-10 bg-slate-50">

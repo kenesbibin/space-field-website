@@ -1,17 +1,19 @@
 "use client";
+import ToolWorkspaceHeading from './ToolWorkspaceHeading';
 
 import React, { useState } from 'react';
 import { Plus, Trash2, Calculator, Send, AlertCircle, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
+import { printEstimate } from '@/lib/print-estimate';
 
 // Types
 interface LaborItem {
   id: string;
   jobTitle: string;
-  rate: number;
-  hours: number;
-  count: number;
+  rate: number | '';
+  hours: number | '';
+  count: number | '';
   notes?: string;
 }
 
@@ -24,8 +26,8 @@ export default function LaborCostCalculator() {
     { id: '2', jobTitle: 'Apprentice', rate: 25, hours: 40, count: 1, notes: 'General assistance' },
   ]);
   
-  const [markupPercent, setMarkupPercent] = useState<number>(20);
-  const [otherExpenses, setOtherExpenses] = useState<number>(0);
+  const [markupPercent, setMarkupPercent] = useState<number | ''>(20);
+  const [otherExpenses, setOtherExpenses] = useState<number | ''>(0);
   
   const currency = '$'; 
   const [showModal, setShowModal] = useState(false);
@@ -33,10 +35,10 @@ export default function LaborCostCalculator() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Calculated Values
-  const calculateRowTotal = (item: LaborItem) => item.rate * item.hours * item.count;
+  const calculateRowTotal = (item: LaborItem) => Number(item.rate) * Number(item.hours) * Number(item.count);
   const subTotal = items.reduce((sum, item) => sum + calculateRowTotal(item), 0);
-  const markupAmount = subTotal * (markupPercent / 100);
-  const grandTotal = subTotal + markupAmount + otherExpenses;
+  const markupAmount = subTotal * (Number(markupPercent) / 100);
+  const grandTotal = subTotal + markupAmount + Number(otherExpenses);
 
   // Actions
   const addItem = () => {
@@ -71,7 +73,17 @@ export default function LaborCostCalculator() {
   };
   
   const handlePrint = () => {
-    window.print();
+    printEstimate('SpaceCapture — Labor Cost Estimate',
+      ['Role', 'Notes', 'Count', 'Hourly Rate', 'Hours', 'Total'],
+      items.map(item => [item.jobTitle || 'Unnamed Role', item.notes || '',
+        String(Number(item.count)), `${currency}${Number(item.rate).toFixed(2)}`,
+        String(Number(item.hours)), `${currency}${calculateRowTotal(item).toFixed(2)}`])
+        .concat([
+          ['Subtotal', '', '', '', '', `${currency}${subTotal.toFixed(2)}`],
+          [`Markup / Burden (${Number(markupPercent)}%)`, '', '', '', '', `${currency}${markupAmount.toFixed(2)}`],
+          ['Other Expenses', '', '', '', '', `${currency}${Number(otherExpenses).toFixed(2)}`],
+        ]),
+      `Total Estimate: ${currency}${grandTotal.toFixed(2)}`);
   };
 
   const handleLeadSubmit = (e: React.FormEvent) => {
@@ -86,7 +98,7 @@ export default function LaborCostCalculator() {
     
 Subtotal: ${currency}${subTotal.toFixed(2)}
 Markup (${markupPercent}%): ${currency}${markupAmount.toFixed(2)}
-Other Expenses: ${currency}${otherExpenses.toFixed(2)}
+Other Expenses: ${currency}${Number(otherExpenses).toFixed(2)}
 Total Estimated: ${currency}${grandTotal.toFixed(2)}
 
 Breakdown:
@@ -110,7 +122,8 @@ Email: ${leadForm.email}
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden print:shadow-none print:border-0">
+    <div className="tool-panel tool-labor bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden print:shadow-none print:border-0">
+        <ToolWorkspaceHeading label="Crew cost planner" steps={['Build your crew', 'Add hours & rates', 'Factor in overhead']} />
         {/* Header */}
         <div className="bg-slate-900 p-6 flex flex-col md:flex-row justify-between items-center gap-4 text-white print:bg-white print:text-black print:border-b-2 print:border-black">
             <div className="flex items-center gap-3">
@@ -176,7 +189,7 @@ Email: ${leadForm.email}
                                         aria-label="Count"
                                         className="w-full bg-transparent border border-transparent hover:border-slate-300 focus:border-blue-500 rounded px-2 py-1 outline-none transition-all print:border-none"
                                         value={item.count}
-                                        onChange={(e) => updateItem(item.id, 'count', parseFloat(e.target.value) || 0)}
+                                        onChange={(e) => updateItem(item.id, 'count', e.target.value === '' ? '' : Number(e.target.value))}
                                     />
                                 </td>
                                 <td className="p-2" data-label="Rate">
@@ -188,7 +201,7 @@ Email: ${leadForm.email}
                                             aria-label="Hourly rate"
                                             className="w-full bg-transparent border border-transparent hover:border-slate-300 focus:border-blue-500 rounded px-2 py-1 outline-none transition-all print:border-none"
                                             value={item.rate}
-                                            onChange={(e) => updateItem(item.id, 'rate', parseFloat(e.target.value) || 0)}
+                                            onChange={(e) => updateItem(item.id, 'rate', e.target.value === '' ? '' : Number(e.target.value))}
                                         />
                                     </div>
                                 </td>
@@ -200,7 +213,7 @@ Email: ${leadForm.email}
                                         aria-label="Hours"
                                         className="w-full bg-transparent border border-transparent hover:border-slate-300 focus:border-blue-500 rounded px-2 py-1 outline-none transition-all print:border-none"
                                         value={item.hours}
-                                        onChange={(e) => updateItem(item.id, 'hours', parseFloat(e.target.value) || 0)}
+                                        onChange={(e) => updateItem(item.id, 'hours', e.target.value === '' ? '' : Number(e.target.value))}
                                     />
                                 </td>
                                 <td className="p-2 text-right font-medium text-slate-700" data-label="Total">
@@ -234,7 +247,7 @@ Email: ${leadForm.email}
         <div className="bg-slate-50 p-6 border-t border-slate-200 print:bg-white print:border-t-2 print:border-black space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                  {/* Left: Actions */}
-                 <div className="flex gap-4 print:hidden items-start">
+                 <div className="flex flex-wrap gap-3 print:hidden items-start">
                     <button 
                         onClick={addItem}
                         className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 rounded-lg text-slate-700 font-medium hover:bg-slate-50 hover:border-blue-400 hover:text-blue-600 transition-all shadow-sm"
@@ -245,13 +258,13 @@ Email: ${leadForm.email}
                          <>
                             <button 
                                 onClick={clearAll}
-                                className="flex items-center gap-2 px-4 py-2 text-slate-500 hover:text-red-600 font-medium text-sm transition-colors"
+                                className="inline-flex items-center justify-center gap-2 rounded-lg border border-red-200 bg-white px-4 py-2 text-sm font-semibold text-red-700 shadow-sm transition-colors hover:border-red-300 hover:bg-red-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
                             >
                                 Clear All
                             </button>
                             <button 
                                 onClick={handlePrint}
-                                className="flex items-center gap-2 px-4 py-2 text-slate-500 hover:text-slate-800 font-medium text-sm transition-colors"
+                                className="inline-flex items-center justify-center gap-2 rounded-lg border border-blue-600 bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:border-blue-700 hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                             >
                                 Print
                             </button>
@@ -274,7 +287,7 @@ Email: ${leadForm.email}
                                     type="number" 
                                     className="w-full px-2 py-0.5 text-right border-b border-slate-300 focus:border-blue-500 outline-none bg-transparent"
                                     value={markupPercent}
-                                    onChange={(e) => setMarkupPercent(parseFloat(e.target.value) || 0)}
+                                    onChange={(e) => setMarkupPercent(e.target.value === '' ? '' : Number(e.target.value))}
                                 />
                                 <span className="absolute right-6 top-0.5 text-xs text-slate-400">%</span>
                             </div>
@@ -292,11 +305,11 @@ Email: ${leadForm.email}
                                     type="number" 
                                     className="w-full pl-3 px-2 py-0.5 text-right border-b border-slate-300 focus:border-blue-500 outline-none bg-transparent"
                                     value={otherExpenses}
-                                    onChange={(e) => setOtherExpenses(parseFloat(e.target.value) || 0)}
+                                    onChange={(e) => setOtherExpenses(e.target.value === '' ? '' : Number(e.target.value))}
                                 />
                             </div>
                          </div>
-                        <span className="font-semibold text-slate-700">{currency}{otherExpenses.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                        <span className="font-semibold text-slate-700">{currency}{Number(otherExpenses).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                     </div>
                     
                     <div className="pt-3 border-t border-slate-300 flex justify-between items-center">

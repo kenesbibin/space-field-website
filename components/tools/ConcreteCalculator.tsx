@@ -1,4 +1,5 @@
 "use client";
+import ToolWorkspaceHeading from './ToolWorkspaceHeading';
 
 import React, { useState } from 'react';
 import { Calculator, ArrowRight } from 'lucide-react';
@@ -69,7 +70,8 @@ export default function ConcreteCalculator() {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden max-w-4xl mx-auto">
+    <div className="tool-panel tool-concrete bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden max-w-4xl mx-auto">
+      <ToolWorkspaceHeading label="Concrete takeoff" steps={['Size your slab', 'Set thickness', 'Review volume & bags']} />
       <div className="bg-slate-900 p-6 text-white flex items-center justify-between">
          <div className="flex items-center gap-3">
             <div className="p-2 bg-gray-500 rounded-lg text-white">

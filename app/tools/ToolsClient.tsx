@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import {
     Truck,
@@ -62,7 +62,7 @@ const TOOLS = [
     },
     {
         name: "Switching Calculator",
-        description: "Utility tool for calculating electrical switching and load distributions.",
+        description: "Compare manual reporting costs with SpaceCapture and estimate potential savings.",
         href: "/tools/switching-calculator",
         icon: Zap,
         color: "yellow"
@@ -80,8 +80,16 @@ const COLORS = {
 };
 
 export default function ToolsClient() {
+    const [query, setQuery] = useState('');
+    const [category, setCategory] = useState('All tools');
+    const categories = ['All tools', 'Materials', 'Cost & ROI', 'Drawings'];
+    const getCategory = (href: string) => href.includes('cad-viewer') ? 'Drawings' :
+        /construction-cost|labor-cost|switching/.test(href) ? 'Cost & ROI' : 'Materials';
+    const visibleTools = TOOLS.filter(tool =>
+        (category === 'All tools' || getCategory(tool.href) === category) &&
+        `${tool.name} ${tool.description}`.toLowerCase().includes(query.toLowerCase().trim()));
     return (
-        <div className="min-h-screen bg-[#FDFCFB] selection:bg-purple-100 selection:text-purple-900 transition-opacity duration-700 animate-in fade-in">
+        <div className="min-h-screen bg-slate-50 selection:bg-blue-100 selection:text-blue-900">
             <main>
                 {/* Hero Section */}
                 <section className="relative pt-32 pb-24 overflow-hidden">
@@ -93,28 +101,46 @@ export default function ToolsClient() {
 
                     <div className="container mx-auto px-4 relative">
                         <div className="max-w-4xl mx-auto text-center transform transition-all duration-1000 animate-in slide-in-from-bottom-8 fade-in">
-                            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 text-purple-600 text-sm font-bold mb-8 border border-purple-100/50 animate-bounce">
+                            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-blue-700 text-sm font-semibold mb-8 border border-blue-100 shadow-sm">
                                 <Sparkles className="w-4 h-4" />
                                 100% Free Tools for Professionals
                             </span>
 
                             <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 mb-8 tracking-tight leading-[1.1]">
-                                Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Calculators</span> & Automation
+                                Less guesswork.<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Better project planning.</span>
                             </h1>
 
                             <p className="text-xl text-slate-600 mb-12 leading-relaxed max-w-2xl mx-auto font-medium">
-                                Empowering field engineers with precision tools to automate site workflows.
-                                No accounts, no fees—just pure productivity.
+                                Free construction calculators and tools for your next site decision.
+                                Estimate materials, plan labor, and compare costs in one place.
                             </p>
                         </div>
                     </div>
                 </section>
 
                 {/* Tools Grid Section */}
-                <section className="pb-32">
+                <section className="py-12 pb-24" aria-label="Explore tools">
                     <div className="container mx-auto px-4">
+                        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+                            <div>
+                                <h2 className="text-2xl font-bold text-slate-900 mb-4">Your field toolkit</h2>
+                                <div className="flex flex-wrap gap-2" aria-label="Tool categories">
+                                    {categories.map(value => <button key={value} type="button" aria-pressed={category === value}
+                                        onClick={() => setCategory(value)}
+                                        className={`px-4 py-2 rounded-full text-sm font-semibold border transition-colors ${category === value ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-200 text-slate-600 hover:border-blue-300'}`}>
+                                        {value}
+                                    </button>)}
+                                </div>
+                            </div>
+                            <div className="w-full lg:max-w-xs">
+                                <label htmlFor="tool-search" className="block text-sm font-medium text-slate-600 mb-2">Find a tool</label>
+                                <input id="tool-search" type="search" value={query} onChange={e => setQuery(e.target.value)}
+                                    placeholder="Search concrete, labor, paint…" className="w-full px-4 py-3 text-slate-900" />
+                            </div>
+                        </div>
+                        <p className="text-sm text-slate-500 mb-6" role="status">{visibleTools.length} {visibleTools.length === 1 ? 'tool' : 'tools'} available</p>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                            {TOOLS.map((tool, index) => (
+                            {visibleTools.map((tool, index) => (
                                 <div
                                     key={tool.name}
                                     className="transform transition-all duration-700 animate-in fade-in slide-in-from-bottom-8"
@@ -122,7 +148,7 @@ export default function ToolsClient() {
                                 >
                                     <Link
                                         href={tool.href}
-                                        className="group relative block h-full bg-white rounded-3xl p-8 border border-slate-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-500 overflow-hidden hover:-translate-y-2"
+                                        className="group relative block h-full bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:border-blue-300 hover:shadow-lg transition-all duration-200 overflow-hidden hover:-translate-y-1"
                                     >
                                         {/* Background hover effect */}
                                         <div className="absolute inset-0 bg-gradient-to-br from-transparent to-slate-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -132,7 +158,7 @@ export default function ToolsClient() {
                                                 <tool.icon className="w-7 h-7" />
                                             </div>
 
-                                            <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-purple-600 transition-colors duration-300">
+                                            <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                                                 {tool.name}
                                             </h3>
 
@@ -140,7 +166,7 @@ export default function ToolsClient() {
                                                 {tool.description}
                                             </p>
 
-                                            <div className="flex items-center text-sm font-bold text-slate-400 group-hover:text-purple-600 transition-all duration-300">
+                                            <div className="flex items-center text-sm font-bold text-blue-600 border-t border-slate-100 pt-5 transition-all duration-300">
                                                 Launch Tool
                                                 <div className="ml-2 group-hover:translate-x-1 transition-transform duration-300">
                                                     <ArrowRight className="w-4 h-4" />
@@ -151,6 +177,11 @@ export default function ToolsClient() {
                                 </div>
                             ))}
                         </div>
+                        {visibleTools.length === 0 && <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-12 text-center">
+                            <h3 className="text-lg font-bold text-slate-900">No matching tools</h3>
+                            <p className="text-slate-500 mt-2 mb-4">Try another search or browse all categories.</p>
+                            <button type="button" onClick={() => { setQuery(''); setCategory('All tools'); }} className="font-semibold text-blue-600">Reset filters</button>
+                        </div>}
                     </div>
                 </section>
 

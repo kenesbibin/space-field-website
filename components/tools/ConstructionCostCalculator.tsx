@@ -1,9 +1,11 @@
 "use client";
+import ToolWorkspaceHeading from './ToolWorkspaceHeading';
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Plus, Trash2, Calculator, Send, AlertCircle, CheckCircle2, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
+import { printEstimate } from '@/lib/print-estimate';
 
 // Types
 type Category = "Materials" | "Labor" | "Permits" | "Site Prep" | "Other";
@@ -12,8 +14,8 @@ interface LineItem {
   id: string;
   name: string;
   category: Category;
-  unitCost: number;
-  quantity: number;
+  unitCost: number | '';
+  quantity: number | '';
   notes?: string;
 }
 
@@ -34,7 +36,7 @@ export default function ConstructionCostCalculator() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Calculated Values
-  const calculateRowTotal = (item: LineItem) => item.unitCost * item.quantity;
+  const calculateRowTotal = (item: LineItem) => Number(item.unitCost) * Number(item.quantity);
   const grandTotal = items.reduce((sum, item) => sum + calculateRowTotal(item), 0);
 
   // Actions
@@ -70,7 +72,12 @@ export default function ConstructionCostCalculator() {
   };
   
   const handlePrint = () => {
-    window.print();
+    printEstimate('SpaceCapture — Construction Cost Estimate',
+      ['Item', 'Category', 'Notes', 'Unit Cost', 'Quantity', 'Total'],
+      items.map(item => [item.name || 'Unnamed Item', item.category, item.notes || '',
+        `${currency}${Number(item.unitCost).toFixed(2)}`, String(Number(item.quantity)),
+        `${currency}${calculateRowTotal(item).toFixed(2)}`]),
+      `Estimated Total: ${currency}${grandTotal.toFixed(2)}`);
   };
 
   const handleLeadSubmit = (e: React.FormEvent) => {
@@ -109,7 +116,8 @@ Email: ${leadForm.email}
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden print:shadow-none print:border-0">
+    <div className="tool-panel tool-construction bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden print:shadow-none print:border-0">
+        <ToolWorkspaceHeading label="Project budget builder" steps={['Add line items', 'Set rates & quantities', 'Print your estimate']} />
         {/* Header */}
         <div className="bg-slate-900 p-6 flex flex-col md:flex-row justify-between items-center gap-4 text-white print:bg-white print:text-black print:border-b-2 print:border-black">
             <div className="flex items-center gap-3">
@@ -188,7 +196,7 @@ Email: ${leadForm.email}
                                             aria-label="Unit cost"
                                             className="w-full pl-6 bg-transparent border border-transparent hover:border-slate-300 focus:border-blue-500 rounded pr-2 py-1 outline-none transition-all print:border-none"
                                             value={item.unitCost}
-                                            onChange={(e) => updateItem(item.id, 'unitCost', parseFloat(e.target.value) || 0)}
+                                            onChange={(e) => updateItem(item.id, 'unitCost', e.target.value === '' ? '' : Number(e.target.value))}
                                         />
                                     </div>
                                 </td>
@@ -200,7 +208,7 @@ Email: ${leadForm.email}
                                         aria-label="Quantity"
                                         className="w-full bg-transparent border border-transparent hover:border-slate-300 focus:border-blue-500 rounded px-2 py-1 outline-none transition-all print:border-none"
                                         value={item.quantity}
-                                        onChange={(e) => updateItem(item.id, 'quantity', parseFloat(e.target.value) || 0)}
+                                        onChange={(e) => updateItem(item.id, 'quantity', e.target.value === '' ? '' : Number(e.target.value))}
                                     />
                                 </td>
                                 <td className="p-2 text-right font-medium text-slate-700" data-label="Total">
@@ -232,7 +240,7 @@ Email: ${leadForm.email}
 
         {/* Footer / Controls */}
         <div className="bg-slate-50 p-6 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-slate-200 print:bg-white print:border-t-2 print:border-black">
-            <div className="flex gap-4 print:hidden">
+            <div className="flex flex-wrap gap-3 print:hidden">
                 <button 
                     onClick={addItem}
                     className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 rounded-lg text-slate-700 font-medium hover:bg-slate-50 hover:border-blue-400 hover:text-blue-600 transition-all shadow-sm"
@@ -243,13 +251,13 @@ Email: ${leadForm.email}
                      <>
                         <button 
                             onClick={clearAll}
-                            className="flex items-center gap-2 px-4 py-2 text-slate-500 hover:text-red-600 font-medium text-sm transition-colors"
+                            className="inline-flex items-center justify-center gap-2 rounded-lg border border-red-200 bg-white px-4 py-2 text-sm font-semibold text-red-700 shadow-sm transition-colors hover:border-red-300 hover:bg-red-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
                         >
                             Clear All
                         </button>
                         <button 
                             onClick={handlePrint}
-                            className="flex items-center gap-2 px-4 py-2 text-slate-500 hover:text-slate-800 font-medium text-sm transition-colors"
+                            className="inline-flex items-center justify-center gap-2 rounded-lg border border-blue-600 bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:border-blue-700 hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                         >
                             Print
                         </button>

@@ -1,4 +1,5 @@
 "use client";
+import ToolWorkspaceHeading from './ToolWorkspaceHeading';
 
 import React, { useState, useCallback } from 'react';
 import { UploadCloud, File, AlertCircle, CheckCircle, ArrowRight, Loader2 } from 'lucide-react';
@@ -93,7 +94,8 @@ export default function CadViewerTool() {
     };
 
     return (
-        <div className="w-full max-w-3xl mx-auto">
+        <div className="tool-panel tool-cad w-full max-w-3xl mx-auto">
+            <ToolWorkspaceHeading label="Drawing workspace" steps={['Select DWG or DXF', 'Check your file', 'Continue to viewer']} />
             <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
                 {/* Header */}
                 <div className="bg-slate-900 p-6 text-white text-center">

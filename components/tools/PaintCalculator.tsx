@@ -1,4 +1,5 @@
 "use client";
+import ToolWorkspaceHeading from './ToolWorkspaceHeading';
 
 import React, { useState } from 'react';
 import { PaintBucket, ArrowRight, RefreshCw } from 'lucide-react';
@@ -56,7 +57,8 @@ export default function PaintCalculator() {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden max-w-4xl mx-auto">
+    <div className="tool-panel tool-paint bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden max-w-4xl mx-auto">
+      <ToolWorkspaceHeading label="Room finish studio" steps={['Measure the room', 'Subtract openings', 'Plan paint & primer']} />
       <div className="bg-slate-900 p-6 text-white flex items-center justify-between">
          <div className="flex items-center gap-3">
             <div className="p-2 bg-indigo-500 rounded-lg text-white">

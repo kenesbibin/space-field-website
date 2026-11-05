@@ -1,4 +1,5 @@
 "use client";
+import ToolWorkspaceHeading from './ToolWorkspaceHeading';
 
 import React, { useState, useEffect } from 'react';
 import { Calculator, ArrowRight, Info } from 'lucide-react';
@@ -63,7 +64,8 @@ export default function AsphaltCalculator() {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden max-w-4xl mx-auto">
+    <div className="tool-panel tool-asphalt bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden max-w-4xl mx-auto">
+      <ToolWorkspaceHeading label="Paving planner" steps={['Set dimensions', 'Adjust depth', 'Estimate tonnage']} />
       <div className="bg-slate-900 p-6 text-white flex items-center justify-between">
          <div className="flex items-center gap-3">
             <div className="p-2 bg-amber-500 rounded-lg text-slate-900">
