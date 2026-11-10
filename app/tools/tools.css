@@ -67,6 +67,29 @@
 .tool-roi > .grid > div:first-child { background: #f8fafc; border-right: 1px solid #e2e8f0; }
 .tool-roi > .grid > div:last-child { background-image: radial-gradient(ellipse at bottom right, #4f46e544, transparent 70%); }
 
+/* Rebar: charcoal steel header over a mesh worksheet. */
+.tools-workspace .tool-rebar { --panel-accent: #9a3412; --panel-tint: #ffedd5; }
+.tools-workspace .tool-rebar > .bg-slate-900 { background: linear-gradient(120deg, #1c1917, #44403c); border-bottom: 3px solid #f97316; }
+.tool-rebar > .grid > div:first-child { background-image: linear-gradient(#cbd5e155 1px, transparent 1px), linear-gradient(90deg, #cbd5e155 1px, transparent 1px); background-size: 24px 24px; background-color: #fafaf9; border-style: dashed; }
+.tool-rebar > .grid > div:last-child { padding: 22px; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 18px; }
+
+/* Gravel: quarry stone with a sandy material panel. */
+.tools-workspace .tool-gravel { --panel-accent: #78350f; --panel-tint: #fef3c7; }
+.tools-workspace .tool-gravel > .bg-slate-900 { background: linear-gradient(120deg, #292524, #78716c); border-bottom: 3px solid #f59e0b; }
+.tool-gravel > .grid > div:first-child { background-image: radial-gradient(#a8a29e55 2px, transparent 2px); background-size: 18px 18px; background-color: #f5f5f4; border-style: dashed; }
+.tool-gravel > .grid > div:last-child { padding: 22px; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 18px; }
+
+/* Roofing: rose-tinted order panel under a shingle-dark header. */
+.tools-workspace .tool-roofing { --panel-accent: #9f1239; --panel-tint: #ffe4e6; }
+.tools-workspace .tool-roofing > .bg-slate-900 { background: linear-gradient(120deg, #18181b, #3f3f46); border-bottom: 3px solid #ef4444; }
+.tool-roofing > .grid > div:first-child { background: linear-gradient(#fff1f2 0%, #f8fafc 100%); border-color: #fecdd3; }
+.tool-roofing > .grid > div:last-child { padding: 22px; background: #fff1f2; border: 1px solid #fecdd3; border-radius: 18px; }
+
+/* Converter: cool technical panel with a cyan result card. */
+.tools-workspace .tool-converter { --panel-accent: #0e7490; --panel-tint: #cffafe; }
+.tools-workspace .tool-converter > .bg-slate-900 { background: linear-gradient(120deg, #0c4a6e, #155e75); border-bottom: 3px solid #06b6d4; }
+.tool-converter > .grid > div:first-child { background: #f8fafc; border-style: dashed; }
+
 @media (max-width: 767px) {
   .tool-workspace-heading { padding: 18px; }
   .tool-workspace-steps { flex-direction: column; gap: 10px; }

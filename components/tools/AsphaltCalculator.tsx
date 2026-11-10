@@ -119,13 +119,13 @@ export default function AsphaltCalculator() {
                     {/* DEPTH Label (Right Side - Vertical) */}
                     <g transform="translate(300, 140)">
                          <line x1="0" y1="-50" x2="0" y2="50" stroke="#d97706" strokeWidth="2" markerStart="url(#arrowhead-start)" markerEnd="url(#arrowhead-end)" />
-                         <text x="15" y="5" textAnchor="middle" transform="rotate(90 15 5)" fill="#d97706" fontSize="12" fontWeight="bold" letterSpacing="1">DEPTH</text>
+                         <text x="10" y="5" textAnchor="middle" transform="rotate(90 10 5)" fill="#d97706" fontSize="12" fontWeight="bold" letterSpacing="1">DEPTH</text>
                     </g>
 
                     {/* LENGTH Label (Bottom - Horizontal) */}
                     <g transform="translate(180, 225)">
                         <line x1="-90" y1="0" x2="90" y2="0" stroke="#d97706" strokeWidth="2" markerStart="url(#arrowhead-start)" markerEnd="url(#arrowhead-end)" />
-                        <text x="0" y="20" textAnchor="middle" fill="#d97706" fontSize="12" fontWeight="bold" letterSpacing="1">LENGTH</text>
+                        <text x="0" y="-8" textAnchor="middle" fill="#d97706" fontSize="12" fontWeight="bold" letterSpacing="1">LENGTH</text>
                     </g>
                     
                     {/* Visual Guider Lines for labels */}

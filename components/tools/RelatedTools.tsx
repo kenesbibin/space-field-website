@@ -8,7 +8,11 @@ import {
     Users,
     Palette,
     Zap,
-    ArrowRight
+    ArrowRight,
+    ArrowLeftRight,
+    BrickWall,
+    Home,
+    Mountain
 } from 'lucide-react';
 
 const ALL_TOOLS = [
@@ -53,6 +57,30 @@ const ALL_TOOLS = [
         href: "/tools/switching-calculator",
         icon: Zap,
         color: "yellow"
+    },
+    {
+        name: "Rebar Calculator",
+        href: "/tools/rebar-calculator",
+        icon: BrickWall,
+        color: "orange"
+    },
+    {
+        name: "Gravel Calculator",
+        href: "/tools/gravel-calculator",
+        icon: Mountain,
+        color: "stone"
+    },
+    {
+        name: "Roofing Shingle Calculator",
+        href: "/tools/roofing-shingle-calculator",
+        icon: Home,
+        color: "red"
+    },
+    {
+        name: "Construction Unit Converter",
+        href: "/tools/unit-converter",
+        icon: ArrowLeftRight,
+        color: "cyan"
     }
 ];
 
@@ -64,6 +92,10 @@ const COLORS = {
     purple: "bg-purple-50 text-purple-600 group-hover:bg-purple-600",
     rose: "bg-rose-50 text-rose-600 group-hover:bg-rose-600",
     yellow: "bg-yellow-50 text-yellow-600 group-hover:bg-yellow-600",
+    orange: "bg-orange-50 text-orange-600 group-hover:bg-orange-600",
+    stone: "bg-stone-50 text-stone-600 group-hover:bg-stone-600",
+    red: "bg-red-50 text-red-600 group-hover:bg-red-600",
+    cyan: "bg-cyan-50 text-cyan-600 group-hover:bg-cyan-600",
 };
 
 interface RelatedToolsProps {

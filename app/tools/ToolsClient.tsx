@@ -11,6 +11,10 @@ import {
     Palette,
     Zap,
     ArrowRight,
+    ArrowLeftRight,
+    BrickWall,
+    Home,
+    Mountain,
     Sparkles,
     Shield,
     Globe
@@ -66,6 +70,34 @@ const TOOLS = [
         href: "/tools/switching-calculator",
         icon: Zap,
         color: "yellow"
+    },
+    {
+        name: "Rebar Calculator",
+        description: "Calculate rebar count, length, and weight for slabs from bar size and spacing.",
+        href: "/tools/rebar-calculator",
+        icon: BrickWall,
+        color: "orange"
+    },
+    {
+        name: "Gravel Calculator",
+        description: "Estimate cubic yards and tons of gravel, sand, topsoil, or mulch for any area.",
+        href: "/tools/gravel-calculator",
+        icon: Mountain,
+        color: "stone"
+    },
+    {
+        name: "Roofing Shingle Calculator",
+        description: "Turn roof pitch and footprint into squares, shingle bundles, and cost.",
+        href: "/tools/roofing-shingle-calculator",
+        icon: Home,
+        color: "red"
+    },
+    {
+        name: "Construction Unit Converter",
+        description: "Convert length, area, volume, and weight between jobsite units instantly.",
+        href: "/tools/unit-converter",
+        icon: ArrowLeftRight,
+        color: "cyan"
     }
 ];
 
@@ -77,14 +109,19 @@ const COLORS = {
     purple: "from-purple-500/10 to-purple-600/5 text-purple-600 border-purple-200/50",
     rose: "from-rose-500/10 to-rose-600/5 text-rose-600 border-rose-200/50",
     yellow: "from-yellow-500/10 to-yellow-600/5 text-yellow-600 border-yellow-200/50",
+    orange: "from-orange-500/10 to-orange-600/5 text-orange-600 border-orange-200/50",
+    stone: "from-stone-500/10 to-stone-600/5 text-stone-600 border-stone-200/50",
+    red: "from-red-500/10 to-red-600/5 text-red-600 border-red-200/50",
+    cyan: "from-cyan-500/10 to-cyan-600/5 text-cyan-600 border-cyan-200/50",
 };
 
 export default function ToolsClient() {
     const [query, setQuery] = useState('');
     const [category, setCategory] = useState('All tools');
-    const categories = ['All tools', 'Materials', 'Cost & ROI', 'Drawings'];
-    const getCategory = (href: string) => href.includes('cad-viewer') ? 'Drawings' :
-        /construction-cost|labor-cost|switching/.test(href) ? 'Cost & ROI' : 'Materials';
+    const categories = ['All tools', 'Materials', 'Cost & ROI', 'Drawings', 'Field & Conversion'];
+    const getCategory = (href: string) => href.includes('unit-converter') ? 'Field & Conversion' :
+        href.includes('cad-viewer') ? 'Drawings' :
+        /construction-cost|labor-cost|switching|rework/.test(href) ? 'Cost & ROI' : 'Materials';
     const visibleTools = TOOLS.filter(tool =>
         (category === 'All tools' || getCategory(tool.href) === category) &&
         `${tool.name} ${tool.description}`.toLowerCase().includes(query.toLowerCase().trim()));
