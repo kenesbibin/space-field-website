@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 export default function HeroSection() {
@@ -61,33 +60,27 @@ export default function HeroSection() {
                   <div className="w-10 h-1 bg-slate-800 rounded-full"></div>
                 </div>
 
-                {/* Static poster image (hover-to-play video removed) */}
-                <div className="absolute inset-0 bg-black">
-                  <Image
-                    src="/images/hero-poster.jpg"
-                    alt="SpaceCapture app demo on mobile"
-                    fill
-                    priority
-                    sizes="(max-width: 768px) 100vw, 320px"
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/30" />
-                </div>
+                {/* App demo video, cropped to fill the phone screen */}
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  poster="/images/hero-poster.jpg"
+                  aria-label="SpaceCapture app demo on mobile"
+                  className="absolute inset-0 h-full w-full object-cover"
+                >
+                  <source src="/videos/hero-phone.mp4" type="video/mp4" />
+                </video>
+                {/* Keeps the notch blended without dimming the video */}
+                <div className="absolute inset-x-0 top-0 h-14 bg-gradient-to-b from-black/30 to-transparent pointer-events-none" />
               </div>
 
               {/* Side Buttons (Visual Details) */}
               <div className="absolute -left-[10px] top-24 w-[2px] h-12 bg-slate-800 rounded-l-md"></div>
               <div className="absolute -left-[10px] top-40 w-[2px] h-20 bg-slate-800 rounded-l-md"></div>
               <div className="absolute -right-[10px] top-32 w-[2px] h-24 bg-slate-800 rounded-r-md"></div>
-
-              {/* Status Bar Over Video */}
-              <div className="absolute top-0 left-0 right-0 p-6 flex justify-between items-center z-10 text-white/90">
-                <span className="text-[10px] font-bold">9:41</span>
-                <div className="flex gap-1 items-center">
-                  <div className="w-3 h-3 rounded-full border border-white/40"></div>
-                  <div className="w-3 h-3 rounded-full border border-white/40"></div>
-                </div>
-              </div>
 
               {/* Floating Badge */}
               <div className="absolute -right-4 sm:-right-8 md:-right-20 top-1/2 -translate-y-1/2 bg-white/95 backdrop-blur-md p-3 md:p-4 rounded-xl shadow-xl border border-blue-100 hidden sm:flex gap-3 items-center z-20 max-w-[150px] md:max-w-[180px] hero-badge-animate">
