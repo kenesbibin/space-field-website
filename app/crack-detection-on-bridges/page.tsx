@@ -120,26 +120,6 @@ export default function Page() {
         </ul>
       </div>
 
-      {/* Bullet Summary */}
-      <div className="mb-12">
-        <h3 className="text-2xl font-bold text-slate-900 mb-4">
-          Key Benefits
-        </h3>
-        <ul className="grid md:grid-cols-2 gap-4">
-          {[
-            'AI-identified cracks, corrosion, and spalling from photos',
-            'Location and severity tagging on every finding',
-            'Fully offline capture for remote infrastructure',
-            'Instant PDF reports with NBI-compliant templates',
-          ].map((item, i) => (
-            <li key={i} className="flex items-start gap-3">
-              <div className="mt-1 h-2 w-2 rounded-full bg-indigo-500" />
-              <span className="text-slate-700 font-medium">{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
       <h2>How AI Crack Detection on Bridges Works</h2>
       <ol className="list-decimal pl-6 space-y-4 mb-12 marker:text-indigo-600 marker:font-bold">
         <li className="pl-2">
