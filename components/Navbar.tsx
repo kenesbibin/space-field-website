@@ -162,6 +162,12 @@ const productsMenuItems: {
       description: "Manage team members and permissions.",
     },
     {
+      name: "Crack Detection on Bridges",
+      href: "/crack-detection-on-bridges",
+      icon: ScanSearch,
+      description: "AI-powered structural crack analysis.",
+    },
+    {
       name: "AI Tuning Station",
       href: "/lab/ai-tuning",
       icon: BrainIcon,
