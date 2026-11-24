@@ -1,20 +1,21 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { SeoLandingPage } from '@/components/seo/SeoLandingPage';
-import { ComparisonTable } from '@/components/seo/ComparisonTable';
+import Link from 'next/link';
+import { PmspaceLandingPage } from '@/components/seo/PmspaceLandingPage';
 import { FaqSection } from '@/components/seo/FaqSection';
 import StructuredData from '@/components/seo/StructuredData';
 import { getServiceSchema } from '@/components/seo/ServiceSchema';
-import { getFaqSchema } from '@/components/seo/FaqSchema';
 import {
   buildBreadcrumbsFromPath,
   getBreadcrumbListSchema,
 } from '@/components/seo/BreadcrumbListSchema';
 
 export const metadata: Metadata = {
-  title: 'Crack Detection on Bridges | AI Structural Inspection',
+  title: {
+    absolute: 'Crack Detection on Bridges | pmspace.ai Inspection Prototype',
+  },
   description:
-    'AI-powered crack detection for bridges. Capture photos in the field, let computer vision identify and tag crack severity, and generate inspection reports instantly.',
+    'Mark crack regions in source photographs, describe the visible evidence, and move every finding through human review with the pmspace.ai bridge inspection prototype.',
   keywords: [
     'crack detection on bridges',
     'bridge crack detection AI',
@@ -27,34 +28,33 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'How does AI crack detection on bridges work?',
+    question: 'Is this a production-ready inspection platform?',
     answer:
-      "SpaceCapture's AI analyzes photos of bridge components to automatically identify cracks, corrosion, spalling, and other structural defects. It tags each finding with location data, severity levels, and historical comparison for trend analysis.",
+      'The current application is a working single-company proof of concept. It demonstrates the core inspection workflow and selected import capabilities. Production deployment requires further operational, security, and workflow validation.',
   },
   {
-    question: 'What bridge elements can be inspected for cracks?',
+    question: 'Does it automatically detect every crack?',
     answer:
-      'Inspection teams capture photos of decks, superstructures, substructures, and culverts. The AI reviews the images for surface and structural cracking while offline checklists keep the workflow moving in remote locations.',
+      'No. The core workflow is manual-first. Experimental crack proposals depend on configured models, suitable imagery, and licensing conditions. They are not a guarantee of defect detection or completeness.',
   },
   {
-    question: 'Does crack detection work offline on remote sites?',
+    question: 'Can it measure crack widths accurately?',
     answer:
-      'Yes. SpaceCapture works fully offline. You can capture photos and complete inspection checklists without internet connectivity, and all data automatically syncs to the cloud once you regain connection.',
+      'Validated crack-width measurement is not a current product claim. Meaningful measurement requires suitable close-range imagery, calibration, and independent validation.',
   },
   {
-    question: 'Can crack findings be exported into inspection reports?',
+    question: 'Can I export reports?',
     answer:
-      'Yes. Findings feed directly into instant PDF reports with customizable templates that match National Bridge Inventory (NBI) coding standards, so stakeholders receive consistent documentation from the field.',
+      'Yes. Accepted observations can be included in an issued HTML report snapshot. The report can be downloaded or printed to PDF through the browser.',
   },
 ];
 
-const faqSchema = getFaqSchema(faqs);
 const serviceSchema = getServiceSchema({
   name: 'Crack Detection on Bridges',
   description:
-    'AI-powered crack detection for bridges. Capture photos in the field, let computer vision identify and tag crack severity, and generate inspection reports instantly.',
+    'Mark crack regions in source photographs, describe the visible evidence, and move every finding through human review with the pmspace.ai bridge inspection prototype.',
   url: 'https://spacecapture.ai/crack-detection-on-bridges',
-  serviceType: 'AI Crack Detection Software',
+  serviceType: 'Bridge Crack Documentation Workflow',
   areaServed: 'Worldwide',
 });
 const breadcrumbSchema = getBreadcrumbListSchema(
@@ -63,122 +63,214 @@ const breadcrumbSchema = getBreadcrumbListSchema(
 
 export default function Page() {
   return (
-    <SeoLandingPage
-      title="Crack Detection on Bridges with AI-Powered Inspection"
-      subtitle="Replace manual surveys with computer vision. SpaceCapture analyzes field photos to identify, tag, and track structural cracks — then generates inspection reports straight from the site."
-      tryForFreeHref="https://pointcloud.aibqs.com/"
+    <PmspaceLandingPage
+      eyebrow="Connected evidence for crack findings"
+      title="Bring crack findings into focus."
+      subtitle="Mark crack regions in source photographs, describe what is visible, and move every observation through human review before it reaches a report. pmspace.ai keeps the image evidence connected to the finding."
+      featureStrip="Photo observations · Source imagery · Human review · Report snapshots"
+      statusLabel="Working prototype — available for demonstration and pilot discussion."
     >
-      {/* Definition Block - AEO Optimized */}
-      <div className="mb-8 rounded-xl bg-indigo-50 p-6 border border-indigo-100">
-        <h2 className="text-xl font-bold text-indigo-900 mb-2">
-          What is AI Crack Detection on Bridges?
-        </h2>
-        <p className="text-indigo-800 font-medium leading-relaxed">
-          AI crack detection on bridges uses computer vision to analyze site
-          photos and automatically identify cracking in concrete and structural
-          elements. SpaceCapture turns a phone or tablet camera into a first-pass
-          crack survey tool — tagging every finding with location, severity, and
-          history so inspectors verify issues instead of hunting for them.
+      {/* In-page navigation */}
+      <nav className="not-prose mb-10 flex flex-wrap items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-slate-50 p-3">
+        {[
+          { label: 'Overview', href: '#overview' },
+          { label: 'Workflow', href: '#how-it-works' },
+          { label: 'Features', href: '#features' },
+          { label: 'Innovation', href: '#innovation' },
+          { label: 'FAQs', href: '#faqs' },
+        ].map((item) => (
+          <a
+            key={item.href}
+            href={item.href}
+            className="rounded-full px-4 py-2 text-sm font-semibold text-slate-600 hover:bg-white hover:text-indigo-600 hover:shadow-sm transition-colors"
+          >
+            {item.label}
+          </a>
+        ))}
+        <Link
+          href="/request-a-demo"
+          className="rounded-full bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500 transition-colors"
+        >
+          Request a Demo
+        </Link>
+      </nav>
+
+      {/* The Challenge */}
+      <div className="mb-12">
+        <h2>Your crack evidence should not live in separate silos.</h2>
+        <p>
+          Photographs, spreadsheets, and inspection reports often capture
+          different parts of the same finding. Moving between them makes it
+          harder to locate the source image, understand the surrounding
+          structure, and track which observations have been reviewed.
+        </p>
+        <p>
+          pmspace.ai connects the image evidence with a clear observation and
+          review process, keeping every crack finding traceable from photograph
+          to issued report.
         </p>
       </div>
 
-      {/* Pain Points Section */}
+      {/* Platform Overview */}
       <div className="mb-12">
-        <h3 className="text-2xl font-bold text-slate-900 mb-4">
-          Common Challenges in Bridge Crack Surveys
-        </h3>
-        <ul className="grid md:grid-cols-3 gap-6">
-          <li className="p-4 bg-red-50 rounded-lg border border-red-100">
-            <div className="font-semibold text-red-800 mb-2">
-              Manual Crack Surveys
-            </div>
-            <p className="text-sm text-red-700">
-              Measuring and logging cracks by hand is slow, and paper records
-              make it hard to compare today&apos;s findings against previous
-              inspections.
-            </p>
+        <h2 id="overview">From source photo to reviewed crack finding.</h2>
+        <p>
+          Open the source photograph, mark the region of interest, and record
+          what is visible without losing the wider project context. Observations
+          move through an explicit review process before they appear in an
+          issued report.
+        </p>
+        <p>
+          The platform builds on ODM/WebODM survey outputs and adds an
+          inspection-focused application for project records, evidence review,
+          and reporting.
+        </p>
+      </div>
+
+      {/* Core Features */}
+      <div className="mb-12" id="features">
+        <h2>Core features</h2>
+
+        <h3>Keep source imagery close to the finding</h3>
+        <p>
+          Open inspection photographs, mark a region of interest, and describe
+          the visible evidence. Preserve the distinction between an observation
+          in an image and a verified engineering diagnosis.
+        </p>
+
+        <h3>Give every finding a review path</h3>
+        <p>
+          Save draft observations, submit them for review, and capture
+          acceptance or rejection with reviewer comments. Keep inspection work
+          and review decisions connected to the project.
+        </p>
+
+        <h3>Create reports from accepted observations</h3>
+        <p>
+          Issue report snapshots after findings have been accepted. Download
+          self-contained HTML reports or use the browser&apos;s print function to
+          save a PDF for sharing and discussion.
+        </p>
+
+        <h3>Explore your structure in 3D</h3>
+        <p>
+          Navigate textured survey models and view available orthophotos to
+          understand where a crack finding sits within the wider structure
+          before examining individual observations.
+        </p>
+      </div>
+
+      {/* How It Works */}
+      <div className="mb-12">
+        <h2 id="how-it-works">
+          A clear path from visual evidence to a reviewed report.
+        </h2>
+
+        <h3>Step 1 — Set up the project</h3>
+        <p>
+          Create the project record and add the available survey assets,
+          inspection photographs, or supported point-cloud files. Where
+          configured, submit photographs for WebODM processing and retrieve the
+          resulting survey outputs.
+        </p>
+
+        <h3>Step 2 — Explore the evidence</h3>
+        <p>
+          Navigate the available model, orthophoto, and photographs. Establish
+          the visual context and identify areas that need closer examination.
+        </p>
+
+        <h3>Step 3 — Record an observation</h3>
+        <p>
+          Mark the relevant area in a source photograph, describe what is
+          visible, and save the observation as a draft. Submit it when it is
+          ready for review.
+        </p>
+
+        <h3>Step 4 — Review the finding</h3>
+        <p>
+          A reviewer checks the evidence and accepts or rejects the observation
+          with a comment. Human judgement remains central to the process.
+        </p>
+
+        <h3>Step 5 — Issue a report</h3>
+        <p>
+          Create a report snapshot containing accepted observations and their
+          supporting evidence. Download the HTML report or print it to PDF.
+        </p>
+      </div>
+
+      {/* Experimental Capabilities */}
+      <div className="mb-12">
+        <h2 id="innovation">
+          Exploring the next layer of inspection intelligence.
+        </h2>
+        <p>
+          We are evaluating additional tools to help teams interpret imagery.
+          These capabilities are separate from the core manual inspection
+          workflow and are not presented as validated structural assessment
+          tools.
+        </p>
+
+        <h3>AI-assisted crack proposals — experimental</h3>
+        <p>
+          Evaluate candidate crack regions in supported imagery for human review.
+          Availability depends on model configuration, licensing, and evaluation
+          results. A proposal is not a confirmed defect, and reliable detection
+          depends on the source image quality and capture conditions.
+        </p>
+
+        <h3>Future direction — planned</h3>
+        <p>
+          Areas for further development include validated defect measurements,
+          dependable image-to-3D finding alignment, deeper BIM integration, and
+          broader organization-management workflows. These are development
+          goals, not commitments or currently guaranteed capabilities.
+        </p>
+      </div>
+
+      {/* Responsible Use */}
+      <div className="mb-12 rounded-xl bg-slate-50 p-6 border border-slate-200">
+        <h2>Evidence first. Human judgement always.</h2>
+        <p>
+          pmspace.ai supports visual documentation and review. It does not
+          replace a qualified structural inspection, engineering assessment, or
+          applicable inspection standard.
+        </p>
+        <ul>
+          <li>
+            Image observations are not automatically verified structural
+            diagnoses.
           </li>
-          <li className="p-4 bg-red-50 rounded-lg border border-red-100">
-            <div className="font-semibold text-red-800 mb-2">
-              Hard-to-Reach Elements
-            </div>
-            <p className="text-sm text-red-700">
-              Decks, piers, and superstructures are difficult and hazardous to
-              access for close-up manual inspection, often requiring lane
-              closures or special equipment.
-            </p>
+          <li>
+            Detection and measurement quality depend on resolution, capture
+            distance, lighting, calibration, and visibility.
           </li>
-          <li className="p-4 bg-red-50 rounded-lg border border-red-100">
-            <div className="font-semibold text-red-800 mb-2">
-              Lost Historical Context
-            </div>
-            <p className="text-sm text-red-700">
-              Photos scattered across devices and inspectors make it difficult
-              to track how cracking has grown between inspection cycles.
-            </p>
+          <li>
+            No submillimetre crack-detection or calibrated crack-width accuracy
+            is claimed.
+          </li>
+          <li>AI-generated candidates require human review.</li>
+          <li>
+            Synthetic BIM points must not be confused with measured survey data.
+          </li>
+          <li>
+            Experimental conversions and recognition outputs may be incomplete
+            or incorrect.
           </li>
         </ul>
       </div>
 
-      <h2>How AI Crack Detection on Bridges Works</h2>
-      <ol className="list-decimal pl-6 space-y-4 mb-12 marker:text-indigo-600 marker:font-bold">
-        <li className="pl-2">
-          <strong>Capture Photos:</strong> Field staff photograph bridge
-          elements on any mobile device — decks, superstructures, substructures,
-          or culverts.
-        </li>
-        <li className="pl-2">
-          <strong>AI Analysis:</strong> Computer vision scans each image for
-          cracks, corrosion, and spalling, tagging findings with location and
-          severity.
-        </li>
-        <li className="pl-2">
-          <strong>Review &amp; Annotate:</strong> Inspectors confirm AI findings
-          and add notes or annotations directly on the images.
-        </li>
-        <li className="pl-2">
-          <strong>Generate Reports:</strong> Export NBI-coded PDF reports for
-          stakeholders in a single click, directly from the field.
-        </li>
-      </ol>
-
-      <ComparisonTable
-        title="AI Crack Detection vs Manual Surveys"
-        features={[
-          { feature: 'Crack Identification', spaceCapture: 'AI-Assisted', competitors: 'Manual Visual' },
-          { feature: 'Severity Tagging', spaceCapture: 'Automatic', competitors: 'Manual Entry' },
-          { feature: 'Photo Organization', spaceCapture: 'Automatic', competitors: 'Manual' },
-          { feature: 'Historical Trending', spaceCapture: 'Automated Analytics', competitors: 'Manual Spreadsheets' },
-          { feature: 'Offline Access', spaceCapture: true, competitors: 'Limited' },
-        ]}
-      />
-
-      <div className="mb-12">
-        <h3>Modernize Your Bridge Inspections</h3>
-        <p>
-          Traditional crack surveys rely on manual measurement, paper forms, and
-          delayed reporting. Inconsistent documentation and difficulty tracking
-          deterioration create maintenance backlogs and safety concerns.
-          <strong> SpaceCapture</strong> transforms this process with an AI
-          first pass that works on any mobile device.
-        </p>
-
-        <p>
-          By consolidating photo capture, crack tracking, and reporting into a
-          single app, inspection teams spend their expertise on structural
-          safety instead of administrative tasks — and every inspection cycle
-          builds on the last.
-        </p>
+      <div id="faqs" className="not-prose">
+        <FaqSection items={faqs} />
       </div>
-
-      <FaqSection items={faqs} />
 
       <StructuredData
         data={{
           '@context': 'https://schema.org',
-          '@graph': [serviceSchema, faqSchema, breadcrumbSchema],
+          '@graph': [serviceSchema, breadcrumbSchema],
         }}
       />
-    </SeoLandingPage>
+    </PmspaceLandingPage>
   );
 }

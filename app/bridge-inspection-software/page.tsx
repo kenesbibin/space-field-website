@@ -1,20 +1,26 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { SeoLandingPage } from '@/components/seo/SeoLandingPage';
-import { ComparisonTable } from '@/components/seo/ComparisonTable';
+import Link from 'next/link';
+import { PmspaceLandingPage } from '@/components/seo/PmspaceLandingPage';
 import { FaqSection } from '@/components/seo/FaqSection';
 import StructuredData from '@/components/seo/StructuredData';
 import { getServiceSchema } from '@/components/seo/ServiceSchema';
-import { getFaqSchema } from '@/components/seo/FaqSchema';
 import {
   buildBreadcrumbsFromPath,
   getBreadcrumbListSchema,
 } from '@/components/seo/BreadcrumbListSchema';
 
 export const metadata: Metadata = {
-  title: 'Bridge Inspection Software | AI-Powered Structural Assessments',
-  description: 'AI-powered bridge inspection software for DOTs and structural engineers. Document bridge conditions, defect tracking, and structural assessments with photo evidence.',
-  keywords: ['bridge inspection software', 'bridge condition assessment', 'structural inspection app'],
+  title: {
+    absolute: 'pmspace.ai | 3D Bridge Inspection & Evidence Management',
+  },
+  description:
+    'Explore bridge survey models, review inspection photos, record observations, and turn accepted findings into reports with the pmspace.ai inspection prototype.',
+  keywords: [
+    'bridge inspection software',
+    '3D bridge inspection',
+    'bridge inspection evidence management',
+  ],
   alternates: {
     canonical: 'https://spacecapture.ai/bridge-inspection-software',
   },
@@ -22,30 +28,48 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "What is bridge inspection software?",
-    answer: "Bridge inspection software is a digital platform that enables DOTs and structural engineers to document bridge conditions, track defects, and conduct structural assessments using mobile devices. It replaces paper forms with automated workflows and AI-powered analysis for comprehensive infrastructure monitoring."
+    question: 'Is this a production-ready inspection platform?',
+    answer:
+      'The current application is a working single-company proof of concept. It demonstrates the core inspection workflow and selected import capabilities. Production deployment requires further operational, security, and workflow validation.',
   },
   {
-    question: "How does AI assist in bridge inspections?",
-    answer: "SpaceCapture's AI analyzes photos of bridge components to automatically identify cracks, corrosion, spalling, and other structural defects. It tags issues with location data, severity levels, and historical comparison for trend analysis."
+    question: 'Does it process drone photographs?',
+    answer:
+      'The application can submit photographs to a configured WebODM service, track processing, and retrieve outputs. The demonstration also uses previously reconstructed survey assets; opening the demo does not perform a new reconstruction.',
   },
   {
-    question: "Can I use the software offline in remote locations?",
-    answer: "Yes, SpaceCapture works fully offline. You can capture photos, complete inspection checklists, and log issues without internet connectivity. All data automatically syncs to the cloud once you regain connection."
+    question: 'Can I use an existing point cloud?',
+    answer:
+      'Yes. The application supports a bounded import workflow for LAS, LAZ, E57, PLY, PCD, XYZ, and PTS files. File limits and format-specific requirements apply. Native RCP/RCS files require export to a supported exchange format first.',
   },
   {
-    question: "Does it support NBI coding standards?",
-    answer: "Absolutely. Our templates are customizable to match National Bridge Inventory (NBI) coding standards, and you can create specific checklists for different bridge components like decks, superstructures, substructures, and culverts."
-  }
+    question: 'Does it automatically detect every crack?',
+    answer:
+      'No. The core workflow is manual-first. Experimental crack proposals depend on configured models, suitable imagery, and licensing conditions. They are not a guarantee of defect detection or completeness.',
+  },
+  {
+    question: 'Can it measure crack widths accurately?',
+    answer:
+      'Validated crack-width measurement is not a current product claim. Meaningful measurement requires suitable close-range imagery, calibration, and independent validation.',
+  },
+  {
+    question: 'Can I export reports?',
+    answer:
+      'Yes. Accepted observations can be included in an issued HTML report snapshot. The report can be downloaded or printed to PDF through the browser.',
+  },
+  {
+    question: 'Does importing a BIM model align it with the scan?',
+    answer:
+      'No. Synthetic BIM point generation is not automatic registration, certified georeferencing, or verification of as-built conditions.',
+  },
 ];
 
-const faqSchema = getFaqSchema(faqs);
 const serviceSchema = getServiceSchema({
-  name: 'Bridge Inspection Software',
+  name: 'pmspace.ai 3D Bridge Inspection & Evidence Management',
   description:
-    'AI-powered bridge inspection software for DOTs and structural engineers. Document bridge conditions, defect tracking, and structural assessments with photo evidence.',
+    'Explore bridge survey models, review inspection photos, record observations, and turn accepted findings into reports with the pmspace.ai inspection prototype.',
   url: 'https://spacecapture.ai/bridge-inspection-software',
-  serviceType: 'Bridge Inspection Software',
+  serviceType: 'Bridge Inspection Prototype',
   areaServed: 'Worldwide',
 });
 const breadcrumbSchema = getBreadcrumbListSchema(
@@ -54,86 +78,298 @@ const breadcrumbSchema = getBreadcrumbListSchema(
 
 export default function Page() {
   return (
-    <SeoLandingPage
-      title="The Ultimate Bridge Inspection Software for Infrastructure"
-      subtitle="Eliminate paper checklists and manual data entry. Our AI-driven bridge inspection software automates defect detection, streamlines reporting, and improves infrastructure safety."
+    <PmspaceLandingPage
+      eyebrow="Connected evidence for infrastructure inspection"
+      title="Bring your bridge inspections into focus."
+      subtitle="Connect drone survey outputs, 3D views, source photographs, and inspection findings in one workspace. pmspace.ai helps inspectors document what they see, reviewers assess the evidence, and project teams create reports from accepted observations."
+      featureStrip="3D context · Photo observations · Human review · Report snapshots"
+      statusLabel="Working prototype — available for demonstration and pilot discussion."
     >
-      {/* Definition Block - AEO Optimized */}
-      <div className="mb-8 rounded-xl bg-indigo-50 p-6 border border-indigo-100">
-        <h2 className="text-xl font-bold text-indigo-900 mb-2">What is Bridge Inspection Software?</h2>
-        <p className="text-indigo-800 font-medium leading-relaxed">
-          Bridge inspection software is a mobile-first digital platform that enables DOTs and structural engineers to document bridge conditions, track defects, and conduct structural assessments in real-time. By automating reports and integrating AI analysis, it replaces manual paper checklists to improve infrastructure safety and maintenance planning.
+      {/* In-page navigation */}
+      <nav className="not-prose mb-10 flex flex-wrap items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-slate-50 p-3">
+        {[
+          { label: 'Overview', href: '#overview' },
+          { label: 'Features', href: '#features' },
+          { label: 'How It Works', href: '#how-it-works' },
+          { label: 'Use Cases', href: '#use-cases' },
+          { label: 'Innovation', href: '#innovation' },
+          { label: 'FAQs', href: '#faqs' },
+        ].map((item) => (
+          <a
+            key={item.href}
+            href={item.href}
+            className="rounded-full px-4 py-2 text-sm font-semibold text-slate-600 hover:bg-white hover:text-indigo-600 hover:shadow-sm transition-colors"
+          >
+            {item.label}
+          </a>
+        ))}
+        <Link
+          href="/request-a-demo"
+          className="rounded-full bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500 transition-colors"
+        >
+          Request a Demo
+        </Link>
+      </nav>
+
+      {/* The Challenge */}
+      <div className="mb-12">
+        <h2 id="challenge">
+          Your inspection evidence should not live in separate silos.
+        </h2>
+        <p>
+          Survey models, photographs, spreadsheets, and reports often tell
+          different parts of the same story. Moving between them makes it harder
+          to locate evidence, understand the surrounding structure, and track
+          which findings have been reviewed.
+        </p>
+        <p>
+          pmspace.ai brings these materials into a shared project workspace,
+          connecting visual context with a clear observation and review process.
         </p>
       </div>
 
-      {/* Pain Points Section */}
+      {/* Platform Overview */}
       <div className="mb-12">
-        <h3 className="text-2xl font-bold text-slate-900 mb-4">Common Challenges in Bridge Inspections</h3>
-        <ul className="grid md:grid-cols-3 gap-6">
-          <li className="p-4 bg-red-50 rounded-lg border border-red-100">
-            <div className="font-semibold text-red-800 mb-2">Manual Documentation</div>
-            <p className="text-sm text-red-700">Paper-based inspection reports lead to lost data, inconsistent coding, and difficulty tracking structural deterioration over time.</p>
+        <h2 id="overview">From survey context to reviewed findings.</h2>
+        <p>
+          Explore a reconstructed bridge, inspect the available source imagery,
+          and document observations without losing the wider project context.
+          Findings move through an explicit review process before they appear in
+          an issued report.
+        </p>
+        <p>
+          The platform builds on ODM/WebODM survey outputs and adds an
+          inspection-focused application for project records, evidence review,
+          and reporting.
+        </p>
+      </div>
+
+      {/* Core Features */}
+      <div className="mb-12" id="features">
+        <h2>Core features</h2>
+
+        <h3>Explore your structure in 3D</h3>
+        <p>
+          Navigate textured survey models and view available orthophotos to
+          understand the site before examining individual observations. Use
+          visual context to orient your inspection and communicate where
+          attention is needed.
+        </p>
+
+        <h3>Keep source imagery close to the finding</h3>
+        <p>
+          Open inspection photographs, mark a region of interest, and describe
+          the visible evidence. Preserve the distinction between an observation
+          in an image and a verified engineering diagnosis.
+        </p>
+
+        <h3>Give every finding a review path</h3>
+        <p>
+          Save draft observations, submit them for review, and capture
+          acceptance or rejection with reviewer comments. Keep inspection work
+          and review decisions connected to the project.
+        </p>
+
+        <h3>Create reports from accepted observations</h3>
+        <p>
+          Issue report snapshots after findings have been accepted. Download
+          self-contained HTML reports or use the browser&apos;s print function to
+          save a PDF for sharing and discussion.
+        </p>
+
+        <h3>Bring existing point clouds into the workspace</h3>
+        <p>
+          Import supported LAS, LAZ, E57, PLY, PCD, XYZ, and PTS files
+          independently of a drone reconstruction. View prepared point clouds in
+          the browser alongside available source metadata, while retaining the
+          original uploaded file.
+        </p>
+
+        <h3>Control project access</h3>
+        <p>
+          Use inspector and reviewer permissions, project membership,
+          authenticated downloads, and recorded event history to support a more
+          structured inspection process.
+        </p>
+      </div>
+
+      {/* How It Works */}
+      <div className="mb-12">
+        <h2 id="how-it-works">
+          A clear path from visual evidence to a reviewed report.
+        </h2>
+
+        <h3>Step 1 — Set up the project</h3>
+        <p>
+          Create the project record and add the available survey assets,
+          inspection photographs, or supported point-cloud files. Where
+          configured, submit photographs for WebODM processing and retrieve the
+          resulting survey outputs.
+        </p>
+
+        <h3>Step 2 — Explore the evidence</h3>
+        <p>
+          Navigate the available model, orthophoto, and photographs. Establish
+          the visual context and identify areas that need closer examination.
+        </p>
+
+        <h3>Step 3 — Record an observation</h3>
+        <p>
+          Mark the relevant area in a source photograph, describe what is
+          visible, and save the observation as a draft. Submit it when it is
+          ready for review.
+        </p>
+
+        <h3>Step 4 — Review the finding</h3>
+        <p>
+          A reviewer checks the evidence and accepts or rejects the observation
+          with a comment. Human judgement remains central to the process.
+        </p>
+
+        <h3>Step 5 — Issue a report</h3>
+        <p>
+          Create a report snapshot containing accepted observations and their
+          supporting evidence. Download the HTML report or print it to PDF.
+        </p>
+      </div>
+
+      {/* Who It Is For */}
+      <div className="mb-12">
+        <h2 id="use-cases">Who it is for</h2>
+
+        <h3>Bridge inspectors</h3>
+        <p>
+          Record visual observations with source-photo evidence and review
+          project context in one workspace.
+        </p>
+
+        <h3>Reviewers and engineering teams</h3>
+        <p>
+          Assess submitted findings, document review decisions, and prepare
+          evidence-led inspection reports. Engineering interpretation and safety
+          decisions remain with qualified professionals.
+        </p>
+
+        <h3>Infrastructure owners and project managers</h3>
+        <p>
+          Bring project records, visual survey assets, and reviewed findings
+          together for clearer communication across the inspection team.
+        </p>
+
+        <h3>Survey and BIM teams</h3>
+        <p>
+          Explore how existing photogrammetry outputs, supported point clouds,
+          and experimental BIM-derived previews can contribute to inspection
+          workflows.
+        </p>
+      </div>
+
+      {/* Demonstration Showcase */}
+      <div className="mb-12 rounded-xl bg-indigo-50 p-6 border border-indigo-100">
+        <h2>Explore the Rivaz bridge demonstration.</h2>
+        <p>
+          See the inspection workflow using an imported bridge survey dataset.
+          Explore the textured model and orthophoto, open source imagery, record
+          an observation, review it, and create a report snapshot.
+        </p>
+        <p className="not-prose mt-4">
+          <Link
+            href="/request-a-demo"
+            className="inline-flex h-12 items-center justify-center rounded-full bg-indigo-600 px-8 text-base font-bold text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-indigo-500 hover:scale-105"
+          >
+            Book a Guided Walkthrough
+          </Link>
+        </p>
+      </div>
+
+      {/* Experimental Capabilities and Roadmap */}
+      <div className="mb-12">
+        <h2 id="innovation">
+          Exploring the next layer of inspection intelligence.
+        </h2>
+        <p>
+          We are evaluating additional tools to help teams interpret imagery and
+          geometry. These capabilities are separate from the core manual
+          inspection workflow and are not presented as validated structural
+          assessment tools.
+        </p>
+
+        <h3>AI-assisted crack proposals — experimental</h3>
+        <p>
+          Evaluate candidate crack regions in supported imagery for human review.
+          Availability depends on model configuration, licensing, and evaluation
+          results. A proposal is not a confirmed defect, and reliable detection
+          depends on the source image quality and capture conditions.
+        </p>
+
+        <h3>Building-element recognition — experimental</h3>
+        <p>
+          Evaluate candidate structural-element labels from point-cloud data.
+          These predictions are not verified BIM classifications and require
+          further accuracy assessment before operational reliance.
+        </p>
+
+        <h3>BIM exploration — limited and experimental</h3>
+        <p>
+          Explore supported IFC geometry as clearly labelled synthetic
+          BIM-derived points, with element information where available. These
+          points are generated from a model, not measured by a scanner. Native
+          Revit conversion is experimental and may produce incomplete,
+          unverified geometry; author-exported IFC is preferred for model
+          exchange.
+        </p>
+
+        <h3>Future direction — planned</h3>
+        <p>
+          Areas for further development include validated defect measurements,
+          dependable image-to-3D finding alignment, deeper BIM integration, and
+          broader organization-management workflows. These are development
+          goals, not commitments or currently guaranteed capabilities.
+        </p>
+      </div>
+
+      {/* Responsible Use */}
+      <div className="mb-12 rounded-xl bg-slate-50 p-6 border border-slate-200">
+        <h2>Evidence first. Human judgement always.</h2>
+        <p>
+          pmspace.ai supports visual documentation and review. It does not
+          replace a qualified structural inspection, engineering assessment, or
+          applicable inspection standard.
+        </p>
+        <ul>
+          <li>
+            Image observations are not automatically verified structural
+            diagnoses.
           </li>
-          <li className="p-4 bg-red-50 rounded-lg border border-red-100">
-            <div className="font-semibold text-red-800 mb-2">Safety Risks</div>
-            <p className="text-sm text-red-700">Inspecting bridges often involves working at heights, near traffic, and in confined spaces, creating significant safety hazards.</p>
+          <li>
+            Detection and measurement quality depend on resolution, capture
+            distance, lighting, calibration, and visibility.
           </li>
-          <li className="p-4 bg-red-50 rounded-lg border border-red-100">
-            <div className="font-semibold text-red-800 mb-2">Data Integration</div>
-            <p className="text-sm text-red-700">Combining inspection data from multiple sources, historical records, and different inspectors creates administrative overhead and inconsistencies.</p>
+          <li>
+            No submillimetre crack-detection or calibrated crack-width accuracy
+            is claimed.
+          </li>
+          <li>AI-generated candidates require human review.</li>
+          <li>
+            Synthetic BIM points must not be confused with measured survey data.
+          </li>
+          <li>
+            Experimental conversions and recognition outputs may be incomplete
+            or incorrect.
           </li>
         </ul>
       </div>
 
-      <h2>How Bridge Inspection Software Works</h2>
-      <ol className="list-decimal pl-6 space-y-4 mb-12 marker:text-indigo-600 marker:font-bold">
-        <li className="pl-2">
-          <strong>Create Templates:</strong> Build custom inspection checklists for different bridge components—decks, superstructures, substructures, or culverts.
-        </li>
-        <li className="pl-2">
-          <strong>Conduct Inspection:</strong> Field staff complete forms on tablets or phones, capturing photos and annotating defects directly on images.
-        </li>
-        <li className="pl-2">
-          <strong>AI Analysis:</strong> The software automatically scans images for structural defects, tagging them with location, severity, and historical comparison.
-        </li>
-        <li className="pl-2">
-          <strong>Generate Reports:</strong> Create NBI-compliant reports with stakeholders in a single click, directly from the field.
-        </li>
-      </ol>
-
-      <ComparisonTable 
-        title="SpaceCapture vs Traditional Bridge Inspections"
-        features={[
-          { feature: "AI Defect Detection", spaceCapture: true, competitors: false },
-          { feature: "Offline Mobile Access", spaceCapture: true, competitors: "Limited" },
-          { feature: "NBI Coding Support", spaceCapture: "Built-in Templates", competitors: "Manual Entry" },
-          { feature: "Historical Trending", spaceCapture: "Automated Analytics", competitors: "Manual Spreadsheets" },
-          { feature: "Photo Organization", spaceCapture: "Automatic", competitors: "Manual" },
-        ]}
-      />
-
-      <div className="mb-12">
-        <h3>Modernize Your Bridge Inspections</h3>
-        <p>
-          Traditional bridge inspections rely on paper forms, manual coding, and delayed reporting. 
-          Inconsistent documentation, safety risks, and difficulty tracking deterioration create maintenance backlogs and safety concerns. 
-          <strong>SpaceCapture</strong> transforms this process by providing a unified digital platform that works on any mobile device.
-        </p>
-
-        <p>
-          By consolidating photo capture, defect tracking, and reporting into a single app, bridge inspection teams can complete assessments in half the time. 
-          Focus your expertise on ensuring structural safety, not administrative tasks.
-        </p>
+      <div id="faqs" className="not-prose">
+        <FaqSection items={faqs} />
       </div>
-
-      <FaqSection items={faqs} />
 
       <StructuredData
         data={{
           '@context': 'https://schema.org',
-          '@graph': [serviceSchema, faqSchema, breadcrumbSchema],
+          '@graph': [serviceSchema, breadcrumbSchema],
         }}
       />
-    </SeoLandingPage>
+    </PmspaceLandingPage>
   );
 }

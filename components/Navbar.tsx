@@ -165,7 +165,7 @@ const productsMenuItems: {
       name: "Crack Detection on Bridges",
       href: "/crack-detection-on-bridges",
       icon: ScanSearch,
-      description: "AI-powered structural crack analysis.",
+      description: "Photo evidence with human-reviewed findings.",
     },
     {
       name: "AI Tuning Station",
