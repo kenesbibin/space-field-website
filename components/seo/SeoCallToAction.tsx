@@ -3,7 +3,14 @@
 import React from 'react';
 import { ArrowRight, Star } from 'lucide-react';
 
-export const SeoCallToAction = () => {
+const DEFAULT_TRY_FREE_URL =
+  "https://app.pmspace.ai/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login";
+
+export const SeoCallToAction = ({
+  tryForFreeHref = DEFAULT_TRY_FREE_URL,
+}: {
+  tryForFreeHref?: string;
+}) => {
   return (
     <section className="relative py-20 bg-slate-900 overflow-hidden">
       {/* Background Glows */}
@@ -31,7 +38,7 @@ export const SeoCallToAction = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="https://app.pmspace.ai/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
+            href={tryForFreeHref}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex h-14 items-center justify-center rounded-full bg-indigo-600 px-8 text-lg font-bold text-white shadow-lg shadow-indigo-500/30 transition-all hover:bg-indigo-500 hover:scale-105"

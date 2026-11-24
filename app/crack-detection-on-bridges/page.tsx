@@ -66,6 +66,7 @@ export default function Page() {
     <SeoLandingPage
       title="Crack Detection on Bridges with AI-Powered Inspection"
       subtitle="Replace manual surveys with computer vision. SpaceCapture analyzes field photos to identify, tag, and track structural cracks — then generates inspection reports straight from the site."
+      tryForFreeHref="https://pointcloud.aibqs.com/"
     >
       {/* Definition Block - AEO Optimized */}
       <div className="mb-8 rounded-xl bg-indigo-50 p-6 border border-indigo-100">

@@ -9,12 +9,17 @@ interface SeoLandingPageProps {
     title: string;
     subtitle: string;
     children: React.ReactNode;
+    tryForFreeHref?: string;
 }
+
+const DEFAULT_TRY_FREE_URL =
+    "https://app.pmspace.ai/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login";
 
 export const SeoLandingPage = ({
     title,
     subtitle,
     children,
+    tryForFreeHref = DEFAULT_TRY_FREE_URL,
 }: SeoLandingPageProps) => {
     return (
         <div className="min-h-screen bg-slate-50">
@@ -52,7 +57,7 @@ export const SeoLandingPage = ({
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
                             {/* Try for Free */}
                             <a
-                                href="https://app.pmspace.ai/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
+                                href={tryForFreeHref}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full bg-indigo-600 px-8 text-base font-bold text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-indigo-500 hover:scale-105"
@@ -92,7 +97,7 @@ export const SeoLandingPage = ({
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <a
-                                href="https://app.pmspace.ai/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
+                                href={tryForFreeHref}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full bg-indigo-600 px-8 text-base font-bold text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-indigo-500 hover:scale-105"
@@ -110,7 +115,7 @@ export const SeoLandingPage = ({
                     </div>
                 </section>
 
-                <SeoCallToAction />
+                <SeoCallToAction tryForFreeHref={tryForFreeHref} />
             </main>
         </div>
     );
