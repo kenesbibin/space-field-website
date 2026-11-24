@@ -11,7 +11,8 @@ interface ArticleSchemaInput {
   keywords?: string[];
 }
 
-const DEFAULT_AUTHOR = "SpaceCapture Team";
+const DEFAULT_AUTHOR = "Bibin Prathap";
+const DEFAULT_AUTHOR_SAMEAS = ["https://www.linkedin.com/in/bibin-prathap-4a34a489/"];
 const PUBLISHER_NAME = "SpaceCapture";
 const PUBLISHER_LOGO = "https://spacecapture.ai/logo.png";
 
@@ -42,9 +43,10 @@ export const getArticleSchema = (input: ArticleSchemaInput) => {
     datePublished,
     dateModified: dateModified ?? datePublished,
     author: {
-      "@type": "Organization",
+      "@type": "Person",
       name: authorName,
       url: authorUrl,
+      ...(authorName === DEFAULT_AUTHOR ? { sameAs: DEFAULT_AUTHOR_SAMEAS } : {}),
     },
     publisher: {
       "@type": "Organization",

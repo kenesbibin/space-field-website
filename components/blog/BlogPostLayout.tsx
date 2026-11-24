@@ -24,7 +24,7 @@ export const BlogPostLayout = ({
   subtitle,
   publishDate = 'Jan 24, 2026',
   readTime = '5 min read',
-  author = 'SpaceCapture Engineering Team',
+  author = 'Bibin Prathap',
   category = 'AI in Construction',
   description,
   url,
@@ -42,9 +42,12 @@ export const BlogPostLayout = ({
     datePublished: publishDate,
     dateModified: dateModified || publishDate,
     author: {
-      '@type': 'Organization',
+      '@type': 'Person',
       name: author,
       url: 'https://spacecapture.ai/about-us',
+      ...(author === 'Bibin Prathap'
+        ? { sameAs: ['https://www.linkedin.com/in/bibin-prathap-4a34a489/'] }
+        : {}),
     },
     publisher: {
       '@type': 'Organization',

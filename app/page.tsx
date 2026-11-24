@@ -39,6 +39,43 @@ export default function Home() {
         bottomChildren={
           <>
             <Features />
+            <section className="py-12 bg-white">
+              <div className="container mx-auto max-w-4xl px-6">
+                <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">SpaceCapture at a Glance</h2>
+                <div className="overflow-hidden rounded-xl border border-slate-200 shadow-sm">
+                  <table className="w-full text-left text-sm">
+                    <thead className="bg-slate-50">
+                      <tr className="text-xs uppercase tracking-wider text-slate-500">
+                        <th className="px-5 py-3 font-semibold">Capability</th>
+                        <th className="px-5 py-3 font-semibold">What you get</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100 text-slate-600">
+                      <tr>
+                        <td className="px-5 py-3 font-medium text-slate-900">Field inspections</td>
+                        <td className="px-5 py-3">Mobile, offline-first inspections with photo evidence</td>
+                      </tr>
+                      <tr>
+                        <td className="px-5 py-3 font-medium text-slate-900">AI defect detection</td>
+                        <td className="px-5 py-3">Computer vision spots construction defects automatically</td>
+                      </tr>
+                      <tr>
+                        <td className="px-5 py-3 font-medium text-slate-900">Reports</td>
+                        <td className="px-5 py-3">Daily reports and instant reports generated from any device</td>
+                      </tr>
+                      <tr>
+                        <td className="px-5 py-3 font-medium text-slate-900">Safety compliance</td>
+                        <td className="px-5 py-3">Automated safety compliance tracking from the field</td>
+                      </tr>
+                      <tr>
+                        <td className="px-5 py-3 font-medium text-slate-900">Platforms</td>
+                        <td className="px-5 py-3">Android &amp; iOS in one mobile-first app</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
             <section className="py-12 bg-slate-50">
               <div className="container mx-auto px-6 text-center">
                 <h2 className="text-2xl font-bold text-slate-900 mb-6">Explore Our Solutions</h2>

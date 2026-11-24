@@ -224,7 +224,7 @@ export const metadata: Metadata = {
     "offline inspection app",
     "offline field inspection app"
   ],
-  authors: [{ name: "SpaceCapture Team" }],
+  authors: [{ name: "Bibin Prathap" }],
   creator: "SpaceCapture",
   publisher: "SpaceCapture",
   applicationName: "SpaceCapture",
