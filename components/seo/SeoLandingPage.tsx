@@ -86,35 +86,6 @@ export const SeoLandingPage = ({
                     </div>
                 </section>
 
-                {/* Mid-Page CTA Section */}
-                <section className="py-16 bg-slate-900">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                            Ready to Transform Your Construction Operations?
-                        </h2>
-                        <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-                            Join 120+ construction teams using SpaceCapture to automate inspections, ensure safety, and deliver projects on time.
-                        </p>
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <a
-                                href={tryForFreeHref}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full bg-indigo-600 px-8 text-base font-bold text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-indigo-500 hover:scale-105"
-                            >
-                                Start Free — No Credit Card
-                                <ArrowRight className="ml-2 w-5 h-5" />
-                            </a>
-                            <Link
-                                href="/request-a-demo"
-                                className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full bg-white text-slate-900 px-8 text-base font-bold shadow transition-all hover:bg-slate-100 hover:scale-105"
-                            >
-                                Book a Demo
-                            </Link>
-                        </div>
-                    </div>
-                </section>
-
                 <SeoCallToAction tryForFreeHref={tryForFreeHref} />
             </main>
         </div>
