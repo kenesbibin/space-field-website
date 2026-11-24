@@ -121,12 +121,14 @@ export const PmspaceLandingPage = ({
                                 Request a Demo
                                 <ArrowRight className="ml-2 w-5 h-5" />
                             </Link>
-                            <Link
-                                href="/request-a-demo"
+                            <a
+                                href="https://pointcloud.aibqs.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="w-full sm:w-auto inline-flex h-14 items-center justify-center rounded-full bg-white text-slate-900 px-8 text-lg font-bold shadow transition-all hover:bg-slate-100 hover:scale-105"
                             >
-                                Discuss a Pilot
-                            </Link>
+                                Try for Free
+                            </a>
                         </div>
                     </div>
                 </section>
