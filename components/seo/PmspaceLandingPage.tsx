@@ -63,6 +63,15 @@ export const PmspaceLandingPage = ({
                                 <ArrowRight className="ml-2 w-5 h-5" />
                             </Link>
                             <a
+                                href="https://pointcloud.aibqs.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 px-8 text-base font-bold text-white shadow-lg shadow-purple-500/25 transition-all hover:shadow-purple-500/50 hover:scale-105"
+                            >
+                                Try for Free
+                                <ArrowRight className="ml-2 w-5 h-5" />
+                            </a>
+                            <a
                                 href="#how-it-works"
                                 className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full bg-white text-slate-900 px-8 text-base font-bold shadow transition-all hover:bg-slate-100 hover:scale-105"
                             >
