@@ -15,7 +15,7 @@ export const getSoftwareSchema = (input?: SoftwareSchemaInput) => ({
   "name": input?.name ?? "SpaceCapture",
   "headline":
     "AI-Powered Field Inspection Software & Construction Management",
-  "image": "https://spacecapture.ai/logo.png",
+  "image": "https://spacecapture.ai/images/space-capture-logo.jpg",
   "url": input?.url ?? "https://spacecapture.ai/",
   "operatingSystem": "Cloud-based, iOS, Android, Web Browser",
   "applicationCategory": input?.applicationCategory ?? "BusinessApplication",

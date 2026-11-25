@@ -1,6 +1,5 @@
 import React from 'react';
 
-import CallToAction from '@/components/CallToAction';
 import { RelatedPosts } from '@/components/blog/RelatedPosts';
 import { ArrowLeft, Clock, Calendar, User } from 'lucide-react';
 import Link from 'next/link';
@@ -19,6 +18,11 @@ interface BlogPostLayoutProps {
   children: React.ReactNode;
 }
 
+const toSchemaDate = (value: string): string | undefined => {
+  const parsedDate = new Date(value);
+  return Number.isNaN(parsedDate.getTime()) ? undefined : parsedDate.toISOString();
+};
+
 export const BlogPostLayout = ({
   title,
   subtitle,
@@ -32,15 +36,17 @@ export const BlogPostLayout = ({
   keywords = [],
   children
 }: BlogPostLayoutProps) => {
+  const schemaPublishDate = toSchemaDate(publishDate);
+  const schemaModifiedDate = dateModified ? toSchemaDate(dateModified) : undefined;
   const articleSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: title,
     description: description || subtitle || title,
     ...(url ? { mainEntityOfPage: { '@type': 'WebPage', '@id': url } } : {}),
     image: ['https://spacecapture.ai/images/og-image.jpg'],
-    datePublished: publishDate,
-    dateModified: dateModified || publishDate,
+    ...(schemaPublishDate ? { datePublished: schemaPublishDate } : {}),
+    ...(schemaModifiedDate ? { dateModified: schemaModifiedDate } : {}),
     author: {
       '@type': 'Person',
       name: author,
@@ -54,7 +60,7 @@ export const BlogPostLayout = ({
       name: 'SpaceCapture',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://spacecapture.ai/logo.png',
+        url: 'https://spacecapture.ai/images/space-capture-logo.jpg',
       },
     },
     ...(category ? { articleSection: category } : {}),
@@ -121,7 +127,7 @@ export const BlogPostLayout = ({
                 <div className="mt-16 bg-slate-50 rounded-xl p-8 border border-slate-100">
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Ready to see this in action?</h3>
                     <p className="text-slate-600 mb-6">
-                        SpaceCapture's AI engine is already helping construction teams automate what you just read about.
+                        SpaceCapture&apos;s AI engine is already helping construction teams automate what you just read about.
                     </p>
                     <a href="/request-a-demo" className="inline-flex h-10 items-center justify-center rounded-md bg-indigo-600 px-6 text-sm font-medium text-white shadow transition-colors hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-indigo-700 disabled:pointer-events-none disabled:opacity-50">
                         Get a Free Demo

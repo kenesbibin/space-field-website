@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Instagram, Linkedin, Twitter, Youtube, Github, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Instagram, Linkedin, Twitter, Youtube, CheckCircle2, ArrowRight } from 'lucide-react';
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-slate-950 pt-20 pb-10 border-t border-slate-800">
@@ -182,6 +182,7 @@ export default function Footer() {
               <FooterLink href="/about-us">About Us</FooterLink>
               <FooterLink href="/careers">Careers</FooterLink>
               <FooterLink href="/customers">Customers</FooterLink>
+              <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
               <FooterLink href="/trust">Trust Center</FooterLink>
               <FooterLink href="/trust/hallucination-free">Hallucination-Free AI</FooterLink>
               <FooterLink href="/pricing">Pricing</FooterLink>
@@ -276,18 +277,12 @@ export default function Footer() {
 
         <div
             className="pt-8 border-t border-slate-800/50 flex flex-col md:flex-row items-center justify-between gap-4"
-            itemScope
-            itemType="https://schema.org/Organization"
           >
             <p className="text-xs text-slate-600">
-              © 2026 <span itemProp="name">SpaceCapture</span> by{' '}
-              <span itemProp="parentOrganization" itemScope itemType="https://schema.org/Organization">
-                <span itemProp="name">Space AI Inc.</span>
-              </span>
-              . All rights reserved.
+              © 2026 SpaceCapture by Space AI Inc. All rights reserved.
             </p>
             <p className="text-[10px] text-slate-600">
-              <span itemProp="telephone">PHONE: +1 (419) 820-1487</span>
+              <span>PHONE: +1 (419) 820-1487</span>
               {' · '}
               <a
                 href="https://spacecapture.ai/sitemap.xml"
@@ -296,13 +291,6 @@ export default function Footer() {
                 Sitemap
               </a>
             </p>
-            <meta itemProp="url" content="https://spacecapture.ai" />
-            <meta itemProp="logo" content="https://spacecapture.ai/logo.png" />
-            <meta itemProp="email" content="contact@spacecapture.ai" />
-            <meta
-              itemProp="description"
-              content="SpaceCapture is an AI-powered construction & field inspection software for inspections, defect detection, daily reports, and safety compliance."
-            />
           </div>
         </div>
 

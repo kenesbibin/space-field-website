@@ -49,6 +49,8 @@ SpaceCapture is an AI-powered field inspection platform for construction, facili
 - Pricing: https://spacecapture.ai/pricing
 
 ## Documentation
+- Full AI-readable index: https://spacecapture.ai/llms-full.txt
+- Privacy Policy: https://spacecapture.ai/privacy-policy
 - Glossary: https://spacecapture.ai/glossary
 - Blog: https://spacecapture.ai/blog
 - FAQ: https://spacecapture.ai/faq

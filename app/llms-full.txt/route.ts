@@ -42,6 +42,8 @@ ${veritasgraphFaq}
 
 ## Key Pages
 
+- Short AI-readable index: https://spacecapture.ai/llms.txt
+- Privacy Policy: https://spacecapture.ai/privacy-policy
 - How It Works (capture → knowledge graph → attributed answer): https://spacecapture.ai/how-it-works
 - Hallucination-Free AI (citations, grounding, Silence Protocol): https://spacecapture.ai/trust/hallucination-free
 - Careers (open roles, benefits, how to apply): https://spacecapture.ai/careers

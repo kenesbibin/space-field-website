@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import CallToAction from '@/components/CallToAction';
-import { Check, X, MessageSquare, ArrowRight } from 'lucide-react';
+import { Check, MessageSquare, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Pricing — Free Starter & Enterprise Plans',
@@ -22,20 +22,6 @@ const pricingSchema = {
       brand: { '@type': 'Brand', name: 'SpaceCapture' },
       category: 'Construction Management Software',
       image: 'https://spacecapture.ai/images/og-image.jpg',
-      offers: {
-        '@type': 'Offer',
-        price: '0',
-        priceCurrency: 'USD',
-        priceValidUntil: '2026-12-31',
-        availability: 'https://schema.org/OnlineOnly',
-        url: 'https://spacecapture.ai/pricing',
-        hasFreeTrial: true,
-      },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.8',
-        reviewCount: '120',
-      },
     },
     {
       '@type': 'Product',

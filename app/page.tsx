@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { getSoftwareSchema } from '@/components/seo/SoftwareSchema'
-import { getOrganizationSchema } from '@/components/seo/OrganaizationSchema'
 import StructuredData from '@/components/seo/StructuredData'
 import HeroSection from '@/components/HeroSection'
 import AppDownloadSection from '@/components/AppDownloadSection'
@@ -20,7 +19,6 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     getSoftwareSchema(),
-    getOrganizationSchema(),
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
