@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CallToAction from "@/components/CallToAction";
-import { BookOpen, FileText, Calculator, ArrowRight, ShieldCheck, TrendingUp } from "lucide-react";
+import { BookOpen, FileText, Calculator, ArrowRight, ShieldCheck, TrendingUp, Newspaper } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Resources & Field Operations Guides | SpaceCapture",
@@ -15,6 +15,30 @@ export const metadata: Metadata = {
 
 const ResourcesPage = () => {
   const resources = [
+    {
+      category: "Company",
+      title: "Newsroom",
+      description: "Product updates, customer stories, and announcements from the SpaceCapture team.",
+      icon: <Newspaper className="w-6 h-6 text-blue-600" />,
+      link: "/newsroom",
+      color: "bg-blue-50 text-blue-600",
+    },
+    {
+      category: "Trust & Security",
+      title: "Security and Data Protection",
+      description: "Review our security resources, privacy references, and deployment options, or request current documentation.",
+      icon: <ShieldCheck className="w-6 h-6 text-indigo-600" />,
+      link: "/security",
+      color: "bg-indigo-50 text-indigo-600",
+    },
+    {
+      category: "Insights",
+      title: "Field Operations Blog",
+      description: "Browse practical insights on construction quality, inspections, and AI-enabled field work.",
+      icon: <BookOpen className="w-6 h-6 text-cyan-600" />,
+      link: "/blog",
+      color: "bg-cyan-50 text-cyan-600",
+    },
     {
       category: "Guide",
       title: "ISO 9001 Audit Autopilot",

@@ -37,10 +37,10 @@ const AiDetectionSection = () => {
                  <span className="text-sm font-bold text-purple-700 uppercase tracking-wider">AI Vision</span>
               </div>
               
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
                 Upload for <br/>
                 <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">AI Detection</span>
-              </h2>
+              </h1>
               
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
                 Empower every field worker with an AI expert in their pocket. Simply capture a photo, and our engine instantly identifies defects, grades severity, and uploads structured data to the cloud.

@@ -5,8 +5,8 @@ import CallToAction from "@/components/CallToAction";
 import { FileX, BrainCircuit, ScanEye, ArrowRight, CheckCircle2, XCircle, Zap, Users, Clock, Shield } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "The End of Digital Paper: A Manifesto for Active AI in Field Operations | SpaceCapture",
-  description: "Why simply digitizing paper forms failed construction and field service teams—and how Active AI with computer vision, real-time sync, and intelligent workflows is finally delivering the promised revolution.",
+  title: 'End of Digital Paper: Active Field AI',
+  description: 'Why digital forms fell short—and how Active AI, computer vision, real-time sync, and intelligent workflows can transform field operations.',
   alternates: {
     canonical: 'https://spacecapture.ai/blog/end-of-digital-paper',
   },
@@ -32,12 +32,12 @@ export default function ManifestoPage() {
               <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-sm font-bold uppercase tracking-widest mb-10">
                 <FileX className="w-5 h-5" /> Manifesto
               </div>
-              <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-10 leading-tight">
+              <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-10 leading-tight">
                 The End of <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
                   Digital Paper.
                 </span>
-              </h1>
+              </h2>
               <p className="text-2xl md:text-3xl text-slate-300 leading-relaxed font-light max-w-4xl mx-auto">
                 For fifteen years we promised field teams a digital revolution.<br />
                 We delivered PDFs on tablets.<br />

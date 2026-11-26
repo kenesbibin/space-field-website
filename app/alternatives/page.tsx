@@ -5,7 +5,7 @@ import { ArrowRight, Boxes } from 'lucide-react';
 import CallToAction from '@/components/CallToAction';
 
 export const metadata: Metadata = {
-  title: 'SpaceCapture Alternatives & Competitors | Compare Field Inspection Software',
+  title: 'Field Inspection Software Alternatives',
   description: 'Compare SpaceCapture to leading field inspection, safety, and construction management alternatives. Find the right fit for your team.',
   alternates: {
     canonical: 'https://spacecapture.ai/alternatives',

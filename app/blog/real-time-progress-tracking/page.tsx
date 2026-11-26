@@ -4,8 +4,8 @@ import { BlogPostLayout } from '@/components/blog/BlogPostLayout';
 import CallToAction from '@/components/CallToAction';
 
 export const metadata: Metadata = {
-  title: 'Real-Time Progress Tracking vs. Traditional Daily Logs | SpaceCapture',
-  description: 'Discover why manual daily logs are outdated and how AI-powered reality capture delivers objective, quantifiable progress data—improving schedule accuracy, payment verification, and stakeholder trust.',
+  title: 'Real-Time Construction Progress Tracking',
+  description: 'Replace subjective daily logs with AI reality capture for objective progress, schedule accuracy, payment checks, and stakeholder trust.',
   alternates: {
     canonical: 'https://spacecapture.ai/blog/real-time-progress-tracking',
   },

@@ -14,9 +14,9 @@ import {
 import { AlertTriangle, Link2, Eye } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'BIM Construction Software | SpaceCapture',
+  title: 'BIM Construction Software',
   description:
-    'The complete BIM construction software for architecture, engineering, and construction teams. Manage BIM models, coordinate clashes, track issues, and collaborate in real-time.',
+    'Manage BIM models, coordinate clashes, track issues, and collaborate in real time with mobile tools for AEC teams.',
   keywords: [
     'bim software',
     'bim construction software',

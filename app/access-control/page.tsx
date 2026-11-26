@@ -8,7 +8,7 @@ import { SOLUTIONS_DATA } from '@/lib/seo-data';
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: 'Role-Based Access Control (RBAC) | SpaceCapture',
+  title: 'Role-Based Access Control',
   description: 'Secure your field data with SpaceCapture’s granular permissions. Assign tasks, manage user roles, and control access to specific projects or forms.',
   keywords: ['RBAC', 'user management', 'access control', 'field data security', 'task assignment', 'SpaceCapture'],
   alternates: {

@@ -7,7 +7,7 @@ import { BlogPostLayout } from "@/components/blog/BlogPostLayout";
 import CallToAction from "@/components/CallToAction";
 
 export const metadata: Metadata = {
-    title: "AI Defect Detection with UI Experience | SpaceCapture",
+    title: 'AI Defect Detection: Jobsite UX',
     description:
         "Discover how SpaceCapture combines AI defect detection with a refined UI experience designed for real construction job sites.",
     keywords: [

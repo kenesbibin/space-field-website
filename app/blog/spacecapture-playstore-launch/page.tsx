@@ -7,7 +7,7 @@ import { BlogPostLayout } from "@/components/blog/BlogPostLayout";
 import CallToAction from "@/components/CallToAction";
 
 export const metadata: Metadata = {
-    title: "SpaceCapture App Launched on Google Play Store",
+    title: 'Field Inspection App on Google Play',
     description:
         "SpaceCapture is now available on Google Play Store. Download the offline-first AI-powered field inspection app for construction teams.",
     keywords: [

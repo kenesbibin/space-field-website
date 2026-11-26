@@ -6,8 +6,8 @@ import Link from 'next/link';
 import CallToAction from '@/components/CallToAction';
 
 export const metadata: Metadata = {
-  title: 'Essential Features to Look for in Mobile Field Service Apps for Construction | SpaceCapture',
-  description: 'Discover the must-have features in mobile field service apps—including offline functionality, digital signatures, voice-to-text, asset history access, and more—to boost technician productivity and ensure adoption.',
+  title: 'Mobile Field Service Apps for Construction',
+  description: 'Find construction field-app essentials—from offline access and e-signatures to voice input and asset history—to improve productivity and adoption.',
   alternates: {
     canonical: 'https://spacecapture.ai/blog/mobile-field-service-apps',
   },

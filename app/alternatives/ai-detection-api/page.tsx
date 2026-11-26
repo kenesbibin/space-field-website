@@ -5,8 +5,8 @@ import { ComparisonTable } from '@/components/seo/ComparisonTable';
 import { FaqSection } from '@/components/seo/FaqSection';
 
 export const metadata: Metadata = {
-  title: 'AI Detection API | Computer Vision for Construction',
-  description: 'Integrate powerful construction AI into your own apps. Our AI Detection API offers robust endpoints for defect recognition, safety monitoring, and automated tagging.',
+  title: 'AI Detection API for Developers',
+  description: 'Add construction vision to your app with REST endpoints for defects, PPE, equipment, and safety analysis.',
   keywords: ['ai detection api', 'computer vision api', 'construction api', 'image recognition api', 'developer tools'],
   alternates: {
     canonical: 'https://spacecapture.ai/alternatives/ai-detection-api',

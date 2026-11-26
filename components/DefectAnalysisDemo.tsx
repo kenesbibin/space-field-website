@@ -166,12 +166,12 @@ const DefectAnalysisDemo = () => {
                     <span>Instant AI Analysis</span>
                 </div>
 
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
                     See What Others <br/>
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
                         Miss Completely.
                     </span>
-                </h2>
+                </h1>
 
                 <p className="text-xl text-slate-400 mb-8 leading-relaxed">
                     Don't just take a photo. Let our AI analyze it instantly. Detect cracks, corrosion, and safety hazards, then get automated severity ratings and repair suggestions—before you even leave the site.

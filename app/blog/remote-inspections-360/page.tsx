@@ -4,8 +4,8 @@ import { BlogPostLayout } from '@/components/blog/BlogPostLayout';
 import CallToAction from '@/components/CallToAction';
 
 export const metadata: Metadata = {
-  title: 'Enhancing Remote Inspections with 360-Degree AI Capture | SpaceCapture',
-  description: 'Discover how 360-degree reality capture combined with AI enables virtual job walks, remote stakeholder reviews, faster decisions, and reduced travel—bringing the entire team to the site without leaving their desks.',
+  title: 'Remote Inspections with 360° AI Capture',
+  description: 'Use 360° capture and AI for virtual job walks, remote reviews, faster decisions, and less travel for project teams.',
   alternates: {
     canonical: 'https://spacecapture.ai/blog/remote-inspections-360',
   },

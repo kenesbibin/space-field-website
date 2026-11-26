@@ -6,8 +6,8 @@ import Link from 'next/link';
 import CallToAction from '@/components/CallToAction';
 
 export const metadata: Metadata = {
-  title: 'AI vs. Manual Inspections in Construction: A Detailed Cost Comparison | SpaceCapture',
-  description: 'Compare the true costs of manual quality inspections versus AI-powered automated defect detection. Discover labor savings, reduced rework, higher accuracy, and real ROI numbers for construction teams.',
+  title: 'AI vs. Manual Construction Inspections',
+  description: 'Compare manual inspections with AI defect detection to assess labor savings, reduced rework, accuracy, and ROI.',
   alternates: {
     canonical: 'https://spacecapture.ai/blog/ai-vs-manual-inspections',
   },
@@ -138,7 +138,7 @@ export default function AiVsManualPage() {
           <div className="bg-slate-50 p-8 rounded-lg my-10">
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div className="bg-white p-6 rounded shadow">
-                <h4 className="font-bold text-xl mb-4 text-red-700">Manual Inspections</h4>
+                <h3 className="font-bold text-xl mb-4 text-red-700">Manual Inspections</h3>
                 <ul className="text-left space-y-3">
                   <li>Labor (inspection + reporting): <strong>$800,000–$1,200,000</strong></li>
                   <li>Third-party QA/QC: <strong>$150,000</strong></li>
@@ -148,7 +148,7 @@ export default function AiVsManualPage() {
               </div>
 
               <div className="bg-white p-6 rounded shadow">
-                <h4 className="font-bold text-xl mb-4 text-green-700">AI Automated System</h4>
+                <h3 className="font-bold text-xl mb-4 text-green-700">AI Automated System</h3>
                 <ul className="text-left space-y-3">
                   <li>Software license: <strong>$40,000</strong></li>
                   <li>Capture labor (reduced): <strong>$80,000–$120,000</strong></li>
@@ -159,7 +159,7 @@ export default function AiVsManualPage() {
               </div>
 
               <div className="bg-green-100 p-6 rounded shadow border-2 border-green-600">
-                <h4 className="font-bold text-2xl mb-4 text-green-800">Annual Net Savings</h4>
+                <h3 className="font-bold text-2xl mb-4 text-green-800">Annual Net Savings</h3>
                 <p className="text-4xl font-bold text-green-700">$1M–$1.7M</p>
                 <p className="mt-4 text-lg">Typical ROI realized in &lt;6 months</p>
               </div>

@@ -5,8 +5,8 @@ import { BlogPostLayout } from '@/components/blog/BlogPostLayout';
 import CallToAction from '@/components/CallToAction';
 
 export const metadata: Metadata = {
-  title: 'Automated Defect Detection with Drone Imagery in Construction | SpaceCapture',
-  description: 'Learn how drones combined with AI and photogrammetry enable safe, fast, and accurate inspections of building facades, roofs, solar farms, bridges, and large infrastructure—reducing costs and risks.',
+  title: 'Drone-Based AI Defect Detection',
+  description: 'Learn how AI and photogrammetry make drone inspections safer and faster for facades, roofs, solar farms, bridges, and infrastructure.',
   alternates: {
     canonical: 'https://spacecapture.ai/blog/drone-defect-detection',
   },

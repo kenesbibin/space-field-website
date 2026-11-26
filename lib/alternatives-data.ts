@@ -92,7 +92,7 @@ export const ALTERNATIVES_DATA: Record<string, AlternativesData> = {
   smartsheet: {
     slug: 'smartsheet',
     competitor: 'Smartsheet',
-    metaTitle: 'Smartsheet Alternative for Construction | SpaceCapture AI',
+    metaTitle: 'Smartsheet Alternative for Construction',
     metaDescription:
       'Smartsheet is a great project tracker. SpaceCapture is purpose-built for construction field teams with AI defect detection and offline mobile capture.',
     metaKeywords: [
@@ -160,7 +160,7 @@ export const ALTERNATIVES_DATA: Record<string, AlternativesData> = {
   'microsoft-project': {
     slug: 'microsoft-project',
     competitor: 'Microsoft Project',
-    metaTitle: 'Microsoft Project Alternative for Construction | SpaceCapture',
+    metaTitle: 'Microsoft Project Alternative',
     metaDescription:
       'Microsoft Project is a powerful desktop scheduler. SpaceCapture is a modern, mobile-first, AI-native construction platform. Compare features.',
     metaKeywords: [
@@ -228,7 +228,7 @@ export const ALTERNATIVES_DATA: Record<string, AlternativesData> = {
   'oracle-primavera': {
     slug: 'oracle-primavera',
     competitor: 'Oracle Primavera',
-    metaTitle: 'Oracle Primavera Alternative for Construction | SpaceCapture',
+    metaTitle: 'Oracle Primavera Alternative for Construction',
     metaDescription:
       'Primavera P6 is the gold standard for mega-project scheduling. SpaceCapture adds the AI-native field workflows that P6 cannot do.',
     metaKeywords: [
@@ -360,7 +360,7 @@ export const ALTERNATIVES_DATA: Record<string, AlternativesData> = {
   'autodesk-bim-360': {
     slug: 'autodesk-bim-360',
     competitor: 'Autodesk BIM 360',
-    metaTitle: 'Autodesk BIM 360 Alternative | SpaceCapture AI',
+    metaTitle: 'Autodesk BIM 360 Alternative',
     metaDescription:
       'BIM 360 is the design and document hub. SpaceCapture is the AI-native field layer that brings BIM to the jobsite.',
     metaKeywords: [
@@ -428,7 +428,7 @@ export const ALTERNATIVES_DATA: Record<string, AlternativesData> = {
   jobsite: {
     slug: 'jobsite',
     competitor: 'JobSite',
-    metaTitle: 'JobSite Software Alternative | SpaceCapture AI',
+    metaTitle: 'JobSite Software Alternative',
     metaDescription:
       'JobSite is a basic construction management tool. SpaceCapture is the modern, AI-native alternative for GCs and field teams.',
     metaKeywords: [
@@ -706,7 +706,7 @@ export const ALTERNATIVES_DATA: Record<string, AlternativesData> = {
   fieldwire: {
     slug: 'fieldwire',
     competitor: 'Fieldwire',
-    metaTitle: 'Fieldwire Alternative for Small Teams | SpaceCapture',
+    metaTitle: 'Fieldwire Alternative for Small Teams',
     metaDescription:
       'The right Fieldwire alternative for small construction teams. Simple pricing, zero learning curve, and powerful AI features without the enterprise bloat.',
     metaKeywords: [
@@ -968,9 +968,9 @@ export const ALTERNATIVES_DATA: Record<string, AlternativesData> = {
   safetyculture: {
     slug: 'safetyculture',
     competitor: 'SafetyCulture',
-    metaTitle: 'SafetyCulture / iAuditor Alternative | SpaceCapture AI',
+    metaTitle: 'SafetyCulture (iAuditor) Alternative',
     metaDescription:
-      'Looking for a SafetyCulture (iAuditor) alternative? SpaceCapture adds AI defect detection, real-time risk quantification, and generative checklists to replace manual forms.',
+      'Compare SafetyCulture with AI defect detection, live risk insights, and automated checklists that reduce manual forms.',
     metaKeywords: [
       'safetyculture alternative',
       'iauditor alternative',

@@ -6,8 +6,8 @@ import Link from 'next/link';
 import CallToAction from '@/components/CallToAction';
 
 export const metadata: Metadata = {
-  title: "A Manager's Guide to Remote Site Monitoring in Construction | SpaceCapture",
-  description: 'Learn how project executives and operations managers oversee multiple job sites effectively using remote monitoring tools, 360-degree capture, live dashboards, video collaboration, and drone integration—without constant travel.',
+  title: 'Remote Site Monitoring for Construction',
+  description: 'See how 360° capture, dashboards, video, and drones help construction managers monitor multiple sites with less travel.',
   alternates: {
     canonical: 'https://spacecapture.ai/blog/remote-site-monitoring-guide',
   },

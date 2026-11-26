@@ -4,8 +4,8 @@ import { BlogPostLayout } from '@/components/blog/BlogPostLayout';
 import CallToAction from '@/components/CallToAction';
 
 export const metadata: Metadata = {
-  title: 'Optimizing Material Usage with Field Intelligence and AI | SpaceCapture',
-  description: 'Reduce construction waste by up to 30% with AI-powered inventory tracking, delivery verification, real-time consumption monitoring, and just-in-time ordering.',
+  title: 'AI for Construction Material Optimization',
+  description: 'Reduce construction waste with AI inventory tracking, delivery checks, real-time usage monitoring, and just-in-time ordering.',
   alternates: {
     canonical: 'https://spacecapture.ai/blog/optimizing-material-usage',
   },

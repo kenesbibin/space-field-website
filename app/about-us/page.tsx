@@ -109,6 +109,7 @@ export default function AboutUsPage() {
             {/* MISSION & VALUES */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-6">
+                    <h2 className="sr-only">Our mission and values</h2>
                     <div className="grid md:grid-cols-3 gap-12">
                         <div className="text-center md:text-left">
                             <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-6 mx-auto md:mx-0">

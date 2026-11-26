@@ -181,6 +181,8 @@ export default function Footer() {
             <ul className="space-y-4">
               <FooterLink href="/about-us">About Us</FooterLink>
               <FooterLink href="/careers">Careers</FooterLink>
+              <FooterLink href="/newsroom">Newsroom</FooterLink>
+              <FooterLink href="/security">Security & Data Protection</FooterLink>
               <FooterLink href="/customers">Customers</FooterLink>
               <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
               <FooterLink href="/trust">Trust Center</FooterLink>
@@ -189,8 +191,8 @@ export default function Footer() {
               <FooterLink href="/faq">Help & FAQ</FooterLink>
               <FooterLink href="/sample-inspection-reports">Sample Inspection Reports</FooterLink>
               <FooterLink href="/blog/reduce-rework-ai-case-study">Case Study: Reduce Rework</FooterLink>
-              <FooterLink href="/compare/raken">Compare vs Raken</FooterLink>
-              <FooterLink href="/compare/planradar">Compare vs PlanRadar</FooterLink>
+              <FooterLink href="/compare/raken">SpaceCapture vs Raken</FooterLink>
+              <FooterLink href="/compare/planradar">SpaceCapture vs PlanRadar</FooterLink>
               <FooterLink href="/alternatives/fieldwire">Fieldwire Alternative</FooterLink>
               <FooterLink href="/sitemaps">Sitemap</FooterLink>
               <FooterLink href="/tools/construction-cost-calculator">Construction Cost Calculator</FooterLink>

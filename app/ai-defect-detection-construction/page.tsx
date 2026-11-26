@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 
 export const metadata: Metadata = {
-  title: 'AI Defect Detection in Construction: How It Works | SpaceCapture',
+    title: 'How AI Detects Construction Defects',
   description: 'Discover how AI Defect Detection revolutionizes construction quality control. Automated analysis reduces rework and ensures safety compliance.',
   keywords: ['AI Defect Detection', 'Construction AI', 'Quality Control Software', 'Automated Inspection'],
   alternates: {
@@ -46,7 +46,7 @@ export default function AiDefectDetectionPage() {
 
                     {/* AEO Definition Block */}
                     <div className="bg-purple-50 border-l-4 border-purple-500 p-6 mb-10 not-prose rounded-r-xl">
-                        <h3 className="text-purple-900 font-bold text-lg mb-2">What is AI Defect Detection in Construction?</h3>
+                        <h2 className="text-purple-900 font-bold text-lg mb-2">What is AI Defect Detection in Construction?</h2>
                         <p className="text-purple-800 m-0">
                             AI Defect Detection uses computer vision and deep learning algorithms to automatically identify structural flaws, safety hazards, and workmanship errors in construction site photos. It processes visual data in real-time to generate instant snag lists, reducing manual inspection time by up to 50%.
                         </p>
@@ -54,7 +54,7 @@ export default function AiDefectDetectionPage() {
 
                     {/* Key Takeaways */}
                     <div className="mb-12">
-                        <h3 className="font-bold text-slate-900 text-xl mb-4">Key Takeaways</h3>
+                        <h2 className="font-bold text-slate-900 text-xl mb-4">Key Takeaways</h2>
                         <ul className="grid sm:grid-cols-2 gap-4 list-none pl-0 mt-0">
                             {[
                                 "Automatically identifies cracks, leaks, and safety violations.",

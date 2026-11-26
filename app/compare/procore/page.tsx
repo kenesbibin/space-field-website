@@ -1,200 +1,131 @@
-"use client";
-
-import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-    CheckCircle2,
-    XCircle,
-    ArrowRight,
-    Zap,
-    FileText,
-    Camera,
-    ShieldCheck,
-    Smartphone,
-    BarChart3,
-    BrainCircuit
-} from 'lucide-react';
+import { ArrowRight, Check, ClipboardCheck, Eye, Layers3, Scale, Workflow } from 'lucide-react';
 
-const ProcoreComparisonPage = () => {
-    return (
-        <div className="bg-white">
+const comparisonRows = [
+  { feature: 'Primary focus', space: 'Field inspections, visual evidence, and AI-assisted workflows', procore: 'Broad construction project management and collaboration' },
+  { feature: 'Inspection forms', space: 'Build mobile field forms and capture structured observations', procore: 'Construction workflows and tools across the Procore platform' },
+  { feature: 'Visual review', space: 'AI-assisted analysis of field photos for supported defect workflows', procore: 'Project documentation and photo workflows; confirm current capabilities by plan' },
+  { feature: 'Project operations', space: 'Inspection findings, tasks, and field reporting', procore: 'Project-management workflows spanning construction teams' },
+  { feature: 'Deployment and pricing', space: 'Discuss current plans and hosting requirements with SpaceCapture', procore: 'Request current commercial and deployment details from Procore' },
+];
 
-            {/* 1. HERO SECTION */}
-            <section className="relative pt-32 pb-20 overflow-hidden bg-slate-900">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.15),transparent_40%)] pointer-events-none"></div>
-                <div className="container mx-auto px-4 relative z-10 max-w-6xl text-center">
+const considerations = [
+  {
+    title: 'Choose by the work you need to improve',
+    body: 'If inspections, photo evidence, and repeatable field capture are the main challenge, evaluate SpaceCapture against that workflow. If you need broad project administration, evaluate the breadth of Procore’s platform.',
+    icon: ClipboardCheck,
+  },
+  {
+    title: 'Check the workflow end to end',
+    body: 'Run a representative site walk: capture an issue, assign follow-up, review evidence, and share a report. Include field staff and project leads in the evaluation.',
+    icon: Workflow,
+  },
+  {
+    title: 'Validate requirements directly',
+    body: 'Plans, integrations, AI features, hosting, and pricing change. Confirm the current details with both vendors and compare against your own acceptance criteria.',
+    icon: Eye,
+  },
+];
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        <span className="inline-block py-1 px-3 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-bold uppercase tracking-wider mb-6">
-                            SpaceCapture vs Procore
-                        </span>
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
-                            Project Management Isn&apos;t Field Intelligence. <br />
-                            <span className="bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">Let AI Inspect For You.</span>
-                        </h1>
-                        <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                            Procore manages your projects. SpaceCapture inspects them. Add AI-powered defect detection, automated daily reports, and visual verification to your field workflow.
-                        </p>
-
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            <Link
-                                href="https://app.pmspace.ai/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
-                                target="_blank"
-                                className="px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-bold transition-all hover:scale-105 shadow-lg shadow-blue-900/50 flex items-center gap-2"
-                            >
-                                Try Automating for Free <ArrowRight className="w-5 h-5" />
-                            </Link>
-                            <Link
-                                href="/request-a-demo"
-                                className="px-8 py-4 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold transition-all border border-slate-700"
-                            >
-                                See Live Demo
-                            </Link>
-                        </div>
-                    </motion.div>
-
-                </div>
-            </section>
-
-            {/* 2. THE FUNDAMENTAL DIFFERENCE */}
-            <section className="py-24 bg-slate-50">
-                <div className="container mx-auto px-4 max-w-6xl">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">The Fundamental Difference</h2>
-                        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                            Procore is a comprehensive project management platform. SpaceCapture is a specialist AI engine that plugs into your field workflow to automate inspections and defect detection.
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-8 items-center">
-                        {/* Procore Card */}
-                        <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden group hover:border-slate-300 transition-colors">
-                            <div className="absolute top-0 left-0 w-full h-1 bg-slate-300"></div>
-                            <div className="flex items-center gap-3 mb-6 opacity-60">
-                                <BarChart3 className="w-6 h-6 text-slate-500" />
-                                <h3 className="text-xl font-bold text-slate-500">The "Project Manager"</h3>
-                            </div>
-                            <h4 className="text-2xl font-bold text-slate-900 mb-4">Manual Inspection Input</h4>
-                            <ul className="space-y-4 text-slate-600">
-                                <li className="flex items-start gap-3">
-                                    <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                                    <span>Field inspectors must manually log defects and observations.</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                                    <span>Photos stored as attachments without intelligent analysis.</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                                    <span>Reporting requires manual data entry from field to office.</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        {/* SpaceCapture Card */}
-                        <div className="bg-white p-8 rounded-2xl border-2 border-indigo-600 shadow-xl relative overflow-hidden">
-                            <div className="absolute top-0 title-0 w-full h-1 bg-gradient-to-r from-blue-600 to-purple-600"></div>
-                            <div className="absolute -right-10 -top-10 w-32 h-32 bg-indigo-50 rounded-full blur-3xl"></div>
-
-                            <div className="flex items-center gap-3 mb-6">
-                                <BrainCircuit className="w-6 h-6 text-indigo-600" />
-                                <h3 className="text-xl font-bold text-indigo-600">The Cognitive Engine</h3>
-                            </div>
-                            <h4 className="text-2xl font-bold text-slate-900 mb-4">Autonomous AI Inspection</h4>
-                            <ul className="space-y-4 text-slate-600">
-                                <li className="flex items-start gap-3">
-                                    <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                                    <span className="font-medium text-slate-900">AI auto-detects defects from photos and 360° captures.</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                                    <span className="font-medium text-slate-900">Every image is analyzed for risks, conditions, and compliance.</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                                    <span className="font-medium text-slate-900">Daily reports generated automatically from field data.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* 3. COMPARISON TABLE */}
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-4 max-w-5xl">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-12 text-center">Feature by Feature Breakdown</h2>
-
-                    <div className="overflow-x-auto">
-                        <table className="w-full border-collapse">
-                            <thead>
-                                <tr>
-                                    <th className="text-left py-6 px-6 bg-slate-50 border-b-2 border-slate-200 w-1/3 text-lg font-bold text-slate-700">Feature</th>
-                                    <th className="text-center py-6 px-6 bg-slate-50 border-b-2 border-slate-200 w-1/3 text-lg font-bold text-slate-500">Procore</th>
-                                    <th className="text-center py-6 px-6 bg-indigo-50 border-b-2 border-indigo-200 w-1/3 text-lg font-bold text-indigo-700">SpaceCapture</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {[
-                                    { feature: "AI Defect Detection", procore: "Manual Tagging", space: "Auto-Detected (Computer Vision)" },
-                                    { feature: "Daily Reporting", procore: "Manual Entry / Templates", space: "Automated (AI-Written)" },
-                                    { feature: "360° Photo Capture", procore: "Third-Party Integration", space: "Native with AI Analysis" },
-                                    { feature: "Safety Compliance", procore: "Checklist-Based", space: "Risk Prediction Models" },
-                                    { feature: "Progress Tracking", procore: "Schedule-Based Updates", space: "Objective Visual Verification" },
-                                    { feature: "Offline Mode", procore: "Limited", space: "Full (with on-device AI)" },
-                                    { feature: "Pricing Model", procore: "Enterprise (Custom)", space: "Unlimited Users (Flat Rate)" },
-                                    { feature: "Integration Focus", procore: "Broad Project Management Suite", space: "Specialized Field Inspection AI" },
-                                ].map((row, idx) => (
-                                    <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50/50 transition-colors">
-                                        <td className="py-5 px-6 font-medium text-slate-800">{row.feature}</td>
-                                        <td className="py-5 px-6 text-center text-slate-500">{row.procore}</td>
-                                        <td className="py-5 px-6 text-center font-bold text-indigo-700 bg-indigo-50/10">{row.space}</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div className="mt-12 text-center">
-                        <p className="text-sm text-slate-500 italic">*Comparison based on publicly available feature lists as of 2024.</p>
-                    </div>
-                </div>
-            </section>
-
-            {/* 4. SWITCHING SECTION */}
-            <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
-                <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,rgba(99,102,241,0.2))]"></div>
-                <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
-                    <h2 className="text-3xl md:text-5xl font-extrabold mb-8">Ready to upgrade your field stack?</h2>
-                    <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-                        Migrating is easier than you think. Import your projects, invite your team, and start automating your daily logs in under 5 minutes.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link
-                            href="https://app.pmspace.ai/login?type=SpaceCapture&moduleId=7a36674e-f8d6-4962-a0dc-105b50b4849c&invite=guest/login"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-8 py-4 rounded-full bg-white text-slate-900 font-bold hover:bg-indigo-50 transition-colors shadow-lg"
-                        >
-                            Start Free Account
-                        </Link>
-                        <Link
-                            href="/tools/switching-calculator"
-                            className="px-8 py-4 rounded-full bg-transparent border border-white/30 hover:bg-white/10 text-white font-bold transition-colors"
-                        >
-                            Calculate ROI
-                        </Link>
-                    </div>
-                </div>
-            </section>
-
+export default function ProcoreComparisonPage() {
+  return (
+    <main className="min-h-screen bg-white text-slate-900">
+      <section className="relative overflow-hidden bg-slate-950 pb-20 pt-36 text-white sm:pb-24 sm:pt-40">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(59,130,246,0.28),transparent_35%),radial-gradient(circle_at_10%_90%,rgba(99,102,241,0.2),transparent_35%)]" />
+        <div className="container relative mx-auto max-w-6xl px-4 text-center sm:px-6">
+          <span className="inline-flex items-center gap-2 rounded-full border border-blue-300/20 bg-blue-400/10 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-blue-200">
+            <Scale className="h-4 w-4" /> Platform comparison
+          </span>
+          <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-black tracking-tight sm:text-6xl">
+            SpaceCapture vs Procore: choose the right field workflow.
+          </h1>
+          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-300">
+            These platforms serve different needs and may fit together. Compare their areas of focus, then validate the workflows and capabilities that matter to your projects.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <Link href="/request-a-demo" className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-3 font-bold text-white transition hover:bg-blue-500">
+              See SpaceCapture in action <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link href="/compare" className="rounded-xl border border-white/20 px-5 py-3 font-bold text-white transition hover:bg-white/10">All comparisons</Link>
+          </div>
+          <p className="mt-5 text-xs text-slate-400">Independent product names are used only to identify the comparison. No affiliation is implied.</p>
         </div>
-    );
-};
+      </section>
 
-export default ProcoreComparisonPage;
+      <section className="container mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+        <div className="grid gap-5 md:grid-cols-2">
+          <article className="rounded-3xl border border-slate-200 bg-slate-50 p-7 sm:p-9">
+            <div className="flex items-center gap-3 text-slate-500"><Layers3 className="h-6 w-6" /><span className="text-xs font-bold uppercase tracking-[0.15em]">Broad project platform</span></div>
+            <h2 className="mt-5 text-3xl font-extrabold">Procore</h2>
+            <p className="mt-3 leading-7 text-slate-600">A construction project-management platform with tools for coordinating project teams and project information. Review the current product plans to identify the modules that match your workflows.</p>
+          </article>
+          <article className="rounded-3xl border-2 border-blue-600 bg-white p-7 shadow-lg shadow-blue-900/5 sm:p-9">
+            <div className="flex items-center gap-3 text-blue-700"><Eye className="h-6 w-6" /><span className="text-xs font-bold uppercase tracking-[0.15em]">Field inspection focus</span></div>
+            <h2 className="mt-5 text-3xl font-extrabold">SpaceCapture</h2>
+            <p className="mt-3 leading-7 text-slate-600">A field-operations platform for mobile capture, inspections, structured observations, reporting, and AI-assisted visual workflows.</p>
+          </article>
+        </div>
+      </section>
+
+      <section className="border-y border-slate-200 bg-slate-50 py-14 sm:py-20">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="mb-9 max-w-2xl">
+            <p className="text-sm font-bold uppercase tracking-[0.15em] text-blue-700">At a glance</p>
+            <h2 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">Compare the job each platform is built to do.</h2>
+          </div>
+          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[700px] border-collapse text-left">
+                <thead>
+                  <tr className="bg-slate-950 text-white">
+                    <th scope="col" className="w-1/4 p-5 text-sm font-bold">Workflow</th>
+                    <th scope="col" className="w-[37.5%] p-5 text-sm font-bold">SpaceCapture</th>
+                    <th scope="col" className="w-[37.5%] p-5 text-sm font-bold">Procore</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonRows.map((row) => (
+                    <tr key={row.feature} className="border-t border-slate-100 align-top">
+                      <th scope="row" className="bg-slate-50 p-5 text-sm font-bold text-slate-800">{row.feature}</th>
+                      <td className="p-5 text-sm leading-6 text-slate-700"><span className="mb-2 flex items-center gap-2 font-semibold text-blue-800"><Check className="h-4 w-4" /> SpaceCapture</span>{row.space}</td>
+                      <td className="p-5 text-sm leading-6 text-slate-600">{row.procore}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p className="mt-4 text-xs leading-5 text-slate-500">This is a high-level guide, not a feature-by-feature certification. Capabilities and availability vary by product version, plan, configuration, and integration. Confirm current details with each provider.</p>
+        </div>
+      </section>
+
+      <section className="container mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-sm font-bold uppercase tracking-[0.15em] text-blue-700">Evaluation checklist</p>
+          <h2 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">Compare with your own site workflow.</h2>
+        </div>
+        <div className="mt-9 grid gap-5 md:grid-cols-3">
+          {considerations.map(({ title, body, icon: Icon }) => (
+            <article key={title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <span className="inline-flex rounded-xl bg-blue-50 p-3 text-blue-700"><Icon className="h-5 w-5" /></span>
+              <h3 className="mt-5 text-lg font-bold">{title}</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">{body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-blue-700 py-14 text-white sm:py-16">
+        <div className="container mx-auto flex max-w-6xl flex-col gap-6 px-4 sm:px-6 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-extrabold">See how SpaceCapture fits your inspections.</h2>
+            <p className="mt-3 leading-7 text-blue-100">Bring a real field workflow to a walkthrough and evaluate the fit with your team.</p>
+          </div>
+          <Link href="/request-a-demo" className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 font-bold text-blue-800 transition hover:bg-blue-50">
+            Request a demo <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
+}

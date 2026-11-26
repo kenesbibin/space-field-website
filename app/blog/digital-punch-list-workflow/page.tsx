@@ -6,8 +6,8 @@ import Link from 'next/link';
 import CallToAction from '@/components/CallToAction';
 
 export const metadata: Metadata = {
-  title: 'Mastering the Digital Punch List Workflow in Construction | SpaceCapture',
-  description: 'Discover how digital punch list tools and mobile workflows help contractors clear defects faster, reduce closeout delays, improve subcontractor accountability, and achieve zero-defect handover.',
+  title: 'Digital Punch List Workflow',
+  description: 'Use digital punch lists and mobile workflows to resolve defects faster, shorten closeout, improve accountability, and deliver zero-defect handovers.',
   alternates: {
     canonical: 'https://spacecapture.ai/blog/digital-punch-list-workflow',
   },

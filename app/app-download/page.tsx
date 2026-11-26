@@ -76,6 +76,7 @@ export default function AppDownloadPage() {
 
             {/* Right Features Grid */}
             <div className="grid gap-6">
+              <h2 className="sr-only">Mobile app features</h2>
               <FeatureCard
                 icon={Wifi}
                 title="100% Offline Mode"

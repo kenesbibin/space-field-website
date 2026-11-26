@@ -14,7 +14,7 @@ import {
 import { AlertTriangle, Eye, DollarSign } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'AI Defect Detection for Construction | Automated QA/QC',
+  title: 'Construction AI Defect Detection',
   description: 'Use computer vision to spot construction defects automatically. Our AI Defect Detection software reduces risk and improves quality control efficiency.',
   keywords: ['ai defect detection', 'automated defect recognition', 'construction computer vision', 'automated qa/qc', 'visual inspection ai'],
   alternates: {

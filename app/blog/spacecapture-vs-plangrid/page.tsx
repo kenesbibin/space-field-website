@@ -7,7 +7,7 @@ import { BlogPostLayout } from "@/components/blog/BlogPostLayout";
 import CallToAction from "@/components/CallToAction";
 
 export const metadata: Metadata = {
-    title: "SpaceCapture vs PlanGrid: Best Field Inspection Software Comparison",
+    title: 'SpaceCapture vs PlanGrid: Field Inspections',
     description:
         "Compare SpaceCapture and PlanGrid for AI defect detection, offline inspections, mobile performance, and construction reporting.",
     keywords: [
@@ -54,9 +54,9 @@ export default function SpaceCaptureVsPlanGrid() {
   "
   >
 
-    <h1>
+    <h2>
       SpaceCapture vs PlanGrid: Which Field Inspection Software Is Better in 2026?
-    </h1>
+    </h2>
 
     <p className="text-xl text-slate-800 font-medium leading-relaxed">
       Choosing the right <strong>field inspection software</strong> directly impacts

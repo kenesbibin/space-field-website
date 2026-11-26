@@ -5,7 +5,7 @@ import DefectAnalysisDemo from "@/components/DefectAnalysisDemo";
 import Features from "@/components/Features";
 
 export const metadata: Metadata = {
-  title: "AI Construction Defect Detection | Automated Site Audits",
+  title: 'AI Construction Defect Detection',
   description: "Automate construction site audits with AI. Simply take a photo of a defect, and our engine identifies severity and suggests fixes instantly.",
   keywords: ["AI Defect Detection", "Construction AI", "Site Audit Software", "Automated Inspections"],
   alternates: {
